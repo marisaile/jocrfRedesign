@@ -1,38 +1,25 @@
-* {
-  box-sizing: border-box;
+@import url(https://fonts.googleapis.com/css?family=Caudex:400,700);
+
+.todo-container {
+  width: 500px;
+  margin: 5px auto;
+  margin-top: 20px;
 }
 
-body {
-  font-family: "Gotham A", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  margin: 0;
-  overflow-x: hidden;
-  background-color: #dfdfe4;
+#todo-title {
+  font-family: 'Caudex';
+  font-weight: 400;
 }
 
-main {
-  overflow: hidden;
+.add-todo-container {
+  margin-bottom: 10px;
 }
 
-h4 {
-  position: absolute;
-  left: 7%;
-  top: 0;
-  font-weight: normal;
-  font-size: 34px;
+.add-todo-container .col-md-10 {
+  padding-left: 0;
 }
 
-img {
-  width: 100%;
+.add-todo-container .col-md-2 {
+  padding-right: 0;
+  text-align: right;
 }
-
-.blur {
-  -webkit-filter: blur(3px);
-  filter: blur(3px);
-}
-
-.gridItem {
-  position: absolute;
-}
-
-/*# sourceMappingURL=main.css.map*/
