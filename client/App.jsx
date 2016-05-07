@@ -1,13 +1,20 @@
 import $ from 'jquery'; 
 import _ from 'underscore';
 import Handlebars from 'handlebars';
-
+import lscache from 'lscache';
 
 // on document load
 $(function(){
   
   // Data Model
+  var savedData = lscache.get('todos');
   var todos = [];
+  if (savedData === null) {
+    todos = [];
+  } else {
+    todos = savedData;
+  }
+  
   
   // Application
   var template;
@@ -18,6 +25,7 @@ $(function(){
       app.render();
     },
     render: function(){
+      lscache.set('todos', todos);
       var todoHtml = _.map(todos, function(todo){
         return template(todo);
       });
