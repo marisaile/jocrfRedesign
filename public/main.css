@@ -1,41 +1,35 @@
-@import url(https://fonts.googleapis.com/css?family=Caudex:400,700);.homepage {
-  background-color: #383838;
-}
-
-.nav-homepage {
-  right: 5px;
-  margin: 0;
-  padding: 0;
-  height: 100px;
-  width: 99%;
-  border-bottom: solid 1.5px #a8a8a8;
-  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
-}
-
-.nav-homepage h1 {
-  margin: 44px 0 0 10px;
-  font-family: 'Caudex';
-  color: #a8a8a8;
-  font-size: 36px;
-  float: left;
-}
-
-.nav-homepage ul {
+@import url(https://fonts.googleapis.com/css?family=Carme);@import url(https://fonts.googleapis.com/css?family=Caudex:400,700);.main-header {
   position: relative;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  top: 0;
+  left: 0;
+  display: block;
 }
 
-.nav-homepage a {
-  margin: 60px 20px 0 20px;
-  padding: 0;
-  display: inline-block;
-  font-family: 'Caudex';
-  color: #a8a8a8;
-  font-size: 20px;
-  text-decoration: none;
+.nav-main h1 {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  color: black;
+}
+
+.nav-main ul {
+  position: absolute;
   float: right;
+  top: 50px;
+  right: 50px;
+}
+
+.nav-main li {
+  color: black;
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+  list-style-image: none;
+}
+
+.nav-main a {
+  font-family: 'Carme', sans-serif;
+  text-decoration: none;
 }
 
 .todo-container {
@@ -114,6 +108,82 @@ h1 {
 .square6:hover {
   transform: translate3d(20px, 50px, 100px);
   transition: transform .5s;
+}
+
+.project-header {
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 150px;
+  width: 100%;
+  background-color: #053E75;
+}
+
+.nav-menu ul {
+  position: absolute;
+  top: 100px;
+  right: 10px;
+  float: right;
+}
+
+.nav-menu li {
+  margin-right: 50px;
+  font-family: Arial;
+  font-size: 20px;
+  display: inline-block;
+  list-style-image: none;
+}
+
+.nav-menu a {
+  color: #B79D33;
+}
+
+.project-header img {
+  position: absolute;
+  top: 25px;
+  left: 45px;
+  width: 100px;
+  height: auto;
+  border-radius: .8;
+  z-index: 1;
+}
+
+.project-header img:hover {
+  transform: rotateY(375deg);
+  transition: transform .5s;
+}
+
+.project-main {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.project h1 {
+  position: absolute;
+  font-family: Arial;
+  font-size: 30px;
+  color: #053E75;
+  top: 50px;
+  left: 500px;
+}
+
+.main-text h2 {
+  position: absolute;
+  font-family: Arial;
+  font-size: 24px;
+  color: #053E75;
+  top: 500px;
+}
+
+.main-text p {
+  position: absolute;
+  font-family: Arial;
+  font-size: 20px;
+  color: #053e75;
+  top: 550px;
+  width: 750px;
 }
 
 /*# sourceMappingURL=main.css.map*/

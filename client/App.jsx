@@ -1,11 +1,15 @@
 
 import $ from 'jquery';
 import 'styles/main.scss';
+import mainNavbar from 'components/mainNavbar';
 import todos from 'pages/todo';
-import project from 'pages/project';
 import funnySquares from 'pages/funnySquares';
+import project from 'pages/project';
 
 $(function() {
+
+  mainNavbar.init();
+
 
   var url = window.location.pathname;
 
@@ -14,11 +18,11 @@ $(function() {
     case '/pages/todo.html':
       todos.init();
     break;
-    case '/pages/project.html':
-      // init the project javascript
-    break;
     case '/pages/funnySquares.html':
       funnySquares.init();
+    break;
+    case '/pages/projectHome.html':
+      project.init();
     break;
   }
 });

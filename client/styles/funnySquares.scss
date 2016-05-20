@@ -1,44 +1,44 @@
 h1 {
-	color: red;
+  color: red;
 }
 .square {
-	display: inline-block;
-	height: 100px;
-	width: 100px;
-	background-color: #63a1f2;
-	text-align: center;
-	line-height: 100px;
-	font-family: arial;
-	font-size: 42px;
-	transform: none;
-	transition: transform .5s;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background-color: #63a1f2;
+  text-align: center;
+  line-height: 100px;
+  font-family: arial;
+  font-size: 42px;
+  transform: none;
+  transition: transform .5s;
 }
 .square-container {
   display: inline-block;
   perspective: 50px;
 }
 .square1:hover {
-	transform: skewY(45deg);
-	transition: transform .5s;
+  transform: skewY(45deg);
+  transition: transform .5s;
 }
 .square2:hover {
-	transform: rotate(720deg);
-	transition: transform .5s;
+  transform: rotate(720deg);
+  transition: transform .5s;
 }
 .square3:hover {
-	transform: scale(.8, .5);
-	transition: transform .5s;
+  transform: scale(.8, .5);
+  transition: transform .5s;
 }
 .square4:hover {
-	transform: rotateY(745deg) rotateZ(45deg);
-	transition: transform .5s;
+  transform: rotateY(745deg) rotateZ(45deg);
+  transition: transform .5s;
 }
 .square5:hover {
-	-webkit-transform: rotateX(45deg);
-	transform: rotateX(45deg);
-	transition: transform .5s;
+  -webkit-transform: rotateX(45deg);
+  transform: rotateX(45deg);
+  transition: transform .5s;
 }
 .square6:hover {
-	transform: translate3d(20px, 50px, 100px);
-	transition: transform .5s;
+  transform: translate3d(20px, 50px, 100px);
+  transition: transform .5s;
 }

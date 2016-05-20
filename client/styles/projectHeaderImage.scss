@@ -1,0 +1,14 @@
+.project-header img {
+	position: absolute;
+	top: 25px;
+	left: 45px;
+	width: 100px;
+	height: auto;
+	border-radius: .8;
+	z-index: 1;
+}
+
+.project-header img:hover {
+	transform: rotateY(375deg);
+	transition: transform .5s;
+}

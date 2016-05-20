@@ -1,0 +1,28 @@
+
+.project-header {
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 150px;
+  width: 100%;
+  background-color: #053E75;
+}
+
+.nav-menu ul {
+  position: absolute;
+  top: 100px;
+  right: 10px;
+  float: right;
+}
+.nav-menu li  {
+  margin-right: 50px;
+  font-family: Arial;
+  font-size: 20px;
+  display: inline-block;
+  list-style-image: none;
+}
+
+.nav-menu a {
+  color: #B79D33;
+}
