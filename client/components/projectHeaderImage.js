@@ -9,6 +9,7 @@ var app = {
     app.render();
   },
   render: function() {
+    
   }
 };
 module.exports = app;

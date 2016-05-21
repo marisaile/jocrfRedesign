@@ -9943,7 +9943,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"main-header":"main-header","nav-main":"nav-main","todo-container":"todo-container","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","project-header":"project-header","nav-menu":"nav-menu","project-main":"project-main","project":"project","main-text":"main-text"};
+	module.exports = {"main-header":"main-header","nav-main":"nav-main","todo-container":"todo-container","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","project-header":"project-header","nav-menu":"nav-menu","project-main":"project-main","project-main-text":"project-main-text","project-main-carousel":"project-main-carousel","project-main-sidebar":"project-main-sidebar","news":"news","news-p":"news-p","community":"community","community-p":"community-p","fun-fact":"fun-fact","fun-fact-p":"fun-fact-p"};
 
 /***/ },
 /* 3 */,
@@ -29171,7 +29171,7 @@
 	
 	var _componentsProjectHeader2 = _interopRequireDefault(_componentsProjectHeader);
 	
-	var _componentsProjectMain = __webpack_require__(66);
+	var _componentsProjectMain = __webpack_require__(65);
 	
 	var _componentsProjectMain2 = _interopRequireDefault(_componentsProjectMain);
 	
@@ -29202,7 +29202,7 @@
 	
 	var _componentsProjectHeaderImage2 = _interopRequireDefault(_componentsProjectHeaderImage);
 	
-	var _componentsProjectSearch = __webpack_require__(64);
+	var _componentsProjectSearch = __webpack_require__(63);
 	
 	var _componentsProjectSearch2 = _interopRequireDefault(_componentsProjectSearch);
 	
@@ -29256,7 +29256,7 @@
 /* 61 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"project-header\">\n  <div class=\"nav-menu\">\n    <ul>\n      <li class=\"nav-list\">\n        <a role=\"menuitem\" href=\"#\">Learn</a>\n      </li>\n      <li class=\"nav-list\">\n        <a role=\"menuitem\" href=\"#\">Visit</a>\n      </li>\n      <li class=\"nav-list\">\n        <a role=\"menuitem\" href=\"#\">Blog</a>\n      </li>\n      <li class=\"nav-list\">\n        <a role=\"menuitem\" href=\"#\">Contact Us</a>\n      </li>\n      <li class=\"nav-list\">\n        <a role=\"menuitem\" href=\"#\">Herp News</a>\n      </li>\n    </ul>\n  </div>\n</div>";
+	module.exports = "<div class=\"project-header\">\n  <div class=\"nav-menu\">\n    <ul>\n      <li class=\"nav-list\">\n        <a role=\"menuitem\" href=\"#\">Learn</a>\n      </li>\n      <li class=\"nav-list\">\n        <a role=\"menuitem\" href=\"#\">Visit</a>\n      </li>\n      <li class=\"nav-list\">\n        <a role=\"menuitem\" href=\"#\">Blog</a>\n      </li>\n      <li class=\"nav-list\">\n        <a role=\"menuitem\" href=\"#\">Contact Us</a>\n      </li>\n    </ul>\n  </div>\n</div>";
 
 /***/ },
 /* 62 */
@@ -29279,15 +29279,14 @@
 	module.exports = app;
 
 /***/ },
-/* 63 */,
-/* 64 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _templatesProjectSearchHtml = __webpack_require__(65);
+	var _templatesProjectSearchHtml = __webpack_require__(64);
 	
 	var _templatesProjectSearchHtml2 = _interopRequireDefault(_templatesProjectSearchHtml);
 	
@@ -29308,24 +29307,24 @@
 	module.exports = app;
 
 /***/ },
-/* 65 */
+/* 64 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"project-header\">\n  <span class=\"glyphicon glyphicon-search\" aria-hidden=\"true\"></span>\n</div>";
 
 /***/ },
-/* 66 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _templatesProjectMainHtml = __webpack_require__(67);
+	var _templatesProjectMainHtml = __webpack_require__(66);
 	
 	var _templatesProjectMainHtml2 = _interopRequireDefault(_templatesProjectMainHtml);
 	
-	var _componentsProjectMainCarousel = __webpack_require__(68);
+	var _componentsProjectMainCarousel = __webpack_require__(67);
 	
 	var _componentsProjectMainCarousel2 = _interopRequireDefault(_componentsProjectMainCarousel);
 	
@@ -29348,13 +29347,13 @@
 	module.exports = app;
 
 /***/ },
-/* 67 */
+/* 66 */
 /***/ function(module, exports) {
 
-	module.exports = "\n\n<div class=\"project-main\">\n  <div class=\"main-text\">\n    <h1>Herpetarium</h1>\n    <h2>The country's first dedicated herpetarium!!</h2>\n    <p>Over 10,000 square feet of climate-specific reptile and amphibian habitats house nearly 100 different species of snakes, turtles, lizards, salamanders, and more!</p>\n  </div>\n</div>";
+	module.exports = "<div class=\"project-main\">\n  <div class=\"container-fluid\">\n    <div class=\"row project-main\">\n      <div class=\"col-md-10 project-main\">\n        <div class=\"project-main-text\">\n          <h1>Herpetarium</h1>\n          <h2>The country's only dedicated herpetarium!!</h2>\n          <p>Over 10,000 square feet of climate-specific reptile and amphibian habitats house nearly 100 different species of snakes, turtles, lizards, salamanders, and more!</p>\n        </div>\n      </div>\n      <div class=\"col-md-10 project-main\">\n        <div id=\"project-main-carousel\" class=\"carousel slide\" data-ride=\"carousel\">\n          <div class=\"carousel-inner\" role=\"listbox\">\n            <div class=\"item active\">\n              <img src=\"xxxHTMLLINKxxx0.73256019456312060.22786023374646902xxx\" alt=\"habitat\">\n              <div class=\"carousel-caption\">\n                ...\n              </div>\n            </div>\n            <div class=\"item active\">\n              <img src=\"xxxHTMLLINKxxx0.492268763948231940.6739751279819757xxx\" alt=\"habitat\">\n              <div class=\"carousel-caption\">\n                ...\n              </div>\n            </div>\n            <div class=\"item\">\n              <img src=\"xxxHTMLLINKxxx0.30534518905915320.5734641691669822xxx\" alt=\"frog\">\n              <div class=\"carousel-caption\">\n                ...\n              </div>\n            </div>\n            ...\n          </div>\n            <div class=\"carousel-controls\">\n              <a class=\"left carousel-control\" href=\"#project-main-carousel\" role=\"button\" data-slide=\"prev\">\n                <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\n                <span class=\"sr-only\">Previous</span>\n              </a>\n              <a class=\"right carousel-control\" href=\"#project-main-carousel\" role=\"button\" data-slide=\"next\">\n                <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n                <span class=\"sr-only\">Next</span>\n              </a>\n            </div>\n        </div>\n      </div>\n      <div class=\"col-md-2 project-main\">\n        <div class=\"project-main-sidebar\">\n          <h3 class=\"news\">Coming Soon</h3>\n            <p class=\"news-p\">Serpentarium!</p>\n          <h4 class=\"community\">Herp News</h4>\n            <p class=\"community-p\">New lizard species discovered in West Texas: Solastella cookei</p>\n          <h4 class=\"fun-fact\">Did you know...?</h4>\n            <p class=\"fun-fact-p\">A herpetologist is a scientist who studies reptiles and amphibians. The word \"herpetology\" comes from the Greek \"herpien\", which means \"to creep\". So herpetology means \"the study of creepy-crawlers\"!</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n\n\n\n\n\n        \n      ";
 
 /***/ },
-/* 68 */
+/* 67 */
 /***/ function(module, exports) {
 
 	"use strict";

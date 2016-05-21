@@ -115,16 +115,16 @@ h1 {
   display: block;
   top: 0;
   left: 0;
-  height: 150px;
+  height: 100px;
   width: 100%;
   background-color: #053E75;
 }
 
 .nav-menu ul {
   position: absolute;
-  top: 100px;
-  right: 10px;
-  float: right;
+  top: 75px;
+  left: 10px;
+  float: left;
 }
 
 .nav-menu li {
@@ -160,30 +160,102 @@ h1 {
   width: 100%;
 }
 
-.project h1 {
+.project-main-text h1 {
   position: absolute;
-  font-family: Arial;
+  top: 25px;
+  font-family: "Carme";
   font-size: 30px;
   color: #053E75;
-  top: 50px;
-  left: 500px;
+  width: 100%;
+  text-align: center;
 }
 
-.main-text h2 {
+.project-main-text h2 {
   position: absolute;
-  font-family: Arial;
+  top: 500px;
+  font-family: "Carme";
   font-size: 24px;
   color: #053E75;
-  top: 500px;
+  width: 100%;
+  text-align: center;
 }
 
-.main-text p {
+.project-main-text p {
   position: absolute;
-  font-family: Arial;
+  top: 550px;
+  font-family: "Carme";
   font-size: 20px;
   color: #053e75;
-  top: 550px;
-  width: 750px;
+  width: 100%;
+  text-align: center;
+}
+
+#project-main-carousel {
+  position: relative;
+  top: 300px;
+  margin-left: 20px;
+}
+
+.project-main-sidebar {
+  position: relative;
+  height: 100%;
+}
+
+.project-main-sidebar .news {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  font-family: "Carme";
+  font-size: 18px;
+  text-align: center;
+}
+
+.project-main-sidebar .news-p {
+  position: absolute;
+  top: 85px;
+  width: 100%;
+  padding-right: 20px;
+  font-family: "Carme";
+  font-size: 14px;
+  text-align: right;
+}
+
+.project-main-sidebar .community {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  font-family: "Carme";
+  font-size: 16px;
+  text-align: center;
+}
+
+.project-main-sidebar .community-p {
+  position: absolute;
+  top: 190px;
+  width: 100%;
+  padding-right: 20px;
+  font-family: "Carme";
+  font-size: 14px;
+  text-align: right;
+}
+
+.project-main-sidebar .fun-fact {
+  position: absolute;
+  top: 300px;
+  width: 100%;
+  font-family: "Carme";
+  font-size: 16px;
+  text-align: center;
+}
+
+.project-main-sidebar .fun-fact-p {
+  position: absolute;
+  top: 330px;
+  width: 100%;
+  padding-right: 20px;
+  font-family: "Carme";
+  font-size: 14px;
+  text-align: right;
 }
 
 /*# sourceMappingURL=main.css.map*/
