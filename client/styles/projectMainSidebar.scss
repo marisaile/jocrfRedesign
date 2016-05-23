@@ -1,63 +1,69 @@
 @import url(https://fonts.googleapis.com/css?family=Carme);
 
-.project-main-sidebar {
+.sidebar-container {
   position: relative;
   height: 100%;
+  width: 100%;
+  background-color: #120847;
 }
-
-.project-main-sidebar .news {
+.sidebar .news {
   position: absolute;
   top: 50px;
   width: 100%;
   font-family: "Carme";
+  font-size: 20px;
+  text-align: center;
+  color: #BF9400;
+}
+
+.sidebar .news-p {
+  position: absolute;
+  top: 90px;
+  width: 100%;
+  font-family: "Carme";
   font-size: 18px;
   text-align: center;
+  color: #BF9400;
 }
 
-.project-main-sidebar .news-p {
+.sidebar .community {
   position: absolute;
-  top: 85px;
-  width: 100%;
-  padding-right: 20px;
-  font-family: "Carme";
-  font-size: 14px;
-  text-align: right;
-}
-
-.project-main-sidebar .community {
-  position: absolute;
-  top: 150px;
+  top: 200px;
   width: 100%;
   font-family: "Carme";
-  font-size: 16px;
+  font-size: 20px;
   text-align: center;
+  color: #BF9400;
 }
 
-.project-main-sidebar .community-p {
+.sidebar .community-p {
   position: absolute;
-  top: 190px;
+  top: 240px;
   width: 100%;
-  padding-right: 20px;
+  margin-right: 10px;
+  padding-right: 10px;
   font-family: "Carme";
-  font-size: 14px;
-  text-align: right;
-}
-
-.project-main-sidebar .fun-fact {
-  position: absolute;
-  top: 300px;
-  width: 100%;
-  font-family: "Carme";
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
+  color: #BF9400;
 }
 
-.project-main-sidebar .fun-fact-p {
+.sidebar .fun-fact {
   position: absolute;
-  top: 330px;
+  top: 400px;
   width: 100%;
-  padding-right: 20px;
   font-family: "Carme";
-  font-size: 14px;
-  text-align: right;
+  font-size: 20px;
+  text-align: center;
+  color: #BF9400;
+}
+
+.sidebar .fun-fact-p {
+  position: absolute;
+  top: 440px;
+  width: 100%;
+  font-family: "Carme";
+  font-size: 18px;
+  text-align: center;
+  color: #BF9400;
 }

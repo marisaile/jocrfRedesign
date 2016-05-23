@@ -1,37 +1,41 @@
-@import url(https://fonts.googleapis.com/css?family=Carme);
+
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 .project-main {
   position: relative;
   display: block;
-  width: 100%;  
+  width: 100%; 
+  height: 700px;
 }
 
-.project-main-text h1 {
+.heading h1 {
   position: absolute;
-  top: 25px;
-  font-family: "Carme";
-  font-size: 30px;
-  color: #053E75;
+  top: 5px;
+  font-family: "Sigmar One", cursive;
+  font-size: 50px;
+  color: #120847;
   width: 100%;
   text-align: center;
 }
 
-.project-main-text h2 {
-  position: absolute;
-  top: 500px;
-  font-family: "Carme";
-  font-size: 24px;
-  color:  #053E75;
-  width: 100%;
-  text-align: center;
-}
-
-.project-main-text p {
+.subheading h2 {
   position: absolute;
   top: 550px;
-  font-family: "Carme";
-  font-size: 20px;
-  color: #053e75;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  color:  #120847;
   width: 100%;
   text-align: center;
 }
+
+.subheading p {
+  position: absolute;
+  top: 620px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: #120847;
+  width: 100%;
+  text-align: center;
+}
+

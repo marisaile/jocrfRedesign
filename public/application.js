@@ -9943,7 +9943,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"main-header":"main-header","nav-main":"nav-main","todo-container":"todo-container","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","project-header":"project-header","nav-menu":"nav-menu","project-main":"project-main","project-main-text":"project-main-text","project-main-carousel":"project-main-carousel","project-main-sidebar":"project-main-sidebar","news":"news","news-p":"news-p","community":"community","community-p":"community-p","fun-fact":"fun-fact","fun-fact-p":"fun-fact-p"};
+	module.exports = {"main-header":"main-header","nav-main":"nav-main","todo-container":"todo-container","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","project-header":"project-header","nav-menu":"nav-menu","project-main":"project-main","heading":"heading","subheading":"subheading","background":"background","sidebar-container":"sidebar-container","sidebar":"sidebar","news":"news","news-p":"news-p","community":"community","community-p":"community-p","fun-fact":"fun-fact","fun-fact-p":"fun-fact-p","project-footer":"project-footer","sidebar-color-container":"sidebar-color-container"};
 
 /***/ },
 /* 3 */,
@@ -29171,9 +29171,13 @@
 	
 	var _componentsProjectHeader2 = _interopRequireDefault(_componentsProjectHeader);
 	
-	var _componentsProjectMain = __webpack_require__(65);
+	var _componentsProjectMain = __webpack_require__(63);
 	
 	var _componentsProjectMain2 = _interopRequireDefault(_componentsProjectMain);
+	
+	var _componentsProjectFooter = __webpack_require__(67);
+	
+	var _componentsProjectFooter2 = _interopRequireDefault(_componentsProjectFooter);
 	
 	var app = {
 	  init: function init() {
@@ -29182,6 +29186,7 @@
 	  render: function render() {
 	    _componentsProjectHeader2['default'].init();
 	    _componentsProjectMain2['default'].init();
+	    _componentsProjectFooter2['default'].init();
 	  }
 	};
 	module.exports = app;
@@ -29194,21 +29199,19 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _componentsProjectNavMenu = __webpack_require__(60);
+	var _templatesProjectNavMenuHtml = __webpack_require__(60);
 	
-	var _componentsProjectNavMenu2 = _interopRequireDefault(_componentsProjectNavMenu);
+	var _templatesProjectNavMenuHtml2 = _interopRequireDefault(_templatesProjectNavMenuHtml);
 	
-	var _componentsProjectHeaderImage = __webpack_require__(62);
+	var _templatesProjectHeaderImageHtml = __webpack_require__(61);
 	
-	var _componentsProjectHeaderImage2 = _interopRequireDefault(_componentsProjectHeaderImage);
+	var _templatesProjectHeaderImageHtml2 = _interopRequireDefault(_templatesProjectHeaderImageHtml);
 	
-	var _componentsProjectSearch = __webpack_require__(63);
+	var _templatesProjectSearchHtml = __webpack_require__(62);
 	
-	var _componentsProjectSearch2 = _interopRequireDefault(_componentsProjectSearch);
+	var _templatesProjectSearchHtml2 = _interopRequireDefault(_templatesProjectSearchHtml);
 	
 	var $ = __webpack_require__(1);
-	
-	// legacy loading for bootstrap
 	window.jQuery = window.$ = $;
 	__webpack_require__(43);
 	
@@ -29217,66 +29220,30 @@
 	    app.render();
 	  },
 	  render: function render() {
-	
-	    _componentsProjectNavMenu2['default'].init();
-	    _componentsProjectHeaderImage2['default'].init();
-	    _componentsProjectSearch2['default'].init();
+	    $('.project-header').append(_templatesProjectNavMenuHtml2['default']);
+	    $('.project-header').append(_templatesProjectHeaderImageHtml2['default']);
+	    $('.project-header').append(_templatesProjectSearchHtml2['default']);
 	  }
 	};
 	module.exports = app;
 
 /***/ },
 /* 60 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _jQuery = __webpack_require__(7);
-	
-	var _jQuery2 = _interopRequireDefault(_jQuery);
-	
-	var _templatesProjectNavMenuHtml = __webpack_require__(61);
-	
-	var _templatesProjectNavMenuHtml2 = _interopRequireDefault(_templatesProjectNavMenuHtml);
-	
-	var app = {
-	  init: function init() {
-	    app.render();
-	  },
-	  render: function render() {
-	    (0, _jQuery2['default'])('.project-header').append(_templatesProjectNavMenuHtml2['default']);
-	  }
-	};
-	
-	module.exports = app;
+	module.exports = "\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"nav-menu\">\n        <ul>\n          <li class=\"nav-list\">\n            <a role=\"menuitem\" href=\"#\">Learn</a>\n          </li>\n          <li class=\"nav-list\">\n            <a role=\"menuitem\" href=\"#\">Visit</a>\n          </li>\n          <li class=\"nav-list\">\n            <a role=\"menuitem\" href=\"#\">Blog</a>\n          </li>\n          <li class=\"nav-list\">\n            <a role=\"menuitem\" href=\"#\">Contact Us</a>\n          </li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
 
 /***/ },
 /* 61 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"project-header\">\n  <div class=\"nav-menu\">\n    <ul>\n      <li class=\"nav-list\">\n        <a role=\"menuitem\" href=\"#\">Learn</a>\n      </li>\n      <li class=\"nav-list\">\n        <a role=\"menuitem\" href=\"#\">Visit</a>\n      </li>\n      <li class=\"nav-list\">\n        <a role=\"menuitem\" href=\"#\">Blog</a>\n      </li>\n      <li class=\"nav-list\">\n        <a role=\"menuitem\" href=\"#\">Contact Us</a>\n      </li>\n    </ul>\n  </div>\n</div>";
+	module.exports = "\n<div class=\"container-fluid\">\n<div class=\"row\">\n  <div class=\"col-md-12\">\n    <img class=\"project-header-image\" src=\"/public/images/red-eyed-frog.jpg\">\n  </div>\n</div>\n</div>\n";
 
 /***/ },
 /* 62 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	'use strict';
-	
-	var $ = __webpack_require__(1);
-	
-	// legacy loading for bootstrap
-	window.jQuery = window.$ = $;
-	__webpack_require__(43);
-	
-	var app = {
-	  init: function init() {
-	    app.render();
-	  },
-	  render: function render() {}
-	};
-	module.exports = app;
+	module.exports = "";
 
 /***/ },
 /* 63 */
@@ -29286,51 +29253,73 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _templatesProjectSearchHtml = __webpack_require__(64);
+	var _templatesProjectMainHtml = __webpack_require__(64);
 	
-	var _templatesProjectSearchHtml2 = _interopRequireDefault(_templatesProjectSearchHtml);
+	var _templatesProjectMainHtml2 = _interopRequireDefault(_templatesProjectMainHtml);
+	
+	var _templatesProjectMainTitleHtml = __webpack_require__(69);
+	
+	var _templatesProjectMainTitleHtml2 = _interopRequireDefault(_templatesProjectMainTitleHtml);
+	
+	var _templatesProjectMainSidebarHtml = __webpack_require__(65);
+	
+	var _templatesProjectMainSidebarHtml2 = _interopRequireDefault(_templatesProjectMainSidebarHtml);
+	
+	var _templatesProjectMainBackgroundHtml = __webpack_require__(66);
+	
+	var _templatesProjectMainBackgroundHtml2 = _interopRequireDefault(_templatesProjectMainBackgroundHtml);
 	
 	var $ = __webpack_require__(1);
-	
-	// legacy loading for bootstrap
 	window.jQuery = window.$ = $;
 	__webpack_require__(43);
 	
 	var app = {
 	  init: function init() {
+	
 	    app.render();
 	  },
 	  render: function render() {
-	    $('project-header').append(_templatesProjectSearchHtml2['default']);
+	
+	    $('.project-main').append(_templatesProjectMainHtml2['default']);
+	    $('.project-main').append(_templatesProjectMainTitleHtml2['default']);
+	    $('.project-main').append(_templatesProjectMainBackgroundHtml2['default']);
+	    $('.project-main').append(_templatesProjectMainSidebarHtml2['default']);
 	  }
 	};
+	
 	module.exports = app;
 
 /***/ },
 /* 64 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"project-header\">\n  <span class=\"glyphicon glyphicon-search\" aria-hidden=\"true\"></span>\n</div>";
+	module.exports = "\n<div class=\"container-fluid\">\n  <div class=\"row\">\n  </div>\n</div>";
 
 /***/ },
 /* 65 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"col-md-2 sidebar-container\">\n  <div class=\"sidebar\">\n    <h3 class=\"news\">Coming Soon</h3>\n      <p class=\"news-p\">Serpentarium!</p>\n    <h4 class=\"community\">Herp News</h4>\n      <p class=\"community-p\">New lizard species discovered in West Texas: Solastella cookei</p>\n    <h4 class=\"fun-fact\">Did you know...?</h4>\n      <p class=\"fun-fact-p\">A herpetologist is a scientist who studies reptiles and amphibians. The word \"herpetology\" comes from the Greek \"herpien\", which means \"to creep\". So herpetology means \"the study of creepy-crawlers\"!</p>\n  </div>\n</div>\n\n\n\n";
+
+/***/ },
+/* 66 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"col-md-10 background\">\n\t<img class=\"background-image\"  src=\"/public/images/carousel/frogs/smiling-frog.jpg\">\n</div>";
+
+/***/ },
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _templatesProjectMainHtml = __webpack_require__(66);
+	var _templatesProjectFooterHtml = __webpack_require__(68);
 	
-	var _templatesProjectMainHtml2 = _interopRequireDefault(_templatesProjectMainHtml);
-	
-	var _componentsProjectMainCarousel = __webpack_require__(67);
-	
-	var _componentsProjectMainCarousel2 = _interopRequireDefault(_componentsProjectMainCarousel);
+	var _templatesProjectFooterHtml2 = _interopRequireDefault(_templatesProjectFooterHtml);
 	
 	var $ = __webpack_require__(1);
-	
-	// legacy loading for bootstrap
 	window.jQuery = window.$ = $;
 	__webpack_require__(43);
 	
@@ -29339,32 +29328,22 @@
 	    app.render();
 	  },
 	  render: function render() {
-	    $('.project-main').append(_templatesProjectMainHtml2['default']);
-	    _componentsProjectMainCarousel2['default'].init();
+	    $('.project-footer').append(_templatesProjectFooterHtml2['default']);
 	  }
 	};
-	
 	module.exports = app;
 
 /***/ },
-/* 66 */
+/* 68 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"project-main\">\n  <div class=\"container-fluid\">\n    <div class=\"row project-main\">\n      <div class=\"col-md-10 project-main\">\n        <div class=\"project-main-text\">\n          <h1>Herpetarium</h1>\n          <h2>The country's only dedicated herpetarium!!</h2>\n          <p>Over 10,000 square feet of climate-specific reptile and amphibian habitats house nearly 100 different species of snakes, turtles, lizards, salamanders, and more!</p>\n        </div>\n      </div>\n      <div class=\"col-md-10 project-main\">\n        <div id=\"project-main-carousel\" class=\"carousel slide\" data-ride=\"carousel\">\n          <div class=\"carousel-inner\" role=\"listbox\">\n            <div class=\"item active\">\n              <img src=\"xxxHTMLLINKxxx0.73256019456312060.22786023374646902xxx\" alt=\"habitat\">\n              <div class=\"carousel-caption\">\n                ...\n              </div>\n            </div>\n            <div class=\"item active\">\n              <img src=\"xxxHTMLLINKxxx0.492268763948231940.6739751279819757xxx\" alt=\"habitat\">\n              <div class=\"carousel-caption\">\n                ...\n              </div>\n            </div>\n            <div class=\"item\">\n              <img src=\"xxxHTMLLINKxxx0.30534518905915320.5734641691669822xxx\" alt=\"frog\">\n              <div class=\"carousel-caption\">\n                ...\n              </div>\n            </div>\n            ...\n          </div>\n            <div class=\"carousel-controls\">\n              <a class=\"left carousel-control\" href=\"#project-main-carousel\" role=\"button\" data-slide=\"prev\">\n                <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\n                <span class=\"sr-only\">Previous</span>\n              </a>\n              <a class=\"right carousel-control\" href=\"#project-main-carousel\" role=\"button\" data-slide=\"next\">\n                <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n                <span class=\"sr-only\">Next</span>\n              </a>\n            </div>\n        </div>\n      </div>\n      <div class=\"col-md-2 project-main\">\n        <div class=\"project-main-sidebar\">\n          <h3 class=\"news\">Coming Soon</h3>\n            <p class=\"news-p\">Serpentarium!</p>\n          <h4 class=\"community\">Herp News</h4>\n            <p class=\"community-p\">New lizard species discovered in West Texas: Solastella cookei</p>\n          <h4 class=\"fun-fact\">Did you know...?</h4>\n            <p class=\"fun-fact-p\">A herpetologist is a scientist who studies reptiles and amphibians. The word \"herpetology\" comes from the Greek \"herpien\", which means \"to creep\". So herpetology means \"the study of creepy-crawlers\"!</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n\n\n\n\n\n        \n      ";
+	module.exports = "\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-md-10\">\n      <nav class=\"footer-nav\">\n        <ul>\n          <li>\n            <a role = \"menuitem\" href=\"#\">Careers</a>\n          </li>\n          <li>\n            <a role=\"menuitem\" href=\"#\">Copyright 2016</a>\n          </li>\n          <li>\n            <a role=\"menuitem\" href=\"#\">Lisa M, inc.</a>\n          </li>\n          <li>\n            <a role=\"menuitem\" href=\"#\">Herp community</a>\n          </li>\n        </ul>\n      </nav>\n      <div class=\"col-md-2 sidebar-color-container\"> </div>\n    </div>\n  </div>\n</div>\n\n";
 
 /***/ },
-/* 67 */
+/* 69 */
 /***/ function(module, exports) {
 
-	"use strict";
-	
-	var app = {
-	  init: function init() {
-	    app.render();
-	  },
-	  render: function render() {}
-	};
-	module.exports = app;
+	module.exports = "\n  <div class=\"col-md-10\">\n    <div class=\"heading\">\n      <h1>Herpetarium</h1>\n    </div>\n    <div class=\"subheading\">\n      <h2>The country's only dedicated herpetarium!!</h2>\n      <p>Over 10,000 square feet of climate-specific reptile and amphibian habitats<br> house nearly 100 different species of snakes, turtles, lizards, salamanders, and more!</p>\n    </div>\n  </div>\n</div>";
 
 /***/ }
 /******/ ]);

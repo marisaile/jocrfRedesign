@@ -1,22 +1,19 @@
 var $ = require('jquery');
-
-// legacy loading for bootstrap
 window.jQuery = window.$ = $;
 require('bootstrap');
 
-import projectNavMenu from 'components/projectNavMenu';
-import projectHeaderImage from 'components/projectHeaderImage';
-import projectSearch from 'components/projectSearch';
+import projectNavMenu from 'templates/projectNavMenu.html';
+import projectHeaderImage from 'templates/projectHeaderImage.html';
+import projectSearch from 'templates/projectSearch.html';
 
 var app = {
   init: function() {
     app.render();
   },
   render: function() {
-
-    projectNavMenu.init();
-    projectHeaderImage.init();
-    projectSearch.init();
+  	$('.project-header').append(projectNavMenu);
+  	$('.project-header').append(projectHeaderImage);
+  	$('.project-header').append(projectSearch);
   }
 };
 module.exports = app;

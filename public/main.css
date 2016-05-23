@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Carme);@import url(https://fonts.googleapis.com/css?family=Caudex:400,700);.main-header {
+@import url(https://fonts.googleapis.com/css?family=Carme);@import url(https://fonts.googleapis.com/css?family=Caudex:400,700);@import url(https://fonts.googleapis.com/css?family=Sigmar+One);@import url(https://fonts.googleapis.com/css?family=Open+Sans);.main-header {
   position: relative;
   top: 0;
   left: 0;
@@ -115,14 +115,14 @@ h1 {
   display: block;
   top: 0;
   left: 0;
-  height: 100px;
+  height: 75px;
   width: 100%;
-  background-color: #053E75;
+  background-color: #120847;
 }
 
 .nav-menu ul {
   position: absolute;
-  top: 75px;
+  top: 45px;
   left: 10px;
   float: left;
 }
@@ -136,7 +136,7 @@ h1 {
 }
 
 .nav-menu a {
-  color: #B79D33;
+  color: #BF9400;
 }
 
 .project-header img {
@@ -158,104 +158,146 @@ h1 {
   position: relative;
   display: block;
   width: 100%;
+  height: 700px;
 }
 
-.project-main-text h1 {
+.heading h1 {
   position: absolute;
-  top: 25px;
-  font-family: "Carme";
-  font-size: 30px;
-  color: #053E75;
+  top: 5px;
+  font-family: "Sigmar One", cursive;
+  font-size: 50px;
+  color: #120847;
   width: 100%;
   text-align: center;
 }
 
-.project-main-text h2 {
-  position: absolute;
-  top: 500px;
-  font-family: "Carme";
-  font-size: 24px;
-  color: #053E75;
-  width: 100%;
-  text-align: center;
-}
-
-.project-main-text p {
+.subheading h2 {
   position: absolute;
   top: 550px;
-  font-family: "Carme";
-  font-size: 20px;
-  color: #053e75;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  color: #120847;
   width: 100%;
   text-align: center;
 }
 
-#project-main-carousel {
-  position: relative;
-  top: 300px;
-  margin-left: 20px;
+.subheading p {
+  position: absolute;
+  top: 620px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: #120847;
+  width: 100%;
+  text-align: center;
 }
 
-.project-main-sidebar {
+.background img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.sidebar-container {
   position: relative;
   height: 100%;
+  width: 100%;
+  background-color: #120847;
 }
 
-.project-main-sidebar .news {
+.sidebar .news {
   position: absolute;
   top: 50px;
   width: 100%;
   font-family: "Carme";
+  font-size: 20px;
+  text-align: center;
+  color: #BF9400;
+}
+
+.sidebar .news-p {
+  position: absolute;
+  top: 90px;
+  width: 100%;
+  font-family: "Carme";
   font-size: 18px;
   text-align: center;
+  color: #BF9400;
 }
 
-.project-main-sidebar .news-p {
+.sidebar .community {
   position: absolute;
-  top: 85px;
+  top: 200px;
   width: 100%;
-  padding-right: 20px;
   font-family: "Carme";
-  font-size: 14px;
-  text-align: right;
+  font-size: 20px;
+  text-align: center;
+  color: #BF9400;
 }
 
-.project-main-sidebar .community {
+.sidebar .community-p {
   position: absolute;
-  top: 150px;
+  top: 240px;
+  width: 100%;
+  margin-right: 10px;
+  padding-right: 10px;
+  font-family: "Carme";
+  font-size: 18px;
+  text-align: center;
+  color: #BF9400;
+}
+
+.sidebar .fun-fact {
+  position: absolute;
+  top: 400px;
   width: 100%;
   font-family: "Carme";
-  font-size: 16px;
+  font-size: 20px;
+  text-align: center;
+  color: #BF9400;
+}
+
+.sidebar .fun-fact-p {
+  position: absolute;
+  top: 440px;
+  width: 100%;
+  font-family: "Carme";
+  font-size: 18px;
+  text-align: center;
+  color: #BF9400;
+}
+
+.project-footer {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 25px;
+}
+
+.project-footer ul {
   text-align: center;
 }
 
-.project-main-sidebar .community-p {
-  position: absolute;
-  top: 190px;
-  width: 100%;
-  padding-right: 20px;
-  font-family: "Carme";
-  font-size: 14px;
-  text-align: right;
+.project-footer li {
+  margin-right: 50px;
+  list-style-image: none;
+  display: inline-block;
 }
 
-.project-main-sidebar .fun-fact {
-  position: absolute;
-  top: 300px;
-  width: 100%;
-  font-family: "Carme";
-  font-size: 16px;
-  text-align: center;
+.project-footer a {
+  font-family: Arial;
+  font-size: 14px;
+  color: #403C3E;
 }
 
-.project-main-sidebar .fun-fact-p {
-  position: absolute;
-  top: 330px;
-  width: 100%;
-  padding-right: 20px;
-  font-family: "Carme";
-  font-size: 14px;
-  text-align: right;
+.sidebar-color-container {
+  position: relative;
+  height: auto;
+  width: 150px;
+  background-color: #120847;
 }
 
 /*# sourceMappingURL=main.css.map*/
