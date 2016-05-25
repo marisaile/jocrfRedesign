@@ -1,11 +1,11 @@
 
 import $ from 'jQuery';
 import _ from 'underscore';
-import rawTemplate from 'templates/funnySquare.html';
 import Handlebars from 'handlebars';
-
+import rawTemplate from 'templates/funnySquare.html';
 
 var template;
+
 var app = {
   init: function(){
     template = Handlebars.compile(rawTemplate);
@@ -22,5 +22,4 @@ var app = {
     $('h1').after(renderedHtml);
   }
 };
-
 module.exports = app;

@@ -1,14 +1,12 @@
-.project-header img {
+.project-header-image {
   position: absolute;
-  top: 25px;
-  left: 45px;
-  width: 100px;
-  height: auto;
+  top: -25px;
+  left: 10px;
+  width: 75px;
   border-radius: .8;
-  z-index: 1;
 }
 
-.project-header img:hover {
-  transform: rotateY(375deg);
+.project-header-image:hover {
+  transform: rotateZ(375deg);
   transition: transform .5s;
 }

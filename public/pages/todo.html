@@ -11,20 +11,22 @@
   </head>
   <body>
     <header class="main-header"></header>
-    <main>
+    <main class="main-main">
     <!-- Application -->
-      <div class="todo-container">
-        <h1 id="todo-title">Bootstrap Todo App</h1>
-        <div class="add-todo-container row">
-        <div class="col-md-10">
-          <input type="text" class="form-control" placeholder="new to do">
+      <div class="main-todo">
+        <div class="todo-container">
+          <h1 id="todo-title">Bootstrap Todo App</h1>
+          <div class="add-todo-container row">
+          <div class="col-md-10">
+            <input type="text" class="form-control" placeholder="new to do">
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-primary">Add</button>
+          </div>
         </div>
-        <div class="col-md-2">
-          <button class="btn btn-primary">Add</button>
-        </div>
+        <ul class="list-group">
+        </ul>
       </div>
-      <ul class="list-group">
-      </ul>
-    </div>
+    </main>
   </body>
 </html>

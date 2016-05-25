@@ -1,25 +1,27 @@
-@import url(https://fonts.googleapis.com/css?family=Carme);@import url(https://fonts.googleapis.com/css?family=Caudex:400,700);@import url(https://fonts.googleapis.com/css?family=Sigmar+One);@import url(https://fonts.googleapis.com/css?family=Open+Sans);.main-header {
-  position: relative;
+@import url(https://fonts.googleapis.com/css?family=Carme);@import url(https://fonts.googleapis.com/css?family=Caudex:400,700);@import url(https://fonts.googleapis.com/css?family=Sigmar+One);@import url(https://fonts.googleapis.com/css?family=Open+Sans);.main-navbar {
+  position: sticky;
+  display: block;
   top: 0;
   left: 0;
-  display: block;
+  height: 150px;
+  width: 100%;
 }
 
-.nav-main h1 {
-  position: absolute;
-  top: 50px;
-  left: 50px;
+.main-nav-container h1 {
+  position: relative;
+  top: 10px;
+  left: 10px;
   color: black;
 }
 
-.nav-main ul {
+.main-nav-container ul {
   position: absolute;
   float: right;
   top: 50px;
   right: 50px;
 }
 
-.nav-main li {
+.main-nav-container li {
   color: black;
   display: inline-block;
   margin-left: 20px;
@@ -27,15 +29,22 @@
   list-style-image: none;
 }
 
-.nav-main a {
+.main-nav-container a {
   font-family: 'Carme', sans-serif;
   text-decoration: none;
 }
 
-.todo-container {
-  width: 400px;
+.main-todo {
   margin: 5px auto;
-  margin-top: 50px;
+  width: 500px;
+  height: 100%;
+  background-color: #eeeeee;
+}
+
+.todo-container {
+  margin: 5px auto;
+  margin-top: 125px;
+  width: 400px;
 }
 
 #todo-title {
@@ -57,7 +66,7 @@
   text-align: right;
 }
 
-h1 {
+.h1 {
   color: red;
 }
 
@@ -115,16 +124,38 @@ h1 {
   display: block;
   top: 0;
   left: 0;
-  height: 75px;
+  height: 80px;
   width: 100%;
-  background-color: #120847;
+  background-color: #d6f9ff;
+  filter-gradient: #d6f9ff, #9ee8fa, vertical;
+  background-image: linear-gradient(top, #d6f9ff 21%, #9ee8fa 100%);
+}
+
+.project-header {
+  position: absolute;
+  display: hidden;
+  top: 0;
+  left: 0;
+  height: 120px;
+  width: 100%;
+  background-color: #d6f9ff;
+  filter-gradient: #d6f9ff, #9ee8fa, vertical;
+  background-image: linear-gradient(top, #d6f9ff 21%, #9ee8fa 100%);
+}
+
+.heading h1 {
+  position: absolute;
+  top: 5px;
+  left: 75px;
+  font-family: "Sigmar One", cursive;
+  font-size: 50px;
+  color: #120847;
 }
 
 .nav-menu ul {
-  position: absolute;
+  position: relative;
   top: 45px;
-  left: 10px;
-  float: left;
+  left: 950px;
 }
 
 .nav-menu li {
@@ -136,21 +167,51 @@ h1 {
 }
 
 .nav-menu a {
-  color: #BF9400;
+  color: black;
 }
 
-.project-header img {
+.learn-menu {
+  position: relative;
+  display: hidden;
+  top: 0;
+  left: 0;
+  height: 120px;
+  width: 100%;
+  background-color: #d6f9ff;
+  filter-gradient: #d6f9ff, #9ee8fa, vertical;
+  background-image: linear-gradient(top, #d6f9ff 21%, #9ee8fa 100%);
+}
+
+.learn-menu ul {
   position: absolute;
-  top: 25px;
-  left: 45px;
-  width: 100px;
-  height: auto;
-  border-radius: .8;
-  z-index: 1;
+  top: 50px;
+  left: 800px;
 }
 
-.project-header img:hover {
-  transform: rotateY(375deg);
+.learn-menu li {
+  margin-right: 50px;
+  display: inline-block;
+  list-style-image: none;
+}
+
+.learn-menu a {
+  color: #120847;
+}
+
+.learn-menu img {
+  width: 50px;
+}
+
+.project-header-image {
+  position: absolute;
+  top: -25px;
+  left: 10px;
+  width: 75px;
+  border-radius: .8;
+}
+
+.project-header-image:hover {
+  transform: rotateZ(375deg);
   transition: transform .5s;
 }
 
@@ -161,19 +222,9 @@ h1 {
   height: 700px;
 }
 
-.heading h1 {
-  position: absolute;
-  top: 5px;
-  font-family: "Sigmar One", cursive;
-  font-size: 50px;
-  color: #120847;
-  width: 100%;
-  text-align: center;
-}
-
 .subheading h2 {
   position: absolute;
-  top: 550px;
+  top: 475px;
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
   color: #120847;
@@ -183,7 +234,7 @@ h1 {
 
 .subheading p {
   position: absolute;
-  top: 620px;
+  top: 575px;
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
   color: #120847;
@@ -191,83 +242,67 @@ h1 {
   text-align: center;
 }
 
-.background img {
+.side .news {
   position: absolute;
-  width: 100%;
-  height: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 75px;
+  font-family: "Sigmar One", cursive;
+  font-size: 20px;
 }
 
-.sidebar-container {
+.side .news-p {
+  position: absolute;
+  top: 125px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+.side .community {
+  position: absolute;
+  top: 250px;
+  font-family: "Sigmar One", cursive;
+  font-size: 20px;
+}
+
+.side .community-p {
+  position: absolute;
+  top: 325px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+.carousel {
   position: relative;
-  height: 100%;
-  width: 100%;
-  background-color: #120847;
+  display: block;
+  max-width: 100%;
+  vertical-align: center;
+  margin: 100px auto;
 }
 
-.sidebar .news {
-  position: absolute;
-  top: 50px;
-  width: 100%;
-  font-family: "Carme";
-  font-size: 20px;
-  text-align: center;
-  color: #BF9400;
+.carousel .item {
+  height: 400px;
 }
 
-.sidebar .news-p {
-  position: absolute;
-  top: 90px;
-  width: 100%;
-  font-family: "Carme";
-  font-size: 18px;
-  text-align: center;
-  color: #BF9400;
-}
-
-.sidebar .community {
-  position: absolute;
-  top: 200px;
-  width: 100%;
-  font-family: "Carme";
-  font-size: 20px;
-  text-align: center;
-  color: #BF9400;
-}
-
-.sidebar .community-p {
-  position: absolute;
-  top: 240px;
-  width: 100%;
-  margin-right: 10px;
-  padding-right: 10px;
-  font-family: "Carme";
-  font-size: 18px;
-  text-align: center;
-  color: #BF9400;
+.carousel img {
+  min-width: 100%;
+  max-height: 400px;
+  max-width: none;
+  overflow: hidden;
 }
 
 .sidebar .fun-fact {
   position: absolute;
-  top: 400px;
-  width: 100%;
-  font-family: "Carme";
+  top: 250px;
+  font-family: "Sigmar One", cursive;
   font-size: 20px;
-  text-align: center;
-  color: #BF9400;
+  text-align: right;
 }
 
 .sidebar .fun-fact-p {
   position: absolute;
-  top: 440px;
-  width: 100%;
-  font-family: "Carme";
+  top: 300px;
+  font-family: "Open Sans", sans-serif;
   font-size: 18px;
-  text-align: center;
-  color: #BF9400;
+  text-align: right;
 }
 
 .project-footer {
@@ -298,6 +333,11 @@ h1 {
   height: auto;
   width: 150px;
   background-color: #120847;
+}
+
+video {
+  height: 240px;
+  width: 320px;
 }
 
 /*# sourceMappingURL=main.css.map*/

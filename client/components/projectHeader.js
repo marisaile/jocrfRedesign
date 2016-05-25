@@ -11,9 +11,9 @@ var app = {
     app.render();
   },
   render: function() {
-  	$('.project-header').append(projectNavMenu);
-  	$('.project-header').append(projectHeaderImage);
-  	$('.project-header').append(projectSearch);
+    $('.project-header').append(projectNavMenu);
+    $('.project-header').append(projectHeaderImage);
+    $('.project-header').append(projectSearch);
   }
 };
 module.exports = app;

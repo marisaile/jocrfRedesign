@@ -1,14 +1,15 @@
 
 import $ from 'jquery';
 import 'styles/main.scss';
-import mainNavbar from 'components/mainNavbar';
+import mainPage from 'components/mainPage';
 import todos from 'pages/todo';
 import funnySquares from 'pages/funnySquares';
 import project from 'pages/project';
+import d3 from 'pages/d3';
 
 $(function() {
 
-  mainNavbar.init();
+  mainPage.init();
 
 
   var url = window.location.pathname;
@@ -23,6 +24,9 @@ $(function() {
     break;
     case '/pages/projectHome.html':
       project.init();
+    break;
+    case '/pages/d3.html':
+      d3.init();
     break;
   }
 });

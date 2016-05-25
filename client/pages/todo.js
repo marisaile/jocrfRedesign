@@ -58,10 +58,10 @@ var app = {
   bindHoverEvents: function(){
     var $items = $('.list-group-item');
     $items.on('mouseover', function(){
-      $(this).addClass('list-group-item-success');
+      $(this).addClass('list-group-item-info');
     });
     $items.on('mouseout', function(){
-      $(this).removeClass('list-group-item-success');
+      $(this).removeClass('list-group-item-info');
     });
   },
   bindCheckboxEvents: function(){

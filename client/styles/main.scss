@@ -1,4 +1,4 @@
-
+@import 'mainHeader';
 @import 'mainNavbar';
 @import 'todo';
 @import 'funnySquares';
@@ -6,6 +6,12 @@
 @import 'projectNavMenu';
 @import 'projectHeaderImage';
 @import 'projectMain';
+@import 'projectMainSide';
 @import 'projectMainBackground';
 @import 'projectMainSidebar';
 @import 'projectFooter';
+
+video {
+	height: 240px;
+	width: 320px;
+}

@@ -1,26 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Carme);
 
-.main-header {
+.main-nav-container h1 {
   position: relative;
-  top: 0;
-  left: 0;
-  display: block;
-}
-
-.nav-main h1 {
-  position: absolute;
-  top: 50px;
-  left: 50px;
+  top: 10px;
+  left: 10px;
   color: black;
-  
 }
-.nav-main ul {
+.main-nav-container ul {
   position: absolute;
   float: right;
   top: 50px;
   right: 50px;
 }
-.nav-main li {
+.main-nav-container li {
   color: black;
   display: inline-block;
   margin-left: 20px;
@@ -28,7 +20,7 @@
   list-style-image: none;
 }
 
-.nav-main a {
+.main-nav-container a {
   font-family: 'Carme', sans-serif;
   text-decoration: none;
 }

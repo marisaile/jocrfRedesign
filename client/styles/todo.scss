@@ -1,9 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Caudex:400,700);
 
-.todo-container {
-  width: 400px;
+.main-todo {
   margin: 5px auto;
-  margin-top: 50px;
+  width: 500px;
+  height: 100%;
+  background-color: #eeeeee;
+}
+.todo-container {
+  margin: 5px auto;
+  margin-top: 125px;
+  width: 400px;
 }
 
 #todo-title {

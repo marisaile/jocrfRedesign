@@ -11,8 +11,9 @@ var app = {
     app.render();
   },
   render: function() {
-    
-    }
+    $('.carousel').carousel({
+      interval: 2000
+    })
   }
 };
 module.exports = app;
