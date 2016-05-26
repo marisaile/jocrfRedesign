@@ -2,11 +2,11 @@
   position: absolute;
   top: -25px;
   left: 10px;
-  width: 75px;
+  width: 50px;
   border-radius: .8;
 }
 
 .project-header-image:hover {
-  transform: rotateZ(375deg);
-  transition: transform .5s;
+  transform: rotateY(360deg);
+  transition: transform 1s;
 }

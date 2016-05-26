@@ -14,39 +14,36 @@
 }
 
 .nav-menu a {
-  color: black;
+  color: #120847;
 }
 
 .learn-menu {
-  position: relative;
-  display: hidden;
-  top: 0;
-  left: 0;
-  height: 120px;
-  width: 100%;
-  background-color: rgb(214,249,255); 
-  filter-gradient: (#d6f9ff, #9ee8fa, vertical); 
-  background-image: (linear-gradient(top,  rgba(214,249,255,1) 21%,rgba(158,232,250,1) 100%));
+  position: absolute;
+  display: block;
+  width: 600px;
+}
 
-  ul {
+.learn-menu ul {
   position: absolute;
   top: 50px;
-  left: 800px;
-  }
+  left: 820px;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+}
 
-  li {
+.learn-menu li {
   margin-right: 50px;
   display: inline-block;
   list-style-image: none;
-  }
+}
 
-  a {
+.learn-menu a {
   color: #120847;
-  }
+}
 
-  img {
+.learn-menu img {
   width: 50px;
-  }
 }
 
 

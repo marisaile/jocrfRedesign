@@ -6,6 +6,7 @@ import todos from 'pages/todo';
 import funnySquares from 'pages/funnySquares';
 import project from 'pages/project';
 import d3 from 'pages/d3';
+import three from 'pages/three';
 
 $(function() {
 
@@ -27,6 +28,9 @@ $(function() {
     break;
     case '/pages/d3.html':
       d3.init();
+    break;
+    case '/pages/three.html':
+      three.init();
     break;
   }
 });
