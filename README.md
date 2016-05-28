@@ -1,7 +1,10 @@
+# Da Vinci Project Site
 
-# MyFirstRepo
+Blossoming front-end developer courting HTML, CSS and JavaScript.
 
-This is my very first repository. It is very exciting. 
+[my linkedin account](https://www.linkedin.com/in/lisa-cook-93ba2115)
+
+[da vinci institute](https://www.davinciinstitute.com/)
 
 
 
