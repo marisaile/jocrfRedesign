@@ -1,5 +1,4 @@
 
-
 import mainHeader from 'components/mainHeader';
 
 var app = {

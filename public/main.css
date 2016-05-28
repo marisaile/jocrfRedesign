@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Carme);@import url(https://fonts.googleapis.com/css?family=Caudex:400,700);@import url(https://fonts.googleapis.com/css?family=Sigmar+One);@import url(https://fonts.googleapis.com/css?family=Open+Sans);.main-navbar {
-  position: sticky;
+  position: relative;
   display: block;
   top: 0;
   left: 0;

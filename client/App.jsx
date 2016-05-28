@@ -33,4 +33,13 @@ $(function() {
       three.init();
     break;
   }
+
+  // Fancy Console Message for Developers
+  console.log("===========I am looking for a job!============");
+  console.log("==============================================");
+  console.log("=========check out my github account==========");
+  console.log("==============================================");
+  console.log("==============================================");
+  
+
 });

@@ -9,9 +9,18 @@ import _ from 'underscore';
 import Handlebars from 'handlebars';
 import lscache from 'lscache';
 import rawTemplate from 'templates/todoItem.html';
+import modalTemplate from 'templates/todoModal.html';
 
   
 // Data Model
+var todoSchema = function(todo) {
+  return _.defaults(todo, {
+    title: '', 
+    completed: false,
+    id: 0
+  });
+};
+
 var savedData = lscache.get('todos');
 var todos = [];
 if (savedData === null) {
@@ -79,15 +88,15 @@ var app = {
     var addTodo = function(){
       var newTodoTitle = $('.add-todo-container input').val();
       if (_.isString(newTodoTitle) && newTodoTitle.length > 2) {
-        var newTodoObject = { 
+        var newTodoObject = todoSchema({ 
           title: newTodoTitle, 
           completed: false,
           id: todos.length
-        };
-        todos.push(newTodoObject);
-        $('.add-todo-container input').val(''); 
-        app.render();
+        });
       }
+      todos.push(newTodoObject);
+      $('.add-todo-container input').val(''); 
+      app.render();
     };
     $('.add-todo-container button').on('click', addTodo);
     $(document).keypress(function(event){
@@ -106,30 +115,44 @@ var app = {
     });
   },
   bindEditTodoEvents: function(){
+    
     $('.title').on('click', function(){
-      var $parent = $(this).parent();
-      $parent.find('.title').addClass('hidden');
-      $parent.find('.title-edit').removeClass('hidden');
+      var whichTodo = $(this).attr('data-id');
+      whichTodo = parseInt(whichTodo, 10);
+      var editTodo = todos[whichTodo];
+      var compiledTemplate = Handlebars.compile(modalTemplate);
+      var fullHtml = compiledTemplate(editTodo);
+      $('body').append(fullHtml);
+      $('.modal').modal();
+      $('.close, .btn-default, .modal-backdrop').on('click', function(){
+        $('.modal, .modal-backdrop').remove;
+      })
     });
-    $('.title-edit input').on('keypress', function(event){
-      var key = (event.which);
-      // if they hit the enter key
-      if (key === 13) {
-        var newTitle = $(this).val();
-        var editId = $(this).attr('data-id');
-        editId = parseInt(editId, 10);
-        // update the title in our model
-        var editTodo = _.filter(todos, function(todo){
-          if (todo.id === editId) {
-            return true;
-          } 
-          return false;
-        });
-        editTodo = editTodo[0];
-        editTodo.title = newTitle;
-        app.render();
-      }
-    });
+
+    // $('.title').on('click', function(){
+    //   var $parent = $(this).parent();
+    //   $parent.find('.title').addClass('hidden');
+    //   $parent.find('.title-edit').removeClass('hidden');
+    // });
+    // $('.title-edit input').on('keypress', function(event){
+    //   var key = (event.which);
+    //   // if they hit the enter key
+    //   if (key === 13) {
+    //     var newTitle = $(this).val();
+    //     var editId = $(this).attr('data-id');
+    //     editId = parseInt(editId, 10);
+    //     // update the title in our model
+    //     var editTodo = _.filter(todos, function(todo){
+    //       if (todo.id === editId) {
+    //         return true;
+    //       } 
+    //       return false;
+    //     });
+    //     editTodo = editTodo[0];
+    //     editTodo.title = newTitle;
+    //     app.render();
+    //   }
+    // });
   }
 };
 
