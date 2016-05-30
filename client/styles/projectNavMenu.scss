@@ -1,51 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 .nav-menu ul {
   position: relative;
-  top: 45px;
-  left: 950px;
+  top: 35px;
+  right: 60px;
+  float: right;
 }
 
-.nav-menu li  {
-  margin-right: 50px;
-  font-family: Arial;
-  font-size: 20px;
+.nav-menu li {
+  margin-right: 75px;
   display: inline-block;
   list-style-image: none;
 }
 
 .nav-menu a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
   color: #120847;
+  text-decoration: none;
 }
-
-.learn-menu {
-  position: absolute;
-  display: block;
-  width: 600px;
-}
-
-.learn-menu ul {
-  position: absolute;
-  top: 50px;
-  left: 820px;
-  width: 100%;
-  margin-top: 0;
-  padding-top: 0;
-}
-
-.learn-menu li {
-  margin-right: 50px;
-  display: inline-block;
-  list-style-image: none;
-}
-
-.learn-menu a {
-  color: #120847;
-}
-
-.learn-menu img {
-  width: 50px;
-}
-
-
-
-

@@ -1,23 +1,21 @@
 
 .project-header {
   position: relative;
-  display: block;
   top: 0;
   left: 0;
-  height: 80px;
+  height: 60px;
   width: 100%;
   margin-bottom: 0;
   padding-bottom: 0;
-  background-color: rgb(214,249,255); 
-  filter-gradient: (#d6f9ff, #9ee8fa, vertical); 
+  background-color: rgb(214,249,255);
+  filter: (#d6f9ff, #9ee8fa, vertical); 
   background-image: (linear-gradient(top,  rgba(214,249,255,1) 21%,rgba(158,232,250,1) 100%));
 }
 
-
 .heading h1 {
   position: absolute;
-  top: 5px;
-  left: 75px;
+  top: -5px;
+  left: 60px;
   font-family: "Sigmar One", cursive;
   font-size: 50px;
   color: #120847;

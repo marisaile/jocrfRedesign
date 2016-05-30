@@ -6,10 +6,6 @@ var app = {
     app.render();
   },
   render: function() {
-    $('.learn').on('click', function(){
-    	
-    });
-
   }
 };
 

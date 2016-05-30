@@ -3,7 +3,7 @@ window.jQuery = window.$ = $;
 require('bootstrap');
 
 import projectNavMenu from 'templates/projectNavMenu.html';
-import projectHeaderImage from 'templates/projectHeaderImage.html';
+import projectLearnMenu from 'templates/projectLearnMenu.html';
 import projectSearch from 'templates/projectSearch.html';
 
 var app = {
@@ -12,7 +12,7 @@ var app = {
   },
   render: function() {
     $('.project-header').append(projectNavMenu);
-    $('.project-header').append(projectHeaderImage);
+    $('.project-header').append(projectLearnMenu);
     $('.project-header').append(projectSearch);
   }
 };
