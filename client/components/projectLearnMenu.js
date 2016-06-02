@@ -1,15 +1,16 @@
 import $ from 'jQuery';
-
+import LearnMenu from 'templates/projectLearnMenu.html';
 
 var app = {
   init: function() {
+    $('.project-header').append(LearnMenu);
     app.render();
   },
   render: function() {
-    $('.crocodile img').on('mouseover', function(){
-      $('.crocodile img').animate({
+    $('img.crocodile').on('mouseover', function(){
+      $('img.crocodile').animate({
         width: 75,
-        top: 75
+        height: 75
       }, 1000, 'swing');
     });
   }

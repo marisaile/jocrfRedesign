@@ -62,19 +62,19 @@
 	
 	var _pagesTodo2 = _interopRequireDefault(_pagesTodo);
 	
-	var _pagesFunnySquares = __webpack_require__(58);
+	var _pagesFunnySquares = __webpack_require__(57);
 	
 	var _pagesFunnySquares2 = _interopRequireDefault(_pagesFunnySquares);
 	
-	var _pagesProject = __webpack_require__(60);
+	var _pagesProject = __webpack_require__(59);
 	
 	var _pagesProject2 = _interopRequireDefault(_pagesProject);
 	
-	var _pagesD3 = __webpack_require__(70);
+	var _pagesD3 = __webpack_require__(69);
 	
 	var _pagesD32 = _interopRequireDefault(_pagesD3);
 	
-	var _pagesThree = __webpack_require__(72);
+	var _pagesThree = __webpack_require__(71);
 	
 	var _pagesThree2 = _interopRequireDefault(_pagesThree);
 	
@@ -19897,25 +19897,13 @@
 	
 	var _templatesTodoItemHtml2 = _interopRequireDefault(_templatesTodoItemHtml);
 	
-	var _templatesTodoModalHtml = __webpack_require__(44);
-	
-	var _templatesTodoModalHtml2 = _interopRequireDefault(_templatesTodoModalHtml);
-	
 	// Data Model
 	
 	var $ = __webpack_require__(1);
 	
 	// legacy loading for bootstrap
 	window.jQuery = window.$ = $;
-	__webpack_require__(45);
-	
-	var todoSchema = function todoSchema(todo) {
-	  return _underscore2['default'].defaults(todo, {
-	    title: '',
-	    completed: false,
-	    id: 0
-	  });
-	};
+	__webpack_require__(44);
 	
 	var savedData = _lscache2['default'].get('todos');
 	var todos = [];
@@ -19983,15 +19971,15 @@
 	    var addTodo = function addTodo() {
 	      var newTodoTitle = $('.add-todo-container input').val();
 	      if (_underscore2['default'].isString(newTodoTitle) && newTodoTitle.length > 2) {
-	        var newTodoObject = todoSchema({
+	        var newTodoObject = {
 	          title: newTodoTitle,
 	          completed: false,
 	          id: todos.length
-	        });
+	        };
+	        todos.push(newTodoObject);
+	        $('.add-todo-container input').val('');
+	        app.render();
 	      }
-	      todos.push(newTodoObject);
-	      $('.add-todo-container input').val('');
-	      app.render();
 	    };
 	    $('.add-todo-container button').on('click', addTodo);
 	    $(document).keypress(function (event) {
@@ -20010,44 +19998,30 @@
 	    });
 	  },
 	  bindEditTodoEvents: function bindEditTodoEvents() {
-	
 	    $('.title').on('click', function () {
-	      var whichTodo = $(this).attr('data-id');
-	      whichTodo = parseInt(whichTodo, 10);
-	      var editTodo = todos[whichTodo];
-	      var compiledTemplate = _handlebars2['default'].compile(_templatesTodoModalHtml2['default']);
-	      var fullHtml = compiledTemplate(editTodo);
-	      $('body').append(fullHtml);
-	      $('.modal').modal();
-	      $('.close, .btn-default, .modal-backdrop').on('click', function () {
-	        $('.modal, .modal-backdrop').remove;
-	      });
+	      var $parent = $(this).parent();
+	      $parent.find('.title').addClass('hidden');
+	      $parent.find('.title-edit').removeClass('hidden');
 	    });
-	
-	    // $('.title').on('click', function(){
-	    //   var $parent = $(this).parent();
-	    //   $parent.find('.title').addClass('hidden');
-	    //   $parent.find('.title-edit').removeClass('hidden');
-	    // });
-	    // $('.title-edit input').on('keypress', function(event){
-	    //   var key = (event.which);
-	    //   // if they hit the enter key
-	    //   if (key === 13) {
-	    //     var newTitle = $(this).val();
-	    //     var editId = $(this).attr('data-id');
-	    //     editId = parseInt(editId, 10);
-	    //     // update the title in our model
-	    //     var editTodo = _.filter(todos, function(todo){
-	    //       if (todo.id === editId) {
-	    //         return true;
-	    //       }
-	    //       return false;
-	    //     });
-	    //     editTodo = editTodo[0];
-	    //     editTodo.title = newTitle;
-	    //     app.render();
-	    //   }
-	    // });
+	    $('.title-edit input').on('keypress', function (event) {
+	      var key = event.which;
+	      // if they hit the enter key
+	      if (key === 13) {
+	        var newTitle = $(this).val();
+	        var editId = $(this).attr('data-id');
+	        editId = parseInt(editId, 10);
+	        // update the title in our model
+	        var editTodo = _underscore2['default'].filter(todos, function (todo) {
+	          if (todo.id === editId) {
+	            return true;
+	          }
+	          return false;
+	        });
+	        editTodo = editTodo[0];
+	        editTodo.title = newTitle;
+	        app.render();
+	      }
+	    });
 	  }
 	};
 	
@@ -26753,19 +26727,14 @@
 /* 43 */
 /***/ function(module, exports) {
 
-	module.exports = "<li class=\"list-group-item row {{#if completed}}disabled{{/if}}\">\n  <div class=\"col-md-1\">\n    <input type=\"checkbox\" {{#if completed}}checked{{/if}}>\n  </div>\n  <div class=\"col-md-10 title\" data-id='{{id}}'>{{title}}</div>\n  <div class=\"col-md-1\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close\">\n      <span aria-hidden=\"true\">&times;</span>\n    </button>\n  </div>\n</li>";
+	module.exports = "<li class=\"list-group-item row {{#if completed}}disabled{{/if}}\">\n  <div class=\"col-md-1\">\n    <input type=\"checkbox\" {{#if completed}}checked{{/if}}>\n  </div>\n  <div class=\"col-md-10 title\">{{title}}</div>\n  <div class=\"col-md-10 title-edit hidden\">\n    <input type=\"text\" class=\"form-control\" value=\"{{title}}\" data-id=\"{{id}}\">\n  </div>\n  <div class=\"col-md-1\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close\">\n      <span aria-hidden=\"true\">&times;</span>\n    </button>\n  </div>\n</li>";
 
 /***/ },
 /* 44 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"modal fade\" tabindex=\"-1\" role=\"dialog\">\n  <div class=\"modal-dialog\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n        <h4 class=\"modal-title\">Edit Todo</h4>\n      </div>\n      <div class=\"modal-body\">\n        <input type=\"text\" class=\"form-control\" value=\"{{title}}\" data-id=\"{{id}}\">\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        <button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n      </div>\n    </div>\n  </div>\n</div>";
-
-/***/ },
-/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// This file is autogenerated via the `commonjs` Grunt task. You can require() this file in a CommonJS environment.
+	__webpack_require__(45)
 	__webpack_require__(46)
 	__webpack_require__(47)
 	__webpack_require__(48)
@@ -26777,10 +26746,9 @@
 	__webpack_require__(54)
 	__webpack_require__(55)
 	__webpack_require__(56)
-	__webpack_require__(57)
 
 /***/ },
-/* 46 */
+/* 45 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -26845,7 +26813,7 @@
 
 
 /***/ },
-/* 47 */
+/* 46 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -26945,7 +26913,7 @@
 
 
 /***/ },
-/* 48 */
+/* 47 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -27071,7 +27039,7 @@
 
 
 /***/ },
-/* 49 */
+/* 48 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -27314,7 +27282,7 @@
 
 
 /***/ },
-/* 50 */
+/* 49 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -27531,7 +27499,7 @@
 
 
 /***/ },
-/* 51 */
+/* 50 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -27702,7 +27670,7 @@
 
 
 /***/ },
-/* 52 */
+/* 51 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -28045,7 +28013,7 @@
 
 
 /***/ },
-/* 53 */
+/* 52 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -28565,7 +28533,7 @@
 
 
 /***/ },
-/* 54 */
+/* 53 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -28679,7 +28647,7 @@
 
 
 /***/ },
-/* 55 */
+/* 54 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -28857,7 +28825,7 @@
 
 
 /***/ },
-/* 56 */
+/* 55 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -29018,7 +28986,7 @@
 
 
 /***/ },
-/* 57 */
+/* 56 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -29186,7 +29154,7 @@
 
 
 /***/ },
-/* 58 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29205,7 +29173,7 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _templatesFunnySquareHtml = __webpack_require__(59);
+	var _templatesFunnySquareHtml = __webpack_require__(58);
 	
 	var _templatesFunnySquareHtml2 = _interopRequireDefault(_templatesFunnySquareHtml);
 	
@@ -29230,32 +29198,32 @@
 	module.exports = app;
 
 /***/ },
-/* 59 */
+/* 58 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"square-container\">\n  <div class=\"square square{{id}}\">\n    <div class=\"inner\">{{id}}</div>\n  </div>\n</div>";
 
 /***/ },
-/* 60 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _componentsProjectHeader = __webpack_require__(61);
+	var _componentsProjectHeader = __webpack_require__(60);
 	
 	var _componentsProjectHeader2 = _interopRequireDefault(_componentsProjectHeader);
 	
-	var _componentsProjectLearnMenu = __webpack_require__(65);
+	var _componentsProjectLearnMenu = __webpack_require__(64);
 	
 	var _componentsProjectLearnMenu2 = _interopRequireDefault(_componentsProjectLearnMenu);
 	
-	var _componentsProjectMain = __webpack_require__(66);
+	var _componentsProjectMain = __webpack_require__(65);
 	
 	var _componentsProjectMain2 = _interopRequireDefault(_componentsProjectMain);
 	
-	var _componentsProjectFooter = __webpack_require__(68);
+	var _componentsProjectFooter = __webpack_require__(67);
 	
 	var _componentsProjectFooter2 = _interopRequireDefault(_componentsProjectFooter);
 	
@@ -29273,28 +29241,28 @@
 	module.exports = app;
 
 /***/ },
-/* 61 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _templatesProjectNavMenuHtml = __webpack_require__(62);
+	var _templatesProjectNavMenuHtml = __webpack_require__(61);
 	
 	var _templatesProjectNavMenuHtml2 = _interopRequireDefault(_templatesProjectNavMenuHtml);
 	
-	var _templatesProjectLearnMenuHtml = __webpack_require__(63);
+	var _templatesProjectLearnMenuHtml = __webpack_require__(62);
 	
 	var _templatesProjectLearnMenuHtml2 = _interopRequireDefault(_templatesProjectLearnMenuHtml);
 	
-	var _templatesProjectSearchHtml = __webpack_require__(64);
+	var _templatesProjectSearchHtml = __webpack_require__(63);
 	
 	var _templatesProjectSearchHtml2 = _interopRequireDefault(_templatesProjectSearchHtml);
 	
 	var $ = __webpack_require__(1);
 	window.jQuery = window.$ = $;
-	__webpack_require__(45);
+	__webpack_require__(44);
 	
 	var app = {
 	  init: function init() {
@@ -29309,25 +29277,25 @@
 	module.exports = app;
 
 /***/ },
-/* 62 */
+/* 61 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"heading\">\n  <h1>Herpetarium</h1>\n</div>\n<div class=\"nav-menu\">\n  <ul>\n    <li class=\"nav-list learn\">\n      <a role=\"menuitem\" href=\"#\">Visit</a>\n    </li>\n    <li class=\"nav-list\">\n      <a role=\"menuitem\" href=\"#\">Learn</a>\n    </li>\n    <li class=\"nav-list\">\n      <a role=\"menuitem\" href=\"#\">Blog</a>\n    </li>\n  </ul>\n</div>\n\n\n\n";
 
 /***/ },
-/* 63 */
+/* 62 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"learn-menu\">\n  <ul>\n    <li class=\"learn-nav\">\n      <a role=\"menuitem\" href=\"#\">\n        <img class=\"crocodile\" src=\"/images/crocodile-facing-right.svg\">\n      </a>   \n    </li>\n    <li class=\"learn-nav\">\n      <a role=\"menuitem\" href=\"#\">\n        <img class=\"lizard\" src=\"/images/curved-lizard.svg\">\n      </a>\n    </li>\n    <li class=\"learn-nav\">\n      <a role=\"menuitem\" href=\"#\">\n        <img class=\"frog\" src=\"/images/icon.svg\">\n      </a>   \n    </li>\n    <li class=\"learn-nav\">\n      <a role=\"menuitem\" href=\"#\">\n        <img class=\"turtle\" src=\"/images/sea-turtle.svg\">\n      </a>\n    </li>\n    <li class=\"learn-nav\">\n      <a role=\"menuitem\" href=\"#\">\n        <img class=\"snake\" src=\"/images/snake-facing-right.svg\">\n      </a>\n    </li>\n  </ul>\n</div>\n";
 
 /***/ },
-/* 64 */
+/* 63 */
 /***/ function(module, exports) {
 
 	module.exports = "";
 
 /***/ },
-/* 65 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29338,15 +29306,20 @@
 	
 	var _jQuery2 = _interopRequireDefault(_jQuery);
 	
+	var _templatesProjectLearnMenuHtml = __webpack_require__(62);
+	
+	var _templatesProjectLearnMenuHtml2 = _interopRequireDefault(_templatesProjectLearnMenuHtml);
+	
 	var app = {
 	  init: function init() {
+	    (0, _jQuery2['default'])('.project-header').append(_templatesProjectLearnMenuHtml2['default']);
 	    app.render();
 	  },
 	  render: function render() {
-	    (0, _jQuery2['default'])('.crocodile img').on('mouseover', function () {
-	      (0, _jQuery2['default'])('.crocodile img').animate({
+	    (0, _jQuery2['default'])('img.crocodile').on('mouseover', function () {
+	      (0, _jQuery2['default'])('img.crocodile').animate({
 	        width: 75,
-	        top: 75
+	        height: 75
 	      }, 1000, 'swing');
 	    });
 	  }
@@ -29355,20 +29328,20 @@
 	module.exports = app;
 
 /***/ },
-/* 66 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _templatesProjectMainBackgroundHtml = __webpack_require__(67);
+	var _templatesProjectMainBackgroundHtml = __webpack_require__(66);
 	
 	var _templatesProjectMainBackgroundHtml2 = _interopRequireDefault(_templatesProjectMainBackgroundHtml);
 	
 	var $ = __webpack_require__(1);
 	window.jQuery = window.$ = $;
-	__webpack_require__(45);
+	__webpack_require__(44);
 	
 	var app = {
 	  init: function init() {
@@ -29382,26 +29355,26 @@
 	module.exports = app;
 
 /***/ },
-/* 67 */
+/* 66 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"col-md-6 background\">\n\n\n\t<div id=\"home-carousel\" class=\"carousel slide\" data-ride=\"carousel\">\n  <!-- Indicators -->\n  <ol class=\"carousel-indicators\">\n    <li data-target=\"#home-carousel\" data-slide-to=\"0\" class=\"active\"></li>\n    <li data-target=\"#home-carousel\" data-slide-to=\"1\"></li>\n    <li data-target=\"#home-carousel\" data-slide-to=\"2\"></li>\n    <li data-target=\"#home-carousel\" data-slide-to=\"3\"></li>\n    <li data-target=\"#home-carousel\" data-slide-to=\"4\"></li>\n    <li data-target=\"#home-carousel\" data-slide-to=\"5\"></li>\n  </ol>\n\n  <!-- Wrapper for slides -->\n  <div class=\"carousel-inner\" role=\"listbox\">\n    <div class=\"item active\">\n      <img src=\"/images/carousel/frogs/amused-frog.jpg\" alt=\"amused frog\">\n    </div>\n    <div class=\"item\">\n      <img src=\"/images/carousel/turtles/red-sea-turtle.jpg\" alt=\"red-sea-turtle\">\n    </div>\n    <div class=\"item\">\n      <img src=\"/images/carousel/lizards/blue-iguana.jpg\" alt=\"blue iguana\">\n    </div>\n    <div class=\"item\">\n      <img src=\"/images/carousel/snakes/green-snake.jpg\" alt=\"snake coiled around tree branch\">\n    </div>\n    <div class=\"item\">\n      <img src=\"/images/carousel/turtles/basking-turtle.jpg\" alt=\"basking turtle\">\n    </div>\n    <div class=\"item\">\n      <img src=\"/images/carousel/frogs/red-eyed-frog.jpg\" alt=\"red eyed frog\">\n    </div>\n  </div>\n  <!-- Controls -->\n  <a class=\"left carousel-control\" href=\"#home-carousel\" role=\"button\" data-slide=\"prev\">\n    <span class=\"icon-prev\" aria-hidden=\"true\"></span>\n    <span class=\"sr-only\">Previous</span>\n  </a>\n  <a class=\"right carousel-control\" href=\"#home-carousel\" role=\"button\" data-slide=\"next\">\n    <span class=\"icon-next\" aria-hidden=\"true\"></span>\n    <span class=\"sr-only\">Next</span>\n  </a>\n</div>\n";
 
 /***/ },
-/* 68 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _templatesProjectFooterHtml = __webpack_require__(69);
+	var _templatesProjectFooterHtml = __webpack_require__(68);
 	
 	var _templatesProjectFooterHtml2 = _interopRequireDefault(_templatesProjectFooterHtml);
 	
 	var $ = __webpack_require__(1);
 	window.jQuery = window.$ = $;
-	__webpack_require__(45);
+	__webpack_require__(44);
 	
 	var app = {
 	  init: function init() {
@@ -29414,20 +29387,20 @@
 	module.exports = app;
 
 /***/ },
-/* 69 */
+/* 68 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-md-10\">\n      <nav class=\"footer-nav\">\n        <ul>\n          <li>\n            <a role = \"menuitem\" href=\"#\">Careers</a>\n          </li>\n          <li>\n            <a role=\"menuitem\" href=\"#\">Copyright 2016</a>\n          </li>\n          <li>\n            <a role=\"menuitem\" href=\"#\">Lisa M, inc.</a>\n          </li>\n          <li>\n            <a role=\"menuitem\" href=\"#\">Herp community</a>\n          </li>\n        </ul>\n      </nav>\n      <div class=\"col-md-2 sidebar-color-container\"> </div>\n    </div>\n  </div>\n</div>\n\n";
 
 /***/ },
-/* 70 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _d3 = __webpack_require__(71);
+	var _d3 = __webpack_require__(70);
 	
 	var _d32 = _interopRequireDefault(_d3);
 	
@@ -29511,7 +29484,7 @@
 	module.exports = app;
 
 /***/ },
-/* 71 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;!function() {
@@ -39070,14 +39043,14 @@
 	}();
 
 /***/ },
-/* 72 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _three = __webpack_require__(73);
+	var _three = __webpack_require__(72);
 	
 	var _three2 = _interopRequireDefault(_three);
 	
@@ -39191,7 +39164,7 @@
 	module.exports = app;
 
 /***/ },
-/* 73 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;// File:src/Three.js
