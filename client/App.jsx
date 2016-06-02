@@ -2,7 +2,7 @@
 import $ from 'jquery';
 import 'styles/main.scss';
 import mainPage from 'components/mainPage';
-import todos from 'pages/todo';
+import todos from 'pages/todo-backbone';
 import funnySquares from 'pages/funnySquares';
 import project from 'pages/project';
 import d3 from 'pages/d3';
@@ -18,7 +18,7 @@ $(function() {
   // our first javascript router!
   switch (url) {
     case '/pages/todo.html':
-      todos.init();
+      todos.render();
     break;
     case '/pages/funnySquares.html':
       funnySquares.init();
