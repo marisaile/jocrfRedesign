@@ -6,11 +6,18 @@ var app = {
     app.render();
   },
   render: function(){
-    var SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
+    var SEPARATION = 100; 
+    var AMOUNTX = 50; 
+    var AMOUNTY = 50;
     var container;
-    var camera, scene, renderer;
-    var particles, particle, count = 0;
-    var mouseX = 0, mouseY = 0;
+    var camera; 
+    var scene; 
+    var renderer;
+    var particles; 
+    var particle; 
+    var count = 0;
+    var mouseX = 0; 
+    var mouseY = 0;
     var windowHalfX = window.innerWidth / 2;
     var windowHalfY = window.innerHeight / 2;
     
@@ -34,8 +41,8 @@ var app = {
       } );
       
       var i = 0;
-      for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
-        for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
+      for ( var ix = 0; ix < AMOUNTX; ix++ ) {
+        for ( var iy = 0; iy < AMOUNTY; iy++ ) {
           particle = particles[ i ++ ] = new THREE.Sprite( material );
           particle.position.x = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 );
           particle.position.z = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) / 2 );
@@ -89,8 +96,8 @@ var app = {
       camera.position.y += ( - mouseY - camera.position.y ) * .05;
       camera.lookAt( scene.position );
       var i = 0;
-      for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
-        for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
+      for ( var ix = 0; ix < AMOUNTX; ix++ ) {
+        for ( var iy = 0; iy < AMOUNTY; iy++ ) {
           particle = particles[ i++ ];
           particle.position.y = ( Math.sin( ( ix + count ) * 0.3 ) * 50 ) +
             ( Math.sin( ( iy + count ) * 0.5 ) * 50 );

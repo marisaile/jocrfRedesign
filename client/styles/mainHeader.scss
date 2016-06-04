@@ -1,8 +1,13 @@
-.main-navbar {
+@import url(https://fonts.googleapis.com/css?family=Carme);
+
+.main-nav-container {
   position: relative;
   display: block;
   top: 0;
   left: 0;
-  height: 150px;
+  margin: 0;
+  padding: 0;
+  height: 75px;
   width: 100%;
+  background-color: #5919D4;
 }

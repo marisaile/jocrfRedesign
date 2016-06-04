@@ -5,6 +5,7 @@ import mainPage from 'components/mainPage';
 import todos from 'pages/todo-backbone';
 import funnySquares from 'pages/funnySquares';
 import project from 'pages/project';
+import jsTimer from 'pages/jsTimer';
 import d3 from 'pages/d3';
 import three from 'pages/three';
 
@@ -31,6 +32,9 @@ $(function() {
     break;
     case '/pages/three.html':
       three.init();
+    break;
+    case '/pages/jsTimer.html':
+      jsTimer.init();
     break;
   }
 
