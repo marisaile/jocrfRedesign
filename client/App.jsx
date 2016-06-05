@@ -5,9 +5,9 @@ import mainPage from 'components/mainPage';
 import todos from 'pages/todo-backbone';
 import funnySquares from 'pages/funnySquares';
 import project from 'pages/project';
-import jsTimer from 'pages/jsTimer';
 import d3 from 'pages/d3';
 import three from 'pages/three';
+import timer from 'pages/timer';
 
 $(function() {
 
@@ -33,17 +33,13 @@ $(function() {
     case '/pages/three.html':
       three.init();
     break;
-    case '/pages/jsTimer.html':
-      jsTimer.init();
+    case '/pages/timer.html':
+      timer.init();
     break;
   }
 
   // Fancy Console Message for Developers
-  console.log("===========I am looking for a job!============");
-  console.log("==============================================");
-  console.log("=========check out my github account==========");
-  console.log("==============================================");
-  console.log("==============================================");
-  
-
+  console.log('==============================================');
+  console.log('===========I am looking for a job!============');
+  console.log('==============================================');
 });

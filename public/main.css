@@ -161,34 +161,77 @@
 }
 
 .timer-container {
-  width: 300px;
+  position: relative;
+  display: block;
+  top: 50px;
+  width: 400px;
+  height: 500px;
   margin: auto;
   text-align: center;
+  background-color: #F6C5FF;
+  border: solid 1px black;
 }
 
 .timer-container .counter {
+  position: absolute;
+  display: block;
+  top: 10px;
+  left: 80px;
   font-size: 64px;
 }
 
+.timer-container .start-button {
+  position: absolute;
+  top: 100px;
+  left: 40px;
+  width: 75px;
+}
+
+.timer-container .stop-button {
+  position: absolute;
+  top: 100px;
+  left: 120px;
+  width: 75px;
+}
+
+.timer-container .reset-button {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  width: 75px;
+}
+
+.timer-container .split-button {
+  position: absolute;
+  top: 100px;
+  left: 280px;
+  width: 75px;
+}
+
 .timer-container .split-time {
-  width: 250px;
+  position: absolute;
+  display: block;
+  width: 150px;
   height: 400px;
-  margin: auto;
+  top: 75px;
+  left: 100px;
   text-align: left;
   font-family: arial;
   font-size: 14px;
 }
 
 .timer-container .lap-time {
-  width: 250px;
+  position: absolute;
+  width: 150px;
   height: 400px;
-  margin: auto;
-  text-align: right;
+  top: 75px;
+  left: 300px;
+  text-align: left;
   font-family: arial;
   font-size: 14px;
 }
 
-.project-header {
+.header-container {
   position: relative;
   top: 0;
   left: 0;
@@ -201,7 +244,7 @@
   background-image: linear-gradient(top, #d6f9ff 21%, #9ee8fa 100%);
 }
 
-.heading h1 {
+.header-container h1 {
   position: absolute;
   top: -5px;
   left: 60px;
@@ -210,27 +253,27 @@
   color: #120847;
 }
 
-.nav-menu ul {
+.header-container ul {
   position: relative;
   top: 35px;
   right: 60px;
   float: right;
 }
 
-.nav-menu li {
+.header-container .nav-menu li {
   margin-right: 75px;
   display: inline-block;
   list-style-image: none;
 }
 
-.nav-menu a {
+.header-container .nav-menu a {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   color: #120847;
   text-decoration: none;
 }
 
-.learn-menu {
+.header-container ul.learn-menu {
   position: absolute;
   top: 65px;
   right: 5px;
@@ -238,13 +281,13 @@
   width: 500px;
 }
 
-.learn-menu li {
+.header-container .learn-menu li {
   margin-right: 30px;
   display: inline-block;
   list-style-image: none;
 }
 
-.learn-nav img {
+.header-container .learn-nav img {
   width: 50px;
   color: #120847;
 }

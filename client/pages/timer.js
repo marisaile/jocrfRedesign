@@ -1,15 +1,10 @@
-
-var $ = require('jquery');
-
-// legacy loading for bootstrap
-window.jQuery = window.$ = $;
-require('bootstrap');
-
+import $ from 'jQuery';
+  
 var app = {
-  init: function() {
+  init: function(){
     app.render();
   },
-  render: function() {
+  render: function(){
     var startTime; 
     var interval;
     var endTime;
@@ -34,7 +29,7 @@ var app = {
         minutes = '0' + minutes; // converting to a string
       }
       $('.counter').html(minutes + ':' + seconds + '.' + hundredths);
-    };
+    };  
     var startTimer = function() {
       startTime = new Date();
       interval = setInterval(updateTimer, 100);
@@ -57,7 +52,7 @@ var app = {
     $('.timer-container .reset-button').on('click', resetTimer);
   }
 };
+
 module.exports = app;
 
 
-  

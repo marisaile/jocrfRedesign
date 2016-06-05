@@ -1,17 +1,18 @@
 import $ from 'jQuery';
-import LearnMenu from 'templates/projectLearnMenu.html';
+import projectNavMenu from 'templates/projectNavMenu.html';
 
 var app = {
   init: function() {
-    $('.project-header').append(LearnMenu);
+    $('.project-header').append(projectNavMenu);
     app.render();
   },
   render: function() {
-    $('img.crocodile').on('mouseover', function(){
-      $('img.crocodile').animate({
-        width: 75,
-        height: 75
-      }, 1000, 'swing');
+    $('.learn-nav .crocodile').hover(function(){
+      $('.learn-nav .crocodile').animate({
+        height: 100,
+        width: 100,
+        top: 80
+      }, 2000, 'swing');
     });
   }
 };

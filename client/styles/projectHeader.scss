@@ -1,5 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-.project-header {
+.header-container {
   position: relative;
   top: 0;
   left: 0;
@@ -12,12 +14,46 @@
   background-image: (linear-gradient(top,  rgba(214,249,255,1) 21%,rgba(158,232,250,1) 100%));
 }
 
-.heading h1 {
+.header-container h1 {
   position: absolute;
   top: -5px;
   left: 60px;
   font-family: "Sigmar One", cursive;
   font-size: 50px;
+  color: #120847;
+}
+
+.header-container ul {
+  position: relative;
+  top: 35px;
+  right: 60px;
+  float: right;
+}
+.header-container .nav-menu li {
+  margin-right: 75px;
+  display: inline-block;
+  list-style-image: none;
+}
+.header-container .nav-menu a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #120847;
+  text-decoration: none;
+}
+.header-container ul.learn-menu {
+  position: absolute;
+  top: 65px;
+  right: 5px;
+  float: right;
+  width: 500px;
+}
+.header-container .learn-menu li {
+  margin-right: 30px;
+  display: inline-block;
+  list-style-image: none;
+}
+.header-container .learn-nav img {
+  width: 50px;
   color: #120847;
 }
 
