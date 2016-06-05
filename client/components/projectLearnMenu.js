@@ -3,10 +3,11 @@ import projectNavMenu from 'templates/projectNavMenu.html';
 
 var app = {
   init: function() {
-    $('.project-header').append(projectNavMenu);
     app.render();
   },
   render: function() {
+    $('.project-header').append(projectNavMenu);
+    debugger;
     $('.learn-nav .crocodile').hover(function(){
       $('.learn-nav .crocodile').animate({
         height: 100,

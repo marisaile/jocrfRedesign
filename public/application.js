@@ -31187,12 +31187,12 @@
 	    app.render();
 	  },
 	  render: function render() {
+	    _componentsProjectLearnMenu2['default'].init();
 	    $('.nav-list.learn').on('click', function () {
 	      $('.header-container ul.learn-menu').animate({
 	        top: 200
 	      }, 1000, 'swing');
 	    });
-	    _componentsProjectLearnMenu2['default'].init();
 	  }
 	};
 	module.exports = app;
@@ -31215,10 +31215,11 @@
 	
 	var app = {
 	  init: function init() {
-	    (0, _jQuery2['default'])('.project-header').append(_templatesProjectNavMenuHtml2['default']);
 	    app.render();
 	  },
 	  render: function render() {
+	    (0, _jQuery2['default'])('.project-header').append(_templatesProjectNavMenuHtml2['default']);
+	    debugger;
 	    (0, _jQuery2['default'])('.learn-nav .crocodile').hover(function () {
 	      (0, _jQuery2['default'])('.learn-nav .crocodile').animate({
 	        height: 100,
