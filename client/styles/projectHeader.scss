@@ -12,8 +12,8 @@
   background-color: rgb(214,249,255);
   filter: (#d6f9ff, #9ee8fa, vertical); 
   background-image: (linear-gradient(top,  rgba(214,249,255,1) 21%,rgba(158,232,250,1) 100%));
+  z-index: 1;
 }
-
 .header-container h1 {
   position: absolute;
   top: -5px;
@@ -22,7 +22,6 @@
   font-size: 50px;
   color: #120847;
 }
-
 .header-container ul {
   position: relative;
   top: 35px;
@@ -42,7 +41,7 @@
 }
 .header-container ul.learn-menu {
   position: absolute;
-  top: 65px;
+  top: 0px;
   right: 5px;
   float: right;
   width: 500px;
@@ -53,6 +52,7 @@
   list-style-image: none;
 }
 .header-container .learn-nav img {
+  height: 50;
   width: 50px;
   color: #120847;
 }

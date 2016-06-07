@@ -7,13 +7,19 @@ var app = {
   },
   render: function() {
     $('.project-header').append(projectNavMenu);
-    debugger;
-    $('.learn-nav .crocodile').hover(function(){
-      $('.learn-nav .crocodile').animate({
+    $('.learn-nav .crocodile').mouseover(function(){
+      $('img.crocodile').animate({
         height: 100,
         width: 100,
         top: 80
-      }, 2000, 'swing');
+      }, 500, 'swing');
+    });
+    $('.learn-nav .crocodile').mouseout(function(){
+      $('img.crocodile').animate({
+        height: 50,
+        width: 50,
+        top: 65
+      }, 500, 'swing');
     });
   }
 };

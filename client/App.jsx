@@ -8,6 +8,7 @@ import project from 'pages/project';
 import d3 from 'pages/d3';
 import three from 'pages/three';
 import timer from 'pages/timer';
+import formsBackbone from 'pages/formsBackbone';
 
 $(function() {
 
@@ -36,6 +37,10 @@ $(function() {
     case '/pages/timer.html':
       timer.init();
     break;
+    case '/pages/formsBackbone.html':
+      formsBackbone.render(); 
+    break;
+    default: break;
   }
 
   // Fancy Console Message for Developers

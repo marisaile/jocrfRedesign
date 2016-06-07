@@ -12,8 +12,8 @@ var app = {
     projectLearnMenu.init();
     $('.nav-list.learn').on('click', function(){
       $('.header-container ul.learn-menu').animate({
-        top: 200   
-      }, 1000, 'swing');
+        top: 65  
+      }, 500, 'swing');
     }); 
   }
 };

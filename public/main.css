@@ -231,6 +231,11 @@
   font-size: 14px;
 }
 
+.page-container {
+  width: 700px;
+  margin: 0 auto;
+}
+
 .header-container {
   position: relative;
   top: 0;
@@ -242,6 +247,7 @@
   background-color: #d6f9ff;
   filter: #d6f9ff, #9ee8fa, vertical;
   background-image: linear-gradient(top, #d6f9ff 21%, #9ee8fa 100%);
+  z-index: 1;
 }
 
 .header-container h1 {
@@ -275,7 +281,7 @@
 
 .header-container ul.learn-menu {
   position: absolute;
-  top: 65px;
+  top: 0px;
   right: 5px;
   float: right;
   width: 500px;
@@ -288,6 +294,7 @@
 }
 
 .header-container .learn-nav img {
+  height: 50;
   width: 50px;
   color: #120847;
 }
