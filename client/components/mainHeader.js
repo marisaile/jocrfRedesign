@@ -1,5 +1,5 @@
 
-import $ from 'jQuery';
+import $ from 'jquery';
 import mainNavbar from 'templates/mainNavbar.html';
 
 var app = {

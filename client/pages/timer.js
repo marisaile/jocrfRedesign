@@ -1,4 +1,4 @@
-import $ from 'jQuery';
+import $ from 'jquery';
   
 var app = {
   init: function(){
