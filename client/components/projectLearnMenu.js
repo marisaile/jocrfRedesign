@@ -1,4 +1,10 @@
-import $ from 'jQuery';
+
+var $ = require('jquery');
+
+// legacy loading for bootstrap
+window.jQuery = window.$ = $;
+require('bootstrap');
+require('jquery.easing');
 import projectNavMenu from 'templates/projectNavMenu.html';
 
 var app = {
@@ -7,17 +13,34 @@ var app = {
   },
   render: function() {
     $('.project-header').append(projectNavMenu);
-    $('.learn-nav .crocodile').mouseover(function(){
-      $('img.crocodile').animate({
-        height: 100,
-        width: 100,
-        top: 80
-      }, 500, 'swing');
+    $('li.learn-nav.crocodile img').mouseover(function(){
+      $('li.learn-nav.crocodile img').animate({
+        width: 75,
+        height: 75,
+        top: 70
+      }, 500, 'easeOutBack');
+      // $('.learn-nav.crocodile img').append('crocodiles!');
     });
-    $('.learn-nav .crocodile').mouseout(function(){
-      $('img.crocodile').animate({
-        height: 50,
+    $('li.learn-nav.crocodile img').mouseout(function(){
+      $('li.learn-nav.crocodile img').animate({
+        width: 75,
+        height: 75,
+        top: 65
+      }, 500, 'swing');
+      $('.learn-nav.crocodile img').remove('crocodiles!');
+    });
+    $('li.learn-nav.lizard img').mouseover(function(){
+      $('li.learn-nav.lizard img').animate({
+        width: 60,
+        height: 60,
+        top: 300
+      }, 500, 'swing');
+      // $('.learn-nav.lizard img').html('lizards');
+    });
+    $('li.learn-nav.lizard img').mouseout(function(){
+      $('li.learn-nav.lizard img').animate({
         width: 50,
+        height: 50,
         top: 65
       }, 500, 'swing');
     });

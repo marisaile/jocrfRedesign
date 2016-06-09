@@ -43,16 +43,14 @@ var controllerConfigObject = {
   },
   render: function(){
     var listView = new ListView();
-    this.$el.find('.view-container').html(listView.$el.html()); // why parens here?
+    this.$el.find('.view-container').html(listView.$el); 
   },
   createNewAccount: function(){
     var createView = new CreateView();
-    this.$el.find('.view-container').html(createView.$el.html());
+    this.$el.find('.view-container').html(createView.$el);
   }
 };
 var AccountControllerView = Backbone.View.extend(controllerConfigObject);
-
-
 
 // Views
 

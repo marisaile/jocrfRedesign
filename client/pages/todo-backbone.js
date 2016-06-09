@@ -21,8 +21,6 @@ var TodoItemView;
 var todoModel;
 var todoControllerView;
 
-
-
 // Model
 TodoModel = Backbone.Model.extend({
   defaults: {
@@ -85,8 +83,7 @@ TodoControllerView = Backbone.View.extend({
     var todos = this.model.get('todos');
     var $ul = this.$el.find('ul');
     $ul.html('');
-    todos.map(function(todo)// vanilla
-    {
+    todos.map(function(todo) {
       var view = new TodoItemView(todo);
       $ul.append(view.$el);
     }); 
@@ -95,10 +92,10 @@ TodoControllerView = Backbone.View.extend({
   addTodoItem: function(){
     var $input = this.$el.find('.input-name');
     var newTitle = $input.val();
-    if (newTitle === '') {return;}
+    if (newTitle === '') { return; }
     this.model.addItem(newTitle);
     $input.val('');
-    this.render();
+    this.render(); 
   },
   removeItem: function(id){
     this.model.removeItem(id);

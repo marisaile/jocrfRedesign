@@ -2,14 +2,14 @@ var $ = require('jquery');
 window.jQuery = window.$ = $;
 require('bootstrap');
 
-import projectMainBackground from 'templates/projectMainBackground.html';
+// import projectMain from 'templates/projectMain.html';
 
 var app = {
   init: function() {
     app.render();
   },
   render: function() { 
-    $('.project-main').append(projectMainBackground);
+    // $('.project-main').append(projectMain);
   }
 };
 

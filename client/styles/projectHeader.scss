@@ -8,11 +8,10 @@
   height: 60px;
   width: 100%;
   margin-bottom: 0;
-  padding-bottom: 0;
+  padding-bottom: 0; 
   background-color: rgb(214,249,255);
   filter: (#d6f9ff, #9ee8fa, vertical); 
   background-image: (linear-gradient(top,  rgba(214,249,255,1) 21%,rgba(158,232,250,1) 100%));
-  z-index: 1;
 }
 .header-container h1 {
   position: absolute;
@@ -41,19 +40,24 @@
 }
 .header-container ul.learn-menu {
   position: absolute;
-  top: 0px;
+  display: none;
+  top: 65px;
   right: 5px;
   float: right;
   width: 500px;
 }
 .header-container .learn-menu li {
+  position: relative;
   margin-right: 30px;
   display: inline-block;
   list-style-image: none;
 }
-.header-container .learn-nav img {
-  height: 50;
+.header-container .learn-menu img {
+  position: relative;
   width: 50px;
+  color: #120847;
+}
+.header-container .learn-menu a {
   color: #120847;
 }
 

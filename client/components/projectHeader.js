@@ -11,9 +11,11 @@ var app = {
   render: function() {
     projectLearnMenu.init();
     $('.nav-list.learn').on('click', function(){
-      $('.header-container ul.learn-menu').animate({
-        top: 65  
-      }, 500, 'swing');
+      if ($('ul.learn-menu:first').is(':hidden')) {
+        $('ul.learn-menu').slideDown('slow');
+      } else {
+        $('ul.learn-menu').slideUp('slow');
+      }
     }); 
   }
 };

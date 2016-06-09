@@ -131,35 +131,6 @@
   transition: transform .5s;
 }
 
-.d3 {
-  font: 10px sans-serif;
-}
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.bar {
-  fill: steelblue;
-}
-
-.x.axis path {
-  display: none;
-}
-
-.three-container {
-  background-color: #000000;
-  margin: 0px;
-  overflow: hidden;
-}
-
-.three-a {
-  color: #0078ff;
-}
-
 .timer-container {
   position: relative;
   display: block;
@@ -247,7 +218,6 @@
   background-color: #d6f9ff;
   filter: #d6f9ff, #9ee8fa, vertical;
   background-image: linear-gradient(top, #d6f9ff 21%, #9ee8fa 100%);
-  z-index: 1;
 }
 
 .header-container h1 {
@@ -281,48 +251,87 @@
 
 .header-container ul.learn-menu {
   position: absolute;
-  top: 0px;
+  display: none;
+  top: 65px;
   right: 5px;
   float: right;
   width: 500px;
 }
 
 .header-container .learn-menu li {
+  position: relative;
   margin-right: 30px;
   display: inline-block;
   list-style-image: none;
 }
 
-.header-container .learn-nav img {
-  height: 50;
+.header-container .learn-menu img {
+  position: relative;
   width: 50px;
   color: #120847;
 }
 
-.project-main {
+.header-container .learn-menu a {
+  color: #120847;
+}
+
+.project-container {
   position: relative;
   display: block;
   width: 100%;
+  height: 100%;
 }
 
-.subheading h2 {
+.project-container .subheading h2 {
   position: absolute;
-  top: 475px;
+  top: 150px;
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
   color: #120847;
-  width: 100%;
-  text-align: center;
+  margin: auto;
 }
 
 .subheading p {
   position: absolute;
-  top: 575px;
+  top: 225px;
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
   color: #120847;
   width: 100%;
   text-align: center;
+}
+
+.carousel {
+  position: absolute;
+  display: block;
+  top: 300px;
+}
+
+.carousel .item {
+  height: 400px;
+}
+
+.carousel img {
+  min-width: 100%;
+  max-height: 400px;
+  max-width: none;
+  overflow: hidden;
+}
+
+.sidebar .fun-fact {
+  position: absolute;
+  top: 250px;
+  font-family: "Sigmar One", cursive;
+  font-size: 20px;
+  text-align: right;
+}
+
+.sidebar .fun-fact-p {
+  position: absolute;
+  top: 300px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  text-align: right;
 }
 
 .side .news {
@@ -351,41 +360,6 @@
   top: 325px;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
-}
-
-.carousel {
-  position: relative;
-  display: block;
-  max-width: 100%;
-  vertical-align: center;
-  margin: 100px auto;
-}
-
-.carousel .item {
-  height: 400px;
-}
-
-.carousel img {
-  min-width: 100%;
-  max-height: 400px;
-  max-width: none;
-  overflow: hidden;
-}
-
-.sidebar .fun-fact {
-  position: absolute;
-  top: 250px;
-  font-family: "Sigmar One", cursive;
-  font-size: 20px;
-  text-align: right;
-}
-
-.sidebar .fun-fact-p {
-  position: absolute;
-  top: 300px;
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-  text-align: right;
 }
 
 .project-footer {
