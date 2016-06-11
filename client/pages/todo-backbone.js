@@ -108,7 +108,7 @@ TodoControllerView = Backbone.View.extend({
     this.render();
   },
   itemCompleted: function(id, isCompleted) {
-    this.model.itemCompleted(id);
+    this.model.itemCompleted(id, isCompleted);
     this.render();
   }
 });
@@ -133,7 +133,7 @@ TodoItemView = Backbone.View.extend({
     todoControllerView.removeItem(this.data.id);
   },
   completedClicked: function(){
-    var isChecked = $(event.currentTarget).is(':checked');
+    var isChecked = $(event.target).is(':checked');
     todoControllerView.itemCompleted(this.data.id, isChecked);
   }
 });
