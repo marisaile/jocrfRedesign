@@ -34,11 +34,13 @@ var app = {
       startTime = new Date();
       interval = setInterval(updateTimer, 100);
     };
+    $('.timer-container .start-button').on('click', startTimer);
     var splitTimer = function() {
       splitTime = $('.timer-container .split-time').append('<br />' + minutes + ':' + seconds + '.' + hundredths); 
       var lapTime = (timeDifference - splitTime);
       $('.timer-container .lap-time').append('<br />' + lapTime);
     };
+    $('.timer-container .split-button').on('click', splitTimer);
     var resetTimer = function() {
       $('.counter').html('00' + ':' + '00' + '.' + '00' );
       $('.timer-container .split-time').html( '' );
@@ -46,8 +48,8 @@ var app = {
     var stopTimer = function(){
       interval = clearInterval(interval);
     };
-    $('.timer-container .start-button').on('click', startTimer);
-    $('.timer-container .split-button').on('click', splitTimer);
+    
+    
     $('.timer-container .stop-button').on('click', stopTimer);
     $('.timer-container .reset-button').on('click', resetTimer);
   }

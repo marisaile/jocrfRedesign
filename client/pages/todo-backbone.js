@@ -86,7 +86,8 @@ TodoControllerView = Backbone.View.extend({
   el: '.todo-container',
   model: todoModel,
   events: {
-    'click .btn-add': 'addTodoItem'
+    'click .btn-add': 'addTodoItem',
+    'keypress .add-todo-container': 'addTodoItemEnter'
   },
   initialize: function(){
     this.model.fetch();
@@ -102,13 +103,23 @@ TodoControllerView = Backbone.View.extend({
     }); 
     // _.map(todos, fn) underscore 
   },
-  addTodoItem: function(){
+  addTodoItem: function() {
     var $input = this.$el.find('.input-name');
     var newTitle = $input.val();
     if (newTitle === '') { return; }
     this.model.addItem(newTitle);
     $input.val('');
     this.render(); 
+  },
+  addTodoItemEnter: function(event){
+    if (event.which === 13) {
+      var $input = this.$el.find('.input-name');
+      var newTitle = $input.val();
+      if (newTitle === '') { return; }
+      this.model.addItem(newTitle);
+      $input.val('');
+      this.render(); 
+    }
   },
   removeItem: function(id){
     this.model.removeItem(id);
