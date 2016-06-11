@@ -19,30 +19,27 @@ var app = {
         height: 75,
         top: 70
       }, 500, 'easeOutBack');
-      // $('.learn-nav.crocodile img').append('crocodiles!');
     });
     $('li.learn-nav.crocodile img').mouseout(function(){
       $('li.learn-nav.crocodile img').animate({
         width: 75,
         height: 75,
-        top: 65
-      }, 500, 'swing');
-      $('.learn-nav.crocodile img').remove('crocodiles!');
+        top: 0
+      }, 500, 'easeInBack');
     });
     $('li.learn-nav.lizard img').mouseover(function(){
       $('li.learn-nav.lizard img').animate({
         width: 60,
         height: 60,
-        top: 300
-      }, 500, 'swing');
-      // $('.learn-nav.lizard img').html('lizards');
+        top: 70
+      }, 500, 'easeOutBack');
     });
     $('li.learn-nav.lizard img').mouseout(function(){
       $('li.learn-nav.lizard img').animate({
         width: 50,
         height: 50,
-        top: 65
-      }, 500, 'swing');
+        top: 0
+      }, 500, 'easeInBack');
     });
   }
 };

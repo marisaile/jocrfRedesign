@@ -10117,6 +10117,13 @@
 	    item.completed = isCompleted;
 	    this.set('todos', todos);
 	    this.save();
+	  },
+	  editTitle: function editTitle(newTitle, id) {
+	    var todos = this.get('todos');
+	    var item = _underscore2['default'].findWhere(todos, { id: id });
+	    item.title = newTitle;
+	    this.set('todos', todos);
+	    this.save();
 	  }
 	});
 	
@@ -10160,6 +10167,10 @@
 	  itemCompleted: function itemCompleted(id, isCompleted) {
 	    this.model.itemCompleted(id, isCompleted);
 	    this.render();
+	  },
+	  titleEdit: function titleEdit(newTitle, id) {
+	    this.model.editTitle(newTitle, id);
+	    this.render();
 	  }
 	});
 	
@@ -10168,7 +10179,9 @@
 	  className: 'list-group-item row', // el = <li class="list-group-item row"></li>
 	  events: {
 	    'click .close': 'removeItem',
-	    'change .completed-checkbox': 'completedClicked'
+	    'change .completed-checkbox': 'completedClicked',
+	    'click .title': 'titleClicked',
+	    'keypress .title-edit-input': 'titleEditConfirm'
 	  },
 	  template: _handlebars2['default'].compile(_templatesTodoItemHtml2['default']),
 	  initialize: function initialize(todo) {
@@ -10177,6 +10190,9 @@
 	  },
 	  render: function render() {
 	    this.$el.html(this.template(this.data));
+	    this.$title = this.$el.find('.title');
+	    this.$titleEdit = this.$el.find('.title-edit');
+	    this.$titleInput = this.$titleEdit.find('.title-edit-input');
 	    this.$el.toggleClass('disabled', this.data.completed);
 	  },
 	  removeItem: function removeItem() {
@@ -10185,6 +10201,18 @@
 	  completedClicked: function completedClicked() {
 	    var isChecked = $(event.target).is(':checked');
 	    todoControllerView.itemCompleted(this.data.id, isChecked);
+	  },
+	  titleClicked: function titleClicked() {
+	    this.$title.addClass('hidden');
+	    this.$titleEdit.removeClass('hidden');
+	    this.$titleInput.focus();
+	    // this.$title.add(this.$titleEdit).toggleClass('hidden');
+	  },
+	  titleEditConfirm: function titleEditConfirm(event) {
+	    if (event.which === 13) {
+	      var newTitle = this.$titleInput.val();
+	      todoControllerView.titleEdit(newTitle, this.data.id);
+	    }
 	  }
 	});
 	
@@ -18819,7 +18847,7 @@
 /* 43 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"col-md-1\">\n  <input class=\"completed-checkbox\" type=\"checkbox\" \n  {{#if completed}}checked{{/if}}>\n</div>\n<div class=\"col-md-10 title\">{{title}}</div>\n<div class=\"col-md-10 title-edit hidden\">\n  <input type=\"text\" class=\"form-control\" value=\"{{title}}\" data-id=\"{{id}}\">\n</div>\n<div class=\"col-md-1\">\n  <button type=\"button\" class=\"close\" aria-label=\"Close\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>";
+	module.exports = "<div class=\"col-md-1\">\n  <input class=\"completed-checkbox\" type=\"checkbox\" \n  {{#if completed}}checked{{/if}}>\n</div>\n<div class=\"col-md-10 title\">{{title}}</div>\n<div class=\"col-md-10 title-edit hidden\">\n  <input type=\"text\" class=\"form-control title-edit-input\" value=\"{{title}}\">\n</div>\n<div class=\"col-md-1\">\n  <button type=\"button\" class=\"close\" aria-label=\"Close\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>";
 
 /***/ },
 /* 44 */
@@ -21391,30 +21419,27 @@
 	        height: 75,
 	        top: 70
 	      }, 500, 'easeOutBack');
-	      // $('.learn-nav.crocodile img').append('crocodiles!');
 	    });
 	    $('li.learn-nav.crocodile img').mouseout(function () {
 	      $('li.learn-nav.crocodile img').animate({
 	        width: 75,
 	        height: 75,
-	        top: 65
-	      }, 500, 'swing');
-	      $('.learn-nav.crocodile img').remove('crocodiles!');
+	        top: 0
+	      }, 500, 'easeInBack');
 	    });
 	    $('li.learn-nav.lizard img').mouseover(function () {
 	      $('li.learn-nav.lizard img').animate({
 	        width: 60,
 	        height: 60,
-	        top: 300
-	      }, 500, 'swing');
-	      // $('.learn-nav.lizard img').html('lizards');
+	        top: 70
+	      }, 500, 'easeOutBack');
 	    });
 	    $('li.learn-nav.lizard img').mouseout(function () {
 	      $('li.learn-nav.lizard img').animate({
 	        width: 50,
 	        height: 50,
-	        top: 65
-	      }, 500, 'swing');
+	        top: 0
+	      }, 500, 'easeInBack');
 	    });
 	  }
 	};
@@ -21629,7 +21654,7 @@
 /* 66 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-md-10\">\n      <nav class=\"footer-nav\">\n        <ul>\n          <li>\n            <a role = \"menuitem\" href=\"#\">Careers</a>\n          </li>\n          <li>\n            <a role=\"menuitem\" href=\"#\">Copyright 2016</a>\n          </li>\n          <li>\n            <a role=\"menuitem\" href=\"#\">Lisa M, inc.</a>\n          </li>\n          <li>\n            <a role=\"menuitem\" href=\"#\">Herp community</a>\n          </li>\n        </ul>\n      </nav>\n      <div class=\"col-md-2 sidebar-color-container\"> </div>\n    </div>\n  </div>\n</div>\n\n";
+	module.exports = "\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-md-10\">\n      <nav class=\"footer-nav\">\n        <ul>\n          <li class=\"todo-nav\">\n            <a role=\"menuitem\" href=\"/pages/todo.html\">Todo Application</a>\n          </li>\n          <li class=\"project-nav\">\n            <a role=\"menuitem\" href=\"/pages/projectHome.html\">My Project</a>\n          </li>\n          <li class=\"funny-squares-nav\">\n            <a role=\"menuitem\" href=\"/pages/funnySquares.html\">Funny Squares</a>\n          </li>\n          <li class=\"jS-timer-nav\">\n            <a role=\"menuitem\" href=\"/pages/timer.html\">Timer</a>\n          </li>\n          <li class=\"canvas-particles-nav\" >\n            <a role=\"menuitem\" href=\"/pages/formsBackbone.html\">Backbone Forms</a>\n          </li>\n        </ul>\n      </nav>\n    </div>\n  </div>\n</div>\n\n";
 
 /***/ },
 /* 67 */
