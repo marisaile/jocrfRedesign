@@ -2,7 +2,7 @@
 import $ from 'jquery';
 import 'styles/main.scss';
 import mainPage from 'components/mainPage';
-import todos from 'pages/todo-backbone';
+import TodoControllerView from 'pages/todo/todoController';
 import funnySquares from 'pages/funnySquares';
 import project from 'pages/project';
 import timer from 'pages/timer';
@@ -18,7 +18,7 @@ $(function() {
   // our first javascript router!
   switch (url) {
     case '/pages/todo.html':
-      todos.render();
+      var todoControllerView = new TodoControllerView(); 
     break;
     case '/pages/funnySquares.html':
       funnySquares.init();
