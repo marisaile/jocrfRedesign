@@ -9,7 +9,7 @@ var app = {
     app.render();
   },
   render: function() { 
-    $('.project-main').append(projectMain);
+   // $('.project-main').append(projectMain);
   }
 };
 

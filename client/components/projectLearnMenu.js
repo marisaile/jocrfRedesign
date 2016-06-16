@@ -14,7 +14,6 @@ var app = {
   },
   render: function() {
     $('.project-header').append(projectNavMenu);
-
     $('li.learn-nav.crocodile img').mouseover(function(){
       $('li.learn-nav.crocodile img').animate({
         width: 75,

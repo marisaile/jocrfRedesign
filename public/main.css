@@ -392,6 +392,17 @@
   background-color: #120847;
 }
 
+.search-container .photo {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.search-container .photo img {
+  width: 100%;
+}
+
 video {
   height: 240px;
   width: 320px;

@@ -7,6 +7,7 @@ import funnySquares from 'pages/funnySquares';
 import project from 'pages/project';
 import timer from 'pages/timer';
 import formsBackbone from 'pages/formsBackbone';
+import photoSearch from 'pages/photoSearch';
 
 $(function() {
 
@@ -32,7 +33,11 @@ $(function() {
     case '/pages/formsBackbone.html':
       formsBackbone.render(); 
     break;
+    case '/pages/photoSearch.html':
+      photoSearch.init(); 
+    break;
     default: break;
+
   }
 
   // Fancy Console Message for Developers
