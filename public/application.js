@@ -10070,6 +10070,7 @@
 	  },
 	  initialize: function initialize() {
 	    this.model.fetch();
+	    this.model.on('change', this.render, this);
 	  },
 	  render: function render() {
 	    // render the todo items
@@ -13640,14 +13641,22 @@
 	    completed: false
 	  },
 	  fetch: function fetch() {
-	    var data = _lscache2['default'].get('todos');
-	    data = this.applySchema(data);
-	    this.set('todos', data);
+	    var that = this;
+	    $.ajax({
+	      url: '/api',
+	      method: 'GET',
+	      complete: function complete(response) {
+	        var dataString = response.responseText;
+	        var data = JSON.parse(dataString);
+	        data = that.applySchema(data);
+	        that.set('todos', data);
+	      }
+	    });
 	  },
 	  save: function save() {
-	    var data = this.get('todos');
-	    data = this.applySchema(data);
-	    _lscache2['default'].set('todos', data);
+	    // var data = this.get('todos');
+	    // data = this.applySchema(data);
+	    // lscache.set('todos', data);
 	  },
 	  applySchema: function applySchema(todos) {
 	    var data = todos;
@@ -21833,12 +21842,11 @@
 	      (0, _jquery2['default'])('.counter').html('00' + ':' + '00' + '.' + '00');
 	      (0, _jquery2['default'])('.timer-container .split-time').html('');
 	    };
+	    (0, _jquery2['default'])('.timer-container .reset-button').on('click', resetTimer);
 	    var stopTimer = function stopTimer() {
 	      interval = clearInterval(interval);
 	    };
-	
 	    (0, _jquery2['default'])('.timer-container .stop-button').on('click', stopTimer);
-	    (0, _jquery2['default'])('.timer-container .reset-button').on('click', resetTimer);
 	  }
 	};
 	
@@ -22023,7 +22031,7 @@
 	        method: 'flickr.photos.search',
 	        api_key: '731717db25329eb6aa65703cb6b71970',
 	        format: 'json',
-	        per_page: 300
+	        per_page: 30
 	      },
 	      complete: function complete(response) {
 	        var text = response.responseText;

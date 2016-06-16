@@ -19,6 +19,7 @@ var TodoControllerView = Backbone.View.extend({
   },
   initialize: function(){
     this.model.fetch();
+    this.model.on('change', this.render, this);
   },
   render: function(){
     // render the todo items

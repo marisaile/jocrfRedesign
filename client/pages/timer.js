@@ -45,13 +45,11 @@ var app = {
       $('.counter').html('00' + ':' + '00' + '.' + '00' );
       $('.timer-container .split-time').html( '' );
     };
+    $('.timer-container .reset-button').on('click', resetTimer);
     var stopTimer = function(){
       interval = clearInterval(interval);
     };
-    
-    
     $('.timer-container .stop-button').on('click', stopTimer);
-    $('.timer-container .reset-button').on('click', resetTimer);
   }
 };
 
