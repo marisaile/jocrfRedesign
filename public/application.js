@@ -9972,7 +9972,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"main-nav-container":"main-nav-container","main-container":"main-container","main-todo":"main-todo","todo-container":"todo-container","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","h1":"h1","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","timer-container":"timer-container","counter":"counter","start-button":"start-button","stop-button":"stop-button","reset-button":"reset-button","split-button":"split-button","split-time":"split-time","lap-time":"lap-time","page-container":"page-container","header-container":"header-container","nav-menu":"nav-menu","learn-menu":"learn-menu","project-container":"project-container","subheading":"subheading","carousel":"carousel","item":"item","sidebar":"sidebar","fun-fact":"fun-fact","fun-fact-p":"fun-fact-p","side":"side","news":"news","news-p":"news-p","community":"community","community-p":"community-p","project-footer":"project-footer","sidebar-color-container":"sidebar-color-container","search-container":"search-container","photo":"photo"};
+	module.exports = {"main-nav-container":"main-nav-container","main-container":"main-container","main-todo":"main-todo","todo-container":"todo-container","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","h1":"h1","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","timer-container":"timer-container","counter":"counter","start-button":"start-button","stop-button":"stop-button","reset-button":"reset-button","split-button":"split-button","split-time":"split-time","lap-time":"lap-time","page-container":"page-container","header-container":"header-container","nav-menu":"nav-menu","project-container":"project-container","learn-menu":"learn-menu","carousel":"carousel","item":"item","sidebar":"sidebar","fun-fact":"fun-fact","fun-fact-p":"fun-fact-p","project-footer":"project-footer","sidebar-color-container":"sidebar-color-container","search-container":"search-container","photo":"photo"};
 
 /***/ },
 /* 3 */,
@@ -13654,9 +13654,19 @@
 	    });
 	  },
 	  save: function save() {
-	    // var data = this.get('todos');
-	    // data = this.applySchema(data);
-	    // lscache.set('todos', data);
+	    var that = this;
+	    var todos = this.get('todos');
+	    $.ajax({
+	      url: '/api',
+	      method: 'POST',
+	      data: { todos: JSON.stringify(todos) },
+	      complete: function complete(response) {
+	        var dataString = response.responseText;
+	        var data = JSON.parse(dataString);
+	        data = that.applySchema(data);
+	        that.set('todos', data);
+	      }
+	    });
 	  },
 	  applySchema: function applySchema(todos) {
 	    var data = todos;
@@ -21408,7 +21418,7 @@
 	
 	var _componentsProjectHeader2 = _interopRequireDefault(_componentsProjectHeader);
 	
-	var _componentsProjectMain = __webpack_require__(66);
+	var _componentsProjectMain = __webpack_require__(64);
 	
 	var _componentsProjectMain2 = _interopRequireDefault(_componentsProjectMain);
 	
@@ -21436,7 +21446,43 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _componentsProjectLearnMenu = __webpack_require__(63);
+	var _templatesProjectNavMenuHtml = __webpack_require__(63);
+	
+	var _templatesProjectNavMenuHtml2 = _interopRequireDefault(_templatesProjectNavMenuHtml);
+	
+	var $ = __webpack_require__(1);
+	window.jQuery = window.$ = $;
+	__webpack_require__(14);
+	
+	var app = {
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {
+	    $('.project-header').append(_templatesProjectNavMenuHtml2['default']);
+	  }
+	};
+	module.exports = app;
+
+/***/ },
+/* 63 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"header-container\">\n  <h1>Herpetarium</h1>\n  <ul class=\"nav-menu\">\n    <li class=\"nav-list blog\">\n      <a role=\"menuitem\" href=\"#\">Blog</a>\n    </li>\n    <li class=\"nav-list learn\">\n      <a role=\"menuitem\" href=\"#\">Learn</a>\n    </li>\n    <li class=\"nav-list search\">\n      <a role=\"menuitem\" href=\"#\">search</a>\n    </li>\n  </ul>\n</div>\n\n";
+
+/***/ },
+/* 64 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _templatesProjectMainHtml = __webpack_require__(65);
+	
+	var _templatesProjectMainHtml2 = _interopRequireDefault(_templatesProjectMainHtml);
+	
+	var _componentsProjectLearnMenu = __webpack_require__(66);
 	
 	var _componentsProjectLearnMenu2 = _interopRequireDefault(_componentsProjectLearnMenu);
 	
@@ -21450,129 +21496,49 @@
 	  },
 	  render: function render() {
 	    _componentsProjectLearnMenu2['default'].init();
-	    $('.nav-list.learn').on('click', function () {
-	      if ($('ul.learn-menu:first').is(':hidden')) {
-	        $('ul.learn-menu').slideDown('slow');
-	      } else {
-	        $('ul.learn-menu').slideUp('slow');
-	      }
-	    });
 	  }
 	};
+	
 	module.exports = app;
 
 /***/ },
-/* 63 */
+/* 65 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"container-fluid project-container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <ul class=\"learn-menu\">\n        <li class=\"learn-nav crocodile\">\n          <a href=\"#\"><img src=\"/images/crocodile-facing-right.svg\"></a>\n        </li>\n        <li class=\"learn-nav lizard\">\n          <a href=\"#\"><img src=\"/images/curved-lizard.svg\"></a>\n        </li>\n        <li class=\"learn-nav frog\">\n          <img src=\"/images/icon.svg\">  \n        </li>\n        <li class=\"learn-nav turtle\">\n          <img src=\"/images/sea-turtle.svg\">\n        </li>\n        <li class=\"learn-nav snake\">\n          <img src=\"/images/snake-facing-right.svg\">\n        </li>\n      </ul>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-6\">\n    \t<div id=\"home-carousel\" class=\"carousel slide\" data-ride=\"carousel\">\n      <!-- Indicators -->\n      <ol class=\"carousel-indicators\">\n        <li data-target=\"#home-carousel\" data-slide-to=\"0\" class=\"active\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"1\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"2\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"3\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"4\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"5\"></li>\n      </ol>\n\n      <!-- Wrapper for slides -->\n      <div class=\"carousel-inner\" role=\"listbox\">\n        <div class=\"item active\">\n          <img src=\"/images/carousel/frogs/amused-frog.jpg\" alt=\"amused frog\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/turtles/red-sea-turtle.jpg\" alt=\"red-sea-turtle\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/lizards/blue-iguana.jpg\" alt=\"blue iguana\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/snakes/green-snake.jpg\" alt=\"snake coiled around tree branch\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/turtles/basking-turtle.jpg\" alt=\"basking turtle\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/frogs/red-eyed-frog.jpg\" alt=\"red eyed frog\">\n        </div>\n      </div>\n    </div>\n      <!-- Controls -->\n      <a class=\"left carousel-control\" href=\"#home-carousel\" role=\"button\" data-slide=\"prev\">\n        <span class=\"icon-prev\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Previous</span>\n      </a>\n      <a class=\"right carousel-control\" href=\"#home-carousel\" role=\"button\" data-slide=\"next\">\n        <span class=\"icon-next\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Next</span>\n      </a>\n    </div>\n    <div class=\"col-md-2 col-md-offset-3 sidebar\">\n    <h4 class=\"fun-fact\">Did you know...?</h4>\n      <p class=\"fun-fact-p\">A herpetologist is a scientist who studies reptiles and amphibians. The word \"herpetology\" comes from the Greek \"herpien\", which means \"to creep\"!</p>\n    </div>\n  </div>\n</div>\n";
+
+/***/ },
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _underscore = __webpack_require__(11);
+	var _templatesProjectMainHtml = __webpack_require__(65);
 	
-	var _underscore2 = _interopRequireDefault(_underscore);
-	
-	var _templatesProjectNavMenuHtml = __webpack_require__(64);
-	
-	var _templatesProjectNavMenuHtml2 = _interopRequireDefault(_templatesProjectNavMenuHtml);
+	var _templatesProjectMainHtml2 = _interopRequireDefault(_templatesProjectMainHtml);
 	
 	var $ = __webpack_require__(1);
 	
 	// legacy loading for bootstrap
 	window.jQuery = window.$ = $;
 	__webpack_require__(14);
-	__webpack_require__(65);
+	__webpack_require__(67);
 	
 	var app = {
 	  init: function init() {
 	    app.render();
 	  },
 	  render: function render() {
-	    $('.project-header').append(_templatesProjectNavMenuHtml2['default']);
-	    $('li.learn-nav.crocodile img').mouseover(function () {
-	      $('li.learn-nav.crocodile img').animate({
-	        width: 75,
-	        height: 75,
-	        top: 70
-	      }, 500, 'easeOutBack');
-	    });
-	    $('li.learn-nav.crocodile img').mouseout(function () {
-	      $('li.learn-nav.crocodile img').animate({
-	        width: 75,
-	        height: 75,
-	        top: 0
-	      }, 500, 'easeInBack');
-	    });
-	    $('li.learn-nav.lizard img').mouseover(function () {
-	      $('li.learn-nav.lizard img').animate({
-	        width: 60,
-	        height: 60,
-	        top: 70
-	      }, 500, 'easeOutBack');
-	    });
-	    $('li.learn-nav.lizard img').mouseout(function () {
-	      $('li.learn-nav.lizard img').animate({
-	        width: 50,
-	        height: 50,
-	        top: 0
-	      }, 500, 'easeInBack');
-	    });
-	    $('li.learn-nav.frog img').mouseover(function () {
-	      $('li.learn-nav.frog img').animate({
-	        width: 60,
-	        height: 60,
-	        top: 70
-	      }, 500, 'easeOutBack');
-	    });
-	    $('li.learn-nav.frog img').mouseout(function () {
-	      $('li.learn-nav.frog img').animate({
-	        width: 50,
-	        height: 50,
-	        top: 0
-	      }, 500, 'easeInBack');
-	    });
-	    $('li.learn-nav.turtle img').mouseover(function () {
-	      $('li.learn-nav.turtle img').animate({
-	        width: 60,
-	        height: 60,
-	        top: 70
-	      }, 500, 'easeOutBack');
-	    });
-	    $('li.learn-nav.turtle img').mouseout(function () {
-	      $('li.learn-nav.turtle img').animate({
-	        width: 50,
-	        height: 50,
-	        top: 0
-	      }, 500, 'easeInBack');
-	    });
-	    $('li.learn-nav.snake img').mouseover(function () {
-	      $('li.learn-nav.snake img').animate({
-	        width: 60,
-	        height: 60,
-	        top: 70
-	      }, 500, 'easeOutBack');
-	    });
-	    $('li.learn-nav.snake img').mouseout(function () {
-	      $('li.learn-nav.snake img').animate({
-	        width: 50,
-	        height: 50,
-	        top: 0
-	      }, 500, 'easeInBack');
-	    });
+	    $('.project-main').append(_templatesProjectMainHtml2['default']);
 	  }
 	};
 	
 	module.exports = app;
 
 /***/ },
-/* 64 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"header-container\">\n  <h1>Herpetarium</h1>\n  <ul class=\"nav-menu\">\n    <li class=\"nav-list\">\n      <a role=\"menuitem\" href=\"#\">Visit</a>\n    </li>\n    <li class=\"nav-list learn\">\n      <a role=\"menuitem\" href=\"#\">Learn</a>\n    </li>\n    <li class=\"nav-list\">\n      <a role=\"menuitem\" href=\"#\">Blog</a>\n    </li>\n  </ul>\n  <ul class=\"learn-menu\">\n    <li class=\"learn-nav crocodile\">\n      <a href=\"#\"><img src=\"/images/crocodile-facing-right.svg\"></a>\n    </li>\n    <li class=\"learn-nav lizard\">\n      <a href=\"#\"><img src=\"/images/curved-lizard.svg\"></a>\n    </li>\n    <li class=\"learn-nav frog\">\n      <img src=\"/images/icon.svg\">  \n    </li>\n    <li class=\"learn-nav turtle\">\n      <img src=\"/images/sea-turtle.svg\">\n    </li>\n    <li class=\"learn-nav snake\">\n      <img src=\"/images/snake-facing-right.svg\">\n    </li>\n  </ul>\n</div>\n\n";
-
-/***/ },
-/* 65 */
+/* 67 */
 /***/ function(module, exports) {
 
 	/*
@@ -21719,39 +21685,6 @@
 		}
 	});})(jQuery);
 
-
-/***/ },
-/* 66 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _templatesProjectMainHtml = __webpack_require__(67);
-	
-	var _templatesProjectMainHtml2 = _interopRequireDefault(_templatesProjectMainHtml);
-	
-	var $ = __webpack_require__(1);
-	window.jQuery = window.$ = $;
-	__webpack_require__(14);
-	
-	var app = {
-	  init: function init() {
-	    app.render();
-	  },
-	  render: function render() {
-	    // $('.project-main').append(projectMain);
-	  }
-	};
-	
-	module.exports = app;
-
-/***/ },
-/* 67 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"container-fluid project-containers\">\n  <div class=\"row\">\n    <div class=\"col-md-8 col-md-offset-2\">\n      <div class=\"subheading\">\n        <h2>The country's only dedicated herpetarium!!</h2>\n        <p>Over 10,000 square feet of climate-specific reptile and amphibian habitats<br> house nearly 100 different species of snakes, turtles, lizards, salamanders, and more!</p>\n      </div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-3 side\">\n      <div class=\"side\">\n        <h3 class=\"news\">Coming Soon</h3>\n          <p class=\"news-p\">Serpentarium!</p>\n        <h4 class=\"community\">Herp News</h4>\n          <p class=\"community-p\">New lizard species discovered in West Texas: Solastella cookei</p>\n      </div>\n    </div> \n    <div class=\"col-md-6\">\n    \t<div id=\"home-carousel\" class=\"carousel slide\" data-ride=\"carousel\">\n      <!-- Indicators -->\n      <ol class=\"carousel-indicators\">\n        <li data-target=\"#home-carousel\" data-slide-to=\"0\" class=\"active\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"1\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"2\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"3\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"4\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"5\"></li>\n      </ol>\n\n      <!-- Wrapper for slides -->\n      <div class=\"carousel-inner\" role=\"listbox\">\n        <div class=\"item active\">\n          <img src=\"/images/carousel/frogs/amused-frog.jpg\" alt=\"amused frog\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/turtles/red-sea-turtle.jpg\" alt=\"red-sea-turtle\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/lizards/blue-iguana.jpg\" alt=\"blue iguana\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/snakes/green-snake.jpg\" alt=\"snake coiled around tree branch\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/turtles/basking-turtle.jpg\" alt=\"basking turtle\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/frogs/red-eyed-frog.jpg\" alt=\"red eyed frog\">\n        </div>\n      </div>\n      <!-- Controls -->\n      <a class=\"left carousel-control\" href=\"#home-carousel\" role=\"button\" data-slide=\"prev\">\n        <span class=\"icon-prev\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Previous</span>\n      </a>\n      <a class=\"right carousel-control\" href=\"#home-carousel\" role=\"button\" data-slide=\"next\">\n        <span class=\"icon-next\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Next</span>\n      </a>\n    </div>\n    <div class=\"col-md-2 sidebar\">\n    <h4 class=\"fun-fact\">Did you know...?</h4>\n      <p class=\"fun-fact-p\">A herpetologist is a scientist who studies reptiles and amphibians. The word \"herpetology\" comes from the Greek \"herpien\", which means \"to creep\". So herpetology means \"the study of creepy-crawlers\"!</p>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 68 */

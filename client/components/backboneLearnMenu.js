@@ -10,15 +10,34 @@ import Backbone from 'backbone';
 import Handlebars from 'handlebars';
 import lscache from 'lscache';
 
-var LearnMenuModel = Backbone.Model.extend {
+var LearnMenuModel = Backbone.Model.extend({
   defaults: {
 
   },
-  fetch: {
+  fetch: function() {
 
   },
-  save: {
+  save: function() {
     
   }
 
-}
+});
+var model = LearnMenuModel;
+
+var ViewClass = Backbone.View.extend({
+  el: '.project-container',
+  model: model,
+  events: {
+    'click .lizard': 'revealInfo',
+  },
+  initialize: function(){
+
+  },
+  render: function(){
+
+  },
+  revealInfo: function(){
+  	
+  },
+  closeView: function(){}
+});

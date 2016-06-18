@@ -2,21 +2,14 @@ var $ = require('jquery');
 window.jQuery = window.$ = $;
 require('bootstrap');
 
-import projectLearnMenu from 'components/projectLearnMenu'; 
+import projectNavMenu from 'templates/projectNavMenu.html';
 
 var app = {
   init: function() {
     app.render();
   },
   render: function() {
-    projectLearnMenu.init();
-    $('.nav-list.learn').on('click', function(){
-      if ($('ul.learn-menu:first').is(':hidden')) {
-        $('ul.learn-menu').slideDown('slow');
-      } else {
-        $('ul.learn-menu').slideUp('slow');
-      }
-    }); 
+    $('.project-header').append(projectNavMenu);
   }
 };
 module.exports = app;

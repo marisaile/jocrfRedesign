@@ -6,78 +6,53 @@
   position: relative;
   display: block;
   width: 100%; 
-  height: 100%;
+  height: 500px;
 }
-.project-container .subheading h2 {
+.project-container ul.learn-menu {
   position: absolute;
-  top: 150px;
-  font-family: "Open Sans", sans-serif;
-  font-size: 24px;
-  color:  #120847;
-  margin: auto;
-}
-.subheading p {
-  position: absolute;
-  top: 225px;
-  font-family: "Open Sans", sans-serif;
-  font-size: 20px;
-  color: #120847;
+  top: 65px;
   width: 100%;
-  text-align: center;
 }
-.carousel {
+.project-container .learn-menu li {
+  margin-right: 100px;
+  display: inline-block;
+  list-style-image: none;
+}
+.project-container .learn-menu img {
+  position: absolute;
+  width: 75px;
+  color: #120847;
+}
+.project-container .learn-menu a {
+  color: #120847;
+}
+.project-container .carousel {
   position: absolute;
   display: block;
+  height: 50px;
+  width: 100px;
   top: 300px;
+  left: 50px;
 }
-.carousel .item {
-  height: 400px;
-}
-.carousel img {
+.project-container .carousel .item img {
+  position: absolute;
+  display: block;
   min-width: 100%;
-  max-height: 400px;
-  max-width: none;
+  max-width: 100%;
+  max-height: 100%;
   overflow: hidden;
 }
 .sidebar .fun-fact {
   position: absolute;
-  top: 250px;
+  top: 25px;
   font-family: "Sigmar One", cursive;
   font-size: 20px;
   text-align: right;
 }
 .sidebar .fun-fact-p {
   position: absolute;
-  top: 300px;
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-  text-align: right;
-}
-.side .news {
-  position: absolute;
   top: 75px;
-  font-family: "Sigmar One", cursive;
-  font-size: 20px;
-}
-
-.side .news-p {
-  position: absolute;
-  top: 125px;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
+  text-align: left;
 }
-
-.side .community {
-  position: absolute;
-  top: 250px;
-  font-family: "Sigmar One", cursive;
-  font-size: 20px;
-}
-.side .community-p {
-  position: absolute;
-  top: 325px;
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-}
-
-
