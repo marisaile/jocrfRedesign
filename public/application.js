@@ -62,19 +62,19 @@
 	
 	var _pagesTodoTodoController2 = _interopRequireDefault(_pagesTodoTodoController);
 	
-	var _pagesFunnySquares = __webpack_require__(59);
+	var _pagesFunnySquares = __webpack_require__(58);
 	
 	var _pagesFunnySquares2 = _interopRequireDefault(_pagesFunnySquares);
 	
-	var _pagesProject = __webpack_require__(61);
+	var _pagesProject = __webpack_require__(60);
 	
 	var _pagesProject2 = _interopRequireDefault(_pagesProject);
 	
-	var _pagesTimer = __webpack_require__(70);
+	var _pagesTimer = __webpack_require__(69);
 	
 	var _pagesTimer2 = _interopRequireDefault(_pagesTimer);
 	
-	var _pagesFormsBackbone = __webpack_require__(71);
+	var _pagesFormsBackbone = __webpack_require__(70);
 	
 	var _pagesFormsBackbone2 = _interopRequireDefault(_pagesFormsBackbone);
 	
@@ -108,9 +108,12 @@
 	    case '/pages/photoSearch.html':
 	      _pagesPhotoSearch2['default'].init();
 	      break;
-	    default:
+	    case '/pages/books.html':
+	      // bookClub.init();
 	      break;
 	
+	    default:
+	      break;
 	  }
 	
 	  // Fancy Console Message for Developers
@@ -9972,7 +9975,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"main-nav-container":"main-nav-container","main-container":"main-container","main-todo":"main-todo","todo-container":"todo-container","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","h1":"h1","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","timer-container":"timer-container","counter":"counter","start-button":"start-button","stop-button":"stop-button","reset-button":"reset-button","split-button":"split-button","split-time":"split-time","lap-time":"lap-time","page-container":"page-container","header-container":"header-container","nav-menu":"nav-menu","project-container":"project-container","learn-menu":"learn-menu","carousel":"carousel","item":"item","sidebar":"sidebar","fun-fact":"fun-fact","fun-fact-p":"fun-fact-p","project-footer":"project-footer","sidebar-color-container":"sidebar-color-container","search-container":"search-container","photo":"photo"};
+	module.exports = {"main-nav-container":"main-nav-container","main-main":"main-main","main-todo":"main-todo","todo-container":"todo-container","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","h1":"h1","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","timer-container":"timer-container","counter":"counter","start-button":"start-button","stop-button":"stop-button","reset-button":"reset-button","split-button":"split-button","split-time":"split-time","lap-time":"lap-time","page-container":"page-container","search-container":"search-container","photo":"photo","books-header":"books-header","book-list-container":"book-list-container","table":"table","btn-add-book":"btn-add-book","new-book-container":"new-book-container","books-footer":"books-footer"};
 
 /***/ },
 /* 3 */,
@@ -9985,13 +9988,22 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
 	var _componentsMainHeader = __webpack_require__(7);
 	
 	var _componentsMainHeader2 = _interopRequireDefault(_componentsMainHeader);
 	
+	var _templatesMainMainHtml = __webpack_require__(76);
+	
+	var _templatesMainMainHtml2 = _interopRequireDefault(_templatesMainMainHtml);
+	
 	var app = {
 	  init: function init() {
 	    app.render();
+	    (0, _jquery2['default'])('.main-main').append(_templatesMainMainHtml2['default']);
 	  },
 	  render: function render() {
 	    _componentsMainHeader2['default'].init();
@@ -10031,7 +10043,7 @@
 /* 8 */
 /***/ function(module, exports) {
 
-	module.exports = "<nav class=\"main-nav-container\">\n  <h1>\n    <a href=\"/server/view.ejs\">Lisa</a>\n  </h1>\n  <ul>\n    <li class=\"todo-nav\">\n      <a role=\"menuitem\" href=\"/pages/todo.html\">Todo Application</a>\n    </li>\n    <li class=\"project-nav\">\n      <a role=\"menuitem\" href=\"/pages/projectHome.html\">My Project</a>\n    </li>\n    <li class=\"funny-squares-nav\">\n      <a role=\"menuitem\" href=\"/pages/funnySquares.html\">Funny Squares</a>\n    </li>\n    <li class=\"jS-timer-nav\">\n      <a role=\"menuitem\" href=\"/pages/timer.html\">Timer</a>\n    </li>\n    <li class=\"backbone-forms-nav\" >\n      <a role=\"menuitem\" href=\"/pages/formsBackbone.html\">Backbone Forms</a>\n    </li>\n    <li class=\"photo-search-nav\" >\n      <a role=\"menuitem\" href=\"/pages/photoSearch.html\">Photo Search</a>\n    </li>\n  </ul>\n</nav>";
+	module.exports = "<nav class=\"main-nav-container\">\n  <h1>\n    <a href=\"/server/view.ejs\">Lisa</a>\n  </h1>\n  <ul>\n    <li class=\"todo-nav\">\n      <a role=\"menuitem\" href=\"/pages/todo.html\">Todo Application</a>\n    </li>\n    <!-- <li class=\"project-nav\">\n      <a role=\"menuitem\" href=\"/pages/projectHome.html\">My Project</a>\n    </li> -->\n    <li class=\"funny-squares-nav\">\n      <a role=\"menuitem\" href=\"/pages/funnySquares.html\">Funny Squares</a>\n    </li>\n    <!-- <li class=\"jS-timer-nav\">\n      <a role=\"menuitem\" href=\"/pages/timer.html\">Timer</a>\n    </li> -->\n    <li class=\"backbone-forms-nav\">\n      <a role=\"menuitem\" href=\"/pages/formsBackbone.html\">Backbone Forms</a>\n    </li>\n    <li class=\"photo-search-nav\">\n      <a role=\"menuitem\" href=\"/pages/photoSearch.html\">Photo Search</a>\n    </li>\n    <li class=\"book-club-nav\">\n      <a role=\"menuitem\" href=\"/pages/books.html\">Book Tracker</a>\n    </li>\n  </ul>\n</nav>";
 
 /***/ },
 /* 9 */
@@ -10049,7 +10061,7 @@
 	
 	var _pagesTodoTodoModel2 = _interopRequireDefault(_pagesTodoTodoModel);
 	
-	var _pagesTodoTodoView = __webpack_require__(27);
+	var _pagesTodoTodoView = __webpack_require__(26);
 	
 	var _pagesTodoTodoView2 = _interopRequireDefault(_pagesTodoTodoView);
 	
@@ -10059,7 +10071,7 @@
 	
 	// legacy loading for bootstrap
 	window.jQuery = window.$ = $;
-	__webpack_require__(14);
+	__webpack_require__(13);
 	
 	var TodoControllerView = _backbone2['default'].View.extend({
 	  el: '.todo-container',
@@ -13619,17 +13631,13 @@
 	
 	var _backbone2 = _interopRequireDefault(_backbone);
 	
-	var _lscache = __webpack_require__(13);
-	
-	var _lscache2 = _interopRequireDefault(_lscache);
-	
 	// Model
 	
 	var $ = __webpack_require__(1);
 	
 	// legacy loading for bootstrap
 	window.jQuery = window.$ = $;
-	__webpack_require__(14);
+	__webpack_require__(13);
 	
 	var TodoModel = _backbone2['default'].Model.extend({
 	  defaults: {
@@ -13715,363 +13723,8 @@
 /* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
-	 * lscache library
-	 * Copyright (c) 2011, Pamela Fox
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 *       http://www.apache.org/licenses/LICENSE-2.0
-	 *
-	 * Unless required by applicable law or agreed to in writing, software
-	 * distributed under the License is distributed on an "AS IS" BASIS,
-	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	 * See the License for the specific language governing permissions and
-	 * limitations under the License.
-	 */
-	
-	/* jshint undef:true, browser:true, node:true */
-	/* global define */
-	
-	(function (root, factory) {
-	    if (true) {
-	        // AMD. Register as an anonymous module.
-	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	    } else if (typeof module !== "undefined" && module.exports) {
-	        // CommonJS/Node module
-	        module.exports = factory();
-	    } else {
-	        // Browser globals
-	        root.lscache = factory();
-	    }
-	}(this, function () {
-	
-	  // Prefix for all lscache keys
-	  var CACHE_PREFIX = 'lscache-';
-	
-	  // Suffix for the key name on the expiration items in localStorage
-	  var CACHE_SUFFIX = '-cacheexpiration';
-	
-	  // expiration date radix (set to Base-36 for most space savings)
-	  var EXPIRY_RADIX = 10;
-	
-	  // time resolution in minutes
-	  var EXPIRY_UNITS = 60 * 1000;
-	
-	  // ECMAScript max Date (epoch + 1e8 days)
-	  var MAX_DATE = Math.floor(8.64e15/EXPIRY_UNITS);
-	
-	  var cachedStorage;
-	  var cachedJSON;
-	  var cacheBucket = '';
-	  var warnings = false;
-	
-	  // Determines if localStorage is supported in the browser;
-	  // result is cached for better performance instead of being run each time.
-	  // Feature detection is based on how Modernizr does it;
-	  // it's not straightforward due to FF4 issues.
-	  // It's not run at parse-time as it takes 200ms in Android.
-	  function supportsStorage() {
-	    var key = '__lscachetest__';
-	    var value = key;
-	
-	    if (cachedStorage !== undefined) {
-	      return cachedStorage;
-	    }
-	
-	    try {
-	      setItem(key, value);
-	      removeItem(key);
-	      cachedStorage = true;
-	    } catch (e) {
-	        if (isOutOfSpace(e)) {    // If we hit the limit, then it means we have support, 
-	            cachedStorage = true; // just maxed it out and even the set test failed.
-	        } else {
-	            cachedStorage = false;
-	        }
-	    }
-	    return cachedStorage;
-	  }
-	
-	  // Check to set if the error is us dealing with being out of space
-	  function isOutOfSpace(e) {
-	    if (e && e.name === 'QUOTA_EXCEEDED_ERR' || 
-	            e.name === 'NS_ERROR_DOM_QUOTA_REACHED' || 
-	            e.name === 'QuotaExceededError') {
-	        return true;
-	    }
-	    return false;
-	  }
-	
-	  // Determines if native JSON (de-)serialization is supported in the browser.
-	  function supportsJSON() {
-	    /*jshint eqnull:true */
-	    if (cachedJSON === undefined) {
-	      cachedJSON = (window.JSON != null);
-	    }
-	    return cachedJSON;
-	  }
-	
-	  /**
-	   * Returns the full string for the localStorage expiration item.
-	   * @param {String} key
-	   * @return {string}
-	   */
-	  function expirationKey(key) {
-	    return key + CACHE_SUFFIX;
-	  }
-	
-	  /**
-	   * Returns the number of minutes since the epoch.
-	   * @return {number}
-	   */
-	  function currentTime() {
-	    return Math.floor((new Date().getTime())/EXPIRY_UNITS);
-	  }
-	
-	  /**
-	   * Wrapper functions for localStorage methods
-	   */
-	
-	  function getItem(key) {
-	    return localStorage.getItem(CACHE_PREFIX + cacheBucket + key);
-	  }
-	
-	  function setItem(key, value) {
-	    // Fix for iPad issue - sometimes throws QUOTA_EXCEEDED_ERR on setItem.
-	    localStorage.removeItem(CACHE_PREFIX + cacheBucket + key);
-	    localStorage.setItem(CACHE_PREFIX + cacheBucket + key, value);
-	  }
-	
-	  function removeItem(key) {
-	    localStorage.removeItem(CACHE_PREFIX + cacheBucket + key);
-	  }
-	
-	  function eachKey(fn) {
-	    var prefixRegExp = new RegExp('^' + CACHE_PREFIX + cacheBucket + '(.*)');
-	    // Loop in reverse as removing items will change indices of tail
-	    for (var i = localStorage.length-1; i >= 0 ; --i) {
-	      var key = localStorage.key(i);
-	      key = key && key.match(prefixRegExp);
-	      key = key && key[1];
-	      if (key && key.indexOf(CACHE_SUFFIX) < 0) {
-	        fn(key, expirationKey(key));
-	      }
-	    }
-	  }
-	
-	  function flushItem(key) {
-	    var exprKey = expirationKey(key);
-	
-	    removeItem(key);
-	    removeItem(exprKey);
-	  }
-	
-	  function flushExpiredItem(key) {
-	    var exprKey = expirationKey(key);
-	    var expr = getItem(exprKey);
-	
-	    if (expr) {
-	      var expirationTime = parseInt(expr, EXPIRY_RADIX);
-	
-	      // Check if we should actually kick item out of storage
-	      if (currentTime() >= expirationTime) {
-	        removeItem(key);
-	        removeItem(exprKey);
-	        return true;
-	      }
-	    }
-	  }
-	
-	  function warn(message, err) {
-	    if (!warnings) return;
-	    if (!('console' in window) || typeof window.console.warn !== 'function') return;
-	    window.console.warn("lscache - " + message);
-	    if (err) window.console.warn("lscache - The error was: " + err.message);
-	  }
-	
-	  var lscache = {
-	    /**
-	     * Stores the value in localStorage. Expires after specified number of minutes.
-	     * @param {string} key
-	     * @param {Object|string} value
-	     * @param {number} time
-	     */
-	    set: function(key, value, time) {
-	      if (!supportsStorage()) return;
-	
-	      // If we don't get a string value, try to stringify
-	      // In future, localStorage may properly support storing non-strings
-	      // and this can be removed.
-	      if (typeof value !== 'string') {
-	        if (!supportsJSON()) return;
-	        try {
-	          value = JSON.stringify(value);
-	        } catch (e) {
-	          // Sometimes we can't stringify due to circular refs
-	          // in complex objects, so we won't bother storing then.
-	          return;
-	        }
-	      }
-	
-	      try {
-	        setItem(key, value);
-	      } catch (e) {
-	        if (isOutOfSpace(e)) {
-	          // If we exceeded the quota, then we will sort
-	          // by the expire time, and then remove the N oldest
-	          var storedKeys = [];
-	          var storedKey;
-	          eachKey(function(key, exprKey) {
-	            var expiration = getItem(exprKey);
-	            if (expiration) {
-	              expiration = parseInt(expiration, EXPIRY_RADIX);
-	            } else {
-	              // TODO: Store date added for non-expiring items for smarter removal
-	              expiration = MAX_DATE;
-	            }
-	            storedKeys.push({
-	              key: key,
-	              size: (getItem(key) || '').length,
-	              expiration: expiration
-	            });
-	          });
-	          // Sorts the keys with oldest expiration time last
-	          storedKeys.sort(function(a, b) { return (b.expiration-a.expiration); });
-	
-	          var targetSize = (value||'').length;
-	          while (storedKeys.length && targetSize > 0) {
-	            storedKey = storedKeys.pop();
-	            warn("Cache is full, removing item with key '" + key + "'");
-	            flushItem(storedKey.key);
-	            targetSize -= storedKey.size;
-	          }
-	          try {
-	            setItem(key, value);
-	          } catch (e) {
-	            // value may be larger than total quota
-	            warn("Could not add item with key '" + key + "', perhaps it's too big?", e);
-	            return;
-	          }
-	        } else {
-	          // If it was some other error, just give up.
-	          warn("Could not add item with key '" + key + "'", e);
-	          return;
-	        }
-	      }
-	
-	      // If a time is specified, store expiration info in localStorage
-	      if (time) {
-	        setItem(expirationKey(key), (currentTime() + time).toString(EXPIRY_RADIX));
-	      } else {
-	        // In case they previously set a time, remove that info from localStorage.
-	        removeItem(expirationKey(key));
-	      }
-	    },
-	
-	    /**
-	     * Retrieves specified value from localStorage, if not expired.
-	     * @param {string} key
-	     * @return {string|Object}
-	     */
-	    get: function(key) {
-	      if (!supportsStorage()) return null;
-	
-	      // Return the de-serialized item if not expired
-	      if (flushExpiredItem(key)) { return null; }
-	
-	      // Tries to de-serialize stored value if its an object, and returns the normal value otherwise.
-	      var value = getItem(key);
-	      if (!value || !supportsJSON()) {
-	        return value;
-	      }
-	
-	      try {
-	        // We can't tell if its JSON or a string, so we try to parse
-	        return JSON.parse(value);
-	      } catch (e) {
-	        // If we can't parse, it's probably because it isn't an object
-	        return value;
-	      }
-	    },
-	
-	    /**
-	     * Removes a value from localStorage.
-	     * Equivalent to 'delete' in memcache, but that's a keyword in JS.
-	     * @param {string} key
-	     */
-	    remove: function(key) {
-	      if (!supportsStorage()) return;
-	
-	      flushItem(key);
-	    },
-	
-	    /**
-	     * Returns whether local storage is supported.
-	     * Currently exposed for testing purposes.
-	     * @return {boolean}
-	     */
-	    supported: function() {
-	      return supportsStorage();
-	    },
-	
-	    /**
-	     * Flushes all lscache items and expiry markers without affecting rest of localStorage
-	     */
-	    flush: function() {
-	      if (!supportsStorage()) return;
-	
-	      eachKey(function(key) {
-	        flushItem(key);
-	      });
-	    },
-	
-	    /**
-	     * Flushes expired lscache items and expiry markers without affecting rest of localStorage
-	     */
-	    flushExpired: function() {
-	      if (!supportsStorage()) return;
-	
-	      eachKey(function(key) {
-	        flushExpiredItem(key);
-	      });
-	    },
-	
-	    /**
-	     * Appends CACHE_PREFIX so lscache will partition data in to different buckets.
-	     * @param {string} bucket
-	     */
-	    setBucket: function(bucket) {
-	      cacheBucket = bucket;
-	    },
-	
-	    /**
-	     * Resets the string being appended to CACHE_PREFIX so lscache will use the default storage behavior.
-	     */
-	    resetBucket: function() {
-	      cacheBucket = '';
-	    },
-	
-	    /**
-	     * Sets whether to display warnings when an item is removed from the cache or not.
-	     */
-	    enableWarnings: function(enabled) {
-	      warnings = enabled;
-	    }
-	  };
-	
-	  // Return the module
-	  return lscache;
-	}));
-
-
-/***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
 	// This file is autogenerated via the `commonjs` Grunt task. You can require() this file in a CommonJS environment.
+	__webpack_require__(14)
 	__webpack_require__(15)
 	__webpack_require__(16)
 	__webpack_require__(17)
@@ -14083,10 +13736,9 @@
 	__webpack_require__(23)
 	__webpack_require__(24)
 	__webpack_require__(25)
-	__webpack_require__(26)
 
 /***/ },
-/* 15 */
+/* 14 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -14151,7 +13803,7 @@
 
 
 /***/ },
-/* 16 */
+/* 15 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -14251,7 +13903,7 @@
 
 
 /***/ },
-/* 17 */
+/* 16 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -14377,7 +14029,7 @@
 
 
 /***/ },
-/* 18 */
+/* 17 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -14620,7 +14272,7 @@
 
 
 /***/ },
-/* 19 */
+/* 18 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -14837,7 +14489,7 @@
 
 
 /***/ },
-/* 20 */
+/* 19 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -15008,7 +14660,7 @@
 
 
 /***/ },
-/* 21 */
+/* 20 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -15351,7 +15003,7 @@
 
 
 /***/ },
-/* 22 */
+/* 21 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -15871,7 +15523,7 @@
 
 
 /***/ },
-/* 23 */
+/* 22 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -15985,7 +15637,7 @@
 
 
 /***/ },
-/* 24 */
+/* 23 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -16163,7 +15815,7 @@
 
 
 /***/ },
-/* 25 */
+/* 24 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -16324,7 +15976,7 @@
 
 
 /***/ },
-/* 26 */
+/* 25 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -16492,7 +16144,7 @@
 
 
 /***/ },
-/* 27 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16503,11 +16155,11 @@
 	
 	var _backbone2 = _interopRequireDefault(_backbone);
 	
-	var _handlebars = __webpack_require__(28);
+	var _handlebars = __webpack_require__(27);
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _templatesTodoItemHtml = __webpack_require__(58);
+	var _templatesTodoItemHtml = __webpack_require__(57);
 	
 	var _templatesTodoItemHtml2 = _interopRequireDefault(_templatesTodoItemHtml);
 	
@@ -16517,7 +16169,7 @@
 	
 	// legacy loading for bootstrap
 	window.jQuery = window.$ = $;
-	__webpack_require__(14);
+	__webpack_require__(13);
 	
 	var TodoItemView = _backbone2['default'].View.extend({
 	  tagName: 'li', // tagName has to be used when the element does not already exist on the page 
@@ -16565,7 +16217,7 @@
 	module.exports = TodoItemView;
 
 /***/ },
-/* 28 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// USAGE:
@@ -16574,9 +16226,9 @@
 	
 	// var local = handlebars.create();
 	
-	var handlebars = __webpack_require__(29)['default'];
+	var handlebars = __webpack_require__(28)['default'];
 	
-	var printer = __webpack_require__(57);
+	var printer = __webpack_require__(56);
 	handlebars.PrintVisitor = printer.PrintVisitor;
 	handlebars.print = printer.print;
 	
@@ -16596,7 +16248,7 @@
 
 
 /***/ },
-/* 29 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16606,29 +16258,29 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _handlebarsRuntime = __webpack_require__(30);
+	var _handlebarsRuntime = __webpack_require__(29);
 	
 	var _handlebarsRuntime2 = _interopRequireDefault(_handlebarsRuntime);
 	
 	// Compiler imports
 	
-	var _handlebarsCompilerAst = __webpack_require__(48);
+	var _handlebarsCompilerAst = __webpack_require__(47);
 	
 	var _handlebarsCompilerAst2 = _interopRequireDefault(_handlebarsCompilerAst);
 	
-	var _handlebarsCompilerBase = __webpack_require__(49);
+	var _handlebarsCompilerBase = __webpack_require__(48);
 	
-	var _handlebarsCompilerCompiler = __webpack_require__(54);
+	var _handlebarsCompilerCompiler = __webpack_require__(53);
 	
-	var _handlebarsCompilerJavascriptCompiler = __webpack_require__(55);
+	var _handlebarsCompilerJavascriptCompiler = __webpack_require__(54);
 	
 	var _handlebarsCompilerJavascriptCompiler2 = _interopRequireDefault(_handlebarsCompilerJavascriptCompiler);
 	
-	var _handlebarsCompilerVisitor = __webpack_require__(52);
+	var _handlebarsCompilerVisitor = __webpack_require__(51);
 	
 	var _handlebarsCompilerVisitor2 = _interopRequireDefault(_handlebarsCompilerVisitor);
 	
-	var _handlebarsNoConflict = __webpack_require__(47);
+	var _handlebarsNoConflict = __webpack_require__(46);
 	
 	var _handlebarsNoConflict2 = _interopRequireDefault(_handlebarsNoConflict);
 	
@@ -16667,7 +16319,7 @@
 
 
 /***/ },
-/* 30 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16681,30 +16333,30 @@
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 	
-	var _handlebarsBase = __webpack_require__(31);
+	var _handlebarsBase = __webpack_require__(30);
 	
 	var base = _interopRequireWildcard(_handlebarsBase);
 	
 	// Each of these augment the Handlebars object. No need to setup here.
 	// (This is done to easily share code between commonjs and browse envs)
 	
-	var _handlebarsSafeString = __webpack_require__(45);
+	var _handlebarsSafeString = __webpack_require__(44);
 	
 	var _handlebarsSafeString2 = _interopRequireDefault(_handlebarsSafeString);
 	
-	var _handlebarsException = __webpack_require__(33);
+	var _handlebarsException = __webpack_require__(32);
 	
 	var _handlebarsException2 = _interopRequireDefault(_handlebarsException);
 	
-	var _handlebarsUtils = __webpack_require__(32);
+	var _handlebarsUtils = __webpack_require__(31);
 	
 	var Utils = _interopRequireWildcard(_handlebarsUtils);
 	
-	var _handlebarsRuntime = __webpack_require__(46);
+	var _handlebarsRuntime = __webpack_require__(45);
 	
 	var runtime = _interopRequireWildcard(_handlebarsRuntime);
 	
-	var _handlebarsNoConflict = __webpack_require__(47);
+	var _handlebarsNoConflict = __webpack_require__(46);
 	
 	var _handlebarsNoConflict2 = _interopRequireDefault(_handlebarsNoConflict);
 	
@@ -16739,7 +16391,7 @@
 
 
 /***/ },
-/* 31 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16750,17 +16402,17 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utils = __webpack_require__(32);
+	var _utils = __webpack_require__(31);
 	
-	var _exception = __webpack_require__(33);
+	var _exception = __webpack_require__(32);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
-	var _helpers = __webpack_require__(34);
+	var _helpers = __webpack_require__(33);
 	
-	var _decorators = __webpack_require__(42);
+	var _decorators = __webpack_require__(41);
 	
-	var _logger = __webpack_require__(44);
+	var _logger = __webpack_require__(43);
 	
 	var _logger2 = _interopRequireDefault(_logger);
 	
@@ -16849,7 +16501,7 @@
 
 
 /***/ },
-/* 32 */
+/* 31 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -16979,7 +16631,7 @@
 
 
 /***/ },
-/* 33 */
+/* 32 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -17025,7 +16677,7 @@
 
 
 /***/ },
-/* 34 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17036,31 +16688,31 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _helpersBlockHelperMissing = __webpack_require__(35);
+	var _helpersBlockHelperMissing = __webpack_require__(34);
 	
 	var _helpersBlockHelperMissing2 = _interopRequireDefault(_helpersBlockHelperMissing);
 	
-	var _helpersEach = __webpack_require__(36);
+	var _helpersEach = __webpack_require__(35);
 	
 	var _helpersEach2 = _interopRequireDefault(_helpersEach);
 	
-	var _helpersHelperMissing = __webpack_require__(37);
+	var _helpersHelperMissing = __webpack_require__(36);
 	
 	var _helpersHelperMissing2 = _interopRequireDefault(_helpersHelperMissing);
 	
-	var _helpersIf = __webpack_require__(38);
+	var _helpersIf = __webpack_require__(37);
 	
 	var _helpersIf2 = _interopRequireDefault(_helpersIf);
 	
-	var _helpersLog = __webpack_require__(39);
+	var _helpersLog = __webpack_require__(38);
 	
 	var _helpersLog2 = _interopRequireDefault(_helpersLog);
 	
-	var _helpersLookup = __webpack_require__(40);
+	var _helpersLookup = __webpack_require__(39);
 	
 	var _helpersLookup2 = _interopRequireDefault(_helpersLookup);
 	
-	var _helpersWith = __webpack_require__(41);
+	var _helpersWith = __webpack_require__(40);
 	
 	var _helpersWith2 = _interopRequireDefault(_helpersWith);
 	
@@ -17077,14 +16729,14 @@
 
 
 /***/ },
-/* 35 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _utils = __webpack_require__(32);
+	var _utils = __webpack_require__(31);
 	
 	exports['default'] = function (instance) {
 	  instance.registerHelper('blockHelperMissing', function (context, options) {
@@ -17122,7 +16774,7 @@
 
 
 /***/ },
-/* 36 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17132,9 +16784,9 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utils = __webpack_require__(32);
+	var _utils = __webpack_require__(31);
 	
-	var _exception = __webpack_require__(33);
+	var _exception = __webpack_require__(32);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
@@ -17222,7 +16874,7 @@
 
 
 /***/ },
-/* 37 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17232,7 +16884,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _exception = __webpack_require__(33);
+	var _exception = __webpack_require__(32);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
@@ -17253,14 +16905,14 @@
 
 
 /***/ },
-/* 38 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _utils = __webpack_require__(32);
+	var _utils = __webpack_require__(31);
 	
 	exports['default'] = function (instance) {
 	  instance.registerHelper('if', function (conditional, options) {
@@ -17288,7 +16940,7 @@
 
 
 /***/ },
-/* 39 */
+/* 38 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -17320,7 +16972,7 @@
 
 
 /***/ },
-/* 40 */
+/* 39 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -17338,14 +16990,14 @@
 
 
 /***/ },
-/* 41 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _utils = __webpack_require__(32);
+	var _utils = __webpack_require__(31);
 	
 	exports['default'] = function (instance) {
 	  instance.registerHelper('with', function (context, options) {
@@ -17377,7 +17029,7 @@
 
 
 /***/ },
-/* 42 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17388,7 +17040,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _decoratorsInline = __webpack_require__(43);
+	var _decoratorsInline = __webpack_require__(42);
 	
 	var _decoratorsInline2 = _interopRequireDefault(_decoratorsInline);
 	
@@ -17399,14 +17051,14 @@
 
 
 /***/ },
-/* 43 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _utils = __webpack_require__(32);
+	var _utils = __webpack_require__(31);
 	
 	exports['default'] = function (instance) {
 	  instance.registerDecorator('inline', function (fn, props, container, options) {
@@ -17434,14 +17086,14 @@
 
 
 /***/ },
-/* 44 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _utils = __webpack_require__(32);
+	var _utils = __webpack_require__(31);
 	
 	var logger = {
 	  methodMap: ['debug', 'info', 'warn', 'error'],
@@ -17487,7 +17139,7 @@
 
 
 /***/ },
-/* 45 */
+/* 44 */
 /***/ function(module, exports) {
 
 	// Build out our basic SafeString type
@@ -17508,7 +17160,7 @@
 
 
 /***/ },
-/* 46 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17528,15 +17180,15 @@
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 	
-	var _utils = __webpack_require__(32);
+	var _utils = __webpack_require__(31);
 	
 	var Utils = _interopRequireWildcard(_utils);
 	
-	var _exception = __webpack_require__(33);
+	var _exception = __webpack_require__(32);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
-	var _base = __webpack_require__(31);
+	var _base = __webpack_require__(30);
 	
 	function checkRevision(compilerInfo) {
 	  var compilerRevision = compilerInfo && compilerInfo[0] || 1,
@@ -17806,7 +17458,7 @@
 
 
 /***/ },
-/* 47 */
+/* 46 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/* global window */
@@ -17833,7 +17485,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 48 */
+/* 47 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -17870,7 +17522,7 @@
 
 
 /***/ },
-/* 49 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17885,19 +17537,19 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _parser = __webpack_require__(50);
+	var _parser = __webpack_require__(49);
 	
 	var _parser2 = _interopRequireDefault(_parser);
 	
-	var _whitespaceControl = __webpack_require__(51);
+	var _whitespaceControl = __webpack_require__(50);
 	
 	var _whitespaceControl2 = _interopRequireDefault(_whitespaceControl);
 	
-	var _helpers = __webpack_require__(53);
+	var _helpers = __webpack_require__(52);
 	
 	var Helpers = _interopRequireWildcard(_helpers);
 	
-	var _utils = __webpack_require__(32);
+	var _utils = __webpack_require__(31);
 	
 	exports.parser = _parser2['default'];
 	
@@ -17924,7 +17576,7 @@
 
 
 /***/ },
-/* 50 */
+/* 49 */
 /***/ function(module, exports) {
 
 	/* istanbul ignore next */
@@ -18668,7 +18320,7 @@
 
 
 /***/ },
-/* 51 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18678,7 +18330,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _visitor = __webpack_require__(52);
+	var _visitor = __webpack_require__(51);
 	
 	var _visitor2 = _interopRequireDefault(_visitor);
 	
@@ -18895,7 +18547,7 @@
 
 
 /***/ },
-/* 52 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18905,7 +18557,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _exception = __webpack_require__(33);
+	var _exception = __webpack_require__(32);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
@@ -19041,7 +18693,7 @@
 
 
 /***/ },
-/* 53 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19061,7 +18713,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _exception = __webpack_require__(33);
+	var _exception = __webpack_require__(32);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
@@ -19277,7 +18929,7 @@
 
 
 /***/ },
-/* 54 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* eslint-disable new-cap */
@@ -19292,13 +18944,13 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _exception = __webpack_require__(33);
+	var _exception = __webpack_require__(32);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
-	var _utils = __webpack_require__(32);
+	var _utils = __webpack_require__(31);
 	
-	var _ast = __webpack_require__(48);
+	var _ast = __webpack_require__(47);
 	
 	var _ast2 = _interopRequireDefault(_ast);
 	
@@ -19855,7 +19507,7 @@
 
 
 /***/ },
-/* 55 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19865,15 +19517,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _base = __webpack_require__(31);
+	var _base = __webpack_require__(30);
 	
-	var _exception = __webpack_require__(33);
+	var _exception = __webpack_require__(32);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
-	var _utils = __webpack_require__(32);
+	var _utils = __webpack_require__(31);
 	
-	var _codeGen = __webpack_require__(56);
+	var _codeGen = __webpack_require__(55);
 	
 	var _codeGen2 = _interopRequireDefault(_codeGen);
 	
@@ -20987,7 +20639,7 @@
 
 
 /***/ },
-/* 56 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* global define */
@@ -20995,7 +20647,7 @@
 	
 	exports.__esModule = true;
 	
-	var _utils = __webpack_require__(32);
+	var _utils = __webpack_require__(31);
 	
 	var SourceNode = undefined;
 	
@@ -21159,7 +20811,7 @@
 
 
 /***/ },
-/* 57 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* eslint-disable new-cap */
@@ -21172,7 +20824,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _visitor = __webpack_require__(52);
+	var _visitor = __webpack_require__(51);
 	
 	var _visitor2 = _interopRequireDefault(_visitor);
 	
@@ -21351,13 +21003,13 @@
 
 
 /***/ },
-/* 58 */
+/* 57 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"col-md-1\">\n\t{{#if completed}}\n  \t<input class=\"completed-checkbox\" type=\"checkbox\" checked>\n  {{else}}\n  \t<input class=\"completed-checkbox\" type=\"checkbox\">\n  {{/if}}\n</div>\n<div class=\"col-md-10 title\">{{title}}</div>\n<div class=\"col-md-10 title-edit hidden\">\n  <input type=\"text\" class=\"form-control title-edit-input\" value=\"{{title}}\">\n</div>\n<div class=\"col-md-1\">\n  <button type=\"button\" class=\"close\" aria-label=\"Close\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>";
 
 /***/ },
-/* 59 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21372,11 +21024,11 @@
 	
 	var _underscore2 = _interopRequireDefault(_underscore);
 	
-	var _handlebars = __webpack_require__(28);
+	var _handlebars = __webpack_require__(27);
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _templatesFunnySquareHtml = __webpack_require__(60);
+	var _templatesFunnySquareHtml = __webpack_require__(59);
 	
 	var _templatesFunnySquareHtml2 = _interopRequireDefault(_templatesFunnySquareHtml);
 	
@@ -21401,28 +21053,28 @@
 	module.exports = app;
 
 /***/ },
-/* 60 */
+/* 59 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"square-container\">\n  <div class=\"square square{{id}}\">\n    <div class=\"inner\">{{id}}</div>\n  </div>\n</div>";
 
 /***/ },
-/* 61 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _componentsProjectHeader = __webpack_require__(62);
+	var _componentsProjectHeader = __webpack_require__(61);
 	
 	var _componentsProjectHeader2 = _interopRequireDefault(_componentsProjectHeader);
 	
-	var _componentsProjectMain = __webpack_require__(64);
+	var _componentsProjectMain = __webpack_require__(63);
 	
 	var _componentsProjectMain2 = _interopRequireDefault(_componentsProjectMain);
 	
-	var _componentsProjectFooter = __webpack_require__(68);
+	var _componentsProjectFooter = __webpack_require__(67);
 	
 	var _componentsProjectFooter2 = _interopRequireDefault(_componentsProjectFooter);
 	
@@ -21439,20 +21091,20 @@
 	module.exports = app;
 
 /***/ },
-/* 62 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _templatesProjectNavMenuHtml = __webpack_require__(63);
+	var _templatesProjectNavMenuHtml = __webpack_require__(62);
 	
 	var _templatesProjectNavMenuHtml2 = _interopRequireDefault(_templatesProjectNavMenuHtml);
 	
 	var $ = __webpack_require__(1);
 	window.jQuery = window.$ = $;
-	__webpack_require__(14);
+	__webpack_require__(13);
 	
 	var app = {
 	  init: function init() {
@@ -21465,30 +21117,30 @@
 	module.exports = app;
 
 /***/ },
-/* 63 */
+/* 62 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"header-container\">\n  <h1>Herpetarium</h1>\n  <ul class=\"nav-menu\">\n    <li class=\"nav-list blog\">\n      <a role=\"menuitem\" href=\"#\">Blog</a>\n    </li>\n    <li class=\"nav-list learn\">\n      <a role=\"menuitem\" href=\"#\">Learn</a>\n    </li>\n    <li class=\"nav-list search\">\n      <a role=\"menuitem\" href=\"#\">search</a>\n    </li>\n  </ul>\n</div>\n\n";
 
 /***/ },
-/* 64 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _templatesProjectMainHtml = __webpack_require__(65);
+	var _templatesProjectMainHtml = __webpack_require__(64);
 	
 	var _templatesProjectMainHtml2 = _interopRequireDefault(_templatesProjectMainHtml);
 	
-	var _componentsProjectLearnMenu = __webpack_require__(66);
+	var _componentsProjectLearnMenu = __webpack_require__(65);
 	
 	var _componentsProjectLearnMenu2 = _interopRequireDefault(_componentsProjectLearnMenu);
 	
 	var $ = __webpack_require__(1);
 	window.jQuery = window.$ = $;
-	__webpack_require__(14);
+	__webpack_require__(13);
 	
 	var app = {
 	  init: function init() {
@@ -21502,20 +21154,20 @@
 	module.exports = app;
 
 /***/ },
-/* 65 */
+/* 64 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"container-fluid project-container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <ul class=\"learn-menu\">\n        <li class=\"learn-nav crocodile\">\n          <a href=\"#\"><img src=\"/images/crocodile-facing-right.svg\"></a>\n        </li>\n        <li class=\"learn-nav lizard\">\n          <a href=\"#\"><img src=\"/images/curved-lizard.svg\"></a>\n        </li>\n        <li class=\"learn-nav frog\">\n          <img src=\"/images/icon.svg\">  \n        </li>\n        <li class=\"learn-nav turtle\">\n          <img src=\"/images/sea-turtle.svg\">\n        </li>\n        <li class=\"learn-nav snake\">\n          <img src=\"/images/snake-facing-right.svg\">\n        </li>\n      </ul>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-6\">\n    \t<div id=\"home-carousel\" class=\"carousel slide\" data-ride=\"carousel\">\n      <!-- Indicators -->\n      <ol class=\"carousel-indicators\">\n        <li data-target=\"#home-carousel\" data-slide-to=\"0\" class=\"active\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"1\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"2\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"3\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"4\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"5\"></li>\n      </ol>\n\n      <!-- Wrapper for slides -->\n      <div class=\"carousel-inner\" role=\"listbox\">\n        <div class=\"item active\">\n          <img src=\"/images/carousel/frogs/amused-frog.jpg\" alt=\"amused frog\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/turtles/red-sea-turtle.jpg\" alt=\"red-sea-turtle\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/lizards/blue-iguana.jpg\" alt=\"blue iguana\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/snakes/green-snake.jpg\" alt=\"snake coiled around tree branch\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/turtles/basking-turtle.jpg\" alt=\"basking turtle\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/frogs/red-eyed-frog.jpg\" alt=\"red eyed frog\">\n        </div>\n      </div>\n    </div>\n      <!-- Controls -->\n      <a class=\"left carousel-control\" href=\"#home-carousel\" role=\"button\" data-slide=\"prev\">\n        <span class=\"icon-prev\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Previous</span>\n      </a>\n      <a class=\"right carousel-control\" href=\"#home-carousel\" role=\"button\" data-slide=\"next\">\n        <span class=\"icon-next\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Next</span>\n      </a>\n    </div>\n    <div class=\"col-md-2 col-md-offset-3 sidebar\">\n    <h4 class=\"fun-fact\">Did you know...?</h4>\n      <p class=\"fun-fact-p\">A herpetologist is a scientist who studies reptiles and amphibians. The word \"herpetology\" comes from the Greek \"herpien\", which means \"to creep\"!</p>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 66 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _templatesProjectMainHtml = __webpack_require__(65);
+	var _templatesProjectMainHtml = __webpack_require__(64);
 	
 	var _templatesProjectMainHtml2 = _interopRequireDefault(_templatesProjectMainHtml);
 	
@@ -21523,8 +21175,8 @@
 	
 	// legacy loading for bootstrap
 	window.jQuery = window.$ = $;
-	__webpack_require__(14);
-	__webpack_require__(67);
+	__webpack_require__(13);
+	__webpack_require__(66);
 	
 	var app = {
 	  init: function init() {
@@ -21538,7 +21190,7 @@
 	module.exports = app;
 
 /***/ },
-/* 67 */
+/* 66 */
 /***/ function(module, exports) {
 
 	/*
@@ -21687,20 +21339,20 @@
 
 
 /***/ },
-/* 68 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _templatesProjectFooterHtml = __webpack_require__(69);
+	var _templatesProjectFooterHtml = __webpack_require__(68);
 	
 	var _templatesProjectFooterHtml2 = _interopRequireDefault(_templatesProjectFooterHtml);
 	
 	var $ = __webpack_require__(1);
 	window.jQuery = window.$ = $;
-	__webpack_require__(14);
+	__webpack_require__(13);
 	
 	var app = {
 	  init: function init() {
@@ -21713,13 +21365,13 @@
 	module.exports = app;
 
 /***/ },
-/* 69 */
+/* 68 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-md-10\">\n      <nav class=\"footer-nav\">\n        <ul>\n          <li class=\"todo-nav\">\n            <a role=\"menuitem\" href=\"/pages/todo.html\">Todo Application</a>\n          </li>\n          <li class=\"project-nav\">\n            <a role=\"menuitem\" href=\"/pages/projectHome.html\">My Project</a>\n          </li>\n          <li class=\"funny-squares-nav\">\n            <a role=\"menuitem\" href=\"/pages/funnySquares.html\">Funny Squares</a>\n          </li>\n          <li class=\"jS-timer-nav\">\n            <a role=\"menuitem\" href=\"/pages/timer.html\">Timer</a>\n          </li>\n          <li class=\"canvas-particles-nav\" >\n            <a role=\"menuitem\" href=\"/pages/formsBackbone.html\">Backbone Forms</a>\n          </li>\n        </ul>\n      </nav>\n    </div>\n  </div>\n</div>\n\n";
 
 /***/ },
-/* 70 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21786,7 +21438,7 @@
 	module.exports = app;
 
 /***/ },
-/* 71 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21801,11 +21453,11 @@
 	
 	var _backbone2 = _interopRequireDefault(_backbone);
 	
-	var _handlebars = __webpack_require__(28);
+	var _handlebars = __webpack_require__(27);
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _lscache = __webpack_require__(13);
+	var _lscache = __webpack_require__(71);
 	
 	var _lscache2 = _interopRequireDefault(_lscache);
 	
@@ -21823,7 +21475,7 @@
 	
 	// legacy loading for bootstrap
 	window.jQuery = window.$ = $;
-	__webpack_require__(14);
+	__webpack_require__(13);
 	
 	var accountModelConfigObject = {
 	  defaults: {
@@ -21903,6 +21555,362 @@
 	module.exports = accountControllerView;
 
 /***/ },
+/* 71 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
+	 * lscache library
+	 * Copyright (c) 2011, Pamela Fox
+	 *
+	 * Licensed under the Apache License, Version 2.0 (the "License");
+	 * you may not use this file except in compliance with the License.
+	 * You may obtain a copy of the License at
+	 *
+	 *       http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 * Unless required by applicable law or agreed to in writing, software
+	 * distributed under the License is distributed on an "AS IS" BASIS,
+	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 * See the License for the specific language governing permissions and
+	 * limitations under the License.
+	 */
+	
+	/* jshint undef:true, browser:true, node:true */
+	/* global define */
+	
+	(function (root, factory) {
+	    if (true) {
+	        // AMD. Register as an anonymous module.
+	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	    } else if (typeof module !== "undefined" && module.exports) {
+	        // CommonJS/Node module
+	        module.exports = factory();
+	    } else {
+	        // Browser globals
+	        root.lscache = factory();
+	    }
+	}(this, function () {
+	
+	  // Prefix for all lscache keys
+	  var CACHE_PREFIX = 'lscache-';
+	
+	  // Suffix for the key name on the expiration items in localStorage
+	  var CACHE_SUFFIX = '-cacheexpiration';
+	
+	  // expiration date radix (set to Base-36 for most space savings)
+	  var EXPIRY_RADIX = 10;
+	
+	  // time resolution in minutes
+	  var EXPIRY_UNITS = 60 * 1000;
+	
+	  // ECMAScript max Date (epoch + 1e8 days)
+	  var MAX_DATE = Math.floor(8.64e15/EXPIRY_UNITS);
+	
+	  var cachedStorage;
+	  var cachedJSON;
+	  var cacheBucket = '';
+	  var warnings = false;
+	
+	  // Determines if localStorage is supported in the browser;
+	  // result is cached for better performance instead of being run each time.
+	  // Feature detection is based on how Modernizr does it;
+	  // it's not straightforward due to FF4 issues.
+	  // It's not run at parse-time as it takes 200ms in Android.
+	  function supportsStorage() {
+	    var key = '__lscachetest__';
+	    var value = key;
+	
+	    if (cachedStorage !== undefined) {
+	      return cachedStorage;
+	    }
+	
+	    try {
+	      setItem(key, value);
+	      removeItem(key);
+	      cachedStorage = true;
+	    } catch (e) {
+	        if (isOutOfSpace(e)) {    // If we hit the limit, then it means we have support, 
+	            cachedStorage = true; // just maxed it out and even the set test failed.
+	        } else {
+	            cachedStorage = false;
+	        }
+	    }
+	    return cachedStorage;
+	  }
+	
+	  // Check to set if the error is us dealing with being out of space
+	  function isOutOfSpace(e) {
+	    if (e && e.name === 'QUOTA_EXCEEDED_ERR' || 
+	            e.name === 'NS_ERROR_DOM_QUOTA_REACHED' || 
+	            e.name === 'QuotaExceededError') {
+	        return true;
+	    }
+	    return false;
+	  }
+	
+	  // Determines if native JSON (de-)serialization is supported in the browser.
+	  function supportsJSON() {
+	    /*jshint eqnull:true */
+	    if (cachedJSON === undefined) {
+	      cachedJSON = (window.JSON != null);
+	    }
+	    return cachedJSON;
+	  }
+	
+	  /**
+	   * Returns the full string for the localStorage expiration item.
+	   * @param {String} key
+	   * @return {string}
+	   */
+	  function expirationKey(key) {
+	    return key + CACHE_SUFFIX;
+	  }
+	
+	  /**
+	   * Returns the number of minutes since the epoch.
+	   * @return {number}
+	   */
+	  function currentTime() {
+	    return Math.floor((new Date().getTime())/EXPIRY_UNITS);
+	  }
+	
+	  /**
+	   * Wrapper functions for localStorage methods
+	   */
+	
+	  function getItem(key) {
+	    return localStorage.getItem(CACHE_PREFIX + cacheBucket + key);
+	  }
+	
+	  function setItem(key, value) {
+	    // Fix for iPad issue - sometimes throws QUOTA_EXCEEDED_ERR on setItem.
+	    localStorage.removeItem(CACHE_PREFIX + cacheBucket + key);
+	    localStorage.setItem(CACHE_PREFIX + cacheBucket + key, value);
+	  }
+	
+	  function removeItem(key) {
+	    localStorage.removeItem(CACHE_PREFIX + cacheBucket + key);
+	  }
+	
+	  function eachKey(fn) {
+	    var prefixRegExp = new RegExp('^' + CACHE_PREFIX + cacheBucket + '(.*)');
+	    // Loop in reverse as removing items will change indices of tail
+	    for (var i = localStorage.length-1; i >= 0 ; --i) {
+	      var key = localStorage.key(i);
+	      key = key && key.match(prefixRegExp);
+	      key = key && key[1];
+	      if (key && key.indexOf(CACHE_SUFFIX) < 0) {
+	        fn(key, expirationKey(key));
+	      }
+	    }
+	  }
+	
+	  function flushItem(key) {
+	    var exprKey = expirationKey(key);
+	
+	    removeItem(key);
+	    removeItem(exprKey);
+	  }
+	
+	  function flushExpiredItem(key) {
+	    var exprKey = expirationKey(key);
+	    var expr = getItem(exprKey);
+	
+	    if (expr) {
+	      var expirationTime = parseInt(expr, EXPIRY_RADIX);
+	
+	      // Check if we should actually kick item out of storage
+	      if (currentTime() >= expirationTime) {
+	        removeItem(key);
+	        removeItem(exprKey);
+	        return true;
+	      }
+	    }
+	  }
+	
+	  function warn(message, err) {
+	    if (!warnings) return;
+	    if (!('console' in window) || typeof window.console.warn !== 'function') return;
+	    window.console.warn("lscache - " + message);
+	    if (err) window.console.warn("lscache - The error was: " + err.message);
+	  }
+	
+	  var lscache = {
+	    /**
+	     * Stores the value in localStorage. Expires after specified number of minutes.
+	     * @param {string} key
+	     * @param {Object|string} value
+	     * @param {number} time
+	     */
+	    set: function(key, value, time) {
+	      if (!supportsStorage()) return;
+	
+	      // If we don't get a string value, try to stringify
+	      // In future, localStorage may properly support storing non-strings
+	      // and this can be removed.
+	      if (typeof value !== 'string') {
+	        if (!supportsJSON()) return;
+	        try {
+	          value = JSON.stringify(value);
+	        } catch (e) {
+	          // Sometimes we can't stringify due to circular refs
+	          // in complex objects, so we won't bother storing then.
+	          return;
+	        }
+	      }
+	
+	      try {
+	        setItem(key, value);
+	      } catch (e) {
+	        if (isOutOfSpace(e)) {
+	          // If we exceeded the quota, then we will sort
+	          // by the expire time, and then remove the N oldest
+	          var storedKeys = [];
+	          var storedKey;
+	          eachKey(function(key, exprKey) {
+	            var expiration = getItem(exprKey);
+	            if (expiration) {
+	              expiration = parseInt(expiration, EXPIRY_RADIX);
+	            } else {
+	              // TODO: Store date added for non-expiring items for smarter removal
+	              expiration = MAX_DATE;
+	            }
+	            storedKeys.push({
+	              key: key,
+	              size: (getItem(key) || '').length,
+	              expiration: expiration
+	            });
+	          });
+	          // Sorts the keys with oldest expiration time last
+	          storedKeys.sort(function(a, b) { return (b.expiration-a.expiration); });
+	
+	          var targetSize = (value||'').length;
+	          while (storedKeys.length && targetSize > 0) {
+	            storedKey = storedKeys.pop();
+	            warn("Cache is full, removing item with key '" + key + "'");
+	            flushItem(storedKey.key);
+	            targetSize -= storedKey.size;
+	          }
+	          try {
+	            setItem(key, value);
+	          } catch (e) {
+	            // value may be larger than total quota
+	            warn("Could not add item with key '" + key + "', perhaps it's too big?", e);
+	            return;
+	          }
+	        } else {
+	          // If it was some other error, just give up.
+	          warn("Could not add item with key '" + key + "'", e);
+	          return;
+	        }
+	      }
+	
+	      // If a time is specified, store expiration info in localStorage
+	      if (time) {
+	        setItem(expirationKey(key), (currentTime() + time).toString(EXPIRY_RADIX));
+	      } else {
+	        // In case they previously set a time, remove that info from localStorage.
+	        removeItem(expirationKey(key));
+	      }
+	    },
+	
+	    /**
+	     * Retrieves specified value from localStorage, if not expired.
+	     * @param {string} key
+	     * @return {string|Object}
+	     */
+	    get: function(key) {
+	      if (!supportsStorage()) return null;
+	
+	      // Return the de-serialized item if not expired
+	      if (flushExpiredItem(key)) { return null; }
+	
+	      // Tries to de-serialize stored value if its an object, and returns the normal value otherwise.
+	      var value = getItem(key);
+	      if (!value || !supportsJSON()) {
+	        return value;
+	      }
+	
+	      try {
+	        // We can't tell if its JSON or a string, so we try to parse
+	        return JSON.parse(value);
+	      } catch (e) {
+	        // If we can't parse, it's probably because it isn't an object
+	        return value;
+	      }
+	    },
+	
+	    /**
+	     * Removes a value from localStorage.
+	     * Equivalent to 'delete' in memcache, but that's a keyword in JS.
+	     * @param {string} key
+	     */
+	    remove: function(key) {
+	      if (!supportsStorage()) return;
+	
+	      flushItem(key);
+	    },
+	
+	    /**
+	     * Returns whether local storage is supported.
+	     * Currently exposed for testing purposes.
+	     * @return {boolean}
+	     */
+	    supported: function() {
+	      return supportsStorage();
+	    },
+	
+	    /**
+	     * Flushes all lscache items and expiry markers without affecting rest of localStorage
+	     */
+	    flush: function() {
+	      if (!supportsStorage()) return;
+	
+	      eachKey(function(key) {
+	        flushItem(key);
+	      });
+	    },
+	
+	    /**
+	     * Flushes expired lscache items and expiry markers without affecting rest of localStorage
+	     */
+	    flushExpired: function() {
+	      if (!supportsStorage()) return;
+	
+	      eachKey(function(key) {
+	        flushExpiredItem(key);
+	      });
+	    },
+	
+	    /**
+	     * Appends CACHE_PREFIX so lscache will partition data in to different buckets.
+	     * @param {string} bucket
+	     */
+	    setBucket: function(bucket) {
+	      cacheBucket = bucket;
+	    },
+	
+	    /**
+	     * Resets the string being appended to CACHE_PREFIX so lscache will use the default storage behavior.
+	     */
+	    resetBucket: function() {
+	      cacheBucket = '';
+	    },
+	
+	    /**
+	     * Sets whether to display warnings when an item is removed from the cache or not.
+	     */
+	    enableWarnings: function(enabled) {
+	      warnings = enabled;
+	    }
+	  };
+	
+	  // Return the module
+	  return lscache;
+	}));
+
+
+/***/ },
 /* 72 */
 /***/ function(module, exports) {
 
@@ -21926,7 +21934,7 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _handlebars = __webpack_require__(28);
+	var _handlebars = __webpack_require__(27);
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
@@ -21991,6 +21999,12 @@
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"photo\">\n  <img src=\"http://farm{{farm}}.static.flickr.com/{{server}}/{{id}}_{{secret}}_b.jpg\">\n</div>";
+
+/***/ },
+/* 76 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"main-main\">\n   \n</div>";
 
 /***/ }
 /******/ ]);

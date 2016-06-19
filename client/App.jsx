@@ -36,8 +36,11 @@ $(function() {
     case '/pages/photoSearch.html':
       photoSearch.init(); 
     break;
-    default: break;
+    case '/pages/books.html':
+      // bookClub.init();
+    break;
 
+    default: break;
   }
 
   // Fancy Console Message for Developers

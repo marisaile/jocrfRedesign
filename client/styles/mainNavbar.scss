@@ -1,9 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Carme);
 
+.main-nav-container {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 75px;
+  width: 100%;
+  background-color: #FFFA26;
+}
 .main-nav-container h1 {
   position: absolute;
+  display: block;
   top: 15px;
-  left: 15px;
+  left: 30px;
 }
 .main-nav-container ul {
   position: absolute;
@@ -12,15 +22,14 @@
   right: 30px;
 }
 .main-nav-container li {
-  color: #0D1940;
+  color: #4C00B2;
   display: inline-block;
   margin-left: 20px;
   margin-right: 20px;
   list-style-image: none;
 }
-
 .main-nav-container a {
   font-family: 'Carme', sans-serif;
   text-decoration: none;
-  color: #FFF0DD;
+  color: #4C00B2;
 }

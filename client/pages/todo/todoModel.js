@@ -7,7 +7,6 @@ require('bootstrap');
 
 import _ from 'underscore';
 import Backbone from 'backbone';
-import lscache from 'lscache';
 
 // Model
 var TodoModel = Backbone.Model.extend({
