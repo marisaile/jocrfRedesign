@@ -37,7 +37,7 @@ $(function() {
       photoSearch.init(); 
     break;
     case '/pages/books.html':
-      // bookClub.init();
+      BookListView.render();
     break;
 
     default: break;
