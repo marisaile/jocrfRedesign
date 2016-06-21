@@ -2,7 +2,7 @@
 import $ from 'jquery';
 import 'styles/main.scss';
 import mainPage from 'components/mainPage';
-import TodoControllerView from 'pages/todo/todoController';
+import TodoControllerView from 'pages/todoReact/todoController';
 import funnySquares from 'pages/funnySquares';
 import project from 'pages/project';
 import timer from 'pages/timer';
@@ -37,7 +37,7 @@ $(function() {
       photoSearch.init(); 
     break;
     case '/pages/books.html':
-      BookListView.render();
+      // BookListView.render();
     break;
 
     default: break;

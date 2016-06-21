@@ -10,10 +10,9 @@ import Handlebars from 'handlebars';
 import lscache from 'lscache';
 import newBookTemplate from 'templates/newBookForm.html';
 import bookListTemplate from 'templates/bookList.html';
-
+import booksSignin from 'templates/booksSignin.html';
 
 // Model 
-
 var BookModel = Backbone.Model.expand ({
   defaults: {
     books: []
@@ -46,12 +45,21 @@ var BookModel = Backbone.Model.expand ({
     });
     return data;
   },
+  removeFromList: function(){
+
+  },
+  addBook: function(){
+
+  },
+  addFriend: function(){
+    
+  }
 });
 var bookModel = new BookModel();
 
 // Controller
 var BookController = Backbone.View.extend ({
-  tagName: tr,
+  el: '.books-view-container',
   model: bookModel,
   events: {
     'click .btn-add': 'addBook'
@@ -61,23 +69,35 @@ var BookController = Backbone.View.extend ({
   },
   render: function(){
     var books = this.model.get('books');
-    var $tr = this.$el.find('tr');
+    var $el = this.$el.find('tr');
     $tr.html('');
-    books.map(function(book){
+    var bookListHtml = books.map(function(book){
       var view = new BookListView(book);
-      $tr.append(view)
-    })
+      return view;
+    });
+    $tr.append(bookListHtml.join(''));
+  },
+  addNewBook: function(){
+    var newBookView = new NewBookView();
+    this.$el.find('books-view-container').html(newBookView.$el);
+  },
+  removeFromList: function(){
+    // get id of closed item 
+    // splice item
+    // send to model
+  },
+  sortListBy: function(){
+
   },
   addBook: function(){
-
+    // send book data to model
+    // switch to list view with new book data added to a new row
   }
 });
 
-
 // Views
-
 var BookListView = Backbone.View.extend ({
-  el:  className: ''
+  el: 'books-view-container',
   events: {
   	'click .btn-add-book': 'addNewBook',
     'click .btn-read': 'removeFromList',
@@ -88,16 +108,16 @@ var BookListView = Backbone.View.extend ({
   },
   template: Handlebars.compile(bookListTemplate);
   initialize: function(){
-
+    this.render();
   },
   render: function(){
-    this.$el.html(this.template(this.data));
+    var renderedTemplate = this.template({})
+    this.$el.html(renderedTemplate);
   }
-  addNewBook: function(){
-    // switch to new book view
-  },
   removeFromList: function(){
-    // remove book from list
+    BookController.removeItem(this.data.id);
+    // get id of item to be removed
+    // send id to controller
   },
   sortListBy: function(){
     // sort list by title, author, genre, or recommender
@@ -105,25 +125,44 @@ var BookListView = Backbone.View.extend ({
 });
 
 
-var NewBookView = Backbone.Model.extend ({
-  el: ,
+var NewBookView = Backbone.Model.extend({
+  el: '.books-view-container',
   events: {
-    'click .btn-add'; 'addBook';
+    'click .btn-add': 'addBook'
   }, 
-  template: Handlebars.compile(newBookTemplate);
+  template: Handlebars.compile(newBookTemplate),
   initialize: function(){
     this.render();
   },
   render: function(){
-    this.$el.html(this.template());
+    var renderedTemplate = this.template({});
+    this.$el.html(renderedTemplate);
   },
   addBook: function(){
+    
+    // get book values out of form
+    // send values to the controller
     // add book to list and switch to list view
   }
 });
 
-module.exports = BookListView;
-
+// var FriendsSigninView = Backbone.model.extend({
+//   el: '.books-view-container',
+//   events: {
+//     'click .btn-friends-signin': 'addFriend'
+//   },
+//   template: Handlebars.compile(booksSignin),
+//   initialize: function(){
+//     this.render();
+//   },
+//   render: function(){
+//     var renderedTemplate = this.template({});
+//     this.$el.html(renderedTemplate);
+//   },
+//   addFriend: function(){
+//     // add friend 
+//   }
+// });
 
 
 
