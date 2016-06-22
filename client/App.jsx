@@ -8,6 +8,7 @@ import project from 'pages/project';
 import timer from 'pages/timer';
 import formsBackbone from 'pages/formsBackbone';
 import photoSearch from 'pages/photoSearch';
+import BookListView from 'pages/books';
 
 $(function() {
 
@@ -37,7 +38,7 @@ $(function() {
       photoSearch.init(); 
     break;
     case '/pages/books.html':
-      // BookListView.render();
+      books.render();
     break;
 
     default: break;

@@ -82,6 +82,10 @@
 	
 	var _pagesPhotoSearch2 = _interopRequireDefault(_pagesPhotoSearch);
 	
+	var _pagesBooks = __webpack_require__(234);
+	
+	var _pagesBooks2 = _interopRequireDefault(_pagesBooks);
+	
 	(0, _jquery2['default'])(function () {
 	
 	  _componentsMainPage2['default'].init();
@@ -109,7 +113,7 @@
 	      _pagesPhotoSearch2['default'].init();
 	      break;
 	    case '/pages/books.html':
-	      // BookListView.render();
+	      books.render();
 	      break;
 	
 	    default:
@@ -41600,6 +41604,221 @@
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"photo\">\n  <img src=\"http://farm{{farm}}.static.flickr.com/{{server}}/{{id}}_{{secret}}_b.jpg\">\n</div>";
+
+/***/ },
+/* 234 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _underscore = __webpack_require__(170);
+	
+	var _underscore2 = _interopRequireDefault(_underscore);
+	
+	var _backbone = __webpack_require__(169);
+	
+	var _backbone2 = _interopRequireDefault(_backbone);
+	
+	var _handlebars = __webpack_require__(187);
+	
+	var _handlebars2 = _interopRequireDefault(_handlebars);
+	
+	var _lscache = __webpack_require__(229);
+	
+	var _lscache2 = _interopRequireDefault(_lscache);
+	
+	var _templatesBooksNewBookFormHtml = __webpack_require__(235);
+	
+	var _templatesBooksNewBookFormHtml2 = _interopRequireDefault(_templatesBooksNewBookFormHtml);
+	
+	var _templatesBooksBookListHtml = __webpack_require__(236);
+	
+	var _templatesBooksBookListHtml2 = _interopRequireDefault(_templatesBooksBookListHtml);
+	
+	// import booksSignin from 'templates/books/booksSignin.html';
+	
+	// Model
+	var $ = __webpack_require__(1);
+	
+	// legacy loading for bootstrap
+	window.jQuery = window.$ = $;
+	__webpack_require__(172);
+	
+	var BookModel = _backbone2['default'].Model.extend({
+	  defaults: {
+	    books: []
+	  },
+	  bookSchema: {
+	    id: 0,
+	    title: '',
+	    author: '',
+	    recommender: '',
+	    genre: ''
+	  },
+	  fetch: function fetch() {
+	    var data = _lscache2['default'].get('books');
+	    data = this.applySchema(data);
+	    this.set('books', data);
+	  },
+	  save: function save() {
+	    var data = this.get('books');
+	    this.applySchema(data);
+	    _lscache2['default'].set('books', data);
+	  },
+	  applySchema: function applySchema(books) {
+	    var data = books;
+	    var schema = this.bookSchema;
+	    // shorthand 'if':
+	    data = _underscore2['default'].isArray(books) ? data : [];
+	    data = data.map(function (book, index) {
+	      book.id = index;
+	      return _underscore2['default'].defaults(book, schema);
+	    });
+	    return data;
+	  },
+	  removeFromList: function removeFromList() {
+	    var books = this.get('books');
+	    books.splice(id, 1);
+	    this.save();
+	  },
+	  addBook: function addBook() {
+	    var newBook = { title: newBook };
+	    var books = this.get('books');
+	    books.push(newBook);
+	    this.set('books', books);
+	    this.save();
+	  }
+	  // addFriend: function(){
+	
+	  // }
+	});
+	var bookModel = new BookModel();
+	
+	// Controller
+	var BookController = _backbone2['default'].View.extend({
+	  el: '.books-main',
+	  model: bookModel,
+	  events: {
+	    'click .btn-add-book': 'addNewBook'
+	  },
+	  initialize: function initialize() {
+	    this.model.fetch();
+	  },
+	  render: function render() {
+	    var bookListView = new BookListView();
+	    this.$el.find('.books-view-container').html(bookListView.$el);
+	  },
+	  addNewBook: function addNewBook() {
+	    var newBookView = new NewBookView();
+	    this.$el.find('.books-view-container').html(newBookView.$el);
+	  },
+	  removeFromList: function removeFromList(id) {
+	    this.model.RemoveFromList(id);
+	    this.render();
+	  },
+	  addBook: function addBook(newBook) {
+	    debugger;
+	    var books = this.model.get('books');
+	    var $table = this.$el.find('table');
+	    var bookListHtml = books.map(function (book) {
+	      var view = new BookListView(book);
+	      return view;
+	    });
+	    $table.append(bookListHtml.join(''));
+	    this.model.addBook(newBook);
+	    this.render();
+	  }
+	});
+	var bookController = new BookController();
+	
+	// Views
+	var BookListView = _backbone2['default'].View.extend({
+	  el: '.books-main',
+	  model: bookModel,
+	  events: {
+	
+	    // 'click .btn-read': 'removeFromList',
+	    // 'click .btn-sort-title': 'sortListBy',
+	    // 'click .btn-sort-author': 'sortListBy',
+	    // 'click .btn-sort-recommender': 'sortListBy',
+	    // 'click .btn-sort-genre': 'sortListBy'
+	  },
+	  template: _handlebars2['default'].compile(_templatesBooksBookListHtml2['default']),
+	  initialize: function initialize() {
+	    this.render();
+	  },
+	  render: function render() {
+	    var renderedTemplate = this.template({});
+	    this.$el.html(renderedTemplate);
+	  },
+	  addNewBook: function addNewBook() {
+	    bookController.addNewBook();
+	  }
+	  // removeFromList: function(){
+	  //   // get id of item to be removed
+	  //   // send id to controller
+	  // },
+	  // sortListBy: function(){
+	  //   // sort list by title, author, genre, or recommender
+	  // }
+	});
+	
+	var NewBookView = _backbone2['default'].View.extend({
+	  el: '.books-main',
+	  events: {
+	    'click .btn-add': 'addBook'
+	  },
+	  template: _handlebars2['default'].compile(_templatesBooksNewBookFormHtml2['default']),
+	  initialize: function initialize() {
+	    this.render();
+	  },
+	  render: function render() {
+	    this.$el.html(this.template());
+	  },
+	  addBook: function addBook() {
+	    // get book values out of form
+	    var newTitle = this.$el.find('#new-title').val();
+	    var newAuthor = this.$el.find('#new-author').val();
+	    var newRecommender = this.$el.find('#new-recommender').val();
+	    var newGenre = this.$el.find('#new-genre').val();
+	    var newBook = [newTitle, newAuthor, newRecommender, newGenre];
+	    bookController.addBook(newBook);
+	    // send values to the controller
+	    // add book to list and switch to list view
+	  }
+	});
+	var newBookView = new NewBookView();
+	// var FriendsSigninView = Backbone.model.extend({
+	//   el: '.books-view-container',
+	//   events: {
+	//     'click .btn-friends-signin': 'addFriend'
+	//   },
+	//   template: Handlebars.compile(booksSignin),
+	//   initialize: function(){
+	//     this.render();
+	//   },
+	//   render: function(){
+	//     var renderedTemplate = this.template({});
+	//     this.$el.html(renderedTemplate);
+	//   },
+	//   addFriend: function(){
+	//     // add friend
+	//   }
+	// });
+
+/***/ },
+/* 235 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"new-book-container\">\n  <form>\n    <div class=\"form-group\">\n      <label for=\"new-title\">Book Title</label>\n      <input type=\"text\" class=\"form-control\" id=\"new-title\" placeholder=\"Title\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"new-author\">Author</label>\n      <input type=\"text\" class=\"form-control\" id=\"new-author\" placeholder=\"Author\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"new-recommender\">Who'd you hear about it from?</label>\n      <input type=\"text\" class=\"form-control\" id=\"new-recommender\" placeholder=\"Recommender's name\">\n    </div>\n    <!-- <div class=\"form-group\">\n      <label for=\"new-synopsis\">What it's about?</label>\n      <textarea class=\"form-control\" id=\"new-synopsis\" rows=\"3\" placeholder=\"Synopsis\"></textarea>\n    </div> -->\n    <div class=\"form-group\">\n      <label for=\"new-genre-fiction\">Fiction</label>\n      <select multiple class=\"form-control\" id=\"new-genre\">\n        <option>YA</option>\n        <option>SciFi</option>\n        <option>Historical</option>\n        <option>Short Stories</option>\n        <option>Graphic Novel</option>\n        <option>Crime</option>\n        <option>misc. fiction</option>\n      </select>\n    </div>\n    <!-- <div class=\"form-group\">\n      <label for=\"new-genre-nonfiction\">Nonfiction</label>\n      <select multiple class=\"form-control\" id=\"new-genre-nonfiction\">\n        <option>Memoir/Autobiography</option>\n        <option>History/Biography</option>\n        <option>Science</option>\n        <option>Psychology</option>\n        <option>Essays</option>\n        <option>Essays(humorous)</option>\n        <option>misc. nonfiction</option>\n      </select>\n    </div> -->\n  </form>\n  <button class=\"btn btn-default btn-add\">Add</button>\n</div>\n";
+
+/***/ },
+/* 236 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"book-list-container\">\n  <button class=\"btn btn-default btn-add-book\">Add a book!</button>\n  <div class=\"table-responsive\"> \n    <table class=\"table table-hover\">\n      <tr>\n        <th>Title<span class=\"caret btn-sort-title\"></span></th>\n        <th>Author<span class=\"caret btn-sort-byz-author\"></span></th>\n        <th>Recommender<span class=\"caret btn-sort-by-recommender\"></span></th>\n        <th>Genre<span class=\"caret btn-sort-by-genre\"></span></th>\n        <th>Read</th>\n      </tr>\n      <tr>\n        <td>{{title}}</td>\n        <td>{{author}}</td>\n        <td>{{recommender}}</td>\n        <td>{{genre}}</td>\n        <td><button type=\"button\" class=\"close btn-read\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button></td>\n      </tr>\n    </table>\n  </div>\n</div>";
 
 /***/ }
 /******/ ]);
