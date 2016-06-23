@@ -50,10 +50,10 @@ var BookModel = Backbone.Model.extend({
     books.splice(id, 1);
     this.save();
   },
-  addBook: function(){
-    var newBook = {title: newBook};
+  addBook: function(newBook){
+    var book = {title: newBook};
     var books = this.get('books');
-    books.push(newBook);
+    books.push(book);
     this.set('books', books);
     this.save();
   }
@@ -68,12 +68,12 @@ var BookController = Backbone.View.extend({
   el: '.books-main',
   model: bookModel,
   events: {
-    'click .btn-add-book': 'addNewBook',
+    'click .btn-add-book': 'addNewBook'
   },
   initialize: function(){
     this.model.fetch();
   },
-  render: function(){
+  render: function(){ 
     var bookListView = new BookListView();
     this.$el.find('.books-view-container').html(bookListView.$el);
   },
@@ -85,16 +85,15 @@ var BookController = Backbone.View.extend({
     this.model.RemoveFromList(id);
     this.render();
   },
-  addBook: function(newBook){
-    debugger;
+  addBook: function(){
     var books = this.model.get('books');
     var $table = this.$el.find('table');
     var bookListHtml = books.map(function(book){
-    var view = new BookListView(book);
+    var view = new BookListView();
       return view;
     });
     $table.append(bookListHtml.join(''));
-    this.model.addBook(newBook);
+    this.model.addBook();
     this.render();
   }
 });
@@ -143,20 +142,21 @@ var NewBookView = Backbone.View.extend({
     this.render();
   },
   render: function(){
-    this.$el.html(this.template());
+    this.$el.html(this.template({}));
   },
   addBook: function(){// get book values out of form
     var newTitle = this.$el.find('#new-title').val();
     var newAuthor = this.$el.find('#new-author').val();
     var newRecommender = this.$el.find('#new-recommender').val();
     var newGenre = this.$el.find('#new-genre').val();
-    var newBook = [newTitle, newAuthor, newRecommender, newGenre];
+    var newBook = ['newTitle', 'newAuthor', 'newRecommender', 'newGenre'];
     bookController.addBook(newBook);
     // send values to the controller
     // add book to list and switch to list view
   }
 });
-var newBookView = new NewBookView();
+
+module.exports = new BookListView();
 // var FriendsSigninView = Backbone.model.extend({
 //   el: '.books-view-container',
 //   events: {
@@ -173,4 +173,4 @@ var newBookView = new NewBookView();
 //   addFriend: function(){
 //     // add friend 
 //   }
-// });
+//});
