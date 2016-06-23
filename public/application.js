@@ -66,23 +66,21 @@
 	
 	var _pagesFunnySquares2 = _interopRequireDefault(_pagesFunnySquares);
 	
-	var _pagesProject = __webpack_require__(205);
+	// import project from 'pages/project';
 	
-	var _pagesProject2 = _interopRequireDefault(_pagesProject);
-	
-	var _pagesTimer = __webpack_require__(227);
+	var _pagesTimer = __webpack_require__(205);
 	
 	var _pagesTimer2 = _interopRequireDefault(_pagesTimer);
 	
-	var _pagesFormsBackbone = __webpack_require__(228);
+	var _pagesFormsBackbone = __webpack_require__(206);
 	
 	var _pagesFormsBackbone2 = _interopRequireDefault(_pagesFormsBackbone);
 	
-	var _pagesPhotoSearch = __webpack_require__(232);
+	var _pagesPhotoSearch = __webpack_require__(223);
 	
 	var _pagesPhotoSearch2 = _interopRequireDefault(_pagesPhotoSearch);
 	
-	var _pagesBooks = __webpack_require__(234);
+	var _pagesBooks = __webpack_require__(225);
 	
 	var _pagesBooks2 = _interopRequireDefault(_pagesBooks);
 	
@@ -100,9 +98,9 @@
 	    case '/pages/funnySquares.html':
 	      _pagesFunnySquares2['default'].init();
 	      break;
-	    case '/pages/projectHome.html':
-	      _pagesProject2['default'].init();
-	      break;
+	    // case '/pages/projectHome.html':
+	    //   project.init();
+	    // break;
 	    case '/pages/timer.html':
 	      _pagesTimer2['default'].init();
 	      break;
@@ -38265,28 +38263,63 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _componentsProjectHeader = __webpack_require__(206);
+	var _jquery = __webpack_require__(1);
 	
-	var _componentsProjectHeader2 = _interopRequireDefault(_componentsProjectHeader);
-	
-	var _componentsProjectMain = __webpack_require__(221);
-	
-	var _componentsProjectMain2 = _interopRequireDefault(_componentsProjectMain);
-	
-	var _componentsProjectFooter = __webpack_require__(225);
-	
-	var _componentsProjectFooter2 = _interopRequireDefault(_componentsProjectFooter);
+	var _jquery2 = _interopRequireDefault(_jquery);
 	
 	var app = {
 	  init: function init() {
 	    app.render();
 	  },
 	  render: function render() {
-	    _componentsProjectHeader2['default'].init();
-	    _componentsProjectMain2['default'].init();
-	    _componentsProjectFooter2['default'].init();
+	    var startTime;
+	    var interval;
+	    var endTime;
+	    var timeDifference;
+	    var splitTime;
+	    var hundredths;
+	    var seconds;
+	    var minutes;
+	    var updateTimer = function updateTimer() {
+	      endTime = new Date();
+	      timeDifference = (endTime - startTime) / 1000;
+	      hundredths = Math.floor(timeDifference * 10) % 100;
+	      seconds = Math.floor(timeDifference % 60);
+	      minutes = Math.floor(timeDifference / 60);
+	      if (hundredths < 10) {
+	        hundredths = '0' + hundredths;
+	      }
+	      if (seconds < 10) {
+	        seconds = '0' + seconds; // converting from a number to a string
+	      }
+	      if (minutes < 10) {
+	        minutes = '0' + minutes; // converting to a string
+	      }
+	      (0, _jquery2['default'])('.counter').html(minutes + ':' + seconds + '.' + hundredths);
+	    };
+	    var startTimer = function startTimer() {
+	      startTime = new Date();
+	      interval = setInterval(updateTimer, 100);
+	    };
+	    (0, _jquery2['default'])('.timer-container .start-button').on('click', startTimer);
+	    var splitTimer = function splitTimer() {
+	      splitTime = (0, _jquery2['default'])('.timer-container .split-time').append('<br />' + minutes + ':' + seconds + '.' + hundredths);
+	      var lapTime = timeDifference - splitTime;
+	      (0, _jquery2['default'])('.timer-container .lap-time').append('<br />' + lapTime);
+	    };
+	    (0, _jquery2['default'])('.timer-container .split-button').on('click', splitTimer);
+	    var resetTimer = function resetTimer() {
+	      (0, _jquery2['default'])('.counter').html('00' + ':' + '00' + '.' + '00');
+	      (0, _jquery2['default'])('.timer-container .split-time').html('');
+	    };
+	    (0, _jquery2['default'])('.timer-container .reset-button').on('click', resetTimer);
+	    var stopTimer = function stopTimer() {
+	      interval = clearInterval(interval);
+	    };
+	    (0, _jquery2['default'])('.timer-container .stop-button').on('click', stopTimer);
 	  }
 	};
+	
 	module.exports = app;
 
 /***/ },
@@ -38297,37 +38330,488 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _templatesProjectNavMenuHtml = __webpack_require__(207);
+	var _underscore = __webpack_require__(170);
 	
-	var _templatesProjectNavMenuHtml2 = _interopRequireDefault(_templatesProjectNavMenuHtml);
+	var _underscore2 = _interopRequireDefault(_underscore);
+	
+	var _backbone = __webpack_require__(169);
+	
+	var _backbone2 = _interopRequireDefault(_backbone);
+	
+	var _handlebars = __webpack_require__(174);
+	
+	var _handlebars2 = _interopRequireDefault(_handlebars);
+	
+	var _lscache = __webpack_require__(207);
+	
+	var _lscache2 = _interopRequireDefault(_lscache);
+	
+	var _templatesAccountListHtml = __webpack_require__(208);
+	
+	var _templatesAccountListHtml2 = _interopRequireDefault(_templatesAccountListHtml);
+	
+	var _templatesCreateAccountHtml = __webpack_require__(209);
+	
+	var _templatesCreateAccountHtml2 = _interopRequireDefault(_templatesCreateAccountHtml);
+	
+	// Model
 	
 	var $ = __webpack_require__(1);
-	window.jQuery = window.$ = $;
-	__webpack_require__(208);
 	
-	var app = {
-	  init: function init() {
-	    app.render();
+	// legacy loading for bootstrap
+	window.jQuery = window.$ = $;
+	__webpack_require__(210);
+	
+	var accountModelConfigObject = {
+	  defaults: {
+	    accounts: []
 	  },
-	  render: function render() {
-	    $('.project-header').append(_templatesProjectNavMenuHtml2['default']);
+	  save: function save() {
+	    var data = this.get('accounts'); // returns empty array first time around
+	    _lscache2['default'].set('accounts', data);
+	  },
+	  fetch: function fetch() {
+	    var data = _lscache2['default'].get('accounts');
+	    data = data || [];
+	    this.set('accounts', data);
 	  }
 	};
-	module.exports = app;
+	var AccountModel = _backbone2['default'].Model.extend(accountModelConfigObject);
+	var accountModel = new AccountModel();
+	
+	// Controller
+	var controllerConfigObject = {
+	  el: '.page-container',
+	  model: accountModel,
+	  events: {
+	    'click .btn-create': 'createNewAccount'
+	  },
+	  initialize: function initialize() {
+	    this.model.fetch();
+	  },
+	  render: function render() {
+	    var listView = new ListView();
+	    this.$el.find('.view-container').html(listView.$el);
+	  },
+	  createNewAccount: function createNewAccount() {
+	    var createView = new CreateView();
+	    this.$el.find('.view-container').html(createView.$el);
+	  }
+	};
+	var AccountControllerView = _backbone2['default'].View.extend(controllerConfigObject);
+	
+	// Views
+	
+	var listViewConfig = {
+	  tagName: 'div',
+	  events: {},
+	  template: _handlebars2['default'].compile(_templatesAccountListHtml2['default']),
+	  initialize: function initialize() {
+	    this.render();
+	  },
+	  render: function render() {
+	    var renderedTemplate = this.template({});
+	    this.$el.html(renderedTemplate);
+	  }
+	};
+	var ListView = _backbone2['default'].View.extend(listViewConfig);
+	
+	var createViewConfig = {
+	  tagName: 'div',
+	  events: {
+	    'click .btn-done': 'submitForm'
+	  },
+	  template: _handlebars2['default'].compile(_templatesCreateAccountHtml2['default']),
+	  initialize: function initialize() {
+	    this.render();
+	  },
+	  render: function render() {
+	    var renderedTemplate = this.template({});
+	    this.$el.html(renderedTemplate);
+	  },
+	  submitForm: function submitForm() {
+	    accountControllerView.render();
+	  }
+	};
+	var CreateView = _backbone2['default'].View.extend(createViewConfig);
+	
+	var accountControllerView = new AccountControllerView();
+	
+	module.exports = accountControllerView;
 
 /***/ },
 /* 207 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "<div class=\"header-container\">\n  <h1>Herpetarium</h1>\n  <ul class=\"nav-menu\">\n    <li class=\"nav-list blog\">\n      <a role=\"menuitem\" href=\"#\">Blog</a>\n    </li>\n    <li class=\"nav-list learn\">\n      <a role=\"menuitem\" href=\"#\">Learn</a>\n    </li>\n    <li class=\"nav-list search\">\n      <a role=\"menuitem\" href=\"#\">search</a>\n    </li>\n  </ul>\n</div>\n\n";
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
+	 * lscache library
+	 * Copyright (c) 2011, Pamela Fox
+	 *
+	 * Licensed under the Apache License, Version 2.0 (the "License");
+	 * you may not use this file except in compliance with the License.
+	 * You may obtain a copy of the License at
+	 *
+	 *       http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 * Unless required by applicable law or agreed to in writing, software
+	 * distributed under the License is distributed on an "AS IS" BASIS,
+	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 * See the License for the specific language governing permissions and
+	 * limitations under the License.
+	 */
+	
+	/* jshint undef:true, browser:true, node:true */
+	/* global define */
+	
+	(function (root, factory) {
+	    if (true) {
+	        // AMD. Register as an anonymous module.
+	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	    } else if (typeof module !== "undefined" && module.exports) {
+	        // CommonJS/Node module
+	        module.exports = factory();
+	    } else {
+	        // Browser globals
+	        root.lscache = factory();
+	    }
+	}(this, function () {
+	
+	  // Prefix for all lscache keys
+	  var CACHE_PREFIX = 'lscache-';
+	
+	  // Suffix for the key name on the expiration items in localStorage
+	  var CACHE_SUFFIX = '-cacheexpiration';
+	
+	  // expiration date radix (set to Base-36 for most space savings)
+	  var EXPIRY_RADIX = 10;
+	
+	  // time resolution in minutes
+	  var EXPIRY_UNITS = 60 * 1000;
+	
+	  // ECMAScript max Date (epoch + 1e8 days)
+	  var MAX_DATE = Math.floor(8.64e15/EXPIRY_UNITS);
+	
+	  var cachedStorage;
+	  var cachedJSON;
+	  var cacheBucket = '';
+	  var warnings = false;
+	
+	  // Determines if localStorage is supported in the browser;
+	  // result is cached for better performance instead of being run each time.
+	  // Feature detection is based on how Modernizr does it;
+	  // it's not straightforward due to FF4 issues.
+	  // It's not run at parse-time as it takes 200ms in Android.
+	  function supportsStorage() {
+	    var key = '__lscachetest__';
+	    var value = key;
+	
+	    if (cachedStorage !== undefined) {
+	      return cachedStorage;
+	    }
+	
+	    try {
+	      setItem(key, value);
+	      removeItem(key);
+	      cachedStorage = true;
+	    } catch (e) {
+	        if (isOutOfSpace(e)) {    // If we hit the limit, then it means we have support, 
+	            cachedStorage = true; // just maxed it out and even the set test failed.
+	        } else {
+	            cachedStorage = false;
+	        }
+	    }
+	    return cachedStorage;
+	  }
+	
+	  // Check to set if the error is us dealing with being out of space
+	  function isOutOfSpace(e) {
+	    if (e && e.name === 'QUOTA_EXCEEDED_ERR' || 
+	            e.name === 'NS_ERROR_DOM_QUOTA_REACHED' || 
+	            e.name === 'QuotaExceededError') {
+	        return true;
+	    }
+	    return false;
+	  }
+	
+	  // Determines if native JSON (de-)serialization is supported in the browser.
+	  function supportsJSON() {
+	    /*jshint eqnull:true */
+	    if (cachedJSON === undefined) {
+	      cachedJSON = (window.JSON != null);
+	    }
+	    return cachedJSON;
+	  }
+	
+	  /**
+	   * Returns the full string for the localStorage expiration item.
+	   * @param {String} key
+	   * @return {string}
+	   */
+	  function expirationKey(key) {
+	    return key + CACHE_SUFFIX;
+	  }
+	
+	  /**
+	   * Returns the number of minutes since the epoch.
+	   * @return {number}
+	   */
+	  function currentTime() {
+	    return Math.floor((new Date().getTime())/EXPIRY_UNITS);
+	  }
+	
+	  /**
+	   * Wrapper functions for localStorage methods
+	   */
+	
+	  function getItem(key) {
+	    return localStorage.getItem(CACHE_PREFIX + cacheBucket + key);
+	  }
+	
+	  function setItem(key, value) {
+	    // Fix for iPad issue - sometimes throws QUOTA_EXCEEDED_ERR on setItem.
+	    localStorage.removeItem(CACHE_PREFIX + cacheBucket + key);
+	    localStorage.setItem(CACHE_PREFIX + cacheBucket + key, value);
+	  }
+	
+	  function removeItem(key) {
+	    localStorage.removeItem(CACHE_PREFIX + cacheBucket + key);
+	  }
+	
+	  function eachKey(fn) {
+	    var prefixRegExp = new RegExp('^' + CACHE_PREFIX + cacheBucket + '(.*)');
+	    // Loop in reverse as removing items will change indices of tail
+	    for (var i = localStorage.length-1; i >= 0 ; --i) {
+	      var key = localStorage.key(i);
+	      key = key && key.match(prefixRegExp);
+	      key = key && key[1];
+	      if (key && key.indexOf(CACHE_SUFFIX) < 0) {
+	        fn(key, expirationKey(key));
+	      }
+	    }
+	  }
+	
+	  function flushItem(key) {
+	    var exprKey = expirationKey(key);
+	
+	    removeItem(key);
+	    removeItem(exprKey);
+	  }
+	
+	  function flushExpiredItem(key) {
+	    var exprKey = expirationKey(key);
+	    var expr = getItem(exprKey);
+	
+	    if (expr) {
+	      var expirationTime = parseInt(expr, EXPIRY_RADIX);
+	
+	      // Check if we should actually kick item out of storage
+	      if (currentTime() >= expirationTime) {
+	        removeItem(key);
+	        removeItem(exprKey);
+	        return true;
+	      }
+	    }
+	  }
+	
+	  function warn(message, err) {
+	    if (!warnings) return;
+	    if (!('console' in window) || typeof window.console.warn !== 'function') return;
+	    window.console.warn("lscache - " + message);
+	    if (err) window.console.warn("lscache - The error was: " + err.message);
+	  }
+	
+	  var lscache = {
+	    /**
+	     * Stores the value in localStorage. Expires after specified number of minutes.
+	     * @param {string} key
+	     * @param {Object|string} value
+	     * @param {number} time
+	     */
+	    set: function(key, value, time) {
+	      if (!supportsStorage()) return;
+	
+	      // If we don't get a string value, try to stringify
+	      // In future, localStorage may properly support storing non-strings
+	      // and this can be removed.
+	      if (typeof value !== 'string') {
+	        if (!supportsJSON()) return;
+	        try {
+	          value = JSON.stringify(value);
+	        } catch (e) {
+	          // Sometimes we can't stringify due to circular refs
+	          // in complex objects, so we won't bother storing then.
+	          return;
+	        }
+	      }
+	
+	      try {
+	        setItem(key, value);
+	      } catch (e) {
+	        if (isOutOfSpace(e)) {
+	          // If we exceeded the quota, then we will sort
+	          // by the expire time, and then remove the N oldest
+	          var storedKeys = [];
+	          var storedKey;
+	          eachKey(function(key, exprKey) {
+	            var expiration = getItem(exprKey);
+	            if (expiration) {
+	              expiration = parseInt(expiration, EXPIRY_RADIX);
+	            } else {
+	              // TODO: Store date added for non-expiring items for smarter removal
+	              expiration = MAX_DATE;
+	            }
+	            storedKeys.push({
+	              key: key,
+	              size: (getItem(key) || '').length,
+	              expiration: expiration
+	            });
+	          });
+	          // Sorts the keys with oldest expiration time last
+	          storedKeys.sort(function(a, b) { return (b.expiration-a.expiration); });
+	
+	          var targetSize = (value||'').length;
+	          while (storedKeys.length && targetSize > 0) {
+	            storedKey = storedKeys.pop();
+	            warn("Cache is full, removing item with key '" + key + "'");
+	            flushItem(storedKey.key);
+	            targetSize -= storedKey.size;
+	          }
+	          try {
+	            setItem(key, value);
+	          } catch (e) {
+	            // value may be larger than total quota
+	            warn("Could not add item with key '" + key + "', perhaps it's too big?", e);
+	            return;
+	          }
+	        } else {
+	          // If it was some other error, just give up.
+	          warn("Could not add item with key '" + key + "'", e);
+	          return;
+	        }
+	      }
+	
+	      // If a time is specified, store expiration info in localStorage
+	      if (time) {
+	        setItem(expirationKey(key), (currentTime() + time).toString(EXPIRY_RADIX));
+	      } else {
+	        // In case they previously set a time, remove that info from localStorage.
+	        removeItem(expirationKey(key));
+	      }
+	    },
+	
+	    /**
+	     * Retrieves specified value from localStorage, if not expired.
+	     * @param {string} key
+	     * @return {string|Object}
+	     */
+	    get: function(key) {
+	      if (!supportsStorage()) return null;
+	
+	      // Return the de-serialized item if not expired
+	      if (flushExpiredItem(key)) { return null; }
+	
+	      // Tries to de-serialize stored value if its an object, and returns the normal value otherwise.
+	      var value = getItem(key);
+	      if (!value || !supportsJSON()) {
+	        return value;
+	      }
+	
+	      try {
+	        // We can't tell if its JSON or a string, so we try to parse
+	        return JSON.parse(value);
+	      } catch (e) {
+	        // If we can't parse, it's probably because it isn't an object
+	        return value;
+	      }
+	    },
+	
+	    /**
+	     * Removes a value from localStorage.
+	     * Equivalent to 'delete' in memcache, but that's a keyword in JS.
+	     * @param {string} key
+	     */
+	    remove: function(key) {
+	      if (!supportsStorage()) return;
+	
+	      flushItem(key);
+	    },
+	
+	    /**
+	     * Returns whether local storage is supported.
+	     * Currently exposed for testing purposes.
+	     * @return {boolean}
+	     */
+	    supported: function() {
+	      return supportsStorage();
+	    },
+	
+	    /**
+	     * Flushes all lscache items and expiry markers without affecting rest of localStorage
+	     */
+	    flush: function() {
+	      if (!supportsStorage()) return;
+	
+	      eachKey(function(key) {
+	        flushItem(key);
+	      });
+	    },
+	
+	    /**
+	     * Flushes expired lscache items and expiry markers without affecting rest of localStorage
+	     */
+	    flushExpired: function() {
+	      if (!supportsStorage()) return;
+	
+	      eachKey(function(key) {
+	        flushExpiredItem(key);
+	      });
+	    },
+	
+	    /**
+	     * Appends CACHE_PREFIX so lscache will partition data in to different buckets.
+	     * @param {string} bucket
+	     */
+	    setBucket: function(bucket) {
+	      cacheBucket = bucket;
+	    },
+	
+	    /**
+	     * Resets the string being appended to CACHE_PREFIX so lscache will use the default storage behavior.
+	     */
+	    resetBucket: function() {
+	      cacheBucket = '';
+	    },
+	
+	    /**
+	     * Sets whether to display warnings when an item is removed from the cache or not.
+	     */
+	    enableWarnings: function(enabled) {
+	      warnings = enabled;
+	    }
+	  };
+	
+	  // Return the module
+	  return lscache;
+	}));
+
 
 /***/ },
 /* 208 */
+/***/ function(module, exports) {
+
+	module.exports = "<table class=\"table table-striped table-bordered table-hover\">\n  <tr>\n    <th>number</th>\n  </tr>\n  <tr>\n    <td>1</td>\n  </tr>\n  <tr>\n    <td>2</td>\n  </tr>\n</table>";
+
+/***/ },
+/* 209 */
+/***/ function(module, exports) {
+
+	module.exports = "<form>\n  <label for=\"name-field\">Name</label>\n  <input class=\"form-control\" type=\"text\" id=\"name-field\">\n</form>\n<button class=\"btn btn-primary btn-done\">done!</button>";
+
+/***/ },
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// This file is autogenerated via the `commonjs` Grunt task. You can require() this file in a CommonJS environment.
-	__webpack_require__(209)
-	__webpack_require__(210)
 	__webpack_require__(211)
 	__webpack_require__(212)
 	__webpack_require__(213)
@@ -38338,9 +38822,11 @@
 	__webpack_require__(218)
 	__webpack_require__(219)
 	__webpack_require__(220)
+	__webpack_require__(221)
+	__webpack_require__(222)
 
 /***/ },
-/* 209 */
+/* 211 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -38405,7 +38891,7 @@
 
 
 /***/ },
-/* 210 */
+/* 212 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -38505,7 +38991,7 @@
 
 
 /***/ },
-/* 211 */
+/* 213 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -38631,7 +39117,7 @@
 
 
 /***/ },
-/* 212 */
+/* 214 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -38874,7 +39360,7 @@
 
 
 /***/ },
-/* 213 */
+/* 215 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -39091,7 +39577,7 @@
 
 
 /***/ },
-/* 214 */
+/* 216 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -39262,7 +39748,7 @@
 
 
 /***/ },
-/* 215 */
+/* 217 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -39605,7 +40091,7 @@
 
 
 /***/ },
-/* 216 */
+/* 218 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40125,7 +40611,7 @@
 
 
 /***/ },
-/* 217 */
+/* 219 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40239,7 +40725,7 @@
 
 
 /***/ },
-/* 218 */
+/* 220 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40417,7 +40903,7 @@
 
 
 /***/ },
-/* 219 */
+/* 221 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40578,7 +41064,7 @@
 
 
 /***/ },
-/* 220 */
+/* 222 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40746,43 +41232,6 @@
 
 
 /***/ },
-/* 221 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _templatesProjectMainHtml = __webpack_require__(222);
-	
-	var _templatesProjectMainHtml2 = _interopRequireDefault(_templatesProjectMainHtml);
-	
-	var _componentsProjectLearnMenu = __webpack_require__(223);
-	
-	var _componentsProjectLearnMenu2 = _interopRequireDefault(_componentsProjectLearnMenu);
-	
-	var $ = __webpack_require__(1);
-	window.jQuery = window.$ = $;
-	__webpack_require__(208);
-	
-	var app = {
-	  init: function init() {
-	    app.render();
-	  },
-	  render: function render() {
-	    _componentsProjectLearnMenu2['default'].init();
-	  }
-	};
-	
-	module.exports = app;
-
-/***/ },
-/* 222 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"container-fluid project-container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <ul class=\"learn-menu\">\n        <li class=\"learn-nav crocodile\">\n          <a href=\"#\"><img src=\"/images/crocodile-facing-right.svg\"></a>\n        </li>\n        <li class=\"learn-nav lizard\">\n          <a href=\"#\"><img src=\"/images/curved-lizard.svg\"></a>\n        </li>\n        <li class=\"learn-nav frog\">\n          <img src=\"/images/icon.svg\">  \n        </li>\n        <li class=\"learn-nav turtle\">\n          <img src=\"/images/sea-turtle.svg\">\n        </li>\n        <li class=\"learn-nav snake\">\n          <img src=\"/images/snake-facing-right.svg\">\n        </li>\n      </ul>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-6\">\n    \t<div id=\"home-carousel\" class=\"carousel slide\" data-ride=\"carousel\">\n      <!-- Indicators -->\n      <ol class=\"carousel-indicators\">\n        <li data-target=\"#home-carousel\" data-slide-to=\"0\" class=\"active\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"1\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"2\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"3\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"4\"></li>\n        <li data-target=\"#home-carousel\" data-slide-to=\"5\"></li>\n      </ol>\n\n      <!-- Wrapper for slides -->\n      <div class=\"carousel-inner\" role=\"listbox\">\n        <div class=\"item active\">\n          <img src=\"/images/carousel/frogs/amused-frog.jpg\" alt=\"amused frog\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/turtles/red-sea-turtle.jpg\" alt=\"red-sea-turtle\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/lizards/blue-iguana.jpg\" alt=\"blue iguana\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/snakes/green-snake.jpg\" alt=\"snake coiled around tree branch\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/turtles/basking-turtle.jpg\" alt=\"basking turtle\">\n        </div>\n        <div class=\"item\">\n          <img src=\"/images/carousel/frogs/red-eyed-frog.jpg\" alt=\"red eyed frog\">\n        </div>\n      </div>\n    </div>\n      <!-- Controls -->\n      <a class=\"left carousel-control\" href=\"#home-carousel\" role=\"button\" data-slide=\"prev\">\n        <span class=\"icon-prev\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Previous</span>\n      </a>\n      <a class=\"right carousel-control\" href=\"#home-carousel\" role=\"button\" data-slide=\"next\">\n        <span class=\"icon-next\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Next</span>\n      </a>\n    </div>\n    <div class=\"col-md-2 col-md-offset-3 sidebar\">\n    <h4 class=\"fun-fact\">Did you know...?</h4>\n      <p class=\"fun-fact-p\">A herpetologist is a scientist who studies reptiles and amphibians. The word \"herpetology\" comes from the Greek \"herpien\", which means \"to creep\"!</p>\n    </div>\n  </div>\n</div>\n";
-
-/***/ },
 /* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -40790,769 +41239,6 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _templatesProjectMainHtml = __webpack_require__(222);
-	
-	var _templatesProjectMainHtml2 = _interopRequireDefault(_templatesProjectMainHtml);
-	
-	var $ = __webpack_require__(1);
-	
-	// legacy loading for bootstrap
-	window.jQuery = window.$ = $;
-	__webpack_require__(208);
-	__webpack_require__(224);
-	
-	var app = {
-	  init: function init() {
-	    app.render();
-	  },
-	  render: function render() {
-	    $('.project-main').append(_templatesProjectMainHtml2['default']);
-	  }
-	};
-	
-	module.exports = app;
-
-/***/ },
-/* 224 */
-/***/ function(module, exports) {
-
-	/*
-	 * jQuery Easing v1.3.2 - http://gsgd.co.uk/sandbox/jquery/easing/
-	 * Open source under the BSD License.
-	 * Copyright © 2008 George McGinley Smith
-	 * All rights reserved.
-	 * https://raw.github.com/gdsmith/jquery-easing/master/LICENSE
-	*/
-	
-	// t: current time, b: begInnIng value, c: change In value, d: duration
-	(function($){$.easing['jswing'] = $.easing['swing'];
-	
-	$.extend( $.easing,
-	{
-		def: 'easeOutQuad',
-		swing: function (x, t, b, c, d) {
-			//alert($.easing.default);
-			return $.easing[$.easing.def](x, t, b, c, d);
-		},
-		easeInQuad: function (x, t, b, c, d) {
-			return c*(t/=d)*t + b;
-		},
-		easeOutQuad: function (x, t, b, c, d) {
-			return -c *(t/=d)*(t-2) + b;
-		},
-		easeInOutQuad: function (x, t, b, c, d) {
-			if ((t/=d/2) < 1) return c/2*t*t + b;
-			return -c/2 * ((--t)*(t-2) - 1) + b;
-		},
-		easeInCubic: function (x, t, b, c, d) {
-			return c*(t/=d)*t*t + b;
-		},
-		easeOutCubic: function (x, t, b, c, d) {
-			return c*((t=t/d-1)*t*t + 1) + b;
-		},
-		easeInOutCubic: function (x, t, b, c, d) {
-			if ((t/=d/2) < 1) return c/2*t*t*t + b;
-			return c/2*((t-=2)*t*t + 2) + b;
-		},
-		easeInQuart: function (x, t, b, c, d) {
-			return c*(t/=d)*t*t*t + b;
-		},
-		easeOutQuart: function (x, t, b, c, d) {
-			return -c * ((t=t/d-1)*t*t*t - 1) + b;
-		},
-		easeInOutQuart: function (x, t, b, c, d) {
-			if ((t/=d/2) < 1) return c/2*t*t*t*t + b;
-			return -c/2 * ((t-=2)*t*t*t - 2) + b;
-		},
-		easeInQuint: function (x, t, b, c, d) {
-			return c*(t/=d)*t*t*t*t + b;
-		},
-		easeOutQuint: function (x, t, b, c, d) {
-			return c*((t=t/d-1)*t*t*t*t + 1) + b;
-		},
-		easeInOutQuint: function (x, t, b, c, d) {
-			if ((t/=d/2) < 1) return c/2*t*t*t*t*t + b;
-			return c/2*((t-=2)*t*t*t*t + 2) + b;
-		},
-		easeInSine: function (x, t, b, c, d) {
-			return -c * Math.cos(t/d * (Math.PI/2)) + c + b;
-		},
-		easeOutSine: function (x, t, b, c, d) {
-			return c * Math.sin(t/d * (Math.PI/2)) + b;
-		},
-		easeInOutSine: function (x, t, b, c, d) {
-			return -c/2 * (Math.cos(Math.PI*t/d) - 1) + b;
-		},
-		easeInExpo: function (x, t, b, c, d) {
-			return (t==0) ? b : c * Math.pow(2, 10 * (t/d - 1)) + b;
-		},
-		easeOutExpo: function (x, t, b, c, d) {
-			return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
-		},
-		easeInOutExpo: function (x, t, b, c, d) {
-			if (t==0) return b;
-			if (t==d) return b+c;
-			if ((t/=d/2) < 1) return c/2 * Math.pow(2, 10 * (t - 1)) + b;
-			return c/2 * (-Math.pow(2, -10 * --t) + 2) + b;
-		},
-		easeInCirc: function (x, t, b, c, d) {
-			return -c * (Math.sqrt(1 - (t/=d)*t) - 1) + b;
-		},
-		easeOutCirc: function (x, t, b, c, d) {
-			return c * Math.sqrt(1 - (t=t/d-1)*t) + b;
-		},
-		easeInOutCirc: function (x, t, b, c, d) {
-			if ((t/=d/2) < 1) return -c/2 * (Math.sqrt(1 - t*t) - 1) + b;
-			return c/2 * (Math.sqrt(1 - (t-=2)*t) + 1) + b;
-		},
-		easeInElastic: function (x, t, b, c, d) {
-			var s=1.70158;var p=0;var a=c;
-			if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
-			if (a < Math.abs(c)) { a=c; var s=p/4; }
-			else var s = p/(2*Math.PI) * Math.asin (c/a);
-			return -(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
-		},
-		easeOutElastic: function (x, t, b, c, d) {
-			var s=1.70158;var p=0;var a=c;
-			if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
-			if (a < Math.abs(c)) { a=c; var s=p/4; }
-			else var s = p/(2*Math.PI) * Math.asin (c/a);
-			return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
-		},
-		easeInOutElastic: function (x, t, b, c, d) {
-			var s=1.70158;var p=0;var a=c;
-			if (t==0) return b;  if ((t/=d/2)==2) return b+c;  if (!p) p=d*(.3*1.5);
-			if (a < Math.abs(c)) { a=c; var s=p/4; }
-			else var s = p/(2*Math.PI) * Math.asin (c/a);
-			if (t < 1) return -.5*(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
-			return a*Math.pow(2,-10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )*.5 + c + b;
-		},
-		easeInBack: function (x, t, b, c, d, s) {
-			if (s == undefined) s = 1.70158;
-			return c*(t/=d)*t*((s+1)*t - s) + b;
-		},
-		easeOutBack: function (x, t, b, c, d, s) {
-			if (s == undefined) s = 1.70158;
-			return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
-		},
-		easeInOutBack: function (x, t, b, c, d, s) {
-			if (s == undefined) s = 1.70158; 
-			if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
-			return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
-		},
-		easeInBounce: function (x, t, b, c, d) {
-			return c - $.easing.easeOutBounce (x, d-t, 0, c, d) + b;
-		},
-		easeOutBounce: function (x, t, b, c, d) {
-			if ((t/=d) < (1/2.75)) {
-				return c*(7.5625*t*t) + b;
-			} else if (t < (2/2.75)) {
-				return c*(7.5625*(t-=(1.5/2.75))*t + .75) + b;
-			} else if (t < (2.5/2.75)) {
-				return c*(7.5625*(t-=(2.25/2.75))*t + .9375) + b;
-			} else {
-				return c*(7.5625*(t-=(2.625/2.75))*t + .984375) + b;
-			}
-		},
-		easeInOutBounce: function (x, t, b, c, d) {
-			if (t < d/2) return $.easing.easeInBounce (x, t*2, 0, c, d) * .5 + b;
-			return $.easing.easeOutBounce (x, t*2-d, 0, c, d) * .5 + c*.5 + b;
-		}
-	});})(jQuery);
-
-
-/***/ },
-/* 225 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _templatesProjectFooterHtml = __webpack_require__(226);
-	
-	var _templatesProjectFooterHtml2 = _interopRequireDefault(_templatesProjectFooterHtml);
-	
-	var $ = __webpack_require__(1);
-	window.jQuery = window.$ = $;
-	__webpack_require__(208);
-	
-	var app = {
-	  init: function init() {
-	    app.render();
-	  },
-	  render: function render() {
-	    $('.project-footer').append(_templatesProjectFooterHtml2['default']);
-	  }
-	};
-	module.exports = app;
-
-/***/ },
-/* 226 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-md-10\">\n      <nav class=\"footer-nav\">\n        <ul>\n          <li class=\"todo-nav\">\n            <a role=\"menuitem\" href=\"/pages/todo.html\">Todo Application</a>\n          </li>\n          <li class=\"project-nav\">\n            <a role=\"menuitem\" href=\"/pages/projectHome.html\">My Project</a>\n          </li>\n          <li class=\"funny-squares-nav\">\n            <a role=\"menuitem\" href=\"/pages/funnySquares.html\">Funny Squares</a>\n          </li>\n          <li class=\"jS-timer-nav\">\n            <a role=\"menuitem\" href=\"/pages/timer.html\">Timer</a>\n          </li>\n          <li class=\"canvas-particles-nav\" >\n            <a role=\"menuitem\" href=\"/pages/formsBackbone.html\">Backbone Forms</a>\n          </li>\n        </ul>\n      </nav>\n    </div>\n  </div>\n</div>\n\n";
-
-/***/ },
-/* 227 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _jquery = __webpack_require__(1);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
-	
-	var app = {
-	  init: function init() {
-	    app.render();
-	  },
-	  render: function render() {
-	    var startTime;
-	    var interval;
-	    var endTime;
-	    var timeDifference;
-	    var splitTime;
-	    var hundredths;
-	    var seconds;
-	    var minutes;
-	    var updateTimer = function updateTimer() {
-	      endTime = new Date();
-	      timeDifference = (endTime - startTime) / 1000;
-	      hundredths = Math.floor(timeDifference * 10) % 100;
-	      seconds = Math.floor(timeDifference % 60);
-	      minutes = Math.floor(timeDifference / 60);
-	      if (hundredths < 10) {
-	        hundredths = '0' + hundredths;
-	      }
-	      if (seconds < 10) {
-	        seconds = '0' + seconds; // converting from a number to a string
-	      }
-	      if (minutes < 10) {
-	        minutes = '0' + minutes; // converting to a string
-	      }
-	      (0, _jquery2['default'])('.counter').html(minutes + ':' + seconds + '.' + hundredths);
-	    };
-	    var startTimer = function startTimer() {
-	      startTime = new Date();
-	      interval = setInterval(updateTimer, 100);
-	    };
-	    (0, _jquery2['default'])('.timer-container .start-button').on('click', startTimer);
-	    var splitTimer = function splitTimer() {
-	      splitTime = (0, _jquery2['default'])('.timer-container .split-time').append('<br />' + minutes + ':' + seconds + '.' + hundredths);
-	      var lapTime = timeDifference - splitTime;
-	      (0, _jquery2['default'])('.timer-container .lap-time').append('<br />' + lapTime);
-	    };
-	    (0, _jquery2['default'])('.timer-container .split-button').on('click', splitTimer);
-	    var resetTimer = function resetTimer() {
-	      (0, _jquery2['default'])('.counter').html('00' + ':' + '00' + '.' + '00');
-	      (0, _jquery2['default'])('.timer-container .split-time').html('');
-	    };
-	    (0, _jquery2['default'])('.timer-container .reset-button').on('click', resetTimer);
-	    var stopTimer = function stopTimer() {
-	      interval = clearInterval(interval);
-	    };
-	    (0, _jquery2['default'])('.timer-container .stop-button').on('click', stopTimer);
-	  }
-	};
-	
-	module.exports = app;
-
-/***/ },
-/* 228 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _underscore = __webpack_require__(170);
-	
-	var _underscore2 = _interopRequireDefault(_underscore);
-	
-	var _backbone = __webpack_require__(169);
-	
-	var _backbone2 = _interopRequireDefault(_backbone);
-	
-	var _handlebars = __webpack_require__(174);
-	
-	var _handlebars2 = _interopRequireDefault(_handlebars);
-	
-	var _lscache = __webpack_require__(229);
-	
-	var _lscache2 = _interopRequireDefault(_lscache);
-	
-	var _templatesAccountListHtml = __webpack_require__(230);
-	
-	var _templatesAccountListHtml2 = _interopRequireDefault(_templatesAccountListHtml);
-	
-	var _templatesCreateAccountHtml = __webpack_require__(231);
-	
-	var _templatesCreateAccountHtml2 = _interopRequireDefault(_templatesCreateAccountHtml);
-	
-	// Model
-	
-	var $ = __webpack_require__(1);
-	
-	// legacy loading for bootstrap
-	window.jQuery = window.$ = $;
-	__webpack_require__(208);
-	
-	var accountModelConfigObject = {
-	  defaults: {
-	    accounts: []
-	  },
-	  save: function save() {
-	    var data = this.get('accounts'); // returns empty array first time around
-	    _lscache2['default'].set('accounts', data);
-	  },
-	  fetch: function fetch() {
-	    var data = _lscache2['default'].get('accounts');
-	    data = data || [];
-	    this.set('accounts', data);
-	  }
-	};
-	var AccountModel = _backbone2['default'].Model.extend(accountModelConfigObject);
-	var accountModel = new AccountModel();
-	
-	// Controller
-	var controllerConfigObject = {
-	  el: '.page-container',
-	  model: accountModel,
-	  events: {
-	    'click .btn-create': 'createNewAccount'
-	  },
-	  initialize: function initialize() {
-	    this.model.fetch();
-	  },
-	  render: function render() {
-	    var listView = new ListView();
-	    this.$el.find('.view-container').html(listView.$el);
-	  },
-	  createNewAccount: function createNewAccount() {
-	    var createView = new CreateView();
-	    this.$el.find('.view-container').html(createView.$el);
-	  }
-	};
-	var AccountControllerView = _backbone2['default'].View.extend(controllerConfigObject);
-	
-	// Views
-	
-	var listViewConfig = {
-	  tagName: 'div',
-	  events: {},
-	  template: _handlebars2['default'].compile(_templatesAccountListHtml2['default']),
-	  initialize: function initialize() {
-	    this.render();
-	  },
-	  render: function render() {
-	    var renderedTemplate = this.template({});
-	    this.$el.html(renderedTemplate);
-	  }
-	};
-	var ListView = _backbone2['default'].View.extend(listViewConfig);
-	
-	var createViewConfig = {
-	  tagName: 'div',
-	  events: {
-	    'click .btn-done': 'submitForm'
-	  },
-	  template: _handlebars2['default'].compile(_templatesCreateAccountHtml2['default']),
-	  initialize: function initialize() {
-	    this.render();
-	  },
-	  render: function render() {
-	    var renderedTemplate = this.template({});
-	    this.$el.html(renderedTemplate);
-	  },
-	  submitForm: function submitForm() {
-	    accountControllerView.render();
-	  }
-	};
-	var CreateView = _backbone2['default'].View.extend(createViewConfig);
-	
-	var accountControllerView = new AccountControllerView();
-	
-	module.exports = accountControllerView;
-
-/***/ },
-/* 229 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
-	 * lscache library
-	 * Copyright (c) 2011, Pamela Fox
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 *       http://www.apache.org/licenses/LICENSE-2.0
-	 *
-	 * Unless required by applicable law or agreed to in writing, software
-	 * distributed under the License is distributed on an "AS IS" BASIS,
-	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	 * See the License for the specific language governing permissions and
-	 * limitations under the License.
-	 */
-	
-	/* jshint undef:true, browser:true, node:true */
-	/* global define */
-	
-	(function (root, factory) {
-	    if (true) {
-	        // AMD. Register as an anonymous module.
-	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	    } else if (typeof module !== "undefined" && module.exports) {
-	        // CommonJS/Node module
-	        module.exports = factory();
-	    } else {
-	        // Browser globals
-	        root.lscache = factory();
-	    }
-	}(this, function () {
-	
-	  // Prefix for all lscache keys
-	  var CACHE_PREFIX = 'lscache-';
-	
-	  // Suffix for the key name on the expiration items in localStorage
-	  var CACHE_SUFFIX = '-cacheexpiration';
-	
-	  // expiration date radix (set to Base-36 for most space savings)
-	  var EXPIRY_RADIX = 10;
-	
-	  // time resolution in minutes
-	  var EXPIRY_UNITS = 60 * 1000;
-	
-	  // ECMAScript max Date (epoch + 1e8 days)
-	  var MAX_DATE = Math.floor(8.64e15/EXPIRY_UNITS);
-	
-	  var cachedStorage;
-	  var cachedJSON;
-	  var cacheBucket = '';
-	  var warnings = false;
-	
-	  // Determines if localStorage is supported in the browser;
-	  // result is cached for better performance instead of being run each time.
-	  // Feature detection is based on how Modernizr does it;
-	  // it's not straightforward due to FF4 issues.
-	  // It's not run at parse-time as it takes 200ms in Android.
-	  function supportsStorage() {
-	    var key = '__lscachetest__';
-	    var value = key;
-	
-	    if (cachedStorage !== undefined) {
-	      return cachedStorage;
-	    }
-	
-	    try {
-	      setItem(key, value);
-	      removeItem(key);
-	      cachedStorage = true;
-	    } catch (e) {
-	        if (isOutOfSpace(e)) {    // If we hit the limit, then it means we have support, 
-	            cachedStorage = true; // just maxed it out and even the set test failed.
-	        } else {
-	            cachedStorage = false;
-	        }
-	    }
-	    return cachedStorage;
-	  }
-	
-	  // Check to set if the error is us dealing with being out of space
-	  function isOutOfSpace(e) {
-	    if (e && e.name === 'QUOTA_EXCEEDED_ERR' || 
-	            e.name === 'NS_ERROR_DOM_QUOTA_REACHED' || 
-	            e.name === 'QuotaExceededError') {
-	        return true;
-	    }
-	    return false;
-	  }
-	
-	  // Determines if native JSON (de-)serialization is supported in the browser.
-	  function supportsJSON() {
-	    /*jshint eqnull:true */
-	    if (cachedJSON === undefined) {
-	      cachedJSON = (window.JSON != null);
-	    }
-	    return cachedJSON;
-	  }
-	
-	  /**
-	   * Returns the full string for the localStorage expiration item.
-	   * @param {String} key
-	   * @return {string}
-	   */
-	  function expirationKey(key) {
-	    return key + CACHE_SUFFIX;
-	  }
-	
-	  /**
-	   * Returns the number of minutes since the epoch.
-	   * @return {number}
-	   */
-	  function currentTime() {
-	    return Math.floor((new Date().getTime())/EXPIRY_UNITS);
-	  }
-	
-	  /**
-	   * Wrapper functions for localStorage methods
-	   */
-	
-	  function getItem(key) {
-	    return localStorage.getItem(CACHE_PREFIX + cacheBucket + key);
-	  }
-	
-	  function setItem(key, value) {
-	    // Fix for iPad issue - sometimes throws QUOTA_EXCEEDED_ERR on setItem.
-	    localStorage.removeItem(CACHE_PREFIX + cacheBucket + key);
-	    localStorage.setItem(CACHE_PREFIX + cacheBucket + key, value);
-	  }
-	
-	  function removeItem(key) {
-	    localStorage.removeItem(CACHE_PREFIX + cacheBucket + key);
-	  }
-	
-	  function eachKey(fn) {
-	    var prefixRegExp = new RegExp('^' + CACHE_PREFIX + cacheBucket + '(.*)');
-	    // Loop in reverse as removing items will change indices of tail
-	    for (var i = localStorage.length-1; i >= 0 ; --i) {
-	      var key = localStorage.key(i);
-	      key = key && key.match(prefixRegExp);
-	      key = key && key[1];
-	      if (key && key.indexOf(CACHE_SUFFIX) < 0) {
-	        fn(key, expirationKey(key));
-	      }
-	    }
-	  }
-	
-	  function flushItem(key) {
-	    var exprKey = expirationKey(key);
-	
-	    removeItem(key);
-	    removeItem(exprKey);
-	  }
-	
-	  function flushExpiredItem(key) {
-	    var exprKey = expirationKey(key);
-	    var expr = getItem(exprKey);
-	
-	    if (expr) {
-	      var expirationTime = parseInt(expr, EXPIRY_RADIX);
-	
-	      // Check if we should actually kick item out of storage
-	      if (currentTime() >= expirationTime) {
-	        removeItem(key);
-	        removeItem(exprKey);
-	        return true;
-	      }
-	    }
-	  }
-	
-	  function warn(message, err) {
-	    if (!warnings) return;
-	    if (!('console' in window) || typeof window.console.warn !== 'function') return;
-	    window.console.warn("lscache - " + message);
-	    if (err) window.console.warn("lscache - The error was: " + err.message);
-	  }
-	
-	  var lscache = {
-	    /**
-	     * Stores the value in localStorage. Expires after specified number of minutes.
-	     * @param {string} key
-	     * @param {Object|string} value
-	     * @param {number} time
-	     */
-	    set: function(key, value, time) {
-	      if (!supportsStorage()) return;
-	
-	      // If we don't get a string value, try to stringify
-	      // In future, localStorage may properly support storing non-strings
-	      // and this can be removed.
-	      if (typeof value !== 'string') {
-	        if (!supportsJSON()) return;
-	        try {
-	          value = JSON.stringify(value);
-	        } catch (e) {
-	          // Sometimes we can't stringify due to circular refs
-	          // in complex objects, so we won't bother storing then.
-	          return;
-	        }
-	      }
-	
-	      try {
-	        setItem(key, value);
-	      } catch (e) {
-	        if (isOutOfSpace(e)) {
-	          // If we exceeded the quota, then we will sort
-	          // by the expire time, and then remove the N oldest
-	          var storedKeys = [];
-	          var storedKey;
-	          eachKey(function(key, exprKey) {
-	            var expiration = getItem(exprKey);
-	            if (expiration) {
-	              expiration = parseInt(expiration, EXPIRY_RADIX);
-	            } else {
-	              // TODO: Store date added for non-expiring items for smarter removal
-	              expiration = MAX_DATE;
-	            }
-	            storedKeys.push({
-	              key: key,
-	              size: (getItem(key) || '').length,
-	              expiration: expiration
-	            });
-	          });
-	          // Sorts the keys with oldest expiration time last
-	          storedKeys.sort(function(a, b) { return (b.expiration-a.expiration); });
-	
-	          var targetSize = (value||'').length;
-	          while (storedKeys.length && targetSize > 0) {
-	            storedKey = storedKeys.pop();
-	            warn("Cache is full, removing item with key '" + key + "'");
-	            flushItem(storedKey.key);
-	            targetSize -= storedKey.size;
-	          }
-	          try {
-	            setItem(key, value);
-	          } catch (e) {
-	            // value may be larger than total quota
-	            warn("Could not add item with key '" + key + "', perhaps it's too big?", e);
-	            return;
-	          }
-	        } else {
-	          // If it was some other error, just give up.
-	          warn("Could not add item with key '" + key + "'", e);
-	          return;
-	        }
-	      }
-	
-	      // If a time is specified, store expiration info in localStorage
-	      if (time) {
-	        setItem(expirationKey(key), (currentTime() + time).toString(EXPIRY_RADIX));
-	      } else {
-	        // In case they previously set a time, remove that info from localStorage.
-	        removeItem(expirationKey(key));
-	      }
-	    },
-	
-	    /**
-	     * Retrieves specified value from localStorage, if not expired.
-	     * @param {string} key
-	     * @return {string|Object}
-	     */
-	    get: function(key) {
-	      if (!supportsStorage()) return null;
-	
-	      // Return the de-serialized item if not expired
-	      if (flushExpiredItem(key)) { return null; }
-	
-	      // Tries to de-serialize stored value if its an object, and returns the normal value otherwise.
-	      var value = getItem(key);
-	      if (!value || !supportsJSON()) {
-	        return value;
-	      }
-	
-	      try {
-	        // We can't tell if its JSON or a string, so we try to parse
-	        return JSON.parse(value);
-	      } catch (e) {
-	        // If we can't parse, it's probably because it isn't an object
-	        return value;
-	      }
-	    },
-	
-	    /**
-	     * Removes a value from localStorage.
-	     * Equivalent to 'delete' in memcache, but that's a keyword in JS.
-	     * @param {string} key
-	     */
-	    remove: function(key) {
-	      if (!supportsStorage()) return;
-	
-	      flushItem(key);
-	    },
-	
-	    /**
-	     * Returns whether local storage is supported.
-	     * Currently exposed for testing purposes.
-	     * @return {boolean}
-	     */
-	    supported: function() {
-	      return supportsStorage();
-	    },
-	
-	    /**
-	     * Flushes all lscache items and expiry markers without affecting rest of localStorage
-	     */
-	    flush: function() {
-	      if (!supportsStorage()) return;
-	
-	      eachKey(function(key) {
-	        flushItem(key);
-	      });
-	    },
-	
-	    /**
-	     * Flushes expired lscache items and expiry markers without affecting rest of localStorage
-	     */
-	    flushExpired: function() {
-	      if (!supportsStorage()) return;
-	
-	      eachKey(function(key) {
-	        flushExpiredItem(key);
-	      });
-	    },
-	
-	    /**
-	     * Appends CACHE_PREFIX so lscache will partition data in to different buckets.
-	     * @param {string} bucket
-	     */
-	    setBucket: function(bucket) {
-	      cacheBucket = bucket;
-	    },
-	
-	    /**
-	     * Resets the string being appended to CACHE_PREFIX so lscache will use the default storage behavior.
-	     */
-	    resetBucket: function() {
-	      cacheBucket = '';
-	    },
-	
-	    /**
-	     * Sets whether to display warnings when an item is removed from the cache or not.
-	     */
-	    enableWarnings: function(enabled) {
-	      warnings = enabled;
-	    }
-	  };
-	
-	  // Return the module
-	  return lscache;
-	}));
-
-
-/***/ },
-/* 230 */
-/***/ function(module, exports) {
-
-	module.exports = "<table class=\"table table-striped table-bordered table-hover\">\n  <tr>\n    <th>number</th>\n  </tr>\n  <tr>\n    <td>1</td>\n  </tr>\n  <tr>\n    <td>2</td>\n  </tr>\n</table>";
-
-/***/ },
-/* 231 */
-/***/ function(module, exports) {
-
-	module.exports = "<form>\n  <label for=\"name-field\">Name</label>\n  <input class=\"form-control\" type=\"text\" id=\"name-field\">\n</form>\n<button class=\"btn btn-primary btn-done\">done!</button>";
-
-/***/ },
-/* 232 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
 	var _jquery = __webpack_require__(1);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
@@ -41561,7 +41247,7 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _templatesFlickrImageHtml = __webpack_require__(233);
+	var _templatesFlickrImageHtml = __webpack_require__(224);
 	
 	var _templatesFlickrImageHtml2 = _interopRequireDefault(_templatesFlickrImageHtml);
 	
@@ -41618,13 +41304,13 @@
 	module.exports = app;
 
 /***/ },
-/* 233 */
+/* 224 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"photo\">\n  <img src=\"http://farm{{farm}}.static.flickr.com/{{server}}/{{id}}_{{secret}}_b.jpg\">\n</div>";
 
 /***/ },
-/* 234 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41643,15 +41329,15 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _lscache = __webpack_require__(229);
+	var _lscache = __webpack_require__(207);
 	
 	var _lscache2 = _interopRequireDefault(_lscache);
 	
-	var _templatesBooksNewBookFormHtml = __webpack_require__(235);
+	var _templatesBooksNewBookFormHtml = __webpack_require__(226);
 	
 	var _templatesBooksNewBookFormHtml2 = _interopRequireDefault(_templatesBooksNewBookFormHtml);
 	
-	var _templatesBooksBookListHtml = __webpack_require__(236);
+	var _templatesBooksBookListHtml = __webpack_require__(227);
 	
 	var _templatesBooksBookListHtml2 = _interopRequireDefault(_templatesBooksBookListHtml);
 	
@@ -41662,7 +41348,7 @@
 	
 	// legacy loading for bootstrap
 	window.jQuery = window.$ = $;
-	__webpack_require__(208);
+	__webpack_require__(210);
 	
 	var BookModel = _backbone2['default'].Model.extend({
 	  defaults: {
@@ -41702,9 +41388,8 @@
 	    this.save();
 	  },
 	  addBook: function addBook(newBook) {
-	    var book = { title: newBook };
 	    var books = this.get('books');
-	    books.push(book);
+	    books.push(newBook);
 	    this.set('books', books);
 	    this.save();
 	  }
@@ -41725,8 +41410,15 @@
 	    this.model.fetch();
 	  },
 	  render: function render() {
-	    var bookListView = new BookListView();
-	    this.$el.find('.books-view-container').html(bookListView.$el);
+	    var books = this.model.get('books');
+	    var $table = this.$el.find('table');
+	    var booksHtml = books.map(function (newBook) {
+	      var view = new BookListView(newBook);
+	    });
+	    $table.append(booksHtml.$el);
+	
+	    // var bookListView = new BookListView();
+	    // this.$el.find('.books-view-container').html(bookListView.$el);
 	  },
 	  addNewBook: function addNewBook() {
 	    var newBookView = new NewBookView();
@@ -41736,15 +41428,8 @@
 	    this.model.RemoveFromList(id);
 	    this.render();
 	  },
-	  addBook: function addBook() {
-	    var books = this.model.get('books');
-	    var $table = this.$el.find('table');
-	    var bookListHtml = books.map(function (book) {
-	      var view = new BookListView();
-	      return view;
-	    });
-	    $table.append(bookListHtml.join(''));
-	    this.model.addBook();
+	  addBook: function addBook(newBook) {
+	    this.model.addBook(newBook);
 	    this.render();
 	  }
 	});
@@ -41755,20 +41440,19 @@
 	  el: '.books-main',
 	  model: bookModel,
 	  events: {
-	
-	    // 'click .btn-read': 'removeFromList',
-	    // 'click .btn-sort-title': 'sortListBy',
-	    // 'click .btn-sort-author': 'sortListBy',
-	    // 'click .btn-sort-recommender': 'sortListBy',
-	    // 'click .btn-sort-genre': 'sortListBy'
+	    'click .btn-read': 'removeFromList',
+	    'click .btn-sort-title': 'sortListBy',
+	    'click .btn-sort-author': 'sortListBy',
+	    'click .btn-sort-recommender': 'sortListBy',
+	    'click .btn-sort-genre': 'sortListBy'
 	  },
 	  template: _handlebars2['default'].compile(_templatesBooksBookListHtml2['default']),
-	  initialize: function initialize() {
+	  initialize: function initialize(books) {
+	    this.data = books;
 	    this.render();
 	  },
 	  render: function render() {
-	    var renderedTemplate = this.template({});
-	    this.$el.html(renderedTemplate);
+	    this.$el.html(this.template(this.data));
 	  },
 	  addNewBook: function addNewBook() {
 	    bookController.addNewBook();
@@ -41781,6 +41465,7 @@
 	  //   // sort list by title, author, genre, or recommender
 	  // }
 	});
+	var bookListView = new BookListView();
 	
 	var NewBookView = _backbone2['default'].View.extend({
 	  el: '.books-main',
@@ -41800,14 +41485,19 @@
 	    var newAuthor = this.$el.find('#new-author').val();
 	    var newRecommender = this.$el.find('#new-recommender').val();
 	    var newGenre = this.$el.find('#new-genre').val();
-	    var newBook = ['newTitle', 'newAuthor', 'newRecommender', 'newGenre'];
+	    var newBook = {
+	      id: 'index',
+	      title: newTitle,
+	      author: newAuthor,
+	      recommender: newRecommender,
+	      genre: newGenre
+	    };
 	    bookController.addBook(newBook);
 	    // send values to the controller
 	    // add book to list and switch to list view
 	  }
 	});
 	
-	module.exports = new BookListView();
 	// var FriendsSigninView = Backbone.model.extend({
 	//   el: '.books-view-container',
 	//   events: {
@@ -41827,13 +41517,13 @@
 	//});
 
 /***/ },
-/* 235 */
+/* 226 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"new-book-container\">\n  <form>\n    <div class=\"form-group\">\n      <label for=\"new-title\">Book Title</label>\n      <input type=\"text\" class=\"form-control\" id=\"new-title\" placeholder=\"Title\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"new-author\">Author</label>\n      <input type=\"text\" class=\"form-control\" id=\"new-author\" placeholder=\"Author\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"new-recommender\">Who'd you hear about it from?</label>\n      <input type=\"text\" class=\"form-control\" id=\"new-recommender\" placeholder=\"Recommender's name\">\n    </div>\n    <!-- <div class=\"form-group\">\n      <label for=\"new-synopsis\">What it's about?</label>\n      <textarea class=\"form-control\" id=\"new-synopsis\" rows=\"3\" placeholder=\"Synopsis\"></textarea>\n    </div> -->\n    <div class=\"form-group\">\n      <label for=\"new-genre-fiction\">Fiction</label>\n      <select multiple class=\"form-control\" id=\"new-genre\">\n        <option>YA</option>\n        <option>SciFi</option>\n        <option>Historical</option>\n        <option>Short Stories</option>\n        <option>Graphic Novel</option>\n        <option>Crime</option>\n        <option>misc. fiction</option>\n      </select>\n    </div>\n    <!-- <div class=\"form-group\">\n      <label for=\"new-genre-nonfiction\">Nonfiction</label>\n      <select multiple class=\"form-control\" id=\"new-genre-nonfiction\">\n        <option>Memoir/Autobiography</option>\n        <option>History/Biography</option>\n        <option>Science</option>\n        <option>Psychology</option>\n        <option>Essays</option>\n        <option>Essays(humorous)</option>\n        <option>misc. nonfiction</option>\n      </select>\n    </div> -->\n  </form>\n  <button class=\"btn btn-default btn-add\">Add</button>\n</div>\n";
 
 /***/ },
-/* 236 */
+/* 227 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"book-list-container\">\n  <button class=\"btn btn-default btn-add-book\">Add a book!</button>\n  <div class=\"table-responsive\"> \n    <table class=\"table table-hover\">\n      <tr>\n        <th>Title<span class=\"caret btn-sort-title\"></span></th>\n        <th>Author<span class=\"caret btn-sort-byz-author\"></span></th>\n        <th>Recommender<span class=\"caret btn-sort-by-recommender\"></span></th>\n        <th>Genre<span class=\"caret btn-sort-by-genre\"></span></th>\n        <th>Read</th>\n      </tr>\n      <tr>\n        <td>{{title}}</td>\n        <td>{{author}}</td>\n        <td>{{recommender}}</td>\n        <td>{{genre}}</td>\n        <td><button type=\"button\" class=\"close btn-read\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button></td>\n      </tr>\n    </table>\n  </div>\n</div>";

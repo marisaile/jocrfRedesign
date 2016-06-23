@@ -96,6 +96,7 @@
 .square {
   position: relative;
   display: inline-block;
+  top: 100px;
   height: 100px;
   width: 100px;
   background-color: #63a1f2;
@@ -240,8 +241,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 130px;
-  background-image: url(http://static8.depositphotos.com/1072020/923/v/950/depositphotos_9235083-Vector-wooden-bookshelf.jpg);
+  height: 140px;
+  background-image: url(http://marvelmoe.com/bookapi/img/books.jpg);
 }
 
 .books-header h1 {

@@ -4,7 +4,7 @@ import 'styles/main.scss';
 import mainPage from 'components/mainPage';
 import TodoControllerView from 'pages/todoReact/todoController';
 import funnySquares from 'pages/funnySquares';
-import project from 'pages/project';
+// import project from 'pages/project';
 import timer from 'pages/timer';
 import formsBackbone from 'pages/formsBackbone';
 import photoSearch from 'pages/photoSearch';
@@ -25,9 +25,9 @@ $(function() {
     case '/pages/funnySquares.html':
       funnySquares.init();
     break;
-    case '/pages/projectHome.html':
-      project.init();
-    break;
+    // case '/pages/projectHome.html':
+    //   project.init();
+    // break;
     case '/pages/timer.html':
       timer.init();
     break;

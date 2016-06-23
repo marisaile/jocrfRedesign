@@ -51,9 +51,8 @@ var BookModel = Backbone.Model.extend({
     this.save();
   },
   addBook: function(newBook){
-    var book = {title: newBook};
     var books = this.get('books');
-    books.push(book);
+    books.push(newBook);
     this.set('books', books);
     this.save();
   }
@@ -74,8 +73,16 @@ var BookController = Backbone.View.extend({
     this.model.fetch();
   },
   render: function(){ 
-    var bookListView = new BookListView();
-    this.$el.find('.books-view-container').html(bookListView.$el);
+    var books = this.model.get('books');
+    var $table = this.$el.find('table');
+    var booksHtml = books.map(function(newBook){
+      var view = new BookListView(newBook);  
+      
+    });
+    $table.append(booksHtml.$el);
+    
+    // var bookListView = new BookListView();
+    // this.$el.find('.books-view-container').html(bookListView.$el);
   },
   addNewBook: function(){
     var newBookView = new NewBookView();
@@ -85,15 +92,8 @@ var BookController = Backbone.View.extend({
     this.model.RemoveFromList(id);
     this.render();
   },
-  addBook: function(){
-    var books = this.model.get('books');
-    var $table = this.$el.find('table');
-    var bookListHtml = books.map(function(book){
-    var view = new BookListView();
-      return view;
-    });
-    $table.append(bookListHtml.join(''));
-    this.model.addBook();
+  addBook: function(newBook){
+    this.model.addBook(newBook);
     this.render();
   }
 });
@@ -103,21 +103,21 @@ var bookController = new BookController();
 var BookListView = Backbone.View.extend({
   el: '.books-main',
   model: bookModel,
-  events: {
-    
-    // 'click .btn-read': 'removeFromList',
-    // 'click .btn-sort-title': 'sortListBy',
-    // 'click .btn-sort-author': 'sortListBy',
-    // 'click .btn-sort-recommender': 'sortListBy',
-    // 'click .btn-sort-genre': 'sortListBy'
+  events: {    
+    'click .btn-read': 'removeFromList',
+    'click .btn-sort-title': 'sortListBy',
+    'click .btn-sort-author': 'sortListBy',
+    'click .btn-sort-recommender': 'sortListBy',
+    'click .btn-sort-genre': 'sortListBy'
   },
   template: Handlebars.compile(bookListTemplate),
-  initialize: function(){
+  initialize: function(books){
+    this.data = books;
     this.render();
   },
   render: function(){
-    var renderedTemplate = this.template({});
-    this.$el.html(renderedTemplate);
+    this.$el.html(this.template(this.data));
+
   },
   addNewBook: function(){
     bookController.addNewBook();
@@ -130,7 +130,7 @@ var BookListView = Backbone.View.extend({
   //   // sort list by title, author, genre, or recommender
   // }
 });
-
+var bookListView = new BookListView();
 
 var NewBookView = Backbone.View.extend({
   el: '.books-main',
@@ -149,14 +149,20 @@ var NewBookView = Backbone.View.extend({
     var newAuthor = this.$el.find('#new-author').val();
     var newRecommender = this.$el.find('#new-recommender').val();
     var newGenre = this.$el.find('#new-genre').val();
-    var newBook = ['newTitle', 'newAuthor', 'newRecommender', 'newGenre'];
+    var newBook = {
+      id: 'index',
+      title: newTitle,
+      author: newAuthor,
+      recommender: newRecommender,
+      genre: newGenre
+    };
     bookController.addBook(newBook);
     // send values to the controller
     // add book to list and switch to list view
   }
 });
 
-module.exports = new BookListView();
+
 // var FriendsSigninView = Backbone.model.extend({
 //   el: '.books-view-container',
 //   events: {
