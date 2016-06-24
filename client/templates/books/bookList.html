@@ -1,12 +1,12 @@
 <div class="book-list-container">
   <button class="btn btn-default btn-add-book">Add a book!</button>
-  <div class="table-responsive"> 
+  <div class="table-responsive">
     <table class="table table-hover">
       <tr>
-        <th>Title<span class="caret btn-sort-title"></span></th>
-        <th>Author<span class="caret btn-sort-byz-author"></span></th>
-        <th>Recommender<span class="caret btn-sort-by-recommender"></span></th>
-        <th>Genre<span class="caret btn-sort-by-genre"></span></th>
+        <th>Title<span class="caret"></span></th>
+        <th>Author<span class="caret"></span></th>
+        <th>Recommender<span class="caret"></span></th>
+        <th>Genre<span class="caret"></span></th>
         <th>Read</th>
       </tr>
       <tr>
@@ -14,8 +14,12 @@
         <td>{{author}}</td>
         <td>{{recommender}}</td>
         <td>{{genre}}</td>
-        <td><button type="button" class="close btn-read" aria-label="Close"><span aria-hidden="true">&times;</span></button></td>
+        <td>{{''}}</td>
       </tr>
     </table>
   </div>
 </div>
+
+
+
+

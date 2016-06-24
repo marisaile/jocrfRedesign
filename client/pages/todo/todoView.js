@@ -8,7 +8,7 @@ require('bootstrap');
 import Backbone from 'backbone';
 import Handlebars from 'handlebars';
 import todoItemTemplate from 'templates/todoItem.html';
-
+ 
 // View
 var TodoItemView = Backbone.View.extend({
   tagName: 'li', // tagName has to be used when the element does not already exist on the page  

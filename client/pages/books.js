@@ -45,14 +45,15 @@ var BookModel = Backbone.Model.extend({
     });
     return data;
   },
-  removeFromList: function(){
+  removeFromList: function(id){
     var books = this.get('books');
     books.splice(id, 1);
     this.save();
   },
   addBook: function(newBook){
+    var bookAdded = newBook;
     var books = this.get('books');
-    books.push(newBook);
+    books.push(bookAdded);
     this.set('books', books);
     this.save();
   }
@@ -74,13 +75,12 @@ var BookController = Backbone.View.extend({
   },
   render: function(){ 
     var books = this.model.get('books');
-    var $table = this.$el.find('table');
-    var booksHtml = books.map(function(newBook){
-      var view = new BookListView(newBook);  
-      
-    });
-    $table.append(booksHtml.$el);
-    
+    var $ul = this.$el.find('ul');
+    $ul.html('');
+    var bookHtml = books.map(function(book) {
+      var view = new BookListView(book);
+    }); 
+    $ul.append(bookHtml.$el);
     // var bookListView = new BookListView();
     // this.$el.find('.books-view-container').html(bookListView.$el);
   },
@@ -111,21 +111,19 @@ var BookListView = Backbone.View.extend({
     'click .btn-sort-genre': 'sortListBy'
   },
   template: Handlebars.compile(bookListTemplate),
-  initialize: function(books){
-    this.data = books;
+  initialize: function(book){
+    this.data = book;
     this.render();
   },
   render: function(){
     this.$el.html(this.template(this.data));
-
   },
   addNewBook: function(){
     bookController.addNewBook();
+  },
+  removeFromList: function(){
+    bookController.removeFromList(this.data.id);
   }
-  // removeFromList: function(){
-  //   // get id of item to be removed
-  //   // send id to controller
-  // },
   // sortListBy: function(){
   //   // sort list by title, author, genre, or recommender
   // }
@@ -149,6 +147,7 @@ var NewBookView = Backbone.View.extend({
     var newAuthor = this.$el.find('#new-author').val();
     var newRecommender = this.$el.find('#new-recommender').val();
     var newGenre = this.$el.find('#new-genre').val();
+    debugger;
     var newBook = {
       id: 'index',
       title: newTitle,
