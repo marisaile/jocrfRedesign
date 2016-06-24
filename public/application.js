@@ -41329,10 +41329,6 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _lscache = __webpack_require__(207);
-	
-	var _lscache2 = _interopRequireDefault(_lscache);
-	
 	var _templatesBooksNewBookFormHtml = __webpack_require__(226);
 	
 	var _templatesBooksNewBookFormHtml2 = _interopRequireDefault(_templatesBooksNewBookFormHtml);
@@ -41362,14 +41358,38 @@
 	    genre: ''
 	  },
 	  fetch: function fetch() {
-	    var data = _lscache2['default'].get('books');
-	    data = this.applySchema(data);
-	    this.set('books', data);
+	    var that = this;
+	    $.ajax({
+	      url: '/api',
+	      method: 'GET',
+	      complete: function complete(response) {
+	        var dataString = response.responseText;
+	        var data = JSON.parse(dataString);
+	        data = that.applySchema(data);
+	        that.set('books', data);
+	      }
+	    });
+	    // var data = lscache.get('books');
+	    // data = this.applySchema(data);
+	    // this.set('books', data);
 	  },
 	  save: function save() {
-	    var data = this.get('books');
-	    this.applySchema(data);
-	    _lscache2['default'].set('books', data);
+	    var that = this;
+	    var books = this.get('books');
+	    $.ajax({
+	      url: '/api',
+	      method: 'POST',
+	      data: { books: JSON.stringify(books) },
+	      complete: function complete(response) {
+	        var dataString = response.responseText;
+	        var data = JSON.parse(dataString);
+	        data = that.applySchema(data);
+	        that.set('books', data);
+	      }
+	    });
+	    // var data = this.get('books');
+	    // this.applySchema(data);
+	    // lscache.set('books', data);
 	  },
 	  applySchema: function applySchema(books) {
 	    var data = books;
@@ -41412,12 +41432,11 @@
 	  },
 	  render: function render() {
 	    var books = this.model.get('books');
-	    var $ul = this.$el.find('ul');
-	    $ul.html('');
-	    var bookHtml = books.map(function (book) {
+	    books.map(function (book) {
 	      var view = new BookListView(book);
+	      this.$el.find('.books-view-container').append(view.$el);
 	    });
-	    $ul.append(bookHtml.$el);
+	
 	    // var bookListView = new BookListView();
 	    // this.$el.find('.books-view-container').html(bookListView.$el);
 	  },
@@ -41439,7 +41458,6 @@
 	// Views
 	var BookListView = _backbone2['default'].View.extend({
 	  el: '.books-main',
-	  model: bookModel,
 	  events: {
 	    'click .btn-read': 'removeFromList',
 	    'click .btn-sort-title': 'sortListBy',
@@ -41449,7 +41467,7 @@
 	  },
 	  template: _handlebars2['default'].compile(_templatesBooksBookListHtml2['default']),
 	  initialize: function initialize(book) {
-	    this.data = book;
+	    var data = book;
 	    this.render();
 	  },
 	  render: function render() {
@@ -41485,7 +41503,6 @@
 	    var newAuthor = this.$el.find('#new-author').val();
 	    var newRecommender = this.$el.find('#new-recommender').val();
 	    var newGenre = this.$el.find('#new-genre').val();
-	    debugger;
 	    var newBook = {
 	      id: 'index',
 	      title: newTitle,
@@ -41515,7 +41532,7 @@
 	//   addFriend: function(){
 	//     // add friend
 	//   }
-	//});
+	// });
 
 /***/ },
 /* 226 */

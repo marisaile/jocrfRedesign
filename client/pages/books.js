@@ -7,7 +7,6 @@ require('bootstrap');
 import _ from 'underscore';
 import Backbone from 'backbone';
 import Handlebars from 'handlebars';
-import lscache from 'lscache';
 import newBookTemplate from 'templates/books/newBookForm.html';
 import bookListTemplate from 'templates/books/bookList.html';
 // import booksSignin from 'templates/books/booksSignin.html';
@@ -25,14 +24,38 @@ var BookModel = Backbone.Model.extend({
     genre: ''
   },
   fetch: function() {
-    var data = lscache.get('books');
-    data = this.applySchema(data);
-    this.set('books', data);
+    var that = this;
+    $.ajax({
+      url: '/api',
+      method: 'GET',
+      complete: function(response){
+        var dataString = response.responseText;
+        var data = JSON.parse(dataString);
+        data = that.applySchema(data);
+        that.set('books', data);   
+      }
+    });
+    // var data = lscache.get('books');
+    // data = this.applySchema(data);
+    // this.set('books', data);
   },
   save: function() {
-    var data = this.get('books'); 
-    this.applySchema(data);
-    lscache.set('books', data);
+    var that = this;
+    var books = this.get('books');
+    $.ajax({
+      url: '/api',
+      method: 'POST',
+      data: {books: JSON.stringify(books)},
+      complete: function(response){
+        var dataString = response.responseText;
+        var data = JSON.parse(dataString);
+        data = that.applySchema(data);
+        that.set('books', data);   
+      }
+    });
+    // var data = this.get('books'); 
+    // this.applySchema(data);
+    // lscache.set('books', data);
   },
   applySchema: function(books) { 
     var data = books;
@@ -75,12 +98,11 @@ var BookController = Backbone.View.extend({
   },
   render: function(){ 
     var books = this.model.get('books');
-    var $ul = this.$el.find('ul');
-    $ul.html('');
-    var bookHtml = books.map(function(book) {
+    books.map(function(book){
       var view = new BookListView(book);
-    }); 
-    $ul.append(bookHtml.$el);
+      this.$el.find('.books-view-container').append(view.$el);
+    });
+    
     // var bookListView = new BookListView();
     // this.$el.find('.books-view-container').html(bookListView.$el);
   },
@@ -102,7 +124,6 @@ var bookController = new BookController();
 // Views
 var BookListView = Backbone.View.extend({
   el: '.books-main',
-  model: bookModel,
   events: {    
     'click .btn-read': 'removeFromList',
     'click .btn-sort-title': 'sortListBy',
@@ -112,7 +133,7 @@ var BookListView = Backbone.View.extend({
   },
   template: Handlebars.compile(bookListTemplate),
   initialize: function(book){
-    this.data = book;
+    var data = book;
     this.render();
   },
   render: function(){
@@ -147,7 +168,6 @@ var NewBookView = Backbone.View.extend({
     var newAuthor = this.$el.find('#new-author').val();
     var newRecommender = this.$el.find('#new-recommender').val();
     var newGenre = this.$el.find('#new-genre').val();
-    debugger;
     var newBook = {
       id: 'index',
       title: newTitle,
@@ -178,4 +198,4 @@ var NewBookView = Backbone.View.extend({
 //   addFriend: function(){
 //     // add friend 
 //   }
-//});
+// });
