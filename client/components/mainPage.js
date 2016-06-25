@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import mainHeader from 'components/mainHeader';
-import mainMain from 'templates/mainMain.html'
+import mainMain from 'templates/mainMain.html';
 
 var app = {
   init: function() {

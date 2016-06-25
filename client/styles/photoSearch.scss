@@ -1,3 +1,21 @@
+@import url(https://fonts.googleapis.com/css?family=Molle:400italic);
+
+.book-search {
+  position: relative;
+  top: 110px;
+  left: 25px;
+  font-family: 'Molle', cursive;
+  font-size: 30px;
+  color: #090708;
+}
+input.search-book {
+  position: relative;
+  display: block;
+  top: 125px;
+  left: 25px;
+  width: 400px;
+}
+
 .search-container {
   .photo {
     width: 100px;

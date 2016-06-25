@@ -2,13 +2,13 @@
 import $ from 'jquery';
 import 'styles/main.scss';
 import mainPage from 'components/mainPage';
-import TodoControllerView from 'pages/todoReact/todoController';
+import TodoListView from 'pages/todoReact/todoListView';
 import funnySquares from 'pages/funnySquares';
 // import project from 'pages/project';
 import timer from 'pages/timer';
 import formsBackbone from 'pages/formsBackbone';
 import photoSearch from 'pages/photoSearch';
-import BookListView from 'pages/books';
+// import books from 'pages/books';
 
 $(function() {
 
@@ -20,7 +20,7 @@ $(function() {
   // our first javascript router!
   switch (url) {
     case '/pages/todo.html':
-      var todoControllerView = new TodoControllerView(); 
+      var todoListView = new TodoListView(); 
     break;
     case '/pages/funnySquares.html':
       funnySquares.init();
@@ -38,7 +38,7 @@ $(function() {
       photoSearch.init(); 
     break;
     case '/pages/books.html':
-      books.render();
+      // books.render();
     break;
 
     default: break;

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Carme);@import url(https://fonts.googleapis.com/css?family=Caudex:400,700);@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Trirong:400,700);.main-nav-container {
+@import url(https://fonts.googleapis.com/css?family=Carme);@import url(https://fonts.googleapis.com/css?family=Caudex:400,700);@import url(https://fonts.googleapis.com/css?family=Molle:400italic);@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Trirong:400,700);@import url(https://fonts.googleapis.com/css?family=Sigmar+One);@import url(https://fonts.googleapis.com/css?family=Open+Sans);.main-nav-container {
   position: relative;
   display: block;
   top: 0;
@@ -224,6 +224,23 @@
 @import 'projectMain';
 @import 'projectFooter';
 */
+.book-search {
+  position: relative;
+  top: 110px;
+  left: 25px;
+  font-family: 'Molle', cursive;
+  font-size: 30px;
+  color: #090708;
+}
+
+input.search-book {
+  position: relative;
+  display: block;
+  top: 125px;
+  left: 25px;
+  width: 400px;
+}
+
 .search-container .photo {
   width: 100px;
   height: 100px;
