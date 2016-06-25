@@ -2,18 +2,28 @@
 import todoModel from './todoModel';
 
 var dispatcher = {
-  init: function(){},
   clickComplete: function(id){
     todoModel.itemCompleted(id);
   },
   addTodo: function(newTitle){
-    todoModel.addItem(newTitle);
+    if (
+      newTitle !== '' 
+      && typeof newTitle === 'string'
+    ) { 
+      todoModel.addItem(newTitle);
+    }   
   },
   removeTodo: function(id){
     todoModel.removeItem(id);
   },
-  editTodoTitle: function(newTitle, id){
-    todoModel.editTitle(newTitle, id);
+  editTodoTitle: function(id, title, event){
+    if (
+      event.which === 13 
+      && title.length > 0
+      && typeof title === 'string'
+    ) {
+      todoModel.editTitle(id, title);
+    }
   },
   startEditMode: function(id){
     todoModel.startEditing(id);

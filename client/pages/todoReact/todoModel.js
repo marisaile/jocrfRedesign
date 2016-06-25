@@ -73,10 +73,10 @@ var TodoModel = Backbone.Model.extend({
     this.set('todos', todos);
     this.save();
   },
-  editTitle: function(newTitle, id){
+  editTitle: function(id, title){
     var todos = this.get('todos'); 
     var item = _.findWhere(todos, {id: id});
-    item.title = newTitle;
+    item.title = title;
     item.isEditing = false;
     this.set('todos', todos);
     this.save();

@@ -23,40 +23,40 @@ var BookModel = Backbone.Model.extend({
     recommender: '',
     genre: ''
   },
-  // fetch: function() {
-  //   var that = this;
-  //   $.ajax({
-  //     url: '/apiBooks',
-  //     method: 'GET',
-  //     complete: function(response){
-  //       var dataString = response.responseText;
-  //       var data = JSON.parse(dataString);
-  //       data = that.applySchema(data);
-  //       that.set('books', data);   
-  //     }
-  //   });
-  //   // var data = lscache.get('books');
-  //   // data = this.applySchema(data);
-  //   // this.set('books', data);
-  // },
-  // save: function() {
-  //   var that = this;
-  //   var books = this.get('books');
-  //   $.ajax({
-  //     url: '/apiBooks',
-  //     method: 'POST',
-  //     data: {books: JSON.stringify(books)},
-  //     complete: function(response){
-  //       var dataString = response.responseText;
-  //       var data = JSON.parse(dataString);
-  //       data = that.applySchema(data);
-  //       that.set('books', data);   
-    //   }
-    // });
+  fetch: function() {
+    var that = this;
+    $.ajax({
+      url: '/apiBooks',
+      method: 'GET',
+      complete: function(response){
+        var dataString = response.responseText;
+        var data = JSON.parse(dataString);
+        data = that.applySchema(data);
+        that.set('books', data);   
+      }
+    });
+    // var data = lscache.get('books');
+    // data = this.applySchema(data);
+    // this.set('books', data);
+  },
+  save: function() {
+    var that = this;
+    var books = this.get('books');
+    $.ajax({
+      url: '/apiBooks',
+      method: 'POST',
+      data: {books: JSON.stringify(books)},
+      complete: function(response){
+        var dataString = response.responseText;
+        var data = JSON.parse(dataString);
+        data = that.applySchema(data);
+        that.set('books', data);   
+      }
+    });
     // var data = this.get('books'); 
     // this.applySchema(data);
     // lscache.set('books', data);
-  // },
+  },
   applySchema: function(books) { 
     var data = books;
     var schema = this.bookSchema;
@@ -132,14 +132,12 @@ var BookListView = Backbone.View.extend({
     'click .btn-sort-genre': 'sortListBy'
   },
   template: Handlebars.compile(bookListTemplate),
-  initialize: function(books){
+  initialize: function(){
     this.data = books;
     this.render();
   },
-  render: function(){
-    // this.data.forEach(function(book) {
-    //   this.$el.append(this.template(book));
-    // });
+  render: function(books){
+    
   },
   addNewBook: function(){
     bookController.addNewBook();

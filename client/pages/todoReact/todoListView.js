@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import Backbone from 'backbone';
 import todoModel from 'pages/todoReact/todoModel';
 import TodoItemView from 'pages/todoReact/todoView';
-import dispatcher from './todoDispatcher';
+import dispatcher from 'pages/todoReact/todoDispatcher';
 
 
 // Controller
@@ -38,20 +38,18 @@ var TodoControllerView = Backbone.View.extend({
   addTodoItem: function() {
     var $input = this.$el.find('.input-name');
     var newTitle = $input.val();
-    if (newTitle === '') { return; }
     dispatcher.addTodo(newTitle);
     $input.val('');
     // TODO this.model.addItem(newTitle)
   },
-  addTodoItemEnter: function(event){
-    if (event.which === 13) {
-      var $input = this.$el.find('.input-name');
-      var newTitle = $input.val();
-      if (newTitle === '') { return; }
-      dispatcher.addTodo(newTitle);
-      $input.val('');
-    }
-  }
+  // addTodoItemEnter: function(event){
+  //   if (event.which === 13) {
+  //     var $input = this.$el.find('.input-name');
+  //     var title = $input.val();
+  //     dispatcher.addTodo(newTitle);
+  //     $input.val('');
+  //   }
+  // }
 });
 
 module.exports = TodoControllerView;

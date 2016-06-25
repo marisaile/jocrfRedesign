@@ -17,7 +17,6 @@ $(function() {
 
   var url = window.location.pathname;
 
-  // our first javascript router!
   switch (url) {
     case '/pages/todo.html':
       var todoListView = new TodoListView(); 
@@ -25,9 +24,6 @@ $(function() {
     case '/pages/funnySquares.html':
       funnySquares.init();
     break;
-    // case '/pages/projectHome.html':
-    //   project.init();
-    // break;
     case '/pages/timer.html':
       timer.init();
     break;
@@ -37,9 +33,9 @@ $(function() {
     case '/pages/photoSearch.html':
       photoSearch.init(); 
     break;
-    case '/pages/books.html':
-      // books.render();
-    break;
+    // case '/pages/books.html':
+    //   books.render();
+    // break;
 
     default: break;
   }
