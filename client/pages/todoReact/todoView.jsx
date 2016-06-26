@@ -52,9 +52,9 @@ var TodoItem = React.createClass({
     // TODO this.props.todoListView.model.startEditing(id);
   },
   editKeypress: function(event){
-      var id = this.props.data.id;
-      var title = $('li').eq(id).find('input[type="text"]').val();
-      dispatcher.editTodoTitle(id, title, event);
+    var id = this.props.data.id;
+    var title = $('li').eq(id).find('input[type="text"]').val();
+    dispatcher.editTodoTitle(id, title, event);
       // TODO this.props.todoListView.model.editTitle(newTitle, id)
   }
 });

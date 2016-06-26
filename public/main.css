@@ -1,62 +1,76 @@
-@import url(https://fonts.googleapis.com/css?family=Carme);@import url(https://fonts.googleapis.com/css?family=Caudex:400,700);@import url(https://fonts.googleapis.com/css?family=Molle:400italic);@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Trirong:400,700);@import url(https://fonts.googleapis.com/css?family=Sigmar+One);@import url(https://fonts.googleapis.com/css?family=Open+Sans);.main-nav-container {
+@import url(https://fonts.googleapis.com/css?family=Carme);@import url(https://fonts.googleapis.com/css?family=Caudex:400,700);@import url(https://fonts.googleapis.com/css?family=Molle:400italic);@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Trirong:400,700);@import url(https://fonts.googleapis.com/css?family=Sigmar+One);@import url(https://fonts.googleapis.com/css?family=Open+Sans);body {
+  margin: 0;
+}
+
+.main-header .main-nav-container {
   position: relative;
   display: block;
-  top: 0;
-  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #e4e3e8;
+  border-bottom: 1px solid #3a98b8;
   margin: 0;
   padding: 0;
-  height: 75px;
-  width: 100%;
-  background-color: #5919D4;
 }
 
-.main-nav-container {
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  height: 75px;
-  width: 100%;
-  background-color: #FFFA26;
-}
-
-.main-nav-container h1 {
+.main-header .main-nav-container h1 {
   position: absolute;
-  display: block;
-  top: 15px;
+  top: 65px;
   left: 30px;
+  margin: 0;
 }
 
-.main-nav-container ul {
+.main-header .main-nav-container ul {
   position: absolute;
   float: right;
-  top: 30px;
+  top: 80px;
   right: 30px;
+  margin: 0;
 }
 
-.main-nav-container li {
-  color: #4C00B2;
+.main-header .main-nav-container li {
+  color: #212413;
   display: inline-block;
   margin-left: 20px;
   margin-right: 20px;
   list-style-image: none;
 }
 
-.main-nav-container a {
+.main-header .main-nav-container a {
   font-family: 'Carme', sans-serif;
   text-decoration: none;
-  color: #4C00B2;
+  color: #212413;
 }
 
+/*#24205a*/
 .main-main {
   position: relative;
   display: block;
   top: 0;
-  left: 0;
-  height: 100%;
+  height: 800px;
   width: 100%;
+  background-color: #e4e3e8;
 }
 
+/*.main-circle {
+  position: relative;
+  top: 50px;
+  left: 50px;
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  background-color: #9c83e6;
+  z-index: 1;
+}
+.main-square {
+  position: relative;
+  top: 0;
+  left: 150px;
+  height: 200px;
+  width: 200px;
+  background-color: #212413;
+  z-index: 0;
+}*/
 .main-todo {
   margin: 5px auto;
   width: 500px;
@@ -89,7 +103,7 @@
   text-align: right;
 }
 
-.h1 {
+h1 {
   color: red;
 }
 
@@ -215,15 +229,10 @@
   font-size: 14px;
 }
 
-.page-container {
+/*.page-container {
   width: 700px;
   margin: 0 auto;
-}
-
-/* @import 'projectHeader';
-@import 'projectMain';
-@import 'projectFooter';
-*/
+}*/
 .book-search {
   position: relative;
   top: 110px;

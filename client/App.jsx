@@ -4,11 +4,11 @@ import 'styles/main.scss';
 import mainPage from 'components/mainPage';
 import TodoListView from 'pages/todoReact/todoListView';
 import funnySquares from 'pages/funnySquares';
-// import project from 'pages/project';
 import timer from 'pages/timer';
 import formsBackbone from 'pages/formsBackbone';
 import photoSearch from 'pages/photoSearch';
-// import books from 'pages/books';
+// import BookListView from 'pages/books/booksListView';
+
 
 $(function() {
 
@@ -34,7 +34,7 @@ $(function() {
       photoSearch.init(); 
     break;
     // case '/pages/books.html':
-    //   books.render();
+    //   var bookListView = new BookListView();
     // break;
 
     default: break;

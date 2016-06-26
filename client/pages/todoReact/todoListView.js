@@ -41,7 +41,7 @@ var TodoControllerView = Backbone.View.extend({
     dispatcher.addTodo(newTitle);
     $input.val('');
     // TODO this.model.addItem(newTitle)
-  },
+  }
   // addTodoItemEnter: function(event){
   //   if (event.which === 13) {
   //     var $input = this.$el.find('.input-name');

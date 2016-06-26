@@ -1,35 +1,70 @@
 @import url(https://fonts.googleapis.com/css?family=Carme);
 
-.main-nav-container {
-  position: fixed;
+body {
+  margin: 0;
+}
+
+.main-header .main-nav-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100px;
+  background-color: #e4e3e8; 
+  border-bottom: 1px solid #3a98b8;
+  margin: 0;
+  padding: 0;
+
+  h1 {
+    position: absolute;
+    top: 65px;
+    left: 30px;
+    margin: 0;
+  } 
+  ul {
+    position: absolute;
+    float: right;
+    top: 80px;
+    right: 30px;
+    margin: 0;
+  }
+  li {
+    color: #212413; 
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    list-style-image: none;
+  }
+  a {
+    font-family: 'Carme', sans-serif;
+    text-decoration: none;
+    color: #212413;
+  }
+}
+/*#24205a*/
+.main-main {
+  position: relative;
   display: block;
   top: 0;
-  left: 0;
-  height: 75px;
+  height: 800px;
   width: 100%;
-  background-color: #FFFA26;
+  background-color: #e4e3e8;
 }
-.main-nav-container h1 {
-  position: absolute;
-  display: block;
-  top: 15px;
-  left: 30px;
+/*.main-circle {
+  position: relative;
+  top: 50px;
+  left: 50px;
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  background-color: #9c83e6;
+  z-index: 1;
 }
-.main-nav-container ul {
-  position: absolute;
-  float: right;
-  top: 30px;
-  right: 30px;
-}
-.main-nav-container li {
-  color: #4C00B2;
-  display: inline-block;
-  margin-left: 20px;
-  margin-right: 20px;
-  list-style-image: none;
-}
-.main-nav-container a {
-  font-family: 'Carme', sans-serif;
-  text-decoration: none;
-  color: #4C00B2;
-}
+.main-square {
+  position: relative;
+  top: 0;
+  left: 150px;
+  height: 200px;
+  width: 200px;
+  background-color: #212413;
+  z-index: 0;
+}*/

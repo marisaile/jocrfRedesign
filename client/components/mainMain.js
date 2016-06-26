@@ -1,12 +1,12 @@
 import $ from 'jquery';
-import header from 'templates/mainHeader.html';
+import main from 'templates/mainMain.html';
 
 var app = {
   init: function() {
     app.render();
   },
   render: function() {
-    $('.main-header').html(header);
+    $('.main-main').html(main);
   }
 };
 
