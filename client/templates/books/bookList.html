@@ -1,13 +1,20 @@
-<ul class="book-list">
-  <div class="container-fluid">
-    <div class="row book-list">
-      <div class="col-md-3">Title</div>
-      <div class="col-md-3">Author</div>
-      <div class="col-md-2">Friend</div>
-      <div class="col-md-3">Genre</div>
-      <div class="col-md-1">Rating</div>
-    </ul>
-  </div>
+<div class="container-fluid">
+  <ul class="book-list">
+    <li class="header-row">
+      <div class="row book-list">
+        <div class="col-md-3">Title</div>
+        <div class="col-md-3">Author</div>
+        <div class="col-md-2">Friend</div>
+        <div class="col-md-3">Genre</div>
+        <!-- <div class="col-md-1">Rating</div> -->
+      </div> 
+    <li class="template-row">
+      <div class="col-md-3 title">{{title}}</div>
+      <div class="col-md-3 author">{{author}}</div>
+      <div class="col-md-2 friend">{{friend}}</div>
+      <div class="col-md-3 genre">{{genre}}</div>
+    </li>   
+  </ul>
   <div class="row button"><button class="btn btn-default btn-add-book">Add a book!</button></div>
 </div>
 

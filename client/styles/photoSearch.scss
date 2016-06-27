@@ -1,12 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Molle:400italic);
 
+body.override-bootstrap {
+  margin: 0;
+  background-color: #e4e3e8;
+}
 .book-search {
   position: relative;
   top: 110px;
   left: 25px;
   font-family: 'Molle', cursive;
   font-size: 30px;
-  color: #090708;
+  color: #212413;
 }
 input.search-book {
   position: relative;

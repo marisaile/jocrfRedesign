@@ -1,4 +1,14 @@
-/*.page-container {
-  width: 700px;
-  margin: 0 auto;
-}*/
+
+
+
+body.override-bootstrap {
+  margin: 0;
+  background-color: #e4e3e8;
+}
+.page-container {
+	position: relative;
+	top: 125px;
+	left: 25px;
+	width: 500px;
+	background-color: white;
+}

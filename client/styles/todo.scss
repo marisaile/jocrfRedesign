@@ -1,10 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Caudex:400,700);
 
+body.override-bootstrap {
+  margin: 0;
+  background-color: #e4e3e8;
+}
 .main-todo {
   margin: 5px auto;
   width: 500px;
   height: 100%;
-  background-color: #eeeeee;
+  /*background-color: #eeeeee;*/
 }
 .todo-container {
   margin: 5px auto;
@@ -14,7 +18,7 @@
 
 #todo-title {
   font-family: 'Caudex';
-  color: #222;
+  color: #212413;
   font-weight: 400;
 }
 .add-todo-container {

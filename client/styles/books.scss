@@ -1,25 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @import url(https://fonts.googleapis.com/css?family=Trirong:400,700);
 
-.books-header {
-  position: sticky;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 140px;
-  background-image: url(http://marvelmoe.com/bookapi/img/books.jpg);
+body.override-bootstrap {
+  margin: 0;
+  background-color: #e4e3e8;
 }
-.books-header h1 {
-  position: absolute;
-  font-family: 'Nunito', sans-serif;
-  font-size: 50px;
-  color: white;
-  left: 20px;
-  top: 50px;
-}
-
-/*.book {
+.book {
     padding: 15px 0 0 0;
     margin: auto;
 }
@@ -29,7 +15,7 @@
     border-right: 20px solid transparent;
     top: -15px;
     z-index: -1;
-}*/
+}
 .book-list-container {
   position: relative;
   display: block;
@@ -40,49 +26,11 @@
   font-size: 20px;
   z-index: 1;
 }
-.table th {
+/*.table th {
   font-weight: bold;
   z-index: 1;
+}*/
 
-}
-@keyframes book-bounce {
-  0% { transform: translateY(0); }
-  40% { transform: translateY(-10px); }
-  80% { transform: translateY(0); }
-  100% { transform: translateY(0); }
-}
-
-@keyframes shelf-lift {
-  0% { transform: translateY(0) rotate(0); }
-  20% { transform: translateY(-4px) rotate(10deg); }
-  40% { transform: translateY(-4px) rotate(0); }
-  40% { transform: translateY(-4px) rotate(-10deg); }
-  80% { transform: translateY(0); }
-  100% { transform: translateY(0); }
-}
-
-.book-shelf:hover {
-  cursor: pointer;
-  
-  .book-shelf__book {
-    animation: book-bounce 0.4s ease;
-    animation-iteration-count: 1;
-  }
-  
-  .book-shelf__book--two {
-    animation-delay: 0.04s;
-  }
-
-  .book-shelf__book--three {
-    animation-delay: 0.08s;
-  }
-  
-  .book-shelf__shelf {
-    animation: shelf-lift 0.4s ease;
-    animation-iteration-count: 1;
-    transform-origin: 50% 50%;
-  }
-}
 
 .btn-add-book {
   top: 50px;

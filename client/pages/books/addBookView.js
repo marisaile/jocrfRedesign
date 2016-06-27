@@ -2,23 +2,36 @@
 import Backbone from 'backbone';
 import Handlebars from 'handlebars';
 import newBookTemplate from 'templates/books/newBookForm.html';
-import bookListView from 'pages/books/booksListView';
+import bookController from 'pages/books/booksController';
 
 var AddBookView = Backbone.View.extend({
   el: '.books-main',
-  events: {}, 
+  events: {
+    'click .btn-add': 'addBook'
+  }, 
   template: Handlebars.compile(newBookTemplate),
   initialize: function(){
     this.render();
   },
   render: function(){
     this.$el.html(this.template({}));
+  },
+  addBook: function(){
+    var title = this.$el.find('.title').val();
+    var author = this.$el.find('.author').val();
+    var friend = this.$el.find('.friend').val();
+    var genre = this.$el.find('.genre').val();
+    var rating = this.$el.find('.rating').val();
+    var newBook = {
+      id: 'index',
+      title: title,
+      author: author,
+      friend: friend,
+      genre: genre,
+      rating: rating
+    };
+    bookController.addBook(newBook);
   }
-  // addBook: function(){
-     
-  //   // send values to the controller
-  //   // add book to list and switch to list view
-  // }
 });
 var addBookView = new AddBookView();
 

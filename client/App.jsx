@@ -7,7 +7,7 @@ import funnySquares from 'pages/funnySquares';
 import timer from 'pages/timer';
 import formsBackbone from 'pages/formsBackbone';
 import photoSearch from 'pages/photoSearch';
-// import BookListView from 'pages/books/booksListView';
+import bookListView from 'pages/books/booksListView';
 
 
 $(function() {
@@ -33,10 +33,9 @@ $(function() {
     case '/pages/photoSearch.html':
       photoSearch.init(); 
     break;
-    // case '/pages/books.html':
-    //   var bookListView = new BookListView();
-    // break;
-
+    case '/pages/books.html':
+      bookListView.render();
+    break;
     default: break;
   }
 
