@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+@import url(https://fonts.googleapis.com/css?family=Trirong:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Libre+Franklin);
+@import url(https://fonts.googleapis.com/css?family=Prompt);
+@import url(https://fonts.googleapis.com/css?family=Amita);
+@import url(https://fonts.googleapis.com/css?family=Trirong:700);
+
+body.override-bootstrap {
+  margin: 0;
+  background-color: #e4e3e8;
+}
+.school-subject {
+  position: relative;
+  font-family: 'Trirong', sans-serif;
+  color: #212413;
+  font-size: 20px;
+  top: 30px;
+  left: 50px;
+}
+.form-control.subject-list {
+  position: relative;
+  top: 35px;
+  left: 50px;
+  width: 250px;
+  background-color: #f4f3f8;
+}

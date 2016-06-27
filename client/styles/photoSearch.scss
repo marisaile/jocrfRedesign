@@ -1,33 +1,42 @@
-@import url(https://fonts.googleapis.com/css?family=Molle:400italic);
+@import url(https://fonts.googleapis.com/css?family=Prompt);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Proza+Libre:400,500);
 
 body.override-bootstrap {
   margin: 0;
   background-color: #e4e3e8;
 }
-.book-search {
+.photo-search {
   position: relative;
-  top: 110px;
+  top: 25px;
   left: 25px;
-  font-family: 'Molle', cursive;
-  font-size: 30px;
+  font-family: 'Prompt', cursive;
+  font-size: 20px;
   color: #212413;
 }
-input.search-book {
+input.search-photo {
   position: relative;
   display: block;
-  top: 125px;
+  top: 30px;
   left: 25px;
   width: 400px;
+  background-color: #f4f3f8;
 }
 
-.search-container {
+.search-results {
+  position: relative;
+  display: block;
+  margin: 50px auto;
+  width: 90%;
   .photo {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
     overflow: hidden;
     display: inline-block;
     img {
       width: 100%;
+      border: solid 1px #212413;
     }
   }
 }

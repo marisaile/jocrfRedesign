@@ -17,7 +17,7 @@ var BookController = Backbone.View.extend({
   render: function(){ 
     var books = this.model.get('books');
     this.$el.find('.books-view-container').html(bookListView);
-    books.forEach(this.$el.find('.template-row').append(item));
+    books.forEach(this.$el.find('.template-row').append(book));
   },
   // removeFromList: function(id){
   //   this.model.RemoveFromList(id);
