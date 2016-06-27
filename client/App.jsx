@@ -5,7 +5,7 @@ import mainPage from 'components/mainPage';
 import TodoListView from 'pages/todoReact/todoListView';
 import funnySquares from 'pages/funnySquares';
 import timer from 'pages/timer';
-import formsBackbone from 'pages/formsBackbone';
+import schoolBooks from 'pages/schoolBooks';
 import photoSearch from 'pages/photoSearch';
 import bookListView from 'pages/books/booksListView';
 
@@ -27,8 +27,8 @@ $(function() {
     case '/pages/timer.html':
       timer.init();
     break;
-    case '/pages/formsBackbone.html':
-      formsBackbone.render(); 
+    case '/pages/probablyNothing.html':
+      schoolBooks.init();
     break;
     case '/pages/photoSearch.html':
       photoSearch.init(); 

@@ -10,6 +10,9 @@ body.override-bootstrap {
   margin: 0;
   background-color: #e4e3e8;
 }
+.row.subject-list-container {
+  height: 30%;
+}
 .school-subject {
   position: relative;
   font-family: 'Trirong', sans-serif;
@@ -24,4 +27,17 @@ body.override-bootstrap {
   left: 50px;
   width: 250px;
   background-color: #f4f3f8;
+}
+.row.response-container {
+  height: 70%;
+}
+.response-container ul {
+  position: relative;
+  margin: 100px auto; 
+}
+.response-container li {
+  list-style-image: none;
+  font-family: 'Trirong', sans-serif;
+  color: #212413;
+  font-size: 16px;
 }

@@ -11,16 +11,20 @@
   <body class="override-bootstrap">
     <header class="main-header"></header>
     <main>
-      <h1 class="school-subject">
-        Find interesting non-textbooks to read to supplement your learning in various school subjects!
-      </h1>
-      <select class="form-control subject-list">
-        <option class="subject">Science</option>
-        <option class="subject">History</option>
-        <option class="subject">English Literature</option>
-        <option class="subject">Math/Statistics</option>
-        <option class="subject">Political Science/Current Affairs</option>
-      </select>
+      <div class="row subject-list-container">
+        <h1 class="school-subject">Find interesting non-textbooks to read to supplement your learning in various school subjects!</h1>
+          <select class="form-control select-picker subject-list" data-live-search="true">
+            <option>Select One</option>
+            <option>Science</option>
+            <option>History</option>
+            <option>English Literature</option>
+            <option>Math/Statistics</option>
+            <option>Political Science/Current Affairs</option>
+            <option>Psychology</option>
+          </select>
+        </div>
+        <div class="row response-container "></div>
+      </main>
     </main>
     <footer></footer>
   </body>
