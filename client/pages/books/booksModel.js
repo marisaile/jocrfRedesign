@@ -14,44 +14,44 @@ var BookModel = Backbone.Model.extend({
     friend: '',
     genre: ''
   },
-  // fetch: function(){
-  //   var data = lscache.get('books');
-  //   data = this.applySchema(data);
-  //   this.set('books', data);
-  // },
-  // save: function(){
-  //   var data = this.get('books');
-  //   data = this.applySchema(data);
-  //   lscache.set('books', data);
-  // },
-  fetch: function() {
-    var that = this;
-    $.ajax({
-      url: '/api',
-      method: 'GET',
-      complete: function(response){
-        var dataString = response.responseText;
-        var data = JSON.parse(dataString);
-        data = that.applySchema(data);
-        that.set('books', data);   
-      }
-    });
+  fetch: function(){
+    var data = lscache.get('books');
+    data = this.applySchema(data);
+    this.set('books', data);
   },
-  save: function() {
-    var that = this;
-    var books = this.get('books');
-    $.ajax({
-      url: '/api',
-      method: 'POST',
-      data: {books: JSON.stringify(books)},
-      complete: function(response){
-        var dataString = response.responseText;
-        var data = JSON.parse(dataString);
-        data = that.applySchema(data);
-        that.set('books', data);   
-      }
-    });
+  save: function(){
+    var data = this.get('books');
+    data = this.applySchema(data);
+    lscache.set('books', data);
   },
+  // fetch: function() {
+  //   var that = this;
+  //   $.ajax({
+  //     url: '/api',
+  //     method: 'GET',
+  //     complete: function(response){
+  //       var dataString = response.responseText;
+  //       var data = JSON.parse(dataString);
+  //       data = that.applySchema(data);
+  //       that.set('books', data);   
+  //     }
+  //   });
+  // },
+  // save: function() {
+  //   var that = this;
+  //   var books = this.get('books');
+  //   $.ajax({
+  //     url: '/api',
+  //     method: 'POST',
+  //     data: {books: JSON.stringify(books)},
+  //     complete: function(response){
+  //       var dataString = response.responseText;
+  //       var data = JSON.parse(dataString);
+  //       data = that.applySchema(data);
+  //       that.set('books', data);   
+  //     }
+  //   });
+  // },
   applySchema: function(books) { 
     var data = books;
     var schema = this.bookSchema;
@@ -69,6 +69,7 @@ var BookModel = Backbone.Model.extend({
   //   this.save();
   // },
   addBook: function(newBook){
+    debugger;
     var books = this.get('books');
     books.push(newBook);
     this.set('books', books);

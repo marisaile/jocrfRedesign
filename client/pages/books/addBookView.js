@@ -17,19 +17,12 @@ var AddBookView = Backbone.View.extend({
     this.$el.html(this.template({}));
   },
   addBook: function(){
-    var title = this.$el.find('.title').val();
-    var author = this.$el.find('.author').val();
-    var friend = this.$el.find('.friend').val();
-    var genre = this.$el.find('.genre').val();
-    var rating = this.$el.find('.rating').val();
-    var newBook = {
-      id: 'index',
-      title: title,
-      author: author,
-      friend: friend,
-      genre: genre,
-      rating: rating
-    };
+    var $title = this.$el.find('.title').val();
+    var $author = this.$el.find('.author').val();
+    var $friend = this.$el.find('.friend').val();
+    var $genre = this.$el.find('.genre').val();
+    var $rating = this.$el.find('.rating').val();
+    var newBook = [$title, $author, $friend, $genre, $rating];
     bookController.addBook(newBook);
   }
 });

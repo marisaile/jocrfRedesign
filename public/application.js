@@ -10074,7 +10074,7 @@
 	  model: _pagesTodoReactTodoModel2['default'],
 	  events: {
 	    'click .btn-add': 'addTodoItem',
-	    'keypress .add-todo-container': 'addTodoItemEnter'
+	    'keypress .add-todo-container': 'addTodoEnter'
 	  },
 	  initialize: function initialize() {
 	    this.model.fetch();
@@ -10093,21 +10093,20 @@
 	      );
 	    });
 	  },
-	  addTodoItem: function addTodoItem() {
+	  addTodoItem: function addTodoItem(event) {
 	    var $input = this.$el.find('.input-name');
 	    var newTitle = $input.val();
 	    _pagesTodoReactTodoDispatcher2['default'].addTodo(newTitle);
 	    $input.val('');
-	    // TODO this.model.addItem(newTitle)
+	  },
+	  addTodoEnter: function addTodoEnter(event) {
+	    if (event.which === 13) {
+	      var $input = this.$el.find('.input-name');
+	      var newTitle = $input.val();
+	      _pagesTodoReactTodoDispatcher2['default'].addTodo(newTitle);
+	      $input.val('');
+	    }
 	  }
-	  // addTodoItemEnter: function(event){
-	  //   if (event.which === 13) {
-	  //     var $input = this.$el.find('.input-name');
-	  //     var title = $input.val();
-	  //     dispatcher.addTodo(newTitle);
-	  //     $input.val('');
-	  //   }
-	  // }
 	});
 	
 	module.exports = TodoControllerView;
@@ -33423,6 +33422,11 @@
 	      _todoModel2['default'].addItem(newTitle);
 	    }
 	  },
+	  addTodoEnter: function addTodoEnter(newTitle) {
+	    if (newTitle !== '' && typeof newTitle === 'string') {
+	      _todoModel2['default'].addItem(newTitle);
+	    }
+	  },
 	  removeTodo: function removeTodo(id) {
 	    _todoModel2['default'].removeItem(id);
 	  },
@@ -38616,19 +38620,12 @@
 	    this.$el.html(this.template({}));
 	  },
 	  addBook: function addBook() {
-	    var title = this.$el.find('.title').val();
-	    var author = this.$el.find('.author').val();
-	    var friend = this.$el.find('.friend').val();
-	    var genre = this.$el.find('.genre').val();
-	    var rating = this.$el.find('.rating').val();
-	    var newBook = {
-	      id: 'index',
-	      title: title,
-	      author: author,
-	      friend: friend,
-	      genre: genre,
-	      rating: rating
-	    };
+	    var $title = this.$el.find('.title').val();
+	    var $author = this.$el.find('.author').val();
+	    var $friend = this.$el.find('.friend').val();
+	    var $genre = this.$el.find('.genre').val();
+	    var $rating = this.$el.find('.rating').val();
+	    var newBook = [$title, $author, $friend, $genre, $rating];
 	    _pagesBooksBooksController2['default'].addBook(newBook);
 	  }
 	});
@@ -38640,7 +38637,7 @@
 /* 218 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"new-book-container\">\n  <form>\n    <div class=\"form-group form-label\">\n      <label for=\"title\">Book Title</label>\n      <input type=\"text\" class=\"form-control\" id=\"new-title\" placeholder=\"Title\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"author\">Author</label>\n      <input type=\"text\" class=\"form-control\" id=\"new-author\" placeholder=\"Author\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"friend\">Who'd you hear about it from?</label>\n      <input type=\"text\" class=\"form-control\" id=\"new-recommender\" placeholder=\"Recommender's name\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"genre\">Genre</label>\n      <input type=\"text\" class=\"form-control\" id=\"new-genre\" placeholder=\"Genre\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"rating\">Rating</label>\n      <input type=\"text\" class=\"form-control\" id=\"new-genre\" placeholder=\"Genre\">\n    </div>\n    <!-- <div class=\"form-group\">\n      <label for=\"new-synopsis\">What it's about?</label>\n      <textarea class=\"form-control\" id=\"new-synopsis\" rows=\"3\" placeholder=\"Synopsis\"></textarea>\n    </div> -->\n  </form>\n  <svg class=\"book-shelf btn btn-default btn-add\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" viewBox=\"0 0 84 94\" height=\"94\" width=\"84\">\n  <path fill=\"none\" d=\"M37.612 92.805L4.487 73.71c-2.75-1.587-4.45-4.52-4.45-7.687L.008 27.877c-.003-3.154 1.676-6.063 4.405-7.634L37.558 1.167c2.73-1.57 6.096-1.566 8.835.013l33.124 19.096c2.75 1.586 4.45 4.518 4.45 7.686l.028 38.146c.002 3.154-1.677 6.063-4.406 7.634L46.445 92.818c-2.73 1.57-6.096 1.566-8.834-.013z\"/>\n  <g class=\"book-shelf__book book-shelf__book--one\" fill-rule=\"evenodd\">\n    <path fill=\"#5199fc\" d=\"M31 29h4c1.105 0 2 .895 2 2v29c0 1.105-.895 2-2 2h-4c-1.105 0-2-.895-2-2V31c0-1.105.895-2 2-2z\"/>\n    <path fill=\"#afd7fb\" d=\"M34 36h-2c-.552 0-1-.448-1-1s.448-1 1-1h2c.552 0 1 .448 1 1s-.448 1-1 1zm-2 1h2c.552 0 1 .448 1 1s-.448 1-1 1h-2c-.552 0-1-.448-1-1s.448-1 1-1z\"/>\n  </g>\n  <g class=\"book-shelf__book book-shelf__book--two\" fill-rule=\"evenodd\">\n    <path fill=\"#ff9868\" d=\"M39 34h6c1.105 0 2 .895 2 2v24c0 1.105-.895 2-2 2h-6c-1.105 0-2-.895-2-2V36c0-1.105.895-2 2-2z\"/>\n    <path fill=\"#d06061\" d=\"M42 38c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2z\"/>\n  </g>\n  <g class=\"book-shelf__book book-shelf__book--three\" fill-rule=\"evenodd\">\n    <path fill=\"#ff5068\" d=\"M49 32h2c1.105 0 2 .86 2 1.92v25.906c0 1.06-.895 1.92-2 1.92h-2c-1.105 0-2-.86-2-1.92V33.92c0-1.06.895-1.92 2-1.92z\"/>\n    <path fill=\"#d93368\" d=\"M50 35c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1s-1-.448-1-1v-2c0-.552.448-1 1-1z\"/>\n  </g>\n  <g fill-rule=\"evenodd\">\n    <path class=\"book-shelf__shelf\" fill=\"#ae8280\" d=\"M21 60h40c1.105 0 2 .895 2 2s-.895 2-2 2H21c-1.105 0-2-.895-2-2s.895-2 2-2z\"/>\n    <path fill=\"#855f6d\" d=\"M51.5 67c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5zm-21 0c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5z\"/>\n  </g>\n</svg>\n <!--  <button class=\"btn btn-default btn-add\">Add</button> -->\n</div>\n";
+	module.exports = "\n<div class=\"new-book-container\">\n  <form>\n    <div class=\"form-group form-label\">\n      <label for=\"title\">Book Title</label>\n      <input type=\"text\" class=\"form-control title\" placeholder=\"Title\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"author\">Author</label>\n      <input type=\"text\" class=\"form-control author\" placeholder=\"Author\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"friend\">Who'd you hear about it from?</label>\n      <input type=\"text\" class=\"form-control friend\" placeholder=\"Friend's name\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"genre\">Genre</label>\n      <input type=\"text\" class=\"form-control genre\" placeholder=\"Genre\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"rating\">Rating</label>\n      <input type=\"text\" class=\"form-control rating\" placeholder=\"Genre\">\n    </div>\n    <!-- <div class=\"form-group\">\n      <label for=\"new-synopsis\">What it's about?</label>\n      <textarea class=\"form-control\" id=\"new-synopsis\" rows=\"3\" placeholder=\"Synopsis\"></textarea>\n    </div> -->\n  </form>\n  <svg class=\"book-shelf btn btn-default btn-add\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" viewBox=\"0 0 84 94\" height=\"94\" width=\"84\">\n  <path fill=\"none\" d=\"M37.612 92.805L4.487 73.71c-2.75-1.587-4.45-4.52-4.45-7.687L.008 27.877c-.003-3.154 1.676-6.063 4.405-7.634L37.558 1.167c2.73-1.57 6.096-1.566 8.835.013l33.124 19.096c2.75 1.586 4.45 4.518 4.45 7.686l.028 38.146c.002 3.154-1.677 6.063-4.406 7.634L46.445 92.818c-2.73 1.57-6.096 1.566-8.834-.013z\"/>\n  <g class=\"book-shelf__book book-shelf__book--one\" fill-rule=\"evenodd\">\n    <path fill=\"#5199fc\" d=\"M31 29h4c1.105 0 2 .895 2 2v29c0 1.105-.895 2-2 2h-4c-1.105 0-2-.895-2-2V31c0-1.105.895-2 2-2z\"/>\n    <path fill=\"#afd7fb\" d=\"M34 36h-2c-.552 0-1-.448-1-1s.448-1 1-1h2c.552 0 1 .448 1 1s-.448 1-1 1zm-2 1h2c.552 0 1 .448 1 1s-.448 1-1 1h-2c-.552 0-1-.448-1-1s.448-1 1-1z\"/>\n  </g>\n  <g class=\"book-shelf__book book-shelf__book--two\" fill-rule=\"evenodd\">\n    <path fill=\"#ff9868\" d=\"M39 34h6c1.105 0 2 .895 2 2v24c0 1.105-.895 2-2 2h-6c-1.105 0-2-.895-2-2V36c0-1.105.895-2 2-2z\"/>\n    <path fill=\"#d06061\" d=\"M42 38c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2z\"/>\n  </g>\n  <g class=\"book-shelf__book book-shelf__book--three\" fill-rule=\"evenodd\">\n    <path fill=\"#ff5068\" d=\"M49 32h2c1.105 0 2 .86 2 1.92v25.906c0 1.06-.895 1.92-2 1.92h-2c-1.105 0-2-.86-2-1.92V33.92c0-1.06.895-1.92 2-1.92z\"/>\n    <path fill=\"#d93368\" d=\"M50 35c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1s-1-.448-1-1v-2c0-.552.448-1 1-1z\"/>\n  </g>\n  <g fill-rule=\"evenodd\">\n    <path class=\"book-shelf__shelf\" fill=\"#ae8280\" d=\"M21 60h40c1.105 0 2 .895 2 2s-.895 2-2 2H21c-1.105 0-2-.895-2-2s.895-2 2-2z\"/>\n    <path fill=\"#855f6d\" d=\"M51.5 67c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5zm-21 0c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5z\"/>\n  </g>\n</svg>\n <!--  <button class=\"btn btn-default btn-add\">Add</button> -->\n</div>\n";
 
 /***/ },
 /* 219 */
@@ -38679,7 +38676,7 @@
 	  render: function render() {
 	    var books = this.model.get('books');
 	    this.$el.find('.books-view-container').html(_pagesBooksBooksListView2['default']);
-	    books.forEach(this.$el.find('.template-row').append(book));
+	    // books.forEach(this.$el.find('.template-row').append());
 	  },
 	  // removeFromList: function(id){
 	  //   this.model.RemoveFromList(id);
@@ -38687,6 +38684,7 @@
 	  // },
 	  addBook: function addBook(newBook) {
 	    this.model.addBook(newBook);
+	    debugger;
 	    this.render();
 	  }
 	});
@@ -38729,44 +38727,44 @@
 	    friend: '',
 	    genre: ''
 	  },
-	  // fetch: function(){
-	  //   var data = lscache.get('books');
-	  //   data = this.applySchema(data);
-	  //   this.set('books', data);
-	  // },
-	  // save: function(){
-	  //   var data = this.get('books');
-	  //   data = this.applySchema(data);
-	  //   lscache.set('books', data);
-	  // },
 	  fetch: function fetch() {
-	    var that = this;
-	    _jquery2['default'].ajax({
-	      url: '/api',
-	      method: 'GET',
-	      complete: function complete(response) {
-	        var dataString = response.responseText;
-	        var data = JSON.parse(dataString);
-	        data = that.applySchema(data);
-	        that.set('books', data);
-	      }
-	    });
+	    var data = _lscache2['default'].get('books');
+	    data = this.applySchema(data);
+	    this.set('books', data);
 	  },
 	  save: function save() {
-	    var that = this;
-	    var books = this.get('books');
-	    _jquery2['default'].ajax({
-	      url: '/api',
-	      method: 'POST',
-	      data: { books: JSON.stringify(books) },
-	      complete: function complete(response) {
-	        var dataString = response.responseText;
-	        var data = JSON.parse(dataString);
-	        data = that.applySchema(data);
-	        that.set('books', data);
-	      }
-	    });
+	    var data = this.get('books');
+	    data = this.applySchema(data);
+	    _lscache2['default'].set('books', data);
 	  },
+	  // fetch: function() {
+	  //   var that = this;
+	  //   $.ajax({
+	  //     url: '/api',
+	  //     method: 'GET',
+	  //     complete: function(response){
+	  //       var dataString = response.responseText;
+	  //       var data = JSON.parse(dataString);
+	  //       data = that.applySchema(data);
+	  //       that.set('books', data);  
+	  //     }
+	  //   });
+	  // },
+	  // save: function() {
+	  //   var that = this;
+	  //   var books = this.get('books');
+	  //   $.ajax({
+	  //     url: '/api',
+	  //     method: 'POST',
+	  //     data: {books: JSON.stringify(books)},
+	  //     complete: function(response){
+	  //       var dataString = response.responseText;
+	  //       var data = JSON.parse(dataString);
+	  //       data = that.applySchema(data);
+	  //       that.set('books', data);  
+	  //     }
+	  //   });
+	  // },
 	  applySchema: function applySchema(books) {
 	    var data = books;
 	    var schema = this.bookSchema;
@@ -38784,6 +38782,7 @@
 	  //   this.save();
 	  // },
 	  addBook: function addBook(newBook) {
+	    debugger;
 	    var books = this.get('books');
 	    books.push(newBook);
 	    this.set('books', books);

@@ -11,7 +11,15 @@ var dispatcher = {
       && typeof newTitle === 'string'
     ) { 
       todoModel.addItem(newTitle);
-    }   
+    } 
+  },
+  addTodoEnter: function(newTitle){
+    if ( 
+      newTitle !== '' 
+      && typeof newTitle === 'string'
+    ) {
+      todoModel.addItem(newTitle);
+    }
   },
   removeTodo: function(id){
     todoModel.removeItem(id);

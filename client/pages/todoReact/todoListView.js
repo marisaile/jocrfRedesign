@@ -14,7 +14,7 @@ var TodoControllerView = Backbone.View.extend({
   model: todoModel,
   events: {
     'click .btn-add': 'addTodoItem',
-    'keypress .add-todo-container': 'addTodoItemEnter'
+    'keypress .add-todo-container': 'addTodoEnter'
   },
   initialize: function(){
     this.model.fetch();
@@ -35,21 +35,20 @@ var TodoControllerView = Backbone.View.extend({
       );
     }); 
   },
-  addTodoItem: function() {
+  addTodoItem: function(event) {
     var $input = this.$el.find('.input-name');
     var newTitle = $input.val();
     dispatcher.addTodo(newTitle);
     $input.val('');
-    // TODO this.model.addItem(newTitle)
+  },
+  addTodoEnter: function(event) {
+    if (event.which === 13) {
+      var $input = this.$el.find('.input-name');
+      var newTitle = $input.val();
+      dispatcher.addTodo(newTitle);
+      $input.val('');
+    }
   }
-  // addTodoItemEnter: function(event){
-  //   if (event.which === 13) {
-  //     var $input = this.$el.find('.input-name');
-  //     var title = $input.val();
-  //     dispatcher.addTodo(newTitle);
-  //     $input.val('');
-  //   }
-  // }
 });
 
 module.exports = TodoControllerView;
