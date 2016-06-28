@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Carme);@import url(https://fonts.googleapis.com/css?family=Prompt);@import url(https://fonts.googleapis.com/css?family=Libre+Franklin);@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Amita);@import url(https://fonts.googleapis.com/css?family=Lato);@import url(https://fonts.googleapis.com/css?family=Proza+Libre:400,500);@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Trirong:700);@import url(https://fonts.googleapis.com/css?family=Sigmar+One);@import url(https://fonts.googleapis.com/css?family=Trirong:400,700);@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700,300);body {
+@import url(https://fonts.googleapis.com/css?family=Carme);@import url(https://fonts.googleapis.com/css?family=Prompt);@import url(https://fonts.googleapis.com/css?family=Libre+Franklin);@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Amita);@import url(https://fonts.googleapis.com/css?family=Lato);@import url(https://fonts.googleapis.com/css?family=Proza+Libre:400,500);@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Trirong:700);@import url(https://fonts.googleapis.com/css?family=Sigmar+One);@import url(https://fonts.googleapis.com/css?family=Trirong:400,700);body {
   margin: 0;
   background-color: #e4e3e8;
 }
@@ -14,22 +14,24 @@
   padding: 0;
 }
 
-.col-md-2 a {
-  position: absolute;
+.col-md-2 {
+  position: relative;
   top: 75px;
   left: 75px;
+}
+
+.col-md-2 a {
   font-family: 'Carme', sans-serif;
   font-size: 16px;
   text-decoration: none;
   color: #212413;
 }
 
-.col-md-2 a.nav:hover {
+.col-md-2 a:hover {
   color: #e4e3e8;
   text-decoration: none;
   /*text-align: center;*/
   top: 60px;
-  left: -5px;
   height: 40px;
   width: 240px;
   background-color: #3a98b8;
@@ -379,156 +381,6 @@ body.override-bootstrap {
   font-family: 'Trirong', sans-serif;
   color: #212413;
   font-size: 16px;
-}
-
-body {
-  font-family: 'Open Sans', Arial, serif;
-  font-weight: 400;
-  background-color: #fff;
-  color: #2c3e50;
-}
-
-h1 {
-  font-family: 'Montserrat', Arial, serif;
-  /*font-family: 'Open Sans', Arial, serif;*/
-  font-weight: 700;
-}
-
-.header h1 {
-  margin: 1%;
-}
-
-.container {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 24em;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.content {
-  background-color: #A2CECD;
-}
-
-.inner {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  max-width: 50%;
-}
-
-.inner .iconmelon {
-  position: relative;
-  width: 64px;
-  height: 64px;
-  display: block;
-  fill: #525151;
-  margin: 0 auto;
-}
-
-.inhoud .iconmelon {
-  position: absolute;
-  width: 128px;
-  height: 128px;
-  display: block;
-  fill: #525151;
-  bottom: 0px;
-  left: calc(50% - 64px);
-  transition: all .3s ease-in-out;
-}
-
-.iconmelon:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-h2, p {
-  text-align: center;
-  font-size: 0.8725em;
-  margin: 0;
-}
-
-.onder {
-  text-align: left;
-  padding: 8px 10px;
-}
-
-.onder p {
-  font-weight: 400;
-  margin: 0;
-  text-align: left;
-  font-size: 0.8125em;
-}
-
-.onder p strong {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 1em;
-  margin: 0;
-}
-
-.containerblok {
-  width: 100%;
-}
-
-.een {
-  width: 31%;
-  background-color: #2D1E2F;
-  border-radius: 3px;
-  height: 250px;
-  margin: 1%;
-}
-
-.twee {
-  width: 30%;
-  height: 250px;
-  margin: 1%;
-}
-
-.drie {
-  width: 30%;
-  height: 250px;
-  margin: 1%;
-}
-
-.inhoud {
-  height: calc(100% - 50px);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  position: relative;
-}
-
-.drie .inhoud {
-  background-color: #A9E5BB;
-  transition: all .2s ease-in-out;
-}
-
-.drie .inhoud:hover {
-  background-color: #A2CECD;
-}
-
-.drie .inhoud:hover .iconmelon {
-  position: absolute;
-  width: 164px;
-  height: 164px;
-  display: block;
-  fill: #525151;
-  bottom: 0px;
-  left: calc(50% - 82px);
-}
-
-.onder {
-  background-color: #FCF6B1;
-  height: 50px;
 }
 
 video {

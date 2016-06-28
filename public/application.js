@@ -78,9 +78,9 @@
 	
 	var _pagesPhotoSearch2 = _interopRequireDefault(_pagesPhotoSearch);
 	
-	var _pagesBooksBooksListView = __webpack_require__(215);
+	var _pagesBooksBooksController = __webpack_require__(215);
 	
-	var _pagesBooksBooksListView2 = _interopRequireDefault(_pagesBooksBooksListView);
+	var _pagesBooksBooksController2 = _interopRequireDefault(_pagesBooksBooksController);
 	
 	(0, _jquery2['default'])(function () {
 	
@@ -105,7 +105,7 @@
 	      _pagesPhotoSearch2['default'].init();
 	      break;
 	    case '/pages/books.html':
-	      _pagesBooksBooksListView2['default'].render();
+	      _pagesBooksBooksController2['default'].render();
 	      break;
 	    default:
 	      break;
@@ -9970,7 +9970,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"main-header":"main-header","row":"row","col-md-2":"col-md-2","nav":"nav","override-bootstrap":"override-bootstrap","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","timer-container":"timer-container","counter":"counter","start-button":"start-button","stop-button":"stop-button","reset-button":"reset-button","split-button":"split-button","split-time":"split-time","lap-time":"lap-time","page-container":"page-container","photo-search":"photo-search","search-photo":"search-photo","search-results":"search-results","photo":"photo","book":"book","shelf":"shelf","book-list-container":"book-list-container","form-label":"form-label","btn-add-book":"btn-add-book","new-book-container":"new-book-container","subject-list-container":"subject-list-container","school-subject":"school-subject","subject-list":"subject-list","response-container":"response-container","header":"header","container":"container","content":"content","inner":"inner","iconmelon":"iconmelon","inhoud":"inhoud","onder":"onder","containerblok":"containerblok","een":"een","twee":"twee","drie":"drie"};
+	module.exports = {"main-header":"main-header","row":"row","col-md-2":"col-md-2","override-bootstrap":"override-bootstrap","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","timer-container":"timer-container","counter":"counter","start-button":"start-button","stop-button":"stop-button","reset-button":"reset-button","split-button":"split-button","split-time":"split-time","lap-time":"lap-time","page-container":"page-container","photo-search":"photo-search","search-photo":"search-photo","search-results":"search-results","photo":"photo","book":"book","shelf":"shelf","book-list-container":"book-list-container","form-label":"form-label","btn-add-book":"btn-add-book","new-book-container":"new-book-container","subject-list-container":"subject-list-container","school-subject":"school-subject","subject-list":"subject-list","response-container":"response-container"};
 
 /***/ },
 /* 3 */,
@@ -9982,10 +9982,6 @@
 	'use strict';
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _jquery = __webpack_require__(1);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
 	
 	var _componentsMainHeader = __webpack_require__(7);
 	
@@ -33385,24 +33381,16 @@
 	  handleComplete: function handleComplete() {
 	    var id = this.props.data.id;
 	    _pagesTodoReactTodoDispatcher2['default'].clickComplete(id);
-	    // TODO this.props.todoListView.model.itemCompleted(id, newValue);
 	  },
 	  handleClose: function handleClose() {
 	    var id = this.props.data.id;
 	    _pagesTodoReactTodoDispatcher2['default'].removeTodo(id);
-	    // TODO this.props.todoListView.model.removeItem(id);
 	  },
 	  titleClick: function titleClick() {
 	    var id = this.props.data.id;
+	    // TODO = add focus on input box
 	    _pagesTodoReactTodoDispatcher2['default'].startEditMode(id);
-	    // TODO this.props.todoListView.model.startEditing(id);
 	  },
-	  // escapeEdit: function(event){
-	  //    if (event.which === 27) {
-	  //     var id = this.props.data.id;
-	  //     dispatcher.escapeEdit(id);
-	  //   }
-	  // },
 	  editKeypress: function editKeypress(event) {
 	    var id = this.props.data.id;
 	    var title = (0, _jquery2['default'])('li').eq(id).find('input[type="text"]').val();
@@ -38537,154 +38525,45 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _backbone = __webpack_require__(168);
+	var _jquery = __webpack_require__(1);
 	
-	var _backbone2 = _interopRequireDefault(_backbone);
-	
-	var _handlebars = __webpack_require__(174);
-	
-	var _handlebars2 = _interopRequireDefault(_handlebars);
-	
-	var _templatesBooksBookListHtml = __webpack_require__(216);
-	
-	var _templatesBooksBookListHtml2 = _interopRequireDefault(_templatesBooksBookListHtml);
-	
-	var _pagesBooksAddBookView = __webpack_require__(217);
-	
-	var _pagesBooksAddBookView2 = _interopRequireDefault(_pagesBooksAddBookView);
-	
-	var BookListView = _backbone2['default'].View.extend({
-	  el: '.books-main',
-	  events: {
-	    'click .btn-add-book': 'addNewBook'
-	    // 'click .btn-sort-title': 'sortListBy',
-	    // 'click .btn-sort-author': 'sortListBy',
-	    // 'click .btn-sort-friend': 'sortListBy',
-	    // 'click .btn-sort-genre': 'sortListBy'
-	  },
-	  template: _handlebars2['default'].compile(_templatesBooksBookListHtml2['default']),
-	  initialize: function initialize(books) {
-	    this.data = books;
-	    this.render();
-	  },
-	  render: function render() {
-	    this.$el.find('.books-view-container').html(this.template(this.data));
-	  },
-	  addNewBook: function addNewBook() {
-	    this.$el.find('.books-view-container').html(_pagesBooksAddBookView2['default'].$el);
-	  }
-	  // removeFromList: function(){
-	  //   bookController.removeFromList(this.data.id);
-	  // }
-	  // sortListBy: function(){
-	  //   // sort list by title, author, genre, or recommender
-	  // }
-	});
-	
-	var bookListView = new BookListView();
-	
-	module.exports = bookListView;
-
-/***/ },
-/* 216 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"container-fluid\">\n  <ul class=\"book-list\">\n    <li class=\"header-row\">\n      <div class=\"row book-list\">\n        <div class=\"col-md-3\">Title</div>\n        <div class=\"col-md-3\">Author</div>\n        <div class=\"col-md-2\">Friend</div>\n        <div class=\"col-md-3\">Genre</div>\n        <!-- <div class=\"col-md-1\">Rating</div> -->\n      </div> \n    <li class=\"template-row\">\n      <div class=\"col-md-3 title\">{{title}}</div>\n      <div class=\"col-md-3 author\">{{author}}</div>\n      <div class=\"col-md-2 friend\">{{friend}}</div>\n      <div class=\"col-md-3 genre\">{{genre}}</div>\n    </li>   \n  </ul>\n  <div class=\"row button\"><button class=\"btn btn-default btn-add-book\">Add a book!</button></div>\n</div>\n\n<!-- <div class=\"book-list-container\">\n\n\n\n\n";
-
-/***/ },
-/* 217 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	var _jquery2 = _interopRequireDefault(_jquery);
 	
 	var _backbone = __webpack_require__(168);
 	
 	var _backbone2 = _interopRequireDefault(_backbone);
 	
-	var _handlebars = __webpack_require__(174);
-	
-	var _handlebars2 = _interopRequireDefault(_handlebars);
-	
-	var _templatesBooksNewBookFormHtml = __webpack_require__(218);
-	
-	var _templatesBooksNewBookFormHtml2 = _interopRequireDefault(_templatesBooksNewBookFormHtml);
-	
-	var _pagesBooksBooksController = __webpack_require__(219);
-	
-	var _pagesBooksBooksController2 = _interopRequireDefault(_pagesBooksBooksController);
-	
-	var AddBookView = _backbone2['default'].View.extend({
-	  el: '.books-main',
-	  events: {
-	    'click .btn-add': 'addBook'
-	  },
-	  template: _handlebars2['default'].compile(_templatesBooksNewBookFormHtml2['default']),
-	  initialize: function initialize() {
-	    this.render();
-	  },
-	  render: function render() {
-	    this.$el.html(this.template({}));
-	  },
-	  addBook: function addBook() {
-	    var $title = this.$el.find('.title').val();
-	    var $author = this.$el.find('.author').val();
-	    var $friend = this.$el.find('.friend').val();
-	    var $genre = this.$el.find('.genre').val();
-	    var $rating = this.$el.find('.rating').val();
-	    var newBook = [$title, $author, $friend, $genre, $rating];
-	    _pagesBooksBooksController2['default'].addBook(newBook);
-	  }
-	});
-	var addBookView = new AddBookView();
-	
-	module.exports = addBookView;
-
-/***/ },
-/* 218 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"new-book-container\">\n  <form>\n    <div class=\"form-group form-label\">\n      <label for=\"title\">Book Title</label>\n      <input type=\"text\" class=\"form-control title\" placeholder=\"Title\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"author\">Author</label>\n      <input type=\"text\" class=\"form-control author\" placeholder=\"Author\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"friend\">Who'd you hear about it from?</label>\n      <input type=\"text\" class=\"form-control friend\" placeholder=\"Friend's name\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"genre\">Genre</label>\n      <input type=\"text\" class=\"form-control genre\" placeholder=\"Genre\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"rating\">Rating</label>\n      <input type=\"text\" class=\"form-control rating\" placeholder=\"Genre\">\n    </div>\n    <!-- <div class=\"form-group\">\n      <label for=\"new-synopsis\">What it's about?</label>\n      <textarea class=\"form-control\" id=\"new-synopsis\" rows=\"3\" placeholder=\"Synopsis\"></textarea>\n    </div> -->\n  </form>\n  <svg class=\"book-shelf btn btn-default btn-add\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" viewBox=\"0 0 84 94\" height=\"94\" width=\"84\">\n  <path fill=\"none\" d=\"M37.612 92.805L4.487 73.71c-2.75-1.587-4.45-4.52-4.45-7.687L.008 27.877c-.003-3.154 1.676-6.063 4.405-7.634L37.558 1.167c2.73-1.57 6.096-1.566 8.835.013l33.124 19.096c2.75 1.586 4.45 4.518 4.45 7.686l.028 38.146c.002 3.154-1.677 6.063-4.406 7.634L46.445 92.818c-2.73 1.57-6.096 1.566-8.834-.013z\"/>\n  <g class=\"book-shelf__book book-shelf__book--one\" fill-rule=\"evenodd\">\n    <path fill=\"#5199fc\" d=\"M31 29h4c1.105 0 2 .895 2 2v29c0 1.105-.895 2-2 2h-4c-1.105 0-2-.895-2-2V31c0-1.105.895-2 2-2z\"/>\n    <path fill=\"#afd7fb\" d=\"M34 36h-2c-.552 0-1-.448-1-1s.448-1 1-1h2c.552 0 1 .448 1 1s-.448 1-1 1zm-2 1h2c.552 0 1 .448 1 1s-.448 1-1 1h-2c-.552 0-1-.448-1-1s.448-1 1-1z\"/>\n  </g>\n  <g class=\"book-shelf__book book-shelf__book--two\" fill-rule=\"evenodd\">\n    <path fill=\"#ff9868\" d=\"M39 34h6c1.105 0 2 .895 2 2v24c0 1.105-.895 2-2 2h-6c-1.105 0-2-.895-2-2V36c0-1.105.895-2 2-2z\"/>\n    <path fill=\"#d06061\" d=\"M42 38c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2z\"/>\n  </g>\n  <g class=\"book-shelf__book book-shelf__book--three\" fill-rule=\"evenodd\">\n    <path fill=\"#ff5068\" d=\"M49 32h2c1.105 0 2 .86 2 1.92v25.906c0 1.06-.895 1.92-2 1.92h-2c-1.105 0-2-.86-2-1.92V33.92c0-1.06.895-1.92 2-1.92z\"/>\n    <path fill=\"#d93368\" d=\"M50 35c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1s-1-.448-1-1v-2c0-.552.448-1 1-1z\"/>\n  </g>\n  <g fill-rule=\"evenodd\">\n    <path class=\"book-shelf__shelf\" fill=\"#ae8280\" d=\"M21 60h40c1.105 0 2 .895 2 2s-.895 2-2 2H21c-1.105 0-2-.895-2-2s.895-2 2-2z\"/>\n    <path fill=\"#855f6d\" d=\"M51.5 67c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5zm-21 0c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5z\"/>\n  </g>\n</svg>\n <!--  <button class=\"btn btn-default btn-add\">Add</button> -->\n</div>\n";
-
-/***/ },
-/* 219 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _backbone = __webpack_require__(168);
-	
-	var _backbone2 = _interopRequireDefault(_backbone);
-	
-	var _pagesBooksBooksModel = __webpack_require__(220);
+	var _pagesBooksBooksModel = __webpack_require__(216);
 	
 	var _pagesBooksBooksModel2 = _interopRequireDefault(_pagesBooksBooksModel);
 	
-	var _pagesBooksAddBookView = __webpack_require__(217);
+	var _pagesBooksAddBookView = __webpack_require__(218);
 	
 	var _pagesBooksAddBookView2 = _interopRequireDefault(_pagesBooksAddBookView);
 	
-	var _pagesBooksBooksListView = __webpack_require__(215);
+	var _pagesBooksBooksListView = __webpack_require__(220);
 	
 	var _pagesBooksBooksListView2 = _interopRequireDefault(_pagesBooksBooksListView);
 	
 	var BookController = _backbone2['default'].View.extend({
 	  el: '.books-main',
 	  model: _pagesBooksBooksModel2['default'],
-	  events: {
-	    'click .btn-add': 'addBook'
-	  },
+	  events: {},
 	  initialize: function initialize() {
 	    this.model.fetch();
-	    this.model.on('change', this.render, this);
 	  },
 	  render: function render() {
-	    var books = this.model.get('books');
-	    this.$el.find('.books-view-container').html(_pagesBooksBooksListView2['default']);
-	    // books.forEach(this.$el.find('.template-row').append());
+	    var view = new _pagesBooksAddBookView2['default']({
+	      controller: this
+	    });
+	    this.$el.html(view.$el);
+	  },
+	  renderList: function renderList() {
+	    var view = new _pagesBooksBooksListView2['default']({
+	      controller: this,
+	      books: []
+	    });
+	    this.$el.html(view.$el);
 	  },
 	  // removeFromList: function(id){
 	  //   this.model.RemoveFromList(id);
@@ -38692,25 +38571,21 @@
 	  // },
 	  addBook: function addBook(newBook) {
 	    this.model.addBook(newBook);
-	    debugger;
-	    this.render();
+	    this.renderList();
 	  }
 	});
+	
 	var bookController = new BookController();
 	
 	module.exports = bookController;
 
 /***/ },
-/* 220 */
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _jquery = __webpack_require__(1);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
 	
 	var _underscore = __webpack_require__(169);
 	
@@ -38720,7 +38595,7 @@
 	
 	var _backbone2 = _interopRequireDefault(_backbone);
 	
-	var _lscache = __webpack_require__(221);
+	var _lscache = __webpack_require__(217);
 	
 	var _lscache2 = _interopRequireDefault(_lscache);
 	
@@ -38790,7 +38665,6 @@
 	  //   this.save();
 	  // },
 	  addBook: function addBook(newBook) {
-	    debugger;
 	    var books = this.get('books');
 	    books.push(newBook);
 	    this.set('books', books);
@@ -38805,7 +38679,7 @@
 	module.exports = bookModel;
 
 /***/ },
-/* 221 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -39159,6 +39033,115 @@
 	  return lscache;
 	}));
 
+
+/***/ },
+/* 218 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _backbone = __webpack_require__(168);
+	
+	var _backbone2 = _interopRequireDefault(_backbone);
+	
+	var _handlebars = __webpack_require__(174);
+	
+	var _handlebars2 = _interopRequireDefault(_handlebars);
+	
+	var _templatesBooksNewBookFormHtml = __webpack_require__(219);
+	
+	var _templatesBooksNewBookFormHtml2 = _interopRequireDefault(_templatesBooksNewBookFormHtml);
+	
+	var AddBookView = _backbone2['default'].View.extend({
+	  className: '.books-add',
+	  events: {
+	    'click .btn-add': 'addBook'
+	  },
+	  template: _handlebars2['default'].compile(_templatesBooksNewBookFormHtml2['default']),
+	  initialize: function initialize(options) {
+	    this.controller = options.controller;
+	    this.render();
+	  },
+	  render: function render() {
+	    this.$el.html(this.template({}));
+	  },
+	  addBook: function addBook() {
+	    var $title = this.$el.find('.title').val();
+	    var $author = this.$el.find('.author').val();
+	    var $friend = this.$el.find('.friend').val();
+	    var $genre = this.$el.find('.genre').val();
+	    var $rating = this.$el.find('.rating').val();
+	    var newBook = [$title, $author, $friend, $genre, $rating];
+	    this.controller.addBook(newBook);
+	  }
+	});
+	
+	module.exports = AddBookView;
+
+/***/ },
+/* 219 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"new-book-container\">\n  <form>\n    <div class=\"form-group form-label\">\n      <label for=\"title\">Book Title</label>\n      <input type=\"text\" class=\"form-control title\" placeholder=\"Title\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"author\">Author</label>\n      <input type=\"text\" class=\"form-control author\" placeholder=\"Author\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"friend\">Who'd you hear about it from?</label>\n      <input type=\"text\" class=\"form-control friend\" placeholder=\"Friend's name\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"genre\">Genre</label>\n      <input type=\"text\" class=\"form-control genre\" placeholder=\"Genre\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"rating\">Rating</label>\n      <input type=\"text\" class=\"form-control rating\" placeholder=\"Genre\">\n    </div>\n  </form>\n    <button class=\"btn btn-default btn-add\">Add a book!</button>\n</div>\n    <!-- <div class=\"form-group\">\n      <label for=\"new-synopsis\">What it's about?</label>\n      <textarea class=\"form-control\" id=\"new-synopsis\" rows=\"3\" placeholder=\"Synopsis\"></textarea>\n    </div> -->\n  \n  <!-- <svg class=\"book-shelf btn btn-default btn-add\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" viewBox=\"0 0 84 94\" height=\"94\" width=\"84\">\n  <path fill=\"none\" d=\"M37.612 92.805L4.487 73.71c-2.75-1.587-4.45-4.52-4.45-7.687L.008 27.877c-.003-3.154 1.676-6.063 4.405-7.634L37.558 1.167c2.73-1.57 6.096-1.566 8.835.013l33.124 19.096c2.75 1.586 4.45 4.518 4.45 7.686l.028 38.146c.002 3.154-1.677 6.063-4.406 7.634L46.445 92.818c-2.73 1.57-6.096 1.566-8.834-.013z\"/>\n  <g class=\"book-shelf__book book-shelf__book--one\" fill-rule=\"evenodd\">\n    <path fill=\"#5199fc\" d=\"M31 29h4c1.105 0 2 .895 2 2v29c0 1.105-.895 2-2 2h-4c-1.105 0-2-.895-2-2V31c0-1.105.895-2 2-2z\"/>\n    <path fill=\"#afd7fb\" d=\"M34 36h-2c-.552 0-1-.448-1-1s.448-1 1-1h2c.552 0 1 .448 1 1s-.448 1-1 1zm-2 1h2c.552 0 1 .448 1 1s-.448 1-1 1h-2c-.552 0-1-.448-1-1s.448-1 1-1z\"/>\n  </g>\n  <g class=\"book-shelf__book book-shelf__book--two\" fill-rule=\"evenodd\">\n    <path fill=\"#ff9868\" d=\"M39 34h6c1.105 0 2 .895 2 2v24c0 1.105-.895 2-2 2h-6c-1.105 0-2-.895-2-2V36c0-1.105.895-2 2-2z\"/>\n    <path fill=\"#d06061\" d=\"M42 38c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2z\"/>\n  </g>\n  <g class=\"book-shelf__book book-shelf__book--three\" fill-rule=\"evenodd\">\n    <path fill=\"#ff5068\" d=\"M49 32h2c1.105 0 2 .86 2 1.92v25.906c0 1.06-.895 1.92-2 1.92h-2c-1.105 0-2-.86-2-1.92V33.92c0-1.06.895-1.92 2-1.92z\"/>\n    <path fill=\"#d93368\" d=\"M50 35c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1s-1-.448-1-1v-2c0-.552.448-1 1-1z\"/>\n  </g>\n  <g fill-rule=\"evenodd\">\n    <path class=\"book-shelf__shelf\" fill=\"#ae8280\" d=\"M21 60h40c1.105 0 2 .895 2 2s-.895 2-2 2H21c-1.105 0-2-.895-2-2s.895-2 2-2z\"/>\n    <path fill=\"#855f6d\" d=\"M51.5 67c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5zm-21 0c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5z\"/>\n  </g>\n</svg>\n <!--  <button class=\"btn btn-default btn-add\">Add</button> -->\n</div>\n -->";
+
+/***/ },
+/* 220 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _backbone = __webpack_require__(168);
+	
+	var _backbone2 = _interopRequireDefault(_backbone);
+	
+	var _handlebars = __webpack_require__(174);
+	
+	var _handlebars2 = _interopRequireDefault(_handlebars);
+	
+	var _templatesBooksBookListHtml = __webpack_require__(221);
+	
+	var _templatesBooksBookListHtml2 = _interopRequireDefault(_templatesBooksBookListHtml);
+	
+	var BookListView = _backbone2['default'].View.extend({
+	  className: '.books-list',
+	  events: {
+	    'click .btn-add-book': 'addNewBook'
+	    // 'click .btn-sort-title': 'sortListBy',
+	    // 'click .btn-sort-author': 'sortListBy',
+	    // 'click .btn-sort-friend': 'sortListBy',
+	    // 'click .btn-sort-genre': 'sortListBy'
+	  },
+	  template: _handlebars2['default'].compile(_templatesBooksBookListHtml2['default']),
+	  initialize: function initialize(options) {
+	    this.data = options.books;
+	    this.controller = options.controller;
+	    this.render();
+	  },
+	  render: function render() {
+	    this.$el.html(this.template(this.data));
+	  }
+	});
+	
+	// addNewBook: function(){
+	//   this.$el.find('.books-view-container').html(addBookView.$el);
+	// }
+	// removeFromList: function(){
+	//   bookController.removeFromList(this.data.id);
+	// }
+	// sortListBy: function(){
+	//   // sort list by title, author, genre, or recommender
+	// }
+	module.exports = BookListView;
+
+/***/ },
+/* 221 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"container-fluid\">\n  <ul class=\"book-list\">\n    <li class=\"header-row\">\n      <div class=\"row book-list\">\n        <div class=\"col-md-3\">Title</div>\n        <div class=\"col-md-3\">Author</div>\n        <div class=\"col-md-2\">Friend</div>\n        <div class=\"col-md-3\">Genre</div>\n        <!-- <div class=\"col-md-1\">Rating</div> -->\n      </div> \n    <li class=\"template-row\">\n      <div class=\"col-md-3 title\">{{title}}</div>\n      <div class=\"col-md-3 author\">{{author}}</div>\n      <div class=\"col-md-2 friend\">{{friend}}</div>\n      <div class=\"col-md-3 genre\">{{genre}}</div>\n    </li>   \n  </ul>\n  <div class=\"row button\"><button class=\"btn btn-default btn-add-book\">Add a book!</button></div>\n</div>\n\n<!-- <div class=\"book-list-container\">\n\n\n\n\n";
 
 /***/ }
 /******/ ]);

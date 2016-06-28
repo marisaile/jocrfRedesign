@@ -2,15 +2,15 @@
 import Backbone from 'backbone';
 import Handlebars from 'handlebars';
 import newBookTemplate from 'templates/books/newBookForm.html';
-import bookController from 'pages/books/booksController';
 
 var AddBookView = Backbone.View.extend({
-  el: '.books-main',
+  className: '.books-add',
   events: {
     'click .btn-add': 'addBook'
   }, 
   template: Handlebars.compile(newBookTemplate),
-  initialize: function(){
+  initialize: function(options){
+    this.controller = options.controller;
     this.render();
   },
   render: function(){
@@ -23,9 +23,8 @@ var AddBookView = Backbone.View.extend({
     var $genre = this.$el.find('.genre').val();
     var $rating = this.$el.find('.rating').val();
     var newBook = [$title, $author, $friend, $genre, $rating];
-    bookController.addBook(newBook);
+    this.controller.addBook(newBook);
   }
 });
-var addBookView = new AddBookView();
 
-module.exports = addBookView;
+module.exports = AddBookView;

@@ -1,4 +1,4 @@
-import $ from 'jquery';
+
 import _ from 'underscore';
 import Backbone from 'backbone';
 import lscache from 'lscache';
@@ -69,7 +69,6 @@ var BookModel = Backbone.Model.extend({
   //   this.save();
   // },
   addBook: function(newBook){
-    debugger;
     var books = this.get('books');
     books.push(newBook);
     this.set('books', books);

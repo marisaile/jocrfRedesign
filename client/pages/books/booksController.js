@@ -1,23 +1,28 @@
-
+import $ from 'jquery';
 import Backbone from 'backbone';
 import bookModel from 'pages/books/booksModel';
-import addBookView from 'pages/books/addBookView';
-import bookListView from 'pages/books/booksListView';
+import AddBookView from 'pages/books/addBookView';
+import BookListView from 'pages/books/booksListView';
 
 var BookController = Backbone.View.extend({
   el: '.books-main',
   model: bookModel,
-  events: {
-    'click .btn-add': 'addBook'
-  },
+  events: {},
   initialize: function(){
     this.model.fetch();
-    this.model.on('change', this.render, this);
   },
   render: function(){ 
-    var books = this.model.get('books');
-    this.$el.find('.books-view-container').html(bookListView);
-    // books.forEach(this.$el.find('.template-row').append());
+    var view = new AddBookView({
+      controller: this
+    });
+    this.$el.html(view.$el);
+  },
+  renderList: function() {
+    var view = new BookListView({
+      controller: this,
+      books: []
+    });
+    this.$el.html(view.$el);
   },
   // removeFromList: function(id){
   //   this.model.RemoveFromList(id);
@@ -25,10 +30,10 @@ var BookController = Backbone.View.extend({
   // },
   addBook: function(newBook){
     this.model.addBook(newBook);
-    debugger;
-    this.render();
+    this.renderList();
   }
 });
+
 var bookController = new BookController();
 
 module.exports = bookController;

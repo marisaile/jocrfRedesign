@@ -39,24 +39,16 @@ var TodoItem = React.createClass({
   handleComplete: function(){
     var id = this.props.data.id;
     dispatcher.clickComplete(id);
-    // TODO this.props.todoListView.model.itemCompleted(id, newValue);
   },
   handleClose: function(){
     var id = this.props.data.id;
     dispatcher.removeTodo(id);
-    // TODO this.props.todoListView.model.removeItem(id);
   },
   titleClick: function(){
     var id = this.props.data.id;
+    // TODO = add focus on input box
     dispatcher.startEditMode(id);
-    // TODO this.props.todoListView.model.startEditing(id);
   },
-  // escapeEdit: function(event){
-  //    if (event.which === 27) {
-  //     var id = this.props.data.id;
-  //     dispatcher.escapeEdit(id);
-  //   }
-  // },
   editKeypress: function(event) {
     var id = this.props.data.id;
     var title = $('li').eq(id).find('input[type="text"]').val();

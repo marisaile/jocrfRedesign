@@ -19,21 +19,22 @@ body {
   margin: 0;
   padding: 0;
 } 
-.col-md-2 a {
-  position: absolute;
+.col-md-2 {
+  position: relative;
   top: 75px;
   left: 75px;
+}
+.col-md-2 a {
   font-family: 'Carme', sans-serif;
   font-size: 16px;
   text-decoration: none;
   color: #212413;
 }
-.col-md-2 a.nav:hover {
+.col-md-2 a:hover {
   color: #e4e3e8;
   text-decoration: none;
   /*text-align: center;*/
   top: 60px;
-  left: -5px;
   height: 40px;
   width: 240px;
   background-color: #3a98b8;

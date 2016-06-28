@@ -7,13 +7,11 @@ import funnySquares from 'pages/funnySquares';
 import timer from 'pages/timer';
 import schoolBooks from 'pages/schoolBooks';
 import photoSearch from 'pages/photoSearch';
-import bookListView from 'pages/books/booksListView';
-
+import bookController from 'pages/books/booksController';
 
 $(function() {
 
   mainPage.init();
-
 
   var url = window.location.pathname;
 
@@ -34,7 +32,7 @@ $(function() {
       photoSearch.init(); 
     break;
     case '/pages/books.html':
-      bookListView.render();
+      bookController.render();
     break;
     default: break;
   }

@@ -13,19 +13,19 @@ var app = {
   render: function(){
     $('.subject-list').on('change', function(){
       var selection = $('.select-picker').find('option:selected').val();
-        if (selection === 'Science') {
-          $('.response-container').html(science);
-        } else if (selection === 'History') {
-          $('.response-container').html(history);
-        } else if (selection === 'English Literature') {
-          $('.response-container').html(english);
-        } else if (selection === 'Math/Statistics') {
-          $('.response-container').html(math);
-        } else if (selection === 'Political Science/Current Affairs') {
-          $('.response-container').html(polisci);
-        } else if (selection === 'Psychology') {
-          $('.response-container').html(psych);
-        }
+      if (selection === 'Science') {
+        $('.response-container').html(science);
+      } else if (selection === 'History') {
+        $('.response-container').html(history);
+      } else if (selection === 'English Literature') {
+        $('.response-container').html(english);
+      } else if (selection === 'Math/Statistics') {
+        $('.response-container').html(math);
+      } else if (selection === 'Political Science/Current Affairs') {
+        $('.response-container').html(polisci);
+      } else if (selection === 'Psychology') {
+        $('.response-container').html(psych);
+      }
     });
   }
 };

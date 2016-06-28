@@ -1,9 +1,9 @@
-import $ from 'jquery';
+
 import mainHeader from 'components/mainHeader';
 
 var app = {
   init: function() {
-  	mainHeader.init();
+    mainHeader.init();
     app.render();
   },
   render: function() {

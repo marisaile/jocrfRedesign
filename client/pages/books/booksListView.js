@@ -1,10 +1,9 @@
 import Backbone from 'backbone';
 import Handlebars from 'handlebars';
 import bookList from 'templates/books/bookList.html';
-import addBookView from 'pages/books/addBookView';
 
 var BookListView = Backbone.View.extend({
-  el: '.books-main',
+  className: '.books-list',
   events: { 
     'click .btn-add-book': 'addNewBook'   
     // 'click .btn-sort-title': 'sortListBy',
@@ -13,16 +12,17 @@ var BookListView = Backbone.View.extend({
     // 'click .btn-sort-genre': 'sortListBy'
   },
   template: Handlebars.compile(bookList),
-  initialize: function(books){
-    this.data = books;
+  initialize: function(options){
+    this.data = options.books;
+    this.controller = options.controller;
     this.render();
   },
   render: function(){   
-    this.$el.find('.books-view-container').html(this.template(this.data));
+    this.$el.html(this.template(this.data));
   },
-  addNewBook: function(){
-    this.$el.find('.books-view-container').html(addBookView.$el);
-  }
+  // addNewBook: function(){
+  //   this.$el.find('.books-view-container').html(addBookView.$el);
+  // }
   // removeFromList: function(){
   //   bookController.removeFromList(this.data.id);
   // }
@@ -31,6 +31,4 @@ var BookListView = Backbone.View.extend({
   // }
 });
 
-var bookListView = new BookListView();
-
-module.exports = bookListView;
+module.exports = BookListView;
