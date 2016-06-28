@@ -13,19 +13,13 @@ var dispatcher = {
       todoModel.addItem(newTitle);
     } 
   },
-  addTodoEnter: function(newTitle){
-    if ( 
-      newTitle !== '' 
-      && typeof newTitle === 'string'
-    ) {
-      todoModel.addItem(newTitle);
-    }
-  },
   removeTodo: function(id){
     todoModel.removeItem(id);
   },
   editTodoTitle: function(id, title, event){
-    if (
+    if (event.which === 27) {
+      todoModel.escapeEdit(id);
+    } else if (
       event.which === 13 
       && title.length > 0
       && typeof title === 'string'

@@ -33299,6 +33299,12 @@
 	    item.isEditing = true;
 	    this.set('todos', todos);
 	    this.save();
+	  },
+	  escapeEdit: function escapeEdit(id) {
+	    var todos = this.get('todos');
+	    var item = _underscore2['default'].findWhere(todos, { id: id });
+	    item.isEditing = false;
+	    this.save();
 	  }
 	});
 	
@@ -33349,7 +33355,7 @@
 	        'div',
 	        { className: 'col-md-10' },
 	        _react2['default'].createElement('input', { type: 'text', className: 'form-control', defaultValue: todo.title, onChange: function () {},
-	          onKeyPress: this.editKeypress })
+	          onKeyUp: this.editKeypress })
 	      );
 	    }
 	    return _react2['default'].createElement(
@@ -33391,11 +33397,16 @@
 	    _pagesTodoReactTodoDispatcher2['default'].startEditMode(id);
 	    // TODO this.props.todoListView.model.startEditing(id);
 	  },
+	  // escapeEdit: function(event){
+	  //    if (event.which === 27) {
+	  //     var id = this.props.data.id;
+	  //     dispatcher.escapeEdit(id);
+	  //   }
+	  // },
 	  editKeypress: function editKeypress(event) {
 	    var id = this.props.data.id;
 	    var title = (0, _jquery2['default'])('li').eq(id).find('input[type="text"]').val();
 	    _pagesTodoReactTodoDispatcher2['default'].editTodoTitle(id, title, event);
-	    // TODO this.props.todoListView.model.editTitle(newTitle, id)
 	  }
 	});
 	
@@ -33422,16 +33433,13 @@
 	      _todoModel2['default'].addItem(newTitle);
 	    }
 	  },
-	  addTodoEnter: function addTodoEnter(newTitle) {
-	    if (newTitle !== '' && typeof newTitle === 'string') {
-	      _todoModel2['default'].addItem(newTitle);
-	    }
-	  },
 	  removeTodo: function removeTodo(id) {
 	    _todoModel2['default'].removeItem(id);
 	  },
 	  editTodoTitle: function editTodoTitle(id, title, event) {
-	    if (event.which === 13 && title.length > 0 && typeof title === 'string') {
+	    if (event.which === 27) {
+	      _todoModel2['default'].escapeEdit(id);
+	    } else if (event.which === 13 && title.length > 0 && typeof title === 'string') {
 	      _todoModel2['default'].editTitle(id, title);
 	    }
 	  },

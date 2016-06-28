@@ -18,7 +18,7 @@ var TodoItem = React.createClass({
       title = (
         <div className="col-md-10">
           <input type="text" className="form-control" defaultValue={todo.title} onChange={function(){}}
-          onKeyPress={this.editKeypress}></input>
+          onKeyUp={this.editKeypress}></input>
         </div>
       );
     }
@@ -51,11 +51,16 @@ var TodoItem = React.createClass({
     dispatcher.startEditMode(id);
     // TODO this.props.todoListView.model.startEditing(id);
   },
-  editKeypress: function(event){
+  // escapeEdit: function(event){
+  //    if (event.which === 27) {
+  //     var id = this.props.data.id;
+  //     dispatcher.escapeEdit(id);
+  //   }
+  // },
+  editKeypress: function(event) {
     var id = this.props.data.id;
     var title = $('li').eq(id).find('input[type="text"]').val();
     dispatcher.editTodoTitle(id, title, event);
-      // TODO this.props.todoListView.model.editTitle(newTitle, id)
   }
 });
 
