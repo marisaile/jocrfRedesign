@@ -11,16 +11,16 @@ var BookController = Backbone.View.extend({
   initialize: function(){
     this.model.fetch();
   },
-  render: function(){ 
+  renderNew: function(){ 
     var view = new AddBookView({
       controller: this
     });
     this.$el.html(view.$el);
   },
-  renderList: function() {
+  render: function() {
     var view = new BookListView({
       controller: this,
-      books: []
+      books: this.model.get('books')
     });
     this.$el.html(view.$el);
   },
@@ -30,7 +30,8 @@ var BookController = Backbone.View.extend({
   // },
   addBook: function(newBook){
     this.model.addBook(newBook);
-    this.renderList();
+    debugger;
+    this.render();
   }
 });
 

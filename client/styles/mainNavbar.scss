@@ -5,16 +5,16 @@
 @import url(https://fonts.googleapis.com/css?family=Amita);
 
 
-body {
+body.override-bootstrap {
   margin: 0;
-  background-color: #e4e3e8;
+  background-color: #f4f3f8;
 }
 .main-header .row {
   position: relative;
   display: block;
   width: 100%;
   height: 100px;
-  background-color: #e4e3e8; 
+  background-color: #f4f3f8; 
   border-bottom: 2px solid #3a98b8;
   margin: 0;
   padding: 0;

@@ -1,25 +1,35 @@
-<div class="container-fluid">
-  <ul class="book-list">
-    <li class="header-row">
-      <div class="row book-list">
-        <div class="col-md-3">Title</div>
-        <div class="col-md-3">Author</div>
-        <div class="col-md-2">Friend</div>
-        <div class="col-md-3">Genre</div>
-        <!-- <div class="col-md-1">Rating</div> -->
-      </div> 
-    <li class="template-row">
-      <div class="col-md-3 title">{{title}}</div>
-      <div class="col-md-3 author">{{author}}</div>
-      <div class="col-md-2 friend">{{friend}}</div>
-      <div class="col-md-3 genre">{{genre}}</div>
-    </li>   
-  </ul>
-  <div class="row button"><button class="btn btn-default btn-add-book">Add a book!</button></div>
+<div class="book-list-container">  
+  <div class="table-responsive book-table">
+    <table class="table table-books">
+      <tr>
+        <th class="col-md-4">Title<span class="caret"></span></th>
+        <th class="col-md-3">Author<span class="caret"></span></th>
+        <th class="col-md-2">Friend<span class="caret"></span></th>
+        <th class="col-md-2">Genre<span class="caret"></span></th>
+        <th class="col-md-1">Rating<span class="caret"></span></th>
+      </tr>
+      <tr >
+        <td>Franny and Zooey</td>
+        <td>JD Salinger</td>
+        <td>Lacey</td>
+        <td>Literary Fiction</td>
+        <td><button type="button" class="close btn-read" aria-label="Close"><span aria-hidden="true">&times;</span></button></td>
+      </tr>
+      <tr>
+        <td>Scott Pilgrim's Precious Little Life</td>
+        <td>Bryan Lee O'Malley</td>
+        <td>Dennis</td>
+        <td>Graphic Novel</td>
+        <td><button type="button" class="close btn-read" aria-label="Close"><span aria-hidden="true">&times;</span></button></td>
+      </tr>
+      <tr>
+        <td class="title">{{title}}</td>
+        <td class="author">{{author}}</td>
+        <td class="friend">{{friend}}</td>
+        <td class="genre">{{genre}}</td>
+        <td class="rating">{{rating}}</td>
+      </tr>
+      <button class="btn btn-default btn-add-book">Add a new book!</button>
+    </table>
+  </div>
 </div>
-
-<!-- <div class="book-list-container">
-
-
-
-

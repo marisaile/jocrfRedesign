@@ -4,7 +4,7 @@ import Handlebars from 'handlebars';
 import newBookTemplate from 'templates/books/newBookForm.html';
 
 var AddBookView = Backbone.View.extend({
-  className: '.books-add',
+  className: 'books-add',
   events: {
     'click .btn-add': 'addBook'
   }, 
@@ -22,7 +22,14 @@ var AddBookView = Backbone.View.extend({
     var $friend = this.$el.find('.friend').val();
     var $genre = this.$el.find('.genre').val();
     var $rating = this.$el.find('.rating').val();
-    var newBook = [$title, $author, $friend, $genre, $rating];
+    var newBook = {
+      id: 0,
+      title: $title,
+      author: $author,
+      friend: $friend,
+      genre: $genre,
+      rating: $rating
+    }
     this.controller.addBook(newBook);
   }
 });
