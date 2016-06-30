@@ -73,7 +73,6 @@ var BookModel = Backbone.Model.extend({
     books.push(newBook);
     this.set('books', books);
     this.save();
-    debugger;
   }
   // addFriend: function(){
     

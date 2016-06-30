@@ -13,13 +13,12 @@ var BookListView = Backbone.View.extend({
   },
   template: Handlebars.compile(bookList),
   initialize: function(options){
-    this.data = options.books;    
+    this.data = options.books;   
     this.controller = options.controller;
     this.render();
   },
-  render: function(){   
-    debugger;
-    this.$el.html(this.template(this.data));
+  render: function(){
+    this.$el.html(this.template({books: this.data}));
   },
   addNewBook: function(){
     this.controller.renderNew();

@@ -9970,7 +9970,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","row":"row","col-md-2":"col-md-2","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","timer-container":"timer-container","counter":"counter","start-button":"start-button","stop-button":"stop-button","reset-button":"reset-button","split-button":"split-button","split-time":"split-time","lap-time":"lap-time","page-container":"page-container","photo-search":"photo-search","search-photo":"search-photo","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","book-table":"book-table","school-subject":"school-subject","subject-list":"subject-list","response-container":"response-container","book-container":"book-container","book-image":"book-image","title":"title","author":"author"};
+	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","row":"row","col-md-2":"col-md-2","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","timer-container":"timer-container","counter":"counter","start-button":"start-button","stop-button":"stop-button","reset-button":"reset-button","split-button":"split-button","split-time":"split-time","lap-time":"lap-time","page-container":"page-container","photo-search":"photo-search","search-photo":"search-photo","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","book-table":"book-table","btn-add":"btn-add","book-shelf":"book-shelf","book-shelf__book":"book-shelf__book","book-bounce":"book-bounce","book-shelf__book--two":"book-shelf__book--two","book-shelf__book--three":"book-shelf__book--three","book-shelf__shelf":"book-shelf__shelf","shelf-lift":"shelf-lift","school-subject":"school-subject","subject-list":"subject-list","response-container":"response-container","book-container":"book-container","book-image":"book-image","title":"title","author":"author"};
 
 /***/ },
 /* 3 */,
@@ -33388,7 +33388,6 @@
 	  },
 	  titleClick: function titleClick() {
 	    var id = this.props.data.id;
-	    // TODO = add focus on input box
 	    _pagesTodoReactTodoDispatcher2['default'].startEditMode(id);
 	  },
 	  editKeypress: function editKeypress(event) {
@@ -38525,10 +38524,6 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _jquery = __webpack_require__(1);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
-	
 	var _backbone = __webpack_require__(168);
 	
 	var _backbone2 = _interopRequireDefault(_backbone);
@@ -38559,6 +38554,7 @@
 	    this.$el.html(view.$el);
 	  },
 	  render: function render() {
+	    // for each object in the books array, append the contents to a row in the table
 	    var view = new _pagesBooksBooksListView2['default']({
 	      controller: this,
 	      books: this.model.get('books')
@@ -38571,7 +38567,6 @@
 	  // },
 	  addBook: function addBook(newBook) {
 	    this.model.addBook(newBook);
-	    debugger;
 	    this.render();
 	  }
 	});
@@ -38670,7 +38665,6 @@
 	    books.push(newBook);
 	    this.set('books', books);
 	    this.save();
-	    debugger;
 	  }
 	  // addFriend: function(){
 	
@@ -39093,7 +39087,7 @@
 /* 219 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"new-book-container\">\n  <form>\n    <div class=\"form-group form-label\">\n      <label for=\"title\">Book Title</label>\n      <input type=\"text\" class=\"form-control title\" placeholder=\"Title\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"author\">Author</label>\n      <input type=\"text\" class=\"form-control author\" placeholder=\"Author\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"friend\">Who'd you hear about it from?</label>\n      <input type=\"text\" class=\"form-control friend\" placeholder=\"Friend's name\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"genre\">Genre</label>\n      <input type=\"text\" class=\"form-control genre\" placeholder=\"Genre\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"rating\">Rating</label>\n      <input type=\"text\" class=\"form-control rating\" placeholder=\"Rating\">\n    </div>\n  </form>\n    <!-- <button class=\"btn btn-default btn-add\">Add a book!</button> -->\n\n    <!-- <div class=\"form-group\">\n      <label for=\"new-synopsis\">What it's about?</label>\n      <textarea class=\"form-control\" id=\"new-synopsis\" rows=\"3\" placeholder=\"Synopsis\"></textarea>\n    </div> -->\n  \n    <svg class=\"book-shelf btn btn-default btn-add\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" viewBox=\"0 0 84 94\" height=\"94\" width=\"84\">\n    <path fill=\"none\" d=\"M37.612 92.805L4.487 73.71c-2.75-1.587-4.45-4.52-4.45-7.687L.008 27.877c-.003-3.154 1.676-6.063 4.405-7.634L37.558 1.167c2.73-1.57 6.096-1.566 8.835.013l33.124 19.096c2.75 1.586 4.45 4.518 4.45 7.686l.028 38.146c.002 3.154-1.677 6.063-4.406 7.634L46.445 92.818c-2.73 1.57-6.096 1.566-8.834-.013z\"/>\n    <g class=\"book-shelf__book book-shelf__book--one\" fill-rule=\"evenodd\">\n      <path fill=\"#5199fc\" d=\"M31 29h4c1.105 0 2 .895 2 2v29c0 1.105-.895 2-2 2h-4c-1.105 0-2-.895-2-2V31c0-1.105.895-2 2-2z\"/>\n      <path fill=\"#afd7fb\" d=\"M34 36h-2c-.552 0-1-.448-1-1s.448-1 1-1h2c.552 0 1 .448 1 1s-.448 1-1 1zm-2 1h2c.552 0 1 .448 1 1s-.448 1-1 1h-2c-.552 0-1-.448-1-1s.448-1 1-1z\"/>\n    </g>\n    <g class=\"book-shelf__book book-shelf__book--two\" fill-rule=\"evenodd\">\n      <path fill=\"#ff9868\" d=\"M39 34h6c1.105 0 2 .895 2 2v24c0 1.105-.895 2-2 2h-6c-1.105 0-2-.895-2-2V36c0-1.105.895-2 2-2z\"/>\n      <path fill=\"#d06061\" d=\"M42 38c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2z\"/>\n    </g>\n    <g class=\"book-shelf__book book-shelf__book--three\" fill-rule=\"evenodd\">\n      <path fill=\"#ff5068\" d=\"M49 32h2c1.105 0 2 .86 2 1.92v25.906c0 1.06-.895 1.92-2 1.92h-2c-1.105 0-2-.86-2-1.92V33.92c0-1.06.895-1.92 2-1.92z\"/>\n      <path fill=\"#d93368\" d=\"M50 35c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1s-1-.448-1-1v-2c0-.552.448-1 1-1z\"/>\n    </g>\n    <g fill-rule=\"evenodd\">\n      <path class=\"book-shelf__shelf\" fill=\"#ae8280\" d=\"M21 60h40c1.105 0 2 .895 2 2s-.895 2-2 2H21c-1.105 0-2-.895-2-2s.895-2 2-2z\"/>\n      <path fill=\"#855f6d\" d=\"M51.5 67c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5zm-21 0c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5z\"/>\n    </g>\n  </svg>\n <!--  <button class=\"btn btn-default btn-add\">Add</button>\n</div>\n -->\n </div>";
+	module.exports = "\n<div class=\"new-book-container\">\n  <form>\n    <div class=\"form-group form-label\">\n      <label for=\"title\">Book Title</label>\n      <input type=\"text\" class=\"form-control title\" placeholder=\"Title\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"author\">Author</label>\n      <input type=\"text\" class=\"form-control author\" placeholder=\"Author\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"friend\">Who'd you hear about it from?</label>\n      <input type=\"text\" class=\"form-control friend\" placeholder=\"Friend's name\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"genre\">Genre</label>\n      <input type=\"text\" class=\"form-control genre\" placeholder=\"Genre\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"rating\">Rating</label>\n      <input type=\"text\" class=\"form-control rating\" placeholder=\"Rating\">\n    </div>\n  </form>\n    <svg class=\"book-shelf btn btn-default btn-add\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" viewBox=\"0 0 84 94\" height=\"94\" width=\"84\">\n    <path fill=\"none\" d=\"M37.612 92.805L4.487 73.71c-2.75-1.587-4.45-4.52-4.45-7.687L.008 27.877c-.003-3.154 1.676-6.063 4.405-7.634L37.558 1.167c2.73-1.57 6.096-1.566 8.835.013l33.124 19.096c2.75 1.586 4.45 4.518 4.45 7.686l.028 38.146c.002 3.154-1.677 6.063-4.406 7.634L46.445 92.818c-2.73 1.57-6.096 1.566-8.834-.013z\"/>\n    <g class=\"book-shelf__book book-shelf__book--one\" fill-rule=\"evenodd\">\n      <path fill=\"#5199fc\" d=\"M31 29h4c1.105 0 2 .895 2 2v29c0 1.105-.895 2-2 2h-4c-1.105 0-2-.895-2-2V31c0-1.105.895-2 2-2z\"/>\n      <path fill=\"#afd7fb\" d=\"M34 36h-2c-.552 0-1-.448-1-1s.448-1 1-1h2c.552 0 1 .448 1 1s-.448 1-1 1zm-2 1h2c.552 0 1 .448 1 1s-.448 1-1 1h-2c-.552 0-1-.448-1-1s.448-1 1-1z\"/>\n    </g>\n    <g class=\"book-shelf__book book-shelf__book--two\" fill-rule=\"evenodd\">\n      <path fill=\"#ff9868\" d=\"M39 34h6c1.105 0 2 .895 2 2v24c0 1.105-.895 2-2 2h-6c-1.105 0-2-.895-2-2V36c0-1.105.895-2 2-2z\"/>\n      <path fill=\"#d06061\" d=\"M42 38c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2z\"/>\n    </g>\n    <g class=\"book-shelf__book book-shelf__book--three\" fill-rule=\"evenodd\">\n      <path fill=\"#ff5068\" d=\"M49 32h2c1.105 0 2 .86 2 1.92v25.906c0 1.06-.895 1.92-2 1.92h-2c-1.105 0-2-.86-2-1.92V33.92c0-1.06.895-1.92 2-1.92z\"/>\n      <path fill=\"#d93368\" d=\"M50 35c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1s-1-.448-1-1v-2c0-.552.448-1 1-1z\"/>\n    </g>\n    <g fill-rule=\"evenodd\">\n      <path class=\"book-shelf__shelf\" fill=\"#ae8280\" d=\"M21 60h40c1.105 0 2 .895 2 2s-.895 2-2 2H21c-1.105 0-2-.895-2-2s.895-2 2-2z\"/>\n      <path fill=\"#855f6d\" d=\"M51.5 67c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5zm-21 0c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5z\"/>\n    </g>\n  </svg>\n </div>";
 
 /***/ },
 /* 220 */
@@ -39131,8 +39125,7 @@
 	    this.render();
 	  },
 	  render: function render() {
-	    debugger;
-	    this.$el.html(this.template(this.data));
+	    this.$el.html(this.template({ books: this.data }));
 	  },
 	  addNewBook: function addNewBook() {
 	    this.controller.renderNew();
@@ -39151,7 +39144,7 @@
 /* 221 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"book-list-container\">  \n  <div class=\"table-responsive book-table\">\n    <table class=\"table table-books\">\n      <tr>\n        <th class=\"col-md-4\">Title<span class=\"caret\"></span></th>\n        <th class=\"col-md-3\">Author<span class=\"caret\"></span></th>\n        <th class=\"col-md-2\">Friend<span class=\"caret\"></span></th>\n        <th class=\"col-md-2\">Genre<span class=\"caret\"></span></th>\n        <th class=\"col-md-1\">Rating<span class=\"caret\"></span></th>\n      </tr>\n      <tr >\n        <td>Franny and Zooey</td>\n        <td>JD Salinger</td>\n        <td>Lacey</td>\n        <td>Literary Fiction</td>\n        <td><button type=\"button\" class=\"close btn-read\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button></td>\n      </tr>\n      <tr>\n        <td>Scott Pilgrim's Precious Little Life</td>\n        <td>Bryan Lee O'Malley</td>\n        <td>Dennis</td>\n        <td>Graphic Novel</td>\n        <td><button type=\"button\" class=\"close btn-read\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button></td>\n      </tr>\n      <tr>\n        <td class=\"title\">{{title}}</td>\n        <td class=\"author\">{{author}}</td>\n        <td class=\"friend\">{{friend}}</td>\n        <td class=\"genre\">{{genre}}</td>\n        <td class=\"rating\">{{rating}}</td>\n      </tr>\n      <button class=\"btn btn-default btn-add-book\">Add a new book!</button>\n    </table>\n  </div>\n</div>";
+	module.exports = "<div class=\"book-list-container\">\n  <div class=\"table-responsive book-table\">\n    <table class=\"table table-hover\">\n      <tr>\n        <th>Title<span class=\"caret\"></span></th>\n        <th>Author<span class=\"caret\"></span></th>\n        <th>Friend<span class=\"caret\"></span></th>\n        <th>Genre<span class=\"caret\"></span></th>\n        <th>Rating</th>\n      </tr>\n      {{#each books}}\n      <tr>\n        <td>{{title}}</td>\n        <td>{{author}}</td>\n        <td>{{friend}}</td>\n        <td>{{genre}}</td>\n        <td>{{rating}}</td>\n      </tr>\n      {{/each}}\n    </table>\n    <button class=\"btn btn-default btn-add-book\">Add a book!</button>\n  </div>\n</div>";
 
 /***/ }
 /******/ ]);

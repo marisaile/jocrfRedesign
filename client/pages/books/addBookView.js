@@ -29,7 +29,7 @@ var AddBookView = Backbone.View.extend({
       friend: $friend,
       genre: $genre,
       rating: $rating
-    }
+    };
     this.controller.addBook(newBook);
   }
 });

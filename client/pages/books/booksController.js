@@ -1,4 +1,4 @@
-import $ from 'jquery';
+
 import Backbone from 'backbone';
 import bookModel from 'pages/books/booksModel';
 import AddBookView from 'pages/books/addBookView';
@@ -18,6 +18,7 @@ var BookController = Backbone.View.extend({
     this.$el.html(view.$el);
   },
   render: function() {
+    // for each object in the books array, append the contents to a row in the table
     var view = new BookListView({
       controller: this,
       books: this.model.get('books')
@@ -30,7 +31,6 @@ var BookController = Backbone.View.extend({
   // },
   addBook: function(newBook){
     this.model.addBook(newBook);
-    debugger;
     this.render();
   }
 });

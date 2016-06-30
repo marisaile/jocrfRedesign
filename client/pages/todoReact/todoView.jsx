@@ -46,7 +46,6 @@ var TodoItem = React.createClass({
   },
   titleClick: function(){
     var id = this.props.data.id;
-    // TODO = add focus on input box
     dispatcher.startEditMode(id);
   },
   editKeypress: function(event) {
