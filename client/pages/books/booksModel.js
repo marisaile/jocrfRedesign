@@ -31,22 +31,24 @@ var BookModel = Backbone.Model.extend({
     // shorthand 'if':
     data = (_.isArray(books)) ? data : [];
     data = data.map(function(book) {
-      // book.id = index;
       return _.defaults(book, schema);
     });
     return data;
+    var bookId = data._find(books, function(book){ 
+      return book.id === id;
+    });    
   },
   removeBook: function(id){
     var books = this.get('books');
     books.splice(id, 1);
     this.save();
   },
-  // addBook: function(newBook){
-  //   var books = this.get('books');
-  //   books.push(newBook);
-  //   this.set('books', books);
-  //   this.save();
-  // },
+  addBook: function(newBook){
+    var books = this.get('books');
+    books.push(newBook);
+    this.set('books', books);
+    this.save();
+  },
   // saveRating: function(rating, id){
   //   var books = this.get('books');
   //   books.push(id, rating);

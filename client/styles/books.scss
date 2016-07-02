@@ -17,26 +17,32 @@ body.override-bootstrap {
     color: #27042d;
   }
 }
-.book-list-container .book-table{
+.book-list-container {
   position: relative;
   display: block;
   margin: 100px auto;
-  width: 75%;
+  width: 60%;
   height: 100%;
   font-family: 'Trirong', serif;
   font-size: 16px;
   color: #27042d;
+  
+  .list-group-item {
+    height: 32px; 
+  }
+  .btn-default.btn-rate-book {
+    color: #fefefe;
+    height: 16px;
+    width: 80px;
+    border: none;
+  }
 }
 .btn-default.btn-add-book {
   background-color: #3aaf13;
   font-weight: bold;
   color: #fcfcfc;
 }
-.btn-default.btn-rate-book {
-  color: #fefefe;
-  width: 195px;
-  border: none;
-}
+
 .rating {
   unicode-bidi: bidi-override;
   direction: rtl;

@@ -9977,7 +9977,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","row":"row","col-md-2":"col-md-2","main-todo":"main-todo","todo-container":"todo-container","btn":"btn","btn-add-todo":"btn-add-todo","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","timer-container":"timer-container","counter":"counter","start-button":"start-button","stop-button":"stop-button","reset-button":"reset-button","split-button":"split-button","split-time":"split-time","lap-time":"lap-time","page-container":"page-container","photo-search":"photo-search","search-photo":"search-photo","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","book-table":"book-table","btn-default":"btn-default","btn-add-book":"btn-add-book","btn-rate-book":"btn-rate-book","rating":"rating","btn-add":"btn-add","book-shelf":"book-shelf","book-shelf__book":"book-shelf__book","book-bounce":"book-bounce","book-shelf__book--two":"book-shelf__book--two","book-shelf__book--three":"book-shelf__book--three","book-shelf__shelf":"book-shelf__shelf","shelf-lift":"shelf-lift","form-group":"form-group","book-rating":"book-rating","star":"star","school-subject":"school-subject","subject-list":"subject-list","response-container":"response-container","book-container":"book-container","book-image":"book-image","title":"title","author":"author","school":"school"};
+	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","row":"row","col-md-2":"col-md-2","main-todo":"main-todo","todo-container":"todo-container","btn":"btn","btn-add-todo":"btn-add-todo","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","timer-container":"timer-container","counter":"counter","start-button":"start-button","stop-button":"stop-button","reset-button":"reset-button","split-button":"split-button","split-time":"split-time","lap-time":"lap-time","page-container":"page-container","photo-search":"photo-search","search-photo":"search-photo","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","list-group-item":"list-group-item","btn-default":"btn-default","btn-rate-book":"btn-rate-book","btn-add-book":"btn-add-book","rating":"rating","btn-add":"btn-add","book-shelf":"book-shelf","book-shelf__book":"book-shelf__book","book-bounce":"book-bounce","book-shelf__book--two":"book-shelf__book--two","book-shelf__book--three":"book-shelf__book--three","book-shelf__shelf":"book-shelf__shelf","shelf-lift":"shelf-lift","form-group":"form-group","book-rating":"book-rating","star":"star","school-subject":"school-subject","subject-list":"subject-list","response-container":"response-container","book-container":"book-container","book-image":"book-image","title":"title","author":"author","school":"school"};
 
 /***/ },
 /* 3 */,
@@ -90003,9 +90003,9 @@
 	
 	var _pagesBooksBooksListView2 = _interopRequireDefault(_pagesBooksBooksListView);
 	
-	var _pagesBooksBookRating = __webpack_require__(225);
+	var _pagesBooksBookRatingView = __webpack_require__(227);
 	
-	var _pagesBooksBookRating2 = _interopRequireDefault(_pagesBooksBookRating);
+	var _pagesBooksBookRatingView2 = _interopRequireDefault(_pagesBooksBookRatingView);
 	
 	var BookController = _backbone2['default'].View.extend({
 	  el: '.books-main',
@@ -90021,6 +90021,7 @@
 	    this.$el.html(view.$el);
 	  },
 	  render: function render() {
+	    debugger;
 	    var view = new _pagesBooksBooksListView2['default']({
 	      controller: this,
 	      books: this.model.get('books')
@@ -90034,17 +90035,16 @@
 	  addBook: function addBook(newBook) {
 	    this.model.addBook(newBook);
 	    this.render();
+	  },
+	  addRating: function addRating(id) {
+	    var view = new _pagesBooksBookRatingView2['default']({
+	      controller: this,
+	      id: id
+	    });
+	    this.$el.html(view.$el);
 	  }
 	});
 	
-	// addRating: function(id){
-	//   id = {rating: '.rating'};
-	//   var view = new BookReviewView({
-	//     controller: this,
-	//     id: id
-	//   });
-	//   this.$el.html(view.$el);
-	// },
 	// saveRating: function(rating, id){
 	//   this.model.saveRating(rating, id);
 	//   this.render();
@@ -90105,23 +90105,25 @@
 	    // shorthand 'if':
 	    data = _underscore2['default'].isArray(books) ? data : [];
 	    data = data.map(function (book) {
-	      // book.id = index;
 	      return _underscore2['default'].defaults(book, schema);
 	    });
 	    return data;
+	    var bookId = data._find(books, function (book) {
+	      return book.id === id;
+	    });
 	  },
 	  removeBook: function removeBook(id) {
 	    var books = this.get('books');
 	    books.splice(id, 1);
 	    this.save();
+	  },
+	  addBook: function addBook(newBook) {
+	    var books = this.get('books');
+	    books.push(newBook);
+	    this.set('books', books);
+	    this.save();
 	  }
 	});
-	// addBook: function(newBook){
-	//   var books = this.get('books');
-	//   books.push(newBook);
-	//   this.set('books', books);
-	//   this.save();
-	// },
 	// saveRating: function(rating, id){
 	//   var books = this.get('books');
 	//   books.push(id, rating);
@@ -90552,7 +90554,7 @@
 /* 222 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"new-book-container\">\n  <form>\n    <div class=\"form-group form-label\">\n      <label for=\"title\">Book Title</label>\n      <input type=\"text\" class=\"form-control title\" placeholder=\"Title\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"author\">Author</label>\n      <input type=\"text\" class=\"form-control author\" placeholder=\"Author\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"friend\">Who recommended it?</label>\n      <input type=\"text\" class=\"form-control friend\" placeholder=\"Your name\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"genre\">Genre</label>\n      <input type=\"text\" class=\"form-control genre\" placeholder=\"Genre\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"rating\">Rating/Review</label>\n      <textarea class=\"form-control synopsis\" rows=\"2\" placeholder=\"Synopsis\"></textarea>\n    </div>\n  </form>\n    <svg class=\"book-shelf btn btn-default btn-add\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" viewBox=\"0 0 84 94\" height=\"94\" width=\"84\">\n    <path fill=\"none\" d=\"M37.612 92.805L4.487 73.71c-2.75-1.587-4.45-4.52-4.45-7.687L.008 27.877c-.003-3.154 1.676-6.063 4.405-7.634L37.558 1.167c2.73-1.57 6.096-1.566 8.835.013l33.124 19.096c2.75 1.586 4.45 4.518 4.45 7.686l.028 38.146c.002 3.154-1.677 6.063-4.406 7.634L46.445 92.818c-2.73 1.57-6.096 1.566-8.834-.013z\"/>\n    <g class=\"book-shelf__book book-shelf__book--one\" fill-rule=\"evenodd\">\n      <path fill=\"#5199fc\" d=\"M31 29h4c1.105 0 2 .895 2 2v29c0 1.105-.895 2-2 2h-4c-1.105 0-2-.895-2-2V31c0-1.105.895-2 2-2z\"/>\n      <path fill=\"#afd7fb\" d=\"M34 36h-2c-.552 0-1-.448-1-1s.448-1 1-1h2c.552 0 1 .448 1 1s-.448 1-1 1zm-2 1h2c.552 0 1 .448 1 1s-.448 1-1 1h-2c-.552 0-1-.448-1-1s.448-1 1-1z\"/>\n    </g>\n    <g class=\"book-shelf__book book-shelf__book--two\" fill-rule=\"evenodd\">\n      <path fill=\"#ff9868\" d=\"M39 34h6c1.105 0 2 .895 2 2v24c0 1.105-.895 2-2 2h-6c-1.105 0-2-.895-2-2V36c0-1.105.895-2 2-2z\"/>\n      <path fill=\"#d06061\" d=\"M42 38c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2z\"/>\n    </g>\n    <g class=\"book-shelf__book book-shelf__book--three\" fill-rule=\"evenodd\">\n      <path fill=\"#ff5068\" d=\"M49 32h2c1.105 0 2 .86 2 1.92v25.906c0 1.06-.895 1.92-2 1.92h-2c-1.105 0-2-.86-2-1.92V33.92c0-1.06.895-1.92 2-1.92z\"/>\n      <path fill=\"#d93368\" d=\"M50 35c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1s-1-.448-1-1v-2c0-.552.448-1 1-1z\"/>\n    </g>\n    <g fill-rule=\"evenodd\">\n      <path class=\"book-shelf__shelf\" fill=\"#ae8280\" d=\"M21 60h40c1.105 0 2 .895 2 2s-.895 2-2 2H21c-1.105 0-2-.895-2-2s.895-2 2-2z\"/>\n      <path fill=\"#855f6d\" d=\"M51.5 67c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5zm-21 0c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5z\"/>\n    </g>\n  </svg>\n </div>";
+	module.exports = "\n<div class=\"new-book-container\">\n  <form>\n    <div class=\"form-group form-label\">\n      <label for=\"title\">Book Title</label>\n      <input type=\"text\" class=\"form-control title\" placeholder=\"Title\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"author\">Author</label>\n      <input type=\"text\" class=\"form-control author\" placeholder=\"Author\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"friend\">Who recommended it?</label>\n      <input type=\"text\" class=\"form-control friend\" placeholder=\"Your name\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"genre\">Genre</label>\n      <input type=\"text\" class=\"form-control genre\" placeholder=\"Genre\">\n    </div>\n  </form>\n    <svg class=\"book-shelf btn btn-default btn-add\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" viewBox=\"0 0 84 94\" height=\"94\" width=\"84\">\n    <path fill=\"none\" d=\"M37.612 92.805L4.487 73.71c-2.75-1.587-4.45-4.52-4.45-7.687L.008 27.877c-.003-3.154 1.676-6.063 4.405-7.634L37.558 1.167c2.73-1.57 6.096-1.566 8.835.013l33.124 19.096c2.75 1.586 4.45 4.518 4.45 7.686l.028 38.146c.002 3.154-1.677 6.063-4.406 7.634L46.445 92.818c-2.73 1.57-6.096 1.566-8.834-.013z\"/>\n    <g class=\"book-shelf__book book-shelf__book--one\" fill-rule=\"evenodd\">\n      <path fill=\"#5199fc\" d=\"M31 29h4c1.105 0 2 .895 2 2v29c0 1.105-.895 2-2 2h-4c-1.105 0-2-.895-2-2V31c0-1.105.895-2 2-2z\"/>\n      <path fill=\"#afd7fb\" d=\"M34 36h-2c-.552 0-1-.448-1-1s.448-1 1-1h2c.552 0 1 .448 1 1s-.448 1-1 1zm-2 1h2c.552 0 1 .448 1 1s-.448 1-1 1h-2c-.552 0-1-.448-1-1s.448-1 1-1z\"/>\n    </g>\n    <g class=\"book-shelf__book book-shelf__book--two\" fill-rule=\"evenodd\">\n      <path fill=\"#ff9868\" d=\"M39 34h6c1.105 0 2 .895 2 2v24c0 1.105-.895 2-2 2h-6c-1.105 0-2-.895-2-2V36c0-1.105.895-2 2-2z\"/>\n      <path fill=\"#d06061\" d=\"M42 38c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2z\"/>\n    </g>\n    <g class=\"book-shelf__book book-shelf__book--three\" fill-rule=\"evenodd\">\n      <path fill=\"#ff5068\" d=\"M49 32h2c1.105 0 2 .86 2 1.92v25.906c0 1.06-.895 1.92-2 1.92h-2c-1.105 0-2-.86-2-1.92V33.92c0-1.06.895-1.92 2-1.92z\"/>\n      <path fill=\"#d93368\" d=\"M50 35c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1s-1-.448-1-1v-2c0-.552.448-1 1-1z\"/>\n    </g>\n    <g fill-rule=\"evenodd\">\n      <path class=\"book-shelf__shelf\" fill=\"#ae8280\" d=\"M21 60h40c1.105 0 2 .895 2 2s-.895 2-2 2H21c-1.105 0-2-.895-2-2s.895-2 2-2z\"/>\n      <path fill=\"#855f6d\" d=\"M51.5 67c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5zm-21 0c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5z\"/>\n    </g>\n  </svg>\n </div>";
 
 /***/ },
 /* 223 */
@@ -90566,6 +90568,10 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
+	var _underscore = __webpack_require__(169);
+	
+	var _underscore2 = _interopRequireDefault(_underscore);
+	
 	var _backbone = __webpack_require__(168);
 	
 	var _backbone2 = _interopRequireDefault(_backbone);
@@ -90574,7 +90580,11 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _templatesBooksBookListHtml = __webpack_require__(224);
+	var _pagesBooksBookItemView = __webpack_require__(224);
+	
+	var _pagesBooksBookItemView2 = _interopRequireDefault(_pagesBooksBookItemView);
+	
+	var _templatesBooksBookListHtml = __webpack_require__(226);
 	
 	var _templatesBooksBookListHtml2 = _interopRequireDefault(_templatesBooksBookListHtml);
 	
@@ -90582,8 +90592,8 @@
 	  className: 'books-list',
 	  events: {
 	    'click .btn-add-book': 'addNewBook',
-	    'click .close-book': 'removeBook'
-	    // 'click .btn-primary': 'addRating'  
+	    'click .close-book': 'removeBook',
+	    'click .btn-rate-book': 'addRating'
 	    // 'click .btn-sort-title': 'sortListBy',
 	    // 'click .btn-sort-author': 'sortListBy',
 	    // 'click .btn-sort-friend': 'sortListBy',
@@ -90597,8 +90607,12 @@
 	  },
 	  render: function render() {
 	    this.$el.html(this.template({}));
-	    _.each(books, function (book) {
-	      // make item views
+	    var books = this.data;
+	    var $ul = this.$el.find('ul');
+	    _underscore2['default'].each(books, function (book) {
+	      debugger;
+	      var view = new _pagesBooksBookItemView2['default'](book);
+	      $ul.append(view.$el);
 	    });
 	  },
 	  addNewBook: function addNewBook() {
@@ -90606,28 +90620,22 @@
 	  },
 	  removeBook: function removeBook() {
 	    this.controller.removeBook(this.data.id);
+	  },
+	  addRating: function addRating() {
+	    this.controller.addRating(this.data.id);
 	  }
+	  // showSynopsis: function(){
+	  //  
+	  // }
+	  // sortListBy: function(){
+	  //   // sort list by title, author, genre, or recommender
+	  // }
 	});
 	
-	// addRating: function(){
-	//   this.controller.addRating(this.data.id);
-	// }
-	// showSynopsis: function(){
-	//  
-	// }
-	// sortListBy: function(){
-	//   // sort list by title, author, genre, or recommender
-	// }
 	module.exports = BookListView;
 
 /***/ },
 /* 224 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"book-list-container\">\n  <div class=\"container-fluid\">\n    <ul class=\"book-list\">\n      <li class=\"row\">\n        <div class=\"col-md-3\">Title</div>\n        \n      </li>\n    </ul>\n    <button class=\"btn btn-default btn-add-book\">New book!</button>\n  </div>\n</div>\n\n\n\n";
-
-/***/ },
-/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -90646,7 +90654,58 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _templatesBooksBookRatingHtml = __webpack_require__(226);
+	var _templatesBooksBookItemHtml = __webpack_require__(225);
+	
+	var _templatesBooksBookItemHtml2 = _interopRequireDefault(_templatesBooksBookItemHtml);
+	
+	var BookItemView = _backbone2['default'].View.extend({
+	  className: 'new-book',
+	  events: {},
+	  template: _handlebars2['default'].compile(_templatesBooksBookItemHtml2['default']),
+	  initialize: function initialize(book) {
+	    this.data = book;
+	    this.render();
+	  },
+	  render: function render() {
+	    this.$el.html(this.template(this.data));
+	  }
+	});
+	
+	module.exports = BookItemView;
+
+/***/ },
+/* 225 */
+/***/ function(module, exports) {
+
+	module.exports = "<li class=\"list-group-item\">\n  <div class=\"title col-md-3\">{{title}}</div>\n  <div class=\"author col-md-3\">{{author}}</div>\n  <div class=\"friend col-md-2\">{{friend}}</div>\n  <div class=\"genre col-md-2\">{{genre}}</div>\n  <div class=\"rating col-md-1\">{{rating}}<button class=\"btn btn-default btn-rate-book\" type=\"submit\"></button></div>\n  <div class=\"read col-md-1\"><button type=\"button\" class=\"close close-book\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button></div>\n</li>\n";
+
+/***/ },
+/* 226 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"book-list-container\">\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">\n      <div class=\"col-md-3\">Title</div>\n      <div class=\"col-md-3\">Author</div>\n      <div class=\"col-md-2\">Friend</div>\n      <div class=\"col-md-2\">Genre</div>\n      <div class=\"col-md-1\">Rating</div>\n      <div class=\"col-md-1\">Read</div>   \n    </li>\n  </ul>\n  <button class=\"btn btn-default btn-add-book\">New book!</button>\n</div>\n\n\n\n";
+
+/***/ },
+/* 227 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _backbone = __webpack_require__(168);
+	
+	var _backbone2 = _interopRequireDefault(_backbone);
+	
+	var _handlebars = __webpack_require__(174);
+	
+	var _handlebars2 = _interopRequireDefault(_handlebars);
+	
+	var _templatesBooksBookRatingHtml = __webpack_require__(228);
 	
 	var _templatesBooksBookRatingHtml2 = _interopRequireDefault(_templatesBooksBookRatingHtml);
 	
@@ -90674,7 +90733,7 @@
 	module.exports = BookReviewView;
 
 /***/ },
-/* 226 */
+/* 228 */
 /***/ function(module, exports) {
 
 	module.exports = "\n  <div class=\"form-group book-rating\">\n    <div class=\"rating\">\n      <span class=\"star one-star\">☆</span><span class=\"star two-stars\">☆</span><span class=\"star three-stars\">☆</span><span class=\"star four-stars\">☆</span><span class=\"star five-stars\">☆</span>\n    </div>\n      <textarea class=\"form-control book-review\" rows=\"2\" id=\"comment\"></textarea>\n      <button class=\"btn btn-default\" type=\"submit\">Button</button>\n  </div>\n\n";

@@ -3,7 +3,8 @@ import Backbone from 'backbone';
 import bookModel from 'pages/books/booksModel';
 import AddBookView from 'pages/books/addBookView';
 import BookListView from 'pages/books/booksListView';
-import BookReviewView from 'pages/books/bookRating';
+import BookReviewView from 'pages/books/bookRatingView';
+
 
 var BookController = Backbone.View.extend({
   el: '.books-main',
@@ -19,6 +20,7 @@ var BookController = Backbone.View.extend({
     this.$el.html(view.$el);
   },
   render: function() {
+    debugger;
     var view = new BookListView({
       controller: this,
       books: this.model.get('books')
@@ -30,17 +32,16 @@ var BookController = Backbone.View.extend({
     this.render();
   },
   addBook: function(newBook){
-    this.model.addBook(newBook);
+    this.model.addBook(newBook); 
     this.render();
   },
-  // addRating: function(id){ 
-  //   id = {rating: '.rating'};
-  //   var view = new BookReviewView({
-  //     controller: this,
-  //     id: id
-  //   });
-  //   this.$el.html(view.$el);
-  // },
+  addRating: function(id){ 
+    var view = new BookReviewView({
+      controller: this,
+      id: id
+    });
+    this.$el.html(view.$el);
+  },
   // saveRating: function(rating, id){
   //   this.model.saveRating(rating, id);
   //   this.render();
