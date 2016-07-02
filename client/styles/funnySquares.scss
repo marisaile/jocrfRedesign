@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Prompt);
 @import url(https://fonts.googleapis.com/css?family=Lato);
 
-body.override-bootstrap {
+/*body.override-bootstrap {
   margin: 0;
-  background-color: #f4f3f8;
-}
+  background-color: #fff;
+}*/
 .square {
   position: relative;
   display: inline-block;
@@ -13,13 +13,14 @@ body.override-bootstrap {
   height: 100px;
   width: 100px;
   margin-right: 30px;
-  background-color: #24205a;
-  text-align: left;
+  background-color: #3aaf13;
+  text-align: center;
+  vertical-align: middle;
   font-family: arial;
-  font-size: 42px;
+  font-size: 42px;  
   transform: none;
   transition: transform .5s;
-  color: #e4e3e8;
+  color: #fcfcfc;
   font-family: 'Prompt';
 }
 .square-container {

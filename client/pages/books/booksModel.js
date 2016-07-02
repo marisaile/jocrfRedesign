@@ -1,4 +1,4 @@
-
+import $ from 'jquery';
 import _ from 'underscore';
 import Backbone from 'backbone';
 import lscache from 'lscache';
@@ -12,7 +12,8 @@ var BookModel = Backbone.Model.extend({
     title: '',
     author: '',
     friend: '',
-    genre: ''
+    genre: '',
+    rating: ''
   },
   fetch: function(){
     var data = lscache.get('books');
@@ -24,34 +25,6 @@ var BookModel = Backbone.Model.extend({
     data = this.applySchema(data);
     lscache.set('books', data);
   },
-  // fetch: function() {
-  //   var that = this;
-  //   $.ajax({
-  //     url: '/api',
-  //     method: 'GET',
-  //     complete: function(response){
-  //       var dataString = response.responseText;
-  //       var data = JSON.parse(dataString);
-  //       data = that.applySchema(data);
-  //       that.set('books', data);   
-  //     }
-  //   });
-  // },
-  // save: function() {
-  //   var that = this;
-  //   var books = this.get('books');
-  //   $.ajax({
-  //     url: '/api',
-  //     method: 'POST',
-  //     data: {books: JSON.stringify(books)},
-  //     complete: function(response){
-  //       var dataString = response.responseText;
-  //       var data = JSON.parse(dataString);
-  //       data = that.applySchema(data);
-  //       that.set('books', data);   
-  //     }
-  //   });
-  // },
   applySchema: function(books) { 
     var data = books;
     var schema = this.bookSchema;
@@ -63,17 +36,29 @@ var BookModel = Backbone.Model.extend({
     });
     return data;
   },
-  // removeFromList: function(id){
+  removeBook: function(id){
+    var books = this.get('books');
+    books.splice(id, 1);
+    this.save();
+  },
+  // addBook: function(newBook){
   //   var books = this.get('books');
-  //   books.splice(id, 1);
+  //   books.push(newBook);
+  //   this.set('books', books);
   //   this.save();
   // },
-  addBook: function(newBook){
-    var books = this.get('books');
-    books.push(newBook);
-    this.set('books', books);
-    this.save();
-  }
+  // saveRating: function(rating, id){
+  //   var books = this.get('books');
+  //   books.push(id, rating);
+  //   this.set('books', books);
+  //   this.save();
+  // }
+  // addRating: function(id){
+  //   var books = this.get('books');
+
+  
+
+  // }
   // addFriend: function(){
     
   // }

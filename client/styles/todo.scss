@@ -3,10 +3,10 @@
 @import url(https://fonts.googleapis.com/css?family=Amita);
 @import url(https://fonts.googleapis.com/css?family=Prompt);
 
-body.override-bootstrap {
+/*body.override-bootstrap {
   margin: 0;
-  background-color: #f4f3f8;
-}
+  background-color: #fff;
+}*/
 .main-todo {
   margin: 5px auto;
   width: 500px;
@@ -17,13 +17,16 @@ body.override-bootstrap {
   margin-top: 125px;
   width: 400px;
 }
+.btn.btn-add-todo {
+  background-color: #3aaf13;
+}
 .form-control.inuput-name {
-  background-color: #f4f3f8;
+  background-color: #fff;
 }
 #todo-title {
   font-family: 'Prompt';
   font-size: 30px;
-  color: #212413;
+  color: #27042d;
   font-weight: 400;
 }
 .add-todo-container {
@@ -35,4 +38,9 @@ body.override-bootstrap {
 .add-todo-container .col-md-2 {
   padding-right: 0;
   text-align: right;
+
+  .btn.btn-add-todo {
+    background-color: #3aaf13;
+    color: #fcfcfc;
+  }
 }

@@ -7,37 +7,38 @@
 
 body.override-bootstrap {
   margin: 0;
-  background-color: #f4f3f8;
+  background-color: #fcfcfc;
 }
 .main-header .row {
   position: relative;
   display: block;
   width: 100%;
   height: 100px;
-  background-color: #f4f3f8; 
-  border-bottom: 2px solid #3a98b8;
+  background-color: #fcfcfc; 
+  border-bottom: 2px solid #3aaf13;
   margin: 0;
   padding: 0;
-} 
-.col-md-2 {
-  position: relative;
-  top: 75px;
-  left: 75px;
-}
-.col-md-2 a {
-  font-family: 'Carme', sans-serif;
-  font-size: 16px;
-  text-decoration: none;
-  color: #212413;
-}
-.col-md-2 a:hover {
-  color: #e4e3e8;
-  text-decoration: none;
-  /*text-align: center;*/
-  top: 60px;
-  height: 40px;
-  width: 240px;
-  background-color: #3a98b8;
+ 
+  .col-md-2 {
+    position: relative;
+    top: 75px;
+
+    a {
+      font-family: 'Carme', sans-serif;
+      font-size: 16px;
+      text-decoration: none;
+      color: #27042d;
+    }
+  }
+  .col-md-2:hover {
+    background-color: #3aaf13;
+    
+    a { 
+      color: #fcfcfc;
+      text-decoration: none;
+      text-align: center;
+    } 
+  }
 }
 /*.main-circle {
   position: relative;

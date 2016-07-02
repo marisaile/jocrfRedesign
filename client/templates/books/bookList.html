@@ -1,23 +1,14 @@
 <div class="book-list-container">
-  <div class="table-responsive book-table">
-    <table class="table table-hover">
-      <tr>
-        <th>Title<span class="caret"></span></th>
-        <th>Author<span class="caret"></span></th>
-        <th>Friend<span class="caret"></span></th>
-        <th>Genre<span class="caret"></span></th>
-        <th>Rating</th>
-      </tr>
-      {{#each books}}
-      <tr>
-        <td>{{title}}</td>
-        <td>{{author}}</td>
-        <td>{{friend}}</td>
-        <td>{{genre}}</td>
-        <td>{{rating}}</td>
-      </tr>
-      {{/each}}
-    </table>
-    <button class="btn btn-default btn-add-book">Add a book!</button>
+  <div class="container-fluid">
+    <ul class="book-list">
+      <li class="row">
+        <div class="col-md-3">Title</div>
+        
+      </li>
+    </ul>
+    <button class="btn btn-default btn-add-book">New book!</button>
   </div>
 </div>
+
+
+

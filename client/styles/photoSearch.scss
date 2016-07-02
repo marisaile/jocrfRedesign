@@ -4,7 +4,7 @@
 
 body.override-bootstrap {
   margin: 0;
-  background-color: #f4f3f8;
+  background-color: #fff;
 }
 .photo-search {
   position: relative;
@@ -20,7 +20,7 @@ input.search-photo {
   top: 30px;
   left: 25px;
   width: 400px;
-  background-color: #f4f3f8;
+  background-color: #fff;
 }
 
 .search-results {
@@ -36,7 +36,7 @@ input.search-photo {
     display: inline-block;
     img {
       width: 100%;
-      border: solid 1px #212413;
+      border: solid 1px #27042d;
     }
   }
 }

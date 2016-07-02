@@ -3,6 +3,7 @@ import Backbone from 'backbone';
 import bookModel from 'pages/books/booksModel';
 import AddBookView from 'pages/books/addBookView';
 import BookListView from 'pages/books/booksListView';
+import BookReviewView from 'pages/books/bookRating';
 
 var BookController = Backbone.View.extend({
   el: '.books-main',
@@ -18,21 +19,32 @@ var BookController = Backbone.View.extend({
     this.$el.html(view.$el);
   },
   render: function() {
-    // for each object in the books array, append the contents to a row in the table
     var view = new BookListView({
       controller: this,
       books: this.model.get('books')
     });
     this.$el.html(view.$el);
   },
-  // removeFromList: function(id){
-  //   this.model.RemoveFromList(id);
-  //   this.render();
-  // },
+  removeBook: function(id){
+    this.model.removeBook(id);
+    this.render();
+  },
   addBook: function(newBook){
     this.model.addBook(newBook);
     this.render();
-  }
+  },
+  // addRating: function(id){ 
+  //   id = {rating: '.rating'};
+  //   var view = new BookReviewView({
+  //     controller: this,
+  //     id: id
+  //   });
+  //   this.$el.html(view.$el);
+  // },
+  // saveRating: function(rating, id){
+  //   this.model.saveRating(rating, id);
+  //   this.render();
+  // }
 });
 
 var bookController = new BookController();

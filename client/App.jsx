@@ -4,7 +4,8 @@ import 'styles/main.scss';
 import mainPage from 'components/mainPage';
 import TodoListView from 'pages/todoReact/todoListView';
 import funnySquares from 'pages/funnySquares';
-import timer from 'pages/timer';
+import d3 from 'pages/d3';
+import three from 'pages/three';
 import schoolBooks from 'pages/schoolBooks';
 import photoSearch from 'pages/photoSearch';
 import bookController from 'pages/books/booksController';
@@ -22,10 +23,13 @@ $(function() {
     case '/pages/funnySquares.html':
       funnySquares.init();
     break;
-    case '/pages/timer.html':
-      timer.init();
+    case '/pages/d3.html':
+      d3.init();
     break;
-    case '/pages/probablyNothing.html':
+    case '/pages/three.html':
+      three.init();
+    break;
+    case '/pages/schoolBooks.html':
       schoolBooks.init();
     break;
     case '/pages/photoSearch.html':
