@@ -1,65 +1,124 @@
-@import url(https://fonts.googleapis.com/css?family=Carme);@import url(https://fonts.googleapis.com/css?family=Prompt);@import url(https://fonts.googleapis.com/css?family=Libre+Franklin);@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Amita);@import url(https://fonts.googleapis.com/css?family=Lato);@import url(https://fonts.googleapis.com/css?family=Proza+Libre:400,500);@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Trirong:700);@import url(https://fonts.googleapis.com/css?family=Sigmar+One);@import url(https://fonts.googleapis.com/css?family=Trirong:400,700);@charset "UTF-8";
-body.override-bootstrap {
+@import url(https://fonts.googleapis.com/css?family=Carme);@import url(https://fonts.googleapis.com/css?family=Prompt);@import url(https://fonts.googleapis.com/css?family=Libre+Franklin);@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Amita);@import url(https://fonts.googleapis.com/css?family=Alice);@import url(https://fonts.googleapis.com/css?family=Junge);@import url(https://fonts.googleapis.com/css?family=Artifika);@import url(https://fonts.googleapis.com/css?family=Cormorant+Unicase);@import url(https://fonts.googleapis.com/css?family=Lato);@import url(https://fonts.googleapis.com/css?family=Proza+Libre:400,500);@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Trirong:700);@import url(https://fonts.googleapis.com/css?family=Sigmar+One);@import url(https://fonts.googleapis.com/css?family=Trirong:400,700);body.override-bootstrap {
   margin: 0;
-  background-color: #fcfcfc;
+  background-color: #eee;
 }
 
-.main-header .row {
+.main-header {
   position: relative;
   display: block;
-  width: 100%;
   height: 100px;
-  background-color: #fcfcfc;
-  border-bottom: 2px solid #3aaf13;
+  width: 100%;
+}
+
+.main-header nav {
+  position: relative;
+  display: block;
+  top: 75px;
+  left: 200px;
+}
+
+.main-header nav a {
+  display: inline-block;
+  color: #04262d;
+  font-family: 'Alice', serif;
+  font-size: 16px;
+  margin-right: 75px;
+}
+
+.main-header nav a:hover {
+  text-decoration: none;
+}
+
+.main-header nav a:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.main-header nav a:hover:after {
+  width: 100%;
+  background: #04262d;
+}
+
+#cloud {
+  width: 350px;
+  height: 120px;
+  background: #fefefe;
+  transition: rotateY(-30deg);
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  position: relative;
+  margin: 175px auto;
+}
+
+#cloud:after, #cloud:before {
+  content: '';
+  position: absolute;
+  background: #fefefe;
+  z-index: -1;
+  transition: rotateY(-30deg);
+}
+
+#cloud:after {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: 50px;
+  transition: rotateY(-30deg);
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+}
+
+#cloud:before {
+  width: 180px;
+  height: 180px;
+  top: -90px;
+  right: 50px;
+  transition: rotateY(-30deg);
+  border-radius: 200px;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+}
+
+.marisaile {
+  position: relative;
+  bottom: -10px;
+  left: 100px;
+  font-family: 'Montez', cursive;
+  font-size: 50px;
+  line-height: 50px;
   margin: 0;
   padding: 0;
 }
 
-.main-header .row .col-md-2 {
+.sub {
   position: relative;
-  top: 75px;
-}
-
-.main-header .row .col-md-2 a {
-  font-family: 'Carme', sans-serif;
-  font-size: 16px;
-  text-decoration: none;
-  color: #27042d;
-}
-
-.main-header .row .col-md-2:hover {
-  background-color: #3aaf13;
-}
-
-.main-header .row .col-md-2:hover a {
-  color: #fcfcfc;
-  text-decoration: none;
-  text-align: center;
-}
-
-/*.main-circle {
-  position: relative;
-  top: 50px;
-  left: 50px;
-  height: 200px;
-  width: 200px;
-  border-radius: 100%;
-  background-color: #9c83e6;
-  z-index: 1;
-}
-.main-square {
-  position: relative;
-  top: 0;
-  left: 150px;
-  height: 200px;
-  width: 200px;
-  background-color: #212413;
-  z-index: 0;
-}*/
-/*body.override-bootstrap {
+  left: 160px;
+  font-family: 'Alice', serif;
+  font-size: 14px;
+  line-height: 14px;
   margin: 0;
-  background-color: #fff;
-}*/
+  padding: 0;
+}
+
+.footer-container {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+}
+
+.footer-container i.fa {
+  display: inline-block;
+  left: 50%;
+  margin: 50px;
+}
+
 .main-todo {
   margin: 5px auto;
   width: 500px;
@@ -105,10 +164,6 @@ body.override-bootstrap {
   color: #fcfcfc;
 }
 
-/*body.override-bootstrap {
-  margin: 0;
-  background-color: #fff;
-}*/
 .square {
   position: relative;
   display: inline-block;
@@ -235,22 +290,12 @@ body.override-bootstrap {
   font-size: 14px;
 }
 
-body.override-bootstrap {
-  margin: 0;
-  background-color: #fff;
-}
-
 .page-container {
   position: relative;
   top: 125px;
   left: 25px;
   width: 500px;
   background-color: white;
-}
-
-body.override-bootstrap {
-  margin: 0;
-  background-color: #fff;
 }
 
 .photo-search {
@@ -291,11 +336,6 @@ input.search-photo {
   border: solid 1px #27042d;
 }
 
-body.override-bootstrap {
-  margin: 0;
-  background-color: #fcfcfc;
-}
-
 .new-book-container {
   position: relative;
   display: block;
@@ -309,109 +349,35 @@ body.override-bootstrap {
   color: #27042d;
 }
 
+.btn-add {
+  position: relative;
+  left: -5px;
+  top: 10px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+}
+
 .book-list-container {
   position: relative;
   display: block;
   margin: 100px auto;
   width: 60%;
-  height: 100%;
   font-family: 'Trirong', serif;
   font-size: 16px;
   color: #27042d;
 }
 
-.book-list-container .list-group-item {
-  height: 32px;
-}
-
-.book-list-container .btn-default.btn-rate-book {
-  color: #fefefe;
-  height: 16px;
-  width: 80px;
-  border: none;
-}
-
 .btn-default.btn-add-book {
-  background-color: #3aaf13;
+  position: relative;
+  left: 5px;
+  top: 10px;
+  background-color: #18678a;
   font-weight: bold;
   color: #fcfcfc;
-}
-
-.rating {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-}
-
-.rating > span {
-  display: inline-block;
-  position: relative;
-  width: 1.1em;
-}
-
-.rating > span:hover:before,
-.rating > span:hover ~ span:before {
-  content: "\2605";
-  position: absolute;
-}
-
-/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
-   follow these rules. Every browser that supports :checked also supports :not(), so
-   it doesn’t make the test unnecessarily selective */
-.rating:not(:checked) > input {
-  position: absolute;
-  top: -9999px;
-  clip: rect(0, 0, 0, 0);
-}
-
-.rating:not(:checked) > label {
-  float: right;
-  width: 1em;
-  padding: 0 .1em;
-  overflow: hidden;
-  white-space: nowrap;
-  cursor: pointer;
-  font-size: 200%;
-  line-height: 1.2;
-  color: #ddd;
-  text-shadow: 1px 1px #bbb, 2px 2px #666, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
-}
-
-.rating:not(:checked) > label:before {
-  content: '\2605   ';
-}
-
-.rating > input:checked ~ label {
-  color: #f70;
-  text-shadow: 1px 1px #c60, 2px 2px #940, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
-}
-
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {
-  color: gold;
-  text-shadow: 1px 1px goldenrod, 2px 2px #B57340, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
-}
-
-.rating > input:checked + label:hover,
-.rating > input:checked + label:hover ~ label,
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label,
-.rating > label:hover ~ input:checked ~ label {
-  color: #ea0;
-  text-shadow: 1px 1px goldenrod, 2px 2px #B57340, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
-}
-
-.rating > label:active {
-  position: relative;
-  top: 2px;
-  left: 2px;
-}
-
-.btn-add body {
-  background-color: #f5f5f1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
 @keyframes book-bounce {
@@ -450,55 +416,53 @@ body.override-bootstrap {
   }
 }
 
-.btn-add .book-shelf:hover {
+.book-shelf:hover {
   cursor: pointer;
 }
 
-.btn-add .book-shelf:hover .book-shelf__book {
+.book-shelf:hover .book-shelf__book {
   animation: book-bounce 0.4s ease;
   animation-iteration-count: 1;
 }
 
-.btn-add .book-shelf:hover .book-shelf__book--two {
+.book-shelf:hover .book-shelf__book--two {
   animation-delay: 0.04s;
 }
 
-.btn-add .book-shelf:hover .book-shelf__book--three {
+.book-shelf:hover .book-shelf__book--three {
   animation-delay: 0.08s;
 }
 
-.btn-add .book-shelf:hover .book-shelf__shelf {
+.book-shelf:hover .book-shelf__shelf {
   animation: shelf-lift 0.4s ease;
   animation-iteration-count: 1;
   transform-origin: 50% 50%;
 }
 
-.form-group.book-rating {
+.subject-list-container {
   position: relative;
   display: block;
-  margin: 100px auto;
-  width: 300px;
-}
-
-span .star {
-  width: 100px;
-}
-
-body.override-bootstrap {
-  margin: 0;
-  background-color: #fcfcfc;
-}
-
-/*.subject-list-container {
   height: 30%;
-}*/
-.school-subject {
+}
+
+i.fa {
   position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  color: black;
+  top: 93px;
+  left: 20px;
+}
+
+h1.school-subject {
+  position: relative;
+  display: block;
   font-family: 'Trirong', serif;
   color: #27042d;
   font-size: 20px;
-  top: 30px;
-  left: 50px;
+  top: 100px;
+  left: 600px;
 }
 
 .form-control.subject-list {
@@ -511,58 +475,60 @@ body.override-bootstrap {
 .response-container {
   position: relative;
   display: block;
+  height: 70%;
   margin: 75px auto;
   width: 95%;
 }
 
-li.book-container {
-  display: inline-block;
+.response-container li.book-container {
+  position: relative;
+  display: block;
   list-style-image: none;
-  height: 200px;
-  width: 350px;
-  margin-right: 50px;
+  height: 350px;
+  width: 700px;
+  margin-top: 20px;
 }
 
-li.book-container img.book-image {
+.response-container li.book-container img.book-image {
   position: relative;
   top: 20px;
   left: -20px;
-  width: 105px;
+  width: 200px;
   box-shadow: 0px 2px 2px 3px rgba(210, 214, 213, 0.8);
 }
 
-li.book-container .title {
+.response-container li.book-container .title {
   position: relative;
-  top: -40px;
-  left: 100px;
-  width: 250px;
+  top: -30px;
+  left: 200px;
+  width: 300px;
+  font-family: 'Trirong', serif;
+  font-size: 18px;
+  color: #27042d;
+  text-align: left;
+}
+
+.response-container li.book-container .author {
+  position: relative;
+  top: -30px;
+  left: 200px;
   font-family: 'Trirong', serif;
   font-size: 16px;
   color: #27042d;
   text-align: left;
 }
 
-li.book-container .author {
-  position: relative;
-  top: -40px;
-  left: 100px;
-  font-family: 'Trirong', serif;
-  font-size: 14px;
-  color: #27042d;
-  text-align: left;
-}
-
-li.book-container:hover {
+.response-container li.book-container:hover {
   background-color: #fff;
   box-shadow: 0px 1px 1px 1px rgba(210, 214, 213, 0.5);
 }
 
-img.book-image:hover {
+.response-container li.book-container:hover img.book-image:hover {
   transform: rotate3d(5deg, 10deg, 45deg);
   transition: transform .5s;
 }
 
-img.school {
+.response-container li.book-container:hover img.school {
   position: relative;
   width: 75px;
 }

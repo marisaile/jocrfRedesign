@@ -6,7 +6,7 @@ import bookRating from 'templates/books/bookRating.html';
 var BookReviewView = Backbone.View.extend({
   className: 'book-review',
   events: {
-    'click .save-review': 'saveRating'
+    'click .btn-save-review': 'saveRating'
   },
   template: Handlebars.compile(bookRating),
   initialize: function(options){
@@ -18,6 +18,7 @@ var BookReviewView = Backbone.View.extend({
     this.$el.html(this.template({}));
   }
   // saveRating: function(){
+  //   debugger;
   //   var rating = this.$el.find('.book-review').val();
   //   var id = this.id;
   //   this.controller.saveRating(rating, id);

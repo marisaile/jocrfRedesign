@@ -7,7 +7,6 @@ import funnySquares from 'pages/funnySquares';
 import d3 from 'pages/d3';
 import three from 'pages/three';
 import schoolBooks from 'pages/schoolBooks';
-import photoSearch from 'pages/photoSearch';
 import bookController from 'pages/books/booksController';
 
 $(function() {

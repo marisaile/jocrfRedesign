@@ -33,15 +33,10 @@ var BookModel = Backbone.Model.extend({
     data = data.map(function(book) {
       return _.defaults(book, schema);
     });
-    return data;
-    var bookId = data._find(books, function(book){ 
-      return book.id === id;
-    });    
-  },
-  removeBook: function(id){
-    var books = this.get('books');
-    books.splice(id, 1);
-    this.save();
+    return data;    
+    // var book =_.find(books, function(){
+    //   return book.id === id;
+    // });
   },
   addBook: function(newBook){
     var books = this.get('books');
@@ -49,18 +44,23 @@ var BookModel = Backbone.Model.extend({
     this.set('books', books);
     this.save();
   },
+  removeBook: function(id){
+    var books = this.get('books');
+    books.splice(id, 1);
+    this.save();
+  }
+  // addRating: function(id){
+  //   var books = this.get('books');
+  //   this.set('books', books);
+  //   this.save();
+  // },
   // saveRating: function(rating, id){
   //   var books = this.get('books');
   //   books.push(id, rating);
   //   this.set('books', books);
   //   this.save();
   // }
-  // addRating: function(id){
-  //   var books = this.get('books');
-
-  
-
-  // }
+ 
   // addFriend: function(){
     
   // }

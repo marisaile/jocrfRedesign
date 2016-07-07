@@ -6,20 +6,29 @@
 @import url(https://fonts.googleapis.com/css?family=Amita);
 @import url(https://fonts.googleapis.com/css?family=Trirong:700);
 
-body.override-bootstrap {
-  margin: 0;
-  background-color: #fcfcfc;
-}
-/*.subject-list-container {
-  height: 30%;
-}*/
-.school-subject {
+
+.subject-list-container {
   position: relative;
+  display: block;
+  height: 30%;
+}
+i.fa {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  color: black;
+  top: 93px;
+  left: 20px;
+}
+h1.school-subject {
+  position: relative;
+  display: block;
   font-family: 'Trirong', serif;
   color: #27042d;
   font-size: 20px;
-  top: 30px;
-  left: 50px;
+  top: 100px;
+  left: 600px;
 }
 .form-control.subject-list {
   position: relative;
@@ -30,54 +39,58 @@ body.override-bootstrap {
 .response-container {
   position: relative;
   display: block;
+  height: 70%;
   margin: 75px auto;
   width: 95%;
-}
-li.book-container {
-  display: inline-block;
-  list-style-image: none;
-  height: 200px;
-  width: 350px;
-  margin-right: 50px;
 
-  img.book-image {
+  li.book-container {
     position: relative;
-    top: 20px;
-    left: -20px;
-    width: 105px;
-    box-shadow: 0px 2px 2px 3px rgba(210, 214, 213, 0.8);
+    display: block;
+    list-style-image: none;
+    height: 350px;
+    width: 700px;
+    margin-top: 20px;
+
+    img.book-image {
+      position: relative;
+      top: 20px;
+      left: -20px;
+      width: 200px;
+      box-shadow: 0px 2px 2px 3px rgba(210, 214, 213, 0.8);
+    }
+    .title {
+      position: relative;
+      top: -30px;
+      left: 200px;
+      width: 300px;
+      font-family: 'Trirong', serif;
+      font-size: 18px;
+      color: #27042d;
+      text-align: left;
+    }
+    .author {
+      position: relative;
+      top: -30px;
+      left: 200px;
+      font-family: 'Trirong', serif;
+      font-size: 16px;
+      color: #27042d;
+      text-align: left;
+    }
   }
-  .title {
-    position: relative;
-    top: -40px;
-    left: 100px;
-    width: 250px;
-    font-family: 'Trirong', serif;
-    font-size: 16px;
-    color: #27042d;
-    text-align: left;
+  li.book-container:hover {
+    background-color: #fff;
+    box-shadow: 0px 1px 1px 1px rgba(210, 214, 213, 0.5);
+
+    img.book-image:hover {
+      transform: rotate3d(5deg, 10deg, 45deg);
+      transition: transform .5s;
+    }
+    img.school {
+      position: relative;
+      width: 75px;
+    }
   }
-  .author {
-    position: relative;
-    top: -40px;
-    left: 100px;
-    font-family: 'Trirong', serif;
-    font-size: 14px;
-    color: #27042d;
-    text-align: left;
-  }
-}
-li.book-container:hover {
-  background-color: #fff;
-  box-shadow: 0px 1px 1px 1px rgba(210, 214, 213, 0.5);
-} 
-img.book-image:hover {
-  transform: rotate3d(5deg, 10deg, 45deg);
-  transition: transform .5s;
-}
-img.school {
-  position: relative;
-  width: 75px;
 }
 /*Icon made by Freepik from www.flaticon.com */
 

@@ -4,7 +4,8 @@ import Handlebars from 'handlebars';
 import bookItem from 'templates/books/bookItem.html';
 
 var BookItemView = Backbone.View.extend({
-  className: 'new-book',
+  tagName: 'li',
+  className: 'list-group-item row',
   events: {},
   template: Handlebars.compile(bookItem),
   initialize: function(book){

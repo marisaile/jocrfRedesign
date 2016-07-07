@@ -1,0 +1,127 @@
+@import url(https://fonts.googleapis.com/css?family=Carme);
+@import url(https://fonts.googleapis.com/css?family=Prompt);
+@import url(https://fonts.googleapis.com/css?family=Libre+Franklin);
+@import url(https://fonts.googleapis.com/css?family=Montez);
+@import url(https://fonts.googleapis.com/css?family=Amita);
+@import url(https://fonts.googleapis.com/css?family=Alice);
+@import url(https://fonts.googleapis.com/css?family=Junge);
+@import url(https://fonts.googleapis.com/css?family=Artifika);
+@import url(https://fonts.googleapis.com/css?family=Cormorant+Unicase);
+
+body.override-bootstrap {
+  margin: 0;
+  background-color: #eee;
+}
+.main-header {
+  position: relative;
+  display: block;
+  height: 100px;
+  width: 100%;
+}
+.main-header nav {
+  position: relative;
+  display: block;
+  top: 75px;
+  left: 200px;
+  
+  a {
+    display: inline-block;
+    color: #04262d;
+    font-family: 'Alice', serif;
+    font-size: 16px;
+    margin-right: 75px;  
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  a:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+  }
+  a:hover:after {
+    width: 100%;
+    background: #04262d;
+  }
+}
+#cloud {
+  width: 350px; height: 120px;
+  background: #fefefe;
+  transition: rotateY(-30deg);
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  
+  position: relative;
+  margin: 175px auto;
+}
+
+#cloud:after, #cloud:before {
+  content: '';
+  position: absolute;
+  background: #fefefe;
+  z-index: -1;
+  transition: rotateY(-30deg);
+}
+
+#cloud:after {
+  width: 100px; height: 100px;
+  top: -50px; left: 50px;
+  transition: rotateY(-30deg);
+  
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+}
+
+#cloud:before {
+  width: 180px; height: 180px;
+  top: -90px; right: 50px;
+  transition: rotateY(-30deg);
+  
+  border-radius: 200px;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+}
+.marisaile {
+  position: relative;
+  bottom: -10px;
+  left: 100px;
+  font-family: 'Montez', cursive;
+  font-size: 50px;
+  line-height: 50px;
+  margin: 0;
+  padding: 0;
+}
+.sub {
+  position: relative;
+  left: 160px;
+  font-family: 'Alice', serif;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0;
+  padding: 0;
+}
+.footer-container {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+
+  i.fa {
+    display: inline-block;
+    left: 50%;
+    margin: 50px;
+  }
+}
+
+
+
+
+
+
+
+

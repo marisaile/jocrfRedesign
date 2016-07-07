@@ -27,7 +27,6 @@ var BookListView = Backbone.View.extend({
     var books = this.data;
     var $ul = this.$el.find('ul');
     _.each(books, function(book){
-      debugger;
       var view = new BookItemView(book);
       $ul.append(view.$el);
     });
@@ -37,10 +36,10 @@ var BookListView = Backbone.View.extend({
   },
   removeBook: function(){
     this.controller.removeBook(this.data.id);
-  },
-  addRating: function(){
-    this.controller.addRating(this.data.id);
   }
+  // addRating: function(id){
+  //   this.controller.addRating(this.data.id);
+  // }
   // showSynopsis: function(){
   //   
   // }
