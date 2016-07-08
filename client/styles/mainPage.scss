@@ -10,54 +10,57 @@
 
 body.override-bootstrap {
   margin: 0;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 .main-header {
   position: relative;
   display: block;
-  height: 100px;
+  height: 50px;
   width: 100%;
-}
-.main-header nav {
-  position: relative;
-  display: block;
-  top: 75px;
-  left: 200px;
+  background-color: #383838;
+  z-index: 0;
   
-  a {
-    display: inline-block;
-    color: #04262d;
-    font-family: 'Alice', serif;
-    font-size: 16px;
-    margin-right: 75px;  
-  }
-  a:hover {
-    text-decoration: none;
-  }
-  a:after {
-    content: '';
-    display: block;
-    margin: auto;
-    height: 1px;
-    width: 0px;
-    background: transparent;
-    transition: width .5s ease, background-color .5s ease;
-  }
-  a:hover:after {
-    width: 100%;
-    background: #04262d;
+  .nav-items {
+    top: 25px;
+  
+    a {
+      display: inline-block;
+      color: #eeeeee;
+      font-family: 'Alice', serif;
+      font-size: 16px;
+      margin-right: 75px;  
+      margin-bottom: 0;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+    a:after {
+      content: '';
+      display: block;
+      margin: auto;
+      height: 1px;
+      width: 0px;
+      background: transparent;
+      transition: width .5s ease, background-color .5s ease;
+    }
+    a:hover:after {
+      width: 100%;
+      background: #eee;
+    }
   }
 }
+
 #cloud {
-  width: 350px; height: 120px;
+  width: 260px; height: 90px;
   background: #fefefe;
   transition: rotateY(-30deg);
   border-radius: 100px;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
-  
+  z-index: 1;
   position: relative;
-  margin: 175px auto;
+  top: 75px;
+  left: 25px;
 }
 
 #cloud:after, #cloud:before {
@@ -69,8 +72,8 @@ body.override-bootstrap {
 }
 
 #cloud:after {
-  width: 100px; height: 100px;
-  top: -50px; left: 50px;
+  width: 75px; height: 75px;
+  top: -35px; left: 25px;
   transition: rotateY(-30deg);
   
   border-radius: 100px;
@@ -79,8 +82,8 @@ body.override-bootstrap {
 }
 
 #cloud:before {
-  width: 180px; height: 180px;
-  top: -90px; right: 50px;
+  width: 135px; height: 135px;
+  top: -65px; right: 50px;
   transition: rotateY(-30deg);
   
   border-radius: 200px;
@@ -89,39 +92,44 @@ body.override-bootstrap {
 }
 .marisaile {
   position: relative;
-  bottom: -10px;
-  left: 100px;
+  bottom: 10px;
+  left: 40px;
   font-family: 'Montez', cursive;
   font-size: 50px;
+  color: #383838;
   line-height: 50px;
   margin: 0;
   padding: 0;
 }
 .sub {
   position: relative;
-  left: 160px;
+  bottom: 20px;
+  left: 100px;
   font-family: 'Alice', serif;
   font-size: 14px;
+  color: #383838;
   line-height: 14px;
   margin: 0;
   padding: 0;
 }
+.main-main .circle {
+  position: relative;
+  display: block;
+  top: 150px;
+  left: 300px;
+  height: 100px;
+  width: 100px;
+  background-color: #35E9FF;
+}
 .footer-container {
     width: 100%;
     position: fixed;
-    bottom: 0px;
+    bottom: 10px;
 
   i.fa {
+    position: relative;
     display: inline-block;
-    left: 50%;
-    margin: 50px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
-
-
-
-
-
-
-
-

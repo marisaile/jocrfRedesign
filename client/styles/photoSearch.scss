@@ -5,17 +5,17 @@
 
 .photo-search {
   position: relative;
-  top: 25px;
-  left: 25px;
-  font-family: 'Prompt', cursive;
+  top: 105px;
+  left: 125px;
+  font-family: 'Lato', sans-serif;
   font-size: 20px;
-  color: #212413;
+  color: #383838;
 }
 input.search-photo {
   position: relative;
   display: block;
-  top: 30px;
-  left: 25px;
+  top: 110px;
+  left: 125px;
   width: 400px;
   background-color: #fff;
 }
@@ -33,7 +33,7 @@ input.search-photo {
     display: inline-block;
     img {
       width: 100%;
-      border: solid 1px #27042d;
+      border: solid 1px #383838;
     }
   }
 }

@@ -1,35 +1,35 @@
-@import url(https://fonts.googleapis.com/css?family=Carme);@import url(https://fonts.googleapis.com/css?family=Prompt);@import url(https://fonts.googleapis.com/css?family=Libre+Franklin);@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Amita);@import url(https://fonts.googleapis.com/css?family=Alice);@import url(https://fonts.googleapis.com/css?family=Junge);@import url(https://fonts.googleapis.com/css?family=Artifika);@import url(https://fonts.googleapis.com/css?family=Cormorant+Unicase);@import url(https://fonts.googleapis.com/css?family=Lato);@import url(https://fonts.googleapis.com/css?family=Proza+Libre:400,500);@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Trirong:700);@import url(https://fonts.googleapis.com/css?family=Sigmar+One);@import url(https://fonts.googleapis.com/css?family=Trirong:400,700);body.override-bootstrap {
+@import url(https://fonts.googleapis.com/css?family=Carme);@import url(https://fonts.googleapis.com/css?family=Prompt);@import url(https://fonts.googleapis.com/css?family=Libre+Franklin);@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Amita);@import url(https://fonts.googleapis.com/css?family=Alice);@import url(https://fonts.googleapis.com/css?family=Junge);@import url(https://fonts.googleapis.com/css?family=Artifika);@import url(https://fonts.googleapis.com/css?family=Cormorant+Unicase);@import url(https://fonts.googleapis.com/css?family=Lato);@import url(https://fonts.googleapis.com/css?family=Proza+Libre:400,500);@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Trirong:700);@import url(https://fonts.googleapis.com/css?family=Sigmar+One);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);body.override-bootstrap {
   margin: 0;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 .main-header {
   position: relative;
   display: block;
-  height: 100px;
+  height: 50px;
   width: 100%;
+  background-color: #383838;
+  z-index: 0;
 }
 
-.main-header nav {
-  position: relative;
-  display: block;
-  top: 75px;
-  left: 200px;
+.main-header .nav-items {
+  top: 25px;
 }
 
-.main-header nav a {
+.main-header .nav-items a {
   display: inline-block;
-  color: #04262d;
+  color: #eeeeee;
   font-family: 'Alice', serif;
   font-size: 16px;
   margin-right: 75px;
+  margin-bottom: 0;
 }
 
-.main-header nav a:hover {
+.main-header .nav-items a:hover {
   text-decoration: none;
 }
 
-.main-header nav a:after {
+.main-header .nav-items a:after {
   content: '';
   display: block;
   margin: auto;
@@ -39,21 +39,23 @@
   transition: width .5s ease, background-color .5s ease;
 }
 
-.main-header nav a:hover:after {
+.main-header .nav-items a:hover:after {
   width: 100%;
-  background: #04262d;
+  background: #eee;
 }
 
 #cloud {
-  width: 350px;
-  height: 120px;
+  width: 260px;
+  height: 90px;
   background: #fefefe;
   transition: rotateY(-30deg);
   border-radius: 100px;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
+  z-index: 1;
   position: relative;
-  margin: 175px auto;
+  top: 75px;
+  left: 25px;
 }
 
 #cloud:after, #cloud:before {
@@ -65,10 +67,10 @@
 }
 
 #cloud:after {
-  width: 100px;
-  height: 100px;
-  top: -50px;
-  left: 50px;
+  width: 75px;
+  height: 75px;
+  top: -35px;
+  left: 25px;
   transition: rotateY(-30deg);
   border-radius: 100px;
   -webkit-border-radius: 100px;
@@ -76,9 +78,9 @@
 }
 
 #cloud:before {
-  width: 180px;
-  height: 180px;
-  top: -90px;
+  width: 135px;
+  height: 135px;
+  top: -65px;
   right: 50px;
   transition: rotateY(-30deg);
   border-radius: 200px;
@@ -88,10 +90,11 @@
 
 .marisaile {
   position: relative;
-  bottom: -10px;
-  left: 100px;
+  bottom: 10px;
+  left: 40px;
   font-family: 'Montez', cursive;
   font-size: 50px;
+  color: #383838;
   line-height: 50px;
   margin: 0;
   padding: 0;
@@ -99,24 +102,37 @@
 
 .sub {
   position: relative;
-  left: 160px;
+  bottom: 20px;
+  left: 100px;
   font-family: 'Alice', serif;
   font-size: 14px;
+  color: #383838;
   line-height: 14px;
   margin: 0;
   padding: 0;
 }
 
+.main-main .circle {
+  position: relative;
+  display: block;
+  top: 150px;
+  left: 300px;
+  height: 100px;
+  width: 100px;
+  background-color: #35E9FF;
+}
+
 .footer-container {
   width: 100%;
   position: fixed;
-  bottom: 0px;
+  bottom: 10px;
 }
 
 .footer-container i.fa {
+  position: relative;
   display: inline-block;
-  left: 50%;
-  margin: 50px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .main-todo {
@@ -131,18 +147,17 @@
   width: 400px;
 }
 
-.btn.btn-add-todo {
-  background-color: #3aaf13;
-}
-
+/*.btn.btn-add-todo {
+  background-color: #58c6d3;
+}*/
 .form-control.inuput-name {
-  background-color: #fff;
+  background-color: #eee;
 }
 
 #todo-title {
-  font-family: 'Prompt';
+  font-family: 'Lato';
   font-size: 30px;
-  color: #27042d;
+  color: #383838;
   font-weight: 400;
 }
 
@@ -160,27 +175,28 @@
 }
 
 .add-todo-container .col-md-2 .btn.btn-add-todo {
-  background-color: #3aaf13;
-  color: #fcfcfc;
+  background-color: #D12BC4;
+  color: #eee;
 }
 
 .square {
   position: relative;
   display: inline-block;
-  top: 120px;
+  top: 150px;
   left: 330px;
   height: 100px;
   width: 100px;
   margin-right: 30px;
-  background-color: #3aaf13;
+  background-color: #D12BC4;
   text-align: center;
   vertical-align: middle;
   font-family: arial;
   font-size: 42px;
+  line-height: 100px;
   transform: none;
   transition: transform .5s;
-  color: #fcfcfc;
-  font-family: 'Prompt';
+  color: #eee;
+  font-family: 'Lato', sans-serif;
 }
 
 .square-container {
@@ -300,18 +316,18 @@
 
 .photo-search {
   position: relative;
-  top: 25px;
-  left: 25px;
-  font-family: 'Prompt', cursive;
+  top: 105px;
+  left: 125px;
+  font-family: 'Lato', sans-serif;
   font-size: 20px;
-  color: #212413;
+  color: #383838;
 }
 
 input.search-photo {
   position: relative;
   display: block;
-  top: 30px;
-  left: 25px;
+  top: 110px;
+  left: 125px;
   width: 400px;
   background-color: #fff;
 }
@@ -333,7 +349,7 @@ input.search-photo {
 
 .search-results .photo img {
   width: 100%;
-  border: solid 1px #27042d;
+  border: solid 1px #383838;
 }
 
 .new-book-container {
@@ -344,16 +360,16 @@ input.search-photo {
 }
 
 .new-book-container .form-label {
-  font-family: 'Trirong', serif;
+  font-family: 'Lato', sans-serif;
   font-size: 16px;
-  color: #27042d;
+  color: #383838;
 }
 
 .btn-add {
   position: relative;
   left: -5px;
   top: 10px;
-  background-color: #eee;
+  background-color: #383838;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -364,56 +380,20 @@ input.search-photo {
 .book-list-container {
   position: relative;
   display: block;
-  margin: 100px auto;
+  margin: 200px auto;
   width: 60%;
-  font-family: 'Trirong', serif;
+  font-family: 'Lato', sans-serif;
   font-size: 16px;
-  color: #27042d;
+  color: #383838;
 }
 
 .btn-default.btn-add-book {
   position: relative;
   left: 5px;
   top: 10px;
-  background-color: #18678a;
+  background-color: #D12BC4;
   font-weight: bold;
-  color: #fcfcfc;
-}
-
-@keyframes book-bounce {
-  0% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  80% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes shelf-lift {
-  0% {
-    transform: translateY(0) rotate(0);
-  }
-  20% {
-    transform: translateY(-4px) rotate(10deg);
-  }
-  40% {
-    transform: translateY(-4px) rotate(0);
-  }
-  40% {
-    transform: translateY(-4px) rotate(-10deg);
-  }
-  80% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(0);
-  }
+  color: #eee;
 }
 
 .book-shelf:hover {
@@ -439,102 +419,82 @@ input.search-photo {
   transform-origin: 50% 50%;
 }
 
-.subject-list-container {
-  position: relative;
-  display: block;
-  height: 30%;
+.school-main {
+  margin: 200px auto;
+  width: 100%;
+  /*  .subject-list-container {
+    position: relative;
+    display: block;*/
 }
 
-i.fa {
+.school-main h1.school-subject {
   position: relative;
   display: block;
-  width: 50px;
-  height: 50px;
-  color: black;
-  top: 93px;
-  left: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #383838;
+  font-size: 30px;
 }
 
-h1.school-subject {
+.school-main .form-control.subject-list {
   position: relative;
   display: block;
-  font-family: 'Trirong', serif;
-  color: #27042d;
-  font-size: 20px;
-  top: 100px;
-  left: 600px;
-}
-
-.form-control.subject-list {
-  position: relative;
-  top: 35px;
-  left: 50px;
+  top: 0;
+  left: 0;
   width: 250px;
 }
 
-.response-container {
+.school-books-list {
   position: relative;
   display: block;
-  height: 70%;
-  margin: 75px auto;
-  width: 95%;
+  width: 100%;
+  top: 75px;
+  left: 75px;
 }
 
-.response-container li.book-container {
+.school-books-list li.book-container {
   position: relative;
-  display: block;
+  display: inline-block;
   list-style-image: none;
-  height: 350px;
-  width: 700px;
-  margin-top: 20px;
+  height: 250px;
+  width: 500px;
+  margin: 50px;
 }
 
-.response-container li.book-container img.book-image {
+.school-books-list li.book-container img.book-image {
   position: relative;
-  top: 20px;
-  left: -20px;
-  width: 200px;
+  top: 30px;
+  left: -30px;
+  width: 125px;
+  height: 175px;
   box-shadow: 0px 2px 2px 3px rgba(210, 214, 213, 0.8);
 }
 
-.response-container li.book-container .title {
+.school-books-list li.book-container .title {
   position: relative;
-  top: -30px;
-  left: 200px;
-  width: 300px;
-  font-family: 'Trirong', serif;
+  bottom: 30px;
+  left: 120px;
+  width: 350px;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
-  color: #27042d;
+  color: #383838;
   text-align: left;
 }
 
-.response-container li.book-container .author {
+.school-books-list li.book-container .author {
   position: relative;
-  top: -30px;
-  left: 200px;
-  font-family: 'Trirong', serif;
+  bottom: 30px;
+  left: 120px;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
-  color: #27042d;
+  color: #383838;
   text-align: left;
 }
 
-.response-container li.book-container:hover {
+.school-books-list li.book-container:hover {
   background-color: #fff;
   box-shadow: 0px 1px 1px 1px rgba(210, 214, 213, 0.5);
 }
 
-.response-container li.book-container:hover img.book-image:hover {
-  transform: rotate3d(5deg, 10deg, 45deg);
-  transition: transform .5s;
-}
-
-.response-container li.book-container:hover img.school {
-  position: relative;
-  width: 75px;
-}
-
-/*Icon made by Freepik from www.flaticon.com */
-/*<div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>*/
 video {
   height: 240px;
   width: 320px;

@@ -14,16 +14,16 @@
   margin-top: 125px;
   width: 400px;
 }
-.btn.btn-add-todo {
-  background-color: #3aaf13;
-}
+/*.btn.btn-add-todo {
+  background-color: #58c6d3;
+}*/
 .form-control.inuput-name {
-  background-color: #fff;
+  background-color: #eee;
 }
 #todo-title {
-  font-family: 'Prompt';
+  font-family: 'Lato';
   font-size: 30px;
-  color: #27042d;
+  color: #383838;
   font-weight: 400;
 }
 .add-todo-container {
@@ -37,7 +37,7 @@
   text-align: right;
 
   .btn.btn-add-todo {
-    background-color: #3aaf13;
-    color: #fcfcfc;
+    background-color: #D12BC4;
+    color: #eee;
   }
 }
