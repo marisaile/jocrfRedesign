@@ -1,135 +1,129 @@
-@import url(https://fonts.googleapis.com/css?family=Carme);
-@import url(https://fonts.googleapis.com/css?family=Prompt);
-@import url(https://fonts.googleapis.com/css?family=Libre+Franklin);
 @import url(https://fonts.googleapis.com/css?family=Montez);
 @import url(https://fonts.googleapis.com/css?family=Amita);
-@import url(https://fonts.googleapis.com/css?family=Alice);
-@import url(https://fonts.googleapis.com/css?family=Junge);
-@import url(https://fonts.googleapis.com/css?family=Artifika);
-@import url(https://fonts.googleapis.com/css?family=Cormorant+Unicase);
+
 
 body.override-bootstrap {
   margin: 0;
   background-color: #eeeeee;
 }
-.main-header {
+.main-header.container-fluid {
   position: relative;
   display: block;
-  height: 50px;
   width: 100%;
+  height: 50px;
+  top: 0;
+  left: 0;
   background-color: #383838;
   z-index: 0;
+}  
+a.home {
+  position: relative;
+  top: 70px;
+  left: 10px;
   
-  .nav-items {
-    top: 25px;
-  
-    a {
-      display: inline-block;
-      color: #eeeeee;
-      font-family: 'Alice', serif;
-      font-size: 16px;
-      margin-right: 75px;  
-      margin-bottom: 0;
-    }
-    a:hover {
-      text-decoration: none;
-    }
-    a:after {
-      content: '';
-      display: block;
-      margin: auto;
-      height: 1px;
-      width: 0px;
-      background: transparent;
-      transition: width .5s ease, background-color .5s ease;
-    }
-    a:hover:after {
-      width: 100%;
-      background: #eee;
-    }
+  #cloud.col-md-2 {
+    width: 260px; height: 90px;
+    background: #fefefe;
+    transition: rotateY(-30deg);
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    z-index: 1;
+  }
+  #cloud:after, #cloud:before {
+    content: '';
+    position: absolute;
+    background: #fefefe;
+    z-index: -1;
+    transition: rotateY(-30deg);
+  }
+  #cloud:after {
+    width: 75px; height: 75px;
+    top: -35px; left: 25px;
+    transition: rotateY(-30deg);
+    
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+  }
+  #cloud:before {
+    width: 135px; height: 135px;
+    top: -65px; right: 50px;
+    transition: rotateY(-30deg);
+    border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+  }
+  .marisaile {
+    position: relative;
+    bottom: -10px;
+    left: 30px;
+    font-family: 'Montez', cursive;
+    font-size: 50px;
+    color: #383838;
+    line-height: 50px;
+    margin: 0;
+    padding: 0;
+  }
+  .sub {
+    position: relative;
+    bottom: 0;
+    left: 90px;
+    font-family: 'Alice', serif;
+    font-size: 14px;
+    color: #383838;
+    line-height: 14px;
+    margin: 0;
+    padding: 0;
+  }
+}
+a.home:hover {
+  text-decoration: none;
+}
+.nav-items.col-md-10.col-md-offset-2 {
+  position: relative;
+  top: -68px;
+  left: 40px;
+
+  a {
+    display: inline-block;
+    color: #eeeeee;
+    font-family: 'Alice', serif;
+    font-size: 16px;
+    margin-right: 75px;  
+    margin-bottom: 0;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  a:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+  }
+  a:hover:after {
+    width: 100%;
+    background: #eee;
   }
 }
 
-#cloud {
-  width: 260px; height: 90px;
-  background: #fefefe;
-  transition: rotateY(-30deg);
-  border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  z-index: 1;
-  position: relative;
-  top: 75px;
-  left: 25px;
-}
 
-#cloud:after, #cloud:before {
-  content: '';
-  position: absolute;
-  background: #fefefe;
-  z-index: -1;
-  transition: rotateY(-30deg);
-}
 
-#cloud:after {
-  width: 75px; height: 75px;
-  top: -35px; left: 25px;
-  transition: rotateY(-30deg);
-  
-  border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-}
-
-#cloud:before {
-  width: 135px; height: 135px;
-  top: -65px; right: 50px;
-  transition: rotateY(-30deg);
-  
-  border-radius: 200px;
-  -webkit-border-radius: 200px;
-  -moz-border-radius: 200px;
-}
-.marisaile {
-  position: relative;
-  bottom: 10px;
-  left: 40px;
-  font-family: 'Montez', cursive;
-  font-size: 50px;
-  color: #383838;
-  line-height: 50px;
-  margin: 0;
-  padding: 0;
-}
-.sub {
-  position: relative;
-  bottom: 20px;
-  left: 100px;
-  font-family: 'Alice', serif;
-  font-size: 14px;
-  color: #383838;
-  line-height: 14px;
-  margin: 0;
-  padding: 0;
-}
 .main-main .circle {
-  position: relative;
-  display: block;
-  top: 150px;
-  left: 300px;
-  height: 100px;
-  width: 100px;
-  background-color: #35E9FF;
+position: relative;
+display: block;
+top: 150px;
+left: 300px;
+height: 100px;
+width: 100px;
+background-color: #35E9FF;
 }
 .footer-container {
-    width: 100%;
-    position: fixed;
-    bottom: 10px;
-
-  i.fa {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    margin: 0 auto;
-  }
+  width: 100%;
+  position: fixed;
+  bottom: 10px;
 }

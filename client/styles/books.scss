@@ -1,11 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);
-@import url(https://fonts.googleapis.com/css?family=Trirong:700);
-
 
 .new-book-container {
   position: relative;
   display: block;
-  margin: 100px auto;
+  margin: 200px auto;
   width: 500px;
 
   .form-label {
@@ -14,7 +11,7 @@
     color: #383838;
   }
 }
-.btn-add {
+/*.btn-add {
   position: relative;
   left: -5px;
   top: 10px;
@@ -24,47 +21,25 @@
   align-items: center;
   height: 100px;
   width: 100px;
-}
+}*/
 .book-list-container {
   position: relative;
   display: block;
   margin: 200px auto;
-  width: 60%;
+  width: 75%;
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   color: #383838;
-}
-.form-control.detail {
-
 }
 .btn-default.btn-add-book {
   position: relative;
   left: 5px;
   top: 10px;
   background-color: #D12BC4;
-  font-weight: bold;
+  color: #eee;
+}
+.btn-default.btn-add-book:hover {
+  background-color: #383838;
   color: #eee;
 }
 
-.book-shelf:hover {
-  cursor: pointer;
-  
-  .book-shelf__book {
-    animation: book-bounce 0.4s ease;
-    animation-iteration-count: 1;
-  }
-  
-  .book-shelf__book--two {
-    animation-delay: 0.04s;
-  }
-
-  .book-shelf__book--three {
-    animation-delay: 0.08s;
-  }
-  
-  .book-shelf__shelf {
-    animation: shelf-lift 0.4s ease;
-    animation-iteration-count: 1;
-    transform-origin: 50% 50%;
-  }
-}

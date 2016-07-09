@@ -9,7 +9,6 @@ var BookListView = Backbone.View.extend({
   className: 'books-list',
   events: { 
     'click .btn-add-book': 'addNewBook',
-    'click .close-book': 'removeBook',
     'click .btn-rate-book': 'addRating'   
     // 'click .btn-sort-title': 'sortListBy',
     // 'click .btn-sort-author': 'sortListBy',
@@ -20,6 +19,7 @@ var BookListView = Backbone.View.extend({
   initialize: function(options){
     this.data = options.books;   
     this.controller = options.controller;
+    this.id = options.id
     this.render();
   },
   render: function(){
@@ -33,9 +33,6 @@ var BookListView = Backbone.View.extend({
   },
   addNewBook: function(){
     this.controller.renderNew();
-  },
-  removeBook: function(){
-    this.controller.removeBook(this.data.id);
   }
   // addRating: function(id){
   //   this.controller.addRating(this.data.id);

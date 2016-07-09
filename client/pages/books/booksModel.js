@@ -30,13 +30,11 @@ var BookModel = Backbone.Model.extend({
     var schema = this.bookSchema;
     // shorthand 'if':
     data = (_.isArray(books)) ? data : [];
-    data = data.map(function(book) {
-      return _.defaults(book, schema);
+    data = data.map(function(book, index) {
+      book.id = index;
+      return _.defaults(book, schema);  
     });
     return data;    
-    // var book =_.find(books, function(){
-    //   return book.id === id;
-    // });
   },
   addBook: function(newBook){
     var books = this.get('books');

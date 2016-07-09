@@ -1,10 +1,9 @@
 
 import Backbone from 'backbone';
 import bookModel from 'pages/books/booksModel';
-import AddBookView from 'pages/books/addBookView';
+import BookItemView from 'pages/books/bookItemView';
 import BookListView from 'pages/books/booksListView';
-import BookReviewView from 'pages/books/bookRatingView';
-
+import AddBookView from 'pages/books/addBookView';
 
 var BookController = Backbone.View.extend({
   el: '.books-main',
@@ -26,14 +25,15 @@ var BookController = Backbone.View.extend({
     });
     this.$el.html(view.$el);
   },
-  removeBook: function(id){
-    this.model.removeBook(id);
-    this.render();
-  },
   addBook: function(newBook){
     this.model.addBook(newBook); 
     this.render();
+  },
+  removeBook: function(id){
+    this.model.removeBook(id);
+    this.render();
   }
+
   // addRating: function(id){ 
   //   var view = new BookReviewView({
   //     controller: this,

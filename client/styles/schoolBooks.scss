@@ -1,43 +1,122 @@
-@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
 
-.school-main {
-  margin: 200px auto;
-  width: 100%;
-
-/*  .subject-list-container {
-    position: relative;
-    display: block;*/
-  
-  h1.school-subject {
-    position: relative;
-    display: block;
-    font-family: 'Josefin Sans', sans-serif;
-    color: #383838;
-    font-size: 30px; 
-  }
-  .form-control.subject-list {
-    position: relative;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 250px;
-  }  
-}
-.school-books-list {
+.container-fluid {
   position: relative;
   display: block;
   width: 100%;
+}
+.col-md-2.school-subject  {
+  position: relative;
+  display: block;
   top: 75px;
-  left: 75px;
+  left: 10px;
+    
+  .select.form-control.select-picker {
+    position: relative;
+    top: 50px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #383838;
+    font-size: 18px;
+    
+    .option {
+      position: relative;
+      display: block;
+      top: 320px;
+      left: 25px;
+      font-family: 'Josefin Sans', sans-serif;
+      color: #383838;
+      font-size: 16px;
+    }
+  }
+  .suggest-book {
+    position: relative;
+    display: block;
+    top: 100px;
+    p {
+      font-family: 'Josefin Sans', sans-serif;
+      color: #383838;
+      font-size: 18px;
+      text-align: left;
+    }
+    .btn-default.btn-suggest {
+      background-color: #00C9D6;
+      color: #eee;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 16px;
+    }
+    .suggestion-box {
+      position: relative;
+      display: none;
+      height: 400px;
+      width: 300px;
+      background-color: #383838;
+      border-radius: 5px;
+      margin: 10px 0 10px -10px;
+      padding: 10px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 16px;
+      color: #eee;     
+      
+      label {
+        margin-bottom: 0;
+        margin-left: 25px;
+      }
+      .form-control {
+        padding: 0;
+        width: 225px;
+        margin-bottom: 0;
+        margin-left: 25px;
+        background-color: #383838;
+        font-size: 16px;
+        color: #eee;
+      }
+      .btn-submit {
+        background-color: #00C9D6;
+        font-size: 16px;
+        color: #eee;
+        margin-left: 25px;
+      }
+    }
+  }
+  .thank-you {
+    position: relative;
+    display: none;
+    top: 100px;
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: #00C9D6;
+    padding: 20px;
 
-  li.book-container {
+    h3 {
+      position: relative;
+      color: #eee;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 25px;
+      text-align: center;
+    }
+  }
+}
+.response-container {
+  position: relative;
+  top: 0;
+  left: 100px;
+
+  .no-books h1 {
+    position: relative;
+    display: block;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    top: 100px;
+    left: 300px;
+  }
+  li.col-md-5.book-container {
     position: relative;
     display: inline-block;
     list-style-image: none;
-    height: 250px;
-    width: 500px;
-    margin: 50px;
+    height: 240px;
+    width: 420px;
+    margin: 25px;
 
     img.book-image {
       position: relative;
@@ -51,9 +130,9 @@
       position: relative;
       bottom: 30px;
       left: 120px;
-      width: 350px;
+      width: 260px;
       font-family: 'Josefin Sans', sans-serif;
-      font-size: 18px;
+      font-size: 20px;
       color: #383838;
       text-align: left;
     }
@@ -61,6 +140,7 @@
       position: relative;
       bottom: 30px;
       left: 120px;
+
       font-family: 'Josefin Sans', sans-serif;
       font-size: 16px;
       color: #383838;
@@ -72,6 +152,4 @@
     box-shadow: 0px 1px 1px 1px rgba(210, 214, 213, 0.5);
   }
 }
-
-
 

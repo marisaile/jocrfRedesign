@@ -6,7 +6,9 @@ import bookItem from 'templates/books/bookItem.html';
 var BookItemView = Backbone.View.extend({
   tagName: 'li',
   className: 'list-group-item row',
-  events: {},
+  events: {
+    'click .close-book': 'removeBook'
+  },
   template: Handlebars.compile(bookItem),
   initialize: function(book){
     this.data = book;
@@ -14,6 +16,9 @@ var BookItemView = Backbone.View.extend({
   },
   render: function(){
     this.$el.html(this.template(this.data));
+  },
+  removeBook: function(){
+    this.controller.removeBook(this.data.id);
   }
 }); 
 

@@ -78,7 +78,7 @@
 	
 	var _pagesSchoolBooks2 = _interopRequireDefault(_pagesSchoolBooks);
 	
-	var _pagesBooksBooksController = __webpack_require__(218);
+	var _pagesBooksBooksController = __webpack_require__(232);
 	
 	var _pagesBooksBooksController2 = _interopRequireDefault(_pagesBooksBooksController);
 	
@@ -9973,7 +9973,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","nav-items":"nav-items","cloud":"cloud","marisaile":"marisaile","sub":"sub","main-main":"main-main","circle":"circle","footer-container":"footer-container","fa":"fa","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","timer-container":"timer-container","counter":"counter","start-button":"start-button","stop-button":"stop-button","reset-button":"reset-button","split-button":"split-button","split-time":"split-time","lap-time":"lap-time","page-container":"page-container","photo-search":"photo-search","search-photo":"search-photo","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","btn-add":"btn-add","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","book-shelf":"book-shelf","book-shelf__book":"book-shelf__book","book-bounce":"book-bounce","book-shelf__book--two":"book-shelf__book--two","book-shelf__book--three":"book-shelf__book--three","book-shelf__shelf":"book-shelf__shelf","shelf-lift":"shelf-lift","school-main":"school-main","school-subject":"school-subject","subject-list":"subject-list","school-books-list":"school-books-list","book-container":"book-container","book-image":"book-image","title":"title","author":"author"};
+	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","home":"home","cloud":"cloud","col-md-2":"col-md-2","marisaile":"marisaile","sub":"sub","nav-items":"nav-items","col-md-10":"col-md-10","col-md-offset-2":"col-md-offset-2","main-main":"main-main","circle":"circle","footer-container":"footer-container","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","btn":"btn","btn-add-todo":"btn-add-todo","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-subject":"school-subject","select":"select","select-picker":"select-picker","option":"option","suggest-book":"suggest-book","btn-suggest":"btn-suggest","suggestion-box":"suggestion-box","btn-submit":"btn-submit","thank-you":"thank-you","response-container":"response-container","no-books":"no-books","col-md-5":"col-md-5","book-container":"book-container","book-image":"book-image","title":"title","author":"author"};
 
 /***/ },
 /* 3 */,
@@ -10046,7 +10046,7 @@
 /* 8 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"nav-items col-md-10 col-md-offset-2\">\n  <a class=\"nav\" role=\"menuitem\" href=\"/server/view.ejs\">Home</a>\n  <a class=\"nav\" role=\"menuitem\" href=\"/pages/todo.html\">To Do App</a>\n  <a class=\"nav\" role=\"menuitem\" href=\"/pages/photoSearch.html\">Photo Search</a>\n  <a class=\"nav\" role=\"menuitem\" href=\"/pages/schoolBooks.html\">School</a>\n  <a class=\"nav\" role=\"menuitem\" href=\"/pages/books.html\">Book Tracker</a>\n  <a class=\"nav\" role=\"menuitem\" href=\"/pages/d3.html\">d3 Chart</a>\n  <a class=\"nav\" role=\"menuitem\" href=\"/pages/funnySquares.html\">Funny Squares</a>\n</div> \n<div id=\"cloud\">\n  <h1 class=\"marisaile\">Marisaile</h1>\n  <p class=\"sub\">front-end developer</p>\n</div> \n\n\n\n\n\n\n\n\n";
+	module.exports = "\n  <a class=\"home\" role=\"menuitem\" href=\"/server/view.ejs\">  \n    <div class=\"col-md-2\" id=\"cloud\">\n      <h1 class=\"marisaile\">Marisaile</h1>\n      <p class=\"sub\">front-end developer</p>\n    </div> \n  </a>\n  <div class=\"nav-items col-md-10 col-md-offset-2\">  \n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/todo.html\">To Do App</a>\n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/photoSearch.html\">Photo Search</a>\n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/schoolBooks.html\">School</a>\n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/books.html\">Book Tracker</a>\n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/d3.html\">d3 Chart</a>\n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/funnySquares.html\">Funny Squares</a>\n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/three.html\">THREE Animation</a>\n  </div>\n\n\n\n\n\n\n";
 
 /***/ },
 /* 9 */
@@ -38307,90 +38307,133 @@
 /* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
 	var _d3 = __webpack_require__(208);
 	
 	var _d32 = _interopRequireDefault(_d3);
 	
 	var app = {
-	    init: function init() {
-	        app.render();
-	    },
-	    render: function render() {
-	        var margin = { top: 20, right: 20, bottom: 30, left: 40 },
-	            width = 960 - margin.left - margin.right,
-	            height = 500 - margin.top - margin.bottom;
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {
+	    var n = 4,
+	        // number of layers
+	    m = 58,
+	        // number of samples per layer
+	    stack = _d32["default"].layout.stack(),
+	        layers = stack(_d32["default"].range(n).map(function () {
+	      return bumpLayer(m, .1);
+	    })),
+	        yGroupMax = _d32["default"].max(layers, function (layer) {
+	      return _d32["default"].max(layer, function (d) {
+	        return d.y;
+	      });
+	    }),
+	        yStackMax = _d32["default"].max(layers, function (layer) {
+	      return _d32["default"].max(layer, function (d) {
+	        return d.y0 + d.y;
+	      });
+	    });
 	
-	        var x = _d32['default'].scale.ordinal().rangeRoundBands([0, width], .1);
+	    var margin = { top: 40, right: 10, bottom: 20, left: 10 },
+	        width = 960 - margin.left - margin.right,
+	        height = 500 - margin.top - margin.bottom;
 	
-	        var y = _d32['default'].scale.linear().rangeRound([height, 0]);
+	    var x = _d32["default"].scale.ordinal().domain(_d32["default"].range(m)).rangeRoundBands([0, width], .08);
 	
-	        var color = _d32['default'].scale.ordinal().range(['#98abc5', '#8a89a6', '#7b6888', '#6b486b', '#a05d56', '#d0743c', '#ff8c00']);
+	    var y = _d32["default"].scale.linear().domain([0, yStackMax]).range([height, 0]);
 	
-	        var xAxis = _d32['default'].svg.axis().scale(x).orient('bottom');
+	    var color = _d32["default"].scale.linear().domain([0, n - 1]).range(["#aad", "#556"]);
 	
-	        var yAxis = _d32['default'].svg.axis().scale(y).orient('left').tickFormat(_d32['default'].format('.2s'));
+	    var xAxis = _d32["default"].svg.axis().scale(x).tickSize(0).tickPadding(6).orient("bottom");
 	
-	        var svg = _d32['default'].select('body').append('svg').attr('width', width + margin.left + margin.right).attr('height', height + margin.top + margin.bottom).append('g').attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+	    var svg = _d32["default"].select("body").append("svg").attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 	
-	        _d32['default'].csv('/data/data.csv', function (error, data) {
-	            if (error) throw error;
+	    var layer = svg.selectAll(".layer").data(layers).enter().append("g").attr("class", "layer").style("fill", function (d, i) {
+	      return color(i);
+	    });
 	
-	            color.domain(_d32['default'].keys(data[0]).filter(function (key) {
-	                return key !== 'State';
-	            }));
+	    var rect = layer.selectAll("rect").data(function (d) {
+	      return d;
+	    }).enter().append("rect").attr("x", function (d) {
+	      return x(d.x);
+	    }).attr("y", height).attr("width", x.rangeBand()).attr("height", 0);
 	
-	            data.forEach(function (d) {
-	                var y0 = 0;
-	                d.ages = color.domain().map(function (name) {
-	                    return { name: name, y0: y0, y1: y0 += +d[name] };
-	                });
-	                d.total = d.ages[d.ages.length - 1].y1;
-	            });
+	    rect.transition().delay(function (d, i) {
+	      return i * 10;
+	    }).attr("y", function (d) {
+	      return y(d.y0 + d.y);
+	    }).attr("height", function (d) {
+	      return y(d.y0) - y(d.y0 + d.y);
+	    });
 	
-	            data.sort(function (a, b) {
-	                return b.total - a.total;
-	            });
+	    svg.append("g").attr("class", "x axis").attr("transform", "translate(0," + height + ")").call(xAxis);
 	
-	            x.domain(data.map(function (d) {
-	                return d.State;
-	            }));
-	            y.domain([0, _d32['default'].max(data, function (d) {
-	                return d.total;
-	            })]);
+	    _d32["default"].selectAll("input").on("change", change);
 	
-	            svg.append('g').attr('class', 'x axis').attr('transform', 'translate(0,' + height + ')').call(xAxis);
+	    var timeout = setTimeout(function () {
+	      _d32["default"].select("input[value=\"grouped\"]").property("checked", true).each(change);
+	    }, 2000);
 	
-	            svg.append('g').attr('class', 'y axis').call(yAxis).append('text').attr('transform', 'rotate(-90)').attr('y', 6).attr('dy', '.71em').style('text-anchor', 'end').text('Population');
-	
-	            var state = svg.selectAll('.state').data(data).enter().append('g').attr('class', 'g').attr('transform', function (d) {
-	                return 'translate(' + x(d.State) + ',0)';
-	            });
-	
-	            state.selectAll('rect').data(function (d) {
-	                return d.ages;
-	            }).enter().append('rect').attr('width', x.rangeBand()).attr('y', function (d) {
-	                return y(d.y1);
-	            }).attr('height', function (d) {
-	                return y(d.y0) - y(d.y1);
-	            }).style('fill', function (d) {
-	                return color(d.name);
-	            });
-	
-	            var legend = svg.selectAll('.legend').data(color.domain().slice().reverse()).enter().append('g').attr('class', 'legend').attr('transform', function (d, i) {
-	                return 'translate(0,' + i * 20 + ')';
-	            });
-	
-	            legend.append('rect').attr('x', width - 18).attr('width', 18).attr('height', 18).style('fill', color);
-	
-	            legend.append('text').attr('x', width - 24).attr('y', 9).attr('dy', '.35em').style('text-anchor', 'end').text(function (d) {
-	                return d;
-	            });
-	        });
+	    function change() {
+	      clearTimeout(timeout);
+	      if (this.value === "grouped") transitionGrouped();else transitionStacked();
 	    }
+	
+	    function transitionGrouped() {
+	      y.domain([0, yGroupMax]);
+	
+	      rect.transition().duration(500).delay(function (d, i) {
+	        return i * 10;
+	      }).attr("x", function (d, i, j) {
+	        return x(d.x) + x.rangeBand() / n * j;
+	      }).attr("width", x.rangeBand() / n).transition().attr("y", function (d) {
+	        return y(d.y);
+	      }).attr("height", function (d) {
+	        return height - y(d.y);
+	      });
+	    }
+	
+	    function transitionStacked() {
+	      y.domain([0, yStackMax]);
+	
+	      rect.transition().duration(500).delay(function (d, i) {
+	        return i * 10;
+	      }).attr("y", function (d) {
+	        return y(d.y0 + d.y);
+	      }).attr("height", function (d) {
+	        return y(d.y0) - y(d.y0 + d.y);
+	      }).transition().attr("x", function (d) {
+	        return x(d.x);
+	      }).attr("width", x.rangeBand());
+	    }
+	
+	    // Inspired by Lee Byron's test data generator.
+	    function bumpLayer(n, o) {
+	
+	      function bump(a) {
+	        var x = 1 / (.1 + Math.random()),
+	            y = 2 * Math.random() - .5,
+	            z = 10 / (.1 + Math.random());
+	        for (var i = 0; i < n; i++) {
+	          var w = (i / n - y) * z;
+	          a[i] += x * Math.exp(-w * w);
+	        }
+	      }
+	
+	      var a = [],
+	          i;
+	      for (i = 0; i < n; ++i) a[i] = o + o * Math.random();
+	      for (i = 0; i < 5; ++i) bump(a);
+	      return a.map(function (d, i) {
+	        return { x: i, y: Math.max(0, d) };
+	      });
+	    }
+	  }
 	};
 	module.exports = app;
 
@@ -89834,10 +89877,6 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _jquery = __webpack_require__(1);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
-	
 	var _templatesScienceBooksHtml = __webpack_require__(212);
 	
 	var _templatesScienceBooksHtml2 = _interopRequireDefault(_templatesScienceBooksHtml);
@@ -89862,25 +89901,48 @@
 	
 	var _templatesPsychBooksHtml2 = _interopRequireDefault(_templatesPsychBooksHtml);
 	
+	var _templatesNoBookxHtml = __webpack_require__(218);
+	
+	var _templatesNoBookxHtml2 = _interopRequireDefault(_templatesNoBookxHtml);
+	
+	var $ = __webpack_require__(1);
+	
+	// legacy loading for bootstrap
+	window.jQuery = window.$ = $;
+	__webpack_require__(219);
+	
 	var app = {
 	  init: function init() {
 	    app.render();
 	  },
 	  render: function render() {
-	    (0, _jquery2['default'])('.subject-list').on('change', function () {
-	      var selection = (0, _jquery2['default'])('.select-picker').find('option:selected').val();
+	    $('.subject-list').on('change', function () {
+	      var selection = $('.select-picker').find('option:selected').val();
 	      if (selection === 'Science') {
-	        (0, _jquery2['default'])('.response-container').html(_templatesScienceBooksHtml2['default']);
+	        $('.response-container').html(_templatesScienceBooksHtml2['default']);
 	      } else if (selection === 'History') {
-	        (0, _jquery2['default'])('.response-container').html(_templatesHistoryBooksHtml2['default']);
+	        $('.response-container').html(_templatesHistoryBooksHtml2['default']);
 	      } else if (selection === 'English Literature') {
-	        (0, _jquery2['default'])('.response-container').html(_templatesEnglishLitHtml2['default']);
+	        $('.response-container').html(_templatesEnglishLitHtml2['default']);
 	      } else if (selection === 'Math/Statistics') {
-	        (0, _jquery2['default'])('.response-container').html(_templatesMathHtml2['default']);
+	        $('.response-container').html(_templatesMathHtml2['default']);
 	      } else if (selection === 'Political Science/Current Affairs') {
-	        (0, _jquery2['default'])('.response-container').html(_templatesPolisciBooksHtml2['default']);
+	        $('.response-container').html(_templatesPolisciBooksHtml2['default']);
 	      } else if (selection === 'Psychology') {
-	        (0, _jquery2['default'])('.response-container').html(_templatesPsychBooksHtml2['default']);
+	        $('.response-container').html(_templatesPsychBooksHtml2['default']);
+	      } else {
+	        $('.response-container').html(_templatesNoBookxHtml2['default']);
+	      }
+	    });
+	    $('.btn-suggest').on('click', function () {
+	      if ($('.suggestion-box:first').is(':hidden')) {
+	        $('.suggestion-box').slideDown('ease');
+	      }
+	    });
+	    $('.btn-submit').on('click', function () {
+	      if ($('.thank-you:first').is(':hidden')) {
+	        $('.suggest-book').slideUp('slow');
+	        $('.thank-you').slideDown('slow');
 	      }
 	    });
 	  }
@@ -89892,40 +89954,2470 @@
 /* 212 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  <ul class=\"school-books-list\">\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/1290957.The_Collapsing_Universe?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/asimov.png\"></a>\n      <div class=\"title\">The Collapsing Universe</div>\n      <div class=\"author\">Isaac Asimov</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/125286.The_Beak_of_the_Finch?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/beak.png\"></a>\n      <div class=\"title\">The Beak of the Finch: A Story of Evolution in Our Time</div>\n      <div class=\"author\">Jonathan Weiner</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/5958783-why-does-e-mc?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/cox.png\"></a>\n      <div class=\"title\">Why Does e=mc<sup>2</sup>? (and why should we care?)</div>\n      <div class=\"author\">Brian Cox and Jeff Forshaw</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/9449985-the-clockwork-universe?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/dolnick.png\"></a>\n      <div class=\"title\">The Clockwork Universe</div>\n      <div class=\"author\">Edward Dolnick</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/22435.The_Fabric_of_the_Cosmos?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/cosmos.png\"></a>\n      <div class=\"title\">The Fabric of the Cosmos</div>\n      <div class=\"author\">Brian Greene</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/18007564-the-martian?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/martian.png\"></a>\n      <div class=\"title\">The Martian</div>\n      <div class=\"author\">Andy Weir</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/11543794-better-than-human?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/human.png\"></a>\n      <div class=\"title\">Better Than Human: The Promise and Perils of Enhancing Ourselves</div>\n      <div class=\"author\">Allen Buchannan</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/20696006-being-mortal?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/atul.png\"></a>\n      <div class=\"title\">Being Mortal: Medicine and What Matters in the End</div>\n      <div class=\"author\">Atul Gawande</div>\n    </li>\n  </ul>\n";
+	module.exports = "\n<ul class=\"school-books-list\">\n  <div class=\"row\">\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/1290957.The_Collapsing_Universe?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/asimov.png\"></a>\n      <div class=\"title\">The Collapsing Universe</div>\n      <div class=\"author\">Isaac Asimov</div>\n    </li>\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/125286.The_Beak_of_the_Finch?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/beak.png\"></a>\n      <div class=\"title\">The Beak of the Finch</div>\n      <div class=\"author\">Jonathan Weiner</div>\n    </li>\n  </div>\n  <div class=\"row\">\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/5958783-why-does-e-mc?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/cox.png\"></a>\n      <div class=\"title\">Why Does e=mc<sup>2</sup>? (and why should we care?)</div>\n      <div class=\"author\">Brian Cox and Jeff Forshaw</div>\n    </li>\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/9449985-the-clockwork-universe?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/dolnick.png\"></a>\n      <div class=\"title\">The Clockwork Universe</div>\n      <div class=\"author\">Edward Dolnick</div>\n    </li>\n  </div>\n  <div class=\"row\">\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/22435.The_Fabric_of_the_Cosmos?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/cosmos.png\"></a>\n      <div class=\"title\">The Fabric of the Cosmos</div>\n      <div class=\"author\">Brian Greene</div>\n    </li>\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/18007564-the-martian?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/martian.png\"></a>\n      <div class=\"title\">The Martian</div>\n      <div class=\"author\">Andy Weir</div>\n    </li>\n  </div>\n  <div class=\"row\">\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/11543794-better-than-human?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/human.png\"></a>\n      <div class=\"title\">Better Than Human</div>\n      <div class=\"author\">Allen Buchannan</div>\n    </li>\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/20696006-being-mortal?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/atul.png\"></a>\n      <div class=\"title\">Being Mortal</div>\n      <div class=\"author\">Atul Gawande</div>\n    </li>\n  </div>\n  </ul>\n";
 
 /***/ },
 /* 213 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  <ul class=\"school-books-list\">\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/706.America_The_Book_?ac=1&from_search=true\" target=\"new\"><img class =\"book-image\" src=\"/images/books/jon.png\"></a>\n      <div class=\"title\">America: The Book</div>\n      <div class=\"author\">Jon Stewart</div>     \n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/7968243-cleopatra?ac=1&from_search=true\" target=\"new\"><img class =\"book-image\" src =\"/images/books/cleopatra.png\"></a>\n      <div class=\"title\">Cleopatra: A Life</div>\n      <div class=\"author\">by Stacy Schiff</div><br>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/6558145-abigail-adams?from_search=true&search_version=service\" target=\"new\"><img class =\"book-image\" src=\"/images/books/abigail.png\"></a>\n      <div class=\"title\">Abigail Adams: A Life</div>\n      <div class=\"author\">Woody Holton</div><br>   \n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/430027.Brother_I_m_Dying?from_search=true&search_version=service\" target=\"new\"><img class =\"book-image\" src=\"/images/books/brother.png\"></a>\n      <div class=\"title\">Brother, I'm Dying</div>\n      <div class=\"author\">Edwidge Dandicat</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/24602886-lafayette-in-the-somewhat-united-states\" target=\"new\"><img class =\"book-image\" src=\"/images/books/lafayette.png\"></a>\n      <div class=\"title\">Lafeyette <br>in the Somewhat United States</div>\n      <div class=\"author\">Sarah Vowell</div>     \n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/18669169-the-sleepwalkers?from_search=true&search_version=service\" target=\"new\"><img class =\"book-image\" src=\"/images/books/sleepwalkers.png\"></a>\n      <div class=\"title\">The Sleepwalkers: <br>How Europe Went to War in 1914</div>\n      <div class=\"author\">Christopher Munro Clark</div>      \n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/581915.The_Jungle\" target=\"new\"><img class =\"book-image\" src=\"/images/books/jungle.png\"></a>\n      <div class=\"title\">The Jungle</div>\n      <div class=\"author\">Upton Sinclair</div>     \n    </li>\n  </ul>\n\n\n";
+	module.exports = "\n  <ul class=\"school-books-list\">\n   <div class=\"row\">\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/706.America_The_Book_?ac=1&from_search=true\" target=\"new\"><img class =\"book-image\" src=\"/images/books/jon.png\"></a>\n        <div class=\"title\">America: The Book</div>\n        <div class=\"author\">Jon Stewart</div>     \n      </li>\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/7968243-cleopatra?ac=1&from_search=true\" target=\"new\"><img class =\"book-image\" src =\"/images/books/cleopatra.png\"></a>\n        <div class=\"title\">Cleopatra</div>\n        <div class=\"author\">by Stacy Schiff</div><br>\n      </li>\n    </div>\n    <div class=\"row\">\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/6558145-abigail-adams?from_search=true&search_version=service\" target=\"new\"><img class =\"book-image\" src=\"/images/books/abigail.png\"></a>\n        <div class=\"title\">Abigail Adams</div>\n        <div class=\"author\">Woody Holton</div><br>   \n      </li>\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/430027.Brother_I_m_Dying?from_search=true&search_version=service\" target=\"new\"><img class =\"book-image\" src=\"/images/books/brother.png\"></a>\n        <div class=\"title\">Brother, I'm Dying</div>\n        <div class=\"author\">Edwidge Dandicat</div>\n      </li>\n    </div>\n    <div class=\"row\">\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/24602886-lafayette-in-the-somewhat-united-states\" target=\"new\"><img class =\"book-image\" src=\"/images/books/lafayette.png\"></a>\n        <div class=\"title\">Lafeyette in the Somewhat United States</div>\n        <div class=\"author\">Sarah Vowell</div>     \n      </li>\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/18669169-the-sleepwalkers?from_search=true&search_version=service\" target=\"new\"><img class =\"book-image\" src=\"/images/books/sleepwalkers.png\"></a>\n        <div class=\"title\">The Sleepwalkers</div>\n        <div class=\"author\">Christopher Munro Clark</div>      \n      </li>\n    </div>\n    <div class=\"row\">\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/581915.The_Jungle\" target=\"new\"><img class =\"book-image\" src=\"/images/books/jungle.png\"></a>\n        <div class=\"title\">The Jungle</div>\n        <div class=\"author\">Upton Sinclair</div>     \n      </li>\n    </div>\n  </ul>\n\n\n";
 
 /***/ },
 /* 214 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  <ul class=\"school-books-list\">\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/16099190-love-dishonor-marry-die-cherish-perish?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/rakoff.png\"></a>\n      <div class=\"title\">Love, Dishonor, Marry, Die, Cherish, Perish</div>\n      <div class=\"author\">David Rakoff</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/12530.The_Writing_Life?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/dillard.png\"></a>\n      <div class=\"title\">The Writing Life</div>\n      <div class=\"author\">Annie Dillard</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/9717.The_Unbearable_Lightness_of_Being?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/kundera.png\"></a>\n      <div class=\"title\">The Unbearable Lightness of Being</div>\n      <div class=\"author\">Milan Kundera</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/364141.The_Dream_of_a_Common_Language?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/adrienne.png\"></a>\n      <div class=\"title\">The Dream of a Common Language</div>\n      <div class=\"author\">Adrienne Rich</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/3573608-alphabet-juice?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/juice.png\"></a>\n      <div class=\"title\">Alphabet Juice</div>\n      <div class=\"author\">Roy Blount, Jr.</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/367285.Lake_Wobegon_Summer_1956?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/garrison.png\"></a>\n      <div class=\"title\">Lake Wobegon Summer 1956</div>\n      <div class=\"author\">Garrison Keillor</div>\n    </li>\n  </ul>\n\n\n";
+	module.exports = "\n  <ul class=\"school-books-list\">\n    <div class=\"row\">\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/16099190-love-dishonor-marry-die-cherish-perish?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/rakoff.png\"></a>\n        <div class=\"title\">Love, Dishonor, Marry, Die, Cherish, Perish</div>\n        <div class=\"author\">David Rakoff</div>\n      </li>\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/12530.The_Writing_Life?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/dillard.png\"></a>\n        <div class=\"title\">The Writing Life</div>\n        <div class=\"author\">Annie Dillard</div>\n      </li>\n    </div>\n    <div class=\"row\">\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/9717.The_Unbearable_Lightness_of_Being?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/kundera.png\"></a>\n        <div class=\"title\">The Unbearable Lightness of Being</div>\n        <div class=\"author\">Milan Kundera</div>\n      </li>\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/364141.The_Dream_of_a_Common_Language?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/adrienne.png\"></a>\n        <div class=\"title\">The Dream of a Common Language</div>\n        <div class=\"author\">Adrienne Rich</div>\n      </li>\n    </div>\n    <div class=\"row\">\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/3573608-alphabet-juice?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/juice.png\"></a>\n        <div class=\"title\">Alphabet Juice</div>\n        <div class=\"author\">Roy Blount, Jr.</div>\n      </li>\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/367285.Lake_Wobegon_Summer_1956?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/garrison.png\"></a>\n        <div class=\"title\">Lake Wobegon Summer 1956</div>\n        <div class=\"author\">Garrison Keillor</div>\n      </li>\n    </div>\n  </div>\n</ul>\n\n\n";
 
 /***/ },
 /* 215 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  <ul class=\"school-books-list\">\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/5060378-the-girl-who-played-with-fire?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/girl.png\"></a>\n      <div class=\"title\">The Girl who Played with Fire</div>\n      <div class=\"author\">Stieg Larsson</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/13588394-the-signal-and-the-noise?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/silver.png\"></a>\n      <div class=\"title\">The Signal and the Noise</div>\n      <div class=\"author\">Nate Silver</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/17986418-naked-statistics?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/naked.png\"></a>\n      <div class=\"title\">Naked Statistics</div>\n      <div class=\"author\">Charles Wheelan</div>\n    </li>\n  </ul>\n\n";
+	module.exports = "\n<ul class=\"school-books-list\">\n  <div class=\"row\">\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/13588394-the-signal-and-the-noise?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/silver.png\"></a>\n      <div class=\"title\">The Signal and the Noise</div>\n      <div class=\"author\">Nate Silver</div>\n    </li>\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/5060378-the-girl-who-played-with-fire?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/girl.png\"></a>\n      <div class=\"title\">The Girl who Played with Fire</div>\n      <div class=\"author\">Stieg Larsson</div>\n    </li>\n  </div>\n  <div class=\"row\">\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/17986418-naked-statistics?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/naked.png\"></a>\n      <div class=\"title\">Naked Statistics</div>\n      <div class=\"author\">Charles Wheelan</div>\n    </li>\n  </div>  \n</ul>\n\n";
 
 /***/ },
 /* 216 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  <ul class=\"school-books-list\">\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/17851885-i-am-malala?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/malala.png\"></a>\n      <div class=\"title\">I am Malala</div>\n      <div class=\"author\">Malala Yousafzai</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/9742.The_Audacity_of_Hope?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/barack.png\"></a>\n      <div class=\"title\">The Audacity of Hope</div>\n      <div class=\"author\">Barack Obama</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/25489625-between-the-world-and-me?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/coates.png\"></a>\n      <div class=\"title\">Between the World and Me</div>\n      <div class=\"author\">Ta Nehisi Coates</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/1869.Nickel_and_Dimed?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/nickel.png\"></a>\n      <div class=\"title\">Nickel and Dimed: On (not) Getting By in America</div>\n      <div class=\"author\">Barbarah Erenreich</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/4952.What_is_the_What?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/what.png\"></a>\n      <div class=\"title\">What is the What</div>\n      <div class=\"author\">Dave Eggers</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/18813642-bad-feminist?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/feminist.png\"></a>\n      <div class=\"title\">Bad Feminist</div>\n      <div class=\"author\">Roxanne Gay</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/32987.The_Greatest_Generation?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/brokaw.png\"></a>\n      <div class=\"title\">The Greatest Generation</div>\n      <div class=\"author\">Tom Brokaw</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/2936415-where-men-win-glory?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/tillman.png\"></a>\n      <div class=\"title\">Where Men Win Glory</div>\n      <div class=\"author\">Jon Krakauer</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/5632446-columbine?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/columbine.png\"></a>\n      <div class=\"title\">Columbine</div>\n      <div class=\"author\">Dave Cullen</div>\n    </li>\n  </ul>\n\n";
+	module.exports = "<ul class=\"school-books-list\">\n  <div class=\"row\">\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/17851885-i-am-malala?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/malala.png\"></a>\n      <div class=\"title\">I am Malala</div>\n      <div class=\"author\">Malala Yousafzai</div>\n    </li>\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/9742.The_Audacity_of_Hope?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/barack.png\"></a>\n      <div class=\"title\">The Audacity of Hope</div>\n      <div class=\"author\">Barack Obama</div>\n    </li>\n  </div>\n  <div class=\"row\">\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/25489625-between-the-world-and-me?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/coates.png\"></a>\n      <div class=\"title\">Between the World and Me</div>\n      <div class=\"author\">Ta Nehisi Coates</div>\n    </li>\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/1869.Nickel_and_Dimed?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/nickel.png\"></a>\n      <div class=\"title\">Nickel and Dimed</div>\n      <div class=\"author\">Barbarah Erenreich</div>\n    </li>\n  </div>\n  <div class=\"row\">\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/4952.What_is_the_What?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/what.png\"></a>\n      <div class=\"title\">What is the What</div>\n      <div class=\"author\">Dave Eggers</div>\n    </li>\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/18813642-bad-feminist?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/feminist.png\"></a>\n      <div class=\"title\">Bad Feminist</div>\n      <div class=\"author\">Roxanne Gay</div>\n    </li>\n  </div>\n  <div class=\"row\">\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/32987.The_Greatest_Generation?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/brokaw.png\"></a>\n      <div class=\"title\">The Greatest Generation</div>\n      <div class=\"author\">Tom Brokaw</div>\n    </li>\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/2936415-where-men-win-glory?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/tillman.png\"></a>\n      <div class=\"title\">Where Men Win Glory</div>\n      <div class=\"author\">Jon Krakauer</div>\n    </li>\n  </div>\n  <div class=\"row\">\n    <li class=\"col-md-5 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/5632446-columbine?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/columbine.png\"></a>\n      <div class=\"title\">Columbine</div>\n      <div class=\"author\">Dave Cullen</div>\n    </li>\n  </div>\n</ul>\n\n";
 
 /***/ },
 /* 217 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  <ul class=\"school-books-list\">\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/6330678-a-thousand-days-of-wonder?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/wonder.png\"></a>\n      <div class=\"title\">1000 Days of Wonder: A Scientist's Chronice of His Daughter's Developing Mind</div>\n      <div class=\"author\">Charles Fernyhough</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/7641110-life-is-what-you-make-it?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/buffett.png\"></a>\n      <div class=\"title\">Life is What You Make It</div>\n      <div class=\"author\">Peter Buffett</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/thinking.png\"></a>\n      <div class=\"title\">Thinking, Fast and Slow</div>\n      <div class=\"author\">Daniel Kahneman</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/63697.The_Man_Who_Mistook_His_Wife_for_a_Hat_and_Other_Clinical_Tales?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/sacks.png\"></a>\n      <div class=\"title\">The Man Who Mistook His Wife for a Hat</div>\n      <div class=\"author\">Oliver Sacks</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/27539.On_Intelligence?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/intelligence.png\"></a>\n      <div class=\"title\">On Intelligence</div>\n      <div class=\"author\">Jeff Hawkins</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/77954.The_Second_Coming\" target=\"new\"><img class=\"book-image\" src=\"/images/books/percy.png\"></a>\n      <div class=\"title\">The Second Coming</div>\n      <div class=\"author\">Walker Percy</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/25430578-cure?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/cure.png\"></a>\n      <div class=\"title\">Cure: A Journey into the Science of Mind over Body</div>\n      <div class=\"author\">Jo Marchant</div>\n    </li>\n    <li class=\"col-md-6 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/99300.The_Yellow_Wallpaper_and_Other_Stories?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/yellow.png\"></a>\n      <div class=\"title\">The Yellow Wallpaper</div>\n      <div class=\"author\">Charlotte Perkins Gilman</div>\n    </li>\n  </ul>\n";
+	module.exports = "\n  <ul class=\"row school-books-list\">\n    <div class=\"row\">\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/6330678-a-thousand-days-of-wonder?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/wonder.png\"></a>\n        <div class=\"title\">1000 Days of Wonder</div>\n        <div class=\"author\">Charles Fernyhough</div>\n      </li>\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/7641110-life-is-what-you-make-it?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/buffett.png\"></a>\n        <div class=\"title\">Life is What You Make It</div>\n        <div class=\"author\">Peter Buffett</div>\n      </li>\n    </div>\n    <div class=\"row\">\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/thinking.png\"></a>\n        <div class=\"title\">Thinking, Fast and Slow</div>\n        <div class=\"author\">Daniel Kahneman</div>\n      </li>\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/63697.The_Man_Who_Mistook_His_Wife_for_a_Hat_and_Other_Clinical_Tales?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/sacks.png\"></a>\n        <div class=\"title\">The Man Who Mistook His Wife for a Hat</div>\n        <div class=\"author\">Oliver Sacks</div>\n      </li>\n    </div>\n    <div class=\"row\">\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/27539.On_Intelligence?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/intelligence.png\"></a>\n        <div class=\"title\">On Intelligence</div>\n        <div class=\"author\">Jeff Hawkins</div>\n      </li>\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/77954.The_Second_Coming\" target=\"new\"><img class=\"book-image\" src=\"/images/books/percy.png\"></a>\n        <div class=\"title\">The Second Coming</div>\n        <div class=\"author\">Walker Percy</div>\n      </li>\n    </div>\n    <div class=\"row\">\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/25430578-cure?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/cure.png\"></a>\n        <div class=\"title\">Cure</div>\n        <div class=\"author\">Jo Marchant</div>\n      </li>\n      <li class=\"col-md-5 book-container\">\n        <a href=\"https://www.goodreads.com/book/show/99300.The_Yellow_Wallpaper_and_Other_Stories?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/yellow.png\"></a>\n        <div class=\"title\">The Yellow Wallpaper</div>\n        <div class=\"author\">Charlotte Perkins Gilman</div>\n      </li>\n    </div>\n  </ul>\n";
 
 /***/ },
 /* 218 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"no-books\">\n\t<h1>No books yet! Stay tuned...</h1>\n</div>";
+
+/***/ },
+/* 219 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// This file is autogenerated via the `commonjs` Grunt task. You can require() this file in a CommonJS environment.
+	__webpack_require__(220)
+	__webpack_require__(221)
+	__webpack_require__(222)
+	__webpack_require__(223)
+	__webpack_require__(224)
+	__webpack_require__(225)
+	__webpack_require__(226)
+	__webpack_require__(227)
+	__webpack_require__(228)
+	__webpack_require__(229)
+	__webpack_require__(230)
+	__webpack_require__(231)
+
+/***/ },
+/* 220 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: transition.js v3.3.6
+	 * http://getbootstrap.com/javascript/#transitions
+	 * ========================================================================
+	 * Copyright 2011-2015 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
+	  // ============================================================
+	
+	  function transitionEnd() {
+	    var el = document.createElement('bootstrap')
+	
+	    var transEndEventNames = {
+	      WebkitTransition : 'webkitTransitionEnd',
+	      MozTransition    : 'transitionend',
+	      OTransition      : 'oTransitionEnd otransitionend',
+	      transition       : 'transitionend'
+	    }
+	
+	    for (var name in transEndEventNames) {
+	      if (el.style[name] !== undefined) {
+	        return { end: transEndEventNames[name] }
+	      }
+	    }
+	
+	    return false // explicit for ie8 (  ._.)
+	  }
+	
+	  // http://blog.alexmaccaw.com/css-transitions
+	  $.fn.emulateTransitionEnd = function (duration) {
+	    var called = false
+	    var $el = this
+	    $(this).one('bsTransitionEnd', function () { called = true })
+	    var callback = function () { if (!called) $($el).trigger($.support.transition.end) }
+	    setTimeout(callback, duration)
+	    return this
+	  }
+	
+	  $(function () {
+	    $.support.transition = transitionEnd()
+	
+	    if (!$.support.transition) return
+	
+	    $.event.special.bsTransitionEnd = {
+	      bindType: $.support.transition.end,
+	      delegateType: $.support.transition.end,
+	      handle: function (e) {
+	        if ($(e.target).is(this)) return e.handleObj.handler.apply(this, arguments)
+	      }
+	    }
+	  })
+	
+	}(jQuery);
+
+
+/***/ },
+/* 221 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: alert.js v3.3.6
+	 * http://getbootstrap.com/javascript/#alerts
+	 * ========================================================================
+	 * Copyright 2011-2015 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // ALERT CLASS DEFINITION
+	  // ======================
+	
+	  var dismiss = '[data-dismiss="alert"]'
+	  var Alert   = function (el) {
+	    $(el).on('click', dismiss, this.close)
+	  }
+	
+	  Alert.VERSION = '3.3.6'
+	
+	  Alert.TRANSITION_DURATION = 150
+	
+	  Alert.prototype.close = function (e) {
+	    var $this    = $(this)
+	    var selector = $this.attr('data-target')
+	
+	    if (!selector) {
+	      selector = $this.attr('href')
+	      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
+	    }
+	
+	    var $parent = $(selector)
+	
+	    if (e) e.preventDefault()
+	
+	    if (!$parent.length) {
+	      $parent = $this.closest('.alert')
+	    }
+	
+	    $parent.trigger(e = $.Event('close.bs.alert'))
+	
+	    if (e.isDefaultPrevented()) return
+	
+	    $parent.removeClass('in')
+	
+	    function removeElement() {
+	      // detach from parent, fire event then clean up data
+	      $parent.detach().trigger('closed.bs.alert').remove()
+	    }
+	
+	    $.support.transition && $parent.hasClass('fade') ?
+	      $parent
+	        .one('bsTransitionEnd', removeElement)
+	        .emulateTransitionEnd(Alert.TRANSITION_DURATION) :
+	      removeElement()
+	  }
+	
+	
+	  // ALERT PLUGIN DEFINITION
+	  // =======================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this = $(this)
+	      var data  = $this.data('bs.alert')
+	
+	      if (!data) $this.data('bs.alert', (data = new Alert(this)))
+	      if (typeof option == 'string') data[option].call($this)
+	    })
+	  }
+	
+	  var old = $.fn.alert
+	
+	  $.fn.alert             = Plugin
+	  $.fn.alert.Constructor = Alert
+	
+	
+	  // ALERT NO CONFLICT
+	  // =================
+	
+	  $.fn.alert.noConflict = function () {
+	    $.fn.alert = old
+	    return this
+	  }
+	
+	
+	  // ALERT DATA-API
+	  // ==============
+	
+	  $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
+	
+	}(jQuery);
+
+
+/***/ },
+/* 222 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: button.js v3.3.6
+	 * http://getbootstrap.com/javascript/#buttons
+	 * ========================================================================
+	 * Copyright 2011-2015 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // BUTTON PUBLIC CLASS DEFINITION
+	  // ==============================
+	
+	  var Button = function (element, options) {
+	    this.$element  = $(element)
+	    this.options   = $.extend({}, Button.DEFAULTS, options)
+	    this.isLoading = false
+	  }
+	
+	  Button.VERSION  = '3.3.6'
+	
+	  Button.DEFAULTS = {
+	    loadingText: 'loading...'
+	  }
+	
+	  Button.prototype.setState = function (state) {
+	    var d    = 'disabled'
+	    var $el  = this.$element
+	    var val  = $el.is('input') ? 'val' : 'html'
+	    var data = $el.data()
+	
+	    state += 'Text'
+	
+	    if (data.resetText == null) $el.data('resetText', $el[val]())
+	
+	    // push to event loop to allow forms to submit
+	    setTimeout($.proxy(function () {
+	      $el[val](data[state] == null ? this.options[state] : data[state])
+	
+	      if (state == 'loadingText') {
+	        this.isLoading = true
+	        $el.addClass(d).attr(d, d)
+	      } else if (this.isLoading) {
+	        this.isLoading = false
+	        $el.removeClass(d).removeAttr(d)
+	      }
+	    }, this), 0)
+	  }
+	
+	  Button.prototype.toggle = function () {
+	    var changed = true
+	    var $parent = this.$element.closest('[data-toggle="buttons"]')
+	
+	    if ($parent.length) {
+	      var $input = this.$element.find('input')
+	      if ($input.prop('type') == 'radio') {
+	        if ($input.prop('checked')) changed = false
+	        $parent.find('.active').removeClass('active')
+	        this.$element.addClass('active')
+	      } else if ($input.prop('type') == 'checkbox') {
+	        if (($input.prop('checked')) !== this.$element.hasClass('active')) changed = false
+	        this.$element.toggleClass('active')
+	      }
+	      $input.prop('checked', this.$element.hasClass('active'))
+	      if (changed) $input.trigger('change')
+	    } else {
+	      this.$element.attr('aria-pressed', !this.$element.hasClass('active'))
+	      this.$element.toggleClass('active')
+	    }
+	  }
+	
+	
+	  // BUTTON PLUGIN DEFINITION
+	  // ========================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this   = $(this)
+	      var data    = $this.data('bs.button')
+	      var options = typeof option == 'object' && option
+	
+	      if (!data) $this.data('bs.button', (data = new Button(this, options)))
+	
+	      if (option == 'toggle') data.toggle()
+	      else if (option) data.setState(option)
+	    })
+	  }
+	
+	  var old = $.fn.button
+	
+	  $.fn.button             = Plugin
+	  $.fn.button.Constructor = Button
+	
+	
+	  // BUTTON NO CONFLICT
+	  // ==================
+	
+	  $.fn.button.noConflict = function () {
+	    $.fn.button = old
+	    return this
+	  }
+	
+	
+	  // BUTTON DATA-API
+	  // ===============
+	
+	  $(document)
+	    .on('click.bs.button.data-api', '[data-toggle^="button"]', function (e) {
+	      var $btn = $(e.target)
+	      if (!$btn.hasClass('btn')) $btn = $btn.closest('.btn')
+	      Plugin.call($btn, 'toggle')
+	      if (!($(e.target).is('input[type="radio"]') || $(e.target).is('input[type="checkbox"]'))) e.preventDefault()
+	    })
+	    .on('focus.bs.button.data-api blur.bs.button.data-api', '[data-toggle^="button"]', function (e) {
+	      $(e.target).closest('.btn').toggleClass('focus', /^focus(in)?$/.test(e.type))
+	    })
+	
+	}(jQuery);
+
+
+/***/ },
+/* 223 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: carousel.js v3.3.6
+	 * http://getbootstrap.com/javascript/#carousel
+	 * ========================================================================
+	 * Copyright 2011-2015 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // CAROUSEL CLASS DEFINITION
+	  // =========================
+	
+	  var Carousel = function (element, options) {
+	    this.$element    = $(element)
+	    this.$indicators = this.$element.find('.carousel-indicators')
+	    this.options     = options
+	    this.paused      = null
+	    this.sliding     = null
+	    this.interval    = null
+	    this.$active     = null
+	    this.$items      = null
+	
+	    this.options.keyboard && this.$element.on('keydown.bs.carousel', $.proxy(this.keydown, this))
+	
+	    this.options.pause == 'hover' && !('ontouchstart' in document.documentElement) && this.$element
+	      .on('mouseenter.bs.carousel', $.proxy(this.pause, this))
+	      .on('mouseleave.bs.carousel', $.proxy(this.cycle, this))
+	  }
+	
+	  Carousel.VERSION  = '3.3.6'
+	
+	  Carousel.TRANSITION_DURATION = 600
+	
+	  Carousel.DEFAULTS = {
+	    interval: 5000,
+	    pause: 'hover',
+	    wrap: true,
+	    keyboard: true
+	  }
+	
+	  Carousel.prototype.keydown = function (e) {
+	    if (/input|textarea/i.test(e.target.tagName)) return
+	    switch (e.which) {
+	      case 37: this.prev(); break
+	      case 39: this.next(); break
+	      default: return
+	    }
+	
+	    e.preventDefault()
+	  }
+	
+	  Carousel.prototype.cycle = function (e) {
+	    e || (this.paused = false)
+	
+	    this.interval && clearInterval(this.interval)
+	
+	    this.options.interval
+	      && !this.paused
+	      && (this.interval = setInterval($.proxy(this.next, this), this.options.interval))
+	
+	    return this
+	  }
+	
+	  Carousel.prototype.getItemIndex = function (item) {
+	    this.$items = item.parent().children('.item')
+	    return this.$items.index(item || this.$active)
+	  }
+	
+	  Carousel.prototype.getItemForDirection = function (direction, active) {
+	    var activeIndex = this.getItemIndex(active)
+	    var willWrap = (direction == 'prev' && activeIndex === 0)
+	                || (direction == 'next' && activeIndex == (this.$items.length - 1))
+	    if (willWrap && !this.options.wrap) return active
+	    var delta = direction == 'prev' ? -1 : 1
+	    var itemIndex = (activeIndex + delta) % this.$items.length
+	    return this.$items.eq(itemIndex)
+	  }
+	
+	  Carousel.prototype.to = function (pos) {
+	    var that        = this
+	    var activeIndex = this.getItemIndex(this.$active = this.$element.find('.item.active'))
+	
+	    if (pos > (this.$items.length - 1) || pos < 0) return
+	
+	    if (this.sliding)       return this.$element.one('slid.bs.carousel', function () { that.to(pos) }) // yes, "slid"
+	    if (activeIndex == pos) return this.pause().cycle()
+	
+	    return this.slide(pos > activeIndex ? 'next' : 'prev', this.$items.eq(pos))
+	  }
+	
+	  Carousel.prototype.pause = function (e) {
+	    e || (this.paused = true)
+	
+	    if (this.$element.find('.next, .prev').length && $.support.transition) {
+	      this.$element.trigger($.support.transition.end)
+	      this.cycle(true)
+	    }
+	
+	    this.interval = clearInterval(this.interval)
+	
+	    return this
+	  }
+	
+	  Carousel.prototype.next = function () {
+	    if (this.sliding) return
+	    return this.slide('next')
+	  }
+	
+	  Carousel.prototype.prev = function () {
+	    if (this.sliding) return
+	    return this.slide('prev')
+	  }
+	
+	  Carousel.prototype.slide = function (type, next) {
+	    var $active   = this.$element.find('.item.active')
+	    var $next     = next || this.getItemForDirection(type, $active)
+	    var isCycling = this.interval
+	    var direction = type == 'next' ? 'left' : 'right'
+	    var that      = this
+	
+	    if ($next.hasClass('active')) return (this.sliding = false)
+	
+	    var relatedTarget = $next[0]
+	    var slideEvent = $.Event('slide.bs.carousel', {
+	      relatedTarget: relatedTarget,
+	      direction: direction
+	    })
+	    this.$element.trigger(slideEvent)
+	    if (slideEvent.isDefaultPrevented()) return
+	
+	    this.sliding = true
+	
+	    isCycling && this.pause()
+	
+	    if (this.$indicators.length) {
+	      this.$indicators.find('.active').removeClass('active')
+	      var $nextIndicator = $(this.$indicators.children()[this.getItemIndex($next)])
+	      $nextIndicator && $nextIndicator.addClass('active')
+	    }
+	
+	    var slidEvent = $.Event('slid.bs.carousel', { relatedTarget: relatedTarget, direction: direction }) // yes, "slid"
+	    if ($.support.transition && this.$element.hasClass('slide')) {
+	      $next.addClass(type)
+	      $next[0].offsetWidth // force reflow
+	      $active.addClass(direction)
+	      $next.addClass(direction)
+	      $active
+	        .one('bsTransitionEnd', function () {
+	          $next.removeClass([type, direction].join(' ')).addClass('active')
+	          $active.removeClass(['active', direction].join(' '))
+	          that.sliding = false
+	          setTimeout(function () {
+	            that.$element.trigger(slidEvent)
+	          }, 0)
+	        })
+	        .emulateTransitionEnd(Carousel.TRANSITION_DURATION)
+	    } else {
+	      $active.removeClass('active')
+	      $next.addClass('active')
+	      this.sliding = false
+	      this.$element.trigger(slidEvent)
+	    }
+	
+	    isCycling && this.cycle()
+	
+	    return this
+	  }
+	
+	
+	  // CAROUSEL PLUGIN DEFINITION
+	  // ==========================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this   = $(this)
+	      var data    = $this.data('bs.carousel')
+	      var options = $.extend({}, Carousel.DEFAULTS, $this.data(), typeof option == 'object' && option)
+	      var action  = typeof option == 'string' ? option : options.slide
+	
+	      if (!data) $this.data('bs.carousel', (data = new Carousel(this, options)))
+	      if (typeof option == 'number') data.to(option)
+	      else if (action) data[action]()
+	      else if (options.interval) data.pause().cycle()
+	    })
+	  }
+	
+	  var old = $.fn.carousel
+	
+	  $.fn.carousel             = Plugin
+	  $.fn.carousel.Constructor = Carousel
+	
+	
+	  // CAROUSEL NO CONFLICT
+	  // ====================
+	
+	  $.fn.carousel.noConflict = function () {
+	    $.fn.carousel = old
+	    return this
+	  }
+	
+	
+	  // CAROUSEL DATA-API
+	  // =================
+	
+	  var clickHandler = function (e) {
+	    var href
+	    var $this   = $(this)
+	    var $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) // strip for ie7
+	    if (!$target.hasClass('carousel')) return
+	    var options = $.extend({}, $target.data(), $this.data())
+	    var slideIndex = $this.attr('data-slide-to')
+	    if (slideIndex) options.interval = false
+	
+	    Plugin.call($target, options)
+	
+	    if (slideIndex) {
+	      $target.data('bs.carousel').to(slideIndex)
+	    }
+	
+	    e.preventDefault()
+	  }
+	
+	  $(document)
+	    .on('click.bs.carousel.data-api', '[data-slide]', clickHandler)
+	    .on('click.bs.carousel.data-api', '[data-slide-to]', clickHandler)
+	
+	  $(window).on('load', function () {
+	    $('[data-ride="carousel"]').each(function () {
+	      var $carousel = $(this)
+	      Plugin.call($carousel, $carousel.data())
+	    })
+	  })
+	
+	}(jQuery);
+
+
+/***/ },
+/* 224 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: collapse.js v3.3.6
+	 * http://getbootstrap.com/javascript/#collapse
+	 * ========================================================================
+	 * Copyright 2011-2015 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // COLLAPSE PUBLIC CLASS DEFINITION
+	  // ================================
+	
+	  var Collapse = function (element, options) {
+	    this.$element      = $(element)
+	    this.options       = $.extend({}, Collapse.DEFAULTS, options)
+	    this.$trigger      = $('[data-toggle="collapse"][href="#' + element.id + '"],' +
+	                           '[data-toggle="collapse"][data-target="#' + element.id + '"]')
+	    this.transitioning = null
+	
+	    if (this.options.parent) {
+	      this.$parent = this.getParent()
+	    } else {
+	      this.addAriaAndCollapsedClass(this.$element, this.$trigger)
+	    }
+	
+	    if (this.options.toggle) this.toggle()
+	  }
+	
+	  Collapse.VERSION  = '3.3.6'
+	
+	  Collapse.TRANSITION_DURATION = 350
+	
+	  Collapse.DEFAULTS = {
+	    toggle: true
+	  }
+	
+	  Collapse.prototype.dimension = function () {
+	    var hasWidth = this.$element.hasClass('width')
+	    return hasWidth ? 'width' : 'height'
+	  }
+	
+	  Collapse.prototype.show = function () {
+	    if (this.transitioning || this.$element.hasClass('in')) return
+	
+	    var activesData
+	    var actives = this.$parent && this.$parent.children('.panel').children('.in, .collapsing')
+	
+	    if (actives && actives.length) {
+	      activesData = actives.data('bs.collapse')
+	      if (activesData && activesData.transitioning) return
+	    }
+	
+	    var startEvent = $.Event('show.bs.collapse')
+	    this.$element.trigger(startEvent)
+	    if (startEvent.isDefaultPrevented()) return
+	
+	    if (actives && actives.length) {
+	      Plugin.call(actives, 'hide')
+	      activesData || actives.data('bs.collapse', null)
+	    }
+	
+	    var dimension = this.dimension()
+	
+	    this.$element
+	      .removeClass('collapse')
+	      .addClass('collapsing')[dimension](0)
+	      .attr('aria-expanded', true)
+	
+	    this.$trigger
+	      .removeClass('collapsed')
+	      .attr('aria-expanded', true)
+	
+	    this.transitioning = 1
+	
+	    var complete = function () {
+	      this.$element
+	        .removeClass('collapsing')
+	        .addClass('collapse in')[dimension]('')
+	      this.transitioning = 0
+	      this.$element
+	        .trigger('shown.bs.collapse')
+	    }
+	
+	    if (!$.support.transition) return complete.call(this)
+	
+	    var scrollSize = $.camelCase(['scroll', dimension].join('-'))
+	
+	    this.$element
+	      .one('bsTransitionEnd', $.proxy(complete, this))
+	      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)[dimension](this.$element[0][scrollSize])
+	  }
+	
+	  Collapse.prototype.hide = function () {
+	    if (this.transitioning || !this.$element.hasClass('in')) return
+	
+	    var startEvent = $.Event('hide.bs.collapse')
+	    this.$element.trigger(startEvent)
+	    if (startEvent.isDefaultPrevented()) return
+	
+	    var dimension = this.dimension()
+	
+	    this.$element[dimension](this.$element[dimension]())[0].offsetHeight
+	
+	    this.$element
+	      .addClass('collapsing')
+	      .removeClass('collapse in')
+	      .attr('aria-expanded', false)
+	
+	    this.$trigger
+	      .addClass('collapsed')
+	      .attr('aria-expanded', false)
+	
+	    this.transitioning = 1
+	
+	    var complete = function () {
+	      this.transitioning = 0
+	      this.$element
+	        .removeClass('collapsing')
+	        .addClass('collapse')
+	        .trigger('hidden.bs.collapse')
+	    }
+	
+	    if (!$.support.transition) return complete.call(this)
+	
+	    this.$element
+	      [dimension](0)
+	      .one('bsTransitionEnd', $.proxy(complete, this))
+	      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
+	  }
+	
+	  Collapse.prototype.toggle = function () {
+	    this[this.$element.hasClass('in') ? 'hide' : 'show']()
+	  }
+	
+	  Collapse.prototype.getParent = function () {
+	    return $(this.options.parent)
+	      .find('[data-toggle="collapse"][data-parent="' + this.options.parent + '"]')
+	      .each($.proxy(function (i, element) {
+	        var $element = $(element)
+	        this.addAriaAndCollapsedClass(getTargetFromTrigger($element), $element)
+	      }, this))
+	      .end()
+	  }
+	
+	  Collapse.prototype.addAriaAndCollapsedClass = function ($element, $trigger) {
+	    var isOpen = $element.hasClass('in')
+	
+	    $element.attr('aria-expanded', isOpen)
+	    $trigger
+	      .toggleClass('collapsed', !isOpen)
+	      .attr('aria-expanded', isOpen)
+	  }
+	
+	  function getTargetFromTrigger($trigger) {
+	    var href
+	    var target = $trigger.attr('data-target')
+	      || (href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') // strip for ie7
+	
+	    return $(target)
+	  }
+	
+	
+	  // COLLAPSE PLUGIN DEFINITION
+	  // ==========================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this   = $(this)
+	      var data    = $this.data('bs.collapse')
+	      var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
+	
+	      if (!data && options.toggle && /show|hide/.test(option)) options.toggle = false
+	      if (!data) $this.data('bs.collapse', (data = new Collapse(this, options)))
+	      if (typeof option == 'string') data[option]()
+	    })
+	  }
+	
+	  var old = $.fn.collapse
+	
+	  $.fn.collapse             = Plugin
+	  $.fn.collapse.Constructor = Collapse
+	
+	
+	  // COLLAPSE NO CONFLICT
+	  // ====================
+	
+	  $.fn.collapse.noConflict = function () {
+	    $.fn.collapse = old
+	    return this
+	  }
+	
+	
+	  // COLLAPSE DATA-API
+	  // =================
+	
+	  $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
+	    var $this   = $(this)
+	
+	    if (!$this.attr('data-target')) e.preventDefault()
+	
+	    var $target = getTargetFromTrigger($this)
+	    var data    = $target.data('bs.collapse')
+	    var option  = data ? 'toggle' : $this.data()
+	
+	    Plugin.call($target, option)
+	  })
+	
+	}(jQuery);
+
+
+/***/ },
+/* 225 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: dropdown.js v3.3.6
+	 * http://getbootstrap.com/javascript/#dropdowns
+	 * ========================================================================
+	 * Copyright 2011-2015 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // DROPDOWN CLASS DEFINITION
+	  // =========================
+	
+	  var backdrop = '.dropdown-backdrop'
+	  var toggle   = '[data-toggle="dropdown"]'
+	  var Dropdown = function (element) {
+	    $(element).on('click.bs.dropdown', this.toggle)
+	  }
+	
+	  Dropdown.VERSION = '3.3.6'
+	
+	  function getParent($this) {
+	    var selector = $this.attr('data-target')
+	
+	    if (!selector) {
+	      selector = $this.attr('href')
+	      selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
+	    }
+	
+	    var $parent = selector && $(selector)
+	
+	    return $parent && $parent.length ? $parent : $this.parent()
+	  }
+	
+	  function clearMenus(e) {
+	    if (e && e.which === 3) return
+	    $(backdrop).remove()
+	    $(toggle).each(function () {
+	      var $this         = $(this)
+	      var $parent       = getParent($this)
+	      var relatedTarget = { relatedTarget: this }
+	
+	      if (!$parent.hasClass('open')) return
+	
+	      if (e && e.type == 'click' && /input|textarea/i.test(e.target.tagName) && $.contains($parent[0], e.target)) return
+	
+	      $parent.trigger(e = $.Event('hide.bs.dropdown', relatedTarget))
+	
+	      if (e.isDefaultPrevented()) return
+	
+	      $this.attr('aria-expanded', 'false')
+	      $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget))
+	    })
+	  }
+	
+	  Dropdown.prototype.toggle = function (e) {
+	    var $this = $(this)
+	
+	    if ($this.is('.disabled, :disabled')) return
+	
+	    var $parent  = getParent($this)
+	    var isActive = $parent.hasClass('open')
+	
+	    clearMenus()
+	
+	    if (!isActive) {
+	      if ('ontouchstart' in document.documentElement && !$parent.closest('.navbar-nav').length) {
+	        // if mobile we use a backdrop because click events don't delegate
+	        $(document.createElement('div'))
+	          .addClass('dropdown-backdrop')
+	          .insertAfter($(this))
+	          .on('click', clearMenus)
+	      }
+	
+	      var relatedTarget = { relatedTarget: this }
+	      $parent.trigger(e = $.Event('show.bs.dropdown', relatedTarget))
+	
+	      if (e.isDefaultPrevented()) return
+	
+	      $this
+	        .trigger('focus')
+	        .attr('aria-expanded', 'true')
+	
+	      $parent
+	        .toggleClass('open')
+	        .trigger($.Event('shown.bs.dropdown', relatedTarget))
+	    }
+	
+	    return false
+	  }
+	
+	  Dropdown.prototype.keydown = function (e) {
+	    if (!/(38|40|27|32)/.test(e.which) || /input|textarea/i.test(e.target.tagName)) return
+	
+	    var $this = $(this)
+	
+	    e.preventDefault()
+	    e.stopPropagation()
+	
+	    if ($this.is('.disabled, :disabled')) return
+	
+	    var $parent  = getParent($this)
+	    var isActive = $parent.hasClass('open')
+	
+	    if (!isActive && e.which != 27 || isActive && e.which == 27) {
+	      if (e.which == 27) $parent.find(toggle).trigger('focus')
+	      return $this.trigger('click')
+	    }
+	
+	    var desc = ' li:not(.disabled):visible a'
+	    var $items = $parent.find('.dropdown-menu' + desc)
+	
+	    if (!$items.length) return
+	
+	    var index = $items.index(e.target)
+	
+	    if (e.which == 38 && index > 0)                 index--         // up
+	    if (e.which == 40 && index < $items.length - 1) index++         // down
+	    if (!~index)                                    index = 0
+	
+	    $items.eq(index).trigger('focus')
+	  }
+	
+	
+	  // DROPDOWN PLUGIN DEFINITION
+	  // ==========================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this = $(this)
+	      var data  = $this.data('bs.dropdown')
+	
+	      if (!data) $this.data('bs.dropdown', (data = new Dropdown(this)))
+	      if (typeof option == 'string') data[option].call($this)
+	    })
+	  }
+	
+	  var old = $.fn.dropdown
+	
+	  $.fn.dropdown             = Plugin
+	  $.fn.dropdown.Constructor = Dropdown
+	
+	
+	  // DROPDOWN NO CONFLICT
+	  // ====================
+	
+	  $.fn.dropdown.noConflict = function () {
+	    $.fn.dropdown = old
+	    return this
+	  }
+	
+	
+	  // APPLY TO STANDARD DROPDOWN ELEMENTS
+	  // ===================================
+	
+	  $(document)
+	    .on('click.bs.dropdown.data-api', clearMenus)
+	    .on('click.bs.dropdown.data-api', '.dropdown form', function (e) { e.stopPropagation() })
+	    .on('click.bs.dropdown.data-api', toggle, Dropdown.prototype.toggle)
+	    .on('keydown.bs.dropdown.data-api', toggle, Dropdown.prototype.keydown)
+	    .on('keydown.bs.dropdown.data-api', '.dropdown-menu', Dropdown.prototype.keydown)
+	
+	}(jQuery);
+
+
+/***/ },
+/* 226 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: modal.js v3.3.6
+	 * http://getbootstrap.com/javascript/#modals
+	 * ========================================================================
+	 * Copyright 2011-2015 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // MODAL CLASS DEFINITION
+	  // ======================
+	
+	  var Modal = function (element, options) {
+	    this.options             = options
+	    this.$body               = $(document.body)
+	    this.$element            = $(element)
+	    this.$dialog             = this.$element.find('.modal-dialog')
+	    this.$backdrop           = null
+	    this.isShown             = null
+	    this.originalBodyPad     = null
+	    this.scrollbarWidth      = 0
+	    this.ignoreBackdropClick = false
+	
+	    if (this.options.remote) {
+	      this.$element
+	        .find('.modal-content')
+	        .load(this.options.remote, $.proxy(function () {
+	          this.$element.trigger('loaded.bs.modal')
+	        }, this))
+	    }
+	  }
+	
+	  Modal.VERSION  = '3.3.6'
+	
+	  Modal.TRANSITION_DURATION = 300
+	  Modal.BACKDROP_TRANSITION_DURATION = 150
+	
+	  Modal.DEFAULTS = {
+	    backdrop: true,
+	    keyboard: true,
+	    show: true
+	  }
+	
+	  Modal.prototype.toggle = function (_relatedTarget) {
+	    return this.isShown ? this.hide() : this.show(_relatedTarget)
+	  }
+	
+	  Modal.prototype.show = function (_relatedTarget) {
+	    var that = this
+	    var e    = $.Event('show.bs.modal', { relatedTarget: _relatedTarget })
+	
+	    this.$element.trigger(e)
+	
+	    if (this.isShown || e.isDefaultPrevented()) return
+	
+	    this.isShown = true
+	
+	    this.checkScrollbar()
+	    this.setScrollbar()
+	    this.$body.addClass('modal-open')
+	
+	    this.escape()
+	    this.resize()
+	
+	    this.$element.on('click.dismiss.bs.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this))
+	
+	    this.$dialog.on('mousedown.dismiss.bs.modal', function () {
+	      that.$element.one('mouseup.dismiss.bs.modal', function (e) {
+	        if ($(e.target).is(that.$element)) that.ignoreBackdropClick = true
+	      })
+	    })
+	
+	    this.backdrop(function () {
+	      var transition = $.support.transition && that.$element.hasClass('fade')
+	
+	      if (!that.$element.parent().length) {
+	        that.$element.appendTo(that.$body) // don't move modals dom position
+	      }
+	
+	      that.$element
+	        .show()
+	        .scrollTop(0)
+	
+	      that.adjustDialog()
+	
+	      if (transition) {
+	        that.$element[0].offsetWidth // force reflow
+	      }
+	
+	      that.$element.addClass('in')
+	
+	      that.enforceFocus()
+	
+	      var e = $.Event('shown.bs.modal', { relatedTarget: _relatedTarget })
+	
+	      transition ?
+	        that.$dialog // wait for modal to slide in
+	          .one('bsTransitionEnd', function () {
+	            that.$element.trigger('focus').trigger(e)
+	          })
+	          .emulateTransitionEnd(Modal.TRANSITION_DURATION) :
+	        that.$element.trigger('focus').trigger(e)
+	    })
+	  }
+	
+	  Modal.prototype.hide = function (e) {
+	    if (e) e.preventDefault()
+	
+	    e = $.Event('hide.bs.modal')
+	
+	    this.$element.trigger(e)
+	
+	    if (!this.isShown || e.isDefaultPrevented()) return
+	
+	    this.isShown = false
+	
+	    this.escape()
+	    this.resize()
+	
+	    $(document).off('focusin.bs.modal')
+	
+	    this.$element
+	      .removeClass('in')
+	      .off('click.dismiss.bs.modal')
+	      .off('mouseup.dismiss.bs.modal')
+	
+	    this.$dialog.off('mousedown.dismiss.bs.modal')
+	
+	    $.support.transition && this.$element.hasClass('fade') ?
+	      this.$element
+	        .one('bsTransitionEnd', $.proxy(this.hideModal, this))
+	        .emulateTransitionEnd(Modal.TRANSITION_DURATION) :
+	      this.hideModal()
+	  }
+	
+	  Modal.prototype.enforceFocus = function () {
+	    $(document)
+	      .off('focusin.bs.modal') // guard against infinite focus loop
+	      .on('focusin.bs.modal', $.proxy(function (e) {
+	        if (this.$element[0] !== e.target && !this.$element.has(e.target).length) {
+	          this.$element.trigger('focus')
+	        }
+	      }, this))
+	  }
+	
+	  Modal.prototype.escape = function () {
+	    if (this.isShown && this.options.keyboard) {
+	      this.$element.on('keydown.dismiss.bs.modal', $.proxy(function (e) {
+	        e.which == 27 && this.hide()
+	      }, this))
+	    } else if (!this.isShown) {
+	      this.$element.off('keydown.dismiss.bs.modal')
+	    }
+	  }
+	
+	  Modal.prototype.resize = function () {
+	    if (this.isShown) {
+	      $(window).on('resize.bs.modal', $.proxy(this.handleUpdate, this))
+	    } else {
+	      $(window).off('resize.bs.modal')
+	    }
+	  }
+	
+	  Modal.prototype.hideModal = function () {
+	    var that = this
+	    this.$element.hide()
+	    this.backdrop(function () {
+	      that.$body.removeClass('modal-open')
+	      that.resetAdjustments()
+	      that.resetScrollbar()
+	      that.$element.trigger('hidden.bs.modal')
+	    })
+	  }
+	
+	  Modal.prototype.removeBackdrop = function () {
+	    this.$backdrop && this.$backdrop.remove()
+	    this.$backdrop = null
+	  }
+	
+	  Modal.prototype.backdrop = function (callback) {
+	    var that = this
+	    var animate = this.$element.hasClass('fade') ? 'fade' : ''
+	
+	    if (this.isShown && this.options.backdrop) {
+	      var doAnimate = $.support.transition && animate
+	
+	      this.$backdrop = $(document.createElement('div'))
+	        .addClass('modal-backdrop ' + animate)
+	        .appendTo(this.$body)
+	
+	      this.$element.on('click.dismiss.bs.modal', $.proxy(function (e) {
+	        if (this.ignoreBackdropClick) {
+	          this.ignoreBackdropClick = false
+	          return
+	        }
+	        if (e.target !== e.currentTarget) return
+	        this.options.backdrop == 'static'
+	          ? this.$element[0].focus()
+	          : this.hide()
+	      }, this))
+	
+	      if (doAnimate) this.$backdrop[0].offsetWidth // force reflow
+	
+	      this.$backdrop.addClass('in')
+	
+	      if (!callback) return
+	
+	      doAnimate ?
+	        this.$backdrop
+	          .one('bsTransitionEnd', callback)
+	          .emulateTransitionEnd(Modal.BACKDROP_TRANSITION_DURATION) :
+	        callback()
+	
+	    } else if (!this.isShown && this.$backdrop) {
+	      this.$backdrop.removeClass('in')
+	
+	      var callbackRemove = function () {
+	        that.removeBackdrop()
+	        callback && callback()
+	      }
+	      $.support.transition && this.$element.hasClass('fade') ?
+	        this.$backdrop
+	          .one('bsTransitionEnd', callbackRemove)
+	          .emulateTransitionEnd(Modal.BACKDROP_TRANSITION_DURATION) :
+	        callbackRemove()
+	
+	    } else if (callback) {
+	      callback()
+	    }
+	  }
+	
+	  // these following methods are used to handle overflowing modals
+	
+	  Modal.prototype.handleUpdate = function () {
+	    this.adjustDialog()
+	  }
+	
+	  Modal.prototype.adjustDialog = function () {
+	    var modalIsOverflowing = this.$element[0].scrollHeight > document.documentElement.clientHeight
+	
+	    this.$element.css({
+	      paddingLeft:  !this.bodyIsOverflowing && modalIsOverflowing ? this.scrollbarWidth : '',
+	      paddingRight: this.bodyIsOverflowing && !modalIsOverflowing ? this.scrollbarWidth : ''
+	    })
+	  }
+	
+	  Modal.prototype.resetAdjustments = function () {
+	    this.$element.css({
+	      paddingLeft: '',
+	      paddingRight: ''
+	    })
+	  }
+	
+	  Modal.prototype.checkScrollbar = function () {
+	    var fullWindowWidth = window.innerWidth
+	    if (!fullWindowWidth) { // workaround for missing window.innerWidth in IE8
+	      var documentElementRect = document.documentElement.getBoundingClientRect()
+	      fullWindowWidth = documentElementRect.right - Math.abs(documentElementRect.left)
+	    }
+	    this.bodyIsOverflowing = document.body.clientWidth < fullWindowWidth
+	    this.scrollbarWidth = this.measureScrollbar()
+	  }
+	
+	  Modal.prototype.setScrollbar = function () {
+	    var bodyPad = parseInt((this.$body.css('padding-right') || 0), 10)
+	    this.originalBodyPad = document.body.style.paddingRight || ''
+	    if (this.bodyIsOverflowing) this.$body.css('padding-right', bodyPad + this.scrollbarWidth)
+	  }
+	
+	  Modal.prototype.resetScrollbar = function () {
+	    this.$body.css('padding-right', this.originalBodyPad)
+	  }
+	
+	  Modal.prototype.measureScrollbar = function () { // thx walsh
+	    var scrollDiv = document.createElement('div')
+	    scrollDiv.className = 'modal-scrollbar-measure'
+	    this.$body.append(scrollDiv)
+	    var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth
+	    this.$body[0].removeChild(scrollDiv)
+	    return scrollbarWidth
+	  }
+	
+	
+	  // MODAL PLUGIN DEFINITION
+	  // =======================
+	
+	  function Plugin(option, _relatedTarget) {
+	    return this.each(function () {
+	      var $this   = $(this)
+	      var data    = $this.data('bs.modal')
+	      var options = $.extend({}, Modal.DEFAULTS, $this.data(), typeof option == 'object' && option)
+	
+	      if (!data) $this.data('bs.modal', (data = new Modal(this, options)))
+	      if (typeof option == 'string') data[option](_relatedTarget)
+	      else if (options.show) data.show(_relatedTarget)
+	    })
+	  }
+	
+	  var old = $.fn.modal
+	
+	  $.fn.modal             = Plugin
+	  $.fn.modal.Constructor = Modal
+	
+	
+	  // MODAL NO CONFLICT
+	  // =================
+	
+	  $.fn.modal.noConflict = function () {
+	    $.fn.modal = old
+	    return this
+	  }
+	
+	
+	  // MODAL DATA-API
+	  // ==============
+	
+	  $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
+	    var $this   = $(this)
+	    var href    = $this.attr('href')
+	    var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
+	    var option  = $target.data('bs.modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
+	
+	    if ($this.is('a')) e.preventDefault()
+	
+	    $target.one('show.bs.modal', function (showEvent) {
+	      if (showEvent.isDefaultPrevented()) return // only register focus restorer if modal will actually get shown
+	      $target.one('hidden.bs.modal', function () {
+	        $this.is(':visible') && $this.trigger('focus')
+	      })
+	    })
+	    Plugin.call($target, option, this)
+	  })
+	
+	}(jQuery);
+
+
+/***/ },
+/* 227 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: tooltip.js v3.3.6
+	 * http://getbootstrap.com/javascript/#tooltip
+	 * Inspired by the original jQuery.tipsy by Jason Frame
+	 * ========================================================================
+	 * Copyright 2011-2015 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // TOOLTIP PUBLIC CLASS DEFINITION
+	  // ===============================
+	
+	  var Tooltip = function (element, options) {
+	    this.type       = null
+	    this.options    = null
+	    this.enabled    = null
+	    this.timeout    = null
+	    this.hoverState = null
+	    this.$element   = null
+	    this.inState    = null
+	
+	    this.init('tooltip', element, options)
+	  }
+	
+	  Tooltip.VERSION  = '3.3.6'
+	
+	  Tooltip.TRANSITION_DURATION = 150
+	
+	  Tooltip.DEFAULTS = {
+	    animation: true,
+	    placement: 'top',
+	    selector: false,
+	    template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
+	    trigger: 'hover focus',
+	    title: '',
+	    delay: 0,
+	    html: false,
+	    container: false,
+	    viewport: {
+	      selector: 'body',
+	      padding: 0
+	    }
+	  }
+	
+	  Tooltip.prototype.init = function (type, element, options) {
+	    this.enabled   = true
+	    this.type      = type
+	    this.$element  = $(element)
+	    this.options   = this.getOptions(options)
+	    this.$viewport = this.options.viewport && $($.isFunction(this.options.viewport) ? this.options.viewport.call(this, this.$element) : (this.options.viewport.selector || this.options.viewport))
+	    this.inState   = { click: false, hover: false, focus: false }
+	
+	    if (this.$element[0] instanceof document.constructor && !this.options.selector) {
+	      throw new Error('`selector` option must be specified when initializing ' + this.type + ' on the window.document object!')
+	    }
+	
+	    var triggers = this.options.trigger.split(' ')
+	
+	    for (var i = triggers.length; i--;) {
+	      var trigger = triggers[i]
+	
+	      if (trigger == 'click') {
+	        this.$element.on('click.' + this.type, this.options.selector, $.proxy(this.toggle, this))
+	      } else if (trigger != 'manual') {
+	        var eventIn  = trigger == 'hover' ? 'mouseenter' : 'focusin'
+	        var eventOut = trigger == 'hover' ? 'mouseleave' : 'focusout'
+	
+	        this.$element.on(eventIn  + '.' + this.type, this.options.selector, $.proxy(this.enter, this))
+	        this.$element.on(eventOut + '.' + this.type, this.options.selector, $.proxy(this.leave, this))
+	      }
+	    }
+	
+	    this.options.selector ?
+	      (this._options = $.extend({}, this.options, { trigger: 'manual', selector: '' })) :
+	      this.fixTitle()
+	  }
+	
+	  Tooltip.prototype.getDefaults = function () {
+	    return Tooltip.DEFAULTS
+	  }
+	
+	  Tooltip.prototype.getOptions = function (options) {
+	    options = $.extend({}, this.getDefaults(), this.$element.data(), options)
+	
+	    if (options.delay && typeof options.delay == 'number') {
+	      options.delay = {
+	        show: options.delay,
+	        hide: options.delay
+	      }
+	    }
+	
+	    return options
+	  }
+	
+	  Tooltip.prototype.getDelegateOptions = function () {
+	    var options  = {}
+	    var defaults = this.getDefaults()
+	
+	    this._options && $.each(this._options, function (key, value) {
+	      if (defaults[key] != value) options[key] = value
+	    })
+	
+	    return options
+	  }
+	
+	  Tooltip.prototype.enter = function (obj) {
+	    var self = obj instanceof this.constructor ?
+	      obj : $(obj.currentTarget).data('bs.' + this.type)
+	
+	    if (!self) {
+	      self = new this.constructor(obj.currentTarget, this.getDelegateOptions())
+	      $(obj.currentTarget).data('bs.' + this.type, self)
+	    }
+	
+	    if (obj instanceof $.Event) {
+	      self.inState[obj.type == 'focusin' ? 'focus' : 'hover'] = true
+	    }
+	
+	    if (self.tip().hasClass('in') || self.hoverState == 'in') {
+	      self.hoverState = 'in'
+	      return
+	    }
+	
+	    clearTimeout(self.timeout)
+	
+	    self.hoverState = 'in'
+	
+	    if (!self.options.delay || !self.options.delay.show) return self.show()
+	
+	    self.timeout = setTimeout(function () {
+	      if (self.hoverState == 'in') self.show()
+	    }, self.options.delay.show)
+	  }
+	
+	  Tooltip.prototype.isInStateTrue = function () {
+	    for (var key in this.inState) {
+	      if (this.inState[key]) return true
+	    }
+	
+	    return false
+	  }
+	
+	  Tooltip.prototype.leave = function (obj) {
+	    var self = obj instanceof this.constructor ?
+	      obj : $(obj.currentTarget).data('bs.' + this.type)
+	
+	    if (!self) {
+	      self = new this.constructor(obj.currentTarget, this.getDelegateOptions())
+	      $(obj.currentTarget).data('bs.' + this.type, self)
+	    }
+	
+	    if (obj instanceof $.Event) {
+	      self.inState[obj.type == 'focusout' ? 'focus' : 'hover'] = false
+	    }
+	
+	    if (self.isInStateTrue()) return
+	
+	    clearTimeout(self.timeout)
+	
+	    self.hoverState = 'out'
+	
+	    if (!self.options.delay || !self.options.delay.hide) return self.hide()
+	
+	    self.timeout = setTimeout(function () {
+	      if (self.hoverState == 'out') self.hide()
+	    }, self.options.delay.hide)
+	  }
+	
+	  Tooltip.prototype.show = function () {
+	    var e = $.Event('show.bs.' + this.type)
+	
+	    if (this.hasContent() && this.enabled) {
+	      this.$element.trigger(e)
+	
+	      var inDom = $.contains(this.$element[0].ownerDocument.documentElement, this.$element[0])
+	      if (e.isDefaultPrevented() || !inDom) return
+	      var that = this
+	
+	      var $tip = this.tip()
+	
+	      var tipId = this.getUID(this.type)
+	
+	      this.setContent()
+	      $tip.attr('id', tipId)
+	      this.$element.attr('aria-describedby', tipId)
+	
+	      if (this.options.animation) $tip.addClass('fade')
+	
+	      var placement = typeof this.options.placement == 'function' ?
+	        this.options.placement.call(this, $tip[0], this.$element[0]) :
+	        this.options.placement
+	
+	      var autoToken = /\s?auto?\s?/i
+	      var autoPlace = autoToken.test(placement)
+	      if (autoPlace) placement = placement.replace(autoToken, '') || 'top'
+	
+	      $tip
+	        .detach()
+	        .css({ top: 0, left: 0, display: 'block' })
+	        .addClass(placement)
+	        .data('bs.' + this.type, this)
+	
+	      this.options.container ? $tip.appendTo(this.options.container) : $tip.insertAfter(this.$element)
+	      this.$element.trigger('inserted.bs.' + this.type)
+	
+	      var pos          = this.getPosition()
+	      var actualWidth  = $tip[0].offsetWidth
+	      var actualHeight = $tip[0].offsetHeight
+	
+	      if (autoPlace) {
+	        var orgPlacement = placement
+	        var viewportDim = this.getPosition(this.$viewport)
+	
+	        placement = placement == 'bottom' && pos.bottom + actualHeight > viewportDim.bottom ? 'top'    :
+	                    placement == 'top'    && pos.top    - actualHeight < viewportDim.top    ? 'bottom' :
+	                    placement == 'right'  && pos.right  + actualWidth  > viewportDim.width  ? 'left'   :
+	                    placement == 'left'   && pos.left   - actualWidth  < viewportDim.left   ? 'right'  :
+	                    placement
+	
+	        $tip
+	          .removeClass(orgPlacement)
+	          .addClass(placement)
+	      }
+	
+	      var calculatedOffset = this.getCalculatedOffset(placement, pos, actualWidth, actualHeight)
+	
+	      this.applyPlacement(calculatedOffset, placement)
+	
+	      var complete = function () {
+	        var prevHoverState = that.hoverState
+	        that.$element.trigger('shown.bs.' + that.type)
+	        that.hoverState = null
+	
+	        if (prevHoverState == 'out') that.leave(that)
+	      }
+	
+	      $.support.transition && this.$tip.hasClass('fade') ?
+	        $tip
+	          .one('bsTransitionEnd', complete)
+	          .emulateTransitionEnd(Tooltip.TRANSITION_DURATION) :
+	        complete()
+	    }
+	  }
+	
+	  Tooltip.prototype.applyPlacement = function (offset, placement) {
+	    var $tip   = this.tip()
+	    var width  = $tip[0].offsetWidth
+	    var height = $tip[0].offsetHeight
+	
+	    // manually read margins because getBoundingClientRect includes difference
+	    var marginTop = parseInt($tip.css('margin-top'), 10)
+	    var marginLeft = parseInt($tip.css('margin-left'), 10)
+	
+	    // we must check for NaN for ie 8/9
+	    if (isNaN(marginTop))  marginTop  = 0
+	    if (isNaN(marginLeft)) marginLeft = 0
+	
+	    offset.top  += marginTop
+	    offset.left += marginLeft
+	
+	    // $.fn.offset doesn't round pixel values
+	    // so we use setOffset directly with our own function B-0
+	    $.offset.setOffset($tip[0], $.extend({
+	      using: function (props) {
+	        $tip.css({
+	          top: Math.round(props.top),
+	          left: Math.round(props.left)
+	        })
+	      }
+	    }, offset), 0)
+	
+	    $tip.addClass('in')
+	
+	    // check to see if placing tip in new offset caused the tip to resize itself
+	    var actualWidth  = $tip[0].offsetWidth
+	    var actualHeight = $tip[0].offsetHeight
+	
+	    if (placement == 'top' && actualHeight != height) {
+	      offset.top = offset.top + height - actualHeight
+	    }
+	
+	    var delta = this.getViewportAdjustedDelta(placement, offset, actualWidth, actualHeight)
+	
+	    if (delta.left) offset.left += delta.left
+	    else offset.top += delta.top
+	
+	    var isVertical          = /top|bottom/.test(placement)
+	    var arrowDelta          = isVertical ? delta.left * 2 - width + actualWidth : delta.top * 2 - height + actualHeight
+	    var arrowOffsetPosition = isVertical ? 'offsetWidth' : 'offsetHeight'
+	
+	    $tip.offset(offset)
+	    this.replaceArrow(arrowDelta, $tip[0][arrowOffsetPosition], isVertical)
+	  }
+	
+	  Tooltip.prototype.replaceArrow = function (delta, dimension, isVertical) {
+	    this.arrow()
+	      .css(isVertical ? 'left' : 'top', 50 * (1 - delta / dimension) + '%')
+	      .css(isVertical ? 'top' : 'left', '')
+	  }
+	
+	  Tooltip.prototype.setContent = function () {
+	    var $tip  = this.tip()
+	    var title = this.getTitle()
+	
+	    $tip.find('.tooltip-inner')[this.options.html ? 'html' : 'text'](title)
+	    $tip.removeClass('fade in top bottom left right')
+	  }
+	
+	  Tooltip.prototype.hide = function (callback) {
+	    var that = this
+	    var $tip = $(this.$tip)
+	    var e    = $.Event('hide.bs.' + this.type)
+	
+	    function complete() {
+	      if (that.hoverState != 'in') $tip.detach()
+	      that.$element
+	        .removeAttr('aria-describedby')
+	        .trigger('hidden.bs.' + that.type)
+	      callback && callback()
+	    }
+	
+	    this.$element.trigger(e)
+	
+	    if (e.isDefaultPrevented()) return
+	
+	    $tip.removeClass('in')
+	
+	    $.support.transition && $tip.hasClass('fade') ?
+	      $tip
+	        .one('bsTransitionEnd', complete)
+	        .emulateTransitionEnd(Tooltip.TRANSITION_DURATION) :
+	      complete()
+	
+	    this.hoverState = null
+	
+	    return this
+	  }
+	
+	  Tooltip.prototype.fixTitle = function () {
+	    var $e = this.$element
+	    if ($e.attr('title') || typeof $e.attr('data-original-title') != 'string') {
+	      $e.attr('data-original-title', $e.attr('title') || '').attr('title', '')
+	    }
+	  }
+	
+	  Tooltip.prototype.hasContent = function () {
+	    return this.getTitle()
+	  }
+	
+	  Tooltip.prototype.getPosition = function ($element) {
+	    $element   = $element || this.$element
+	
+	    var el     = $element[0]
+	    var isBody = el.tagName == 'BODY'
+	
+	    var elRect    = el.getBoundingClientRect()
+	    if (elRect.width == null) {
+	      // width and height are missing in IE8, so compute them manually; see https://github.com/twbs/bootstrap/issues/14093
+	      elRect = $.extend({}, elRect, { width: elRect.right - elRect.left, height: elRect.bottom - elRect.top })
+	    }
+	    var elOffset  = isBody ? { top: 0, left: 0 } : $element.offset()
+	    var scroll    = { scroll: isBody ? document.documentElement.scrollTop || document.body.scrollTop : $element.scrollTop() }
+	    var outerDims = isBody ? { width: $(window).width(), height: $(window).height() } : null
+	
+	    return $.extend({}, elRect, scroll, outerDims, elOffset)
+	  }
+	
+	  Tooltip.prototype.getCalculatedOffset = function (placement, pos, actualWidth, actualHeight) {
+	    return placement == 'bottom' ? { top: pos.top + pos.height,   left: pos.left + pos.width / 2 - actualWidth / 2 } :
+	           placement == 'top'    ? { top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2 } :
+	           placement == 'left'   ? { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth } :
+	        /* placement == 'right' */ { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width }
+	
+	  }
+	
+	  Tooltip.prototype.getViewportAdjustedDelta = function (placement, pos, actualWidth, actualHeight) {
+	    var delta = { top: 0, left: 0 }
+	    if (!this.$viewport) return delta
+	
+	    var viewportPadding = this.options.viewport && this.options.viewport.padding || 0
+	    var viewportDimensions = this.getPosition(this.$viewport)
+	
+	    if (/right|left/.test(placement)) {
+	      var topEdgeOffset    = pos.top - viewportPadding - viewportDimensions.scroll
+	      var bottomEdgeOffset = pos.top + viewportPadding - viewportDimensions.scroll + actualHeight
+	      if (topEdgeOffset < viewportDimensions.top) { // top overflow
+	        delta.top = viewportDimensions.top - topEdgeOffset
+	      } else if (bottomEdgeOffset > viewportDimensions.top + viewportDimensions.height) { // bottom overflow
+	        delta.top = viewportDimensions.top + viewportDimensions.height - bottomEdgeOffset
+	      }
+	    } else {
+	      var leftEdgeOffset  = pos.left - viewportPadding
+	      var rightEdgeOffset = pos.left + viewportPadding + actualWidth
+	      if (leftEdgeOffset < viewportDimensions.left) { // left overflow
+	        delta.left = viewportDimensions.left - leftEdgeOffset
+	      } else if (rightEdgeOffset > viewportDimensions.right) { // right overflow
+	        delta.left = viewportDimensions.left + viewportDimensions.width - rightEdgeOffset
+	      }
+	    }
+	
+	    return delta
+	  }
+	
+	  Tooltip.prototype.getTitle = function () {
+	    var title
+	    var $e = this.$element
+	    var o  = this.options
+	
+	    title = $e.attr('data-original-title')
+	      || (typeof o.title == 'function' ? o.title.call($e[0]) :  o.title)
+	
+	    return title
+	  }
+	
+	  Tooltip.prototype.getUID = function (prefix) {
+	    do prefix += ~~(Math.random() * 1000000)
+	    while (document.getElementById(prefix))
+	    return prefix
+	  }
+	
+	  Tooltip.prototype.tip = function () {
+	    if (!this.$tip) {
+	      this.$tip = $(this.options.template)
+	      if (this.$tip.length != 1) {
+	        throw new Error(this.type + ' `template` option must consist of exactly 1 top-level element!')
+	      }
+	    }
+	    return this.$tip
+	  }
+	
+	  Tooltip.prototype.arrow = function () {
+	    return (this.$arrow = this.$arrow || this.tip().find('.tooltip-arrow'))
+	  }
+	
+	  Tooltip.prototype.enable = function () {
+	    this.enabled = true
+	  }
+	
+	  Tooltip.prototype.disable = function () {
+	    this.enabled = false
+	  }
+	
+	  Tooltip.prototype.toggleEnabled = function () {
+	    this.enabled = !this.enabled
+	  }
+	
+	  Tooltip.prototype.toggle = function (e) {
+	    var self = this
+	    if (e) {
+	      self = $(e.currentTarget).data('bs.' + this.type)
+	      if (!self) {
+	        self = new this.constructor(e.currentTarget, this.getDelegateOptions())
+	        $(e.currentTarget).data('bs.' + this.type, self)
+	      }
+	    }
+	
+	    if (e) {
+	      self.inState.click = !self.inState.click
+	      if (self.isInStateTrue()) self.enter(self)
+	      else self.leave(self)
+	    } else {
+	      self.tip().hasClass('in') ? self.leave(self) : self.enter(self)
+	    }
+	  }
+	
+	  Tooltip.prototype.destroy = function () {
+	    var that = this
+	    clearTimeout(this.timeout)
+	    this.hide(function () {
+	      that.$element.off('.' + that.type).removeData('bs.' + that.type)
+	      if (that.$tip) {
+	        that.$tip.detach()
+	      }
+	      that.$tip = null
+	      that.$arrow = null
+	      that.$viewport = null
+	    })
+	  }
+	
+	
+	  // TOOLTIP PLUGIN DEFINITION
+	  // =========================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this   = $(this)
+	      var data    = $this.data('bs.tooltip')
+	      var options = typeof option == 'object' && option
+	
+	      if (!data && /destroy|hide/.test(option)) return
+	      if (!data) $this.data('bs.tooltip', (data = new Tooltip(this, options)))
+	      if (typeof option == 'string') data[option]()
+	    })
+	  }
+	
+	  var old = $.fn.tooltip
+	
+	  $.fn.tooltip             = Plugin
+	  $.fn.tooltip.Constructor = Tooltip
+	
+	
+	  // TOOLTIP NO CONFLICT
+	  // ===================
+	
+	  $.fn.tooltip.noConflict = function () {
+	    $.fn.tooltip = old
+	    return this
+	  }
+	
+	}(jQuery);
+
+
+/***/ },
+/* 228 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: popover.js v3.3.6
+	 * http://getbootstrap.com/javascript/#popovers
+	 * ========================================================================
+	 * Copyright 2011-2015 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // POPOVER PUBLIC CLASS DEFINITION
+	  // ===============================
+	
+	  var Popover = function (element, options) {
+	    this.init('popover', element, options)
+	  }
+	
+	  if (!$.fn.tooltip) throw new Error('Popover requires tooltip.js')
+	
+	  Popover.VERSION  = '3.3.6'
+	
+	  Popover.DEFAULTS = $.extend({}, $.fn.tooltip.Constructor.DEFAULTS, {
+	    placement: 'right',
+	    trigger: 'click',
+	    content: '',
+	    template: '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
+	  })
+	
+	
+	  // NOTE: POPOVER EXTENDS tooltip.js
+	  // ================================
+	
+	  Popover.prototype = $.extend({}, $.fn.tooltip.Constructor.prototype)
+	
+	  Popover.prototype.constructor = Popover
+	
+	  Popover.prototype.getDefaults = function () {
+	    return Popover.DEFAULTS
+	  }
+	
+	  Popover.prototype.setContent = function () {
+	    var $tip    = this.tip()
+	    var title   = this.getTitle()
+	    var content = this.getContent()
+	
+	    $tip.find('.popover-title')[this.options.html ? 'html' : 'text'](title)
+	    $tip.find('.popover-content').children().detach().end()[ // we use append for html objects to maintain js events
+	      this.options.html ? (typeof content == 'string' ? 'html' : 'append') : 'text'
+	    ](content)
+	
+	    $tip.removeClass('fade top bottom left right in')
+	
+	    // IE8 doesn't accept hiding via the `:empty` pseudo selector, we have to do
+	    // this manually by checking the contents.
+	    if (!$tip.find('.popover-title').html()) $tip.find('.popover-title').hide()
+	  }
+	
+	  Popover.prototype.hasContent = function () {
+	    return this.getTitle() || this.getContent()
+	  }
+	
+	  Popover.prototype.getContent = function () {
+	    var $e = this.$element
+	    var o  = this.options
+	
+	    return $e.attr('data-content')
+	      || (typeof o.content == 'function' ?
+	            o.content.call($e[0]) :
+	            o.content)
+	  }
+	
+	  Popover.prototype.arrow = function () {
+	    return (this.$arrow = this.$arrow || this.tip().find('.arrow'))
+	  }
+	
+	
+	  // POPOVER PLUGIN DEFINITION
+	  // =========================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this   = $(this)
+	      var data    = $this.data('bs.popover')
+	      var options = typeof option == 'object' && option
+	
+	      if (!data && /destroy|hide/.test(option)) return
+	      if (!data) $this.data('bs.popover', (data = new Popover(this, options)))
+	      if (typeof option == 'string') data[option]()
+	    })
+	  }
+	
+	  var old = $.fn.popover
+	
+	  $.fn.popover             = Plugin
+	  $.fn.popover.Constructor = Popover
+	
+	
+	  // POPOVER NO CONFLICT
+	  // ===================
+	
+	  $.fn.popover.noConflict = function () {
+	    $.fn.popover = old
+	    return this
+	  }
+	
+	}(jQuery);
+
+
+/***/ },
+/* 229 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: scrollspy.js v3.3.6
+	 * http://getbootstrap.com/javascript/#scrollspy
+	 * ========================================================================
+	 * Copyright 2011-2015 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // SCROLLSPY CLASS DEFINITION
+	  // ==========================
+	
+	  function ScrollSpy(element, options) {
+	    this.$body          = $(document.body)
+	    this.$scrollElement = $(element).is(document.body) ? $(window) : $(element)
+	    this.options        = $.extend({}, ScrollSpy.DEFAULTS, options)
+	    this.selector       = (this.options.target || '') + ' .nav li > a'
+	    this.offsets        = []
+	    this.targets        = []
+	    this.activeTarget   = null
+	    this.scrollHeight   = 0
+	
+	    this.$scrollElement.on('scroll.bs.scrollspy', $.proxy(this.process, this))
+	    this.refresh()
+	    this.process()
+	  }
+	
+	  ScrollSpy.VERSION  = '3.3.6'
+	
+	  ScrollSpy.DEFAULTS = {
+	    offset: 10
+	  }
+	
+	  ScrollSpy.prototype.getScrollHeight = function () {
+	    return this.$scrollElement[0].scrollHeight || Math.max(this.$body[0].scrollHeight, document.documentElement.scrollHeight)
+	  }
+	
+	  ScrollSpy.prototype.refresh = function () {
+	    var that          = this
+	    var offsetMethod  = 'offset'
+	    var offsetBase    = 0
+	
+	    this.offsets      = []
+	    this.targets      = []
+	    this.scrollHeight = this.getScrollHeight()
+	
+	    if (!$.isWindow(this.$scrollElement[0])) {
+	      offsetMethod = 'position'
+	      offsetBase   = this.$scrollElement.scrollTop()
+	    }
+	
+	    this.$body
+	      .find(this.selector)
+	      .map(function () {
+	        var $el   = $(this)
+	        var href  = $el.data('target') || $el.attr('href')
+	        var $href = /^#./.test(href) && $(href)
+	
+	        return ($href
+	          && $href.length
+	          && $href.is(':visible')
+	          && [[$href[offsetMethod]().top + offsetBase, href]]) || null
+	      })
+	      .sort(function (a, b) { return a[0] - b[0] })
+	      .each(function () {
+	        that.offsets.push(this[0])
+	        that.targets.push(this[1])
+	      })
+	  }
+	
+	  ScrollSpy.prototype.process = function () {
+	    var scrollTop    = this.$scrollElement.scrollTop() + this.options.offset
+	    var scrollHeight = this.getScrollHeight()
+	    var maxScroll    = this.options.offset + scrollHeight - this.$scrollElement.height()
+	    var offsets      = this.offsets
+	    var targets      = this.targets
+	    var activeTarget = this.activeTarget
+	    var i
+	
+	    if (this.scrollHeight != scrollHeight) {
+	      this.refresh()
+	    }
+	
+	    if (scrollTop >= maxScroll) {
+	      return activeTarget != (i = targets[targets.length - 1]) && this.activate(i)
+	    }
+	
+	    if (activeTarget && scrollTop < offsets[0]) {
+	      this.activeTarget = null
+	      return this.clear()
+	    }
+	
+	    for (i = offsets.length; i--;) {
+	      activeTarget != targets[i]
+	        && scrollTop >= offsets[i]
+	        && (offsets[i + 1] === undefined || scrollTop < offsets[i + 1])
+	        && this.activate(targets[i])
+	    }
+	  }
+	
+	  ScrollSpy.prototype.activate = function (target) {
+	    this.activeTarget = target
+	
+	    this.clear()
+	
+	    var selector = this.selector +
+	      '[data-target="' + target + '"],' +
+	      this.selector + '[href="' + target + '"]'
+	
+	    var active = $(selector)
+	      .parents('li')
+	      .addClass('active')
+	
+	    if (active.parent('.dropdown-menu').length) {
+	      active = active
+	        .closest('li.dropdown')
+	        .addClass('active')
+	    }
+	
+	    active.trigger('activate.bs.scrollspy')
+	  }
+	
+	  ScrollSpy.prototype.clear = function () {
+	    $(this.selector)
+	      .parentsUntil(this.options.target, '.active')
+	      .removeClass('active')
+	  }
+	
+	
+	  // SCROLLSPY PLUGIN DEFINITION
+	  // ===========================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this   = $(this)
+	      var data    = $this.data('bs.scrollspy')
+	      var options = typeof option == 'object' && option
+	
+	      if (!data) $this.data('bs.scrollspy', (data = new ScrollSpy(this, options)))
+	      if (typeof option == 'string') data[option]()
+	    })
+	  }
+	
+	  var old = $.fn.scrollspy
+	
+	  $.fn.scrollspy             = Plugin
+	  $.fn.scrollspy.Constructor = ScrollSpy
+	
+	
+	  // SCROLLSPY NO CONFLICT
+	  // =====================
+	
+	  $.fn.scrollspy.noConflict = function () {
+	    $.fn.scrollspy = old
+	    return this
+	  }
+	
+	
+	  // SCROLLSPY DATA-API
+	  // ==================
+	
+	  $(window).on('load.bs.scrollspy.data-api', function () {
+	    $('[data-spy="scroll"]').each(function () {
+	      var $spy = $(this)
+	      Plugin.call($spy, $spy.data())
+	    })
+	  })
+	
+	}(jQuery);
+
+
+/***/ },
+/* 230 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: tab.js v3.3.6
+	 * http://getbootstrap.com/javascript/#tabs
+	 * ========================================================================
+	 * Copyright 2011-2015 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // TAB CLASS DEFINITION
+	  // ====================
+	
+	  var Tab = function (element) {
+	    // jscs:disable requireDollarBeforejQueryAssignment
+	    this.element = $(element)
+	    // jscs:enable requireDollarBeforejQueryAssignment
+	  }
+	
+	  Tab.VERSION = '3.3.6'
+	
+	  Tab.TRANSITION_DURATION = 150
+	
+	  Tab.prototype.show = function () {
+	    var $this    = this.element
+	    var $ul      = $this.closest('ul:not(.dropdown-menu)')
+	    var selector = $this.data('target')
+	
+	    if (!selector) {
+	      selector = $this.attr('href')
+	      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
+	    }
+	
+	    if ($this.parent('li').hasClass('active')) return
+	
+	    var $previous = $ul.find('.active:last a')
+	    var hideEvent = $.Event('hide.bs.tab', {
+	      relatedTarget: $this[0]
+	    })
+	    var showEvent = $.Event('show.bs.tab', {
+	      relatedTarget: $previous[0]
+	    })
+	
+	    $previous.trigger(hideEvent)
+	    $this.trigger(showEvent)
+	
+	    if (showEvent.isDefaultPrevented() || hideEvent.isDefaultPrevented()) return
+	
+	    var $target = $(selector)
+	
+	    this.activate($this.closest('li'), $ul)
+	    this.activate($target, $target.parent(), function () {
+	      $previous.trigger({
+	        type: 'hidden.bs.tab',
+	        relatedTarget: $this[0]
+	      })
+	      $this.trigger({
+	        type: 'shown.bs.tab',
+	        relatedTarget: $previous[0]
+	      })
+	    })
+	  }
+	
+	  Tab.prototype.activate = function (element, container, callback) {
+	    var $active    = container.find('> .active')
+	    var transition = callback
+	      && $.support.transition
+	      && ($active.length && $active.hasClass('fade') || !!container.find('> .fade').length)
+	
+	    function next() {
+	      $active
+	        .removeClass('active')
+	        .find('> .dropdown-menu > .active')
+	          .removeClass('active')
+	        .end()
+	        .find('[data-toggle="tab"]')
+	          .attr('aria-expanded', false)
+	
+	      element
+	        .addClass('active')
+	        .find('[data-toggle="tab"]')
+	          .attr('aria-expanded', true)
+	
+	      if (transition) {
+	        element[0].offsetWidth // reflow for transition
+	        element.addClass('in')
+	      } else {
+	        element.removeClass('fade')
+	      }
+	
+	      if (element.parent('.dropdown-menu').length) {
+	        element
+	          .closest('li.dropdown')
+	            .addClass('active')
+	          .end()
+	          .find('[data-toggle="tab"]')
+	            .attr('aria-expanded', true)
+	      }
+	
+	      callback && callback()
+	    }
+	
+	    $active.length && transition ?
+	      $active
+	        .one('bsTransitionEnd', next)
+	        .emulateTransitionEnd(Tab.TRANSITION_DURATION) :
+	      next()
+	
+	    $active.removeClass('in')
+	  }
+	
+	
+	  // TAB PLUGIN DEFINITION
+	  // =====================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this = $(this)
+	      var data  = $this.data('bs.tab')
+	
+	      if (!data) $this.data('bs.tab', (data = new Tab(this)))
+	      if (typeof option == 'string') data[option]()
+	    })
+	  }
+	
+	  var old = $.fn.tab
+	
+	  $.fn.tab             = Plugin
+	  $.fn.tab.Constructor = Tab
+	
+	
+	  // TAB NO CONFLICT
+	  // ===============
+	
+	  $.fn.tab.noConflict = function () {
+	    $.fn.tab = old
+	    return this
+	  }
+	
+	
+	  // TAB DATA-API
+	  // ============
+	
+	  var clickHandler = function (e) {
+	    e.preventDefault()
+	    Plugin.call($(this), 'show')
+	  }
+	
+	  $(document)
+	    .on('click.bs.tab.data-api', '[data-toggle="tab"]', clickHandler)
+	    .on('click.bs.tab.data-api', '[data-toggle="pill"]', clickHandler)
+	
+	}(jQuery);
+
+
+/***/ },
+/* 231 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: affix.js v3.3.6
+	 * http://getbootstrap.com/javascript/#affix
+	 * ========================================================================
+	 * Copyright 2011-2015 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // AFFIX CLASS DEFINITION
+	  // ======================
+	
+	  var Affix = function (element, options) {
+	    this.options = $.extend({}, Affix.DEFAULTS, options)
+	
+	    this.$target = $(this.options.target)
+	      .on('scroll.bs.affix.data-api', $.proxy(this.checkPosition, this))
+	      .on('click.bs.affix.data-api',  $.proxy(this.checkPositionWithEventLoop, this))
+	
+	    this.$element     = $(element)
+	    this.affixed      = null
+	    this.unpin        = null
+	    this.pinnedOffset = null
+	
+	    this.checkPosition()
+	  }
+	
+	  Affix.VERSION  = '3.3.6'
+	
+	  Affix.RESET    = 'affix affix-top affix-bottom'
+	
+	  Affix.DEFAULTS = {
+	    offset: 0,
+	    target: window
+	  }
+	
+	  Affix.prototype.getState = function (scrollHeight, height, offsetTop, offsetBottom) {
+	    var scrollTop    = this.$target.scrollTop()
+	    var position     = this.$element.offset()
+	    var targetHeight = this.$target.height()
+	
+	    if (offsetTop != null && this.affixed == 'top') return scrollTop < offsetTop ? 'top' : false
+	
+	    if (this.affixed == 'bottom') {
+	      if (offsetTop != null) return (scrollTop + this.unpin <= position.top) ? false : 'bottom'
+	      return (scrollTop + targetHeight <= scrollHeight - offsetBottom) ? false : 'bottom'
+	    }
+	
+	    var initializing   = this.affixed == null
+	    var colliderTop    = initializing ? scrollTop : position.top
+	    var colliderHeight = initializing ? targetHeight : height
+	
+	    if (offsetTop != null && scrollTop <= offsetTop) return 'top'
+	    if (offsetBottom != null && (colliderTop + colliderHeight >= scrollHeight - offsetBottom)) return 'bottom'
+	
+	    return false
+	  }
+	
+	  Affix.prototype.getPinnedOffset = function () {
+	    if (this.pinnedOffset) return this.pinnedOffset
+	    this.$element.removeClass(Affix.RESET).addClass('affix')
+	    var scrollTop = this.$target.scrollTop()
+	    var position  = this.$element.offset()
+	    return (this.pinnedOffset = position.top - scrollTop)
+	  }
+	
+	  Affix.prototype.checkPositionWithEventLoop = function () {
+	    setTimeout($.proxy(this.checkPosition, this), 1)
+	  }
+	
+	  Affix.prototype.checkPosition = function () {
+	    if (!this.$element.is(':visible')) return
+	
+	    var height       = this.$element.height()
+	    var offset       = this.options.offset
+	    var offsetTop    = offset.top
+	    var offsetBottom = offset.bottom
+	    var scrollHeight = Math.max($(document).height(), $(document.body).height())
+	
+	    if (typeof offset != 'object')         offsetBottom = offsetTop = offset
+	    if (typeof offsetTop == 'function')    offsetTop    = offset.top(this.$element)
+	    if (typeof offsetBottom == 'function') offsetBottom = offset.bottom(this.$element)
+	
+	    var affix = this.getState(scrollHeight, height, offsetTop, offsetBottom)
+	
+	    if (this.affixed != affix) {
+	      if (this.unpin != null) this.$element.css('top', '')
+	
+	      var affixType = 'affix' + (affix ? '-' + affix : '')
+	      var e         = $.Event(affixType + '.bs.affix')
+	
+	      this.$element.trigger(e)
+	
+	      if (e.isDefaultPrevented()) return
+	
+	      this.affixed = affix
+	      this.unpin = affix == 'bottom' ? this.getPinnedOffset() : null
+	
+	      this.$element
+	        .removeClass(Affix.RESET)
+	        .addClass(affixType)
+	        .trigger(affixType.replace('affix', 'affixed') + '.bs.affix')
+	    }
+	
+	    if (affix == 'bottom') {
+	      this.$element.offset({
+	        top: scrollHeight - height - offsetBottom
+	      })
+	    }
+	  }
+	
+	
+	  // AFFIX PLUGIN DEFINITION
+	  // =======================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this   = $(this)
+	      var data    = $this.data('bs.affix')
+	      var options = typeof option == 'object' && option
+	
+	      if (!data) $this.data('bs.affix', (data = new Affix(this, options)))
+	      if (typeof option == 'string') data[option]()
+	    })
+	  }
+	
+	  var old = $.fn.affix
+	
+	  $.fn.affix             = Plugin
+	  $.fn.affix.Constructor = Affix
+	
+	
+	  // AFFIX NO CONFLICT
+	  // =================
+	
+	  $.fn.affix.noConflict = function () {
+	    $.fn.affix = old
+	    return this
+	  }
+	
+	
+	  // AFFIX DATA-API
+	  // ==============
+	
+	  $(window).on('load', function () {
+	    $('[data-spy="affix"]').each(function () {
+	      var $spy = $(this)
+	      var data = $spy.data()
+	
+	      data.offset = data.offset || {}
+	
+	      if (data.offsetBottom != null) data.offset.bottom = data.offsetBottom
+	      if (data.offsetTop    != null) data.offset.top    = data.offsetTop
+	
+	      Plugin.call($spy, data)
+	    })
+	  })
+	
+	}(jQuery);
+
+
+/***/ },
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -89936,21 +92428,21 @@
 	
 	var _backbone2 = _interopRequireDefault(_backbone);
 	
-	var _pagesBooksBooksModel = __webpack_require__(219);
+	var _pagesBooksBooksModel = __webpack_require__(233);
 	
 	var _pagesBooksBooksModel2 = _interopRequireDefault(_pagesBooksBooksModel);
 	
-	var _pagesBooksAddBookView = __webpack_require__(221);
+	var _pagesBooksBookItemView = __webpack_require__(235);
 	
-	var _pagesBooksAddBookView2 = _interopRequireDefault(_pagesBooksAddBookView);
+	var _pagesBooksBookItemView2 = _interopRequireDefault(_pagesBooksBookItemView);
 	
-	var _pagesBooksBooksListView = __webpack_require__(223);
+	var _pagesBooksBooksListView = __webpack_require__(237);
 	
 	var _pagesBooksBooksListView2 = _interopRequireDefault(_pagesBooksBooksListView);
 	
-	var _pagesBooksBookRatingView = __webpack_require__(227);
+	var _pagesBooksAddBookView = __webpack_require__(239);
 	
-	var _pagesBooksBookRatingView2 = _interopRequireDefault(_pagesBooksBookRatingView);
+	var _pagesBooksAddBookView2 = _interopRequireDefault(_pagesBooksAddBookView);
 	
 	var BookController = _backbone2['default'].View.extend({
 	  el: '.books-main',
@@ -89972,14 +92464,15 @@
 	    });
 	    this.$el.html(view.$el);
 	  },
-	  removeBook: function removeBook(id) {
-	    this.model.removeBook(id);
-	    this.render();
-	  },
 	  addBook: function addBook(newBook) {
 	    this.model.addBook(newBook);
 	    this.render();
+	  },
+	  removeBook: function removeBook(id) {
+	    this.model.removeBook(id);
+	    this.render();
 	  }
+	
 	  // addRating: function(id){
 	  //   var view = new BookReviewView({
 	  //     controller: this,
@@ -89999,7 +92492,7 @@
 	module.exports = bookController;
 
 /***/ },
-/* 219 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -90018,7 +92511,7 @@
 	
 	var _backbone2 = _interopRequireDefault(_backbone);
 	
-	var _lscache = __webpack_require__(220);
+	var _lscache = __webpack_require__(234);
 	
 	var _lscache2 = _interopRequireDefault(_lscache);
 	
@@ -90049,13 +92542,11 @@
 	    var schema = this.bookSchema;
 	    // shorthand 'if':
 	    data = _underscore2['default'].isArray(books) ? data : [];
-	    data = data.map(function (book) {
+	    data = data.map(function (book, index) {
+	      book.id = index;
 	      return _underscore2['default'].defaults(book, schema);
 	    });
 	    return data;
-	    // var book =_.find(books, function(){
-	    //   return book.id === id;
-	    // });
 	  },
 	  addBook: function addBook(newBook) {
 	    var books = this.get('books');
@@ -90089,7 +92580,7 @@
 	module.exports = bookModel;
 
 /***/ },
-/* 220 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -90445,7 +92936,138 @@
 
 
 /***/ },
-/* 221 */
+/* 235 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _backbone = __webpack_require__(170);
+	
+	var _backbone2 = _interopRequireDefault(_backbone);
+	
+	var _handlebars = __webpack_require__(176);
+	
+	var _handlebars2 = _interopRequireDefault(_handlebars);
+	
+	var _templatesBooksBookItemHtml = __webpack_require__(236);
+	
+	var _templatesBooksBookItemHtml2 = _interopRequireDefault(_templatesBooksBookItemHtml);
+	
+	var BookItemView = _backbone2['default'].View.extend({
+	  tagName: 'li',
+	  className: 'list-group-item row',
+	  events: {
+	    'click .close-book': 'removeBook'
+	  },
+	  template: _handlebars2['default'].compile(_templatesBooksBookItemHtml2['default']),
+	  initialize: function initialize(book) {
+	    this.data = book;
+	    this.render();
+	  },
+	  render: function render() {
+	    this.$el.html(this.template(this.data));
+	  },
+	  removeBook: function removeBook() {
+	    this.controller.removeBook(this.data.id);
+	  }
+	});
+	
+	module.exports = BookItemView;
+
+/***/ },
+/* 236 */
+/***/ function(module, exports) {
+
+	module.exports = "\n  <div class=\"title col-md-3\">{{title}}</div>\n  <div class=\"author col-md-3\">{{author}}</div>\n  <div class=\"friend col-md-2\">{{friend}}</div>\n  <div class=\"genre col-md-2\">{{genre}}</div>\n  <div class=\"rating col-md-1\"><input type=\"checkbox\"></div>\n  <div class=\"read col-md-1\"><button type=\"button\" class=\"close close-book\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button></div>\n";
+
+/***/ },
+/* 237 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _underscore = __webpack_require__(171);
+	
+	var _underscore2 = _interopRequireDefault(_underscore);
+	
+	var _backbone = __webpack_require__(170);
+	
+	var _backbone2 = _interopRequireDefault(_backbone);
+	
+	var _handlebars = __webpack_require__(176);
+	
+	var _handlebars2 = _interopRequireDefault(_handlebars);
+	
+	var _pagesBooksBookItemView = __webpack_require__(235);
+	
+	var _pagesBooksBookItemView2 = _interopRequireDefault(_pagesBooksBookItemView);
+	
+	var _templatesBooksBookListHtml = __webpack_require__(238);
+	
+	var _templatesBooksBookListHtml2 = _interopRequireDefault(_templatesBooksBookListHtml);
+	
+	var BookListView = _backbone2['default'].View.extend({
+	  className: 'books-list',
+	  events: {
+	    'click .btn-add-book': 'addNewBook',
+	    'click .btn-rate-book': 'addRating'
+	    // 'click .btn-sort-title': 'sortListBy',
+	    // 'click .btn-sort-author': 'sortListBy',
+	    // 'click .btn-sort-friend': 'sortListBy',
+	    // 'click .btn-sort-genre': 'sortListBy'
+	  },
+	  template: _handlebars2['default'].compile(_templatesBooksBookListHtml2['default']),
+	  initialize: function initialize(options) {
+	    this.data = options.books;
+	    this.controller = options.controller;
+	    this.id = options.id;
+	    this.render();
+	  },
+	  render: function render() {
+	    this.$el.html(this.template({}));
+	    var books = this.data;
+	    var $ul = this.$el.find('ul');
+	    _underscore2['default'].each(books, function (book) {
+	      var view = new _pagesBooksBookItemView2['default'](book);
+	      $ul.append(view.$el);
+	    });
+	  },
+	  addNewBook: function addNewBook() {
+	    this.controller.renderNew();
+	  }
+	  // addRating: function(id){
+	  //   this.controller.addRating(this.data.id);
+	  // }
+	  // showSynopsis: function(){
+	  //  
+	  // }
+	  // sortListBy: function(){
+	  //   // sort list by title, author, genre, or recommender
+	  // }
+	});
+	
+	module.exports = BookListView;
+
+/***/ },
+/* 238 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"book-list-container\">\n  <ul class=\"list-group book-list\">\n    <li class=\"list-group-item row book-item\">\n      <div class=\"col-md-3\">Title</div>\n      <div class=\"col-md-3\">Author</div>\n      <div class=\"col-md-2\">Friend</div>\n      <div class=\"col-md-2\">Genre</div>\n      <div class=\"col-md-1\">Got it!</div>\n      <div class=\"col-md-1\">Read</div>   \n    </li>\n  </ul>\n  <button class=\"btn btn-default btn-add-book\">New book!</button>\n</div>\n\n\n\n";
+
+/***/ },
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -90460,7 +93082,7 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _templatesBooksNewBookFormHtml = __webpack_require__(222);
+	var _templatesBooksNewBookFormHtml = __webpack_require__(240);
 	
 	var _templatesBooksNewBookFormHtml2 = _interopRequireDefault(_templatesBooksNewBookFormHtml);
 	
@@ -90484,7 +93106,6 @@
 	    var $genre = this.$el.find('.genre').val();
 	    var $rating = this.$el.find('.rating').val();
 	    var newBook = {
-	      id: 0,
 	      title: $title,
 	      author: $author,
 	      friend: $friend,
@@ -90498,193 +93119,10 @@
 	module.exports = AddBookView;
 
 /***/ },
-/* 222 */
+/* 240 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"new-book-container\">\n  <form>\n    <div class=\"form-group form-label\">\n      <label for=\"title\">Book Title</label>\n      <input type=\"text\" class=\"form-control detail\" placeholder=\"Title\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"author\">Author</label>\n      <input type=\"text\" class=\"form-control detail\" placeholder=\"Author\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"friend\">Who recommended it?</label>\n      <input type=\"text\" class=\"form-control detail\" placeholder=\"New Friend!\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"genre\">Genre</label>\n      <input type=\"text\" class=\"form-control detail\" placeholder=\"Genre\">\n    </div>\n    <svg class=\"book-shelf btn btn-add\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" viewBox=\"0 0 84 94\" height=\"94\" width=\"84\">\n      <path fill=\"none\" d=\"M37.612 92.805L4.487 73.71c-2.75-1.587-4.45-4.52-4.45-7.687L.008 27.877c-.003-3.154 1.676-6.063 4.405-7.634L37.558 1.167c2.73-1.57 6.096-1.566 8.835.013l33.124 19.096c2.75 1.586 4.45 4.518 4.45 7.686l.028 38.146c.002 3.154-1.677 6.063-4.406 7.634L46.445 92.818c-2.73 1.57-6.096 1.566-8.834-.013z\"/>\n      <g class=\"book-shelf__book book-shelf__book--one\" fill-rule=\"evenodd\">\n        <path fill=\"#5199fc\" d=\"M31 29h4c1.105 0 2 .895 2 2v29c0 1.105-.895 2-2 2h-4c-1.105 0-2-.895-2-2V31c0-1.105.895-2 2-2z\"/>\n        <path fill=\"#afd7fb\" d=\"M34 36h-2c-.552 0-1-.448-1-1s.448-1 1-1h2c.552 0 1 .448 1 1s-.448 1-1 1zm-2 1h2c.552 0 1 .448 1 1s-.448 1-1 1h-2c-.552 0-1-.448-1-1s.448-1 1-1z\"/>\n      </g>\n      <g class=\"book-shelf__book book-shelf__book--two\" fill-rule=\"evenodd\">\n        <path fill=\"#ff9868\" d=\"M39 34h6c1.105 0 2 .895 2 2v24c0 1.105-.895 2-2 2h-6c-1.105 0-2-.895-2-2V36c0-1.105.895-2 2-2z\"/>\n        <path fill=\"#d06061\" d=\"M42 38c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2z\"/>\n      </g>\n      <g class=\"book-shelf__book book-shelf__book--three\" fill-rule=\"evenodd\">\n        <path fill=\"#ff5068\" d=\"M49 32h2c1.105 0 2 .86 2 1.92v25.906c0 1.06-.895 1.92-2 1.92h-2c-1.105 0-2-.86-2-1.92V33.92c0-1.06.895-1.92 2-1.92z\"/>\n        <path fill=\"#d93368\" d=\"M50 35c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1s-1-.448-1-1v-2c0-.552.448-1 1-1z\"/>\n      </g>\n      <g fill-rule=\"evenodd\">\n        <path class=\"book-shelf__shelf\" fill=\"#ae8280\" d=\"M21 60h40c1.105 0 2 .895 2 2s-.895 2-2 2H21c-1.105 0-2-.895-2-2s.895-2 2-2z\"/>\n        <path fill=\"#855f6d\" d=\"M51.5 67c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5zm-21 0c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5z\"/>\n      </g>\n    </svg>\n  </form>\n </div>";
-
-/***/ },
-/* 223 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _jquery = __webpack_require__(1);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
-	
-	var _underscore = __webpack_require__(171);
-	
-	var _underscore2 = _interopRequireDefault(_underscore);
-	
-	var _backbone = __webpack_require__(170);
-	
-	var _backbone2 = _interopRequireDefault(_backbone);
-	
-	var _handlebars = __webpack_require__(176);
-	
-	var _handlebars2 = _interopRequireDefault(_handlebars);
-	
-	var _pagesBooksBookItemView = __webpack_require__(224);
-	
-	var _pagesBooksBookItemView2 = _interopRequireDefault(_pagesBooksBookItemView);
-	
-	var _templatesBooksBookListHtml = __webpack_require__(226);
-	
-	var _templatesBooksBookListHtml2 = _interopRequireDefault(_templatesBooksBookListHtml);
-	
-	var BookListView = _backbone2['default'].View.extend({
-	  className: 'books-list',
-	  events: {
-	    'click .btn-add-book': 'addNewBook',
-	    'click .close-book': 'removeBook',
-	    'click .btn-rate-book': 'addRating'
-	    // 'click .btn-sort-title': 'sortListBy',
-	    // 'click .btn-sort-author': 'sortListBy',
-	    // 'click .btn-sort-friend': 'sortListBy',
-	    // 'click .btn-sort-genre': 'sortListBy'
-	  },
-	  template: _handlebars2['default'].compile(_templatesBooksBookListHtml2['default']),
-	  initialize: function initialize(options) {
-	    this.data = options.books;
-	    this.controller = options.controller;
-	    this.render();
-	  },
-	  render: function render() {
-	    this.$el.html(this.template({}));
-	    var books = this.data;
-	    var $ul = this.$el.find('ul');
-	    _underscore2['default'].each(books, function (book) {
-	      var view = new _pagesBooksBookItemView2['default'](book);
-	      $ul.append(view.$el);
-	    });
-	  },
-	  addNewBook: function addNewBook() {
-	    this.controller.renderNew();
-	  },
-	  removeBook: function removeBook() {
-	    this.controller.removeBook(this.data.id);
-	  }
-	  // addRating: function(id){
-	  //   this.controller.addRating(this.data.id);
-	  // }
-	  // showSynopsis: function(){
-	  //  
-	  // }
-	  // sortListBy: function(){
-	  //   // sort list by title, author, genre, or recommender
-	  // }
-	});
-	
-	module.exports = BookListView;
-
-/***/ },
-/* 224 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _jquery = __webpack_require__(1);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
-	
-	var _backbone = __webpack_require__(170);
-	
-	var _backbone2 = _interopRequireDefault(_backbone);
-	
-	var _handlebars = __webpack_require__(176);
-	
-	var _handlebars2 = _interopRequireDefault(_handlebars);
-	
-	var _templatesBooksBookItemHtml = __webpack_require__(225);
-	
-	var _templatesBooksBookItemHtml2 = _interopRequireDefault(_templatesBooksBookItemHtml);
-	
-	var BookItemView = _backbone2['default'].View.extend({
-	  tagName: 'li',
-	  className: 'list-group-item row',
-	  events: {},
-	  template: _handlebars2['default'].compile(_templatesBooksBookItemHtml2['default']),
-	  initialize: function initialize(book) {
-	    this.data = book;
-	    this.render();
-	  },
-	  render: function render() {
-	    this.$el.html(this.template(this.data));
-	  }
-	});
-	
-	module.exports = BookItemView;
-
-/***/ },
-/* 225 */
-/***/ function(module, exports) {
-
-	module.exports = "\n  <div class=\"title col-md-3\">{{title}}</div>\n  <div class=\"author col-md-3\">{{author}}</div>\n  <div class=\"friend col-md-2\">{{friend}}</div>\n  <div class=\"genre col-md-2\">{{genre}}</div>\n  <div class=\"rating col-md-1\">{{rating}}</div>\n  <div class=\"read col-md-1\"><button type=\"button\" class=\"close close-book\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button></div>\n";
-
-/***/ },
-/* 226 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"book-list-container\">\n  <ul class=\"list-group book-list\">\n    <li class=\"list-group-item row book-item\">\n      <div class=\"col-md-3\">Title</div>\n      <div class=\"col-md-3\">Author</div>\n      <div class=\"col-md-2\">Friend</div>\n      <div class=\"col-md-2\">Genre</div>\n      <div class=\"col-md-1\">Rating</div>\n      <div class=\"col-md-1\">Read</div>   \n    </li>\n  </ul>\n  <button class=\"btn btn-default btn-add-book\">New book!</button>\n</div>\n\n\n\n";
-
-/***/ },
-/* 227 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _jquery = __webpack_require__(1);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
-	
-	var _backbone = __webpack_require__(170);
-	
-	var _backbone2 = _interopRequireDefault(_backbone);
-	
-	var _handlebars = __webpack_require__(176);
-	
-	var _handlebars2 = _interopRequireDefault(_handlebars);
-	
-	var _templatesBooksBookRatingHtml = __webpack_require__(228);
-	
-	var _templatesBooksBookRatingHtml2 = _interopRequireDefault(_templatesBooksBookRatingHtml);
-	
-	var BookReviewView = _backbone2['default'].View.extend({
-	  className: 'book-review',
-	  events: {
-	    'click .btn-save-review': 'saveRating'
-	  },
-	  template: _handlebars2['default'].compile(_templatesBooksBookRatingHtml2['default']),
-	  initialize: function initialize(options) {
-	    this.controller = options.controller;
-	    this.id = options.id;
-	    this.render();
-	  },
-	  render: function render() {
-	    this.$el.html(this.template({}));
-	  }
-	  // saveRating: function(){
-	  //   debugger;
-	  //   var rating = this.$el.find('.book-review').val();
-	  //   var id = this.id;
-	  //   this.controller.saveRating(rating, id);
-	  // }
-	});
-	
-	module.exports = BookReviewView;
-
-/***/ },
-/* 228 */
-/***/ function(module, exports) {
-
-	module.exports = "\n  <div class=\"form-group book-rating\">\n    <div class=\"rating\">\n      <span class=\"star one-star\">☆</span><span class=\"star two-stars\">☆</span><span class=\"star three-stars\">☆</span><span class=\"star four-stars\">☆</span><span class=\"star five-stars\">☆</span>\n    </div>\n      <textarea class=\"form-control book-review\" rows=\"2\" id=\"comment\"></textarea>\n      <button class=\"btn btn-default btn-save-review\" type=\"submit\">Button</button>\n  </div>\n\n";
+	module.exports = "\n<div class=\"new-book-container\">\n  <form>\n    <div class=\"form-group form-label\">\n      <label for=\"title\">Book Title</label>\n      <input type=\"text\" class=\"form-control title\" placeholder=\"Title\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"author\">Author</label>\n      <input type=\"text\" class=\"form-control author\" placeholder=\"Author\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"friend\">Who recommended it?</label>\n      <input type=\"text\" class=\"form-control friend\" placeholder=\"New Friend!\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"genre\">Genre</label>\n      <input type=\"text\" class=\"form-control genre\" placeholder=\"Genre\">\n    </div>\n    <svg class=\"book-shelf btn btn-add\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" viewBox=\"0 0 84 94\" height=\"94\" width=\"84\">\n      <path fill=\"none\" d=\"M37.612 92.805L4.487 73.71c-2.75-1.587-4.45-4.52-4.45-7.687L.008 27.877c-.003-3.154 1.676-6.063 4.405-7.634L37.558 1.167c2.73-1.57 6.096-1.566 8.835.013l33.124 19.096c2.75 1.586 4.45 4.518 4.45 7.686l.028 38.146c.002 3.154-1.677 6.063-4.406 7.634L46.445 92.818c-2.73 1.57-6.096 1.566-8.834-.013z\"/>\n      <g class=\"book-shelf__book book-shelf__book--one\" fill-rule=\"evenodd\">\n        <path fill=\"#5199fc\" d=\"M31 29h4c1.105 0 2 .895 2 2v29c0 1.105-.895 2-2 2h-4c-1.105 0-2-.895-2-2V31c0-1.105.895-2 2-2z\"/>\n        <path fill=\"#afd7fb\" d=\"M34 36h-2c-.552 0-1-.448-1-1s.448-1 1-1h2c.552 0 1 .448 1 1s-.448 1-1 1zm-2 1h2c.552 0 1 .448 1 1s-.448 1-1 1h-2c-.552 0-1-.448-1-1s.448-1 1-1z\"/>\n      </g>\n      <g class=\"book-shelf__book book-shelf__book--two\" fill-rule=\"evenodd\">\n        <path fill=\"#ff9868\" d=\"M39 34h6c1.105 0 2 .895 2 2v24c0 1.105-.895 2-2 2h-6c-1.105 0-2-.895-2-2V36c0-1.105.895-2 2-2z\"/>\n        <path fill=\"#d06061\" d=\"M42 38c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2z\"/>\n      </g>\n      <g class=\"book-shelf__book book-shelf__book--three\" fill-rule=\"evenodd\">\n        <path fill=\"#ff5068\" d=\"M49 32h2c1.105 0 2 .86 2 1.92v25.906c0 1.06-.895 1.92-2 1.92h-2c-1.105 0-2-.86-2-1.92V33.92c0-1.06.895-1.92 2-1.92z\"/>\n        <path fill=\"#d93368\" d=\"M50 35c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1s-1-.448-1-1v-2c0-.552.448-1 1-1z\"/>\n      </g>\n      <g fill-rule=\"evenodd\">\n        <path class=\"book-shelf__shelf\" fill=\"#ae8280\" d=\"M21 60h40c1.105 0 2 .895 2 2s-.895 2-2 2H21c-1.105 0-2-.895-2-2s.895-2 2-2z\"/>\n        <path fill=\"#855f6d\" d=\"M51.5 67c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5zm-21 0c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5z\"/>\n      </g>\n    </svg>\n  </form>\n </div>";
 
 /***/ }
 /******/ ]);

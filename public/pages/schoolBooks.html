@@ -4,31 +4,66 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/cloud.ico" />
     <link rel="stylesheet" type="text/css" href="/main.css">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <script type="text/javascript" async="async" defer="defer" src="/application.js"></script>
   </head>
   <body class="override-bootstrap">
-    <header class="main-header"></header>
-    <main class="school-main"> 
-      <h1 class="school-subject">Find books related to what you're learning in school</h1>
-      <div class="subject-list-container">
-        <i class="fa fa-rss fa-2x" aria-hidden="true"></i>
-          <select class="form-control select-picker subject-list" data-live-search="true">
-            <option>Select a Subject</option>
-            <option>Science</option>
-            <option>History</option>
-            <option>English Literature</option>
-            <option>Math/Statistics</option>
-            <option>Political Science/Current Affairs</option>
-            <option>Psychology</option>
-            <option>Visual Art</option>
-            <option>Music</option>
+    <header class="main-header container-fluid"></header>
+    <main class="container-fluid"> 
+      <div class="col-md-2 school-subject">
+        <div class="subject-list">
+          <select class="form-control select-picker" data-live-search="true">
+            <option class="option">Pick a Subject</option>
+            <option class="option">Science</option>
+            <option class="option">History</option>
+            <option class="option">English Literature</option>
+            <option class="option">Math/Statistics</option>
+            <option class="option">Political Science/Current Affairs</option>
+            <option class="option">Psychology</option>
+            <option class="option">Visual Art</option>
+            <option class="option">Music</option>
           </select>
-          <div class="response-container">  
+        </div>
+        <div class="suggest-book">
+          <p>Are we missing anything? Let us know!</p>
+          <button class="btn btn-default btn-suggest" role="button">
+            Suggest a book.
+          </button>
+          <div class="suggestion-box">
+            <form class= "book-suggestion">
+              <div class="form-group title">
+                <label for="title">Title</label>
+                <input class="form-control title" type="text">
+              </div>
+              <div class="form-group author">
+                <label for="author">Author</label>
+                <input class="form-control author" type="text">
+              </div>
+              <div class="form-group subject">
+                <label for="subject">Subject</label>
+                <input class="form-control subject" type="text">
+              </div>
+              <div class="form-group email">
+                <label for="email">Email</label>
+                <input class="form-control email" type="text">
+              </div>
+              <div class="form-group subscribe">
+                <label for="subscribe">
+                  <input type="checkbox"> Subscribe to be updated when new books are added!
+                </label>
+              </div>
+              <button class="btn btn-default btn-submit" type="submit">Submit</button>
+            </form>
           </div>
         </div>
-      </main>
+        <div class="thank-you">
+          <h3>Thanks! We will let you know if your suggestion gets added to the list. In the meantime, keep reading!</h3>
+        </div>
+      </div>
+      <div class="col-md-10 response-container"></div>
+    </main>
     <footer class="main-footer"></footer>
   </body>
 </html>

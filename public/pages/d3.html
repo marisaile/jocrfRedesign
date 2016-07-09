@@ -4,19 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/cloud.ico" />
     <link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <script type="text/javascript" async="async" defer="defer" src="/application.js"></script>
   </head>
   <body class="override-bootstrap">
     <header class="main-header"></header>
-    <main class="main-d3">
-      <div class="axis"></div>
-      <div class="bar"></div>
-      <div class="x"></div>
+    <main class="d3-container">
+      <form>
+        <label><input type="radio" name="mode" value="grouped"> Grouped</label>
+        <label><input type="radio" name="mode" value="stacked" checked> Stacked</label>
+      </form>
     </main>
-    <footer>
-      
-    </footer>
-    
+    <footer></footer>  
   </body>
 </html>
+

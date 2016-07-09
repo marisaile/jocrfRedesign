@@ -1,10 +1,15 @@
-import $ from 'jquery';
+var $ = require('jquery');
+
+// legacy loading for bootstrap
+window.jQuery = window.$ = $;
+require('bootstrap');
 import science from 'templates/scienceBooks.html';
 import history from 'templates/historyBooks.html';
 import english from 'templates/englishLit.html';
 import math from 'templates/math.html';
 import polisci from 'templates/polisciBooks.html';
 import psych from 'templates/psychBooks.html';
+import noBooks from 'templates/noBookx.html';
 
 var app = {
   init: function(){
@@ -25,6 +30,19 @@ var app = {
         $('.response-container').html(polisci);
       } else if (selection === 'Psychology') {
         $('.response-container').html(psych);
+      } else {
+        $('.response-container').html(noBooks);
+      }
+    });
+    $('.btn-suggest').on('click', function(){
+      if ($('.suggestion-box:first').is( ':hidden' )){
+        $('.suggestion-box').slideDown('ease');
+      }
+    });
+    $('.btn-submit').on('click', function(){
+      if ($('.thank-you:first').is( ':hidden' )) {
+        $('.suggest-book').slideUp('slow')
+        $('.thank-you').slideDown('slow')
       }
     });
   }
