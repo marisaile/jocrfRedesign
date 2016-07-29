@@ -8,6 +8,9 @@ import d3 from 'pages/d3';
 import three from 'pages/three';
 import schoolBooks from 'pages/schoolBooks';
 import bookController from 'pages/books/booksController';
+import timer from 'pages/timer';
+import vdt from 'pages/visualDesigns';
+import dalquest from 'pages/dalquest';
 
 $(function() {
 
@@ -36,6 +39,15 @@ $(function() {
     break;
     case '/pages/books.html':
       bookController.render();
+    break;
+    case '/pages/timer.html':
+      timer.init();
+    break;
+    case '/pages/visualDesigns.html':
+      vdt.init();
+    break;
+    case '/pages/dalquest.html':
+      dalquest.init();
     break;
     default: break;
   }

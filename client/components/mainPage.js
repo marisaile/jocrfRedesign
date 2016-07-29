@@ -9,8 +9,8 @@ var app = {
     app.render();
   },
   render: function() {
-  	$('.main-main').append(mainPage);
-  	$('.main-footer').append(mainFooter);
+    $('.main-main').append(mainPage);
+    $('.main-footer').append(mainFooter);
   }
 };
 

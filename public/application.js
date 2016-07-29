@@ -78,9 +78,21 @@
 	
 	var _pagesSchoolBooks2 = _interopRequireDefault(_pagesSchoolBooks);
 	
-	var _pagesBooksBooksController = __webpack_require__(232);
+	var _pagesBooksBooksController = __webpack_require__(233);
 	
 	var _pagesBooksBooksController2 = _interopRequireDefault(_pagesBooksBooksController);
+	
+	var _pagesTimer = __webpack_require__(242);
+	
+	var _pagesTimer2 = _interopRequireDefault(_pagesTimer);
+	
+	var _pagesVisualDesigns = __webpack_require__(243);
+	
+	var _pagesVisualDesigns2 = _interopRequireDefault(_pagesVisualDesigns);
+	
+	var _pagesDalquest = __webpack_require__(246);
+	
+	var _pagesDalquest2 = _interopRequireDefault(_pagesDalquest);
 	
 	(0, _jquery2['default'])(function () {
 	
@@ -109,6 +121,15 @@
 	      break;
 	    case '/pages/books.html':
 	      _pagesBooksBooksController2['default'].render();
+	      break;
+	    case '/pages/timer.html':
+	      _pagesTimer2['default'].init();
+	      break;
+	    case '/pages/visualDesigns.html':
+	      _pagesVisualDesigns2['default'].init();
+	      break;
+	    case '/pages/dalquest.html':
+	      _pagesDalquest2['default'].init();
 	      break;
 	    default:
 	      break;
@@ -9973,7 +9994,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","home":"home","cloud":"cloud","col-md-2":"col-md-2","marisaile":"marisaile","sub":"sub","nav-items":"nav-items","col-md-10":"col-md-10","col-md-offset-2":"col-md-offset-2","main-main":"main-main","circle":"circle","footer-container":"footer-container","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","btn":"btn","btn-add-todo":"btn-add-todo","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-subject":"school-subject","select":"select","select-picker":"select-picker","option":"option","suggest-book":"suggest-book","btn-suggest":"btn-suggest","suggestion-box":"suggestion-box","btn-submit":"btn-submit","thank-you":"thank-you","response-container":"response-container","no-books":"no-books","col-md-5":"col-md-5","book-container":"book-container","book-image":"book-image","title":"title","author":"author"};
+	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","home":"home","cloud":"cloud","col-md-2":"col-md-2","marisaile":"marisaile","sub":"sub","nav-items":"nav-items","col-md-10":"col-md-10","col-md-offset-2":"col-md-offset-2","main-main":"main-main","circle":"circle","footer-container":"footer-container","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-subject":"school-subject","select":"select","select-picker":"select-picker","option":"option","suggest-book":"suggest-book","btn-suggest":"btn-suggest","suggestion-box":"suggestion-box","btn-suggestion":"btn-suggestion","thank-you":"thank-you","response-container":"response-container","no-books":"no-books","col-md-5":"col-md-5","book-container":"book-container","book-image":"book-image","title":"title","author":"author","timer-container":"timer-container","counter":"counter","cum-time":"cum-time","ind-time":"ind-time","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-header":"dalquest-header","dalquest-title":"dalquest-title","dalquest-nav":"dalquest-nav","dalquest-nav-list":"dalquest-nav-list","dalquest-nav-item":"dalquest-nav-item","dalquest-navitem":"dalquest-navitem"};
 
 /***/ },
 /* 3 */,
@@ -10046,7 +10067,7 @@
 /* 8 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  <a class=\"home\" role=\"menuitem\" href=\"/server/view.ejs\">  \n    <div class=\"col-md-2\" id=\"cloud\">\n      <h1 class=\"marisaile\">Marisaile</h1>\n      <p class=\"sub\">front-end developer</p>\n    </div> \n  </a>\n  <div class=\"nav-items col-md-10 col-md-offset-2\">  \n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/todo.html\">To Do App</a>\n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/photoSearch.html\">Photo Search</a>\n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/schoolBooks.html\">School</a>\n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/books.html\">Book Tracker</a>\n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/d3.html\">d3 Chart</a>\n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/funnySquares.html\">Funny Squares</a>\n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/three.html\">THREE Animation</a>\n  </div>\n\n\n\n\n\n\n";
+	module.exports = "\n  <a class=\"home\" role=\"menuitem\" href=\"/server/view.ejs\">  \n    <div class=\"col-md-2\" id=\"cloud\">\n      <h1 class=\"marisaile\">Marisaile</h1>\n      <p class=\"sub\">front-end developer</p>\n    </div> \n  </a>\n  <div class=\"nav-items col-md-10 col-md-offset-2\">  \n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/todo.html\">To Do App</a>\n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/photoSearch.html\">Photo Search</a>\n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/schoolBooks.html\">School</a>\n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/books.html\">Book Tracker</a>\n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/d3.html\">d3 Chart</a>\n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/funnySquares.html\">Funny Squares</a>\n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/three.html\">THREE Animation</a>\n    <a class=\"nav\" role=\"menuitem\" href=\"/pages/timer.html\">Timer</a>\n  </div>\n\n\n\n\n\n\n";
 
 /***/ },
 /* 9 */
@@ -33504,7 +33525,7 @@
 	    var numberOfSquares = 6;
 	    var renderedHtml = '';
 	    _underscore2['default'].times(numberOfSquares, function (index) {
-	      renderedHtml += template({ id: index });
+	      renderedHtml += template({ id: index + 1 });
 	    });
 	    (0, _jquery2['default'])('main').append(renderedHtml);
 	  }
@@ -38301,15 +38322,15 @@
 /* 206 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"square-container\">\n  <div class=\"square square{{id}}\">\n    <div class=\"inner\">{{id}}</div>\n  </div>\n</div>";
+	module.exports = "\n<div class=\"square-container\">\n  <div class=\"square square{{id}}\">\n  \t<div class=\"inner\">{{id}}</div>\n  </div>\n</div>\n<div class=\"shadow-container\">\n\t<div class=\"shadow shadow{{id}}\"></div>\n</div>";
 
 /***/ },
 /* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	var _d3 = __webpack_require__(208);
 	
@@ -38324,17 +38345,17 @@
 	        // number of layers
 	    m = 58,
 	        // number of samples per layer
-	    stack = _d32["default"].layout.stack(),
-	        layers = stack(_d32["default"].range(n).map(function () {
+	    stack = _d32['default'].layout.stack(),
+	        layers = stack(_d32['default'].range(n).map(function () {
 	      return bumpLayer(m, .1);
 	    })),
-	        yGroupMax = _d32["default"].max(layers, function (layer) {
-	      return _d32["default"].max(layer, function (d) {
+	        yGroupMax = _d32['default'].max(layers, function (layer) {
+	      return _d32['default'].max(layer, function (d) {
 	        return d.y;
 	      });
 	    }),
-	        yStackMax = _d32["default"].max(layers, function (layer) {
-	      return _d32["default"].max(layer, function (d) {
+	        yStackMax = _d32['default'].max(layers, function (layer) {
+	      return _d32['default'].max(layer, function (d) {
 	        return d.y0 + d.y;
 	      });
 	    });
@@ -38343,45 +38364,45 @@
 	        width = 960 - margin.left - margin.right,
 	        height = 500 - margin.top - margin.bottom;
 	
-	    var x = _d32["default"].scale.ordinal().domain(_d32["default"].range(m)).rangeRoundBands([0, width], .08);
+	    var x = _d32['default'].scale.ordinal().domain(_d32['default'].range(m)).rangeRoundBands([0, width], .08);
 	
-	    var y = _d32["default"].scale.linear().domain([0, yStackMax]).range([height, 0]);
+	    var y = _d32['default'].scale.linear().domain([0, yStackMax]).range([height, 0]);
 	
-	    var color = _d32["default"].scale.linear().domain([0, n - 1]).range(["#aad", "#556"]);
+	    var color = _d32['default'].scale.linear().domain([0, n - 1]).range(['#aad', '#556']);
 	
-	    var xAxis = _d32["default"].svg.axis().scale(x).tickSize(0).tickPadding(6).orient("bottom");
+	    var xAxis = _d32['default'].svg.axis().scale(x).tickSize(0).tickPadding(6).orient('bottom');
 	
-	    var svg = _d32["default"].select("body").append("svg").attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	    var svg = _d32['default'].select('body').append('svg').attr('width', width + margin.left + margin.right).attr('height', height + margin.top + margin.bottom).append('g').attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 	
-	    var layer = svg.selectAll(".layer").data(layers).enter().append("g").attr("class", "layer").style("fill", function (d, i) {
+	    var layer = svg.selectAll('.layer').data(layers).enter().append('g').attr('class', 'layer').style('fill', function (d, i) {
 	      return color(i);
 	    });
 	
-	    var rect = layer.selectAll("rect").data(function (d) {
+	    var rect = layer.selectAll('rect').data(function (d) {
 	      return d;
-	    }).enter().append("rect").attr("x", function (d) {
+	    }).enter().append('rect').attr('x', function (d) {
 	      return x(d.x);
-	    }).attr("y", height).attr("width", x.rangeBand()).attr("height", 0);
+	    }).attr('y', height).attr('width', x.rangeBand()).attr('height', 0);
 	
 	    rect.transition().delay(function (d, i) {
 	      return i * 10;
-	    }).attr("y", function (d) {
+	    }).attr('y', function (d) {
 	      return y(d.y0 + d.y);
-	    }).attr("height", function (d) {
+	    }).attr('height', function (d) {
 	      return y(d.y0) - y(d.y0 + d.y);
 	    });
 	
-	    svg.append("g").attr("class", "x axis").attr("transform", "translate(0," + height + ")").call(xAxis);
+	    svg.append('g').attr('class', 'x axis').attr('transform', 'translate(0,' + height + ')').call(xAxis);
 	
-	    _d32["default"].selectAll("input").on("change", change);
+	    _d32['default'].selectAll('input').on('change', change);
 	
 	    var timeout = setTimeout(function () {
-	      _d32["default"].select("input[value=\"grouped\"]").property("checked", true).each(change);
+	      _d32['default'].select('input[value=\'grouped\']').property('checked', true).each(change);
 	    }, 2000);
 	
 	    function change() {
 	      clearTimeout(timeout);
-	      if (this.value === "grouped") transitionGrouped();else transitionStacked();
+	      if (this.value === 'grouped') transitionGrouped();else transitionStacked();
 	    }
 	
 	    function transitionGrouped() {
@@ -38389,11 +38410,11 @@
 	
 	      rect.transition().duration(500).delay(function (d, i) {
 	        return i * 10;
-	      }).attr("x", function (d, i, j) {
+	      }).attr('x', function (d, i, j) {
 	        return x(d.x) + x.rangeBand() / n * j;
-	      }).attr("width", x.rangeBand() / n).transition().attr("y", function (d) {
+	      }).attr('width', x.rangeBand() / n).transition().attr('y', function (d) {
 	        return y(d.y);
-	      }).attr("height", function (d) {
+	      }).attr('height', function (d) {
 	        return height - y(d.y);
 	      });
 	    }
@@ -38403,13 +38424,13 @@
 	
 	      rect.transition().duration(500).delay(function (d, i) {
 	        return i * 10;
-	      }).attr("y", function (d) {
+	      }).attr('y', function (d) {
 	        return y(d.y0 + d.y);
-	      }).attr("height", function (d) {
+	      }).attr('height', function (d) {
 	        return y(d.y0) - y(d.y0 + d.y);
-	      }).transition().attr("x", function (d) {
+	      }).transition().attr('x', function (d) {
 	        return x(d.x);
-	      }).attr("width", x.rangeBand());
+	      }).attr('width', x.rangeBand());
 	    }
 	
 	    // Inspired by Lee Byron's test data generator.
@@ -89905,11 +89926,15 @@
 	
 	var _templatesNoBookxHtml2 = _interopRequireDefault(_templatesNoBookxHtml);
 	
+	var _templatesThankYouHtml = __webpack_require__(219);
+	
+	var _templatesThankYouHtml2 = _interopRequireDefault(_templatesThankYouHtml);
+	
 	var $ = __webpack_require__(1);
 	
 	// legacy loading for bootstrap
 	window.jQuery = window.$ = $;
-	__webpack_require__(219);
+	__webpack_require__(220);
 	
 	var app = {
 	  init: function init() {
@@ -89939,12 +89964,9 @@
 	        $('.suggestion-box').slideDown('ease');
 	      }
 	    });
-	    $('.btn-submit').on('click', function () {
-	      if ($('.thank-you:first').is(':hidden')) {
-	        $('.suggest-book').slideUp('slow');
-	        $('.thank-you').slideDown('slow');
-	      }
-	    });
+	    // $('.btn-suggestion').on('click', function(){
+	
+	    // });
 	  }
 	};
 	
@@ -89994,10 +90016,15 @@
 
 /***/ },
 /* 219 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"thank-you\">\n  <h3>Thanks! We will let you know if your suggestion gets added to the list. In the meantime, keep reading!</h3>\n</div>";
+
+/***/ },
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// This file is autogenerated via the `commonjs` Grunt task. You can require() this file in a CommonJS environment.
-	__webpack_require__(220)
 	__webpack_require__(221)
 	__webpack_require__(222)
 	__webpack_require__(223)
@@ -90009,9 +90036,10 @@
 	__webpack_require__(229)
 	__webpack_require__(230)
 	__webpack_require__(231)
+	__webpack_require__(232)
 
 /***/ },
-/* 220 */
+/* 221 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -90076,7 +90104,7 @@
 
 
 /***/ },
-/* 221 */
+/* 222 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -90176,7 +90204,7 @@
 
 
 /***/ },
-/* 222 */
+/* 223 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -90302,7 +90330,7 @@
 
 
 /***/ },
-/* 223 */
+/* 224 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -90545,7 +90573,7 @@
 
 
 /***/ },
-/* 224 */
+/* 225 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -90762,7 +90790,7 @@
 
 
 /***/ },
-/* 225 */
+/* 226 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -90933,7 +90961,7 @@
 
 
 /***/ },
-/* 226 */
+/* 227 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -91276,7 +91304,7 @@
 
 
 /***/ },
-/* 227 */
+/* 228 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -91796,7 +91824,7 @@
 
 
 /***/ },
-/* 228 */
+/* 229 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -91910,7 +91938,7 @@
 
 
 /***/ },
-/* 229 */
+/* 230 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -92088,7 +92116,7 @@
 
 
 /***/ },
-/* 230 */
+/* 231 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -92249,7 +92277,7 @@
 
 
 /***/ },
-/* 231 */
+/* 232 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -92417,7 +92445,7 @@
 
 
 /***/ },
-/* 232 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -92428,19 +92456,19 @@
 	
 	var _backbone2 = _interopRequireDefault(_backbone);
 	
-	var _pagesBooksBooksModel = __webpack_require__(233);
+	var _pagesBooksBooksModel = __webpack_require__(234);
 	
 	var _pagesBooksBooksModel2 = _interopRequireDefault(_pagesBooksBooksModel);
 	
-	var _pagesBooksBookItemView = __webpack_require__(235);
+	var _pagesBooksBookItemView = __webpack_require__(236);
 	
 	var _pagesBooksBookItemView2 = _interopRequireDefault(_pagesBooksBookItemView);
 	
-	var _pagesBooksBooksListView = __webpack_require__(237);
+	var _pagesBooksBooksListView = __webpack_require__(238);
 	
 	var _pagesBooksBooksListView2 = _interopRequireDefault(_pagesBooksBooksListView);
 	
-	var _pagesBooksAddBookView = __webpack_require__(239);
+	var _pagesBooksAddBookView = __webpack_require__(240);
 	
 	var _pagesBooksAddBookView2 = _interopRequireDefault(_pagesBooksAddBookView);
 	
@@ -92492,7 +92520,7 @@
 	module.exports = bookController;
 
 /***/ },
-/* 233 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -92511,7 +92539,7 @@
 	
 	var _backbone2 = _interopRequireDefault(_backbone);
 	
-	var _lscache = __webpack_require__(234);
+	var _lscache = __webpack_require__(235);
 	
 	var _lscache2 = _interopRequireDefault(_lscache);
 	
@@ -92580,7 +92608,7 @@
 	module.exports = bookModel;
 
 /***/ },
-/* 234 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -92936,7 +92964,7 @@
 
 
 /***/ },
-/* 235 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -92955,7 +92983,7 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _templatesBooksBookItemHtml = __webpack_require__(236);
+	var _templatesBooksBookItemHtml = __webpack_require__(237);
 	
 	var _templatesBooksBookItemHtml2 = _interopRequireDefault(_templatesBooksBookItemHtml);
 	
@@ -92981,13 +93009,13 @@
 	module.exports = BookItemView;
 
 /***/ },
-/* 236 */
+/* 237 */
 /***/ function(module, exports) {
 
 	module.exports = "\n  <div class=\"title col-md-3\">{{title}}</div>\n  <div class=\"author col-md-3\">{{author}}</div>\n  <div class=\"friend col-md-2\">{{friend}}</div>\n  <div class=\"genre col-md-2\">{{genre}}</div>\n  <div class=\"rating col-md-1\"><input type=\"checkbox\"></div>\n  <div class=\"read col-md-1\"><button type=\"button\" class=\"close close-book\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button></div>\n";
 
 /***/ },
-/* 237 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -93010,11 +93038,11 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _pagesBooksBookItemView = __webpack_require__(235);
+	var _pagesBooksBookItemView = __webpack_require__(236);
 	
 	var _pagesBooksBookItemView2 = _interopRequireDefault(_pagesBooksBookItemView);
 	
-	var _templatesBooksBookListHtml = __webpack_require__(238);
+	var _templatesBooksBookListHtml = __webpack_require__(239);
 	
 	var _templatesBooksBookListHtml2 = _interopRequireDefault(_templatesBooksBookListHtml);
 	
@@ -93061,13 +93089,13 @@
 	module.exports = BookListView;
 
 /***/ },
-/* 238 */
+/* 239 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"book-list-container\">\n  <ul class=\"list-group book-list\">\n    <li class=\"list-group-item row book-item\">\n      <div class=\"col-md-3\">Title</div>\n      <div class=\"col-md-3\">Author</div>\n      <div class=\"col-md-2\">Friend</div>\n      <div class=\"col-md-2\">Genre</div>\n      <div class=\"col-md-1\">Got it!</div>\n      <div class=\"col-md-1\">Read</div>   \n    </li>\n  </ul>\n  <button class=\"btn btn-default btn-add-book\">New book!</button>\n</div>\n\n\n\n";
 
 /***/ },
-/* 239 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -93082,7 +93110,7 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _templatesBooksNewBookFormHtml = __webpack_require__(240);
+	var _templatesBooksNewBookFormHtml = __webpack_require__(241);
 	
 	var _templatesBooksNewBookFormHtml2 = _interopRequireDefault(_templatesBooksNewBookFormHtml);
 	
@@ -93119,10 +93147,154 @@
 	module.exports = AddBookView;
 
 /***/ },
-/* 240 */
+/* 241 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"new-book-container\">\n  <form>\n    <div class=\"form-group form-label\">\n      <label for=\"title\">Book Title</label>\n      <input type=\"text\" class=\"form-control title\" placeholder=\"Title\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"author\">Author</label>\n      <input type=\"text\" class=\"form-control author\" placeholder=\"Author\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"friend\">Who recommended it?</label>\n      <input type=\"text\" class=\"form-control friend\" placeholder=\"New Friend!\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"genre\">Genre</label>\n      <input type=\"text\" class=\"form-control genre\" placeholder=\"Genre\">\n    </div>\n    <svg class=\"book-shelf btn btn-add\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" viewBox=\"0 0 84 94\" height=\"94\" width=\"84\">\n      <path fill=\"none\" d=\"M37.612 92.805L4.487 73.71c-2.75-1.587-4.45-4.52-4.45-7.687L.008 27.877c-.003-3.154 1.676-6.063 4.405-7.634L37.558 1.167c2.73-1.57 6.096-1.566 8.835.013l33.124 19.096c2.75 1.586 4.45 4.518 4.45 7.686l.028 38.146c.002 3.154-1.677 6.063-4.406 7.634L46.445 92.818c-2.73 1.57-6.096 1.566-8.834-.013z\"/>\n      <g class=\"book-shelf__book book-shelf__book--one\" fill-rule=\"evenodd\">\n        <path fill=\"#5199fc\" d=\"M31 29h4c1.105 0 2 .895 2 2v29c0 1.105-.895 2-2 2h-4c-1.105 0-2-.895-2-2V31c0-1.105.895-2 2-2z\"/>\n        <path fill=\"#afd7fb\" d=\"M34 36h-2c-.552 0-1-.448-1-1s.448-1 1-1h2c.552 0 1 .448 1 1s-.448 1-1 1zm-2 1h2c.552 0 1 .448 1 1s-.448 1-1 1h-2c-.552 0-1-.448-1-1s.448-1 1-1z\"/>\n      </g>\n      <g class=\"book-shelf__book book-shelf__book--two\" fill-rule=\"evenodd\">\n        <path fill=\"#ff9868\" d=\"M39 34h6c1.105 0 2 .895 2 2v24c0 1.105-.895 2-2 2h-6c-1.105 0-2-.895-2-2V36c0-1.105.895-2 2-2z\"/>\n        <path fill=\"#d06061\" d=\"M42 38c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2z\"/>\n      </g>\n      <g class=\"book-shelf__book book-shelf__book--three\" fill-rule=\"evenodd\">\n        <path fill=\"#ff5068\" d=\"M49 32h2c1.105 0 2 .86 2 1.92v25.906c0 1.06-.895 1.92-2 1.92h-2c-1.105 0-2-.86-2-1.92V33.92c0-1.06.895-1.92 2-1.92z\"/>\n        <path fill=\"#d93368\" d=\"M50 35c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1s-1-.448-1-1v-2c0-.552.448-1 1-1z\"/>\n      </g>\n      <g fill-rule=\"evenodd\">\n        <path class=\"book-shelf__shelf\" fill=\"#ae8280\" d=\"M21 60h40c1.105 0 2 .895 2 2s-.895 2-2 2H21c-1.105 0-2-.895-2-2s.895-2 2-2z\"/>\n        <path fill=\"#855f6d\" d=\"M51.5 67c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5zm-21 0c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5z\"/>\n      </g>\n    </svg>\n  </form>\n </div>";
+
+/***/ },
+/* 242 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var startTime;
+	var interval;
+	var minutes;
+	var hundredths;
+	var endTime;
+	var timeDifference;
+	var splitTimes = [];
+	var app = {
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {
+	    var updateTimer = function updateTimer() {
+	      endTime = new Date();
+	      timeDifference = (endTime - startTime) / 1000;
+	      minutes = Math.floor(timeDifference / 60);
+	      hundredths = Math.floor(timeDifference / 0.6) % 100;
+	      if (minutes < 10) {
+	        minutes = '0' + minutes; //converting to a string
+	      }
+	      if (hundredths < 10) {
+	        hundredths = '0' + hundredths; //converting to a string
+	      }
+	      endTime = minutes + '.' + hundredths;
+	      (0, _jquery2['default'])('.counter').html(endTime);
+	    };
+	    var startTimer = function startTimer() {
+	      startTime = new Date();
+	      interval = setInterval(updateTimer, 100);
+	    };
+	    var stopTimer = function stopTimer() {
+	      interval = clearInterval(interval);
+	    };
+	    var splitTimer = function splitTimer() {
+	      var cumTime = endTime;
+	      (0, _jquery2['default'])('.timer-container .cum-time').append('<br />' + cumTime);
+	    };
+	    var resetTimer = function resetTimer() {
+	      (0, _jquery2['default'])('.counter').html('00' + '.' + '00');
+	      (0, _jquery2['default'])('.timer-container .cum-time').html('Cumulative Time' + ' ');
+	    };
+	    (0, _jquery2['default'])('.timer-container .start-stop-button').on('click', function () {
+	      if ((0, _jquery2['default'])('.start-stop-button').html() === 'start') {
+	        startTimer();
+	        (0, _jquery2['default'])('.start-stop-button').html('stop');
+	      } else {
+	        stopTimer();
+	        (0, _jquery2['default'])('.start-stop-button').html('start');
+	      }
+	    });
+	    (0, _jquery2['default'])('.timer-container .split-button').on('click', splitTimer);
+	    (0, _jquery2['default'])('.timer-container .reset-button').on('click', resetTimer);
+	  }
+	};
+	
+	module.exports = app;
+
+/***/ },
+/* 243 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _templatesVDTVdtInstructionsHtml = __webpack_require__(244);
+	
+	var _templatesVDTVdtInstructionsHtml2 = _interopRequireDefault(_templatesVDTVdtInstructionsHtml);
+	
+	var _templatesVDTVdtItemsHtml = __webpack_require__(245);
+	
+	var _templatesVDTVdtItemsHtml2 = _interopRequireDefault(_templatesVDTVdtItemsHtml);
+	
+	var app = {
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {
+	    (0, _jquery2['default'])('.vdt-main').html(_templatesVDTVdtInstructionsHtml2['default']);
+	    (0, _jquery2['default'])('.btn-start').on('click', function () {
+	      (0, _jquery2['default'])('.vdt-main').html(_templatesVDTVdtItemsHtml2['default']);
+	    });
+	  },
+	  selectImage: function selectImage() {
+	    (0, _jquery2['default'])('#1a').on('click', function () {
+	      (0, _jquery2['default'])('#1a').animate({
+	        height: '85%',
+	        width: '85%'
+	      }, 1000, 'easeInBounce');
+	    });
+	  }
+	};
+	
+	module.exports = app;
+
+/***/ },
+/* 244 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"vdt-container\">\n  <h1 class=\"vdt-title\">Visual Designs</h1>\n  <h2 class=\"vdt-instructions\">\n    For each item on this test, look at the two pictures and click on the one you like better.\n  </h2>\n  <button class=\"btn btn-default btn-start\">Start</button>\n</div>";
+
+/***/ },
+/* 245 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"1a\" src=\"/images/VDT/vdt-1a.png\">\n  <img class=\"vdt-image\" id=\"1b\" src=\"/images/VDT/vdt-1b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"2a\" src=\"/images/VDT/vdt-2a.png\">\n  <img class=\"vdt-image\" id=\"2b\" src=\"/images/VDT/vdt-2b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"3a\" src=\"/images/VDT/vdt-3a.png\">\n  <img class=\"vdt-image\" id=\"3b\" src=\"/images/VDT/vdt-3b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"4a\" src=\"/images/VDT/vdt-4a.png\">\n  <img class=\"vdt-image\" id=\"4b\" src=\"/images/VDT/vdt-4b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"5a\" src=\"/images/VDT/vdt-5a.png\">\n  <img class=\"vdt-image\" id=\"5b\" src=\"/images/VDT/vdt-5b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"6a\" src=\"/images/VDT/vdt-6a.png\">\n  <img class=\"vdt-image\" id=\"6b\" src=\"/images/VDT/vdt-6b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"7a\" src=\"/images/VDT/vdt-7a.png\">\n  <img class=\"vdt-image\" id=\"7b\" src=\"/images/VDT/vdt-7b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"8a\" src=\"/images/VDT/vdt-8a.png\">\n  <img class=\"vdt-image\" id=\"8b\" src=\"/images/VDT/vdt-8b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"9a\" src=\"/images/VDT/vdt-9a.png\">\n  <img class=\"vdt-image\" id=\"9b\" src=\"/images/VDT/vdt-9b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"10a\" src=\"/images/VDT/vdt-10a.png\">\n  <img class=\"vdt-image\" id=\"10b\" src=\"/images/VDT/vdt-10b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"11a\" src=\"/images/VDT/vdt-11a.png\">\n  <img class=\"vdt-image\" id=\"11b\" src=\"/images/VDT/vdt-11b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"12a\" src=\"/images/VDT/vdt-12a.png\">\n  <img class=\"vdt-image\" id=\"12b\" src=\"/images/VDT/vdt-12b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"13a\" src=\"/images/VDT/vdt-13a.png\">\n  <img class=\"vdt-image\" id=\"13b\" src=\"/images/VDT/vdt-13b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"14a\" src=\"/images/VDT/vdt-14a.png\">\n  <img class=\"vdt-image\" id=\"14b\" src=\"/images/VDT/vdt-14b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"15a\" src=\"/images/VDT/vdt-15a.png\">\n  <img class=\"vdt-image\" id=\"15b\" src=\"/images/VDT/vdt-15b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"16a\" src=\"/images/VDT/vdt-16a.png\">\n  <img class=\"vdt-image\" id=\"16b\" src=\"/images/VDT/vdt-16b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"17a\" src=\"/images/VDT/vdt-17a.png\">\n  <img class=\"vdt-image\" id=\"17b\" src=\"/images/VDT/vdt-17b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"18a\" src=\"/images/VDT/vdt-18a.png\">\n  <img class=\"vdt-image\" id=\"18b\" src=\"/images/VDT/vdt-18b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"19a\" src=\"/images/VDT/vdt-19a.png\">\n  <img class=\"vdt-image\" id=\"19b\" src=\"/images/VDT/vdt-19b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"20a\" src=\"/images/VDT/vdt-20a.png\">\n  <img class=\"vdt-image\" id=\"20b\" src=\"/images/VDT/vdt-20b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"21a\" src=\"/images/VDT/vdt-21a.png\">\n  <img class=\"vdt-image\" id=\"21b\" src=\"/images/VDT/vdt-21b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"22a\" src=\"/images/VDT/vdt-22a.png\">\n  <img class=\"vdt-image\" id=\"22b\" src=\"/images/VDT/vdt-22b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"23a\" src=\"/images/VDT/vdt-23a.png\">\n  <img class=\"vdt-image\" id=\"23b\" src=\"/images/VDT/vdt-23b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"24a\" src=\"/images/VDT/vdt-24a.png\">\n  <img class=\"vdt-image\" id=\"24b\" src=\"/images/VDT/vdt-24b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"25a\" src=\"/images/VDT/vdt-25a.png\">\n  <img class=\"vdt-image\" id=\"25b\" src=\"/images/VDT/vdt-25b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"26a\" src=\"/images/VDT/vdt-26a.png\">\n  <img class=\"vdt-image\" id=\"26b\" src=\"/images/VDT/vdt-26b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"27a\" src=\"/images/VDT/vdt-27a.png\">\n  <img class=\"vdt-image\" id=\"27b\" src=\"/images/VDT/vdt-27b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"28a\" src=\"/images/VDT/vdt-28a.png\">\n  <img class=\"vdt-image\" id=\"28b\" src=\"/images/VDT/vdt-28b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"29a\" src=\"/images/VDT/vdt-29a.png\">\n  <img class=\"vdt-image\" id=\"29b\" src=\"/images/VDT/vdt-29b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"30a\" src=\"/images/VDT/vdt-30a.png\">\n  <img class=\"vdt-image\" id=\"30b\" src=\"/images/VDT/vdt-30b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"31a\" src=\"/images/VDT/vdt-31a.png\">\n  <img class=\"vdt-image\" id=\"31b\" src=\"/images/VDT/vdt-31b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"32a\" src=\"/images/VDT/vdt-32a.png\">\n  <img class=\"vdt-image\" id=\"32b\" src=\"/images/VDT/vdt-32b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"33a\" src=\"/images/VDT/vdt-33a.png\">\n  <img class=\"vdt-image\" id=\"33b\" src=\"/images/VDT/vdt-33b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"34a\" src=\"/images/VDT/vdt-34a.png\">\n  <img class=\"vdt-image\" id=\"34b\" src=\"/images/VDT/vdt-34b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"35a\" src=\"/images/VDT/vdt-35a.png\">\n  <img class=\"vdt-image\" id=\"35b\" src=\"/images/VDT/vdt-35b.png\">\n</div>\n<hr> \n";
+
+/***/ },
+/* 246 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var app = {
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {}
+	};
+	
+	module.exports = app;
 
 /***/ }
 /******/ ]);

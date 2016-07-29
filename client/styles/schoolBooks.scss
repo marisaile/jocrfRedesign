@@ -70,7 +70,7 @@
         font-size: 16px;
         color: #eee;
       }
-      .btn-submit {
+      .btn-suggestion {
         background-color: #00C9D6;
         font-size: 16px;
         color: #eee;
@@ -80,23 +80,23 @@
   }
   .thank-you {
     position: relative;
-    display: none;
-    top: 100px;
+    top: -1100px;
     height: 200px;
     width: 300px;
     border-radius: 10px;
     background-color: #00C9D6;
     padding: 20px;
 
-    h3 {
-      position: relative;
-      color: #eee;
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 25px;
-      text-align: center;
+  h3 {
+    position: relative;
+    color: #eee;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 25px;
+    text-align: center;
     }
   }
 }
+
 .response-container {
   position: relative;
   top: 0;

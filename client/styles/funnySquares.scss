@@ -1,11 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Prompt);
-@import url(https://fonts.googleapis.com/css?family=Lato);
 
-.square {
+.square-container {
   position: relative;
   display: inline-block;
   top: 150px;
   left: 330px;
+  perspective: 500px;
+}
+.square {
   height: 100px;
   width: 100px;
   margin-right: 30px;
@@ -18,11 +19,24 @@
   transform: none;
   transition: transform .5s;
   color: #eee;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
-.square-container {
+.shadow-container {
+  position: relative;
   display: inline-block;
-  perspective: 50px;
+  top: 150px;
+  left: 245px;
+  perspective: 250px;
+}
+.shadow {
+  content: ''; position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s; 
+  opacity: 0.15;
+  transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+  transform-origin: bottom;
 }
 .square1:hover {
   transform: skewY(45deg);
@@ -46,6 +60,6 @@
   transition: transform .5s;
 }
 .square6:hover {
-  transform: translate3d(20px, 50px, 100px);
+  transform: translate3d(20px, 30px, 40px);
   transition: transform .5s;
 }

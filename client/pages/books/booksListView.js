@@ -19,7 +19,7 @@ var BookListView = Backbone.View.extend({
   initialize: function(options){
     this.data = options.books;   
     this.controller = options.controller;
-    this.id = options.id
+    this.id = options.id;
     this.render();
   },
   render: function(){

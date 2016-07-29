@@ -17,7 +17,7 @@ var app = {
     var numberOfSquares = 6;
     var renderedHtml = '';
     _.times(numberOfSquares, function(index){
-      renderedHtml += template({ id: index });
+      renderedHtml += template({ id: index + 1 });
     });
     $('main').append(renderedHtml);
   }

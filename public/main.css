@@ -180,11 +180,15 @@ a.home:hover {
   color: #eee;
 }
 
-.square {
+.square-container {
   position: relative;
   display: inline-block;
   top: 150px;
   left: 330px;
+  perspective: 500px;
+}
+
+.square {
   height: 100px;
   width: 100px;
   margin-right: 30px;
@@ -197,12 +201,30 @@ a.home:hover {
   transform: none;
   transition: transform .5s;
   color: #eee;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-.square-container {
+.shadow-container {
+  position: relative;
   display: inline-block;
-  perspective: 50px;
+  top: 150px;
+  left: 245px;
+  perspective: 250px;
+}
+
+.shadow {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+  opacity: 0.15;
+  transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+  transform-origin: bottom;
 }
 
 .square1:hover {
@@ -232,7 +254,7 @@ a.home:hover {
 }
 
 .square6:hover {
-  transform: translate3d(20px, 50px, 100px);
+  transform: translate3d(20px, 30px, 40px);
   transition: transform .5s;
 }
 
@@ -436,7 +458,7 @@ input.search-photo {
   color: #eee;
 }
 
-.col-md-2.school-subject .suggest-book .suggestion-box .btn-submit {
+.col-md-2.school-subject .suggest-book .suggestion-box .btn-suggestion {
   background-color: #00C9D6;
   font-size: 16px;
   color: #eee;
@@ -445,8 +467,7 @@ input.search-photo {
 
 .col-md-2.school-subject .thank-you {
   position: relative;
-  display: none;
-  top: 100px;
+  top: -1100px;
   height: 200px;
   width: 300px;
   border-radius: 10px;
@@ -519,6 +540,154 @@ input.search-photo {
 .response-container li.book-container:hover {
   background-color: #fff;
   box-shadow: 0px 1px 1px 1px rgba(210, 214, 213, 0.5);
+}
+
+.timer-container {
+  position: relative;
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.timer-container .counter {
+  font-size: 64px;
+}
+
+.timer-container .cum-time {
+  position: absolute;
+  width: 150px;
+  height: 400px;
+  top: 150px;
+  left: 0;
+  text-align: left;
+  font-family: 'Josephin Sans', sans-serif;
+  font-size: 14px;
+}
+
+.timer-container .ind-time {
+  position: absolute;
+  width: 150px;
+  height: 400px;
+  top: 150px;
+  left: 150px;
+  text-align: right;
+  font-family: 'Josephin Sans', sans-serif;
+  font-size: 14px;
+}
+
+.no-bootstrap {
+  background-color: #888;
+}
+
+.no-bootstrap .vdt-container {
+  position: relative;
+  display: block;
+  margin: 100px auto;
+  padding: 20px;
+  height: 400px;
+  width: 600px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px;
+}
+
+.no-bootstrap .vdt-container h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+.no-bootstrap .vdt-container h2 {
+  position: relative;
+  top: 50px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+.no-bootstrap .vdt-container .btn-start {
+  position: relative;
+  top: 150px;
+  left: 450px;
+  width: 100px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+}
+
+.vdt-image-container {
+  position: relative;
+  display: block;
+  margin: 100px auto;
+  padding: 20px;
+  height: 600px;
+  width: 1000px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px;
+}
+
+.vdt-image-container .vdt-image {
+  position: relative;
+  display: inline-block;
+  height: 250px;
+  width: 400px;
+  margin: 150px 35px;
+  box-shadow: 2px 2px 2px;
+}
+
+.vdt-image-container .vdt-image {
+  position: relative;
+  display: inline-block;
+  height: 250px;
+  width: 400px;
+  margin: 150px 35px;
+  box-shadow: 2px 2px 2px;
+}
+
+.dalquest-header {
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background-color: #600;
+}
+
+.dalquest-header .dalquest-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  color: #e8e8e8;
+}
+
+nav.dalquest-nav {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100%;
+  background-color: #e8e8e8;
+}
+
+ul.dalquest-nav-list {
+  position: relative;
+  display: block;
+  margin: auto;
+}
+
+li.dalquest-nav-item {
+  list-style-image: none;
+}
+
+a.dalquest-navitem {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  color: #190000;
+}
+
+a.dalquest-navitem:hover {
+  text-decoration: none;
+  color: #331103;
 }
 
 /*# sourceMappingURL=main.css.map*/

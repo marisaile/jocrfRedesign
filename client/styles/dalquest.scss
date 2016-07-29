@@ -1,0 +1,43 @@
+.dalquest-header {
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background-color: #600;
+
+  .dalquest-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    color: #e8e8e8;
+  }
+}
+nav.dalquest-nav {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100%;
+  background-color: #e8e8e8;
+}
+  
+ul.dalquest-nav-list {
+  position: relative;
+  display: block;
+  margin: auto;
+}
+li.dalquest-nav-item {
+  list-style-image: none;
+}
+
+a.dalquest-navitem {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  color: #190000;
+}
+a.dalquest-navitem:hover {
+  text-decoration: none;
+  color: #331103;
+}
+

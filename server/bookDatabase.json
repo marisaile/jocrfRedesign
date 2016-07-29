@@ -1,1 +1,275 @@
-[{}]
+{
+
+
+	"englishLit" : [
+		{ "title" : "Love, Dishonor, Marry, Die, Cherish, Perish",
+			"author" : "David Rakoff",
+			"synopsis" : " "
+		}
+		{ "title" : "The Writing Life",
+			"author" : "Annie Dillard",
+			"synopsis" : " "
+		}
+		{ "title" : "The Unbearable Lightness of Being",
+			"author" : "Milan Kundera",
+			"synopsis" : " "
+		}
+		{ "title" : "Understanding Comics: The Invisible Art",
+			"author" : "Scott McCloud",
+			"synopsis" : " "
+		}
+		{ "title" : "The Master Tongue: English and How it Got That Way",
+			"author" : "Bill Bryson",
+			"synopsis" : " " 
+		}
+		{ "title" : "The Man who Made Lists: Love, Death, Madness, and the Creation of Roget's Thesaurus",
+			"author" : "Joshua Kendall",
+			"synopsis" : ""
+		}
+		{ "title" : "The Dream of a Common Language",
+			"author" : "Adrienne Rich",
+			"synopsis" : ""
+		}
+		{ "title" : "Alphabet Juice",
+			"author" : "Roy Blount, Jr.",
+			"synopsis" : ""
+		}
+		{ "title" : "Lake Wobegon Summer 1956",
+			"author" : "Garrison Keillor",
+			"synopsis" : ""
+		}
+	],
+	"hisotry" : [
+		{ "title" : "America: The Book",
+		"author" : "Jon Stewart",
+		"synopsis" : ""
+		},
+		{ "title" : "Cleopatra: A Life",
+			"author" : "Stacy Schiff",
+			"synopsis" : ""
+		},
+		{ "title" : "Abigail Adams: A Life",
+			"author" : "Woody Holton",
+			"synopsis" : ""
+		},
+		{ "title" : "Love, Dishonor, Marry, Die, Cherish, Perish",
+			"author" : "David Rakoff",
+			"synopsis" : ""
+		},
+		{ "title" : "Brother, I'm Dying",
+			"author" : "Edwidge Dandicat",
+			"synopsis" : ""
+		},
+		{ "title" : "The Jungle",
+			"author" : "Upton Sinclair",
+			"synopsis" : ""
+		},
+		{ "title" : "The Sleepwalkers: How Europe Went to War in 1914",
+			"author" : "Christopher Clark",
+			"synopsis" : ""
+		},
+		{ "title" : "Love, Dishonor, Marry, Die, Cherish, Perish",
+			"author" : "David Rakoff",
+			"synopsis" : ""
+		},
+		{ "title" : "Lafayette in the Somewhat United States",
+			"author" : "Sarah Vowell",
+			"synopsis" : ""
+		},
+		{ "title" : "A Short History of Nearly Everything",
+			"author" : "Bill Bryson",
+			"synopsis" : ""
+		},
+		{ "title" : "Love, Dishonor, Marry, Die, Cherish, Perish",
+			"author" : "David Rakoff",
+			"synopsis" : ""
+		}
+	],
+	"math" : [
+		{ "title" : "Naked Statistics",
+			"author" : "Charles Wheelan",
+			"synopsis" : " "
+		},
+		{ "title" : "Moneyball",
+			"author" : "Michael Lewis",
+			"synopsis" : " "
+		},
+		{ "title" : "The Housekeeper and the Professor",
+			"author" : "Yogo Ogawa; translated by Stephen Snyder",
+			"synopsis" : " "
+		},
+		{ "title" : "The Girl who Kicked the Hornet's Nest",
+			"author" : "Stieg Larsson",
+			"synopsis" : " "
+		},
+		{ "title" : "The Signal and the Noise",
+			"author" : "Nate Silver",
+			"synopsis" : " "
+		},
+		{ "title" : "The Big Short",
+			"author" : "Charles Wheelan",
+			"synopsis" : " "
+		}
+	],
+	"poliSci" : [
+		{ "title" : "I am Malala",
+			"author" : "Malala Yousafzai",
+			"synopsis" : " "
+		},
+		{ "title" : "The Audacity of Hope",
+			"author" : "Barack Obama",
+			"synopsis" : " "
+		},
+		{ "title" : "Between the World and Me",
+			"author" : "Ta Nehisi Coates",
+			"synopsis" : " "
+		},
+		{ "title" : "Nickel and Dimed",
+			"author" : "Barbara Erenreich",
+			"synopsis" : " "
+		},
+		{ "title" : "What is the What",
+			"author" : "Dave Eggers",
+			"synopsis" : " "
+		},		
+		{ "title" : "Bad Feminist",
+			"author" : "Roxanne Gay",
+			"synopsis" : " "
+		},
+		{ "title" : "The Greatest Generation",
+			"author" : "Tom Brokaw",
+			"synopsis" : " "
+		},
+		{ "title" : "Where Men Win Glory",
+			"author" : "Jon Krakauer",
+			"synopsis" : " "
+		},
+		{ "title" : "Columbine",
+			"author" : "Dave Cullen",
+			"synopsis" : " "
+		},
+		{ "title" : "The Big Short",
+			"author" : "Michael Lewis",
+			"synopsis" : " "
+		}
+	],
+	"psychology" : [
+		{	"title" : "1000 Days of Wonder: A Scientist's Chronicle of his Daughter's Developing Mind",
+			"author" : "Charles Fernyhough",
+			"synopsis" : " "
+		},
+		{ "title" : "Thinking, Fast and Slow",
+			"author" : "Daniel Kahneman",
+			"synopsis" : " "
+		},
+		{ "title" : "The Future of the Mind",
+			"author" : "Michio Kaku",
+			"synopsis" : " "
+		},
+		{ "title" : "The Man who Mistook his Wife for a Hat",
+			"author" : "Oliver Sacks",
+			"synopsis" : " "
+		},
+		{ "title" : "On Intelligence",
+			"author" : "Jeff Hawkins",
+			"synopsis" : " "
+		},	
+		{ "title" : "Cure: A Journey into the Science of Mind over Body",
+			"author" : "Jo Marchant",
+			"synopsis" : " "
+		},
+		{ "title" : "The Second Coming",
+			"author" : "Walker Percy",
+			"synopsis" : " "
+		},
+		{ "title" : "The Yellow Wallpaper",
+			"author" : "Charlotte Perkins Gilman",
+			"synopsis" : " "
+		},
+	],
+	"science" : [
+		{ "title" : "The Collapsing Universe",
+			"author" : "Isaac Asimov",
+			"synopsis" : "" 
+		},
+		{ "title" : "The Beak of the Finch",
+			"author" : "Jonathan Weiner",
+			"synopsis" : "" 
+		},
+		{ "title" : "Why does e=mc<sup>2<sup>? (and why should we care?)",
+			"author" : "Brian Cox and Jeff Forshaw",
+			"synopsis" : "" 
+		},
+		{ "title" : "The Martian",
+			"author" : "Andy Weir",
+			"synopsis" : "" 
+		},
+		{ "title" : "The Clockwork Universe",
+			"author" : "Edward Dolnick",
+			"synopsis" : "" 
+		},
+		{ "title" : "The Fabric of the Cosmos",
+			"author" : "Brian Greene",
+			"synopsis" : "" 
+		},
+		{ "title" : "Being Mortal",
+			"author" : "Atul Gawande",
+			"synopsis" : "" 
+		},
+		{ "title" : "The Disappearing Spoon",
+			"author" : "Sam Kean",
+			"synopsis" : "" 
+		},
+		{ "title" : "The Future of the Mind",
+			"author" : "Michio Kaku",
+			"synopsis" : "" 
+		},
+		{ "title" : "The Sixth Extinction",
+			"author" : "Elizabeth Kolbert",
+			"synopsis" : "" 
+		},
+		{ "title" : "Are we Smart Enough to Know How Smart Animals Are?",
+			"author" : "Frans DeWaal",
+			"synopsis" : "" 
+		},
+		{ "title" : "A Short History of Nearly Everything",
+			"author" : "Bill Bryson",
+			"synopsis" : "" 
+		},
+		{ "title" : "The Bone Collector",
+			"author" : "Jeffrey Deaver",
+			"synopsis" : "" 
+		},
+	],
+	"religion" : [
+		{ "title" : "No God but God",
+			"author" : "Reza Aslan",
+			"synopsis" : "" 
+		},
+		{ "title" : "Mere Christianity",
+			"author" : "CS Lewis",
+			"synopsis" : "" 
+		},
+		{ "title" : "Confessions",
+			"author" : "St. Augustine of Hippo",
+			"synopsis" : "" 
+		},
+		{ "title" : "Living Buddha, Living Christ",
+			"author" : "Thich Nhat Hanh",
+			"synopsis" : "" 
+		},
+		{ "title" : "Zealot: The Life and Times of Jesus of Nazareth",
+			"author" : "Reza Aslan",
+			"synopsis" : "" 
+		},
+	]
+
+
+
+
+
+
+
+
+
+}

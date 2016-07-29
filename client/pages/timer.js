@@ -1,55 +1,57 @@
 import $ from 'jquery';
-  
+
+var startTime; 
+var interval; 
+var minutes;
+var hundredths;
+var endTime;
+var timeDifference;  
+var splitTimes = [];
 var app = {
   init: function(){
     app.render();
   },
   render: function(){
-    var startTime; 
-    var interval;
-    var endTime;
-    var timeDifference;
-    var splitTime;
-    var hundredths;
-    var seconds;
-    var minutes;
     var updateTimer = function() {
       endTime = new Date();
       timeDifference = (endTime - startTime) / 1000;
-      hundredths = Math.floor(timeDifference * 10) % 100;
-      seconds = Math.floor(timeDifference % 60);
-      minutes = Math.floor(timeDifference / 60);
-      if (hundredths < 10) {
-        hundredths = '0' + hundredths;
-      }
-      if (seconds < 10) { 
-        seconds = '0' + seconds; // converting from a number to a string
-      }
+      minutes = Math.floor(timeDifference / 60); 
+      hundredths = Math.floor(timeDifference / 0.6) % 100;
       if (minutes < 10) {
-        minutes = '0' + minutes; // converting to a string
+        minutes = '0' + minutes; //converting to a string
       }
-      $('.counter').html(minutes + ':' + seconds + '.' + hundredths);
-    };  
-    var startTimer = function() {
+      if (hundredths < 10) { 
+        hundredths = '0' + hundredths; //converting to a string
+      }
+      endTime = (minutes + '.' + hundredths);
+      $('.counter').html(endTime);
+    };
+    var startTimer = function(){
       startTime = new Date();
       interval = setInterval(updateTimer, 100);
     };
-    $('.timer-container .start-button').on('click', startTimer);
-    var splitTimer = function() {
-      splitTime = $('.timer-container .split-time').append('<br />' + minutes + ':' + seconds + '.' + hundredths); 
-      var lapTime = (timeDifference - splitTime);
-      $('.timer-container .lap-time').append('<br />' + lapTime);
-    };
-    $('.timer-container .split-button').on('click', splitTimer);
-    var resetTimer = function() {
-      $('.counter').html('00' + ':' + '00' + '.' + '00' );
-      $('.timer-container .split-time').html( '' );
-    };
-    $('.timer-container .reset-button').on('click', resetTimer);
     var stopTimer = function(){
       interval = clearInterval(interval);
     };
-    $('.timer-container .stop-button').on('click', stopTimer);
+    var splitTimer = function(){
+      var cumTime = endTime;
+      $('.timer-container .cum-time').append('<br />' + cumTime);     
+    };
+    var resetTimer = function(){
+      $('.counter').html('00' + '.' + '00' );
+      $('.timer-container .cum-time').html( 'Cumulative Time' + ' ' );
+    };
+    $('.timer-container .start-stop-button').on('click', function(){
+      if ($('.start-stop-button').html() === 'start') {
+        startTimer();
+        $('.start-stop-button').html('stop');
+      } else {
+        stopTimer();
+        $('.start-stop-button').html('start');
+      }
+    }); 
+    $('.timer-container .split-button').on('click', splitTimer);
+    $('.timer-container .reset-button').on('click', resetTimer);
   }
 };
 

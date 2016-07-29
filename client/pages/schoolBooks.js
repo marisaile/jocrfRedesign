@@ -10,6 +10,7 @@ import math from 'templates/math.html';
 import polisci from 'templates/polisciBooks.html';
 import psych from 'templates/psychBooks.html';
 import noBooks from 'templates/noBookx.html';
+import thankYou from 'templates/thankYou.html';
 
 var app = {
   init: function(){
@@ -39,12 +40,9 @@ var app = {
         $('.suggestion-box').slideDown('ease');
       }
     });
-    $('.btn-submit').on('click', function(){
-      if ($('.thank-you:first').is( ':hidden' )) {
-        $('.suggest-book').slideUp('slow')
-        $('.thank-you').slideDown('slow')
-      }
-    });
+    // $('.btn-suggestion').on('click', function(){
+      
+    // });
   }
 };
 

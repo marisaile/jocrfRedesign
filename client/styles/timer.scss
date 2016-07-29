@@ -1,63 +1,29 @@
 .timer-container {
   position: relative;
-  display: block;
-  top: 50px;
-  width: 400px;
-  height: 500px;
+  width: 300px;
   margin: auto;
   text-align: center;
-  background-color: #F6C5FF;
-  border: solid 1px black;
 }
 .timer-container .counter {
-  position: absolute;
-  display: block;
-  top: 10px;
-  left: 80px;
   font-size: 64px;
 }
-.timer-container .start-button {
+.timer-container .cum-time {
   position: absolute;
-  top: 100px;
-  left: 40px;
-  width: 75px;
-}
-.timer-container .stop-button {
-  position: absolute;
-  top: 100px;
-  left: 120px;
-  width: 75px;
-}
-.timer-container .reset-button {
-  position: absolute;
-  top: 100px;
-  left: 200px;
-  width: 75px;
-}
-.timer-container .split-button {
-  position: absolute;
-  top: 100px;
-  left: 280px;
-  width: 75px;
-}
-.timer-container .split-time {
-  position: absolute;
-  display: block;
   width: 150px;
   height: 400px;
-  top: 75px;
-  left: 100px;
+  top: 150px;
+  left: 0;
   text-align: left;
-  font-family: arial;
+  font-family: 'Josephin Sans', sans-serif;
   font-size: 14px;
 }
-.timer-container .lap-time {
+.timer-container .ind-time {
   position: absolute;
   width: 150px;
   height: 400px;
-  top: 75px;
-  left: 300px;
-  text-align: left;
-  font-family: arial;
+  top: 150px;
+  left: 150px;
+  text-align: right;
+  font-family: 'Josephin Sans', sans-serif;
   font-size: 14px;
 }
