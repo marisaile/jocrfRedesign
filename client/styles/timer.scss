@@ -1,29 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Alice);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+
+.timer-main {
+  background-color: #888;
+}
 .timer-container {
   position: relative;
-  width: 300px;
-  margin: auto;
-  text-align: center;
-}
-.timer-container .counter {
-  font-size: 64px;
-}
-.timer-container .cum-time {
-  position: absolute;
-  width: 150px;
-  height: 400px;
-  top: 150px;
-  left: 0;
-  text-align: left;
-  font-family: 'Josephin Sans', sans-serif;
-  font-size: 14px;
-}
-.timer-container .ind-time {
-  position: absolute;
-  width: 150px;
-  height: 400px;
-  top: 150px;
-  left: 150px;
-  text-align: right;
-  font-family: 'Josephin Sans', sans-serif;
-  font-size: 14px;
+  display: block;
+  margin: 100px auto;
+  padding: 20px;
+  height: 600px;
+  width: 400px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px;
+
+  .counter {
+    position: relative;
+    font-family: 'Alice';
+    font-size: 64px;
+    left: 115px;
+  }
+  .btn {
+    position: relative;
+    display: inline-block;
+    font-family: 'Alice', sans-serif;
+    font-size: 14px;
+    height: 25px;
+    width: 75px;
+    top: 15px;
+    left: 75px;
+
+    .start-stop-button {
+      background-color: red;
+    }
+    .split-button {
+      background-color: blue;
+    }
+    .reset-button {
+      background-color: green;
+    }
+  }
+  .cum-time {
+    position: relative;
+    float: left;
+    width: 150px;
+    height: 400px;
+    top: 30px;
+    margin-left: 30px;
+    font-family: 'Alice', sans-serif;
+    font-size: 16px;
+  }
+  .ind-time {
+    position: relative;
+    float: right;
+    width: 150px;
+    height: 400px;
+    top: 30px;
+    font-family: 'Alice', sans-serif;
+    font-size: 16px;
+  }
 }

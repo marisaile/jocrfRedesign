@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Amita);@import url(https://fonts.googleapis.com/css?family=Lato);@import url(https://fonts.googleapis.com/css?family=Prompt);@import url(https://fonts.googleapis.com/css?family=Proza+Libre:400,500);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);body.override-bootstrap {
+@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Amita);@import url(https://fonts.googleapis.com/css?family=Lato);@import url(https://fonts.googleapis.com/css?family=Prompt);@import url(https://fonts.googleapis.com/css?family=Proza+Libre:400,500);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Alice);body.override-bootstrap {
   margin: 0;
   background-color: #eeeeee;
 }
@@ -542,37 +542,71 @@ input.search-photo {
   box-shadow: 0px 1px 1px 1px rgba(210, 214, 213, 0.5);
 }
 
+.timer-main {
+  background-color: #888;
+}
+
 .timer-container {
   position: relative;
-  width: 300px;
-  margin: auto;
-  text-align: center;
+  display: block;
+  margin: 100px auto;
+  padding: 20px;
+  height: 600px;
+  width: 400px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px;
 }
 
 .timer-container .counter {
+  position: relative;
+  font-family: 'Alice';
   font-size: 64px;
+  left: 115px;
+}
+
+.timer-container .btn {
+  position: relative;
+  display: inline-block;
+  font-family: 'Alice', sans-serif;
+  font-size: 14px;
+  height: 25px;
+  width: 75px;
+  top: 15px;
+  left: 75px;
+}
+
+.timer-container .btn .start-stop-button {
+  background-color: red;
+}
+
+.timer-container .btn .split-button {
+  background-color: blue;
+}
+
+.timer-container .btn .reset-button {
+  background-color: green;
 }
 
 .timer-container .cum-time {
-  position: absolute;
+  position: relative;
+  float: left;
   width: 150px;
   height: 400px;
-  top: 150px;
-  left: 0;
-  text-align: left;
-  font-family: 'Josephin Sans', sans-serif;
-  font-size: 14px;
+  top: 30px;
+  margin-left: 30px;
+  font-family: 'Alice', sans-serif;
+  font-size: 16px;
 }
 
 .timer-container .ind-time {
-  position: absolute;
+  position: relative;
+  float: right;
   width: 150px;
   height: 400px;
-  top: 150px;
-  left: 150px;
-  text-align: right;
-  font-family: 'Josephin Sans', sans-serif;
-  font-size: 14px;
+  top: 30px;
+  font-family: 'Alice', sans-serif;
+  font-size: 16px;
 }
 
 .no-bootstrap {
