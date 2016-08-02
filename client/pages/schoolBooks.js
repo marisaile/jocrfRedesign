@@ -17,33 +17,50 @@ var app = {
     app.render();
   },
   render: function(){
-    $('.subject-list').on('change', function(){
-      var selection = $('.select-picker').find('option:selected').val();
-      if (selection === 'Science') {
-        $('.response-container').html(science);
-      } else if (selection === 'History') {
-        $('.response-container').html(history);
-      } else if (selection === 'English Literature') {
-        $('.response-container').html(english);
-      } else if (selection === 'Math/Statistics') {
-        $('.response-container').html(math);
-      } else if (selection === 'Political Science/Current Affairs') {
-        $('.response-container').html(polisci);
-      } else if (selection === 'Psychology') {
-        $('.response-container').html(psych);
-      } else {
-        $('.response-container').html(noBooks);
-      }
+    $(document).ready(function() {
+      $('.main-header').slideUp(1000);
+      $('.school-header').slideDown(1000);
     });
-    $('.btn-suggest').on('click', function(){
-      if ($('.suggestion-box:first').is( ':hidden' )){
-        $('.suggestion-box').slideDown('ease');
-      }
+    $('.eng').click(function(){
+      $('.response-container').html(english);
     });
-    // $('.btn-suggestion').on('click', function(){
-      
-    // });
+    $('.his').click(function(){
+      $('.response-container').html(history);
+    });
+    $('.math').click(function(){
+      $('.response-container').html(math);
+    });
+    $('.music').click(function(){
+      $('.response-container').html(noBooks);
+    });
+    $('.pol').click(function(){
+      $('.response-container').html(polisci);
+    });
+    $('.psy').click(function(){
+      $('.response-container').html(psych);
+    });
+    $('.sci').click(function(){
+      $('.response-container').html(science);
+    });
+    $('.vis').click(function(){
+      $('.response-container').html(noBooks);
+    });
+    $('.main-school').change(function(){
+      $('.school-books-list').fadeIn(5000);
+    });
   }
+
+  // },
+  // showBooks: function(){
+    
+
+      
+  // }
+  // navAnimate: function(){
+
+  //   $('.main-header').mouseenter(function(){
+  //     $('.main-header').slideDown(1000);
+  //   });
 };
 
 module.exports = app;

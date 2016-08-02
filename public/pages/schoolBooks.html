@@ -11,58 +11,21 @@
   </head>
   <body class="override-bootstrap">
     <header class="main-header container-fluid"></header>
-    <main class="school container-fluid"> 
-      <div class="col-md-2 school-subject">
-        <div class="subject-list">
-          <select class="form-control select-picker" data-live-search="true">
-            <option class="option">Pick a Subject</option>
-            <option class="option">Science</option>
-            <option class="option">History</option>
-            <option class="option">English Literature</option>
-            <option class="option">Math/Statistics</option>
-            <option class="option">Political Science/Current Affairs</option>
-            <option class="option">Psychology</option>
-            <option class="option">Visual Art</option>
-            <option class="option">Music</option>
-          </select>
-        </div>
-        <div class="suggest-book">
-          <p>Are we missing anything? Let us know!</p>
-          <button class="btn btn-default btn-suggest" role="button">
-            Suggest a book.
-          </button>
-          <div class="suggestion-box">
-            <form class= "book-suggestion">
-              <div class="form-group title">
-                <label for="title">Title</label>
-                <input class="form-control title" type="text">
-              </div>
-              <div class="form-group author">
-                <label for="author">Author</label>
-                <input class="form-control author" type="text">
-              </div>
-              <div class="form-group subject">
-                <label for="subject">Subject</label>
-                <input class="form-control subject" type="text">
-              </div>
-              <div class="form-group email">
-                <label for="email">Email</label>
-                <input class="form-control email" type="text">
-              </div>
-              <div class="form-group subscribe">
-                <label for="subscribe">
-                  <input type="checkbox"> Subscribe to be updated when new books are added!
-                </label>
-              </div>
-              <button class="btn btn-default btn-suggestion">Submit</button>
-            </form>
-          </div>
-        </div>
-        <div class="thank-you hidden">
-          <h3>Thanks! We will let you know if your suggestion gets added to the list. In the meantime, keep reading!</h3>
-        </div>
-      </div>
-      <div class="col-md-10 response-container"></div>
+    <header class="school-header container-fluid">
+      <h1>Non-School books for school!</h1>
+    </header>
+    <nav class="school-nav">
+      <a href="#" role="navitem" class="option eng">English Literature</a>
+      <a href="#" role="navitem" class="option his">History</a>
+      <a href="#" role="navitem" class="option math">Math/Statistics</a>
+      <a href="#" role="navitem" class="option music">Music</a>
+      <a href="#" role="navitem" class="option pol">Political Science</a>
+      <a href="#" role="navitem" class="option psy">Psychology</a>
+      <a href="#" role="navitem" class="option sci">Science</a>
+      <a href="#" role="navitem" class="option vis">Visual Art</a>     
+    </nav>
+    <main class="school-main"> 
+      <div class="response-container container-fluid"></div>
     </main>
     <footer class="main-footer"></footer>
   </body>

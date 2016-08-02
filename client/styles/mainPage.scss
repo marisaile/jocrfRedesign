@@ -14,13 +14,26 @@ body.override-bootstrap {
   left: 0;
   background-color: #383838;
   z-index: 0;
-}  
-a.home {
+}
+a.nav-stay {
   position: relative;
-  top: 70px;
-  left: 10px;
+  display: inline-block;
+  top: -60px;
+  margin-right: 40px;
+  font-family: 'Alice', serif;
+  font-size: 16px;
+  color: #eee;
+}
+a.nav-stay:hover {
+  text-decoration: none;
+  color: #eee;
+}
+a.home {  
+  position: relative;
+  top: 75px;
+  left: 20px;
   
-  #cloud.col-md-2 {
+  #cloud {
     width: 260px; height: 90px;
     background: #fefefe;
     transition: rotateY(-30deg);
@@ -79,50 +92,73 @@ a.home {
 a.home:hover {
   text-decoration: none;
 }
-.nav-items.col-md-10.col-md-offset-2 {
+.circle.davinci {
   position: relative;
-  top: -68px;
-  left: 40px;
-
-  a {
-    display: inline-block;
-    color: #eeeeee;
-    font-family: 'Alice', serif;
-    font-size: 16px;
-    margin-right: 75px;  
-    margin-bottom: 0;
-  }
-  a:hover {
-    text-decoration: none;
-  }
-  a:after {
-    content: '';
-    display: block;
-    margin: auto;
-    height: 1px;
-    width: 0px;
-    background: transparent;
-    transition: width .5s ease, background-color .5s ease;
-  }
-  a:hover:after {
-    width: 100%;
-    background: #eee;
+  display: block;
+  height: 200px;
+  width: 200px;
+  top: 140px;
+  left: 330px;
+  border-radius: 100%;
+  background-color: #D12BC4;
+  span {
+    position: absolute;
+    top: 75px;
+    left: 50px;
+    text-align: center;
+    font-family: 'Montez', cursive;
+    font-size: 30px;
+    color: #eee;
+  } 
+}
+.triangle.projects {
+  position: relative;
+  display: block;
+  top: 200px;
+  left: 520px;
+  height: 0px;
+  width: 0px;
+  border-right: 150px solid transparent;
+  border-left: 150px solid transparent;
+  border-bottom: 200px solid #33FA0D;
+  span {
+    position: absolute;
+    margin: 150px auto;
+    font-family: 'Montez', cursive;
+    font-size: 30px;
+    color: #eee;
+  } 
+}
+.square.joc {
+  position: relative;
+  display: block;
+  top: -200px;
+  left: 880px;
+  height: 175px;
+  width: 175px;
+  background-color: #00C9D6;
+  font-family: 'Montez', cursive;
+  span {
+    position: absolute;
+    margin: 100px auto;
+    font-size: 30px;
+    color: #eee;
+    text-align: center;
   }
 }
 
 
 
-.main-main .circle {
-position: relative;
-display: block;
-top: 150px;
-left: 300px;
-height: 100px;
-width: 100px;
-background-color: #35E9FF;
-}
-.footer-container {
-  width: 100%;
-  position: fixed;
-  bottom: 10px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
