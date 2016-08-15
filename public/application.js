@@ -9993,7 +9993,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","home":"home","cloud":"cloud","marisaile":"marisaile","sub":"sub","circle":"circle","davinci":"davinci","triangle":"triangle","projects":"projects","square":"square","joc":"joc","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","school-nav":"school-nav","option":"option","response-container":"response-container","no-books":"no-books","school-animations":"school-animations","col-md-4":"col-md-4","book-container":"book-container","book-image":"book-image","title":"title","author":"author","timer-main":"timer-main","timer-container":"timer-container","counter":"counter","start-stop-button":"start-stop-button","split-button":"split-button","reset-button":"reset-button","cum-time":"cum-time","ind-time":"ind-time","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-header":"dalquest-header","dalquest-title":"dalquest-title","dalquest-nav":"dalquest-nav","dalquest-nav-list":"dalquest-nav-list","dalquest-nav-item":"dalquest-nav-item","dalquest-navitem":"dalquest-navitem"};
+	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","home":"home","cloud":"cloud","marisaile":"marisaile","sub":"sub","circle":"circle","davinci":"davinci","triangle":"triangle","projects":"projects","square":"square","joc":"joc","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","school-nav":"school-nav","option":"option","response-container":"response-container","no-books":"no-books","school-animations":"school-animations","col-md-4":"col-md-4","book-container":"book-container","book-image":"book-image","title":"title","author":"author","timer-main":"timer-main","timer-container":"timer-container","counter":"counter","start-stop-button":"start-stop-button","split-button":"split-button","reset-button":"reset-button","cum-time":"cum-time","ind-time":"ind-time","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-background":"dalquest-background"};
 
 /***/ },
 /* 3 */,
@@ -38453,7 +38453,7 @@
 	  },
 	  render: function render() {
 	    $(document).ready(function () {
-	      $('.main-header').slideUp(1000);
+	      $('.main-header').slideUp(1100);
 	      $('.school-header').slideDown(1000);
 	    });
 	    $('.eng').click(function () {
@@ -38480,7 +38480,7 @@
 	    $('.vis').click(function () {
 	      $('.response-container').html(_templatesNoBookxHtml2['default']);
 	    });
-	    $('.main-school').change(function () {
+	    $('.response-container').change(function () {
 	      $('.school-books-list').fadeIn(5000);
 	    });
 	  }
@@ -38514,7 +38514,7 @@
 /* 212 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<ul class=\"school-books-list\">\n  <div class=\"row\">\n    <li class=\"col-md-4 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/16099190-love-dishonor-marry-die-cherish-perish?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/rakoff.png\"></a>\n      <div class=\"title\">Love, Dishonor, Marry, Die, Cherish, Perish</div>\n      <div class=\"author\">David Rakoff</div>\n    </li>\n    <li class=\"col-md-4 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/12530.The_Writing_Life?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/dillard.png\"></a>\n      <div class=\"title\">The Writing Life</div>\n      <div class=\"author\">Annie Dillard</div>\n    </li>\n    <li class=\"col-md-4 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/9717.The_Unbearable_Lightness_of_Being?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/kundera.png\"></a>\n      <div class=\"title\">The Unbearable Lightness of Being</div>\n      <div class=\"author\">Milan Kundera</div>\n    </li>\n  </div>\n  \n  <div class=\"row\">\n    <li class=\"col-md-4 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/3573608-alphabet-juice?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/juice.png\"></a>\n      <div class=\"title\">Alphabet Juice</div>\n      <div class=\"author\">Roy Blount, Jr.</div>\n    </li>\n    <li class=\"col-md-4 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/367285.Lake_Wobegon_Summer_1956?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/garrison.png\"></a>\n      <div class=\"title\">Lake Wobegon Summer 1956</div>\n      <div class=\"author\">Garrison Keillor</div>\n    </li>\n    <li class=\"col-md-4 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/364141.The_Dream_of_a_Common_Language?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/adrienne.png\"></a>\n      <div class=\"title\">The Dream of a Common Language</div>\n      <div class=\"author\">Adrienne Rich</div>\n    </li>\n  </div>\n  \n  <div class=\"row\">\n    <li class=\"col-md-4 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/102920.Understanding_Comics?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/comics.png\"></a>\n      <div class=\"title\">Understanding Comics: The Invisible Art</div>\n      <div class=\"author\">Scott McCloud</div>\n    </li>\n    <li class=\"col-md-4 book-container\">\n      <a href=\"https://www.goodreads.com/book/show/2018581.The_Man_Who_Made_Lists?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/roget.png\"></a>\n      <div class=\"title\">The Man who Made Lists: Love, Death, Madness, and the Creation of Roget's Thesaurus</div>\n      <div class=\"author\">Joshua Kendall</div>\n    </li>\n  </div>\n\n</ul>\n\n\n";
+	module.exports = "\n<ul class=\"school-books-list\">\n  <li class=\"col-md-4 book-container\">\n    <a href=\"https://www.goodreads.com/book/show/16099190-love-dishonor-marry-die-cherish-perish?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/rakoff.png\"></a>\n    <div class=\"title\">Love, Dishonor, Marry, Die, Cherish, Perish</div>\n    <div class=\"author\">David Rakoff</div>\n  </li>\n  <li class=\"col-md-4 book-container\">\n    <a href=\"https://www.goodreads.com/book/show/12530.The_Writing_Life?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/dillard.png\"></a>\n    <div class=\"title\">The Writing Life</div>\n    <div class=\"author\">Annie Dillard</div>\n  </li>\n  <li class=\"col-md-4 book-container\">\n    <a href=\"https://www.goodreads.com/book/show/9717.The_Unbearable_Lightness_of_Being?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/kundera.png\"></a>\n    <div class=\"title\">The Unbearable Lightness of Being</div>\n    <div class=\"author\">Milan Kundera</div>\n  </li>\n  <li class=\"col-md-4 book-container\">\n    <a href=\"https://www.goodreads.com/book/show/3573608-alphabet-juice?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/juice.png\"></a>\n    <div class=\"title\">Alphabet Juice</div>\n    <div class=\"author\">Roy Blount, Jr.</div>\n  </li>\n  <li class=\"col-md-4 book-container\">\n    <a href=\"https://www.goodreads.com/book/show/367285.Lake_Wobegon_Summer_1956?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/garrison.png\"></a>\n    <div class=\"title\">Lake Wobegon Summer 1956</div>\n    <div class=\"author\">Garrison Keillor</div>\n  </li>\n  <li class=\"col-md-4 book-container\">\n    <a href=\"https://www.goodreads.com/book/show/364141.The_Dream_of_a_Common_Language?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/adrienne.png\"></a>\n    <div class=\"title\">The Dream of a Common Language</div>\n    <div class=\"author\">Adrienne Rich</div>\n  </li>\n  <li class=\"col-md-4 book-container\">\n    <a href=\"https://www.goodreads.com/book/show/102920.Understanding_Comics?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/comics.png\"></a>\n    <div class=\"title\">Understanding Comics: The Invisible Art</div>\n    <div class=\"author\">Scott McCloud</div>\n  </li>\n  <li class=\"col-md-4 book-container\">\n    <a href=\"https://www.goodreads.com/book/show/2018581.The_Man_Who_Made_Lists?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/roget.png\"></a>\n    <div class=\"title\">The Man who Made Lists: Love, Death, Madness, and the Creation of Roget's Thesaurus</div>\n    <div class=\"author\">Joshua Kendall</div>\n  </li>\n</ul>\n\n\n";
 
 /***/ },
 /* 213 */
@@ -41696,7 +41696,7 @@
 	var hundredths;
 	var endTime;
 	var timeDifference;
-	var splitTimes = [];
+	var splitTimes = [0];
 	var app = {
 	  init: function init() {
 	    app.render();
@@ -41724,12 +41724,18 @@
 	      interval = clearInterval(interval);
 	    };
 	    var splitTimer = function splitTimer() {
-	      var cumTime = endTime;
+	      var cumTime = Math.round(endTime * 100);
 	      (0, _jquery2['default'])('.timer-container .cum-time').append('<br />' + cumTime);
+	
+	      splitTimes.push(cumTime);
+	      var indTime = Math.round(splitTimes[1] - splitTimes[0]);
+	      (0, _jquery2['default'])('.timer-container .ind-time').append('<br />' + indTime);
+	      splitTimes.splice(0, 1);
 	    };
 	    var resetTimer = function resetTimer() {
 	      (0, _jquery2['default'])('.counter').html('00' + '.' + '00');
 	      (0, _jquery2['default'])('.timer-container .cum-time').html('Cumulative Time' + ' ');
+	      (0, _jquery2['default'])('.timer-container .ind-time').html('Individual Time' + ' ');
 	    };
 	    (0, _jquery2['default'])('.timer-container .start-stop-button').on('click', function () {
 	      if ((0, _jquery2['default'])('.start-stop-button').html() === 'start') {

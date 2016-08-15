@@ -18,7 +18,7 @@ var app = {
   },
   render: function(){
     $(document).ready(function() {
-      $('.main-header').slideUp(1000);
+      $('.main-header').slideUp(1100);
       $('.school-header').slideDown(1000);
     });
     $('.eng').click(function(){
@@ -45,7 +45,7 @@ var app = {
     $('.vis').click(function(){
       $('.response-container').html(noBooks);
     });
-    $('.main-school').change(function(){
+    $('.response-container').change(function(){
       $('.school-books-list').fadeIn(5000);
     });
   }

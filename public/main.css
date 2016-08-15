@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Amita);@import url(https://fonts.googleapis.com/css?family=Lato);@import url(https://fonts.googleapis.com/css?family=Prompt);@import url(https://fonts.googleapis.com/css?family=Proza+Libre:400,500);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Alice);body.override-bootstrap {
   margin: 0;
-  background-color: #eeeeee;
+  background-color: #f8f8f8;
 }
 
 .main-header.container-fluid {
@@ -237,7 +237,7 @@ a.home:hover {
   perspective: 250px;
 }
 
-.shadow {
+.shadow:before {
   content: '';
   position: absolute;
   top: 0;
@@ -247,7 +247,7 @@ a.home:hover {
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
   transition: all 0.5s;
-  opacity: 0.15;
+  opacity: .25;
   transform: rotateX(95deg) translateZ(-80px) scale(0.75);
   transform-origin: bottom;
 }
@@ -407,30 +407,43 @@ input.search-photo {
   position: relative;
   display: block;
   width: 100%;
-  height: 75px;
-  background-color: #EEEEEC;
+  height: 90px;
+  background-color: #fefefe;
+  border-bottom: solid 1px #d1d1d1;
+  box-shadow: 1px 1px 5px 0px #e4e4e4;
+}
+
+.school-header.container-fluid h1 {
+  position: relative;
+  top: 35px;
+  left: 15px;
   font-family: 'Alice', serif;
-  font-size: 30px;
-  color: #757369;
+  font-size: 35px;
+  color: #0174B2;
 }
 
 .school-nav {
   position: relative;
   display: block;
   top: 0;
-  left: 0;
-  height: 30px;
+  height: 7vh;
   width: 100%;
-  background-color: #D7F1EF;
-  box-shadow: 1px 1px 5px;
+  border-bottom: solid 1px #c4c4c4;
+  /*  a.option.active {
+    color: #D12BC4;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-bottom: 2px;
+  }
+*/
 }
 
 .school-nav a.option {
-  margin: 30px;
-  bottom: -30px;
-  font-family: 'Alice', serif;
-  font-size: 20px;
-  color: #757369;
+  font-family: 'Josefin Sans', serif;
+  top: 2.5vmin;
+  font-size: 3vmin;
+  color: #626262;
+  text-align: center;
 }
 
 .school-nav a.option:hover {
@@ -532,6 +545,7 @@ input.search-photo {
   position: relative;
   top: 50px;
   width: 100%;
+  padding: 0;
 }
 
 .response-container .no-books h1 {
@@ -540,6 +554,7 @@ input.search-photo {
   margin: 100px auto;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 30px;
+  color: #383838;
 }
 
 .response-container .school-animations img {
@@ -553,44 +568,45 @@ input.search-photo {
   position: relative;
   display: inline-block;
   list-style-image: none;
-  height: 200px;
-  width: 400px;
-  margin: 28px;
+  width: 30vw;
+  /*height: 30vh;*/
+  margin-right: 1.3vw;
 }
 
 .response-container li.col-md-4.book-container img.book-image {
   position: relative;
-  top: 30px;
-  left: -30px;
-  width: 100px;
-  height: 150px;
+  left: -2vw;
+  top: 2.75vh;
+  width: 8vw;
+  /*height: 22vh;*/
   box-shadow: 0px 2px 2px 3px rgba(210, 214, 213, 0.8);
 }
 
 .response-container li.col-md-4.book-container .title {
   position: relative;
-  left: 100px;
-  bottom: 65px;
-  width: 260px;
+  left: 7vw;
+  top: -7vh;
+  width: 20vw;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
+  font-size: 2.5vmin;
   color: #383838;
   text-align: left;
 }
 
 .response-container li.col-md-4.book-container .author {
   position: relative;
-  left: 100px;
-  bottom: 65px;
+  left: 7vw;
+  top: -8vh;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 16px;
+  font-size: 2vmin;
   color: #383838;
   text-align: left;
 }
 
 .response-container li.book-container:hover {
   background-color: #fff;
-  box-shadow: 0px 1px 1px 1px rgba(210, 214, 213, 0.5);
+  box-shadow: 0px 2px 2px 1px rgba(210, 214, 213, 0.5);
+  /*    width: 30vw;*/
 }
 
 .timer-main {
@@ -611,19 +627,20 @@ input.search-photo {
 
 .timer-container .counter {
   position: relative;
-  font-family: 'Alice';
+  top: 30px;
+  left: 100px;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 64px;
-  left: 115px;
 }
 
 .timer-container .btn {
   position: relative;
   display: inline-block;
-  font-family: 'Alice', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 14px;
   height: 25px;
   width: 75px;
-  top: 15px;
+  top: 30px;
   left: 75px;
 }
 
@@ -644,9 +661,9 @@ input.search-photo {
   float: left;
   width: 150px;
   height: 400px;
-  top: 30px;
+  top: 50px;
   margin-left: 30px;
-  font-family: 'Alice', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
 }
 
@@ -655,8 +672,8 @@ input.search-photo {
   float: right;
   width: 150px;
   height: 400px;
-  top: 30px;
-  font-family: 'Alice', sans-serif;
+  top: 50px;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
 }
 
@@ -729,22 +746,11 @@ input.search-photo {
   box-shadow: 2px 2px 2px;
 }
 
-.dalquest-header {
-  position: relative;
-  display: block;
-  top: 0;
-  left: 0;
-  height: 100px;
-  width: 100%;
-  background-color: #600;
+.dalquest-background {
+  background-image: url(/images/ddrs-landscape.jpg);
 }
 
-.dalquest-header .dalquest-title {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 30px;
-  color: #e8e8e8;
-}
-
+/*
 nav.dalquest-nav {
   position: relative;
   top: 0;
@@ -753,13 +759,12 @@ nav.dalquest-nav {
   height: 100%;
   background-color: #e8e8e8;
 }
-
+  
 ul.dalquest-nav-list {
   position: relative;
   display: block;
   margin: auto;
 }
-
 li.dalquest-nav-item {
   list-style-image: none;
 }
@@ -769,10 +774,11 @@ a.dalquest-navitem {
   font-size: 20px;
   color: #190000;
 }
-
 a.dalquest-navitem:hover {
   text-decoration: none;
   color: #331103;
 }
+
+*/
 
 /*# sourceMappingURL=main.css.map*/

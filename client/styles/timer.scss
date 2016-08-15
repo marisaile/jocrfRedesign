@@ -17,18 +17,19 @@
 
   .counter {
     position: relative;
-    font-family: 'Alice';
+    top: 30px;
+    left: 100px;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 64px;
-    left: 115px;
   }
   .btn {
     position: relative;
     display: inline-block;
-    font-family: 'Alice', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 14px;
     height: 25px;
     width: 75px;
-    top: 15px;
+    top: 30px;
     left: 75px;
 
     .start-stop-button {
@@ -46,9 +47,9 @@
     float: left;
     width: 150px;
     height: 400px;
-    top: 30px;
+    top: 50px;
     margin-left: 30px;
-    font-family: 'Alice', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 16px;
   }
   .ind-time {
@@ -56,8 +57,8 @@
     float: right;
     width: 150px;
     height: 400px;
-    top: 30px;
-    font-family: 'Alice', sans-serif;
+    top: 50px;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 16px;
   }
 }
