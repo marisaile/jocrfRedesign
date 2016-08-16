@@ -610,7 +610,7 @@ input.search-photo {
 }
 
 .timer-main {
-  background-color: #888;
+  background-color: #bbb;
 }
 
 .timer-container {
@@ -664,7 +664,6 @@ input.search-photo {
   margin: 8px;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
-  background-color: red;
 }
 
 .timer-container .split-button {
@@ -675,7 +674,6 @@ input.search-photo {
   margin: 8px;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
-  background-color: blue;
 }
 
 .timer-container .reset-button {
@@ -686,7 +684,6 @@ input.search-photo {
   margin: 8px;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
-  background-color: green;
 }
 
 .timer-container .cum-time {

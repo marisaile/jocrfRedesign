@@ -41811,7 +41811,7 @@
 /* 243 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"counter\">00.00</div>  \n<button class=\"btn btn-info start-stop-button\">start</button>\n<button class=\"btn btn-success split-button\">split</button>\n<button class=\"btn btn-warning reset-button\">reset</button>\n<div class=\"cum-time\">Cumulative Time</div>\n<div class=\"ind-time\">Individual Time</div>\n";
+	module.exports = "<div class=\"counter\">00.00</div>  \n<button class=\"btn btn-default start-stop-button\">start</button>\n<button class=\"btn btn-default split-button\">split</button>\n<button class=\"btn btn-default reset-button\">reset</button>\n<div class=\"cum-time\">Cumulative Time</div>\n<div class=\"ind-time\">Individual Time</div>\n";
 
 /***/ },
 /* 244 */
