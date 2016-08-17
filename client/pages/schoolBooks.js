@@ -11,16 +11,14 @@ import polisci from 'templates/polisciBooks.html';
 import psych from 'templates/psychBooks.html';
 import noBooks from 'templates/noBookx.html';
 import thankYou from 'templates/thankYou.html';
+import landing from 'templates/schoolBooksLanding.html';
 
 var app = {
   init: function(){
+    $('.response-container').html(landing);
     app.render();
   },
   render: function(){
-    $(document).ready(function() {
-      $('.main-header').slideUp(1100);
-      $('.school-header').slideDown(1000);
-    });
     $('.eng').click(function(){
       $('.response-container').html(english);
     });
@@ -29,9 +27,6 @@ var app = {
     });
     $('.math').click(function(){
       $('.response-container').html(math);
-    });
-    $('.music').click(function(){
-      $('.response-container').html(noBooks);
     });
     $('.pol').click(function(){
       $('.response-container').html(polisci);
@@ -42,12 +37,9 @@ var app = {
     $('.sci').click(function(){
       $('.response-container').html(science);
     });
-    $('.vis').click(function(){
-      $('.response-container').html(noBooks);
-    });
-    $('.response-container').change(function(){
-      $('.school-books-list').fadeIn(5000);
-    });
+    // $('.books-back').click(function(){
+    //   $('.response-container').html(landing);
+    // });
   }
 
   // },

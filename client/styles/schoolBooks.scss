@@ -1,4 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(https://fonts.googleapis.com/css?family=Rock+Salt);
+@import url(https://fonts.googleapis.com/css?family=Over+the+Rainbow);
 
 .school-header.container-fluid {
   position: relative;
@@ -12,39 +14,13 @@
   h1 {
     position: relative;
     top: 35px;
-    left: 15px;
+    left: 35px;
     font-family: 'Alice', serif;
     font-size: 35px;
     color: #0174B2;
   }
 }
-.school-nav {
-  position: relative;
-  display: block;
-  top: 0;
-  height: 7vh;
-  width: 100%;
-  border-bottom: solid 1px #c4c4c4;
-
-  a.option {
-    font-family: 'Josefin Sans', serif;
-    top: 2.5vmin;
-    font-size: 3vmin;
-    color: #626262;
-    text-align: center;
-  }
-  a.option:hover {
-    text-decoration: none;    
-  }
-/*  a.option.active {
-    color: #D12BC4;
-    font-weight: bold;
-    text-decoration: underline;
-    padding-bottom: 2px;
-  }
-*/  
-}
-/*.col-md-2.school-subject  {
+.col-md-2.school-subject  {
   position: relative;
   display: block;
   top: 75px;
@@ -134,35 +110,33 @@
     text-align: center;
     }
   }
-}*/
+}
 
 .response-container {
   position: relative;
-  top: 50px;
+  display: block;
   width: 100%;
-  padding: 0;
 
-  .no-books h1 {
+  ul.school-books-list {
     position: relative;
     display: block;
-    margin: 100px auto;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 30px;
-    color: #383838;
-  }  
-  .school-animations img {
-    position: relative;
-    display: inline-block;
-    height: 75px;
-    width: 75px;
+    top: 3vh;
+    left: 6vw;
   }
-  li.col-md-4.book-container {
+  .image-responsive {
+    position: relative;
+    display: inline;
+    margin: 100px auto;
+    width: 500px;
+  }
+  li.book-container {
     position: relative;
     display: inline-block;
     list-style-image: none;
-    width: 30vw;
-    /*height: 30vh;*/
-    margin-right: 1.3vw;
+    width: 40vw;
+    height: 32vh;
+    margin-right: 5vw;
+    margin-bottom: 2vh;
 
     img.book-image {
       position: relative;
@@ -175,8 +149,8 @@
     .title {
       position: relative;
       left: 7vw;
-      top: -7vh;
-      width: 20vw;
+      top: -3vh;
+      width: 25vw;
       font-family: 'Josefin Sans', sans-serif;
       font-size: 2.5vmin;
       color: #383838;
@@ -185,7 +159,7 @@
     .author {
       position: relative;
       left: 7vw;
-      top: -8vh;
+      top: -4vh;
       font-family: 'Josefin Sans', sans-serif;
       font-size: 2vmin;
       color: #383838;
@@ -195,6 +169,73 @@
   li.book-container:hover {
     background-color: #fff;
     box-shadow: 0px 2px 2px 1px rgba(210, 214, 213, 0.5);
-/*    width: 30vw;*/
+    transform: translate3d(10px, 10px, 40px);
+    transition: transform .5s;
   }
+}
+.notebook-paper {
+  width: 40%;
+  /*height: 80vh;*/
+  background: linear-gradient(to bottom, white 29px, #00b0d7 1px);
+  margin: 5vh auto;
+  background-size: 100% 30px;
+  position: relative;
+  padding-top: 20vh;
+  /*padding-left: 160px;*/
+  padding-right: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+  -moz-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+  -ms-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+  -o-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+  box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+  &:before {
+    content:'';
+    display: block;
+    position: absolute;
+    z-index:1;
+    top: 0;
+    left: 5vw;
+    height: 100%;
+    width: 1px;
+    background: #db4034;
+  }
+  .paper-title-line {
+    height: 10vh;
+    width: 100%;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .books-header {
+      position: relative;
+      top: 2vh;
+      left: 6vw;
+      font-family: 'Rock Salt', cursive;
+      font-size: 7vmin;
+    }
+  }
+  .option {
+    display: block;
+    margin-bottom: 56px;
+    font-family: 'Rock Salt', cursive;
+    font-size: 3vmin;
+    color: black;
+    text-align: center;
+  }
+  .option:hover {
+    text-decoration: none;
+    color: grey;
+  }
+}
+li.books-back {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2vmin;
+  color: black;
+}
+li.books-back:hover {
+  text-decoration: none;
+  color: grey;
 }

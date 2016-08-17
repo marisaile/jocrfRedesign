@@ -9,31 +9,44 @@ body.override-bootstrap {
   position: relative;
   display: block;
   width: 100%;
-  height: 50px;
+  height: 7vh;
   top: 0;
   left: 0;
   background-color: #383838;
-  z-index: 0;
+
+  a.nav-stay {
+    position: relative;
+    display: inline-block;
+    top: -5.5vh;
+    margin-right: 3.5vw;
+    font-family: 'Alice', serif;
+    font-size: 2.3vmin;
+    color: #eee;
+
+    .marisaile {
+      font-family: 'Montez', cursive;
+      font-size: 6vmin;
+      color: #eee;
+      /*line-height: 50px;*/
+      margin-right: 3vw;
+    }
+    .sub {
+      position: relative;
+      top: 7.5vh;
+      left: 2.5vw;
+      font-family: 'Alice', serif;
+      font-size: 1.5vmin;
+      color: #eee;
+      /*line-height: 14px;*/
+    }
+  }  
+  a.nav-stay:hover {
+    text-decoration: none;
+    color: #eee;
+  }
 }
-a.nav-stay {
-  position: relative;
-  display: inline-block;
-  top: -60px;
-  margin-right: 40px;
-  font-family: 'Alice', serif;
-  font-size: 16px;
-  color: #eee;
-}
-a.nav-stay:hover {
-  text-decoration: none;
-  color: #eee;
-}
-a.home {  
-  position: relative;
-  top: 75px;
-  left: 20px;
-  
-  #cloud {
+
+/*  #cloud {
     width: 260px; height: 90px;
     background: #fefefe;
     transition: rotateY(-30deg);
@@ -66,86 +79,9 @@ a.home {
     -webkit-border-radius: 200px;
     -moz-border-radius: 200px;
   }
-  .marisaile {
-    position: relative;
-    bottom: -10px;
-    left: 30px;
-    font-family: 'Montez', cursive;
-    font-size: 50px;
-    color: #383838;
-    line-height: 50px;
-    margin: 0;
-    padding: 0;
-  }
-  .sub {
-    position: relative;
-    bottom: 0;
-    left: 90px;
-    font-family: 'Alice', serif;
-    font-size: 14px;
-    color: #383838;
-    line-height: 14px;
-    margin: 0;
-    padding: 0;
-  }
-}
-a.home:hover {
-  text-decoration: none;
-}
-.circle.davinci {
-  position: relative;
-  display: block;
-  height: 200px;
-  width: 200px;
-  top: 140px;
-  left: 330px;
-  border-radius: 100%;
-  background-color: #D12BC4;
-  span {
-    position: absolute;
-    top: 75px;
-    left: 50px;
-    text-align: center;
-    font-family: 'Montez', cursive;
-    font-size: 30px;
-    color: #eee;
-  } 
-}
-.triangle.projects {
-  position: relative;
-  display: block;
-  top: 200px;
-  left: 520px;
-  height: 0px;
-  width: 0px;
-  border-right: 150px solid transparent;
-  border-left: 150px solid transparent;
-  border-bottom: 200px solid #33FA0D;
-  span {
-    position: absolute;
-    margin: 150px auto;
-    font-family: 'Montez', cursive;
-    font-size: 30px;
-    color: #eee;
-  } 
-}
-.square.joc {
-  position: relative;
-  display: block;
-  top: -200px;
-  left: 880px;
-  height: 175px;
-  width: 175px;
-  background-color: #00C9D6;
-  font-family: 'Montez', cursive;
-  span {
-    position: absolute;
-    margin: 100px auto;
-    font-size: 30px;
-    color: #eee;
-    text-align: center;
-  }
-}
+*/
+
+
 
 
 
