@@ -624,7 +624,7 @@ li.books-back:hover {
   font-size: 16px;
 }
 
-.timer-container .start-stop-button {
+.timer-container .start-button {
   position: relative;
   display: inline-block;
   top: -10px;
