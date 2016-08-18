@@ -3,57 +3,40 @@ var $ = require('jquery');
 // legacy loading for bootstrap
 window.jQuery = window.$ = $;
 require('bootstrap');
-import science from 'templates/scienceBooks.html';
-import history from 'templates/historyBooks.html';
-import english from 'templates/englishLit.html';
-import math from 'templates/math.html';
-import polisci from 'templates/polisciBooks.html';
-import psych from 'templates/psychBooks.html';
-import noBooks from 'templates/noBookx.html';
-import thankYou from 'templates/thankYou.html';
-import landing from 'templates/schoolBooksLanding.html';
+import landing from 'templates/school/schoolBooksLanding.html';
+
+import english from 'components/schoolbooks/english';
+import history from 'components/schoolbooks/history';
+import math from 'components/schoolbooks/math';
+import polisci from 'components/schoolbooks/polisci';
+import psych from 'components/schoolbooks/psych';
+import science from 'components/schoolbooks/science';
 
 var app = {
   init: function(){
-    $('.response-container').html(landing);
     app.render();
   },
   render: function(){
+    $('.response-container').html(landing);
     $('.eng').click(function(){
-      $('.response-container').html(english);
+      english.init();
     });
     $('.his').click(function(){
-      $('.response-container').html(history);
+      history.init();
     });
     $('.math').click(function(){
-      $('.response-container').html(math);
+      math.init();
     });
     $('.pol').click(function(){
-      $('.response-container').html(polisci);
+      polisci.init();
     });
     $('.psy').click(function(){
-      $('.response-container').html(psych);
+      psych.init();
     });
     $('.sci').click(function(){
-      $('.response-container').html(science);
+      science.init();
     });
-    // $('.books-back').click(function(){
-    //   $('.response-container').html(landing);
-    // });
   }
-
-  // },
-  // showBooks: function(){
-    
-
-      
-  // }
-  // navAnimate: function(){
-
-  //   $('.main-header').mouseenter(function(){
-  //     $('.main-header').slideDown(1000);
-  //   });
 };
 
 module.exports = app;
-

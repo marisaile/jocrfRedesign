@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Rock+Salt);
 @import url(https://fonts.googleapis.com/css?family=Over+the+Rainbow);
 
-.school-header.container-fluid {
+/*.school-header.container-fluid {
   position: relative;
   display: block;
   width: 100%;
@@ -19,8 +19,133 @@
     font-size: 35px;
     color: #0174B2;
   }
+}*/
+
+.response-container {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  ul.school-books-list {
+    position: relative;
+    display: block;
+    top: 10vh;
+    /*left: 10vw;*/
+    list-style-type: none;
+
+    li.school-books-item.col-md-5 {
+      list-style-image: none;
+      /*width: 40vw;*/
+      /*margin-right: 10vw;*/
+    } 
+  }
+  .book-container {
+    position: relative;
+    display: inline-block;
+    width: 32vw;
+    height: 32vh;
+    /*margin-right: 10vw;*/
+    margin-bottom: 3vh;
+  
+    img.book-image {
+      position: relative;
+      left: -2vw;
+      top: 2.75vh;
+      width: 8vw;
+      /*height: 22vh;*/
+      box-shadow: 0px 2px 2px 3px rgba(210, 214, 213, 0.8);
+    }
+    .title {
+      position: relative;
+      left: 7vw;
+      top: -3vh;
+      width: 25vw;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 2.5vmin;
+      color: #323333;
+      text-align: left;
+    }
+    .author {
+      position: relative;
+      left: 7vw;
+      top: -4vh;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 2vmin;
+      color: #323333;
+      text-align: left;
+      perspective: 500px;
+      perspective-origin: 10% 25%;
+    }
+  }
+  li .book-container:hover {
+    background-color: #fff;
+    box-shadow: 0px 2px 2px 1px rgba(210, 214, 213, 0.5);
+    transform: translate3d(1px, 10px, 60px);
+    transition: transform .5s;
+  }
 }
-.col-md-2.school-subject  {
+.notebook-paper {
+  width: 40%;
+  /*height: 80vh;*/
+  background: linear-gradient(to bottom, white 29px, #00b0d7 1px);
+  margin: 5vh auto;
+  background-size: 100% 30px;
+  position: relative;
+  padding-top: 20vh;
+  /*padding-left: 160px;*/
+  padding-right: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+  -moz-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+  -ms-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+  -o-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+  box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+  &:before {
+    content:'';
+    display: block;
+    position: absolute;
+    z-index:1;
+    top: 0;
+    left: 5vw;
+    height: 100%;
+    width: 1px;
+    background: #db4034;
+  }
+  .paper-title-line {
+    height: 10vh;
+    width: 100%;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .books-header {
+      position: relative;
+      top: 2vh;
+      left: 6vw;
+      font-family: 'Rock Salt', cursive;
+      font-size: 7vmin;
+      color: #323333;
+    }
+  }
+  .option {
+    display: block;
+    margin-bottom: 56px;
+    font-family: 'Rock Salt', cursive;
+    font-size: 3vmin;
+    color: #323333;
+    text-align: center;
+  }
+  .option:hover {
+    text-decoration: none;
+    color: #4B4C4D;
+  }
+}
+
+
+
+/*.col-md-2.school-subject  {
   position: relative;
   display: block;
   top: 75px;
@@ -42,8 +167,8 @@
       color: #383838;
       font-size: 16px;
     }
-  }
-  .suggest-book {
+  }*/
+  /*.suggest-book {
     position: relative;
     display: block;
     top: 100px;
@@ -110,127 +235,17 @@
     text-align: center;
     }
   }
-}
+}*/
 
-.response-container {
-  position: relative;
-  display: block;
-  width: 100%;
 
-  ul.school-books-list {
-    position: relative;
-    display: block;
-    top: 3vh;
-    left: 6vw;
-  }
-  .image-responsive {
+  /*.image-responsive {
     position: relative;
     display: inline;
     margin: 100px auto;
     width: 500px;
-  }
-  li.book-container {
-    position: relative;
-    display: inline-block;
-    list-style-image: none;
-    width: 40vw;
-    height: 32vh;
-    margin-right: 5vw;
-    margin-bottom: 2vh;
-
-    img.book-image {
-      position: relative;
-      left: -2vw;
-      top: 2.75vh;
-      width: 8vw;
-      /*height: 22vh;*/
-      box-shadow: 0px 2px 2px 3px rgba(210, 214, 213, 0.8);
-    }
-    .title {
-      position: relative;
-      left: 7vw;
-      top: -3vh;
-      width: 25vw;
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 2.5vmin;
-      color: #383838;
-      text-align: left;
-    }
-    .author {
-      position: relative;
-      left: 7vw;
-      top: -4vh;
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 2vmin;
-      color: #383838;
-      text-align: left;
-    }
-  }
-  li.book-container:hover {
-    background-color: #fff;
-    box-shadow: 0px 2px 2px 1px rgba(210, 214, 213, 0.5);
-    transform: translate3d(10px, 10px, 40px);
-    transition: transform .5s;
-  }
-}
-.notebook-paper {
-  width: 40%;
-  /*height: 80vh;*/
-  background: linear-gradient(to bottom, white 29px, #00b0d7 1px);
-  margin: 5vh auto;
-  background-size: 100% 30px;
-  position: relative;
-  padding-top: 20vh;
-  /*padding-left: 160px;*/
-  padding-right: 20px;
-  overflow: hidden;
-  border-radius: 5px;
-  -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
-  -moz-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
-  -ms-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
-  -o-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
-  box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
-  &:before {
-    content:'';
-    display: block;
-    position: absolute;
-    z-index:1;
-    top: 0;
-    left: 5vw;
-    height: 100%;
-    width: 1px;
-    background: #db4034;
-  }
-  .paper-title-line {
-    height: 10vh;
-    width: 100%;
-    background: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    .books-header {
-      position: relative;
-      top: 2vh;
-      left: 6vw;
-      font-family: 'Rock Salt', cursive;
-      font-size: 7vmin;
-    }
-  }
-  .option {
-    display: block;
-    margin-bottom: 56px;
-    font-family: 'Rock Salt', cursive;
-    font-size: 3vmin;
-    color: black;
-    text-align: center;
-  }
-  .option:hover {
-    text-decoration: none;
-    color: grey;
-  }
-}
-li.books-back {
+  }*/
+  
+/*li.books-back {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2vmin;
   color: black;
@@ -238,4 +253,4 @@ li.books-back {
 li.books-back:hover {
   text-decoration: none;
   color: grey;
-}
+}*/

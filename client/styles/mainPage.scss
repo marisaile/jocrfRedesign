@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montez);
-@import url(https://fonts.googleapis.com/css?family=Amita);
+@import url(https://fonts.googleapis.com/css?family=Taviraj);
 
 body.override-bootstrap {
   margin: 0;
-  background-color: #f8f8f8;
+  background-color: #F5F4F5;
 }
 .main-header.container-fluid {
   position: relative;
@@ -12,37 +12,33 @@ body.override-bootstrap {
   height: 7vh;
   top: 0;
   left: 0;
-  background-color: #383838;
+  background-color: #720EFF;
+  box-shadow: 1px 1px 10px 1px #8A8C8C;
 
   a.nav-stay {
     position: relative;
     display: inline-block;
-    top: -5.5vh;
-    margin-right: 3.5vw;
-    font-family: 'Alice', serif;
+   /* top: -5.5vh;*/
+    margin-right: 4vw;
+    font-family: 'Taviraj', serif;
     font-size: 2.3vmin;
-    color: #eee;
-
-    .marisaile {
-      font-family: 'Montez', cursive;
-      font-size: 6vmin;
-      color: #eee;
-      /*line-height: 50px;*/
-      margin-right: 3vw;
-    }
-    .sub {
-      position: relative;
-      top: 7.5vh;
-      left: 2.5vw;
-      font-family: 'Alice', serif;
-      font-size: 1.5vmin;
-      color: #eee;
-      /*line-height: 14px;*/
-    }
-  }  
+    color: #FFFEFF;
+  }
   a.nav-stay:hover {
     text-decoration: none;
-    color: #eee;
+    color: #323333;
+  }
+  a.marisaile {
+    font-family: 'Montez', cursive;
+    font-size: 6vmin;
+    color: #FFFEFF;
+    /*line-height: 50px;*/
+    margin-right: 6vw;
+    margin-left: 4vw;
+  }
+  a.marisaile:hover {
+    text-decoration: none;
+    color: #323333;
   }
 }
 

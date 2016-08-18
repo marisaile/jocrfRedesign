@@ -1,9 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Alice);
+@import url(https://fonts.googleapis.com/css?family=Taviraj);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
 
-.timer-main {
-  background-color: #bbb;
-}
+
 .timer-container {
   position: relative;
   display: block;
@@ -19,27 +17,27 @@
     position: relative;
     display: block;
     left: 25%;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Taviraj', serif;
     font-size: 64px;
   }
   h1.timer-mode {
     position: relative;
     left: 30%;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Taviraj', serif;
     font-size: 50px;
   }
   .btn.btn-mode-continuous {
     position: relative;
     display: inline-block;
     left: 15%;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Taviraj', serif;
     font-size: 16px;
   }
   .btn.btn-mode-start-stop {
     position: relative;
     display: inline-block;
     left: 27%;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Taviraj', serif;
     font-size: 16px;
   }
   .start-button {
@@ -48,7 +46,7 @@
     top: -10px;
     width: 100px;
     margin: 8px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Taviraj', serif;
     font-size: 16px;
   }
   .split-button {
@@ -57,7 +55,7 @@
     top: -10px;
     width: 100px;
     margin: 8px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Taviraj', serif;
     font-size: 16px;
   }
   .reset-button {
@@ -66,7 +64,7 @@
     top: -10px;
     width: 100px;
     margin: 8px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Taviraj', serif;
     font-size: 16px;
   }
   .cum-time {
@@ -76,7 +74,7 @@
     height: 400px;
     top: 50px;
     margin-left: 30px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Taviraj', serif;
     font-size: 16px;
     line-height: 20px;
   }
@@ -86,7 +84,7 @@
     width: 150px;
     height: 400px;
     top: 50px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Taviraj', serif;
     font-size: 16px;
     line-height: 20px;
   }
@@ -100,7 +98,7 @@
     display: inline-block;
     left: 26%;
     width: 75px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Taviraj', serif;
     font-size: 16px;
   }
   .ss-reset-button {
@@ -108,14 +106,14 @@
     display: inline-block;
     left: 31.5%;
     width: 75px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Taviraj', serif;
     font-size: 16px;
   }
   .time {
     position: relative;
     display: block;
     left: 26%;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Taviraj', serif;
     font-size: 20px;
   }
 }
