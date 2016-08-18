@@ -77,19 +77,19 @@
 	
 	var _pagesSchoolBooks2 = _interopRequireDefault(_pagesSchoolBooks);
 	
-	var _pagesBooksBooksController = __webpack_require__(236);
+	var _pagesBooksBooksController = __webpack_require__(239);
 	
 	var _pagesBooksBooksController2 = _interopRequireDefault(_pagesBooksBooksController);
 	
-	var _pagesTimer = __webpack_require__(245);
+	var _pagesTimer = __webpack_require__(248);
 	
 	var _pagesTimer2 = _interopRequireDefault(_pagesTimer);
 	
-	var _pagesVisualDesigns = __webpack_require__(251);
+	var _pagesVisualDesigns = __webpack_require__(254);
 	
 	var _pagesVisualDesigns2 = _interopRequireDefault(_pagesVisualDesigns);
 	
-	var _pagesDalquest = __webpack_require__(254);
+	var _pagesDalquest = __webpack_require__(257);
 	
 	var _pagesDalquest2 = _interopRequireDefault(_pagesDalquest);
 	
@@ -9993,7 +9993,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","response-container":"response-container","school-books-list":"school-books-list","school-books-item":"school-books-item","col-md-5":"col-md-5","book-container":"book-container","book-image":"book-image","title":"title","author":"author","notebook-paper":"notebook-paper","paper-title-line":"paper-title-line","books-header":"books-header","option":"option","timer-container":"timer-container","counter":"counter","timer-mode":"timer-mode","btn-mode-continuous":"btn-mode-continuous","btn-mode-start-stop":"btn-mode-start-stop","start-button":"start-button","split-button":"split-button","reset-button":"reset-button","cum-time":"cum-time","ind-time":"ind-time","time":"time","ss-start-stop-button":"ss-start-stop-button","ss-reset-button":"ss-reset-button","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-background":"dalquest-background"};
+	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","option":"option","response-container":"response-container","school-books-list":"school-books-list","school-books-item":"school-books-item","col-md-5":"col-md-5","book-container":"book-container","book-image":"book-image","title":"title","author":"author","notebook-paper":"notebook-paper","paper-title-line":"paper-title-line","books-header":"books-header","timer-container":"timer-container","counter":"counter","timer-mode":"timer-mode","btn-mode-continuous":"btn-mode-continuous","btn-mode-start-stop":"btn-mode-start-stop","start-button":"start-button","split-button":"split-button","reset-button":"reset-button","cum-time":"cum-time","ind-time":"ind-time","time":"time","ss-start-stop-button":"ss-start-stop-button","ss-reset-button":"ss-reset-button","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-background":"dalquest-background"};
 
 /***/ },
 /* 3 */,
@@ -10066,7 +10066,7 @@
 /* 8 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"row header-row\">  \n  <div class=\"nav-items\">  \n    <a class=\"marisaile\" role=\"menuitem\" href=\"/server/view.ejs\">Marisaile</a>\n    <a class=\"nav-stay\" role=\"menuitem\" href=\"/pages/todo.html\">To Do App</a>\n    <a class=\"nav-stay\" role=\"menuitem\" href=\"/pages/photoSearch.html\">Photo Search</a>\n    <!-- <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/d3.html\">d3 Chart</a> -->\n    <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/funnySquares.html\">Funny Squares</a>\n    <!-- <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/three.html\">THREE Animation</a> -->\n    <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/schoolBooks.html\">School</a>\n    <!-- <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/books.html\">Book Tracker</a> -->\n    <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/dalquest.html\">Dalquest Research Site</a>\n    <a class=\"nav-stay nav-joc\" role=\"menuitem\" href=\"/pages/timer.html\">Timer</a>\n    <!-- <a class=\"nav-stay nav-joc\" role=\"menuitem\" href=\"/pages/visualDesigns.html\">Visual Designs Test</a> -->\n  </div>\n</div>\n\n\n\n";
+	module.exports = "<!-- <div class=\"row header-row\">  --> \n  <div class=\"nav-items\">  \n    <a class=\"marisaile\" role=\"menuitem\" href=\"/server/view.ejs\">Marisaile</a>\n    <a class=\"nav-stay\" role=\"menuitem\" href=\"/pages/todo.html\">To Do App</a>\n    <a class=\"nav-stay\" role=\"menuitem\" href=\"/pages/photoSearch.html\">Photo Search</a>\n    <!-- <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/d3.html\">d3 Chart</a> -->\n    <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/funnySquares.html\">Funny Squares</a>\n    <!-- <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/three.html\">THREE Animation</a> -->\n    <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/schoolBooks.html\">School</a>\n    <!-- <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/books.html\">Book Tracker</a> -->\n    <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/dalquest.html\">Dalquest Research Site</a>\n    <a class=\"nav-stay nav-joc\" role=\"menuitem\" href=\"/pages/timer.html\">Timer</a>\n    <!-- <a class=\"nav-stay nav-joc\" role=\"menuitem\" href=\"/pages/visualDesigns.html\">Visual Designs Test</a> -->\n<!--   </div>\n</div> -->\n\n\n\n";
 
 /***/ },
 /* 9 */
@@ -38417,23 +38417,23 @@
 	
 	var _componentsSchoolbooksEnglish2 = _interopRequireDefault(_componentsSchoolbooksEnglish);
 	
-	var _componentsSchoolbooksHistory = __webpack_require__(226);
+	var _componentsSchoolbooksHistory = __webpack_require__(213);
 	
 	var _componentsSchoolbooksHistory2 = _interopRequireDefault(_componentsSchoolbooksHistory);
 	
-	var _componentsSchoolbooksMath = __webpack_require__(228);
+	var _componentsSchoolbooksMath = __webpack_require__(215);
 	
 	var _componentsSchoolbooksMath2 = _interopRequireDefault(_componentsSchoolbooksMath);
 	
-	var _componentsSchoolbooksPolisci = __webpack_require__(230);
+	var _componentsSchoolbooksPolisci = __webpack_require__(217);
 	
 	var _componentsSchoolbooksPolisci2 = _interopRequireDefault(_componentsSchoolbooksPolisci);
 	
-	var _componentsSchoolbooksPsych = __webpack_require__(232);
+	var _componentsSchoolbooksPsych = __webpack_require__(219);
 	
 	var _componentsSchoolbooksPsych2 = _interopRequireDefault(_componentsSchoolbooksPsych);
 	
-	var _componentsSchoolbooksScience = __webpack_require__(234);
+	var _componentsSchoolbooksScience = __webpack_require__(221);
 	
 	var _componentsSchoolbooksScience2 = _interopRequireDefault(_componentsSchoolbooksScience);
 	
@@ -38441,7 +38441,7 @@
 	
 	// legacy loading for bootstrap
 	window.jQuery = window.$ = $;
-	__webpack_require__(213);
+	__webpack_require__(224);
 	
 	var app = {
 	  init: function init() {
@@ -38490,17 +38490,46 @@
 	
 	var _templatesSchoolEnglishLitHtml2 = _interopRequireDefault(_templatesSchoolEnglishLitHtml);
 	
+	var _componentsSchoolbooksHistory = __webpack_require__(213);
+	
+	var _componentsSchoolbooksHistory2 = _interopRequireDefault(_componentsSchoolbooksHistory);
+	
+	var _componentsSchoolbooksMath = __webpack_require__(215);
+	
+	var _componentsSchoolbooksMath2 = _interopRequireDefault(_componentsSchoolbooksMath);
+	
+	var _componentsSchoolbooksPolisci = __webpack_require__(217);
+	
+	var _componentsSchoolbooksPolisci2 = _interopRequireDefault(_componentsSchoolbooksPolisci);
+	
+	var _componentsSchoolbooksPsych = __webpack_require__(219);
+	
+	var _componentsSchoolbooksPsych2 = _interopRequireDefault(_componentsSchoolbooksPsych);
+	
+	var _componentsSchoolbooksScience = __webpack_require__(221);
+	
+	var _componentsSchoolbooksScience2 = _interopRequireDefault(_componentsSchoolbooksScience);
+	
+	var _componentsSchoolbooksLanding = __webpack_require__(223);
+	
+	var _componentsSchoolbooksLanding2 = _interopRequireDefault(_componentsSchoolbooksLanding);
+	
+	var _componentsSchoolbooksHeader = __webpack_require__(237);
+	
+	var _componentsSchoolbooksHeader2 = _interopRequireDefault(_componentsSchoolbooksHeader);
+	
 	var $ = __webpack_require__(1);
 	
 	// legacy loading for bootstrap
 	window.jQuery = window.$ = $;
-	__webpack_require__(213);
+	__webpack_require__(224);
 	
 	var app = {
 	  init: function init() {
 	    app.render();
 	  },
 	  render: function render() {
+	    _componentsSchoolbooksHeader2['default'].init();
 	    $('.response-container').html(_templatesSchoolEnglishLitHtml2['default']);
 	  }
 	};
@@ -38511,28 +38540,377 @@
 /* 212 */
 /***/ function(module, exports) {
 
-	module.exports = "<!-- <ol class=\"breadcrumb\">\n  <li class=\"breadcrumb books-back\"><a href=\"/public/schoolBooks.html#\">back</a></li>\n</ol> -->\n<ul class=\"school-books-list\">\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n\n      <a href=\"https://www.goodreads.com/book/show/16099190-love-dishonor-marry-die-cherish-perish?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/rakoff.png\"></a>\n      <div class=\"title\">Love, Dishonor, Marry, Die, Cherish, Perish</div>\n      <div class=\"author\">David Rakoff</div>\n    \n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1 \">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/12530.The_Writing_Life?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/dillard.png\"></a>\n      <div class=\"title\">The Writing Life</div>\n      <div class=\"author\">Annie Dillard</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/9717.The_Unbearable_Lightness_of_Being?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/kundera.png\"></a>\n      <div class=\"title\">The Unbearable Lightness of Being</div>\n      <div class=\"author\">Milan Kundera</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/3573608-alphabet-juice?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/juice.png\"></a>\n      <div class=\"title\">Alphabet Juice</div>\n      <div class=\"author\">Roy Blount, Jr.</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/367285.Lake_Wobegon_Summer_1956?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/garrison.png\"></a>\n      <div class=\"title\">Lake Wobegon Summer 1956</div>\n      <div class=\"author\">Garrison Keillor</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/364141.The_Dream_of_a_Common_Language?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/adrienne.png\"></a>\n      <div class=\"title\">The Dream of a Common Language</div>\n      <div class=\"author\">Adrienne Rich</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/102920.Understanding_Comics?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/comics.png\"></a>\n      <div class=\"title\">Understanding Comics: The Invisible Art</div>\n      <div class=\"author\">Scott McCloud</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/2018581.The_Man_Who_Made_Lists?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/roget.png\"></a>\n      <div class=\"title\">The Man who Made Lists</div>\n      <div class=\"author\">Joshua Kendall</div>\n    </div>\n  </li>\n</ul>\n\n\n";
+	module.exports = "<!-- <ol class=\"breadcrumb\">\n  <li class=\"breadcrumb books-back\"><a href=\"/public/schoolBooks.html#\">back</a></li>\n</ol> -->\n\n<ul class=\"school-books-list\">\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n\n      <a href=\"https://www.goodreads.com/book/show/16099190-love-dishonor-marry-die-cherish-perish?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/rakoff.png\"></a>\n      <div class=\"title\">Love, Dishonor, Marry, Die, Cherish, Perish</div>\n      <div class=\"author\">David Rakoff</div>\n    \n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1 \">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/12530.The_Writing_Life?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/dillard.png\"></a>\n      <div class=\"title\">The Writing Life</div>\n      <div class=\"author\">Annie Dillard</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/9717.The_Unbearable_Lightness_of_Being?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/kundera.png\"></a>\n      <div class=\"title\">The Unbearable Lightness of Being</div>\n      <div class=\"author\">Milan Kundera</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/3573608-alphabet-juice?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/juice.png\"></a>\n      <div class=\"title\">Alphabet Juice</div>\n      <div class=\"author\">Roy Blount, Jr.</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/367285.Lake_Wobegon_Summer_1956?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/garrison.png\"></a>\n      <div class=\"title\">Lake Wobegon Summer 1956</div>\n      <div class=\"author\">Garrison Keillor</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/364141.The_Dream_of_a_Common_Language?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/adrienne.png\"></a>\n      <div class=\"title\">The Dream of a Common Language</div>\n      <div class=\"author\">Adrienne Rich</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/102920.Understanding_Comics?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/comics.png\"></a>\n      <div class=\"title\">Understanding Comics: The Invisible Art</div>\n      <div class=\"author\">Scott McCloud</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/2018581.The_Man_Who_Made_Lists?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/roget.png\"></a>\n      <div class=\"title\">The Man who Made Lists</div>\n      <div class=\"author\">Joshua Kendall</div>\n    </div>\n  </li>\n</ul>\n\n\n";
 
 /***/ },
 /* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// This file is autogenerated via the `commonjs` Grunt task. You can require() this file in a CommonJS environment.
-	__webpack_require__(214)
-	__webpack_require__(215)
-	__webpack_require__(216)
-	__webpack_require__(217)
-	__webpack_require__(218)
-	__webpack_require__(219)
-	__webpack_require__(220)
-	__webpack_require__(221)
-	__webpack_require__(222)
-	__webpack_require__(223)
-	__webpack_require__(224)
-	__webpack_require__(225)
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _templatesSchoolHistoryHtml = __webpack_require__(214);
+	
+	var _templatesSchoolHistoryHtml2 = _interopRequireDefault(_templatesSchoolHistoryHtml);
+	
+	var _componentsSchoolbooksEnglish = __webpack_require__(211);
+	
+	var _componentsSchoolbooksEnglish2 = _interopRequireDefault(_componentsSchoolbooksEnglish);
+	
+	var _componentsSchoolbooksMath = __webpack_require__(215);
+	
+	var _componentsSchoolbooksMath2 = _interopRequireDefault(_componentsSchoolbooksMath);
+	
+	var _componentsSchoolbooksPolisci = __webpack_require__(217);
+	
+	var _componentsSchoolbooksPolisci2 = _interopRequireDefault(_componentsSchoolbooksPolisci);
+	
+	var _componentsSchoolbooksPsych = __webpack_require__(219);
+	
+	var _componentsSchoolbooksPsych2 = _interopRequireDefault(_componentsSchoolbooksPsych);
+	
+	var _componentsSchoolbooksScience = __webpack_require__(221);
+	
+	var _componentsSchoolbooksScience2 = _interopRequireDefault(_componentsSchoolbooksScience);
+	
+	var _componentsSchoolbooksLanding = __webpack_require__(223);
+	
+	var _componentsSchoolbooksLanding2 = _interopRequireDefault(_componentsSchoolbooksLanding);
+	
+	var _componentsSchoolbooksHeader = __webpack_require__(237);
+	
+	var _componentsSchoolbooksHeader2 = _interopRequireDefault(_componentsSchoolbooksHeader);
+	
+	var $ = __webpack_require__(1);
+	
+	// legacy loading for bootstrap
+	window.jQuery = window.$ = $;
+	__webpack_require__(224);
+	
+	var app = {
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {
+	    _componentsSchoolbooksHeader2['default'].init();
+	    $('.response-container').html(_templatesSchoolHistoryHtml2['default']);
+	  }
+	};
+	
+	module.exports = app;
 
 /***/ },
 /* 214 */
+/***/ function(module, exports) {
+
+	module.exports = "<!-- <ol class=\"breadcrumb\">\n  <li class=\"breadcrumb books-back\"><a href=\"#\">back</a></li>\n</ol> -->\n<ul class=\"school-books-list\">\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/7968243-cleopatra?ac=1&from_search=true\" target=\"new\"><img class =\"book-image\" src =\"/images/books/cleopatra.png\"></a>\n      <div class=\"title\">Cleopatra</div>\n      <div class=\"author\">by Stacy Schiff</div><br>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/6558145-abigail-adams?from_search=true&search_version=service\" target=\"new\"><img class =\"book-image\" src=\"/images/books/abigail.png\"></a>\n      <div class=\"title\">Abigail Adams</div>\n      <div class=\"author\">Woody Holton</div><br>   \n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/24602886-lafayette-in-the-somewhat-united-states\" target=\"new\"><img class =\"book-image\" src=\"/images/books/lafayette.png\"></a>\n      <div class=\"title\">Lafeyette in the Somewhat United States</div>\n      <div class=\"author\">Sarah Vowell</div>     \n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/18669169-the-sleepwalkers?from_search=true&search_version=service\" target=\"new\"><img class =\"book-image\" src=\"/images/books/sleepwalkers.png\"></a>\n      <div class=\"title\">The Sleepwalkers: How Europe Went to War in 1914</div>\n      <div class=\"author\">Christopher Munro Clark</div>\n    </div>      \n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/1843530.The_Progress_Paradox\" target=\"new\"><img class =\"book-image\" src =\"/images/books/progress.png\"></a>\n      <div class=\"title\">The Progress Paradox</div>\n      <div class=\"author\">Gregg Easterbrook</div><br>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/430027.Brother_I_m_Dying?from_search=true&search_version=service\" target=\"new\"><img class =\"book-image\" src=\"/images/books/brother.png\"></a>\n      <div class=\"title\">Brother, I'm Dying</div>\n      <div class=\"author\">Edwidge Dandicat</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/581915.The_Jungle\" target=\"new\"><img class =\"book-image\" src=\"/images/books/jungle.png\"></a>\n      <div class=\"title\">The Jungle</div>\n      <div class=\"author\">Upton Sinclair</div> \n    </div>    \n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/21.A_Short_History_of_Nearly_Everything?ac=1&from_search=true\" target=\"new\"><img class =\"book-image\" src=\"/images/books/bryson.png\"></a>\n      <div class=\"title\">A Short History of Nearly Everything</div>\n      <div class=\"author\">Bill Bryson</div>   \n    </div>  \n  </li>\n</ul>\n\n\n";
+
+/***/ },
+/* 215 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _templatesSchoolMathHtml = __webpack_require__(216);
+	
+	var _templatesSchoolMathHtml2 = _interopRequireDefault(_templatesSchoolMathHtml);
+	
+	var _componentsSchoolbooksEnglish = __webpack_require__(211);
+	
+	var _componentsSchoolbooksEnglish2 = _interopRequireDefault(_componentsSchoolbooksEnglish);
+	
+	var _componentsSchoolbooksHistory = __webpack_require__(213);
+	
+	var _componentsSchoolbooksHistory2 = _interopRequireDefault(_componentsSchoolbooksHistory);
+	
+	var _componentsSchoolbooksPolisci = __webpack_require__(217);
+	
+	var _componentsSchoolbooksPolisci2 = _interopRequireDefault(_componentsSchoolbooksPolisci);
+	
+	var _componentsSchoolbooksPsych = __webpack_require__(219);
+	
+	var _componentsSchoolbooksPsych2 = _interopRequireDefault(_componentsSchoolbooksPsych);
+	
+	var _componentsSchoolbooksScience = __webpack_require__(221);
+	
+	var _componentsSchoolbooksScience2 = _interopRequireDefault(_componentsSchoolbooksScience);
+	
+	var _componentsSchoolbooksLanding = __webpack_require__(223);
+	
+	var _componentsSchoolbooksLanding2 = _interopRequireDefault(_componentsSchoolbooksLanding);
+	
+	var _componentsSchoolbooksHeader = __webpack_require__(237);
+	
+	var _componentsSchoolbooksHeader2 = _interopRequireDefault(_componentsSchoolbooksHeader);
+	
+	var $ = __webpack_require__(1);
+	
+	// legacy loading for bootstrap
+	window.jQuery = window.$ = $;
+	__webpack_require__(224);
+	
+	var app = {
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {
+	    _componentsSchoolbooksHeader2['default'].init();
+	    $('.response-container').html(_templatesSchoolMathHtml2['default']);
+	  }
+	};
+	
+	module.exports = app;
+
+/***/ },
+/* 216 */
+/***/ function(module, exports) {
+
+	module.exports = "<!-- <ol class=\"breadcrumb\">\n  <li class=\"breadcrumb books-back\"><a href=\"#\">back</a></li>\n</ol> -->\n<ul class=\"school-books-list\">\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/13588394-the-signal-and-the-noise?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/silver.png\"></a>\n      <div class=\"title\">The Signal and the Noise</div>\n      <div class=\"author\">Nate Silver</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/5060378-the-girl-who-played-with-fire?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/girl.png\"></a>\n      <div class=\"title\">The Girl who Played with Fire</div>\n      <div class=\"author\">Stieg Larsson</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/1301.Moneyball\" target=\"new\"><img class=\"book-image\" src=\"/images/books/moneyball.png\"></a>\n      <div class=\"title\">Moneyball</div>\n      <div class=\"author\">Michael Lewis</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/3181564-the-housekeeper-and-the-professor?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/ogawa.png\"></a>\n      <div class=\"title\">The Housekeeper and the Professor</div>\n      <div class=\"author\">Yogo Ogawa; translated by Stephen Snyder</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/6463967-the-big-short\" target=\"new\"><img class=\"book-image\" src=\"/images/books/bigshort.png\"></a>\n      <div class=\"title\">The Big Short</div>\n      <div class=\"author\">Michael Lewis</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/17986418-naked-statistics?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/naked.png\"></a>\n      <div class=\"title\">Naked Statistics</div>\n      <div class=\"author\">Charles Wheelan</div>\n    </div>\n  </li>    \n</ul>\n\n";
+
+/***/ },
+/* 217 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _templatesSchoolPolisciHtml = __webpack_require__(218);
+	
+	var _templatesSchoolPolisciHtml2 = _interopRequireDefault(_templatesSchoolPolisciHtml);
+	
+	var _componentsSchoolbooksEnglish = __webpack_require__(211);
+	
+	var _componentsSchoolbooksEnglish2 = _interopRequireDefault(_componentsSchoolbooksEnglish);
+	
+	var _componentsSchoolbooksHistory = __webpack_require__(213);
+	
+	var _componentsSchoolbooksHistory2 = _interopRequireDefault(_componentsSchoolbooksHistory);
+	
+	var _componentsSchoolbooksMath = __webpack_require__(215);
+	
+	var _componentsSchoolbooksMath2 = _interopRequireDefault(_componentsSchoolbooksMath);
+	
+	var _componentsSchoolbooksPsych = __webpack_require__(219);
+	
+	var _componentsSchoolbooksPsych2 = _interopRequireDefault(_componentsSchoolbooksPsych);
+	
+	var _componentsSchoolbooksScience = __webpack_require__(221);
+	
+	var _componentsSchoolbooksScience2 = _interopRequireDefault(_componentsSchoolbooksScience);
+	
+	var _componentsSchoolbooksLanding = __webpack_require__(223);
+	
+	var _componentsSchoolbooksLanding2 = _interopRequireDefault(_componentsSchoolbooksLanding);
+	
+	var _componentsSchoolbooksHeader = __webpack_require__(237);
+	
+	var _componentsSchoolbooksHeader2 = _interopRequireDefault(_componentsSchoolbooksHeader);
+	
+	var $ = __webpack_require__(1);
+	
+	// legacy loading for bootstrap
+	window.jQuery = window.$ = $;
+	__webpack_require__(224);
+	
+	var app = {
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {
+	    _componentsSchoolbooksHeader2['default'].init();
+	    $('.response-container').html(_templatesSchoolPolisciHtml2['default']);
+	  }
+	};
+	
+	module.exports = app;
+
+/***/ },
+/* 218 */
+/***/ function(module, exports) {
+
+	module.exports = "<!-- <ol class=\"breadcrumb\">\n  <li class=\"breadcrumb books-back\"><a href=\"#\">back</a></li>\n</ol> -->\n<ul class=\"school-books-list\">\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/17851885-i-am-malala?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/malala.png\"></a>\n      <div class=\"title\">I am Malala</div>\n      <div class=\"author\">Malala Yousafzai</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/9742.The_Audacity_of_Hope?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/barack.png\"></a>\n      <div class=\"title\">The Audacity of Hope</div>\n      <div class=\"author\">Barack Obama</div>\n    </div>\n  </li>\n   <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/25489625-between-the-world-and-me?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/coates.png\"></a>\n      <div class=\"title\">Between the World and Me</div>\n      <div class=\"author\">Ta Nehisi Coates</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/1869.Nickel_and_Dimed?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/nickel.png\"></a>\n      <div class=\"title\">Nickel and Dimed</div>\n      <div class=\"author\">Barbarah Erenreich</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/4952.What_is_the_What?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/what.png\"></a>\n      <div class=\"title\">What is the What</div>\n      <div class=\"author\">Dave Eggers</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/18813642-bad-feminist?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/feminist.png\"></a>\n      <div class=\"title\">Bad Feminist</div>\n      <div class=\"author\">Roxanne Gay</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/32987.The_Greatest_Generation?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/brokaw.png\"></a>\n      <div class=\"title\">The Greatest Generation</div>\n      <div class=\"author\">Tom Brokaw</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/2936415-where-men-win-glory?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/tillman.png\"></a>\n      <div class=\"title\">Where Men Win Glory</div>\n      <div class=\"author\">Jon Krakauer</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/5632446-columbine?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/columbine.png\"></a>\n      <div class=\"title\">Columbine</div>\n      <div class=\"author\">Dave Cullen</div>\n    </div>\n  </li>\n</ul>\n\n";
+
+/***/ },
+/* 219 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _templatesSchoolPsychHtml = __webpack_require__(220);
+	
+	var _templatesSchoolPsychHtml2 = _interopRequireDefault(_templatesSchoolPsychHtml);
+	
+	var _componentsSchoolbooksEnglish = __webpack_require__(211);
+	
+	var _componentsSchoolbooksEnglish2 = _interopRequireDefault(_componentsSchoolbooksEnglish);
+	
+	var _componentsSchoolbooksHistory = __webpack_require__(213);
+	
+	var _componentsSchoolbooksHistory2 = _interopRequireDefault(_componentsSchoolbooksHistory);
+	
+	var _componentsSchoolbooksMath = __webpack_require__(215);
+	
+	var _componentsSchoolbooksMath2 = _interopRequireDefault(_componentsSchoolbooksMath);
+	
+	var _componentsSchoolbooksPolisci = __webpack_require__(217);
+	
+	var _componentsSchoolbooksPolisci2 = _interopRequireDefault(_componentsSchoolbooksPolisci);
+	
+	var _componentsSchoolbooksScience = __webpack_require__(221);
+	
+	var _componentsSchoolbooksScience2 = _interopRequireDefault(_componentsSchoolbooksScience);
+	
+	var _componentsSchoolbooksLanding = __webpack_require__(223);
+	
+	var _componentsSchoolbooksLanding2 = _interopRequireDefault(_componentsSchoolbooksLanding);
+	
+	var _componentsSchoolbooksHeader = __webpack_require__(237);
+	
+	var _componentsSchoolbooksHeader2 = _interopRequireDefault(_componentsSchoolbooksHeader);
+	
+	var $ = __webpack_require__(1);
+	
+	// legacy loading for bootstrap
+	window.jQuery = window.$ = $;
+	__webpack_require__(224);
+	
+	var app = {
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {
+	    _componentsSchoolbooksHeader2['default'].init();
+	    $('.response-container').html(_templatesSchoolPsychHtml2['default']);
+	  }
+	};
+	
+	module.exports = app;
+
+/***/ },
+/* 220 */
+/***/ function(module, exports) {
+
+	module.exports = "<!-- <ol class=\"breadcrumb\">\n  <li class=\"breadcrumb books-back\"><a href=\"#\">back</a></li>\n</ol> -->\n  <ul class=\"school-books-list\">\n    <li class=\"school-books-item col-md-5 col-md-offset-1\">\n      <div class=\"book-container\">\n        <a href=\"https://www.goodreads.com/book/show/6330678-a-thousand-days-of-wonder?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/wonder.png\"></a>\n        <div class=\"title\">1000 Days of Wonder</div>\n        <div class=\"author\">Charles Fernyhough</div>\n      </div>\n    </li>\n    <li class=\"school-books-item col-md-5 col-md-offset-1\">\n      <div class=\"book-container\">\n        <a href=\"https://www.goodreads.com/book/show/7641110-life-is-what-you-make-it?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/buffett.png\"></a>\n        <div class=\"title\">Life is What You Make It</div>\n        <div class=\"author\">Peter Buffett</div>\n      </div>\n    </li>\n    <li class=\"school-books-item col-md-5 col-md-offset-1\">\n      <div class=\"book-container\">\n        <a href=\"https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/thinking.png\"></a>\n        <div class=\"title\">Thinking, Fast and Slow</div>\n        <div class=\"author\">Daniel Kahneman</div>\n      </div>\n    </li>\n    <li class=\"school-books-item col-md-5 col-md-offset-1\">\n      <div class=\"book-container\">\n        <a href=\"https://www.goodreads.com/book/show/63697.The_Man_Who_Mistook_His_Wife_for_a_Hat_and_Other_Clinical_Tales?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/sacks.png\"></a>\n        <div class=\"title\">The Man Who Mistook His Wife for a Hat</div>\n        <div class=\"author\">Oliver Sacks</div>\n      </div>\n    </li>\n    <li class=\"school-books-item col-md-5 col-md-offset-1\">\n      <div class=\"book-container\">\n        <a href=\"https://www.goodreads.com/book/show/27539.On_Intelligence?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/intelligence.png\"></a>\n        <div class=\"title\">On Intelligence</div>\n        <div class=\"author\">Jeff Hawkins</div>\n      </div>\n    </li>\n    <li class=\"school-books-item col-md-5 col-md-offset-1\">\n      <div class=\"book-container\">\n        <a href=\"https://www.goodreads.com/book/show/77954.The_Second_Coming\" target=\"new\"><img class=\"book-image\" src=\"/images/books/percy.png\"></a>\n        <div class=\"title\">The Second Coming</div>\n        <div class=\"author\">Walker Percy</div>\n      </div>\n    </li>\n    <li class=\"school-books-item col-md-5 col-md-offset-1\">\n      <div class=\"book-container\">\n        <a href=\"https://www.goodreads.com/book/show/25430578-cure?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/cure.png\"></a>\n        <div class=\"title\">Cure: A Journey into the Science of Mind over Body</div>\n        <div class=\"author\">Jo Marchant</div>\n      </div>\n    </li>\n    <li class=\"school-books-item col-md-5 col-md-offset-1\">\n      <div class=\"book-container\">\n        <a href=\"https://www.goodreads.com/book/show/99300.The_Yellow_Wallpaper_and_Other_Stories?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/yellow.png\"></a>\n        <div class=\"title\">The Yellow Wallpaper</div>\n        <div class=\"author\">Charlotte Perkins Gilman</div>\n      </div>\n    </li>\n  </ul>\n";
+
+/***/ },
+/* 221 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _templatesSchoolScienceHtml = __webpack_require__(222);
+	
+	var _templatesSchoolScienceHtml2 = _interopRequireDefault(_templatesSchoolScienceHtml);
+	
+	var _componentsSchoolbooksEnglish = __webpack_require__(211);
+	
+	var _componentsSchoolbooksEnglish2 = _interopRequireDefault(_componentsSchoolbooksEnglish);
+	
+	var _componentsSchoolbooksHistory = __webpack_require__(213);
+	
+	var _componentsSchoolbooksHistory2 = _interopRequireDefault(_componentsSchoolbooksHistory);
+	
+	var _componentsSchoolbooksMath = __webpack_require__(215);
+	
+	var _componentsSchoolbooksMath2 = _interopRequireDefault(_componentsSchoolbooksMath);
+	
+	var _componentsSchoolbooksPolisci = __webpack_require__(217);
+	
+	var _componentsSchoolbooksPolisci2 = _interopRequireDefault(_componentsSchoolbooksPolisci);
+	
+	var _componentsSchoolbooksPsych = __webpack_require__(219);
+	
+	var _componentsSchoolbooksPsych2 = _interopRequireDefault(_componentsSchoolbooksPsych);
+	
+	var _componentsSchoolbooksLanding = __webpack_require__(223);
+	
+	var _componentsSchoolbooksLanding2 = _interopRequireDefault(_componentsSchoolbooksLanding);
+	
+	var _componentsSchoolbooksHeader = __webpack_require__(237);
+	
+	var _componentsSchoolbooksHeader2 = _interopRequireDefault(_componentsSchoolbooksHeader);
+	
+	var $ = __webpack_require__(1);
+	
+	// legacy loading for bootstrap
+	window.jQuery = window.$ = $;
+	__webpack_require__(224);
+	
+	var app = {
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {
+	    _componentsSchoolbooksHeader2['default'].init();
+	    $('.response-container').html(_templatesSchoolScienceHtml2['default']);
+	  }
+	};
+	
+	module.exports = app;
+
+/***/ },
+/* 222 */
+/***/ function(module, exports) {
+
+	module.exports = "<!-- <ol class=\"breadcrumb\">\n  <li class=\"breadcrumb books-back\"><a href=\"#\">back</a></li>\n</ol> -->\n<ul class=\"school-books-list\">\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/1290957.The_Collapsing_Universe?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/asimov.png\"></a>\n      <div class=\"title\">The Collapsing Universe</div>\n      <div class=\"author\">Isaac Asimov</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/125286.The_Beak_of_the_Finch?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/beak.png\"></a>\n      <div class=\"title\">The Beak of the Finch</div>\n      <div class=\"author\">Jonathan Weiner</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/5958783-why-does-e-mc?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/cox.png\"></a>\n      <div class=\"title\">Why Does e=mc<sup>2</sup>? (and why should we care?)</div>\n      <div class=\"author\">Brian Cox and Jeff Forshaw</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/9449985-the-clockwork-universe?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/dolnick.png\"></a>\n      <div class=\"title\">The Clockwork Universe</div>\n      <div class=\"author\">Edward Dolnick</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/22435.The_Fabric_of_the_Cosmos?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/cosmos.png\"></a>\n      <div class=\"title\">The Fabric of the Cosmos</div>\n      <div class=\"author\">Brian Greene</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/18007564-the-martian?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/martian.png\"></a>\n      <div class=\"title\">The Martian</div>\n      <div class=\"author\">Andy Weir</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/11543794-better-than-human?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/human.png\"></a>\n      <div class=\"title\">Better Than Human</div>\n      <div class=\"author\">Allen Buchannan</div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/20696006-being-mortal?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/atul.png\"></a>\n      <div class=\"title\">Being Mortal</div>\n      <div class=\"author\">Atul Gawande</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/9800229-the-disappearing-spoon\" target=\"new\"><img class=\"book-image\" src=\"/images/books/spoon.png\"></a>\n      <div class=\"title\">The Disappearing Spoon</div>\n      <div class=\"author\">Sam Kean</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/17978489-the-future-of-the-mind?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/futuremind.png\"></a>\n      <div class=\"title\">The Future of the Mind</div>\n      <div class=\"author\">Michio Kaku</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/17910054-the-sixth-extinction?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/extinction.png\"></a>\n      <div class=\"title\">The Sixth Extinction</div>\n      <div class=\"author\">Elizabeth Kolbert</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/30192493-are-we-smart-enough-to-know-how-smart-animals-are\" target=\"new\"><img class=\"book-image\" src=\"/images/books/animals.png\"></a>\n      <div class=\"title\">Are we Smart Enough to Know How Smart Animals Are?</div>\n      <div class=\"author\">Frans DeWaal</div>\n    </div>\n  </li>\n</ul>\n";
+
+/***/ },
+/* 223 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _templatesSchoolSchoolBooksLandingHtml = __webpack_require__(210);
+	
+	var _templatesSchoolSchoolBooksLandingHtml2 = _interopRequireDefault(_templatesSchoolSchoolBooksLandingHtml);
+	
+	var $ = __webpack_require__(1);
+	
+	// legacy loading for bootstrap
+	window.jQuery = window.$ = $;
+	__webpack_require__(224);
+	
+	var app = {
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {
+	    $('.response-container').html(_templatesSchoolSchoolBooksLandingHtml2['default']);
+	  }
+	};
+	
+	module.exports = app;
+
+/***/ },
+/* 224 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// This file is autogenerated via the `commonjs` Grunt task. You can require() this file in a CommonJS environment.
+	__webpack_require__(225)
+	__webpack_require__(226)
+	__webpack_require__(227)
+	__webpack_require__(228)
+	__webpack_require__(229)
+	__webpack_require__(230)
+	__webpack_require__(231)
+	__webpack_require__(232)
+	__webpack_require__(233)
+	__webpack_require__(234)
+	__webpack_require__(235)
+	__webpack_require__(236)
+
+/***/ },
+/* 225 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -38597,7 +38975,7 @@
 
 
 /***/ },
-/* 215 */
+/* 226 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -38697,7 +39075,7 @@
 
 
 /***/ },
-/* 216 */
+/* 227 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -38823,7 +39201,7 @@
 
 
 /***/ },
-/* 217 */
+/* 228 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -39066,7 +39444,7 @@
 
 
 /***/ },
-/* 218 */
+/* 229 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -39283,7 +39661,7 @@
 
 
 /***/ },
-/* 219 */
+/* 230 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -39454,7 +39832,7 @@
 
 
 /***/ },
-/* 220 */
+/* 231 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -39797,7 +40175,7 @@
 
 
 /***/ },
-/* 221 */
+/* 232 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40317,7 +40695,7 @@
 
 
 /***/ },
-/* 222 */
+/* 233 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40431,7 +40809,7 @@
 
 
 /***/ },
-/* 223 */
+/* 234 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40609,7 +40987,7 @@
 
 
 /***/ },
-/* 224 */
+/* 235 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40770,7 +41148,7 @@
 
 
 /***/ },
-/* 225 */
+/* 236 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40938,182 +41316,91 @@
 
 
 /***/ },
-/* 226 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _templatesSchoolHistoryHtml = __webpack_require__(227);
+	var _templatesSchoolBookPageHeaderHtml = __webpack_require__(238);
 	
-	var _templatesSchoolHistoryHtml2 = _interopRequireDefault(_templatesSchoolHistoryHtml);
+	var _templatesSchoolBookPageHeaderHtml2 = _interopRequireDefault(_templatesSchoolBookPageHeaderHtml);
+	
+	var _componentsSchoolbooksEnglish = __webpack_require__(211);
+	
+	var _componentsSchoolbooksEnglish2 = _interopRequireDefault(_componentsSchoolbooksEnglish);
+	
+	var _componentsSchoolbooksHistory = __webpack_require__(213);
+	
+	var _componentsSchoolbooksHistory2 = _interopRequireDefault(_componentsSchoolbooksHistory);
+	
+	var _componentsSchoolbooksMath = __webpack_require__(215);
+	
+	var _componentsSchoolbooksMath2 = _interopRequireDefault(_componentsSchoolbooksMath);
+	
+	var _componentsSchoolbooksPolisci = __webpack_require__(217);
+	
+	var _componentsSchoolbooksPolisci2 = _interopRequireDefault(_componentsSchoolbooksPolisci);
+	
+	var _componentsSchoolbooksPsych = __webpack_require__(219);
+	
+	var _componentsSchoolbooksPsych2 = _interopRequireDefault(_componentsSchoolbooksPsych);
+	
+	var _componentsSchoolbooksScience = __webpack_require__(221);
+	
+	var _componentsSchoolbooksScience2 = _interopRequireDefault(_componentsSchoolbooksScience);
+	
+	var _componentsSchoolbooksLanding = __webpack_require__(223);
+	
+	var _componentsSchoolbooksLanding2 = _interopRequireDefault(_componentsSchoolbooksLanding);
 	
 	var $ = __webpack_require__(1);
 	
 	// legacy loading for bootstrap
 	window.jQuery = window.$ = $;
-	__webpack_require__(213);
+	__webpack_require__(224);
 	
 	var app = {
 	  init: function init() {
 	    app.render();
 	  },
 	  render: function render() {
-	    $('.response-container').html(_templatesSchoolHistoryHtml2['default']);
+	    $('.school-main').prepend(_templatesSchoolBookPageHeaderHtml2['default']);
+	    $('.english').click(function () {
+	      _componentsSchoolbooksEnglish2['default'].init();
+	    });
+	    $('.history').click(function () {
+	      _componentsSchoolbooksHistory2['default'].init();
+	    });
+	    $('.math').click(function () {
+	      _componentsSchoolbooksMath2['default'].init();
+	    });
+	    $('.politics').click(function () {
+	      _componentsSchoolbooksPolisci2['default'].init();
+	    });
+	    $('.psych').click(function () {
+	      _componentsSchoolbooksPsych2['default'].init();
+	    });
+	    $('.science').click(function () {
+	      _componentsSchoolbooksScience2['default'].init();
+	    });
+	    $('.home').click(function () {
+	      _componentsSchoolbooksLanding2['default'].init();
+	    });
 	  }
 	};
 	
 	module.exports = app;
 
 /***/ },
-/* 227 */
+/* 238 */
 /***/ function(module, exports) {
 
-	module.exports = "<!-- <ol class=\"breadcrumb\">\n  <li class=\"breadcrumb books-back\"><a href=\"#\">back</a></li>\n</ol> -->\n<ul class=\"school-books-list\">\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/7968243-cleopatra?ac=1&from_search=true\" target=\"new\"><img class =\"book-image\" src =\"/images/books/cleopatra.png\"></a>\n      <div class=\"title\">Cleopatra</div>\n      <div class=\"author\">by Stacy Schiff</div><br>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/6558145-abigail-adams?from_search=true&search_version=service\" target=\"new\"><img class =\"book-image\" src=\"/images/books/abigail.png\"></a>\n      <div class=\"title\">Abigail Adams</div>\n      <div class=\"author\">Woody Holton</div><br>   \n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/24602886-lafayette-in-the-somewhat-united-states\" target=\"new\"><img class =\"book-image\" src=\"/images/books/lafayette.png\"></a>\n      <div class=\"title\">Lafeyette in the Somewhat United States</div>\n      <div class=\"author\">Sarah Vowell</div>     \n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/18669169-the-sleepwalkers?from_search=true&search_version=service\" target=\"new\"><img class =\"book-image\" src=\"/images/books/sleepwalkers.png\"></a>\n      <div class=\"title\">The Sleepwalkers: How Europe Went to War in 1914</div>\n      <div class=\"author\">Christopher Munro Clark</div>\n    </div>      \n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/1843530.The_Progress_Paradox\" target=\"new\"><img class =\"book-image\" src =\"/images/books/progress.png\"></a>\n      <div class=\"title\">The Progress Paradox</div>\n      <div class=\"author\">Gregg Easterbrook</div><br>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/430027.Brother_I_m_Dying?from_search=true&search_version=service\" target=\"new\"><img class =\"book-image\" src=\"/images/books/brother.png\"></a>\n      <div class=\"title\">Brother, I'm Dying</div>\n      <div class=\"author\">Edwidge Dandicat</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/581915.The_Jungle\" target=\"new\"><img class =\"book-image\" src=\"/images/books/jungle.png\"></a>\n      <div class=\"title\">The Jungle</div>\n      <div class=\"author\">Upton Sinclair</div> \n    </div>    \n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/21.A_Short_History_of_Nearly_Everything?ac=1&from_search=true\" target=\"new\"><img class =\"book-image\" src=\"/images/books/bryson.png\"></a>\n      <div class=\"title\">A Short History of Nearly Everything</div>\n      <div class=\"author\">Bill Bryson</div>   \n    </div>  \n  </li>\n</ul>\n\n\n";
+	module.exports = "\n<div class=\"school-header\">\n  <nav class=\"school-navs\">\n    <a href=\" \" role=\"navitem\" class=\"option books\">Home</a>\n    <a href=\"#\" role=\"navitem\" class=\"option english\">English Literature</a>\n    <a href=\"#\" role=\"navitem\" class=\"option history\">History</a>\n    <a href=\"#\" role=\"navitem\" class=\"option math\">Math/Statistics</a>\n    <a href=\"#\" role=\"navitem\" class=\"option politics\">Political Science</a>\n    <a href=\"#\" role=\"navitem\" class=\"option psych\">Psychology</a>\n    <a href=\"#\" role=\"navitem\" class=\"option science\">Science</a>\n  </nav>\n</div>";
 
 /***/ },
-/* 228 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _templatesSchoolMathHtml = __webpack_require__(229);
-	
-	var _templatesSchoolMathHtml2 = _interopRequireDefault(_templatesSchoolMathHtml);
-	
-	var $ = __webpack_require__(1);
-	
-	// legacy loading for bootstrap
-	window.jQuery = window.$ = $;
-	__webpack_require__(213);
-	
-	var app = {
-	  init: function init() {
-	    app.render();
-	  },
-	  render: function render() {
-	    $('.response-container').html(_templatesSchoolMathHtml2['default']);
-	  }
-	};
-	
-	module.exports = app;
-
-/***/ },
-/* 229 */
-/***/ function(module, exports) {
-
-	module.exports = "<!-- <ol class=\"breadcrumb\">\n  <li class=\"breadcrumb books-back\"><a href=\"#\">back</a></li>\n</ol> -->\n<ul class=\"school-books-list\">\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/13588394-the-signal-and-the-noise?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/silver.png\"></a>\n      <div class=\"title\">The Signal and the Noise</div>\n      <div class=\"author\">Nate Silver</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/5060378-the-girl-who-played-with-fire?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/girl.png\"></a>\n      <div class=\"title\">The Girl who Played with Fire</div>\n      <div class=\"author\">Stieg Larsson</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/1301.Moneyball\" target=\"new\"><img class=\"book-image\" src=\"/images/books/moneyball.png\"></a>\n      <div class=\"title\">Moneyball</div>\n      <div class=\"author\">Michael Lewis</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/3181564-the-housekeeper-and-the-professor?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/ogawa.png\"></a>\n      <div class=\"title\">The Housekeeper and the Professor</div>\n      <div class=\"author\">Yogo Ogawa; translated by Stephen Snyder</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/6463967-the-big-short\" target=\"new\"><img class=\"book-image\" src=\"/images/books/bigshort.png\"></a>\n      <div class=\"title\">The Big Short</div>\n      <div class=\"author\">Michael Lewis</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/17986418-naked-statistics?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/naked.png\"></a>\n      <div class=\"title\">Naked Statistics</div>\n      <div class=\"author\">Charles Wheelan</div>\n    </div>\n  </li>    \n</ul>\n\n";
-
-/***/ },
-/* 230 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _templatesSchoolPolisciHtml = __webpack_require__(231);
-	
-	var _templatesSchoolPolisciHtml2 = _interopRequireDefault(_templatesSchoolPolisciHtml);
-	
-	var $ = __webpack_require__(1);
-	
-	// legacy loading for bootstrap
-	window.jQuery = window.$ = $;
-	__webpack_require__(213);
-	
-	var app = {
-	  init: function init() {
-	    app.render();
-	  },
-	  render: function render() {
-	    $('.response-container').html(_templatesSchoolPolisciHtml2['default']);
-	  }
-	};
-	
-	module.exports = app;
-
-/***/ },
-/* 231 */
-/***/ function(module, exports) {
-
-	module.exports = "<!-- <ol class=\"breadcrumb\">\n  <li class=\"breadcrumb books-back\"><a href=\"#\">back</a></li>\n</ol> -->\n<ul class=\"school-books-list\">\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/17851885-i-am-malala?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/malala.png\"></a>\n      <div class=\"title\">I am Malala</div>\n      <div class=\"author\">Malala Yousafzai</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/9742.The_Audacity_of_Hope?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/barack.png\"></a>\n      <div class=\"title\">The Audacity of Hope</div>\n      <div class=\"author\">Barack Obama</div>\n    </div>\n  </li>\n   <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/25489625-between-the-world-and-me?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/coates.png\"></a>\n      <div class=\"title\">Between the World and Me</div>\n      <div class=\"author\">Ta Nehisi Coates</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/1869.Nickel_and_Dimed?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/nickel.png\"></a>\n      <div class=\"title\">Nickel and Dimed</div>\n      <div class=\"author\">Barbarah Erenreich</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/4952.What_is_the_What?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/what.png\"></a>\n      <div class=\"title\">What is the What</div>\n      <div class=\"author\">Dave Eggers</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/18813642-bad-feminist?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/feminist.png\"></a>\n      <div class=\"title\">Bad Feminist</div>\n      <div class=\"author\">Roxanne Gay</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/32987.The_Greatest_Generation?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/brokaw.png\"></a>\n      <div class=\"title\">The Greatest Generation</div>\n      <div class=\"author\">Tom Brokaw</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/2936415-where-men-win-glory?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/tillman.png\"></a>\n      <div class=\"title\">Where Men Win Glory</div>\n      <div class=\"author\">Jon Krakauer</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/5632446-columbine?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/columbine.png\"></a>\n      <div class=\"title\">Columbine</div>\n      <div class=\"author\">Dave Cullen</div>\n    </div>\n  </li>\n</ul>\n\n";
-
-/***/ },
-/* 232 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _templatesSchoolPsychHtml = __webpack_require__(233);
-	
-	var _templatesSchoolPsychHtml2 = _interopRequireDefault(_templatesSchoolPsychHtml);
-	
-	var $ = __webpack_require__(1);
-	
-	// legacy loading for bootstrap
-	window.jQuery = window.$ = $;
-	__webpack_require__(213);
-	
-	var app = {
-	  init: function init() {
-	    app.render();
-	  },
-	  render: function render() {
-	    $('.response-container').html(_templatesSchoolPsychHtml2['default']);
-	  }
-	};
-	
-	module.exports = app;
-
-/***/ },
-/* 233 */
-/***/ function(module, exports) {
-
-	module.exports = "<!-- <ol class=\"breadcrumb\">\n  <li class=\"breadcrumb books-back\"><a href=\"#\">back</a></li>\n</ol> -->\n  <ul class=\"school-books-list\">\n    <li class=\"school-books-item col-md-5 col-md-offset-1\">\n      <div class=\"book-container\">\n        <a href=\"https://www.goodreads.com/book/show/6330678-a-thousand-days-of-wonder?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/wonder.png\"></a>\n        <div class=\"title\">1000 Days of Wonder</div>\n        <div class=\"author\">Charles Fernyhough</div>\n      </div>\n    </li>\n    <li class=\"school-books-item col-md-5 col-md-offset-1\">\n      <div class=\"book-container\">\n        <a href=\"https://www.goodreads.com/book/show/7641110-life-is-what-you-make-it?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/buffett.png\"></a>\n        <div class=\"title\">Life is What You Make It</div>\n        <div class=\"author\">Peter Buffett</div>\n      </div>\n    </li>\n    <li class=\"school-books-item col-md-5 col-md-offset-1\">\n      <div class=\"book-container\">\n        <a href=\"https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/thinking.png\"></a>\n        <div class=\"title\">Thinking, Fast and Slow</div>\n        <div class=\"author\">Daniel Kahneman</div>\n      </div>\n    </li>\n    <li class=\"school-books-item col-md-5 col-md-offset-1\">\n      <div class=\"book-container\">\n        <a href=\"https://www.goodreads.com/book/show/63697.The_Man_Who_Mistook_His_Wife_for_a_Hat_and_Other_Clinical_Tales?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/sacks.png\"></a>\n        <div class=\"title\">The Man Who Mistook His Wife for a Hat</div>\n        <div class=\"author\">Oliver Sacks</div>\n      </div>\n    </li>\n    <li class=\"school-books-item col-md-5 col-md-offset-1\">\n      <div class=\"book-container\">\n        <a href=\"https://www.goodreads.com/book/show/27539.On_Intelligence?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/intelligence.png\"></a>\n        <div class=\"title\">On Intelligence</div>\n        <div class=\"author\">Jeff Hawkins</div>\n      </div>\n    </li>\n    <li class=\"school-books-item col-md-5 col-md-offset-1\">\n      <div class=\"book-container\">\n        <a href=\"https://www.goodreads.com/book/show/77954.The_Second_Coming\" target=\"new\"><img class=\"book-image\" src=\"/images/books/percy.png\"></a>\n        <div class=\"title\">The Second Coming</div>\n        <div class=\"author\">Walker Percy</div>\n      </div>\n    </li>\n    <li class=\"school-books-item col-md-5 col-md-offset-1\">\n      <div class=\"book-container\">\n        <a href=\"https://www.goodreads.com/book/show/25430578-cure?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/cure.png\"></a>\n        <div class=\"title\">Cure: A Journey into the Science of Mind over Body</div>\n        <div class=\"author\">Jo Marchant</div>\n      </div>\n    </li>\n    <li class=\"school-books-item col-md-5 col-md-offset-1\">\n      <div class=\"book-container\">\n        <a href=\"https://www.goodreads.com/book/show/99300.The_Yellow_Wallpaper_and_Other_Stories?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/yellow.png\"></a>\n        <div class=\"title\">The Yellow Wallpaper</div>\n        <div class=\"author\">Charlotte Perkins Gilman</div>\n      </div>\n    </li>\n  </ul>\n";
-
-/***/ },
-/* 234 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _templatesSchoolScienceHtml = __webpack_require__(235);
-	
-	var _templatesSchoolScienceHtml2 = _interopRequireDefault(_templatesSchoolScienceHtml);
-	
-	var $ = __webpack_require__(1);
-	
-	// legacy loading for bootstrap
-	window.jQuery = window.$ = $;
-	__webpack_require__(213);
-	
-	var app = {
-	  init: function init() {
-	    app.render();
-	  },
-	  render: function render() {
-	    $('.response-container').html(_templatesSchoolScienceHtml2['default']);
-	  }
-	};
-	
-	module.exports = app;
-
-/***/ },
-/* 235 */
-/***/ function(module, exports) {
-
-	module.exports = "<!-- <ol class=\"breadcrumb\">\n  <li class=\"breadcrumb books-back\"><a href=\"#\">back</a></li>\n</ol> -->\n<ul class=\"school-books-list\">\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/1290957.The_Collapsing_Universe?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/asimov.png\"></a>\n      <div class=\"title\">The Collapsing Universe</div>\n      <div class=\"author\">Isaac Asimov</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/125286.The_Beak_of_the_Finch?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/beak.png\"></a>\n      <div class=\"title\">The Beak of the Finch</div>\n      <div class=\"author\">Jonathan Weiner</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/5958783-why-does-e-mc?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/cox.png\"></a>\n      <div class=\"title\">Why Does e=mc<sup>2</sup>? (and why should we care?)</div>\n      <div class=\"author\">Brian Cox and Jeff Forshaw</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/9449985-the-clockwork-universe?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/dolnick.png\"></a>\n      <div class=\"title\">The Clockwork Universe</div>\n      <div class=\"author\">Edward Dolnick</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/22435.The_Fabric_of_the_Cosmos?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/cosmos.png\"></a>\n      <div class=\"title\">The Fabric of the Cosmos</div>\n      <div class=\"author\">Brian Greene</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/18007564-the-martian?from_search=true&search_version=service\" target=\"new\"><img class=\"book-image\" src=\"/images/books/martian.png\"></a>\n      <div class=\"title\">The Martian</div>\n      <div class=\"author\">Andy Weir</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/11543794-better-than-human?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/human.png\"></a>\n      <div class=\"title\">Better Than Human</div>\n      <div class=\"author\">Allen Buchannan</div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/20696006-being-mortal?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/atul.png\"></a>\n      <div class=\"title\">Being Mortal</div>\n      <div class=\"author\">Atul Gawande</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/9800229-the-disappearing-spoon\" target=\"new\"><img class=\"book-image\" src=\"/images/books/spoon.png\"></a>\n      <div class=\"title\">The Disappearing Spoon</div>\n      <div class=\"author\">Sam Kean</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/17978489-the-future-of-the-mind?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/futuremind.png\"></a>\n      <div class=\"title\">The Future of the Mind</div>\n      <div class=\"author\">Michio Kaku</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/17910054-the-sixth-extinction?ac=1&from_search=true\" target=\"new\"><img class=\"book-image\" src=\"/images/books/extinction.png\"></a>\n      <div class=\"title\">The Sixth Extinction</div>\n      <div class=\"author\">Elizabeth Kolbert</div>\n    </div>\n  </li>\n  <li class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n      <a href=\"https://www.goodreads.com/book/show/30192493-are-we-smart-enough-to-know-how-smart-animals-are\" target=\"new\"><img class=\"book-image\" src=\"/images/books/animals.png\"></a>\n      <div class=\"title\">Are we Smart Enough to Know How Smart Animals Are?</div>\n      <div class=\"author\">Frans DeWaal</div>\n    </div>\n  </li>\n</ul>\n";
-
-/***/ },
-/* 236 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41124,19 +41411,19 @@
 	
 	var _backbone2 = _interopRequireDefault(_backbone);
 	
-	var _pagesBooksBooksModel = __webpack_require__(237);
+	var _pagesBooksBooksModel = __webpack_require__(240);
 	
 	var _pagesBooksBooksModel2 = _interopRequireDefault(_pagesBooksBooksModel);
 	
-	var _pagesBooksBookItemView = __webpack_require__(239);
+	var _pagesBooksBookItemView = __webpack_require__(242);
 	
 	var _pagesBooksBookItemView2 = _interopRequireDefault(_pagesBooksBookItemView);
 	
-	var _pagesBooksBooksListView = __webpack_require__(241);
+	var _pagesBooksBooksListView = __webpack_require__(244);
 	
 	var _pagesBooksBooksListView2 = _interopRequireDefault(_pagesBooksBooksListView);
 	
-	var _pagesBooksAddBookView = __webpack_require__(243);
+	var _pagesBooksAddBookView = __webpack_require__(246);
 	
 	var _pagesBooksAddBookView2 = _interopRequireDefault(_pagesBooksAddBookView);
 	
@@ -41188,7 +41475,7 @@
 	module.exports = bookController;
 
 /***/ },
-/* 237 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41207,7 +41494,7 @@
 	
 	var _backbone2 = _interopRequireDefault(_backbone);
 	
-	var _lscache = __webpack_require__(238);
+	var _lscache = __webpack_require__(241);
 	
 	var _lscache2 = _interopRequireDefault(_lscache);
 	
@@ -41276,7 +41563,7 @@
 	module.exports = bookModel;
 
 /***/ },
-/* 238 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -41632,7 +41919,7 @@
 
 
 /***/ },
-/* 239 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41651,7 +41938,7 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _templatesBooksBookItemHtml = __webpack_require__(240);
+	var _templatesBooksBookItemHtml = __webpack_require__(243);
 	
 	var _templatesBooksBookItemHtml2 = _interopRequireDefault(_templatesBooksBookItemHtml);
 	
@@ -41677,13 +41964,13 @@
 	module.exports = BookItemView;
 
 /***/ },
-/* 240 */
+/* 243 */
 /***/ function(module, exports) {
 
 	module.exports = "\n  <div class=\"title col-md-3\">{{title}}</div>\n  <div class=\"author col-md-3\">{{author}}</div>\n  <div class=\"friend col-md-2\">{{friend}}</div>\n  <div class=\"genre col-md-2\">{{genre}}</div>\n  <div class=\"rating col-md-1\"><input type=\"checkbox\"></div>\n  <div class=\"read col-md-1\"><button type=\"button\" class=\"close close-book\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button></div>\n";
 
 /***/ },
-/* 241 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41706,11 +41993,11 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _pagesBooksBookItemView = __webpack_require__(239);
+	var _pagesBooksBookItemView = __webpack_require__(242);
 	
 	var _pagesBooksBookItemView2 = _interopRequireDefault(_pagesBooksBookItemView);
 	
-	var _templatesBooksBookListHtml = __webpack_require__(242);
+	var _templatesBooksBookListHtml = __webpack_require__(245);
 	
 	var _templatesBooksBookListHtml2 = _interopRequireDefault(_templatesBooksBookListHtml);
 	
@@ -41757,13 +42044,13 @@
 	module.exports = BookListView;
 
 /***/ },
-/* 242 */
+/* 245 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"book-list-container\">\n  <ul class=\"list-group book-list\">\n    <li class=\"list-group-item row book-item\">\n      <div class=\"col-md-3\">Title</div>\n      <div class=\"col-md-3\">Author</div>\n      <div class=\"col-md-2\">Friend</div>\n      <div class=\"col-md-2\">Genre</div>\n      <div class=\"col-md-1\">Got it!</div>\n      <div class=\"col-md-1\">Read</div>   \n    </li>\n  </ul>\n  <button class=\"btn btn-default btn-add-book\">New book!</button>\n</div>\n\n\n\n";
 
 /***/ },
-/* 243 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41778,7 +42065,7 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _templatesBooksNewBookFormHtml = __webpack_require__(244);
+	var _templatesBooksNewBookFormHtml = __webpack_require__(247);
 	
 	var _templatesBooksNewBookFormHtml2 = _interopRequireDefault(_templatesBooksNewBookFormHtml);
 	
@@ -41815,13 +42102,13 @@
 	module.exports = AddBookView;
 
 /***/ },
-/* 244 */
+/* 247 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"new-book-container\">\n  <form>\n    <div class=\"form-group form-label\">\n      <label for=\"title\">Book Title</label>\n      <input type=\"text\" class=\"form-control title\" placeholder=\"Title\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"author\">Author</label>\n      <input type=\"text\" class=\"form-control author\" placeholder=\"Author\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"friend\">Who recommended it?</label>\n      <input type=\"text\" class=\"form-control friend\" placeholder=\"New Friend!\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"genre\">Genre</label>\n      <input type=\"text\" class=\"form-control genre\" placeholder=\"Genre\">\n    </div>\n    <svg class=\"book-shelf btn btn-add\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" viewBox=\"0 0 84 94\" height=\"94\" width=\"84\">\n      <path fill=\"none\" d=\"M37.612 92.805L4.487 73.71c-2.75-1.587-4.45-4.52-4.45-7.687L.008 27.877c-.003-3.154 1.676-6.063 4.405-7.634L37.558 1.167c2.73-1.57 6.096-1.566 8.835.013l33.124 19.096c2.75 1.586 4.45 4.518 4.45 7.686l.028 38.146c.002 3.154-1.677 6.063-4.406 7.634L46.445 92.818c-2.73 1.57-6.096 1.566-8.834-.013z\"/>\n      <g class=\"book-shelf__book book-shelf__book--one\" fill-rule=\"evenodd\">\n        <path fill=\"#5199fc\" d=\"M31 29h4c1.105 0 2 .895 2 2v29c0 1.105-.895 2-2 2h-4c-1.105 0-2-.895-2-2V31c0-1.105.895-2 2-2z\"/>\n        <path fill=\"#afd7fb\" d=\"M34 36h-2c-.552 0-1-.448-1-1s.448-1 1-1h2c.552 0 1 .448 1 1s-.448 1-1 1zm-2 1h2c.552 0 1 .448 1 1s-.448 1-1 1h-2c-.552 0-1-.448-1-1s.448-1 1-1z\"/>\n      </g>\n      <g class=\"book-shelf__book book-shelf__book--two\" fill-rule=\"evenodd\">\n        <path fill=\"#ff9868\" d=\"M39 34h6c1.105 0 2 .895 2 2v24c0 1.105-.895 2-2 2h-6c-1.105 0-2-.895-2-2V36c0-1.105.895-2 2-2z\"/>\n        <path fill=\"#d06061\" d=\"M42 38c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2z\"/>\n      </g>\n      <g class=\"book-shelf__book book-shelf__book--three\" fill-rule=\"evenodd\">\n        <path fill=\"#ff5068\" d=\"M49 32h2c1.105 0 2 .86 2 1.92v25.906c0 1.06-.895 1.92-2 1.92h-2c-1.105 0-2-.86-2-1.92V33.92c0-1.06.895-1.92 2-1.92z\"/>\n        <path fill=\"#d93368\" d=\"M50 35c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1s-1-.448-1-1v-2c0-.552.448-1 1-1z\"/>\n      </g>\n      <g fill-rule=\"evenodd\">\n        <path class=\"book-shelf__shelf\" fill=\"#ae8280\" d=\"M21 60h40c1.105 0 2 .895 2 2s-.895 2-2 2H21c-1.105 0-2-.895-2-2s.895-2 2-2z\"/>\n        <path fill=\"#855f6d\" d=\"M51.5 67c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5zm-21 0c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5z\"/>\n      </g>\n    </svg>\n  </form>\n </div>";
 
 /***/ },
-/* 245 */
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41832,15 +42119,15 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _templatesTimerModeHtml = __webpack_require__(246);
+	var _templatesTimerModeHtml = __webpack_require__(249);
 	
 	var _templatesTimerModeHtml2 = _interopRequireDefault(_templatesTimerModeHtml);
 	
-	var _componentsTimerContinuous = __webpack_require__(247);
+	var _componentsTimerContinuous = __webpack_require__(250);
 	
 	var _componentsTimerContinuous2 = _interopRequireDefault(_componentsTimerContinuous);
 	
-	var _componentsTimerStartStop = __webpack_require__(249);
+	var _componentsTimerStartStop = __webpack_require__(252);
 	
 	var _componentsTimerStartStop2 = _interopRequireDefault(_componentsTimerStartStop);
 	
@@ -41865,13 +42152,13 @@
 	module.exports = app;
 
 /***/ },
-/* 246 */
+/* 249 */
 /***/ function(module, exports) {
 
 	module.exports = "<h1 class=\"timer-mode\">Mode:</h1>\n<button class=\"btn btn-default btn-mode-continuous\">Continuous</button>\n<button class=\"btn btn-default btn-mode-start-stop\">Start/Stop</button>";
 
 /***/ },
-/* 247 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41882,7 +42169,7 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _templatesTimerContinuousHtml = __webpack_require__(248);
+	var _templatesTimerContinuousHtml = __webpack_require__(251);
 	
 	var _templatesTimerContinuousHtml2 = _interopRequireDefault(_templatesTimerContinuousHtml);
 	
@@ -42009,13 +42296,13 @@
 	module.exports = app;
 
 /***/ },
-/* 248 */
+/* 251 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"counter\">\n  <span class=\"minutes\"></span> .\n  <span class=\"hundredths\"></span>\n</div>  \n<div class=\"controls\">\n  <button class=\"btn btn-default start-button\">start</button>\n  <button class=\"btn btn-default split-button\">split</button>\n  <button class=\"btn btn-default reset-button\">reset</button>\n</div>\n<div class=\"data\">\n  <div class=\"cum-time\">Cumulative Time</div>\n  <div class=\"ind-time\">Individual Time</div>\n</div>\n\n";
 
 /***/ },
-/* 249 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42026,7 +42313,7 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _templatesTimerStartStopHtml = __webpack_require__(250);
+	var _templatesTimerStartStopHtml = __webpack_require__(253);
 	
 	var _templatesTimerStartStopHtml2 = _interopRequireDefault(_templatesTimerStartStopHtml);
 	
@@ -42102,13 +42389,13 @@
 	module.exports = app;
 
 /***/ },
-/* 250 */
+/* 253 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"counter\">00.00</div>  \n<button class=\"btn btn-default ss-start-stop-button\">start</button>\n<button class=\"btn btn-default ss-reset-button\">reset</button>\n<div class=\"time\">Time</div>\n";
 
 /***/ },
-/* 251 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42119,11 +42406,11 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _templatesVDTVdtInstructionsHtml = __webpack_require__(252);
+	var _templatesVDTVdtInstructionsHtml = __webpack_require__(255);
 	
 	var _templatesVDTVdtInstructionsHtml2 = _interopRequireDefault(_templatesVDTVdtInstructionsHtml);
 	
-	var _templatesVDTVdtItemsHtml = __webpack_require__(253);
+	var _templatesVDTVdtItemsHtml = __webpack_require__(256);
 	
 	var _templatesVDTVdtItemsHtml2 = _interopRequireDefault(_templatesVDTVdtItemsHtml);
 	
@@ -42150,19 +42437,19 @@
 	module.exports = app;
 
 /***/ },
-/* 252 */
+/* 255 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"vdt-container\">\n  <h1 class=\"vdt-title\">Visual Designs</h1>\n  <h2 class=\"vdt-instructions\">\n    For each item on this test, look at the two pictures and click on the one you like better.\n  </h2>\n  <button class=\"btn btn-default btn-start\">Start</button>\n</div>";
 
 /***/ },
-/* 253 */
+/* 256 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"1a\" src=\"/images/VDT/vdt-1a.png\">\n  <img class=\"vdt-image\" id=\"1b\" src=\"/images/VDT/vdt-1b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"2a\" src=\"/images/VDT/vdt-2a.png\">\n  <img class=\"vdt-image\" id=\"2b\" src=\"/images/VDT/vdt-2b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"3a\" src=\"/images/VDT/vdt-3a.png\">\n  <img class=\"vdt-image\" id=\"3b\" src=\"/images/VDT/vdt-3b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"4a\" src=\"/images/VDT/vdt-4a.png\">\n  <img class=\"vdt-image\" id=\"4b\" src=\"/images/VDT/vdt-4b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"5a\" src=\"/images/VDT/vdt-5a.png\">\n  <img class=\"vdt-image\" id=\"5b\" src=\"/images/VDT/vdt-5b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"6a\" src=\"/images/VDT/vdt-6a.png\">\n  <img class=\"vdt-image\" id=\"6b\" src=\"/images/VDT/vdt-6b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"7a\" src=\"/images/VDT/vdt-7a.png\">\n  <img class=\"vdt-image\" id=\"7b\" src=\"/images/VDT/vdt-7b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"8a\" src=\"/images/VDT/vdt-8a.png\">\n  <img class=\"vdt-image\" id=\"8b\" src=\"/images/VDT/vdt-8b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"9a\" src=\"/images/VDT/vdt-9a.png\">\n  <img class=\"vdt-image\" id=\"9b\" src=\"/images/VDT/vdt-9b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"10a\" src=\"/images/VDT/vdt-10a.png\">\n  <img class=\"vdt-image\" id=\"10b\" src=\"/images/VDT/vdt-10b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"11a\" src=\"/images/VDT/vdt-11a.png\">\n  <img class=\"vdt-image\" id=\"11b\" src=\"/images/VDT/vdt-11b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"12a\" src=\"/images/VDT/vdt-12a.png\">\n  <img class=\"vdt-image\" id=\"12b\" src=\"/images/VDT/vdt-12b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"13a\" src=\"/images/VDT/vdt-13a.png\">\n  <img class=\"vdt-image\" id=\"13b\" src=\"/images/VDT/vdt-13b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"14a\" src=\"/images/VDT/vdt-14a.png\">\n  <img class=\"vdt-image\" id=\"14b\" src=\"/images/VDT/vdt-14b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"15a\" src=\"/images/VDT/vdt-15a.png\">\n  <img class=\"vdt-image\" id=\"15b\" src=\"/images/VDT/vdt-15b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"16a\" src=\"/images/VDT/vdt-16a.png\">\n  <img class=\"vdt-image\" id=\"16b\" src=\"/images/VDT/vdt-16b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"17a\" src=\"/images/VDT/vdt-17a.png\">\n  <img class=\"vdt-image\" id=\"17b\" src=\"/images/VDT/vdt-17b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"18a\" src=\"/images/VDT/vdt-18a.png\">\n  <img class=\"vdt-image\" id=\"18b\" src=\"/images/VDT/vdt-18b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"19a\" src=\"/images/VDT/vdt-19a.png\">\n  <img class=\"vdt-image\" id=\"19b\" src=\"/images/VDT/vdt-19b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"20a\" src=\"/images/VDT/vdt-20a.png\">\n  <img class=\"vdt-image\" id=\"20b\" src=\"/images/VDT/vdt-20b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"21a\" src=\"/images/VDT/vdt-21a.png\">\n  <img class=\"vdt-image\" id=\"21b\" src=\"/images/VDT/vdt-21b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"22a\" src=\"/images/VDT/vdt-22a.png\">\n  <img class=\"vdt-image\" id=\"22b\" src=\"/images/VDT/vdt-22b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"23a\" src=\"/images/VDT/vdt-23a.png\">\n  <img class=\"vdt-image\" id=\"23b\" src=\"/images/VDT/vdt-23b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"24a\" src=\"/images/VDT/vdt-24a.png\">\n  <img class=\"vdt-image\" id=\"24b\" src=\"/images/VDT/vdt-24b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"25a\" src=\"/images/VDT/vdt-25a.png\">\n  <img class=\"vdt-image\" id=\"25b\" src=\"/images/VDT/vdt-25b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"26a\" src=\"/images/VDT/vdt-26a.png\">\n  <img class=\"vdt-image\" id=\"26b\" src=\"/images/VDT/vdt-26b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"27a\" src=\"/images/VDT/vdt-27a.png\">\n  <img class=\"vdt-image\" id=\"27b\" src=\"/images/VDT/vdt-27b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"28a\" src=\"/images/VDT/vdt-28a.png\">\n  <img class=\"vdt-image\" id=\"28b\" src=\"/images/VDT/vdt-28b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"29a\" src=\"/images/VDT/vdt-29a.png\">\n  <img class=\"vdt-image\" id=\"29b\" src=\"/images/VDT/vdt-29b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"30a\" src=\"/images/VDT/vdt-30a.png\">\n  <img class=\"vdt-image\" id=\"30b\" src=\"/images/VDT/vdt-30b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"31a\" src=\"/images/VDT/vdt-31a.png\">\n  <img class=\"vdt-image\" id=\"31b\" src=\"/images/VDT/vdt-31b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"32a\" src=\"/images/VDT/vdt-32a.png\">\n  <img class=\"vdt-image\" id=\"32b\" src=\"/images/VDT/vdt-32b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"33a\" src=\"/images/VDT/vdt-33a.png\">\n  <img class=\"vdt-image\" id=\"33b\" src=\"/images/VDT/vdt-33b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"34a\" src=\"/images/VDT/vdt-34a.png\">\n  <img class=\"vdt-image\" id=\"34b\" src=\"/images/VDT/vdt-34b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"35a\" src=\"/images/VDT/vdt-35a.png\">\n  <img class=\"vdt-image\" id=\"35b\" src=\"/images/VDT/vdt-35b.png\">\n</div>\n<hr> \n";
 
 /***/ },
-/* 254 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
