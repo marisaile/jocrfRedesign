@@ -1,41 +1,49 @@
 var $ = require('jquery');
 
-// legacy loading for bootstrap
 window.jQuery = window.$ = $;
 require('bootstrap');
+import Handlebars from 'handlebars';
+import _ from 'underscore';
 import landing from 'templates/school/schoolBooksLanding.html';
+import template from 'templates/school/schoolBookContainer.html';
 
-import english from 'components/schoolbooks/english';
-import history from 'components/schoolbooks/history';
-import math from 'components/schoolbooks/math';
-import polisci from 'components/schoolbooks/polisci';
-import psych from 'components/schoolbooks/psych';
-import science from 'components/schoolbooks/science';
+var compiledTemplate = Handlebars.compile(template);
+var books = [];
 
 var app = {
   init: function(){
     app.render();
   },
   render: function(){
-    $('.response-container').html(landing);
-    $('.eng').click(function(){
-      english.init();
+    $('.school-main').html(landing);
+    app.selectSubject();
+  },
+  selectSubject: function(){
+    $('a.option').click(function(){
+      app.fetchBooks();
     });
-    $('.his').click(function(){
-      history.init();
+  },
+  fetchBooks: function(){
+    $.ajax({
+      url: '/api/books',
+      method: 'GET',
+      complete: function(response){
+        var dataString = response.responseText;
+        var data = JSON.parse(dataString);
+        books = data;   
+        app.displayBooks();
+      }  
     });
-    $('.math').click(function(){
-      math.init();
+  },
+  displayBooks: function() {    
+    // var currentSubject = 'english';
+    // var filteredBooks = books.filter(function(book){
+    //   return (book.subject === currentSubject);
+    // });
+    var booksHtml = books.map(function(book){
+      return compiledTemplate(book);
     });
-    $('.pol').click(function(){
-      polisci.init();
-    });
-    $('.psy').click(function(){
-      psych.init();
-    });
-    $('.sci').click(function(){
-      science.init();
-    });
+    $('.school-main').html(booksHtml);
   }
 };
 

@@ -20,10 +20,10 @@ var app = {
       minutes = Math.floor(timeDifference / 60); 
       hundredths = Math.floor(timeDifference / 0.6) % 100;
       if (minutes < 10) {
-        minutes = '0' + minutes; //converting to a string
+        minutes = '0' + minutes; // converting to a string
       }
       if (hundredths < 10) { 
-        hundredths = '0' + hundredths; //converting to a string
+        hundredths = '0' + hundredths; // converting to a string
       }
       endTime = (minutes + '.' + hundredths);
       $('.counter').html(endTime);
@@ -36,7 +36,7 @@ var app = {
       interval = clearInterval(interval);
       var indTime = Math.round(endTime * 100);
       $('.timer-container .time').append('<br />' + indTime);
-        splitTimes.push(indTime);
+      splitTimes.push(indTime);
       $('.counter').html('00' + '.' + '00' );
     };
     // var splitTimer = function(){
@@ -63,7 +63,7 @@ var app = {
       } else {
         stopTimer();
         $('.ss-start-stop-button').html('start');
-        }
+      }
     }); 
     // $('.timer-container .split-button').on('click', splitTimer);
     $('.timer-container .ss-reset-button').on('click', resetTimer);
@@ -71,3 +71,4 @@ var app = {
 };
 
 module.exports = app;
+

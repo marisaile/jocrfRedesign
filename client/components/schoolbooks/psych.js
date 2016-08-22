@@ -5,22 +5,16 @@ window.jQuery = window.$ = $;
 require('bootstrap');
 
 import psych from 'templates/school/psych.html';
-import english from 'components/schoolbooks/english';
-import history from 'components/schoolbooks/history';
-import math from 'components/schoolbooks/math';
-import polisci from 'components/schoolbooks/polisci';
-import science from 'components/schoolbooks/science';
-import landing from 'components/schoolbooks/landing';
 import header from 'components/schoolbooks/header';
 
-var app =  {
+var app = {
   init: function(){
     app.render();
   },
   render: function(){
-    header.init();
-    $('.response-container').html(psych);
+    $('.school-main').html(psych);
   }
 };
 
 module.exports = app;
+

@@ -18,29 +18,32 @@ var app = {
     app.render();
   },
   render: function(){
-  	$('.school-main').prepend(header);
-  	$('.english').click(function(){
+    $('.school-main').html();
+    $('.school-main').prepend(header);
+    $('.eng').click(function(){
       english.init();
     });
-    $('.history').click(function(){
+    $('.his').click(function(){
       history.init();
     });
     $('.math').click(function(){
       math.init();
     });
-    $('.politics').click(function(){
+    $('.pol').click(function(){
       polisci.init();
     });
-    $('.psych').click(function(){
+    $('.psy').click(function(){
       psych.init();
     });
-    $('.science').click(function(){
+    $('.sci').click(function(){
       science.init();
     });
     $('.home').click(function(){
       landing.init();
-    });
+    })
   }
 };
 
 module.exports = app;
+
+

@@ -6,12 +6,14 @@ require('bootstrap');
 
 import landing from 'templates/school/schoolBooksLanding.html';
 
+
 var app = {
   init: function(){
     app.render();
   },
   render: function(){
-    $('.response-container').html(landing);
+    $('.school-main').html(landing);
+    
   }
 };
 

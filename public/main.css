@@ -1,4 +1,103 @@
-@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Prompt);@import url(https://fonts.googleapis.com/css?family=Lato);@import url(https://fonts.googleapis.com/css?family=Proza+Libre:400,500);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Rock+Salt);@import url(https://fonts.googleapis.com/css?family=Over+the+Rainbow);body.override-bootstrap {
+@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Prompt);@import url(https://fonts.googleapis.com/css?family=Lato);@import url(https://fonts.googleapis.com/css?family=Proza+Libre:400,500);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Rock+Salt);@import url(https://fonts.googleapis.com/css?family=Over+the+Rainbow);/*  body.landing-page {
+    margin: 0;
+    background-color: #720EFF;
+
+    .nav-items {
+      position: relative;
+      display: block;
+      width: 85vw;
+      height: 85vh;
+      margin: 5vh auto;
+      text-align: center;
+    
+      a.landing-nav {
+        display: inline-block;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 30px;
+        color: #FFFEFF;
+        margin: 5vw; 
+      }
+      a.landing-nav:hover {
+        text-decoration: none;
+        color: #323333;
+      }
+    }
+  }
+  .cloud {
+    width: 350px; height: 120px;
+    
+    background: #f2f9fe;
+    background: linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+    background: -webkit-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+    background: -moz-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+    background: -ms-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+    background: -o-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+    
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    
+    position: relative;
+    margin: 120px auto 20px;
+
+    a.marisaile {
+      display: block;
+      font-family: 'Montez', cursive;
+      font-size: 6vmin;
+      color: #FFFEFF;
+      /*line-height: 50px;*/
+/*margin-right: 6vw;
+      margin-left: 4vw;
+
+      span {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1vmin;
+        color: #FFFEFF;
+      }
+      span:hover {
+        text-decoration: none;
+        color: #323333;
+      }
+    }
+    a.marisaile:hover {
+      text-decoration: none;
+      color: #323333;
+    }
+  }
+
+  .cloud:after, .cloud:before {
+    content: '';
+    position: absolute;
+    background: #f2f9fe;
+    z-index: -1
+  }
+
+  .cloud:after {
+    width: 100px; height: 100px;
+    top: -50px; left: 50px;
+    
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+  }
+
+  .cloud:before {
+    width: 180px; height: 180px;
+    top: -90px; right: 50px;
+    
+    border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+  }
+    
+
+      
+
+
+
+
+*/
+body.override-bootstrap {
   margin: 0;
   background-color: #F5F4F5;
 }
@@ -340,13 +439,13 @@ input.search-photo {
   margin-right: 1.5vw;
 }
 
-.response-container {
+.school-main {
   position: relative;
   display: block;
   width: 100%;
 }
 
-.response-container ul.school-books-list {
+.school-main ul.school-books-list {
   position: relative;
   display: block;
   top: 1.25vh;
@@ -354,13 +453,13 @@ input.search-photo {
   list-style-type: none;
 }
 
-.response-container ul.school-books-list li.school-books-item.col-md-5 {
+.school-main ul.school-books-list li.school-books-item.col-md-5 {
   list-style-image: none;
   /*width: 40vw;*/
   /*margin-right: 10vw;*/
 }
 
-.response-container .book-container {
+.school-main .book-container {
   position: relative;
   display: inline-block;
   width: 32vw;
@@ -369,7 +468,7 @@ input.search-photo {
   margin-bottom: 3vh;
 }
 
-.response-container .book-container img.book-image {
+.school-main .book-container img.book-image {
   position: relative;
   left: -2vw;
   top: 2.75vh;
@@ -378,7 +477,7 @@ input.search-photo {
   box-shadow: 0px 2px 2px 3px rgba(210, 214, 213, 0.8);
 }
 
-.response-container .book-container .title {
+.school-main .book-container .title {
   position: relative;
   left: 7vw;
   top: -3vh;
@@ -389,7 +488,7 @@ input.search-photo {
   text-align: left;
 }
 
-.response-container .book-container .author {
+.school-main .book-container .author {
   position: relative;
   left: 7vw;
   top: -4vh;
@@ -401,7 +500,7 @@ input.search-photo {
   perspective-origin: 10% 25%;
 }
 
-.response-container li .book-container:hover {
+.school-main li .book-container:hover {
   background-color: #fff;
   box-shadow: 0px 2px 2px 1px rgba(210, 214, 213, 0.5);
   transform: translate3d(1px, 10px, 60px);

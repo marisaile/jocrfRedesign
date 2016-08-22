@@ -30,19 +30,20 @@ router.post('/api', function(req, res){
   });
 });
 
-// var bookDatabasePath = __dirname + '/bookDatabase.json';
-// router.get('/api', function(req, res){
-//   // read in the database
-//   fs.readFile(bookDatabasePath, function(err, data){
-//     if (err) { console.log(err); }
-//     // send a response
-//     res.writeHead(200, {'Content-Type': 'text/json'});
-//     res.write(data);
-//     res.end();    
-//   });
-// });
+var bookDatabasePath = __dirname + '/bookDatabase.json';
 
-// router.post('/api', function(req, res){
+router.get('/api/books', function(req, res){
+  // read in the database
+    fs.readFile(bookDatabasePath, function(err, data){
+      if (err) { console.log(err); }
+      // send a response
+      res.writeHead(200, {'Content-Type': 'text/json'});
+      res.write(data);
+      res.end();    
+    });
+});
+
+// router.post('/books', function(req, res){
 //   var book = req.body.books;
 //   fs.writeFile(bookDatabasePath, books, function(err){
 //     if (err) { console.log(err); }

@@ -5,9 +5,10 @@ var minutes;
 var hundredths;
 var prevMinutes;
 var prevHundredths;
-var startTime;
 var endTime;
+var startTime;
 var interval;
+var isPaused = false;
 var timeDifference;
 var lapCount = [];
 
@@ -17,70 +18,48 @@ var app = {
   },
   render: function(){
     app.timerInit();
-    var stringifyTime = function(minutes, hundredths) {
-      if (minutes < 10) {
-        minutes = '0' + minutes;
-      } if (hundredths < 10) {
-        hundredths = '0' + hundredths;
-      } 
-      $('.counter').html(minutes + '.' + hundredths);
-    };
-    var runTimer = function(){
-      startTime = Date.now();
-      prevMinutes = minutes;
-      prevHundredths = hundredths;
-      var updateTimer = setInterval(function(){
-        timeDifference = Date.now() - startTime;
-        minutes = Math.floor((timeDifference / 1000 / 60) + prevMinutes) % 60;
-        hundredths = Math.floor((timeDifference / 1000 / 0.6) + prevHundredths) % 100;
-        stringifyTime();
-      }, 100);
-    };
-    var pauseTimer = function(){
-      interval = clearInterval(interval);
-    };
     $('.start-button').on('click', function(){
       if ($('.start-button').html() === 'start') {
-          runTimer();
-          $('.start-button').html('pause');
+        app.runTimer();
+        $('.start-button').html('pause');
       } else if ($('.start-button').html() === 'pause') {
-        pauseTimer();
+        app.pauseTimer();
         $('.start-button').html('resume');
       } else {
-        runTimer();
+        app.resumeTimer();
         $('.start-button').html('pause');
       }        
     }); 
   },
-  timerInit: function(minutes, hundredths){
-      $('.timer-container').html(timer);
-      minutes = '00';
-      hundredths = '00';
-      $('.counter').html(minutes + '.' + hundredths);
+  timerInit: function(){
+    $('.timer-container').html(timer);
+    $('.counter').html('00' + '.' + '00');
+    prevMinutes = 0;
+    prevHundredths = 0;
+  },
+  runTimer: function(){
+    startTime = Date.now();
+    interval = setInterval(function(){
+      timeDifference = Date.now() - startTime;
+      minutes = Math.floor((timeDifference / 1000 / 60) + prevMinutes) % 60;
+      hundredths = Math.floor((timeDifference / 1000 / 0.6) + prevHundredths) % 100;
+      if (minutes < 10) {
+        minutes = '0' + minutes; // converting to a string
+      }
+      if (hundredths < 10) { 
+        hundredths = '0' + hundredths; // converting to a string
+      }
+      $('.counter').html(minutes + '.' + hundredths); 
+    }, 100);
+  },
+  pauseTimer: function(){
+    clearInterval(interval);
+  },
+  resumeTimer: function(){
+    prevMinutes = minutes; 
+    prevHundredths = hundredths;
   }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // var startTime; 
@@ -146,3 +125,4 @@ var app = {
 
 
 module.exports = app;
+
