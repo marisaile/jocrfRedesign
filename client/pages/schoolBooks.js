@@ -6,6 +6,7 @@ import Handlebars from 'handlebars';
 import _ from 'underscore';
 import landing from 'templates/school/schoolBooksLanding.html';
 import template from 'templates/school/schoolBookContainer.html';
+import header from 'templates/school/bookPageHeader.html';
 
 var compiledTemplate = Handlebars.compile(template);
 var books = [];
@@ -16,12 +17,7 @@ var app = {
   },
   render: function(){
     $('.school-main').html(landing);
-    app.selectSubject();
-  },
-  selectSubject: function(){
-    $('a.option').click(function(){
-      app.fetchBooks();
-    });
+    app.fetchBooks();
   },
   fetchBooks: function(){
     $.ajax({
@@ -30,20 +26,31 @@ var app = {
       complete: function(response){
         var dataString = response.responseText;
         var data = JSON.parse(dataString);
-        books = data;   
+        books = data;  
         app.displayBooks();
       }  
-    });
+    });    
   },
-  displayBooks: function() {    
-    // var currentSubject = 'english';
-    // var filteredBooks = books.filter(function(book){
-    //   return (book.subject === currentSubject);
-    // });
-    var booksHtml = books.map(function(book){
-      return compiledTemplate(book);
-    });
-    $('.school-main').html(booksHtml);
+  displayBooks: function() { 
+    $('a').click(function(event){
+      var currentSubject = event.target.id;
+      var filteredBooks = _.filter(books, function(book){
+        return (book.subject === currentSubject);
+      });
+      var booksHtml = filteredBooks.map(function(book){
+        return compiledTemplate(book);
+      });
+      $('.school-header').html(header);
+      app.render();
+      $('.school-main').html(booksHtml);
+    });  
+  // },
+  // schoolHeader: function(){
+  //   $('a').click(function(event) {
+  //     app.render();
+  //     var active = event.target.id;
+  //     active.addClass('active');
+  //   });
   }
 };
 

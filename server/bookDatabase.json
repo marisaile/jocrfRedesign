@@ -59,6 +59,7 @@
     "subject": "history",
     "url": "https://www.goodreads.com/book/show/7968243-cleopatra?ac=1&from_search=true",
     "image": "/images/books/cleopatra.png",
+    "title": "Cleopatra: A Life",
     "author" : "Stacy Schiff"
   },
   { 
@@ -224,8 +225,8 @@
   },
   { 
     "subject": "polisci",
-    "url": "",
-    "image": "",
+    "url": "https://www.goodreads.com/book/show/6463967-the-big-short",
+    "image": "/images/books/bigshort.png",
     "title" : "The Big Short",
     "author" : "Michael Lewis"
   }, 
@@ -303,7 +304,7 @@
     "subject": "science",
     "url": "https://www.goodreads.com/book/show/5958783-why-does-e-mc?ac=1&from_search=true",
     "image": "/images/books/cox.png",
-    "title" : "Why does e=mc<sup>2<sup>? (and why should we care?)",
+    "title" : "Why does e=mc ^ 2? (and why should we care?)",
     "author" : "Brian Cox and Jeff Forshaw"
   },
   { 
@@ -343,8 +344,8 @@
   },
   { 
     "subject": "science",
-    "url": "",
-    "image": "",
+    "url": "https://www.goodreads.com/book/show/17978489-the-future-of-the-mind?from_search=true",
+    "image": "/images/books/kaku.png",
     "title" : "The Future of the Mind",
     "author" : "Michio Kaku"
   },
