@@ -26,7 +26,7 @@ var app = {
         app.pauseTimer();
         $('.start-button').html('resume');
       } else {
-        app.resumeTimer();
+        app.runTimer();
         $('.start-button').html('pause');
       }        
     }); 
@@ -34,8 +34,8 @@ var app = {
   timerInit: function(){
     $('.timer-container').html(timer);
     $('.counter').html('00' + '.' + '00');
-    prevMinutes = 0;
-    prevHundredths = 0;
+    minutes = 0; 
+    hundredths = 0;
   },
   runTimer: function(){
     startTime = Date.now();
@@ -43,21 +43,23 @@ var app = {
       timeDifference = Date.now() - startTime;
       minutes = Math.floor((timeDifference / 1000 / 60) + prevMinutes) % 60;
       hundredths = Math.floor((timeDifference / 1000 / 0.6) + prevHundredths) % 100;
-      if (minutes < 10) {
+      app.setTimer();
+    }, 100); 
+  },
+  pauseTimer: function(){
+    clearTimeout(interval);
+  },
+  stringifyTime: function(minutes, hundredths){
+    if (minutes < 10) {
         minutes = '0' + minutes; // converting to a string
       }
       if (hundredths < 10) { 
         hundredths = '0' + hundredths; // converting to a string
       }
-      $('.counter').html(minutes + '.' + hundredths); 
-    }, 100);
   },
-  pauseTimer: function(){
-    clearInterval(interval);
-  },
-  resumeTimer: function(){
-    prevMinutes = minutes; 
-    prevHundredths = hundredths;
+  setTimer: function(minutes, hundredths){
+    app.stringifyTime(minutes, hundredths);
+    $('.counter').html(minutes + '.' + hundredths); 
   }
 };
 

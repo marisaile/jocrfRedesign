@@ -10,12 +10,21 @@
     <link rel="shortcut icon" type="image/x-icon" href="/images/cloud.ico" />
     <script type="text/javascript" async="async" defer="defer" src="/application.js"></script>
   </head>
-<body class="override-bootstrap">
-  <header class="main-header container-fluid"></header>
-  <main class="timer-main">
-      <div class="timer-container">
-  </main>
-    
+<body class="timer-main">
+  <div class="stopwatch-container">
+    <div class="stopwatch" data-autostart="false">
+    <div class="time">
+        <span class="minutes"></span>. 
+        <span class="hundredths"></span>
+    </div>
+    <div class="controls">
+        <!-- Some configurability -->
+        <button class="btn btn-default toggle" data-pausetext="Pause" data-resumetext="Resume">Start</button>
+        <button class="btn btn-default split">Split</button>
+        <button class="btn btn-default reset">Reset</button>
+    </div>
+    <div class="cum-time">Cumulative Time</div>
+    <div class="ind-time">Individual Time</div>
   </div>
 </body>
 

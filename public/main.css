@@ -683,7 +683,11 @@ li.books-back:hover {
   text-decoration: none;
   color: grey;
 }*/
-.timer-container {
+.timer-main {
+  background-color: #aaa;
+}
+
+.timer-main .stopwatch-container {
   position: relative;
   display: block;
   margin: 100px auto;
@@ -695,7 +699,7 @@ li.books-back:hover {
   box-shadow: 2px 2px 2px;
 }
 
-.timer-container .counter {
+.timer-main .stopwatch-container .stopwatch .time {
   position: relative;
   display: block;
   left: 25%;
@@ -703,112 +707,64 @@ li.books-back:hover {
   font-size: 64px;
 }
 
-.timer-container h1.timer-mode {
-  position: relative;
-  left: 30%;
-  font-family: 'Taviraj', serif;
-  font-size: 50px;
+.timer-main .stopwatch-container .stopwatch .controls {
+  margin: -1.5vh 1.5vw;
 }
 
-.timer-container .btn.btn-mode-continuous {
+.timer-main .stopwatch-container .stopwatch .controls .toggle {
   position: relative;
   display: inline-block;
-  left: 15%;
+  width: 7vw;
   font-family: 'Taviraj', serif;
-  font-size: 16px;
+  font-size: 3vmin;
+  color: #fff;
+  background-color: #28CC1D;
+  text-align: center;
 }
 
-.timer-container .btn.btn-mode-start-stop {
+.timer-main .stopwatch-container .stopwatch .controls .reset {
   position: relative;
   display: inline-block;
-  left: 27%;
+  width: 7vw;
   font-family: 'Taviraj', serif;
-  font-size: 16px;
+  font-size: 3vmin;
+  color: #fff;
+  background-color: #FF2D2C;
+  text-align: center;
 }
 
-.timer-container .start-button {
+.timer-main .stopwatch-container .stopwatch .controls .split {
   position: relative;
   display: inline-block;
-  top: -10px;
-  width: 100px;
-  margin: 8px;
+  width: 7vw;
   font-family: 'Taviraj', serif;
-  font-size: 16px;
+  font-size: 3vmin;
+  color: #fff;
+  background-color: #0D2CF8;
+  text-align: center;
 }
 
-.timer-container .split-button {
-  position: relative;
-  display: inline-block;
-  top: -10px;
-  width: 100px;
-  margin: 8px;
-  font-family: 'Taviraj', serif;
-  font-size: 16px;
-}
-
-.timer-container .reset-button {
-  position: relative;
-  display: inline-block;
-  top: -10px;
-  width: 100px;
-  margin: 8px;
-  font-family: 'Taviraj', serif;
-  font-size: 16px;
-}
-
-.timer-container .cum-time {
+.timer-main .cum-time {
   position: relative;
   float: left;
-  width: 150px;
+  width: 160px;
   height: 400px;
-  top: 50px;
-  margin-left: 30px;
-  font-family: 'Taviraj', serif;
-  font-size: 16px;
-  line-height: 20px;
-}
-
-.timer-container .ind-time {
-  position: relative;
-  float: right;
-  width: 150px;
-  height: 400px;
-  top: 50px;
-  font-family: 'Taviraj', serif;
-  font-size: 16px;
-  line-height: 20px;
-}
-
-.timer-container .time {
-  position: relative;
-  display: block;
-  margin: 20px auto;
-}
-
-.timer-container .ss-start-stop-button {
-  position: relative;
-  display: inline-block;
-  left: 26%;
-  width: 75px;
-  font-family: 'Taviraj', serif;
-  font-size: 16px;
-}
-
-.timer-container .ss-reset-button {
-  position: relative;
-  display: inline-block;
-  left: 31.5%;
-  width: 75px;
-  font-family: 'Taviraj', serif;
-  font-size: 16px;
-}
-
-.timer-container .time {
-  position: relative;
-  display: block;
-  left: 26%;
+  top: 30px;
+  margin-right: 10px;
   font-family: 'Taviraj', serif;
   font-size: 20px;
+  line-height: 20px;
+}
+
+.timer-main .ind-time {
+  position: relative;
+  float: right;
+  width: 160px;
+  height: 400px;
+  top: 30px;
+  font-family: 'Taviraj', serif;
+  font-size: 20px;
+  line-height: 20px;
 }
 
 .no-bootstrap {
