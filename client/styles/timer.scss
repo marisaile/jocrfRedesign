@@ -23,12 +23,12 @@
       font-size: 64px;
     }
     .stopwatch .controls {
-      margin: -1.5vh 1.5vw;
+      margin: -1.5vh 1.8vw;
 
       .toggle {
         position: relative;
         display: inline-block;
-        width: 7vw;
+        width: 100px;
         font-family: 'Taviraj', serif;
         font-size: 3vmin;
         color: #fff;
@@ -38,7 +38,7 @@
       .reset {
         position: relative;
         display: inline-block;
-        width: 7vw;
+        width: 100px;
         font-family: 'Taviraj', serif;
         font-size: 3vmin;
         color: #fff;
@@ -48,7 +48,7 @@
       .split {
         position: relative;
         display: inline-block;
-        width: 7vw;
+        width: 100px;
         font-family: 'Taviraj', serif;
         font-size: 3vmin;
         color: #fff;
@@ -68,7 +68,7 @@
     font-size: 20px;
     line-height: 20px;
   }
-  .ind-time {
+/*  .ind-time {
     position: relative;
     float: right;
     width: 160px;
@@ -77,5 +77,21 @@
     font-family: 'Taviraj', serif;
     font-size: 20px;
     line-height: 20px;
+  }*/
+}
+.individual_times {
+  position: relative;
+  display: block;
+  font-family: 'Taviraj', serif;
+  font-size: 20px;
+  line-height: 20px;
+  left: 250px;
+
+  .ind-time {
+    position: relative;
+    display: block;
+    width: 150px;
   }
 }
+
+

@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import _ from 'underscore';
 
 var app = {
   init: function(){
@@ -17,7 +18,7 @@ var app = {
       var splitElement = element.find('.split');
       var startText = toggleElement.text();
       var minutes, hundredths, timer;
-      var splitTimes = [0];
+      var splitTimes = [];
 
       function prependZero(time, length){
         time = '' + (time | 0);
@@ -37,7 +38,7 @@ var app = {
           minutes = ((timeElapsed / 60000) + prevMinutes) % 60;
           hundredths = ((timeElapsed / 1000 / 0.6) + prevHundredths) % 100;
           setStopwatch(minutes, hundredths);
-        }, 100);
+        }, 50);
       };
       function run(){
         running = true;
@@ -47,16 +48,16 @@ var app = {
       function pause(){
         running = false;
         clearTimeout(timer);
-        var minutes = $('.minutes').html();
-        var hundredths = $('.hundredths').html();
-        var endTime = (minutes + '.' + hundredths);
+        var cumMinutes = $('.minutes').html();
+        var cumHundredths = $('.hundredths').html();
+        var endTime = (cumMinutes + '.' + cumHundredths);
         var cumTime = Math.round(endTime * 100);
         $('.stopwatch-container .cum-time').append('<br />' + cumTime);      
         splitTimes.push(cumTime); 
-        var indTime = Math.round(splitTimes[1] - splitTimes[0]);
-        $('.stopwatch-container .ind-time').append('<br />' + indTime);   
-        splitTimes.splice(0, 1);
-        toggleElement.text(resumeText);
+        // var indTime = Math.round(splitTimes[1] - splitTimes[0]);
+        // $('.stopwatch-container .ind-time').append('<br />' + indTime);   
+        // splitTimes.splice(0, 1);
+        // toggleElement.text(resumeText);
       };
       function reset(){
         running = false;
@@ -68,15 +69,21 @@ var app = {
         toggleElement.text(startText);
       };
       function split(){
-        var minutes = $('.minutes').html();
-        var hundredths = $('.hundredths').html();
-        var endTime = (minutes + '.' + hundredths);
+        var cumMinutes = $('.minutes').html();
+        var cumHundredths = $('.hundredths').html();
+        var endTime = (cumMinutes + '.' + cumHundredths);
         var cumTime = Math.round(endTime * 100);
         $('.stopwatch-container .cum-time').append('<br />' + cumTime);      
         splitTimes.push(cumTime); 
-        var indTime = Math.round(splitTimes[1] - splitTimes[0]);
-        $('.stopwatch-container .ind-time').append('<br />' + indTime);   
-        splitTimes.splice(0, 1);
+
+        // var indTime = Math.round(splitTimes[1] - splitTimes[0]);
+        // $('.stopwatch-container .ind-time').append('<br />' + indTime);   
+        // splitTimes.splice(0, 1);
+      };
+      function getIndTimes(){
+        _.map(splitTimes, function(x, y){
+          return (x - y);
+        });
       };
       toggleElement.on('click', function (){
         (running) ? pause() : run();
@@ -86,6 +93,10 @@ var app = {
       });
       splitElement.on('click', function(){
         split();
+      });
+      $('.btn.ind-time').click(function(){
+         getIndTimes();
+        // $('.individual_times').html(indTimes);
       });
         reset();
         if(running) run();

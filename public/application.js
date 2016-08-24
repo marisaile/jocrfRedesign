@@ -9995,7 +9995,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","option":"option","school-main":"school-main","book-container":"book-container","book-image":"book-image","title":"title","author":"author","landing":"landing","notebook-paper":"notebook-paper","paper-title-line":"paper-title-line","books-header":"books-header","timer-main":"timer-main","stopwatch-container":"stopwatch-container","stopwatch":"stopwatch","time":"time","controls":"controls","toggle":"toggle","reset":"reset","split":"split","cum-time":"cum-time","ind-time":"ind-time","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-background":"dalquest-background"};
+	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","option":"option","school-main":"school-main","book-container":"book-container","book-image":"book-image","title":"title","author":"author","landing":"landing","notebook-paper":"notebook-paper","paper-title-line":"paper-title-line","books-header":"books-header","timer-main":"timer-main","stopwatch-container":"stopwatch-container","stopwatch":"stopwatch","time":"time","controls":"controls","toggle":"toggle","reset":"reset","split":"split","cum-time":"cum-time","individual_times":"individual_times","ind-time":"ind-time","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-background":"dalquest-background"};
 
 /***/ },
 /* 3 */,
@@ -40945,6 +40945,10 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
+	var _underscore = __webpack_require__(171);
+	
+	var _underscore2 = _interopRequireDefault(_underscore);
+	
 	var app = {
 	  init: function init() {
 	    app.render();
@@ -40962,7 +40966,7 @@
 	      var splitElement = element.find('.split');
 	      var startText = toggleElement.text();
 	      var minutes, hundredths, timer;
-	      var splitTimes = [0];
+	      var splitTimes = [];
 	
 	      function prependZero(time, length) {
 	        time = '' + (time | 0);
@@ -40982,7 +40986,7 @@
 	          minutes = (timeElapsed / 60000 + prevMinutes) % 60;
 	          hundredths = (timeElapsed / 1000 / 0.6 + prevHundredths) % 100;
 	          setStopwatch(minutes, hundredths);
-	        }, 100);
+	        }, 50);
 	      };
 	      function run() {
 	        running = true;
@@ -40992,16 +40996,16 @@
 	      function pause() {
 	        running = false;
 	        clearTimeout(timer);
-	        var minutes = (0, _jquery2['default'])('.minutes').html();
-	        var hundredths = (0, _jquery2['default'])('.hundredths').html();
-	        var endTime = minutes + '.' + hundredths;
+	        var cumMinutes = (0, _jquery2['default'])('.minutes').html();
+	        var cumHundredths = (0, _jquery2['default'])('.hundredths').html();
+	        var endTime = cumMinutes + '.' + cumHundredths;
 	        var cumTime = Math.round(endTime * 100);
 	        (0, _jquery2['default'])('.stopwatch-container .cum-time').append('<br />' + cumTime);
 	        splitTimes.push(cumTime);
-	        var indTime = Math.round(splitTimes[1] - splitTimes[0]);
-	        (0, _jquery2['default'])('.stopwatch-container .ind-time').append('<br />' + indTime);
-	        splitTimes.splice(0, 1);
-	        toggleElement.text(resumeText);
+	        // var indTime = Math.round(splitTimes[1] - splitTimes[0]);
+	        // $('.stopwatch-container .ind-time').append('<br />' + indTime);  
+	        // splitTimes.splice(0, 1);
+	        // toggleElement.text(resumeText);
 	      };
 	      function reset() {
 	        running = false;
@@ -41013,15 +41017,21 @@
 	        toggleElement.text(startText);
 	      };
 	      function split() {
-	        var minutes = (0, _jquery2['default'])('.minutes').html();
-	        var hundredths = (0, _jquery2['default'])('.hundredths').html();
-	        var endTime = minutes + '.' + hundredths;
+	        var cumMinutes = (0, _jquery2['default'])('.minutes').html();
+	        var cumHundredths = (0, _jquery2['default'])('.hundredths').html();
+	        var endTime = cumMinutes + '.' + cumHundredths;
 	        var cumTime = Math.round(endTime * 100);
 	        (0, _jquery2['default'])('.stopwatch-container .cum-time').append('<br />' + cumTime);
 	        splitTimes.push(cumTime);
-	        var indTime = Math.round(splitTimes[1] - splitTimes[0]);
-	        (0, _jquery2['default'])('.stopwatch-container .ind-time').append('<br />' + indTime);
-	        splitTimes.splice(0, 1);
+	
+	        // var indTime = Math.round(splitTimes[1] - splitTimes[0]);
+	        // $('.stopwatch-container .ind-time').append('<br />' + indTime);  
+	        // splitTimes.splice(0, 1);
+	      };
+	      function getIndTimes() {
+	        _underscore2['default'].map(splitTimes, function (x, y) {
+	          return x - y;
+	        });
 	      };
 	      toggleElement.on('click', function () {
 	        running ? pause() : run();
@@ -41031,6 +41041,10 @@
 	      });
 	      splitElement.on('click', function () {
 	        split();
+	      });
+	      (0, _jquery2['default'])('.btn.ind-time').click(function () {
+	        getIndTimes();
+	        // $('.individual_times').html(indTimes);
 	      });
 	      reset();
 	      if (running) run();

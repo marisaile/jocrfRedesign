@@ -685,6 +685,16 @@ li.books-back:hover {
 }*/
 .timer-main {
   background-color: #aaa;
+  /*  .ind-time {
+    position: relative;
+    float: right;
+    width: 160px;
+    height: 400px;
+    top: 30px;
+    font-family: 'Taviraj', serif;
+    font-size: 20px;
+    line-height: 20px;
+  }*/
 }
 
 .timer-main .stopwatch-container {
@@ -708,13 +718,13 @@ li.books-back:hover {
 }
 
 .timer-main .stopwatch-container .stopwatch .controls {
-  margin: -1.5vh 1.5vw;
+  margin: -1.5vh 1.8vw;
 }
 
 .timer-main .stopwatch-container .stopwatch .controls .toggle {
   position: relative;
   display: inline-block;
-  width: 7vw;
+  width: 100px;
   font-family: 'Taviraj', serif;
   font-size: 3vmin;
   color: #fff;
@@ -725,7 +735,7 @@ li.books-back:hover {
 .timer-main .stopwatch-container .stopwatch .controls .reset {
   position: relative;
   display: inline-block;
-  width: 7vw;
+  width: 100px;
   font-family: 'Taviraj', serif;
   font-size: 3vmin;
   color: #fff;
@@ -736,7 +746,7 @@ li.books-back:hover {
 .timer-main .stopwatch-container .stopwatch .controls .split {
   position: relative;
   display: inline-block;
-  width: 7vw;
+  width: 100px;
   font-family: 'Taviraj', serif;
   font-size: 3vmin;
   color: #fff;
@@ -756,15 +766,19 @@ li.books-back:hover {
   line-height: 20px;
 }
 
-.timer-main .ind-time {
+.individual_times {
   position: relative;
-  float: right;
-  width: 160px;
-  height: 400px;
-  top: 30px;
+  display: block;
   font-family: 'Taviraj', serif;
   font-size: 20px;
   line-height: 20px;
+  left: 250px;
+}
+
+.individual_times .ind-time {
+  position: relative;
+  display: block;
+  width: 150px;
 }
 
 .no-bootstrap {
