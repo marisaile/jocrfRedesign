@@ -16,7 +16,7 @@
   {
     "subject": "english literature",
     "url": "https://www.goodreads.com/book/show/9717.The_Unbearable_Lightness_of_Being?ac=1&from_search=true",
-    "image": "/images/books/juice.png",
+    "image": "/images/books/Kundera.png",
     "title": "The Unbearable Lightness of Being",
     "author": "Milan Kundera"
   },
@@ -255,7 +255,7 @@
     "subject": "psych",
     "url": "https://www.goodreads.com/book/show/63697.The_Man_Who_Mistook_His_Wife_for_a_Hat_and_Other_Clinical_Tales?ac=1&from_search=true",
     "image": "/images/books/sacks.png",
-    "title" : "The Man who Mistook /images/books/yellow.png Wife for a Hat",
+    "title" : "The Man who Mistook his Wife for a Hat",
     "author" : "Oliver Sacks"
   },
   { 

@@ -16,6 +16,7 @@ var app = {
       var pauseText = toggleElement.data('pausetext');
       var resumeText = toggleElement.data('resumetext');
       var splitElement = element.find('.split');
+      var saveElement = element.find('.save');
       var startText = toggleElement.text();
       var minutes, hundredths, timer;
       var splitTimes = [];
@@ -75,16 +76,20 @@ var app = {
         var cumTime = Math.round(endTime * 100);
         $('.stopwatch-container .cum-time').append('<br />' + cumTime);      
         splitTimes.push(cumTime); 
-
         // var indTime = Math.round(splitTimes[1] - splitTimes[0]);
         // $('.stopwatch-container .ind-time').append('<br />' + indTime);   
         // splitTimes.splice(0, 1);
       };
-      function getIndTimes(){
-        _.map(splitTimes, function(x, y){
-          return (x - y);
-        });
-      };
+      // function saveTimes(){
+      //   $.ajax({
+      //     url: '/api/stopwatch',
+      //     method: 'POST',
+      //     complete: function(response){
+      //       var dataString = response.responseText;
+      //       var data = JSON.parse(dataString);
+      //     }    
+      //   });
+      // };
       toggleElement.on('click', function (){
         (running) ? pause() : run();
       });
@@ -94,13 +99,12 @@ var app = {
       splitElement.on('click', function(){
         split();
       });
-      $('.btn.ind-time').click(function(){
-         getIndTimes();
-        // $('.individual_times').html(indTimes);
-      });
-        reset();
-        if(running) run();
-      });
+      // saveElement.on('click', function(){
+      //   saveTimes();
+      // })
+      reset();
+      if(running) run();
+    });
   }
 };
 

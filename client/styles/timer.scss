@@ -35,29 +35,40 @@
         background-color: #28CC1D;
         text-align: center;
       }
-      .reset {
-        position: relative;
-        display: inline-block;
-        width: 100px;
-        font-family: 'Taviraj', serif;
-        font-size: 3vmin;
-        color: #fff;
-        background-color: #FF2D2C;
-        text-align: center;
-      }
       .split {
         position: relative;
         display: inline-block;
         width: 100px;
+        left: 110px;
         font-family: 'Taviraj', serif;
         font-size: 3vmin;
         color: #fff;
         background-color: #0D2CF8;
         text-align: center;
       }
+      .reset {
+        position: relative;
+        display: inline-block;
+        width: 100px;
+        top: 425px;
+        font-family: 'Taviraj', serif;
+        font-size: 3vmin;
+        color: #fff;
+        background-color: #FF2D2C;
+        text-align: center;
+      }
+      .save {
+        position: relative;
+        display: inline-block;
+        width: 150px;
+        top: 380px;
+        font-family: 'Taviraj', serif;
+        font-size: 3vmin;
+        text-align: center;
+      }
     }
   }
-  .cum-time {
+  /*.cum-time {
     position: relative;
     float: left;
     width: 160px;
@@ -68,7 +79,7 @@
     font-size: 20px;
     line-height: 20px;
   }
-/*  .ind-time {
+  .ind-time {
     position: relative;
     float: right;
     width: 160px;
@@ -77,9 +88,10 @@
     font-family: 'Taviraj', serif;
     font-size: 20px;
     line-height: 20px;
+    text-align: right;
   }*/
 }
-.individual_times {
+/*.individual_times {
   position: relative;
   display: block;
   font-family: 'Taviraj', serif;
@@ -92,6 +104,6 @@
     display: block;
     width: 150px;
   }
-}
+}*/
 
 

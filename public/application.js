@@ -81,17 +81,19 @@
 	
 	var _pagesSchoolBooks2 = _interopRequireDefault(_pagesSchoolBooks);
 	
-	// import bookController from 'pages/books/booksController';
+	var _pagesBooksBooksController = __webpack_require__(226);
 	
-	var _pagesTimer = __webpack_require__(226);
+	var _pagesBooksBooksController2 = _interopRequireDefault(_pagesBooksBooksController);
+	
+	var _pagesTimer = __webpack_require__(235);
 	
 	var _pagesTimer2 = _interopRequireDefault(_pagesTimer);
 	
-	var _pagesVisualDesigns = __webpack_require__(227);
+	var _pagesVisualDesigns = __webpack_require__(236);
 	
 	var _pagesVisualDesigns2 = _interopRequireDefault(_pagesVisualDesigns);
 	
-	var _pagesDalquest = __webpack_require__(230);
+	var _pagesDalquest = __webpack_require__(239);
 	
 	var _pagesDalquest2 = _interopRequireDefault(_pagesDalquest);
 	
@@ -120,12 +122,12 @@
 	    case '/pages/photoSearch.html':
 	      _pagesPhotoSearch2['default'].init();
 	      break;
-	    // case '/pages/books.html':
-	    //   bookController.render();
-	    // break;
-	    case '/pages/timer.html':
-	      _pagesTimer2['default'].init();
+	    case '/pages/books.html':
+	      _pagesBooksBooksController2['default'].render();
 	      break;
+	    // case '/pages/timer.html':
+	    //   timer.init();
+	    // break;
 	    // case '/pages/visualDesigns.html':
 	    //   vdt.init();
 	    // break;
@@ -9995,7 +9997,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","option":"option","school-main":"school-main","book-container":"book-container","book-image":"book-image","title":"title","author":"author","landing":"landing","notebook-paper":"notebook-paper","paper-title-line":"paper-title-line","books-header":"books-header","timer-main":"timer-main","stopwatch-container":"stopwatch-container","stopwatch":"stopwatch","time":"time","controls":"controls","toggle":"toggle","reset":"reset","split":"split","cum-time":"cum-time","individual_times":"individual_times","ind-time":"ind-time","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-background":"dalquest-background"};
+	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","option":"option","school-main":"school-main","school-books-item":"school-books-item","book-container":"book-container","book-image":"book-image","title":"title","author":"author","landing":"landing","notebook-paper":"notebook-paper","paper-title-line":"paper-title-line","books-header":"books-header","timer-main":"timer-main","stopwatch-container":"stopwatch-container","stopwatch":"stopwatch","time":"time","controls":"controls","toggle":"toggle","split":"split","reset":"reset","save":"save","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-background":"dalquest-background"};
 
 /***/ },
 /* 3 */,
@@ -10087,7 +10089,7 @@
 /* 10 */
 /***/ function(module, exports) {
 
-	module.exports = "\n      <div class=\"nav-items\">  \n        <a class=\"marisaile\" role=\"menuitem\" href=\"/server/view.ejs\">Marisaile</a>\n        <a class=\"nav-stay\" role=\"menuitem\" href=\"/pages/todo.html\">To Do App</a>\n        <a class=\"nav-stay\" role=\"menuitem\" href=\"/pages/photoSearch.html\">Photo Search</a>\n        <!-- <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/d3.html\">d3 Chart</a> -->\n        <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/funnySquares.html\">Funny Squares</a>\n        <!-- <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/three.html\">THREE Animation</a> -->\n        <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/schoolBooks.html\">School</a>\n        <!-- <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/books.html\">Book Tracker</a> -->\n        <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/dalquest.html\">Dalquest Research Site</a>\n        <a class=\"nav-stay nav-joc\" role=\"menuitem\" href=\"/pages/timer.html\">Timer</a>\n      </div>\n    ";
+	module.exports = "\n      <div class=\"nav-items\">  \n        <a class=\"marisaile col-md-2\" role=\"menuitem\" href=\"/server/view.ejs\">Marisaile</a>\n        <a class=\"nav-stay col-md-2\" role=\"menuitem\" href=\"/pages/todo.html\">To Do App</a>\n        <a class=\"nav-stay col-m-2\" role=\"menuitem\" href=\"/pages/photoSearch.html\">Photo Search</a>\n        <!-- <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/d3.html\">d3 Chart</a> -->\n        <a class=\"nav-stay davinci-nav col-md-2\" role=\"menuitem\" href=\"/pages/funnySquares.html\">Funny Squares</a>\n        <!-- <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/three.html\">THREE Animation</a> -->\n        <a class=\"nav-stay projects-nav col-md-2\" role=\"menuitem\" href=\"/pages/schoolBooks.html\">School</a>\n        <!-- <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/books.html\">Book Tracker</a>\n        <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/dalquest.html\">Dalquest Research Site</a> -->\n        <!-- <a class=\"nav-stay nav-joc\" role=\"menuitem\" href=\"/pages/timer.html\">Timer</a> -->\n      </div>\n    ";
 
 /***/ },
 /* 11 */
@@ -38366,11 +38368,15 @@
 	  // },
 	  bindEvents: function bindEvents() {
 	    app.$input.on('keypress', app.searchKeypress);
+	    (0, _jquery2['default'])('.search-photos').on('click', app.searchButton);
 	  },
 	  searchKeypress: function searchKeypress(event) {
 	    if (event.which === 13) {
 	      app.doSearch();
 	    }
+	  },
+	  searchButton: function searchButton() {
+	    app.doSearch();
 	  },
 	  doSearch: function doSearch() {
 	    var phrase = app.$input.val();
@@ -38495,13 +38501,13 @@
 /* 210 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"landing\">\n  <div class=\"notebook-paper\">\n    <div class=\"paper-title-line\">\n      <h1 class=\"books-header\">Books!</h1>\n    </div>\n    <nav class=\"school-nav\">\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"english literature\">English Literature</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"history\">History</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"math\">Math/Statistics</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"polisci\">Political Science</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"psych\">Psychology</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"science\">Science</a>   \n    </nav>\n  </div>\n</div>";
+	module.exports = "\n<div class=\"landing\">\n  <div class=\"notebook-paper\">\n    <div class=\"paper-title-line\">\n      <h1 class=\"books-header\">Books!</h1>\n    </div>\n    <nav class=\"school-nav\">\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"english literature\">English Literature</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"history\">History</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"math\">Math/Statistics</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"polisci\">Political Science</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"psych\">Psychology</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"science\">Science</a>   \n    </nav>\n  </div>\n</div>";
 
 /***/ },
 /* 211 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  <div class=\"school-books-item col-md-5 col-md-offset-1\">\n    <div class=\"book-container\">\n    \t<a href=\"{{url}}\" target=\"new\"><img class=\"book-image\" src=\"{{image}}\"></a>\n    \t<div class=\"title\">{{title}}</div>\n      <div class=\"author\">{{author}}</div>\n    </div>\n  </div>\n";
+	module.exports = "\n  <div class=\"school-books-item\">\n    <div class=\"book-container\">\n    \t<a href=\"{{url}}\" target=\"new\"><img class=\"book-image\" src=\"{{image}}\"></a>\n    \t<div class=\"title\">{{title}}</div>\n      <div class=\"author\">{{author}}</div>\n    </div>\n  </div>\n";
 
 /***/ },
 /* 212 */
@@ -40941,6 +40947,714 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
+	var _backbone = __webpack_require__(170);
+	
+	var _backbone2 = _interopRequireDefault(_backbone);
+	
+	var _pagesBooksBooksModel = __webpack_require__(227);
+	
+	var _pagesBooksBooksModel2 = _interopRequireDefault(_pagesBooksBooksModel);
+	
+	var _pagesBooksBookItemView = __webpack_require__(229);
+	
+	var _pagesBooksBookItemView2 = _interopRequireDefault(_pagesBooksBookItemView);
+	
+	var _pagesBooksBooksListView = __webpack_require__(231);
+	
+	var _pagesBooksBooksListView2 = _interopRequireDefault(_pagesBooksBooksListView);
+	
+	var _pagesBooksAddBookView = __webpack_require__(233);
+	
+	var _pagesBooksAddBookView2 = _interopRequireDefault(_pagesBooksAddBookView);
+	
+	var BookController = _backbone2['default'].View.extend({
+	  el: '.books-main',
+	  model: _pagesBooksBooksModel2['default'],
+	  events: {},
+	  initialize: function initialize() {
+	    this.model.fetch();
+	  },
+	  renderNew: function renderNew() {
+	    var view = new _pagesBooksAddBookView2['default']({
+	      controller: this
+	    });
+	    this.$el.html(view.$el);
+	  },
+	  render: function render() {
+	    var view = new _pagesBooksBooksListView2['default']({
+	      controller: this,
+	      books: this.model.get('books')
+	    });
+	    this.$el.html(view.$el);
+	  },
+	  addBook: function addBook(newBook) {
+	    this.model.addBook(newBook);
+	    this.render();
+	  },
+	  removeBook: function removeBook(id) {
+	    this.model.removeBook(id);
+	    this.render();
+	  }
+	
+	  // addRating: function(id){
+	  //   var view = new BookReviewView({
+	  //     controller: this,
+	  //     id: id
+	  //   });
+	  //   this.$el.html(view.$el);
+	  // },
+	  // saveRating: function(rating, id){
+	  //   debugger;
+	  //   this.model.saveRating(rating, id);
+	  //   this.render();
+	  // }
+	});
+	
+	var bookController = new BookController();
+	
+	module.exports = bookController;
+
+/***/ },
+/* 227 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _underscore = __webpack_require__(171);
+	
+	var _underscore2 = _interopRequireDefault(_underscore);
+	
+	var _backbone = __webpack_require__(170);
+	
+	var _backbone2 = _interopRequireDefault(_backbone);
+	
+	var _lscache = __webpack_require__(228);
+	
+	var _lscache2 = _interopRequireDefault(_lscache);
+	
+	var BookModel = _backbone2['default'].Model.extend({
+	  defaults: {
+	    books: []
+	  },
+	  bookSchema: {
+	    id: 0,
+	    title: '',
+	    author: '',
+	    friend: '',
+	    genre: '',
+	    rating: ''
+	  },
+	  fetch: function fetch() {
+	    var data = _lscache2['default'].get('books');
+	    data = this.applySchema(data);
+	    this.set('books', data);
+	  },
+	  save: function save() {
+	    var data = this.get('books');
+	    data = this.applySchema(data);
+	    _lscache2['default'].set('books', data);
+	  },
+	  applySchema: function applySchema(books) {
+	    var data = books;
+	    var schema = this.bookSchema;
+	    // shorthand 'if':
+	    data = _underscore2['default'].isArray(books) ? data : [];
+	    data = data.map(function (book, index) {
+	      book.id = index;
+	      return _underscore2['default'].defaults(book, schema);
+	    });
+	    return data;
+	  },
+	  addBook: function addBook(newBook) {
+	    var books = this.get('books');
+	    books.push(newBook);
+	    this.set('books', books);
+	    this.save();
+	  },
+	  removeBook: function removeBook(id) {
+	    var books = this.get('books');
+	    books.splice(id, 1);
+	    this.save();
+	  }
+	  // addRating: function(id){
+	  //   var books = this.get('books');
+	  //   this.set('books', books);
+	  //   this.save();
+	  // },
+	  // saveRating: function(rating, id){
+	  //   var books = this.get('books');
+	  //   books.push(id, rating);
+	  //   this.set('books', books);
+	  //   this.save();
+	  // }
+	
+	  // addFriend: function(){
+	
+	  // }
+	});
+	var bookModel = new BookModel();
+	
+	module.exports = bookModel;
+
+/***/ },
+/* 228 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
+	 * lscache library
+	 * Copyright (c) 2011, Pamela Fox
+	 *
+	 * Licensed under the Apache License, Version 2.0 (the "License");
+	 * you may not use this file except in compliance with the License.
+	 * You may obtain a copy of the License at
+	 *
+	 *       http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 * Unless required by applicable law or agreed to in writing, software
+	 * distributed under the License is distributed on an "AS IS" BASIS,
+	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 * See the License for the specific language governing permissions and
+	 * limitations under the License.
+	 */
+	
+	/* jshint undef:true, browser:true, node:true */
+	/* global define */
+	
+	(function (root, factory) {
+	    if (true) {
+	        // AMD. Register as an anonymous module.
+	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	    } else if (typeof module !== "undefined" && module.exports) {
+	        // CommonJS/Node module
+	        module.exports = factory();
+	    } else {
+	        // Browser globals
+	        root.lscache = factory();
+	    }
+	}(this, function () {
+	
+	  // Prefix for all lscache keys
+	  var CACHE_PREFIX = 'lscache-';
+	
+	  // Suffix for the key name on the expiration items in localStorage
+	  var CACHE_SUFFIX = '-cacheexpiration';
+	
+	  // expiration date radix (set to Base-36 for most space savings)
+	  var EXPIRY_RADIX = 10;
+	
+	  // time resolution in minutes
+	  var EXPIRY_UNITS = 60 * 1000;
+	
+	  // ECMAScript max Date (epoch + 1e8 days)
+	  var MAX_DATE = Math.floor(8.64e15/EXPIRY_UNITS);
+	
+	  var cachedStorage;
+	  var cachedJSON;
+	  var cacheBucket = '';
+	  var warnings = false;
+	
+	  // Determines if localStorage is supported in the browser;
+	  // result is cached for better performance instead of being run each time.
+	  // Feature detection is based on how Modernizr does it;
+	  // it's not straightforward due to FF4 issues.
+	  // It's not run at parse-time as it takes 200ms in Android.
+	  function supportsStorage() {
+	    var key = '__lscachetest__';
+	    var value = key;
+	
+	    if (cachedStorage !== undefined) {
+	      return cachedStorage;
+	    }
+	
+	    try {
+	      setItem(key, value);
+	      removeItem(key);
+	      cachedStorage = true;
+	    } catch (e) {
+	        if (isOutOfSpace(e)) {    // If we hit the limit, then it means we have support, 
+	            cachedStorage = true; // just maxed it out and even the set test failed.
+	        } else {
+	            cachedStorage = false;
+	        }
+	    }
+	    return cachedStorage;
+	  }
+	
+	  // Check to set if the error is us dealing with being out of space
+	  function isOutOfSpace(e) {
+	    if (e && e.name === 'QUOTA_EXCEEDED_ERR' || 
+	            e.name === 'NS_ERROR_DOM_QUOTA_REACHED' || 
+	            e.name === 'QuotaExceededError') {
+	        return true;
+	    }
+	    return false;
+	  }
+	
+	  // Determines if native JSON (de-)serialization is supported in the browser.
+	  function supportsJSON() {
+	    /*jshint eqnull:true */
+	    if (cachedJSON === undefined) {
+	      cachedJSON = (window.JSON != null);
+	    }
+	    return cachedJSON;
+	  }
+	
+	  /**
+	   * Returns the full string for the localStorage expiration item.
+	   * @param {String} key
+	   * @return {string}
+	   */
+	  function expirationKey(key) {
+	    return key + CACHE_SUFFIX;
+	  }
+	
+	  /**
+	   * Returns the number of minutes since the epoch.
+	   * @return {number}
+	   */
+	  function currentTime() {
+	    return Math.floor((new Date().getTime())/EXPIRY_UNITS);
+	  }
+	
+	  /**
+	   * Wrapper functions for localStorage methods
+	   */
+	
+	  function getItem(key) {
+	    return localStorage.getItem(CACHE_PREFIX + cacheBucket + key);
+	  }
+	
+	  function setItem(key, value) {
+	    // Fix for iPad issue - sometimes throws QUOTA_EXCEEDED_ERR on setItem.
+	    localStorage.removeItem(CACHE_PREFIX + cacheBucket + key);
+	    localStorage.setItem(CACHE_PREFIX + cacheBucket + key, value);
+	  }
+	
+	  function removeItem(key) {
+	    localStorage.removeItem(CACHE_PREFIX + cacheBucket + key);
+	  }
+	
+	  function eachKey(fn) {
+	    var prefixRegExp = new RegExp('^' + CACHE_PREFIX + cacheBucket + '(.*)');
+	    // Loop in reverse as removing items will change indices of tail
+	    for (var i = localStorage.length-1; i >= 0 ; --i) {
+	      var key = localStorage.key(i);
+	      key = key && key.match(prefixRegExp);
+	      key = key && key[1];
+	      if (key && key.indexOf(CACHE_SUFFIX) < 0) {
+	        fn(key, expirationKey(key));
+	      }
+	    }
+	  }
+	
+	  function flushItem(key) {
+	    var exprKey = expirationKey(key);
+	
+	    removeItem(key);
+	    removeItem(exprKey);
+	  }
+	
+	  function flushExpiredItem(key) {
+	    var exprKey = expirationKey(key);
+	    var expr = getItem(exprKey);
+	
+	    if (expr) {
+	      var expirationTime = parseInt(expr, EXPIRY_RADIX);
+	
+	      // Check if we should actually kick item out of storage
+	      if (currentTime() >= expirationTime) {
+	        removeItem(key);
+	        removeItem(exprKey);
+	        return true;
+	      }
+	    }
+	  }
+	
+	  function warn(message, err) {
+	    if (!warnings) return;
+	    if (!('console' in window) || typeof window.console.warn !== 'function') return;
+	    window.console.warn("lscache - " + message);
+	    if (err) window.console.warn("lscache - The error was: " + err.message);
+	  }
+	
+	  var lscache = {
+	    /**
+	     * Stores the value in localStorage. Expires after specified number of minutes.
+	     * @param {string} key
+	     * @param {Object|string} value
+	     * @param {number} time
+	     */
+	    set: function(key, value, time) {
+	      if (!supportsStorage()) return;
+	
+	      // If we don't get a string value, try to stringify
+	      // In future, localStorage may properly support storing non-strings
+	      // and this can be removed.
+	      if (typeof value !== 'string') {
+	        if (!supportsJSON()) return;
+	        try {
+	          value = JSON.stringify(value);
+	        } catch (e) {
+	          // Sometimes we can't stringify due to circular refs
+	          // in complex objects, so we won't bother storing then.
+	          return;
+	        }
+	      }
+	
+	      try {
+	        setItem(key, value);
+	      } catch (e) {
+	        if (isOutOfSpace(e)) {
+	          // If we exceeded the quota, then we will sort
+	          // by the expire time, and then remove the N oldest
+	          var storedKeys = [];
+	          var storedKey;
+	          eachKey(function(key, exprKey) {
+	            var expiration = getItem(exprKey);
+	            if (expiration) {
+	              expiration = parseInt(expiration, EXPIRY_RADIX);
+	            } else {
+	              // TODO: Store date added for non-expiring items for smarter removal
+	              expiration = MAX_DATE;
+	            }
+	            storedKeys.push({
+	              key: key,
+	              size: (getItem(key) || '').length,
+	              expiration: expiration
+	            });
+	          });
+	          // Sorts the keys with oldest expiration time last
+	          storedKeys.sort(function(a, b) { return (b.expiration-a.expiration); });
+	
+	          var targetSize = (value||'').length;
+	          while (storedKeys.length && targetSize > 0) {
+	            storedKey = storedKeys.pop();
+	            warn("Cache is full, removing item with key '" + key + "'");
+	            flushItem(storedKey.key);
+	            targetSize -= storedKey.size;
+	          }
+	          try {
+	            setItem(key, value);
+	          } catch (e) {
+	            // value may be larger than total quota
+	            warn("Could not add item with key '" + key + "', perhaps it's too big?", e);
+	            return;
+	          }
+	        } else {
+	          // If it was some other error, just give up.
+	          warn("Could not add item with key '" + key + "'", e);
+	          return;
+	        }
+	      }
+	
+	      // If a time is specified, store expiration info in localStorage
+	      if (time) {
+	        setItem(expirationKey(key), (currentTime() + time).toString(EXPIRY_RADIX));
+	      } else {
+	        // In case they previously set a time, remove that info from localStorage.
+	        removeItem(expirationKey(key));
+	      }
+	    },
+	
+	    /**
+	     * Retrieves specified value from localStorage, if not expired.
+	     * @param {string} key
+	     * @return {string|Object}
+	     */
+	    get: function(key) {
+	      if (!supportsStorage()) return null;
+	
+	      // Return the de-serialized item if not expired
+	      if (flushExpiredItem(key)) { return null; }
+	
+	      // Tries to de-serialize stored value if its an object, and returns the normal value otherwise.
+	      var value = getItem(key);
+	      if (!value || !supportsJSON()) {
+	        return value;
+	      }
+	
+	      try {
+	        // We can't tell if its JSON or a string, so we try to parse
+	        return JSON.parse(value);
+	      } catch (e) {
+	        // If we can't parse, it's probably because it isn't an object
+	        return value;
+	      }
+	    },
+	
+	    /**
+	     * Removes a value from localStorage.
+	     * Equivalent to 'delete' in memcache, but that's a keyword in JS.
+	     * @param {string} key
+	     */
+	    remove: function(key) {
+	      if (!supportsStorage()) return;
+	
+	      flushItem(key);
+	    },
+	
+	    /**
+	     * Returns whether local storage is supported.
+	     * Currently exposed for testing purposes.
+	     * @return {boolean}
+	     */
+	    supported: function() {
+	      return supportsStorage();
+	    },
+	
+	    /**
+	     * Flushes all lscache items and expiry markers without affecting rest of localStorage
+	     */
+	    flush: function() {
+	      if (!supportsStorage()) return;
+	
+	      eachKey(function(key) {
+	        flushItem(key);
+	      });
+	    },
+	
+	    /**
+	     * Flushes expired lscache items and expiry markers without affecting rest of localStorage
+	     */
+	    flushExpired: function() {
+	      if (!supportsStorage()) return;
+	
+	      eachKey(function(key) {
+	        flushExpiredItem(key);
+	      });
+	    },
+	
+	    /**
+	     * Appends CACHE_PREFIX so lscache will partition data in to different buckets.
+	     * @param {string} bucket
+	     */
+	    setBucket: function(bucket) {
+	      cacheBucket = bucket;
+	    },
+	
+	    /**
+	     * Resets the string being appended to CACHE_PREFIX so lscache will use the default storage behavior.
+	     */
+	    resetBucket: function() {
+	      cacheBucket = '';
+	    },
+	
+	    /**
+	     * Sets whether to display warnings when an item is removed from the cache or not.
+	     */
+	    enableWarnings: function(enabled) {
+	      warnings = enabled;
+	    }
+	  };
+	
+	  // Return the module
+	  return lscache;
+	}));
+
+
+/***/ },
+/* 229 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _backbone = __webpack_require__(170);
+	
+	var _backbone2 = _interopRequireDefault(_backbone);
+	
+	var _handlebars = __webpack_require__(176);
+	
+	var _handlebars2 = _interopRequireDefault(_handlebars);
+	
+	var _templatesBooksBookItemHtml = __webpack_require__(230);
+	
+	var _templatesBooksBookItemHtml2 = _interopRequireDefault(_templatesBooksBookItemHtml);
+	
+	var BookItemView = _backbone2['default'].View.extend({
+	  tagName: 'li',
+	  className: 'list-group-item row',
+	  events: {
+	    'click .close-book': 'removeBook'
+	  },
+	  template: _handlebars2['default'].compile(_templatesBooksBookItemHtml2['default']),
+	  initialize: function initialize(book) {
+	    this.data = book;
+	    this.render();
+	  },
+	  render: function render() {
+	    this.$el.html(this.template(this.data));
+	  },
+	  removeBook: function removeBook() {
+	    this.controller.removeBook(this.data.id);
+	  }
+	});
+	
+	module.exports = BookItemView;
+
+/***/ },
+/* 230 */
+/***/ function(module, exports) {
+
+	module.exports = "\n  <div class=\"title col-md-3\">{{title}}</div>\n  <div class=\"author col-md-3\">{{author}}</div>\n  <div class=\"friend col-md-2\">{{friend}}</div>\n  <div class=\"genre col-md-2\">{{genre}}</div>\n  <div class=\"rating col-md-1\"><input type=\"checkbox\"></div>\n  <div class=\"read col-md-1\"><button type=\"button\" class=\"close close-book\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button></div>\n";
+
+/***/ },
+/* 231 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _underscore = __webpack_require__(171);
+	
+	var _underscore2 = _interopRequireDefault(_underscore);
+	
+	var _backbone = __webpack_require__(170);
+	
+	var _backbone2 = _interopRequireDefault(_backbone);
+	
+	var _handlebars = __webpack_require__(176);
+	
+	var _handlebars2 = _interopRequireDefault(_handlebars);
+	
+	var _pagesBooksBookItemView = __webpack_require__(229);
+	
+	var _pagesBooksBookItemView2 = _interopRequireDefault(_pagesBooksBookItemView);
+	
+	var _templatesBooksBookListHtml = __webpack_require__(232);
+	
+	var _templatesBooksBookListHtml2 = _interopRequireDefault(_templatesBooksBookListHtml);
+	
+	var BookListView = _backbone2['default'].View.extend({
+	  className: 'books-list',
+	  events: {
+	    'click .btn-add-book': 'addNewBook',
+	    'click .btn-rate-book': 'addRating'
+	    // 'click .btn-sort-title': 'sortListBy',
+	    // 'click .btn-sort-author': 'sortListBy',
+	    // 'click .btn-sort-friend': 'sortListBy',
+	    // 'click .btn-sort-genre': 'sortListBy'
+	  },
+	  template: _handlebars2['default'].compile(_templatesBooksBookListHtml2['default']),
+	  initialize: function initialize(options) {
+	    this.data = options.books;
+	    this.controller = options.controller;
+	    this.id = options.id;
+	    this.render();
+	  },
+	  render: function render() {
+	    this.$el.html(this.template({}));
+	    var books = this.data;
+	    var $ul = this.$el.find('ul');
+	    _underscore2['default'].each(books, function (book) {
+	      var view = new _pagesBooksBookItemView2['default'](book);
+	      $ul.append(view.$el);
+	    });
+	  },
+	  addNewBook: function addNewBook() {
+	    this.controller.renderNew();
+	  }
+	  // addRating: function(id){
+	  //   this.controller.addRating(this.data.id);
+	  // }
+	  // showSynopsis: function(){
+	  //  
+	  // }
+	  // sortListBy: function(){
+	  //   // sort list by title, author, genre, or recommender
+	  // }
+	});
+	
+	module.exports = BookListView;
+
+/***/ },
+/* 232 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"book-list-container\">\n  <ul class=\"list-group book-list\">\n    <li class=\"list-group-item row book-item\">\n      <div class=\"col-md-3\">Title</div>\n      <div class=\"col-md-3\">Author</div>\n      <div class=\"col-md-2\">Friend</div>\n      <div class=\"col-md-2\">Genre</div>\n      <div class=\"col-md-1\">Got it!</div>\n      <div class=\"col-md-1\">Read</div>   \n    </li>\n  </ul>\n  <button class=\"btn btn-default btn-add-book\">New book!</button>\n</div>\n\n\n\n";
+
+/***/ },
+/* 233 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _backbone = __webpack_require__(170);
+	
+	var _backbone2 = _interopRequireDefault(_backbone);
+	
+	var _handlebars = __webpack_require__(176);
+	
+	var _handlebars2 = _interopRequireDefault(_handlebars);
+	
+	var _templatesBooksNewBookFormHtml = __webpack_require__(234);
+	
+	var _templatesBooksNewBookFormHtml2 = _interopRequireDefault(_templatesBooksNewBookFormHtml);
+	
+	var AddBookView = _backbone2['default'].View.extend({
+	  className: 'books-add',
+	  events: {
+	    'click .btn-add': 'addBook'
+	  },
+	  template: _handlebars2['default'].compile(_templatesBooksNewBookFormHtml2['default']),
+	  initialize: function initialize(options) {
+	    this.controller = options.controller;
+	    this.render();
+	  },
+	  render: function render() {
+	    this.$el.html(this.template({}));
+	  },
+	  addBook: function addBook() {
+	    var $title = this.$el.find('.title').val();
+	    var $author = this.$el.find('.author').val();
+	    var $friend = this.$el.find('.friend').val();
+	    var $genre = this.$el.find('.genre').val();
+	    var $rating = this.$el.find('.rating').val();
+	    var newBook = {
+	      title: $title,
+	      author: $author,
+	      friend: $friend,
+	      genre: $genre,
+	      rating: $rating
+	    };
+	    this.controller.addBook(newBook);
+	  }
+	});
+	
+	module.exports = AddBookView;
+
+/***/ },
+/* 234 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"new-book-container\">\n  <form>\n    <div class=\"form-group form-label\">\n      <label for=\"title\">Book Title</label>\n      <input type=\"text\" class=\"form-control title\" placeholder=\"Title\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"author\">Author</label>\n      <input type=\"text\" class=\"form-control author\" placeholder=\"Author\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"friend\">Who recommended it?</label>\n      <input type=\"text\" class=\"form-control friend\" placeholder=\"New Friend!\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"genre\">Genre</label>\n      <input type=\"text\" class=\"form-control genre\" placeholder=\"Genre\">\n    </div>\n    <svg class=\"book-shelf btn btn-add\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" viewBox=\"0 0 84 94\" height=\"94\" width=\"84\">\n      <path fill=\"none\" d=\"M37.612 92.805L4.487 73.71c-2.75-1.587-4.45-4.52-4.45-7.687L.008 27.877c-.003-3.154 1.676-6.063 4.405-7.634L37.558 1.167c2.73-1.57 6.096-1.566 8.835.013l33.124 19.096c2.75 1.586 4.45 4.518 4.45 7.686l.028 38.146c.002 3.154-1.677 6.063-4.406 7.634L46.445 92.818c-2.73 1.57-6.096 1.566-8.834-.013z\"/>\n      <g class=\"book-shelf__book book-shelf__book--one\" fill-rule=\"evenodd\">\n        <path fill=\"#5199fc\" d=\"M31 29h4c1.105 0 2 .895 2 2v29c0 1.105-.895 2-2 2h-4c-1.105 0-2-.895-2-2V31c0-1.105.895-2 2-2z\"/>\n        <path fill=\"#afd7fb\" d=\"M34 36h-2c-.552 0-1-.448-1-1s.448-1 1-1h2c.552 0 1 .448 1 1s-.448 1-1 1zm-2 1h2c.552 0 1 .448 1 1s-.448 1-1 1h-2c-.552 0-1-.448-1-1s.448-1 1-1z\"/>\n      </g>\n      <g class=\"book-shelf__book book-shelf__book--two\" fill-rule=\"evenodd\">\n        <path fill=\"#ff9868\" d=\"M39 34h6c1.105 0 2 .895 2 2v24c0 1.105-.895 2-2 2h-6c-1.105 0-2-.895-2-2V36c0-1.105.895-2 2-2z\"/>\n        <path fill=\"#d06061\" d=\"M42 38c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2z\"/>\n      </g>\n      <g class=\"book-shelf__book book-shelf__book--three\" fill-rule=\"evenodd\">\n        <path fill=\"#ff5068\" d=\"M49 32h2c1.105 0 2 .86 2 1.92v25.906c0 1.06-.895 1.92-2 1.92h-2c-1.105 0-2-.86-2-1.92V33.92c0-1.06.895-1.92 2-1.92z\"/>\n        <path fill=\"#d93368\" d=\"M50 35c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1s-1-.448-1-1v-2c0-.552.448-1 1-1z\"/>\n      </g>\n      <g fill-rule=\"evenodd\">\n        <path class=\"book-shelf__shelf\" fill=\"#ae8280\" d=\"M21 60h40c1.105 0 2 .895 2 2s-.895 2-2 2H21c-1.105 0-2-.895-2-2s.895-2 2-2z\"/>\n        <path fill=\"#855f6d\" d=\"M51.5 67c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5zm-21 0c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5z\"/>\n      </g>\n    </svg>\n  </form>\n </div>";
+
+/***/ },
+/* 235 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
 	var _jquery = __webpack_require__(1);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
@@ -40964,6 +41678,7 @@
 	      var pauseText = toggleElement.data('pausetext');
 	      var resumeText = toggleElement.data('resumetext');
 	      var splitElement = element.find('.split');
+	      var saveElement = element.find('.save');
 	      var startText = toggleElement.text();
 	      var minutes, hundredths, timer;
 	      var splitTimes = [];
@@ -41023,16 +41738,20 @@
 	        var cumTime = Math.round(endTime * 100);
 	        (0, _jquery2['default'])('.stopwatch-container .cum-time').append('<br />' + cumTime);
 	        splitTimes.push(cumTime);
-	
 	        // var indTime = Math.round(splitTimes[1] - splitTimes[0]);
 	        // $('.stopwatch-container .ind-time').append('<br />' + indTime);  
 	        // splitTimes.splice(0, 1);
 	      };
-	      function getIndTimes() {
-	        _underscore2['default'].map(splitTimes, function (x, y) {
-	          return x - y;
-	        });
-	      };
+	      // function saveTimes(){
+	      //   $.ajax({
+	      //     url: '/api/stopwatch',
+	      //     method: 'POST',
+	      //     complete: function(response){
+	      //       var dataString = response.responseText;
+	      //       var data = JSON.parse(dataString);
+	      //     }   
+	      //   });
+	      // };
 	      toggleElement.on('click', function () {
 	        running ? pause() : run();
 	      });
@@ -41042,10 +41761,9 @@
 	      splitElement.on('click', function () {
 	        split();
 	      });
-	      (0, _jquery2['default'])('.btn.ind-time').click(function () {
-	        getIndTimes();
-	        // $('.individual_times').html(indTimes);
-	      });
+	      // saveElement.on('click', function(){
+	      //   saveTimes();
+	      // })
 	      reset();
 	      if (running) run();
 	    });
@@ -41121,7 +41839,7 @@
 	//
 
 /***/ },
-/* 227 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41132,11 +41850,11 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _templatesVDTVdtInstructionsHtml = __webpack_require__(228);
+	var _templatesVDTVdtInstructionsHtml = __webpack_require__(237);
 	
 	var _templatesVDTVdtInstructionsHtml2 = _interopRequireDefault(_templatesVDTVdtInstructionsHtml);
 	
-	var _templatesVDTVdtItemsHtml = __webpack_require__(229);
+	var _templatesVDTVdtItemsHtml = __webpack_require__(238);
 	
 	var _templatesVDTVdtItemsHtml2 = _interopRequireDefault(_templatesVDTVdtItemsHtml);
 	
@@ -41163,19 +41881,19 @@
 	module.exports = app;
 
 /***/ },
-/* 228 */
+/* 237 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"vdt-container\">\n  <h1 class=\"vdt-title\">Visual Designs</h1>\n  <h2 class=\"vdt-instructions\">\n    For each item on this test, look at the two pictures and click on the one you like better.\n  </h2>\n  <button class=\"btn btn-default btn-start\">Start</button>\n</div>";
 
 /***/ },
-/* 229 */
+/* 238 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"1a\" src=\"/images/VDT/vdt-1a.png\">\n  <img class=\"vdt-image\" id=\"1b\" src=\"/images/VDT/vdt-1b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"2a\" src=\"/images/VDT/vdt-2a.png\">\n  <img class=\"vdt-image\" id=\"2b\" src=\"/images/VDT/vdt-2b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"3a\" src=\"/images/VDT/vdt-3a.png\">\n  <img class=\"vdt-image\" id=\"3b\" src=\"/images/VDT/vdt-3b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"4a\" src=\"/images/VDT/vdt-4a.png\">\n  <img class=\"vdt-image\" id=\"4b\" src=\"/images/VDT/vdt-4b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"5a\" src=\"/images/VDT/vdt-5a.png\">\n  <img class=\"vdt-image\" id=\"5b\" src=\"/images/VDT/vdt-5b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"6a\" src=\"/images/VDT/vdt-6a.png\">\n  <img class=\"vdt-image\" id=\"6b\" src=\"/images/VDT/vdt-6b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"7a\" src=\"/images/VDT/vdt-7a.png\">\n  <img class=\"vdt-image\" id=\"7b\" src=\"/images/VDT/vdt-7b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"8a\" src=\"/images/VDT/vdt-8a.png\">\n  <img class=\"vdt-image\" id=\"8b\" src=\"/images/VDT/vdt-8b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"9a\" src=\"/images/VDT/vdt-9a.png\">\n  <img class=\"vdt-image\" id=\"9b\" src=\"/images/VDT/vdt-9b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"10a\" src=\"/images/VDT/vdt-10a.png\">\n  <img class=\"vdt-image\" id=\"10b\" src=\"/images/VDT/vdt-10b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"11a\" src=\"/images/VDT/vdt-11a.png\">\n  <img class=\"vdt-image\" id=\"11b\" src=\"/images/VDT/vdt-11b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"12a\" src=\"/images/VDT/vdt-12a.png\">\n  <img class=\"vdt-image\" id=\"12b\" src=\"/images/VDT/vdt-12b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"13a\" src=\"/images/VDT/vdt-13a.png\">\n  <img class=\"vdt-image\" id=\"13b\" src=\"/images/VDT/vdt-13b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"14a\" src=\"/images/VDT/vdt-14a.png\">\n  <img class=\"vdt-image\" id=\"14b\" src=\"/images/VDT/vdt-14b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"15a\" src=\"/images/VDT/vdt-15a.png\">\n  <img class=\"vdt-image\" id=\"15b\" src=\"/images/VDT/vdt-15b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"16a\" src=\"/images/VDT/vdt-16a.png\">\n  <img class=\"vdt-image\" id=\"16b\" src=\"/images/VDT/vdt-16b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"17a\" src=\"/images/VDT/vdt-17a.png\">\n  <img class=\"vdt-image\" id=\"17b\" src=\"/images/VDT/vdt-17b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"18a\" src=\"/images/VDT/vdt-18a.png\">\n  <img class=\"vdt-image\" id=\"18b\" src=\"/images/VDT/vdt-18b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"19a\" src=\"/images/VDT/vdt-19a.png\">\n  <img class=\"vdt-image\" id=\"19b\" src=\"/images/VDT/vdt-19b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"20a\" src=\"/images/VDT/vdt-20a.png\">\n  <img class=\"vdt-image\" id=\"20b\" src=\"/images/VDT/vdt-20b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"21a\" src=\"/images/VDT/vdt-21a.png\">\n  <img class=\"vdt-image\" id=\"21b\" src=\"/images/VDT/vdt-21b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"22a\" src=\"/images/VDT/vdt-22a.png\">\n  <img class=\"vdt-image\" id=\"22b\" src=\"/images/VDT/vdt-22b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"23a\" src=\"/images/VDT/vdt-23a.png\">\n  <img class=\"vdt-image\" id=\"23b\" src=\"/images/VDT/vdt-23b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"24a\" src=\"/images/VDT/vdt-24a.png\">\n  <img class=\"vdt-image\" id=\"24b\" src=\"/images/VDT/vdt-24b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"25a\" src=\"/images/VDT/vdt-25a.png\">\n  <img class=\"vdt-image\" id=\"25b\" src=\"/images/VDT/vdt-25b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"26a\" src=\"/images/VDT/vdt-26a.png\">\n  <img class=\"vdt-image\" id=\"26b\" src=\"/images/VDT/vdt-26b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"27a\" src=\"/images/VDT/vdt-27a.png\">\n  <img class=\"vdt-image\" id=\"27b\" src=\"/images/VDT/vdt-27b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"28a\" src=\"/images/VDT/vdt-28a.png\">\n  <img class=\"vdt-image\" id=\"28b\" src=\"/images/VDT/vdt-28b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"29a\" src=\"/images/VDT/vdt-29a.png\">\n  <img class=\"vdt-image\" id=\"29b\" src=\"/images/VDT/vdt-29b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"30a\" src=\"/images/VDT/vdt-30a.png\">\n  <img class=\"vdt-image\" id=\"30b\" src=\"/images/VDT/vdt-30b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"31a\" src=\"/images/VDT/vdt-31a.png\">\n  <img class=\"vdt-image\" id=\"31b\" src=\"/images/VDT/vdt-31b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"32a\" src=\"/images/VDT/vdt-32a.png\">\n  <img class=\"vdt-image\" id=\"32b\" src=\"/images/VDT/vdt-32b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"33a\" src=\"/images/VDT/vdt-33a.png\">\n  <img class=\"vdt-image\" id=\"33b\" src=\"/images/VDT/vdt-33b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"34a\" src=\"/images/VDT/vdt-34a.png\">\n  <img class=\"vdt-image\" id=\"34b\" src=\"/images/VDT/vdt-34b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"35a\" src=\"/images/VDT/vdt-35a.png\">\n  <img class=\"vdt-image\" id=\"35b\" src=\"/images/VDT/vdt-35b.png\">\n</div>\n<hr> \n";
 
 /***/ },
-/* 230 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

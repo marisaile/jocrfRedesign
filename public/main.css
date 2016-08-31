@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Prompt);@import url(https://fonts.googleapis.com/css?family=Lato);@import url(https://fonts.googleapis.com/css?family=Proza+Libre:400,500);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Rock+Salt);@import url(https://fonts.googleapis.com/css?family=Over+the+Rainbow);/*  body.landing-page {
+@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Rock+Salt);@import url(https://fonts.googleapis.com/css?family=Over+the+Rainbow);/*  body.landing-page {
     margin: 0;
     background-color: #720EFF;
 
@@ -117,9 +117,10 @@ body.override-bootstrap {
   position: relative;
   display: inline-block;
   /* top: -5.5vh;*/
-  margin-right: 4vw;
+  /*margin-right: 4vw;*/
   font-family: 'Taviraj', serif;
   font-size: 2.3vmin;
+  line-height: 11vmin;
   color: #FFFEFF;
 }
 
@@ -337,9 +338,9 @@ body.override-bootstrap {
   position: relative;
   top: 105px;
   left: 125px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 20px;
-  color: #383838;
+  color: #323333;
 }
 
 input.search-photo {
@@ -351,10 +352,22 @@ input.search-photo {
   background-color: #fff;
 }
 
+.btn.search-photos {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  top: -75px;
+  left: 550px;
+  background-color: #F501FF;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  color: #FFFEFF;
+}
+
 .search-results {
   position: relative;
   display: block;
-  margin: 50px auto;
+  margin: 150px auto;
   width: 90%;
 }
 
@@ -421,33 +434,33 @@ input.search-photo {
 .school-header {
   position: relative;
   width: 90%;
-  height: 5vh;
-  margin: 7vh auto;
-  z-index: 0;
+  height: 50px;
+  margin: 50px auto;
+  padding: 0;
   background-color: #F5F4F5;
   border-bottom: solid 1px #323333;
   /*box-shadow: 0px 0px 5px 1px #8A8C8C;*/
-  /*a.option:active {
-    font-size: 2.5vmin;
-    font-weight: bold;
-    color: #4B4C4D;
-  }*/
 }
 
 .school-header a.option {
   display: inline-block;
-  margin-bottom: 56px;
   font-family: 'Rock Salt', cursive;
-  font-size: 2.25vmin;
+  font-size: 2.3vmin;
   color: #323333;
+  line-height: 50px;
   /*text-decoration: underline;*/
-  line-height: 7vh;
-  margin-left: 2vw;
-  margin-right: 1.5vw;
+  margin-left: 30px;
+  margin-right: 15px;
 }
 
 .school-header a.option:hover {
   text-decoration: none;
+  color: #4B4C4D;
+}
+
+.school-header a.option:active {
+  font-size: 20px;
+  font-weight: bold;
   color: #4B4C4D;
 }
 
@@ -457,51 +470,55 @@ input.search-photo {
   width: 100%;
 }
 
-.school-main .book-container {
+.school-main .school-books-item {
   position: relative;
   display: inline-block;
-  width: 32vw;
-  height: 32vh;
-  margin-right: 10vw;
-  margin-bottom: 3vh;
+  perspective: 250px;
+  perspective-origin: bottom;
+  width: 40%;
 }
 
-.school-main .book-container img.book-image {
-  position: relative;
-  left: -2vw;
-  top: 2.75vh;
-  width: 8vw;
-  height: 22vh;
-  box-shadow: 0px 2px 2px 3px rgba(210, 214, 213, 0.8);
+.school-main .school-books-item .book-container {
+  width: 87%;
+  margin-left: 180px;
+  margin-bottom: 50px;
+  margin-right: 40px;
+  transition: transform .5s;
 }
 
-.school-main .book-container .title {
+.school-main .school-books-item .book-container img.book-image {
   position: relative;
-  left: 7vw;
-  top: -3vh;
-  width: 25vw;
+  left: -10px;
+  top: 20px;
+  width: 125px;
+  box-shadow: 0px 2px 2px 2px rgba(210, 214, 213, 0.8);
+}
+
+.school-main .school-books-item .book-container .title {
+  position: relative;
+  left: 130px;
+  top: -50px;
+  width: 80%;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 2.5vmin;
+  font-size: 18px;
   color: #323333;
   text-align: left;
 }
 
-.school-main .book-container .author {
+.school-main .school-books-item .book-container .author {
   position: relative;
-  left: 7vw;
-  top: -4vh;
+  left: 130px;
+  top: -50px;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 2vmin;
+  font-size: 16px;
   color: #323333;
   text-align: left;
-  perspective: 500px;
-  perspective-origin: 10% 25%;
 }
 
 .school-main .book-container:hover {
   background-color: #fff;
   box-shadow: 0px 2px 2px 1px rgba(210, 214, 213, 0.5);
-  transform: translate3d(1px, 10px, 60px);
+  transform: translate3d(10px, 10px, 10px);
   transition: transform .5s;
 }
 
@@ -515,7 +532,7 @@ input.search-photo {
 .landing .notebook-paper {
   width: 40%;
   background: linear-gradient(to bottom, white 29px, #00b0d7 1px);
-  margin: -10vh auto;
+  margin: -12vh auto;
   background-size: 100% 30px;
   position: relative;
   padding-top: 20vh;
@@ -575,117 +592,20 @@ input.search-photo {
   color: #4B4C4D;
 }
 
-/*.col-md-2.school-subject  {
-  position: relative;
-  display: block;
-  top: 75px;
-  left: 10px;
-    
-  .select.form-control.select-picker {
-    position: relative;
-    top: 50px;
-    font-family: 'Josefin Sans', sans-serif;
-    color: #383838;
-    font-size: 18px;
-    
-    .option {
-      position: relative;
-      display: block;
-      top: 320px;
-      left: 25px;
-      font-family: 'Josefin Sans', sans-serif;
-      color: #383838;
-      font-size: 16px;
-    }
-  }
-  /*.suggest-book {
-    position: relative;
-    display: block;
-    top: 100px;
-    p {
-      font-family: 'Josefin Sans', sans-serif;
-      color: #383838;
-      font-size: 18px;
-      text-align: left;
-    }
-    .btn-default.btn-suggest {
-      background-color: #00C9D6;
-      color: #eee;
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 16px;
-    }
-    .suggestion-box {
-      position: relative;
-      display: none;
-      height: 400px;
-      width: 300px;
-      background-color: #383838;
-      border-radius: 5px;
-      margin: 10px 0 10px -10px;
-      padding: 10px;
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 16px;
-      color: #eee;     
-      
-      label {
-        margin-bottom: 0;
-        margin-left: 25px;
-      }
-      .form-control {
-        padding: 0;
-        width: 225px;
-        margin-bottom: 0;
-        margin-left: 25px;
-        background-color: #383838;
-        font-size: 16px;
-        color: #eee;
-      }
-      .btn-suggestion {
-        background-color: #00C9D6;
-        font-size: 16px;
-        color: #eee;
-        margin-left: 25px;
-      }
-    }
-  }
-  .thank-you {
-    position: relative;
-    display: none;
-    height: 200px;
-    width: 300px;
-    border-radius: 10px;
-    background-color: #00C9D6;
-    padding: 20px;
-
-  h3 {
-    position: relative;
-    color: #eee;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 25px;
-    text-align: center;
-    }
-  }
-}
-
-
-  /*.image-responsive {
-    position: relative;
-    display: inline;
-    margin: 100px auto;
-    width: 500px;
-  }*/
-/*li.books-back {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 2vmin;
-  color: black;
-}
-li.books-back:hover {
-  text-decoration: none;
-  color: grey;
-}*/
 .timer-main {
   background-color: #aaa;
-  /*  .ind-time {
+  /*.cum-time {
+    position: relative;
+    float: left;
+    width: 160px;
+    height: 400px;
+    top: 30px;
+    margin-right: 10px;
+    font-family: 'Taviraj', serif;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .ind-time {
     position: relative;
     float: right;
     width: 160px;
@@ -694,6 +614,7 @@ li.books-back:hover {
     font-family: 'Taviraj', serif;
     font-size: 20px;
     line-height: 20px;
+    text-align: right;
   }*/
 }
 
@@ -732,21 +653,11 @@ li.books-back:hover {
   text-align: center;
 }
 
-.timer-main .stopwatch-container .stopwatch .controls .reset {
-  position: relative;
-  display: inline-block;
-  width: 100px;
-  font-family: 'Taviraj', serif;
-  font-size: 3vmin;
-  color: #fff;
-  background-color: #FF2D2C;
-  text-align: center;
-}
-
 .timer-main .stopwatch-container .stopwatch .controls .split {
   position: relative;
   display: inline-block;
   width: 100px;
+  left: 110px;
   font-family: 'Taviraj', serif;
   font-size: 3vmin;
   color: #fff;
@@ -754,33 +665,42 @@ li.books-back:hover {
   text-align: center;
 }
 
-.timer-main .cum-time {
+.timer-main .stopwatch-container .stopwatch .controls .reset {
   position: relative;
-  float: left;
-  width: 160px;
-  height: 400px;
-  top: 30px;
-  margin-right: 10px;
+  display: inline-block;
+  width: 100px;
+  top: 425px;
   font-family: 'Taviraj', serif;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 3vmin;
+  color: #fff;
+  background-color: #FF2D2C;
+  text-align: center;
 }
 
-.individual_times {
+.timer-main .stopwatch-container .stopwatch .controls .save {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  top: 380px;
+  font-family: 'Taviraj', serif;
+  font-size: 3vmin;
+  text-align: center;
+}
+
+/*.individual_times {
   position: relative;
   display: block;
   font-family: 'Taviraj', serif;
   font-size: 20px;
   line-height: 20px;
   left: 250px;
-}
 
-.individual_times .ind-time {
-  position: relative;
-  display: block;
-  width: 150px;
-}
-
+  .ind-time {
+    position: relative;
+    display: block;
+    width: 150px;
+  }
+}*/
 .no-bootstrap {
   background-color: #888;
 }

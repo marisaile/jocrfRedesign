@@ -43,16 +43,43 @@ router.get('/api/books', function(req, res){
     });
 });
 
-// router.post('/books', function(req, res){
-//   var book = req.body.books;
-//   fs.writeFile(bookDatabasePath, books, function(err){
+router.post('/api/books', function(req, res){
+  var book = req.body.books;
+  fs.writeFile(bookDatabasePath, books, function(err){
+    if (err) { console.log(err); }
+    // respond to the client
+    res.writeHead(200, {'Content-Type': 'text/json'});
+    res.write(books);
+    res.end();
+  });
+});
+
+// var stopwatchDatabasePath = __dirname + '/stopwatchDatabase.json';
+
+
+// router.get('/api/stopwatch', function(req, res){
+//   // read in the database
+//     fs.readFile(stopwatchDatabasePath, function(err, data){
+//       if (err) { console.log(err); }
+//       // send a response
+//       res.writeHead(200, {'Content-Type': 'text/json'});
+//       res.write(data);
+//       res.end();    
+//     });
+// });
+
+// router.post('/api/stopwatch', function(req, res){
+//   var times = req.body.times;
+//   fs.writeFile(stopwatchDatabasePath, times, function(err){
 //     if (err) { console.log(err); }
 //     // respond to the client
 //     res.writeHead(200, {'Content-Type': 'text/json'});
-//     res.write(books);
+//     res.write(times.toString());
 //     res.end();
 //   });
 // });
+
+
 
 // everything route 
 router.get('/*', function indexRouteHandler (req, res) {

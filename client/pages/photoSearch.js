@@ -16,11 +16,15 @@ var app = {
   // },
   bindEvents: function(){
     app.$input.on('keypress', app.searchKeypress);
+    $('.search-photos').on('click', app.searchButton);
   },
   searchKeypress: function(event){
     if (event.which === 13) {
       app.doSearch();
     }
+  },
+  searchButton: function(){
+    app.doSearch();
   },
   doSearch: function(){
     var phrase = app.$input.val();
