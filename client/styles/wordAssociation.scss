@@ -1,0 +1,58 @@
+body.word-association {
+  margin: 0;
+  background-color: #222;
+}
+.wa-container {
+  position: relative;
+  display: block;
+  margin: auto;
+  height: 1024px;
+  width: 768px;
+  background-color: #eee;
+
+  .word-container {
+    position: relative;
+    display: block;
+    margin: auto;
+    height: 400px;
+    width: 200px;
+  
+    .word {
+      position: relative;
+      display: block;
+      top: 250px;
+      height: 100px;
+      width: 200px;
+      font-family: 'Taviraj', serif;
+      font-size: 50px;
+      color: #222;
+      text-align: center;
+    }
+    .response {
+      position: relative;
+      display: inline-block;
+      top: 275px;
+      height: 75px;
+      width: 200px;
+      border: 1px solid #222;
+      font-family: 'Taviraj', serif;
+      font-size: 30px;
+      color: #222;
+      text-align: center;
+      line-height: 75px;
+      background-color: #eee;
+    }
+    .response:focus {
+      outline: none;
+    }
+  }
+  .sig-response {
+    position: relative;
+    display: block;
+    top: 550px;
+    left: 450px;
+    font-family: 'Taviraj', serif;
+    font-size: 20px;
+    color: #222;
+  }
+}

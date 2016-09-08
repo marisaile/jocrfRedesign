@@ -81,21 +81,25 @@
 	
 	var _pagesSchoolBooks2 = _interopRequireDefault(_pagesSchoolBooks);
 	
-	var _pagesBooksBooksController = __webpack_require__(226);
+	var _pagesBooksBooksController = __webpack_require__(227);
 	
 	var _pagesBooksBooksController2 = _interopRequireDefault(_pagesBooksBooksController);
 	
-	var _pagesTimer = __webpack_require__(235);
+	var _pagesTimer = __webpack_require__(236);
 	
 	var _pagesTimer2 = _interopRequireDefault(_pagesTimer);
 	
-	var _pagesVisualDesigns = __webpack_require__(236);
+	var _pagesVisualDesigns = __webpack_require__(237);
 	
 	var _pagesVisualDesigns2 = _interopRequireDefault(_pagesVisualDesigns);
 	
-	var _pagesDalquest = __webpack_require__(239);
+	var _pagesDalquest = __webpack_require__(240);
 	
 	var _pagesDalquest2 = _interopRequireDefault(_pagesDalquest);
+	
+	var _pagesWordAssociation = __webpack_require__(241);
+	
+	var _pagesWordAssociation2 = _interopRequireDefault(_pagesWordAssociation);
 	
 	(0, _jquery2['default'])(function () {
 	
@@ -125,15 +129,17 @@
 	    case '/pages/books.html':
 	      _pagesBooksBooksController2['default'].render();
 	      break;
-	    // case '/pages/timer.html':
-	    //   timer.init();
-	    // break;
+	    case '/pages/timer.html':
+	      _pagesTimer2['default'].init();
+	      break;
 	    // case '/pages/visualDesigns.html':
 	    //   vdt.init();
 	    // break;
 	    case '/pages/dalquest.html':
 	      _pagesDalquest2['default'].init();
 	      break;
+	    case '/pages/wordAssociation.html':
+	      _pagesWordAssociation2['default'].init();
 	    default:
 	      break;
 	  }
@@ -9997,7 +10003,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","option":"option","school-main":"school-main","school-books-item":"school-books-item","book-container":"book-container","book-image":"book-image","title":"title","author":"author","landing":"landing","notebook-paper":"notebook-paper","paper-title-line":"paper-title-line","books-header":"books-header","timer-main":"timer-main","stopwatch-container":"stopwatch-container","stopwatch":"stopwatch","time":"time","controls":"controls","toggle":"toggle","split":"split","reset":"reset","save":"save","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-background":"dalquest-background"};
+	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","option":"option","school-main":"school-main","school-books-item":"school-books-item","book-container":"book-container","book-image":"book-image","title":"title","author":"author","landing":"landing","notebook-paper":"notebook-paper","paper-title-line":"paper-title-line","books-header":"books-header","sticky-container":"sticky-container","sticky":"sticky","sticky-text":"sticky-text","left-shadow":"left-shadow","right-shadow":"right-shadow","tape":"tape","suggest-book":"suggest-book","book-suggestion":"book-suggestion","thank-you":"thank-you","hidden":"hidden","timer-main":"timer-main","stopwatch-container":"stopwatch-container","stopwatch":"stopwatch","time":"time","controls":"controls","toggle":"toggle","split":"split","reset":"reset","save":"save","ind-time":"ind-time","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-background":"dalquest-background","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","sig-response":"sig-response"};
 
 /***/ },
 /* 3 */,
@@ -10089,7 +10095,7 @@
 /* 10 */
 /***/ function(module, exports) {
 
-	module.exports = "\n      <div class=\"nav-items\">  \n        <a class=\"marisaile\" role=\"menuitem\" href=\"/server/view.ejs\">Marisaile</a>\n        <a class=\"nav-stay\" role=\"menuitem\" href=\"/pages/todo.html\">To Do App</a>\n        <a class=\"nav-stay\" role=\"menuitem\" href=\"/pages/photoSearch.html\">Photo Search</a>\n        <!-- <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/d3.html\">d3 Chart</a> -->\n        <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/funnySquares.html\">Funny Squares</a>\n        <!-- <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/three.html\">THREE Animation</a> -->\n        <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/schoolBooks.html\">School</a>\n        <!-- <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/books.html\">Book Tracker</a>\n        <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/dalquest.html\">Dalquest Research Site</a> -->\n        <!-- <a class=\"nav-stay nav-joc\" role=\"menuitem\" href=\"/pages/timer.html\">Timer</a> -->\n      </div>\n    ";
+	module.exports = "\n      <div class=\"nav-items\">  \n        <a class=\"marisaile\" role=\"menuitem\" href=\"/server/view.ejs\">Marisaile</a>\n        <a class=\"nav-stay\" role=\"menuitem\" href=\"/pages/todo.html\">To Do App</a>\n        <a class=\"nav-stay\" role=\"menuitem\" href=\"/pages/photoSearch.html\">Photo Search</a>\n        <!-- <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/d3.html\">d3 Chart</a> -->\n        <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/funnySquares.html\">Funny Squares</a>\n        <!-- <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/three.html\">THREE Animation</a> -->\n        <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/schoolBooks.html\">School</a>\n        <!-- <a class=\"nav-stay nav-joc\" role=\"menuitem\" href=\"/pages/wordAssociation.html\">Word Association</a> -->\n        <!-- <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/books.html\">Book Tracker</a>\n        <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/dalquest.html\">Dalquest Research Site</a> -->\n        <!-- <a class=\"nav-stay nav-joc\" role=\"menuitem\" href=\"/pages/timer.html\">Timer</a> -->\n      </div>\n    ";
 
 /***/ },
 /* 11 */
@@ -38444,10 +38450,14 @@
 	
 	var _templatesSchoolBookPageHeaderHtml2 = _interopRequireDefault(_templatesSchoolBookPageHeaderHtml);
 	
+	var _templatesSchoolSuggestBookHtml = __webpack_require__(213);
+	
+	var _templatesSchoolSuggestBookHtml2 = _interopRequireDefault(_templatesSchoolSuggestBookHtml);
+	
 	var $ = __webpack_require__(1);
 	
 	window.jQuery = window.$ = $;
-	__webpack_require__(213);
+	__webpack_require__(214);
 	
 	var compiledTemplate = _handlebars2['default'].compile(_templatesSchoolSchoolBookContainerHtml2['default']);
 	var books = [];
@@ -38459,6 +38469,9 @@
 	  render: function render() {
 	    $('.school-main').html(_templatesSchoolSchoolBooksLandingHtml2['default']);
 	    app.fetchBooks();
+	    // $('.btn-suggestion').click(function(){
+	    //   $('.thank-you').removeClass('hidden');
+	    // });
 	  },
 	  fetchBooks: function fetchBooks() {
 	    $.ajax({
@@ -38485,29 +38498,30 @@
 	      app.render();
 	      $('.school-main').html(booksHtml);
 	    });
-	    // },
-	    // schoolHeader: function(){
-	    //   $('a').click(function(event) {
-	    //     app.render();
-	    //     var active = event.target.id;
-	    //     active.addClass('active');
-	    //   });
 	  }
 	};
 	
 	module.exports = app;
+	
+	// function toggle_visibility(id) {
+	//        var e = document.getElementById(id);
+	//        if(e.style.display == 'block')
+	//           e.style.display = 'none';
+	//        else
+	//           e.style.display = 'block';
+	//     }
 
 /***/ },
 /* 210 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"landing\">\n  <div class=\"notebook-paper\">\n    <div class=\"paper-title-line\">\n      <h1 class=\"books-header\">Books!</h1>\n    </div>\n    <nav class=\"school-nav\">\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"english literature\">English Literature</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"history\">History</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"math\">Math/Statistics</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"polisci\">Political Science</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"psych\">Psychology</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"science\">Science</a>   \n    </nav>\n  </div>\n</div>";
+	module.exports = "\n<div class=\"landing\">\n  <div class=\"notebook-paper\">\n    <div class=\"paper-title-line\">\n      <h1 class=\"books-header\">Books!</h1>\n    </div>\n    <nav class=\"school-nav\">\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"english literature\">English Literature</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"history\">History</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"math\">Math/Statistics</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"polisci\">Political Science</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"psych\">Psychology</a>\n      <a href=\"#\" role=\"navitem\" class=\"option\" id=\"science\">Science</a>   \n    </nav>\n  </div>\n  <div class=\"sticky-container\">\n  <div class=\"sticky\">\n    <div class=\"tape\"></div>\n      <div class=\"sticky-text\">\n        Pick a school subject and find ficton and nonfiction books related to that topic.\n      </div>\n    <div class=\"left-shadow\"></div>\n    <div class=\"right-shadow\"></div>\n  </div><!--end paper-->\n</div>";
 
 /***/ },
 /* 211 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  <div class=\"school-books-item\">\n    <div class=\"book-container\">\n    \t<a href=\"{{url}}\" target=\"new\"><img class=\"book-image\" src=\"{{image}}\"></a>\n    \t<div class=\"title\">{{title}}</div>\n      <div class=\"author\">{{author}}</div>\n    </div>\n  </div>\n";
+	module.exports = "\n  <div class=\"school-books-item\">\n    <div class=\"book-container\">\n    \t<a href=\"{{url}}\" target=\"new\"><img class=\"book-image\" src=\"{{image}}\"></a>\n    \t<div class=\"title\">{{title}}</div>\n      <div class=\"author\">{{author}}</div>\n    </div>\n  </div>\n\n";
 
 /***/ },
 /* 212 */
@@ -38517,10 +38531,15 @@
 
 /***/ },
 /* 213 */
+/***/ function(module, exports) {
+
+	module.exports = "\n  <!-- <div class=\"suggest-book\">\n    <form class= \"book-suggestion\">\n      <div class=\"form-group subject\">\n        <label for=\"subject\">Subject</label>\n        <input class=\"form-control subject\" type=\"text\">\n      </div>\n      <div class=\"form-group title\">\n        <label for=\"title\">Title</label>\n        <input class=\"form-control title\" type=\"text\">\n      </div>\n      <div class=\"form-group author\">\n        <label for=\"author\">Author</label>\n        <input class=\"form-control author\" type=\"text\">\n      </div>\n      <button class=\"btn btn-default btn-suggestion\">Submit</button>\n    </form>\n  </div>\n</div>\n<div class=\"thank-you hidden\">\n  <h3>Thanks! We will let you know if your suggestion gets added to the list. In the meantime, keep reading!</h3>\n</div>\n\n -->";
+
+/***/ },
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// This file is autogenerated via the `commonjs` Grunt task. You can require() this file in a CommonJS environment.
-	__webpack_require__(214)
 	__webpack_require__(215)
 	__webpack_require__(216)
 	__webpack_require__(217)
@@ -38532,9 +38551,10 @@
 	__webpack_require__(223)
 	__webpack_require__(224)
 	__webpack_require__(225)
+	__webpack_require__(226)
 
 /***/ },
-/* 214 */
+/* 215 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -38599,7 +38619,7 @@
 
 
 /***/ },
-/* 215 */
+/* 216 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -38699,7 +38719,7 @@
 
 
 /***/ },
-/* 216 */
+/* 217 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -38825,7 +38845,7 @@
 
 
 /***/ },
-/* 217 */
+/* 218 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -39068,7 +39088,7 @@
 
 
 /***/ },
-/* 218 */
+/* 219 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -39285,7 +39305,7 @@
 
 
 /***/ },
-/* 219 */
+/* 220 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -39456,7 +39476,7 @@
 
 
 /***/ },
-/* 220 */
+/* 221 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -39799,7 +39819,7 @@
 
 
 /***/ },
-/* 221 */
+/* 222 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40319,7 +40339,7 @@
 
 
 /***/ },
-/* 222 */
+/* 223 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40433,7 +40453,7 @@
 
 
 /***/ },
-/* 223 */
+/* 224 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40611,7 +40631,7 @@
 
 
 /***/ },
-/* 224 */
+/* 225 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40772,7 +40792,7 @@
 
 
 /***/ },
-/* 225 */
+/* 226 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40940,7 +40960,7 @@
 
 
 /***/ },
-/* 226 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40951,19 +40971,19 @@
 	
 	var _backbone2 = _interopRequireDefault(_backbone);
 	
-	var _pagesBooksBooksModel = __webpack_require__(227);
+	var _pagesBooksBooksModel = __webpack_require__(228);
 	
 	var _pagesBooksBooksModel2 = _interopRequireDefault(_pagesBooksBooksModel);
 	
-	var _pagesBooksBookItemView = __webpack_require__(229);
+	var _pagesBooksBookItemView = __webpack_require__(230);
 	
 	var _pagesBooksBookItemView2 = _interopRequireDefault(_pagesBooksBookItemView);
 	
-	var _pagesBooksBooksListView = __webpack_require__(231);
+	var _pagesBooksBooksListView = __webpack_require__(232);
 	
 	var _pagesBooksBooksListView2 = _interopRequireDefault(_pagesBooksBooksListView);
 	
-	var _pagesBooksAddBookView = __webpack_require__(233);
+	var _pagesBooksAddBookView = __webpack_require__(234);
 	
 	var _pagesBooksAddBookView2 = _interopRequireDefault(_pagesBooksAddBookView);
 	
@@ -41015,7 +41035,7 @@
 	module.exports = bookController;
 
 /***/ },
-/* 227 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41034,7 +41054,7 @@
 	
 	var _backbone2 = _interopRequireDefault(_backbone);
 	
-	var _lscache = __webpack_require__(228);
+	var _lscache = __webpack_require__(229);
 	
 	var _lscache2 = _interopRequireDefault(_lscache);
 	
@@ -41103,7 +41123,7 @@
 	module.exports = bookModel;
 
 /***/ },
-/* 228 */
+/* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -41459,7 +41479,7 @@
 
 
 /***/ },
-/* 229 */
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41478,7 +41498,7 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _templatesBooksBookItemHtml = __webpack_require__(230);
+	var _templatesBooksBookItemHtml = __webpack_require__(231);
 	
 	var _templatesBooksBookItemHtml2 = _interopRequireDefault(_templatesBooksBookItemHtml);
 	
@@ -41504,13 +41524,13 @@
 	module.exports = BookItemView;
 
 /***/ },
-/* 230 */
+/* 231 */
 /***/ function(module, exports) {
 
 	module.exports = "\n  <div class=\"title col-md-3\">{{title}}</div>\n  <div class=\"author col-md-3\">{{author}}</div>\n  <div class=\"friend col-md-2\">{{friend}}</div>\n  <div class=\"genre col-md-2\">{{genre}}</div>\n  <div class=\"rating col-md-1\"><input type=\"checkbox\"></div>\n  <div class=\"read col-md-1\"><button type=\"button\" class=\"close close-book\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button></div>\n";
 
 /***/ },
-/* 231 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41533,11 +41553,11 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _pagesBooksBookItemView = __webpack_require__(229);
+	var _pagesBooksBookItemView = __webpack_require__(230);
 	
 	var _pagesBooksBookItemView2 = _interopRequireDefault(_pagesBooksBookItemView);
 	
-	var _templatesBooksBookListHtml = __webpack_require__(232);
+	var _templatesBooksBookListHtml = __webpack_require__(233);
 	
 	var _templatesBooksBookListHtml2 = _interopRequireDefault(_templatesBooksBookListHtml);
 	
@@ -41584,13 +41604,13 @@
 	module.exports = BookListView;
 
 /***/ },
-/* 232 */
+/* 233 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"book-list-container\">\n  <ul class=\"list-group book-list\">\n    <li class=\"list-group-item row book-item\">\n      <div class=\"col-md-3\">Title</div>\n      <div class=\"col-md-3\">Author</div>\n      <div class=\"col-md-2\">Friend</div>\n      <div class=\"col-md-2\">Genre</div>\n      <div class=\"col-md-1\">Got it!</div>\n      <div class=\"col-md-1\">Read</div>   \n    </li>\n  </ul>\n  <button class=\"btn btn-default btn-add-book\">New book!</button>\n</div>\n\n\n\n";
 
 /***/ },
-/* 233 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41605,7 +41625,7 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _templatesBooksNewBookFormHtml = __webpack_require__(234);
+	var _templatesBooksNewBookFormHtml = __webpack_require__(235);
 	
 	var _templatesBooksNewBookFormHtml2 = _interopRequireDefault(_templatesBooksNewBookFormHtml);
 	
@@ -41642,13 +41662,13 @@
 	module.exports = AddBookView;
 
 /***/ },
-/* 234 */
+/* 235 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"new-book-container\">\n  <form>\n    <div class=\"form-group form-label\">\n      <label for=\"title\">Book Title</label>\n      <input type=\"text\" class=\"form-control title\" placeholder=\"Title\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"author\">Author</label>\n      <input type=\"text\" class=\"form-control author\" placeholder=\"Author\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"friend\">Who recommended it?</label>\n      <input type=\"text\" class=\"form-control friend\" placeholder=\"New Friend!\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"genre\">Genre</label>\n      <input type=\"text\" class=\"form-control genre\" placeholder=\"Genre\">\n    </div>\n    <svg class=\"book-shelf btn btn-add\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" viewBox=\"0 0 84 94\" height=\"94\" width=\"84\">\n      <path fill=\"none\" d=\"M37.612 92.805L4.487 73.71c-2.75-1.587-4.45-4.52-4.45-7.687L.008 27.877c-.003-3.154 1.676-6.063 4.405-7.634L37.558 1.167c2.73-1.57 6.096-1.566 8.835.013l33.124 19.096c2.75 1.586 4.45 4.518 4.45 7.686l.028 38.146c.002 3.154-1.677 6.063-4.406 7.634L46.445 92.818c-2.73 1.57-6.096 1.566-8.834-.013z\"/>\n      <g class=\"book-shelf__book book-shelf__book--one\" fill-rule=\"evenodd\">\n        <path fill=\"#5199fc\" d=\"M31 29h4c1.105 0 2 .895 2 2v29c0 1.105-.895 2-2 2h-4c-1.105 0-2-.895-2-2V31c0-1.105.895-2 2-2z\"/>\n        <path fill=\"#afd7fb\" d=\"M34 36h-2c-.552 0-1-.448-1-1s.448-1 1-1h2c.552 0 1 .448 1 1s-.448 1-1 1zm-2 1h2c.552 0 1 .448 1 1s-.448 1-1 1h-2c-.552 0-1-.448-1-1s.448-1 1-1z\"/>\n      </g>\n      <g class=\"book-shelf__book book-shelf__book--two\" fill-rule=\"evenodd\">\n        <path fill=\"#ff9868\" d=\"M39 34h6c1.105 0 2 .895 2 2v24c0 1.105-.895 2-2 2h-6c-1.105 0-2-.895-2-2V36c0-1.105.895-2 2-2z\"/>\n        <path fill=\"#d06061\" d=\"M42 38c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2z\"/>\n      </g>\n      <g class=\"book-shelf__book book-shelf__book--three\" fill-rule=\"evenodd\">\n        <path fill=\"#ff5068\" d=\"M49 32h2c1.105 0 2 .86 2 1.92v25.906c0 1.06-.895 1.92-2 1.92h-2c-1.105 0-2-.86-2-1.92V33.92c0-1.06.895-1.92 2-1.92z\"/>\n        <path fill=\"#d93368\" d=\"M50 35c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1s-1-.448-1-1v-2c0-.552.448-1 1-1z\"/>\n      </g>\n      <g fill-rule=\"evenodd\">\n        <path class=\"book-shelf__shelf\" fill=\"#ae8280\" d=\"M21 60h40c1.105 0 2 .895 2 2s-.895 2-2 2H21c-1.105 0-2-.895-2-2s.895-2 2-2z\"/>\n        <path fill=\"#855f6d\" d=\"M51.5 67c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5zm-21 0c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5z\"/>\n      </g>\n    </svg>\n  </form>\n </div>";
 
 /***/ },
-/* 235 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41742,6 +41762,16 @@
 	        // $('.stopwatch-container .ind-time').append('<br />' + indTime);  
 	        // splitTimes.splice(0, 1);
 	      };
+	      function showTimes() {
+	        var splitTime = splitTimes.map(function (num, index) {
+	          if (index === splitTimes.length) {
+	            return 0;
+	          } else {
+	            return splitTimes[index + 1] - splitTimes[index];
+	          }
+	        });
+	        (0, _jquery2['default'])('.ind-time').html(splitTime);
+	      }
 	      // function saveTimes(){
 	      //   $.ajax({
 	      //     url: '/api/stopwatch',
@@ -41761,9 +41791,9 @@
 	      splitElement.on('click', function () {
 	        split();
 	      });
-	      // saveElement.on('click', function(){
-	      //   saveTimes();
-	      // })
+	      saveElement.on('click', function () {
+	        showTimes();
+	      });
 	      reset();
 	      if (running) run();
 	    });
@@ -41839,7 +41869,7 @@
 	//
 
 /***/ },
-/* 236 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41850,11 +41880,11 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _templatesVDTVdtInstructionsHtml = __webpack_require__(237);
+	var _templatesVDTVdtInstructionsHtml = __webpack_require__(238);
 	
 	var _templatesVDTVdtInstructionsHtml2 = _interopRequireDefault(_templatesVDTVdtInstructionsHtml);
 	
-	var _templatesVDTVdtItemsHtml = __webpack_require__(238);
+	var _templatesVDTVdtItemsHtml = __webpack_require__(239);
 	
 	var _templatesVDTVdtItemsHtml2 = _interopRequireDefault(_templatesVDTVdtItemsHtml);
 	
@@ -41881,19 +41911,19 @@
 	module.exports = app;
 
 /***/ },
-/* 237 */
+/* 238 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"vdt-container\">\n  <h1 class=\"vdt-title\">Visual Designs</h1>\n  <h2 class=\"vdt-instructions\">\n    For each item on this test, look at the two pictures and click on the one you like better.\n  </h2>\n  <button class=\"btn btn-default btn-start\">Start</button>\n</div>";
 
 /***/ },
-/* 238 */
+/* 239 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"1a\" src=\"/images/VDT/vdt-1a.png\">\n  <img class=\"vdt-image\" id=\"1b\" src=\"/images/VDT/vdt-1b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"2a\" src=\"/images/VDT/vdt-2a.png\">\n  <img class=\"vdt-image\" id=\"2b\" src=\"/images/VDT/vdt-2b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"3a\" src=\"/images/VDT/vdt-3a.png\">\n  <img class=\"vdt-image\" id=\"3b\" src=\"/images/VDT/vdt-3b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"4a\" src=\"/images/VDT/vdt-4a.png\">\n  <img class=\"vdt-image\" id=\"4b\" src=\"/images/VDT/vdt-4b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"5a\" src=\"/images/VDT/vdt-5a.png\">\n  <img class=\"vdt-image\" id=\"5b\" src=\"/images/VDT/vdt-5b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"6a\" src=\"/images/VDT/vdt-6a.png\">\n  <img class=\"vdt-image\" id=\"6b\" src=\"/images/VDT/vdt-6b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"7a\" src=\"/images/VDT/vdt-7a.png\">\n  <img class=\"vdt-image\" id=\"7b\" src=\"/images/VDT/vdt-7b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"8a\" src=\"/images/VDT/vdt-8a.png\">\n  <img class=\"vdt-image\" id=\"8b\" src=\"/images/VDT/vdt-8b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"9a\" src=\"/images/VDT/vdt-9a.png\">\n  <img class=\"vdt-image\" id=\"9b\" src=\"/images/VDT/vdt-9b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"10a\" src=\"/images/VDT/vdt-10a.png\">\n  <img class=\"vdt-image\" id=\"10b\" src=\"/images/VDT/vdt-10b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"11a\" src=\"/images/VDT/vdt-11a.png\">\n  <img class=\"vdt-image\" id=\"11b\" src=\"/images/VDT/vdt-11b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"12a\" src=\"/images/VDT/vdt-12a.png\">\n  <img class=\"vdt-image\" id=\"12b\" src=\"/images/VDT/vdt-12b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"13a\" src=\"/images/VDT/vdt-13a.png\">\n  <img class=\"vdt-image\" id=\"13b\" src=\"/images/VDT/vdt-13b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"14a\" src=\"/images/VDT/vdt-14a.png\">\n  <img class=\"vdt-image\" id=\"14b\" src=\"/images/VDT/vdt-14b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"15a\" src=\"/images/VDT/vdt-15a.png\">\n  <img class=\"vdt-image\" id=\"15b\" src=\"/images/VDT/vdt-15b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"16a\" src=\"/images/VDT/vdt-16a.png\">\n  <img class=\"vdt-image\" id=\"16b\" src=\"/images/VDT/vdt-16b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"17a\" src=\"/images/VDT/vdt-17a.png\">\n  <img class=\"vdt-image\" id=\"17b\" src=\"/images/VDT/vdt-17b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"18a\" src=\"/images/VDT/vdt-18a.png\">\n  <img class=\"vdt-image\" id=\"18b\" src=\"/images/VDT/vdt-18b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"19a\" src=\"/images/VDT/vdt-19a.png\">\n  <img class=\"vdt-image\" id=\"19b\" src=\"/images/VDT/vdt-19b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"20a\" src=\"/images/VDT/vdt-20a.png\">\n  <img class=\"vdt-image\" id=\"20b\" src=\"/images/VDT/vdt-20b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"21a\" src=\"/images/VDT/vdt-21a.png\">\n  <img class=\"vdt-image\" id=\"21b\" src=\"/images/VDT/vdt-21b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"22a\" src=\"/images/VDT/vdt-22a.png\">\n  <img class=\"vdt-image\" id=\"22b\" src=\"/images/VDT/vdt-22b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"23a\" src=\"/images/VDT/vdt-23a.png\">\n  <img class=\"vdt-image\" id=\"23b\" src=\"/images/VDT/vdt-23b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"24a\" src=\"/images/VDT/vdt-24a.png\">\n  <img class=\"vdt-image\" id=\"24b\" src=\"/images/VDT/vdt-24b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"25a\" src=\"/images/VDT/vdt-25a.png\">\n  <img class=\"vdt-image\" id=\"25b\" src=\"/images/VDT/vdt-25b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"26a\" src=\"/images/VDT/vdt-26a.png\">\n  <img class=\"vdt-image\" id=\"26b\" src=\"/images/VDT/vdt-26b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"27a\" src=\"/images/VDT/vdt-27a.png\">\n  <img class=\"vdt-image\" id=\"27b\" src=\"/images/VDT/vdt-27b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"28a\" src=\"/images/VDT/vdt-28a.png\">\n  <img class=\"vdt-image\" id=\"28b\" src=\"/images/VDT/vdt-28b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"29a\" src=\"/images/VDT/vdt-29a.png\">\n  <img class=\"vdt-image\" id=\"29b\" src=\"/images/VDT/vdt-29b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"30a\" src=\"/images/VDT/vdt-30a.png\">\n  <img class=\"vdt-image\" id=\"30b\" src=\"/images/VDT/vdt-30b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"31a\" src=\"/images/VDT/vdt-31a.png\">\n  <img class=\"vdt-image\" id=\"31b\" src=\"/images/VDT/vdt-31b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"32a\" src=\"/images/VDT/vdt-32a.png\">\n  <img class=\"vdt-image\" id=\"32b\" src=\"/images/VDT/vdt-32b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"33a\" src=\"/images/VDT/vdt-33a.png\">\n  <img class=\"vdt-image\" id=\"33b\" src=\"/images/VDT/vdt-33b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"34a\" src=\"/images/VDT/vdt-34a.png\">\n  <img class=\"vdt-image\" id=\"34b\" src=\"/images/VDT/vdt-34b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"35a\" src=\"/images/VDT/vdt-35a.png\">\n  <img class=\"vdt-image\" id=\"35b\" src=\"/images/VDT/vdt-35b.png\">\n</div>\n<hr> \n";
 
 /***/ },
-/* 239 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41912,6 +41942,361 @@
 	};
 	
 	module.exports = app;
+
+/***/ },
+/* 241 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _handlebars = __webpack_require__(176);
+	
+	var _handlebars2 = _interopRequireDefault(_handlebars);
+	
+	var _underscore = __webpack_require__(171);
+	
+	var _underscore2 = _interopRequireDefault(_underscore);
+	
+	var _templatesWordHtml = __webpack_require__(242);
+	
+	var _templatesWordHtml2 = _interopRequireDefault(_templatesWordHtml);
+	
+	var WordAssociationList = __webpack_require__(243);
+	var significantResponse = 0;
+	var wordTemplate = _handlebars2['default'].compile(_templatesWordHtml2['default']);
+	var currentWord;
+	
+	var app = {
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {
+	    app.showPrompt();
+	  },
+	  showPrompt: function showPrompt() {
+	    (0, _jquery2['default'])('button').on('click', function () {
+	      currentWord = _underscore2['default'].map(WordAssociationList, function (word) {
+	        return wordTemplate(word);
+	      });
+	      (0, _jquery2['default'])('.word-container').html(currentWord);
+	    });
+	    (0, _jquery2['default'])('button').on('click', function () {
+	      _underscore2['default'].each(WordAssociationList, function (word) {
+	        currentWord = wordTemplate(word);
+	      });
+	    });
+	    app.countSignificantResponses();
+	  },
+	  countSignificantResponses: function countSignificantResponses() {
+	    (0, _jquery2['default'])('.response').click(function () {
+	      significantResponse += 1;
+	      (0, _jquery2['default'])('.sig-response').html('Significant Responses: ' + ' ' + significantResponse);
+	    });
+	  }
+	};
+	
+	module.exports = app;
+
+/***/ },
+/* 242 */
+/***/ function(module, exports) {
+
+	module.exports = "\n  <div class=\"word\">{{word}}</div>\n  <button class=\"response\">{{response}}</div>\n\n  <button class=\"no-response\">Next Word</div>\n";
+
+/***/ },
+/* 243 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	module.exports = [{
+	  word: 'lamp',
+	  noResponse: ''
+	}, {
+	  word: 'umbrella',
+	  noResponse: ''
+	}, {
+	  word: 'eagle',
+	  noResponse: ''
+	}, {
+	  word: 'cap',
+	  noResponse: ''
+	}, {
+	  word: 'burglar',
+	  noResponse: ''
+	}, {
+	  word: 'tobacco',
+	  noResponse: ''
+	}, {
+	  word: 'blossom',
+	  noResponse: ''
+	}, {
+	  word: 'gift',
+	  noResponse: ''
+	}, {
+	  word: 'cedar',
+	  noResponse: ''
+	}, {
+	  word: 'bible',
+	  noResponse: ''
+	}, {
+	  word: 'bible',
+	  noResponse: ''
+	}, {
+	  word: 'cottage',
+	  noResponse: ''
+	}, {
+	  word: 'slow',
+	  noResponse: ''
+	}, {
+	  word: 'baker',
+	  'response': ['butcher', 'cook']
+	}, {
+	  word: 'bitter',
+	  response: 'sweet'
+	}, {
+	  word: 'omelet',
+	  response: ''
+	}, {
+	  word: 'soft',
+	  response: 'hard'
+	}, {
+	  word: 'bed',
+	  response: ''
+	}, {
+	  word: 'black',
+	  response: 'white'
+	}, {
+	  word: 'scissors',
+	  response: ''
+	}, {
+	  word: 'sister',
+	  response: ''
+	}, {
+	  word: 'hard',
+	  response: 'soft'
+	}, {
+	  word: 'costume',
+	  response: ''
+	}, {
+	  word: 'long',
+	  response: 'short'
+	}, {
+	  word: 'tough',
+	  response: ['soft', 'easy']
+	}, {
+	  word: 'wicked',
+	  response: ['good', 'nice']
+	}, {
+	  word: 'tank',
+	  response: ''
+	}, {
+	  word: 'dark',
+	  response: 'light'
+	}, {
+	  word: 'city',
+	  response: ['town', 'country']
+	}, {
+	  word: 'square',
+	  response: ['circle', 'round']
+	}, {
+	  word: 'drink',
+	  response: ''
+	}, {
+	  word: 'sour',
+	  response: 'sweet'
+	}, {
+	  word: 'seed',
+	  response: ''
+	}, {
+	  word: 'high',
+	  response: 'low'
+	}, {
+	  word: 'railroad',
+	  response: ''
+	}, {
+	  word: 'grocery',
+	  response: ''
+	}, {
+	  word: 'tiger',
+	  response: 'lion'
+	}, {
+	  word: 'river',
+	  response: 'stream'
+	}, {
+	  word: 'heavy',
+	  response: 'light'
+	}, {
+	  word: 'fruit',
+	  response: 'vegetable'
+	}, {
+	  word: 'cabbage',
+	  response: 'lettuce'
+	}, {
+	  word: 'ocean',
+	  response: 'sea'
+	}, {
+	  word: 'king',
+	  response: 'queen'
+	}, {
+	  word: 'girl',
+	  response: ''
+	}, {
+	  word: 'age',
+	  response: ''
+	}, {
+	  word: 'hammer',
+	  response: ''
+	}, {
+	  word: 'thick',
+	  response: 'thin'
+	}, {
+	  word: 'afraid',
+	  response: 'brave'
+	}, {
+	  word: 'joy',
+	  response: ['sorrow', 'sad', 'sadness']
+	}, {
+	  word: 'dream',
+	  response: ''
+	}, {
+	  word: 'smooth',
+	  response: 'rough'
+	}, {
+	  word: 'also',
+	  response: ''
+	}, {
+	  word: 'table',
+	  response: 'chair'
+	}, {
+	  word: 'bashful',
+	  response: ''
+	}, {
+	  word: 'man',
+	  response: ''
+	}, {
+	  word: 'roof',
+	  response: ''
+	}, {
+	  word: 'whiskey',
+	  response: 'sour'
+	}, {
+	  word: 'yellow',
+	  response: ['white', 'black', 'red', 'blue', 'green']
+	}, {
+	  word: 'path',
+	  response: ''
+	}, {
+	  word: 'pretty',
+	  response: 'ugly'
+	}, {
+	  word: 'bath',
+	  reponse: 'shower'
+	}, {
+	  word: 'window',
+	  response: ''
+	}, {
+	  word: 'together',
+	  response: ['apart', 'separate']
+	}, {
+	  word: 'clean',
+	  response: 'dirty'
+	}, {
+	  word: 'captain',
+	  response: ''
+	}, {
+	  word: 'wish',
+	  response: ''
+	}, {
+	  word: 'far',
+	  response: ['near', 'close']
+	}, {
+	  word: 'citizen',
+	  response: ''
+	}, {
+	  word: 'stem',
+	  response: ''
+	}, {
+	  word: 'salt',
+	  response: ''
+	}, {
+	  word: 'sleep',
+	  response: ['wake', 'awake']
+	}, {
+	  word: 'parlor',
+	  response: 'living room'
+	}, {
+	  word: 'lightning',
+	  response: 'thunder'
+	}, {
+	  word: 'divide',
+	  response: 'multiply'
+	}, {
+	  word: 'whistle',
+	  response: 'sing'
+	}, {
+	  word: 'rough',
+	  response: ['smooth', 'soft']
+	}, {
+	  word: 'trap',
+	  response: ''
+	}, {
+	  word: 'unseen',
+	  response: ['unheard', 'seen']
+	}, {
+	  word: 'ride',
+	  response: 'walk'
+	}, {
+	  word: 'death',
+	  response: 'life'
+	}, {
+	  word: 'butter',
+	  response: 'margarine'
+	}, {
+	  word: 'hand',
+	  response: 'foot'
+	}, {
+	  word: 'butterfly',
+	  response: ''
+	}, {
+	  word: 'drift',
+	  response: ''
+	}, {
+	  word: 'follow',
+	  response: 'lead'
+	}, {
+	  word: 'memory',
+	  response: ''
+	}, {
+	  word: 'ham',
+	  response: ['egg', 'eggs']
+	}, {
+	  word: 'tooth',
+	  response: 'mouth'
+	}, {
+	  word: 'athlete',
+	  response: ''
+	}, {
+	  word: 'sailor',
+	  response: ''
+	}, {
+	  word: 'cry',
+	  response: 'laugh'
+	}, {
+	  word: 'health',
+	  response: ['sick', 'sickness']
+	}, {
+	  word: 'thief',
+	  response: ''
+	}, {
+	  word: 'delicate',
+	  response: '' }];
 
 /***/ }
 /******/ ]);

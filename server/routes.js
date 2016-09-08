@@ -44,12 +44,23 @@ router.get('/api/books', function(req, res){
 });
 
 router.post('/api/books', function(req, res){
-  var book = req.body.books;
+  if(!req.body.hasOwnProperty('subject') || 
+     !req.body.hasOwnProperty('title') || 
+     !req.body.hasOwnProperty('author')) {
+    res.statusCode = 400;
+    return res.send('Error 400: Post syntax incorrect.');
+  }
+
+  var newBook = {
+    subject: req.body.subject,
+    title: req.body.title,
+    author: req.body.author
+  }
   fs.writeFile(bookDatabasePath, books, function(err){
     if (err) { console.log(err); }
     // respond to the client
     res.writeHead(200, {'Content-Type': 'text/json'});
-    res.write(books);
+    res.write(newBook);
     res.end();
   });
 });

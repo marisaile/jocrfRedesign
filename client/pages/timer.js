@@ -80,6 +80,16 @@ var app = {
         // $('.stopwatch-container .ind-time').append('<br />' + indTime);   
         // splitTimes.splice(0, 1);
       };
+      function showTimes(){
+        var splitTime = splitTimes.map(function(num, index){
+          if (index === splitTimes.length) {
+            return 0;
+          } else {
+            return splitTimes[index + 1] - splitTimes[index];
+          }
+        });
+        $('.ind-time').html(splitTime);
+      }
       // function saveTimes(){
       //   $.ajax({
       //     url: '/api/stopwatch',
@@ -99,9 +109,9 @@ var app = {
       splitElement.on('click', function(){
         split();
       });
-      // saveElement.on('click', function(){
-      //   saveTimes();
-      // })
+      saveElement.on('click', function(){
+        showTimes();
+      })
       reset();
       if(running) run();
     });

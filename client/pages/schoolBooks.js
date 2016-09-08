@@ -7,6 +7,7 @@ import _ from 'underscore';
 import landing from 'templates/school/schoolBooksLanding.html';
 import template from 'templates/school/schoolBookContainer.html';
 import header from 'templates/school/bookPageHeader.html';
+import bookSuggestion from 'templates/school/suggestBook.html'
 
 var compiledTemplate = Handlebars.compile(template);
 var books = [];
@@ -18,6 +19,9 @@ var app = {
   render: function(){
     $('.school-main').html(landing);
     app.fetchBooks();
+    // $('.btn-suggestion').click(function(){
+    //   $('.thank-you').removeClass('hidden');
+    // });
   },
   fetchBooks: function(){
     $.ajax({
@@ -44,14 +48,16 @@ var app = {
       app.render();
       $('.school-main').html(booksHtml);
     });  
-  // },
-  // schoolHeader: function(){
-  //   $('a').click(function(event) {
-  //     app.render();
-  //     var active = event.target.id;
-  //     active.addClass('active');
-  //   });
   }
 };
 
 module.exports = app;
+
+
+// function toggle_visibility(id) {
+//        var e = document.getElementById(id);
+//        if(e.style.display == 'block')
+//           e.style.display = 'none';
+//        else
+//           e.style.display = 'block';
+//     }

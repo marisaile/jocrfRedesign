@@ -13,6 +13,7 @@ import bookController from 'pages/books/booksController';
 import timer from 'pages/timer';
 import vdt from 'pages/visualDesigns';
 import dalquest from 'pages/dalquest';
+import wordAss from 'pages/wordAssociation';
 
 $(function() {
 
@@ -42,15 +43,17 @@ $(function() {
     case '/pages/books.html':
       bookController.render();
     break;
-    // case '/pages/timer.html':
-    //   timer.init();
-    // break;
+    case '/pages/timer.html':
+      timer.init();
+    break;
     // case '/pages/visualDesigns.html':
     //   vdt.init();
     // break;
     case '/pages/dalquest.html':
       dalquest.init();
     break;
+    case '/pages/wordAssociation.html':
+      wordAss.init();
     default: break;
   }
 
