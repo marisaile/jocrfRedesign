@@ -41977,21 +41977,20 @@
 	    app.render();
 	  },
 	  render: function render() {
-	    app.showPrompt();
+	    app.getIndexOfWord();
 	  },
-	  showPrompt: function showPrompt() {
-	    (0, _jquery2['default'])('button').on('click', function () {
-	      currentWord = _underscore2['default'].map(WordAssociationList, function (word) {
-	        return wordTemplate(word);
-	      });
-	      (0, _jquery2['default'])('.word-container').html(currentWord);
+	  showNextWord: function showNextWord(currentIndex) {
+	    (0, _jquery2['default'])('.word-container').html(currentWord);
+	    currentIndex += 1;
+	  },
+	  getIndexOfWord: function getIndexOfWord() {
+	    _underscore2['default'].each(WordAssociationList, function (word) {
+	      var currentIndex = WordAssociationList.indexOf(word);
+	      currentWord = wordTemplate(WordAssociationList[currentIndex]);
 	    });
 	    (0, _jquery2['default'])('button').on('click', function () {
-	      _underscore2['default'].each(WordAssociationList, function (word) {
-	        currentWord = wordTemplate(word);
-	      });
+	      app.showNextWord();
 	    });
-	    app.countSignificantResponses();
 	  },
 	  countSignificantResponses: function countSignificantResponses() {
 	    (0, _jquery2['default'])('.response').click(function () {

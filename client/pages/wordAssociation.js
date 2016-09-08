@@ -13,21 +13,20 @@ var app = {
     app.render();
   },
   render: function(){
-    app.showPrompt();
+    app.getIndexOfWord();
+  },  
+  showNextWord: function(currentIndex){
+    $('.word-container').html(currentWord); 
+    currentIndex += 1
   },
-  showPrompt: function(){
-    $('button').on('click', function(){
-      currentWord = _.map(WordAssociationList, function(word){
-        return wordTemplate(word);
-      }); 
-      $('.word-container').html(currentWord);
+  getIndexOfWord: function(){
+    _.each(WordAssociationList, function(word){
+      var currentIndex = WordAssociationList.indexOf(word);
+      currentWord = wordTemplate(WordAssociationList[currentIndex]);
     });
     $('button').on('click', function(){
-      _.each(WordAssociationList, function(word){
-        currentWord = wordTemplate(word);
-      }); 
-    }); 
-    app.countSignificantResponses(); 
+      app.showNextWord();
+    });
   },
   countSignificantResponses: function(){
     $('.response').click(function(){
