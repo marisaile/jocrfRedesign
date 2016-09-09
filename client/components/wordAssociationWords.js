@@ -1,55 +1,51 @@
 module.exports = [
   {
     word: 'lamp',
-    noResponse: ''
+    response: 'none'
   },
   {
     word: 'umbrella',
-    noResponse: ''
+    response: 'none'
   },
   {
     word: 'eagle',
-    noResponse: ''
+    response: 'none'
   },
   {
     word: 'cap',
-    noResponse: ''
+    response: 'none'
   },
   {
     word: 'burglar',
-    noResponse: ''
+    response: 'none'
   },
   {
     word: 'tobacco',
-    noResponse: ''
+    response: 'none'
   },
   {
     word: 'blossom',
-    noResponse: ''
+    response: 'none'
   },
   {
     word: 'gift',
-    noResponse: ''
+    response: 'none'
   },
   {
     word: 'cedar',
-    noResponse: ''
+    response: 'none'
   },
   {
     word: 'bible',
-    noResponse: ''
-  },
-  {
-    word: 'bible',
-    noResponse: ''
+    response: 'none'
   },
   {
     word: 'cottage',
-    noResponse: ''
+    response: 'none'
   },
   {
     word: 'slow', 
-    noResponse: ''
+    response: 'none'
   },
   {
     word: 'baker',
@@ -64,7 +60,7 @@ module.exports = [
   },
   {
     word: 'omelet',
-    response: ''
+    response: 'none'
   },
   {
     word: 'soft', 
@@ -72,7 +68,7 @@ module.exports = [
   },
   {
     word: 'bed',
-    response: ''
+    response: 'none'
   },
   {
     word: 'black',
@@ -80,11 +76,11 @@ module.exports = [
   },
   {
     word: 'scissors',
-    response: ''
+    response: 'none'
   },
   {
     word: 'sister',
-    response: ''
+    response: 'none'
   },
   {
     word: 'hard',
@@ -92,7 +88,7 @@ module.exports = [
   },
   {
     word: 'costume',
-    response: ''
+    response: 'none'
   },
   {
     word: 'long',
@@ -114,7 +110,7 @@ module.exports = [
   },
   {
     word: 'tank',
-    response: ''
+    response: 'none'
   },
   {
     word: 'dark',
@@ -136,7 +132,7 @@ module.exports = [
   },
   {
     word: 'drink',
-    response: ''
+    response: 'none'
   },
   {
     word: 'sour',
@@ -144,7 +140,7 @@ module.exports = [
   },
   {
     word: 'seed',
-    response: ''
+    response: 'none'
   },
   {
     word: 'high',
@@ -152,11 +148,11 @@ module.exports = [
   },
   {
     word: 'railroad',
-    response: ''
+    response: 'none'
   },
   {
     word: 'grocery',
-    response: ''
+    response: 'none'
   },
   {
     word: 'tiger',
@@ -188,15 +184,15 @@ module.exports = [
   },
   {
     word: 'girl',
-    response: ''
+    response: 'none'
   },
   {
     word: 'age',
-    response: ''
+    response: 'none'
   },
   {
     word: 'hammer',
-    response: ''
+    response: 'none'
   },
   {
     word: 'thick',
@@ -216,7 +212,7 @@ module.exports = [
   },
   {
     word: 'dream',
-    response: ''
+    response: 'none'
   },
   {
     word: 'smooth',
@@ -224,7 +220,7 @@ module.exports = [
   },
   {
     word: 'also',
-    response: ''
+    response: 'none'
   },
   {
     word: 'table',
@@ -232,15 +228,15 @@ module.exports = [
   },
   {
     word: 'bashful',
-    response: ''
+    response: 'none'
   },
   {
     word: 'man',
-    response: ''  
+    response: 'none'  
   },
   {
     word: 'roof', 
-    response: ''
+    response: 'none'
   },
   {
     word: 'whiskey', 
@@ -258,7 +254,7 @@ module.exports = [
   },
   {
     word: 'path', 
-    response: ''
+    response: 'none'
   },
   {
     word: 'pretty', 
@@ -270,7 +266,7 @@ module.exports = [
   },
   {
     word: 'window',
-    response: ''
+    response: 'none'
   },
   {
     word: 'together',
@@ -285,11 +281,11 @@ module.exports = [
   },
   {
     word: 'captain',
-    response: ''
+    response: 'none'
   },
   {
     word: 'wish',
-    response: ''
+    response: 'none'
   },
   {
     word: 'far',
@@ -300,15 +296,15 @@ module.exports = [
   },
   {
     word: 'citizen',
-    response: ''
+    response: 'none'
   },
   {
     word: 'stem',
-    response: ''
+    response: 'none'
   },
   {
     word: 'salt',
-    response: ''
+    response: 'none'
   },
   {
     word: 'sleep',
@@ -342,7 +338,7 @@ module.exports = [
   },
   {
     word: 'trap',
-    response: ''
+    response: 'none'
   },
   {
     word: 'unseen',
@@ -369,11 +365,11 @@ module.exports = [
   },
   {
     word: 'butterfly', 
-    response: ''
+    response: 'none'
   },
   {
     word: 'drift',
-    response: ''
+    response: 'none'
   },
   {
     word: 'follow',
@@ -381,7 +377,7 @@ module.exports = [
   },
   {
     word: 'memory',
-    response: ''
+    response: 'none'
   },
   {
     word: 'ham',
@@ -396,11 +392,11 @@ module.exports = [
   },
   {
     word: 'athlete',
-    response: ''
+    response: 'none'
   },
   {
     word: 'sailor',   
-    response: ''
+    response: 'none'
   },
   {
     word: 'cry',
@@ -415,12 +411,10 @@ module.exports = [
   },
   {
     word: 'thief',
-    response: ''
+    response: 'none'
   },
   {
     word: 'delicate',
-    response: ''}
+    response: 'none'
+  }
 ];
-
-
-

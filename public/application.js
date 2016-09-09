@@ -10003,7 +10003,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","option":"option","school-main":"school-main","school-books-item":"school-books-item","book-container":"book-container","book-image":"book-image","title":"title","author":"author","landing":"landing","notebook-paper":"notebook-paper","paper-title-line":"paper-title-line","books-header":"books-header","sticky-container":"sticky-container","sticky":"sticky","sticky-text":"sticky-text","left-shadow":"left-shadow","right-shadow":"right-shadow","tape":"tape","suggest-book":"suggest-book","book-suggestion":"book-suggestion","thank-you":"thank-you","hidden":"hidden","timer-main":"timer-main","stopwatch-container":"stopwatch-container","stopwatch":"stopwatch","time":"time","controls":"controls","toggle":"toggle","split":"split","reset":"reset","save":"save","ind-time":"ind-time","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-background":"dalquest-background","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","sig-response":"sig-response"};
+	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","option":"option","school-main":"school-main","school-books-item":"school-books-item","book-container":"book-container","book-image":"book-image","title":"title","author":"author","landing":"landing","notebook-paper":"notebook-paper","paper-title-line":"paper-title-line","books-header":"books-header","sticky-container":"sticky-container","sticky":"sticky","sticky-text":"sticky-text","left-shadow":"left-shadow","right-shadow":"right-shadow","tape":"tape","suggest-book":"suggest-book","book-suggestion":"book-suggestion","thank-you":"thank-you","hidden":"hidden","timer-main":"timer-main","stopwatch-container":"stopwatch-container","stopwatch":"stopwatch","time":"time","controls":"controls","toggle":"toggle","split":"split","reset":"reset","save":"save","ind-time":"ind-time","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-background":"dalquest-background","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","next-word":"next-word","sig-response":"sig-response"};
 
 /***/ },
 /* 3 */,
@@ -41959,43 +41959,37 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _underscore = __webpack_require__(171);
-	
-	var _underscore2 = _interopRequireDefault(_underscore);
-	
 	var _templatesWordHtml = __webpack_require__(242);
 	
 	var _templatesWordHtml2 = _interopRequireDefault(_templatesWordHtml);
 	
 	var WordAssociationList = __webpack_require__(243);
-	var significantResponse = 0;
 	var wordTemplate = _handlebars2['default'].compile(_templatesWordHtml2['default']);
-	var currentWord;
+	var currentIndex = 0;
+	var significantResponse = 0;
 	
 	var app = {
 	  init: function init() {
 	    app.render();
 	  },
 	  render: function render() {
-	    app.getIndexOfWord();
+	    (0, _jquery2['default'])('.word-container').html(wordTemplate(WordAssociationList[currentIndex]));
+	    app.bindEvents();
 	  },
-	  showNextWord: function showNextWord(currentIndex) {
-	    (0, _jquery2['default'])('.word-container').html(currentWord);
-	    currentIndex += 1;
-	  },
-	  getIndexOfWord: function getIndexOfWord() {
-	    _underscore2['default'].each(WordAssociationList, function (word) {
-	      var currentIndex = WordAssociationList.indexOf(word);
-	      currentWord = wordTemplate(WordAssociationList[currentIndex]);
-	    });
-	    (0, _jquery2['default'])('button').on('click', function () {
-	      app.showNextWord();
-	    });
+	  bindEvents: function bindEvents() {
+	    app.countSignificantResponses();
+	    app.noResponse();
 	  },
 	  countSignificantResponses: function countSignificantResponses() {
-	    (0, _jquery2['default'])('.response').click(function () {
-	      significantResponse += 1;
-	      (0, _jquery2['default'])('.sig-response').html('Significant Responses: ' + ' ' + significantResponse);
+	    (0, _jquery2['default'])('.response').on('click', function () {
+	      significantResponse++;
+	      (0, _jquery2['default'])('.sig-response').html('Significant Responses: ' + significantResponse);
+	    });
+	  },
+	  noResponse: function noResponse() {
+	    (0, _jquery2['default'])('.next-word').on('click', function () {
+	      (0, _jquery2['default'])('.word-container').html(wordTemplate(WordAssociationList[currentIndex]));
+	      currentIndex++;
 	    });
 	  }
 	};
@@ -42006,7 +42000,7 @@
 /* 242 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  <div class=\"word\">{{word}}</div>\n  <button class=\"response\">{{response}}</div>\n\n  <button class=\"no-response\">Next Word</div>\n";
+	module.exports = "\n  <div class=\"word\">{{word}}</div>\n  <button class=\"response\">{{response}}</button>\n\n";
 
 /***/ },
 /* 243 */
@@ -42016,43 +42010,40 @@
 	
 	module.exports = [{
 	  word: 'lamp',
-	  noResponse: ''
+	  response: 'none'
 	}, {
 	  word: 'umbrella',
-	  noResponse: ''
+	  response: 'none'
 	}, {
 	  word: 'eagle',
-	  noResponse: ''
+	  response: 'none'
 	}, {
 	  word: 'cap',
-	  noResponse: ''
+	  response: 'none'
 	}, {
 	  word: 'burglar',
-	  noResponse: ''
+	  response: 'none'
 	}, {
 	  word: 'tobacco',
-	  noResponse: ''
+	  response: 'none'
 	}, {
 	  word: 'blossom',
-	  noResponse: ''
+	  response: 'none'
 	}, {
 	  word: 'gift',
-	  noResponse: ''
+	  response: 'none'
 	}, {
 	  word: 'cedar',
-	  noResponse: ''
+	  response: 'none'
 	}, {
 	  word: 'bible',
-	  noResponse: ''
-	}, {
-	  word: 'bible',
-	  noResponse: ''
+	  response: 'none'
 	}, {
 	  word: 'cottage',
-	  noResponse: ''
+	  response: 'none'
 	}, {
 	  word: 'slow',
-	  noResponse: ''
+	  response: 'none'
 	}, {
 	  word: 'baker',
 	  'response': ['butcher', 'cook']
@@ -42061,28 +42052,28 @@
 	  response: 'sweet'
 	}, {
 	  word: 'omelet',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'soft',
 	  response: 'hard'
 	}, {
 	  word: 'bed',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'black',
 	  response: 'white'
 	}, {
 	  word: 'scissors',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'sister',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'hard',
 	  response: 'soft'
 	}, {
 	  word: 'costume',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'long',
 	  response: 'short'
@@ -42094,7 +42085,7 @@
 	  response: ['good', 'nice']
 	}, {
 	  word: 'tank',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'dark',
 	  response: 'light'
@@ -42106,22 +42097,22 @@
 	  response: ['circle', 'round']
 	}, {
 	  word: 'drink',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'sour',
 	  response: 'sweet'
 	}, {
 	  word: 'seed',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'high',
 	  response: 'low'
 	}, {
 	  word: 'railroad',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'grocery',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'tiger',
 	  response: 'lion'
@@ -42145,13 +42136,13 @@
 	  response: 'queen'
 	}, {
 	  word: 'girl',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'age',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'hammer',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'thick',
 	  response: 'thin'
@@ -42163,25 +42154,25 @@
 	  response: ['sorrow', 'sad', 'sadness']
 	}, {
 	  word: 'dream',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'smooth',
 	  response: 'rough'
 	}, {
 	  word: 'also',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'table',
 	  response: 'chair'
 	}, {
 	  word: 'bashful',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'man',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'roof',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'whiskey',
 	  response: 'sour'
@@ -42190,7 +42181,7 @@
 	  response: ['white', 'black', 'red', 'blue', 'green']
 	}, {
 	  word: 'path',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'pretty',
 	  response: 'ugly'
@@ -42199,7 +42190,7 @@
 	  reponse: 'shower'
 	}, {
 	  word: 'window',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'together',
 	  response: ['apart', 'separate']
@@ -42208,22 +42199,22 @@
 	  response: 'dirty'
 	}, {
 	  word: 'captain',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'wish',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'far',
 	  response: ['near', 'close']
 	}, {
 	  word: 'citizen',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'stem',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'salt',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'sleep',
 	  response: ['wake', 'awake']
@@ -42244,7 +42235,7 @@
 	  response: ['smooth', 'soft']
 	}, {
 	  word: 'trap',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'unseen',
 	  response: ['unheard', 'seen']
@@ -42262,16 +42253,16 @@
 	  response: 'foot'
 	}, {
 	  word: 'butterfly',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'drift',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'follow',
 	  response: 'lead'
 	}, {
 	  word: 'memory',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'ham',
 	  response: ['egg', 'eggs']
@@ -42280,10 +42271,10 @@
 	  response: 'mouth'
 	}, {
 	  word: 'athlete',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'sailor',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'cry',
 	  response: 'laugh'
@@ -42292,10 +42283,11 @@
 	  response: ['sick', 'sickness']
 	}, {
 	  word: 'thief',
-	  response: ''
+	  response: 'none'
 	}, {
 	  word: 'delicate',
-	  response: '' }];
+	  response: 'none'
+	}];
 
 /***/ }
 /******/ ]);

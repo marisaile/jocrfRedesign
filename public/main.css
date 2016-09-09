@@ -930,7 +930,7 @@ body.word-association {
 .wa-container .word-container .word {
   position: relative;
   display: block;
-  top: 250px;
+  top: 150px;
   height: 100px;
   width: 200px;
   font-family: 'Taviraj', serif;
@@ -941,28 +941,40 @@ body.word-association {
 
 .wa-container .word-container .response {
   position: relative;
-  display: inline-block;
-  top: 275px;
+  top: 150px;
   height: 75px;
   width: 200px;
   border: 1px solid #222;
   font-family: 'Taviraj', serif;
   font-size: 30px;
-  color: #222;
+  color: #eee;
   text-align: center;
   line-height: 75px;
-  background-color: #eee;
+  background-color: #222;
 }
 
 .wa-container .word-container .response:focus {
   outline: none;
 }
 
+.wa-container .next-word {
+  position: relative;
+  display: block;
+  left: 620px;
+  top: 200px;
+  width: 120px;
+  height: 60px;
+  background-color: #eee;
+  color: #222;
+  font-family: 'Taviraj', serif;
+  font-size: 20px;
+}
+
 .wa-container .sig-response {
   position: relative;
   display: block;
-  top: 550px;
-  left: 450px;
+  top: 200px;
+  left: 20px;
   font-family: 'Taviraj', serif;
   font-size: 20px;
   color: #222;
