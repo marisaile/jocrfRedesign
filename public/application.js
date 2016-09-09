@@ -132,9 +132,9 @@
 	    case '/pages/timer.html':
 	      _pagesTimer2['default'].init();
 	      break;
-	    // case '/pages/visualDesigns.html':
-	    //   vdt.init();
-	    // break;
+	    case '/pages/visualDesigns.html':
+	      _pagesVisualDesigns2['default'].init();
+	      break;
 	    case '/pages/dalquest.html':
 	      _pagesDalquest2['default'].init();
 	      break;
@@ -41897,6 +41897,7 @@
 	    (0, _jquery2['default'])('.btn-start').on('click', function () {
 	      (0, _jquery2['default'])('.vdt-main').html(_templatesVDTVdtItemsHtml2['default']);
 	    });
+	    app.selectImage();
 	  },
 	  selectImage: function selectImage() {
 	    (0, _jquery2['default'])('#1a').on('click', function () {
@@ -41964,12 +41965,13 @@
 	var _templatesWordHtml2 = _interopRequireDefault(_templatesWordHtml);
 	
 	var WordAssociationList = __webpack_require__(243);
-	var wordTemplate = _handlebars2['default'].compile(_templatesWordHtml2['default']);
+	var wordTemplate;
 	var currentIndex = 0;
 	var significantResponse = 0;
 	
 	var app = {
 	  init: function init() {
+	    app.compileTemplate();
 	    app.render();
 	  },
 	  render: function render() {
@@ -41977,19 +41979,27 @@
 	    app.bindEvents();
 	  },
 	  bindEvents: function bindEvents() {
-	    app.countSignificantResponses();
 	    app.noResponse();
 	  },
+	  compileTemplate: function compileTemplate() {
+	    wordTemplate = _handlebars2['default'].compile(_templatesWordHtml2['default']);
+	  },
 	  countSignificantResponses: function countSignificantResponses() {
-	    (0, _jquery2['default'])('.response').on('click', function () {
+	    var $response = (0, _jquery2['default'])('.response');
+	    $response.on('click', function () {
 	      significantResponse++;
 	      (0, _jquery2['default'])('.sig-response').html('Significant Responses: ' + significantResponse);
 	    });
 	  },
+	  nextWord: function nextWord() {
+	    (0, _jquery2['default'])('.word-container').html(wordTemplate(WordAssociationList[currentIndex]));
+	    currentIndex++;
+	    app.countSignificantResponses();
+	  },
 	  noResponse: function noResponse() {
-	    (0, _jquery2['default'])('.next-word').on('click', function () {
-	      (0, _jquery2['default'])('.word-container').html(wordTemplate(WordAssociationList[currentIndex]));
-	      currentIndex++;
+	    var $nextWord = (0, _jquery2['default'])('.next-word');
+	    $nextWord.on('click', function () {
+	      app.nextWord();
 	    });
 	  }
 	};
@@ -42000,7 +42010,7 @@
 /* 242 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  <div class=\"word\">{{word}}</div>\n  <button class=\"response\">{{response}}</button>\n\n";
+	module.exports = "\n  <div class=\"word\">{{word}}</div>\n  <button class=\"response\">{{response}}</button>\n  \n\n";
 
 /***/ },
 /* 243 */

@@ -11,6 +11,7 @@ var app = {
     $('.btn-start').on('click', function(){
       $('.vdt-main').html(vdtItems);
     });
+    app.selectImage();
   },
   selectImage: function(){
     $('#1a').on('click', function(){

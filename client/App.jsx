@@ -46,9 +46,9 @@ $(function() {
     case '/pages/timer.html':
       timer.init();
     break;
-    // case '/pages/visualDesigns.html':
-    //   vdt.init();
-    // break;
+    case '/pages/visualDesigns.html':
+      vdt.init();
+    break;
     case '/pages/dalquest.html':
       dalquest.init();
     break;

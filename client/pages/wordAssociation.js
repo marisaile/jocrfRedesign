@@ -3,32 +3,41 @@ import Handlebars from 'handlebars';
 import template from 'templates/word.html';
 
 var WordAssociationList = require('components/wordAssociationWords');
-var wordTemplate = Handlebars.compile(template);
+var wordTemplate;
 var currentIndex = 0;
 var significantResponse = 0;
 
 var app = {
   init: function(){
+    app.compileTemplate();
     app.render();
   },
-  render: function(){
+  render: function() {   
     $('.word-container').html(wordTemplate(WordAssociationList[currentIndex]));
-    app.bindEvents();
+    app.bindEvents();    
   },
   bindEvents: function(){
-    app.countSignificantResponses();
-    app.noResponse();
+    app.noResponse();     
+  },
+  compileTemplate: function(){
+    wordTemplate = Handlebars.compile(template);
   },
   countSignificantResponses: function(){
-    $('.response').on('click', function(){
-      significantResponse++
+    var $response = $('.response');
+    $response.on('click', function(){
+      significantResponse++;
       $('.sig-response').html('Significant Responses: ' + significantResponse);
     });
   },
+  nextWord: function(){
+    $('.word-container').html(wordTemplate(WordAssociationList[currentIndex]));
+    currentIndex++;
+    app.countSignificantResponses();
+  },
   noResponse: function(){
-    $('.next-word').on('click', function(){
-      $('.word-container').html(wordTemplate(WordAssociationList[currentIndex]));
-       currentIndex++;
+    var $nextWord = $('.next-word');
+    $nextWord.on('click', function(){
+      app.nextWord();
     });
   }
 };
