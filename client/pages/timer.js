@@ -9,7 +9,7 @@ var minutes;
 var hundredths;
 var splitCount = 0;
 var cumCount = 0;
-// var timerRunning = false; 
+var timerRunning = false; 
 var splitTimes = [];
 var index = 0;
 
@@ -24,7 +24,7 @@ var app = {
     var $startStop = $('.start-stop-button');
     $startStop.on('click', function(){
       if ($startStop.html() === 'start') { 
-        // timerRunning = true;
+        timerRunning = true;
         startTime = new Date();
         interval = setInterval(function(){
           splitCount++
@@ -43,7 +43,7 @@ var app = {
   },
   stopTimer: function(){
     interval = clearInterval(interval);
-    // timerRunning = false;
+    timerRunning = false;
     splitTimes.push(splitCount);
     splitCount = 0;
     app.displayTimes();
@@ -60,18 +60,22 @@ var app = {
     var $reset = $('.reset-button');
     $reset.on('click', function(){
       interval = clearInterval(interval);
-      // timerRunning = false;
-      splitCount = 0;
-      cumCount = 0;
-      splitTimes = [];
-      $('.times').html('Times');
-      $('.split-counter').html('Ind. Time: ' + splitCount);
-      $('.cum-counter').html('Cum. Time: ' + cumCount);
+      timerRunning = false;
+      app.clearTimes();  
     });   
   },
   displayTimes: function(){
     $('.times').append('Item ' + '' + (index + 1) + ': ' + ' ' + splitTimes[index] + '<br />'); 
     index++;
+  },
+  clearTimes: function(){
+    splitTimes = [];
+    splitCount = 0;
+    cumCount = 0;
+    index = 0;
+    $('.times').html('Times <br />');
+    $('.split-counter').html('Ind. Time: ' + splitCount);
+    $('.cum-counter').html('Cum. Time: ' + cumCount);
   },
   bindClickEvents: function(){
     app.startTimer();

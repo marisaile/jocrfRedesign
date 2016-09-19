@@ -1,8 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Taviraj);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(https://fonts.googleapis.com/css?family=Cutive+Mono);
 
 .timer-main {
-  background-color: #aaa;
+  background-color: #555;
 
   .stopwatch-container {
     position: relative;
@@ -17,25 +18,27 @@
 
     .cum-counter {
       position: relative;
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Cutive Mono', monospace;
       font-size: 50px;
       left: 20px;
     }
     .split-counter {
       position: relative;
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Cutive Mono', monospace;
       font-size: 50px;
       left: 20px;
     }
     .btn.start-stop-button {
       position: relative;
       display: inline-block;
-      height: 100px;
-      width: 100px;
+      padding: 0;
+      height: 110px;
+      width: 110px;
       margin: 20px;
       left: 150px;
       font-family: 'Josefin Sans', sans-serif;
       font-size: 30px;
+      text-align: center;
       background-color: #01C700;
       color: #fff;
      }
@@ -45,12 +48,14 @@
     .btn.split-button {
       position: relative;
       display: inline-block;
-      height: 100px;
-      width: 100px;
+      padding: 0;
+      height: 110px;
+      width: 110px;
       margin: 20px;
       left: 300px;
       font-family: 'Josefin Sans', sans-serif;
       font-size: 30px;
+      text-align: center;
       background-color: #720EFF;
       color: #fff;
     }
@@ -60,17 +65,20 @@
     .reset-button {
       position: relative;
       display: inline-block;
-      left: 390px;
+      left: 350px;
       top: -200px;
       font-family: 'Josefin Sans', sans-serif;
       font-size: 20px;
     }  
-    .times {
+    .container.times {
       position: relative;
       display: block;
-      left: 20px;
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Cutive Mono', monospace;
       font-size: 25px;
+      width: 90%;
+      height: 60%;
+      border: solid 1px black;
+      overflow-y: scroll;
     }
   }
 }
