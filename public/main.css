@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Rock+Salt);@import url(https://fonts.googleapis.com/css?family=Over+the+Rainbow);@import url(https://fonts.googleapis.com/css?family=Cutive+Mono);/*  body.landing-page {
+@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Rock+Salt);@import url(https://fonts.googleapis.com/css?family=Over+the+Rainbow);@import url(https://fonts.googleapis.com/css?family=Comfortaa);@import url(https://fonts.googleapis.com/css?family=Inconsolata);@import url(https://fonts.googleapis.com/css?family=Cabin);/*  body.landing-page {
     margin: 0;
     background-color: #720EFF;
 
@@ -706,7 +706,7 @@ input.search-photo {
   position: relative;
   display: block;
   margin: 100px auto;
-  padding: 20px;
+  padding: 30px;
   height: 1024px;
   width: 768px;
   background-color: #fff;
@@ -716,15 +716,15 @@ input.search-photo {
 
 .timer-main .stopwatch-container .cum-counter {
   position: relative;
-  font-family: 'Cutive Mono', monospace;
-  font-size: 50px;
+  font-family: 'Inconsolata', sans-serif;
+  font-size: 20px;
   left: 20px;
 }
 
 .timer-main .stopwatch-container .split-counter {
   position: relative;
-  font-family: 'Cutive Mono', monospace;
-  font-size: 50px;
+  font-family: 'Inconsolata', sans-serif;
+  font-size: 35px;
   left: 20px;
 }
 
@@ -735,8 +735,8 @@ input.search-photo {
   height: 110px;
   width: 110px;
   margin: 20px;
-  left: 150px;
-  font-family: 'Josefin Sans', sans-serif;
+  left: 125px;
+  font-family: 'Inconsolata', sans-serif;
   font-size: 30px;
   text-align: center;
   background-color: #01C700;
@@ -754,8 +754,8 @@ input.search-photo {
   height: 110px;
   width: 110px;
   margin: 20px;
-  left: 300px;
-  font-family: 'Josefin Sans', sans-serif;
+  left: 275px;
+  font-family: 'Inconsolata', sans-serif;
   font-size: 30px;
   text-align: center;
   background-color: #720EFF;
@@ -769,21 +769,30 @@ input.search-photo {
 .timer-main .stopwatch-container .reset-button {
   position: relative;
   display: inline-block;
-  left: 350px;
-  top: -200px;
-  font-family: 'Josefin Sans', sans-serif;
+  left: 320px;
+  top: -140px;
+  font-family: 'Inconsolata', sans-serif;
   font-size: 20px;
+}
+
+.timer-main .stopwatch-container .reset-button:hover {
+  cursor: pointer;
 }
 
 .timer-main .stopwatch-container .container.times {
   position: relative;
   display: block;
-  font-family: 'Cutive Mono', monospace;
+  top: 20px;
+  font-family: 'Inconsolata', monospace;
   font-size: 25px;
   width: 90%;
-  height: 60%;
+  height: 70%;
   border: solid 1px black;
   overflow-y: scroll;
+}
+
+.timer-main .stopwatch-container .container.times h1 {
+  font-size: 30px;
 }
 
 .no-bootstrap {

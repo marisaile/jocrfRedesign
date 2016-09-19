@@ -41679,16 +41679,12 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _underscore = __webpack_require__(171);
-	
-	var _underscore2 = _interopRequireDefault(_underscore);
-	
 	var interval;
-	var endTime;
-	var startTime;
-	var timeDifference;
-	var minutes;
-	var hundredths;
+	// var endTime;
+	// var startTime;
+	// var timeDifference;
+	// var minutes;
+	// var hundredths;
 	var splitCount = 0;
 	var cumCount = 0;
 	var timerRunning = false;
@@ -41706,13 +41702,21 @@
 	    var $startStop = (0, _jquery2['default'])('.start-stop-button');
 	    $startStop.on('click', function () {
 	      if ($startStop.html() === 'start') {
-	        timerRunning = true;
-	        startTime = new Date();
+	        if (timerRunning === false) {
+	          timerRunning = true;
+	        }
+	        // startTime = new Date();
 	        interval = setInterval(function () {
 	          splitCount++;
-	          (0, _jquery2['default'])('.split-counter').html('Ind. Time: ' + splitCount);
+	          if (splitCount < 10) {
+	            splitCount = '0' + splitCount;
+	          }
+	          (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + splitCount);
 	          cumCount++;
-	          (0, _jquery2['default'])('.cum-counter').html('Cum. Time: ' + cumCount);
+	          if (cumCount < 10) {
+	            cumCount = '0' + cumCount;
+	          }
+	          (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + cumCount);
 	        }, 600);
 	        $startStop.html('stop');
 	        $startStop.css({ 'background-color': '#FF2603' });
@@ -41725,7 +41729,9 @@
 	  },
 	  stopTimer: function stopTimer() {
 	    interval = clearInterval(interval);
-	    timerRunning = false;
+	    if (timerRunning === true) {
+	      timerRunning = false;
+	    }
 	    splitTimes.push(splitCount);
 	    splitCount = 0;
 	    app.displayTimes();
@@ -41741,9 +41747,10 @@
 	  resetTimer: function resetTimer() {
 	    var $reset = (0, _jquery2['default'])('.reset-button');
 	    $reset.on('click', function () {
-	      interval = clearInterval(interval);
-	      timerRunning = false;
-	      app.clearTimes();
+	      // interval = clearInterval(interval);
+	      if (timerRunning === false) {
+	        app.clearTimes();
+	      }
 	    });
 	  },
 	  displayTimes: function displayTimes() {
@@ -41756,8 +41763,8 @@
 	    cumCount = 0;
 	    index = 0;
 	    (0, _jquery2['default'])('.times').html('Times <br />');
-	    (0, _jquery2['default'])('.split-counter').html('Ind. Time: ' + splitCount);
-	    (0, _jquery2['default'])('.cum-counter').html('Cum. Time: ' + cumCount);
+	    (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + '0' + splitCount);
+	    (0, _jquery2['default'])('.cum-counter').html('Cumulatie Time: ' + '0' + cumCount);
 	  },
 	  bindClickEvents: function bindClickEvents() {
 	    app.startTimer();
@@ -41831,8 +41838,6 @@
 	// };
 
 	// module.exports = app;
-
-	//
 
 /***/ },
 /* 237 */

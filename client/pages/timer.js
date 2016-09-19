@@ -1,12 +1,11 @@
 import $ from 'jquery';
-import _ from 'underscore';
 
 var interval; 
-var endTime;
-var startTime;
-var timeDifference;
-var minutes;
-var hundredths;
+// var endTime;
+// var startTime;
+// var timeDifference;
+// var minutes;
+// var hundredths;
 var splitCount = 0;
 var cumCount = 0;
 var timerRunning = false; 
@@ -23,27 +22,37 @@ var app = {
   startTimer: function(){
     var $startStop = $('.start-stop-button');
     $startStop.on('click', function(){
-      if ($startStop.html() === 'start') { 
-        timerRunning = true;
-        startTime = new Date();
+      if ($startStop.html() === 'start') {
+        if (timerRunning === false) {
+          timerRunning = true;
+        }
+        // startTime = new Date();
         interval = setInterval(function(){
-          splitCount++
-          $('.split-counter').html('Ind. Time: ' + splitCount);
-          cumCount++
-          $('.cum-counter').html('Cum. Time: ' + cumCount);
+          splitCount++;
+          if (splitCount < 10) {
+            splitCount = '0' + splitCount;
+          }
+          $('.split-counter').html('Individual Time: ' + splitCount);
+          cumCount++;
+          if (cumCount < 10) {
+            cumCount = '0' + cumCount;
+          }
+          $('.cum-counter').html('Cumulative Time: ' + cumCount);
         }, 600);
         $startStop.html('stop');
         $startStop.css({'background-color': '#FF2603'});
       } else {
         app.stopTimer();
         $startStop.html('start');
-        $startStop.css({'background-color': '#01C700'})
+        $startStop.css({'background-color': '#01C700'});
       }
     });   
   },
   stopTimer: function(){
     interval = clearInterval(interval);
-    timerRunning = false;
+    if (timerRunning === true) {
+      timerRunning = false;
+    }
     splitTimes.push(splitCount);
     splitCount = 0;
     app.displayTimes();
@@ -59,9 +68,10 @@ var app = {
   resetTimer: function(){
     var $reset = $('.reset-button');
     $reset.on('click', function(){
-      interval = clearInterval(interval);
-      timerRunning = false;
-      app.clearTimes();  
+      // interval = clearInterval(interval);
+      if (timerRunning === false) {
+        app.clearTimes(); 
+      } 
     });   
   },
   displayTimes: function(){
@@ -74,8 +84,8 @@ var app = {
     cumCount = 0;
     index = 0;
     $('.times').html('Times <br />');
-    $('.split-counter').html('Ind. Time: ' + splitCount);
-    $('.cum-counter').html('Cum. Time: ' + cumCount);
+    $('.split-counter').html('Individual Time: ' + '0' + splitCount);
+    $('.cum-counter').html('Cumulatie Time: ' + '0' + cumCount);
   },
   bindClickEvents: function(){
     app.startTimer();
@@ -85,21 +95,6 @@ var app = {
 };
 
 module.exports = app;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // var startTime; 
 // var interval; 
@@ -165,4 +160,4 @@ module.exports = app;
 
 // module.exports = app;
 
-//     
+     
