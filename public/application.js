@@ -10003,7 +10003,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","option":"option","school-main":"school-main","school-books-item":"school-books-item","book-container":"book-container","book-image":"book-image","title":"title","author":"author","landing":"landing","notebook-paper":"notebook-paper","paper-title-line":"paper-title-line","books-header":"books-header","sticky-container":"sticky-container","sticky":"sticky","sticky-text":"sticky-text","left-shadow":"left-shadow","right-shadow":"right-shadow","tape":"tape","suggest-book":"suggest-book","book-suggestion":"book-suggestion","thank-you":"thank-you","hidden":"hidden","timer-main":"timer-main","stopwatch-container":"stopwatch-container","stopwatch":"stopwatch","time":"time","controls":"controls","toggle":"toggle","split":"split","reset":"reset","save":"save","ind-time":"ind-time","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-background":"dalquest-background","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","next-word":"next-word","sig-response":"sig-response"};
+	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","option":"option","school-main":"school-main","school-books-item":"school-books-item","book-container":"book-container","book-image":"book-image","title":"title","author":"author","landing":"landing","notebook-paper":"notebook-paper","paper-title-line":"paper-title-line","books-header":"books-header","sticky-container":"sticky-container","sticky":"sticky","sticky-text":"sticky-text","left-shadow":"left-shadow","right-shadow":"right-shadow","tape":"tape","suggest-book":"suggest-book","book-suggestion":"book-suggestion","thank-you":"thank-you","hidden":"hidden","timer-main":"timer-main","stopwatch-container":"stopwatch-container","cum-counter":"cum-counter","split-counter":"split-counter","start-stop-button":"start-stop-button","split-button":"split-button","reset-button":"reset-button","times":"times","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-nav":"dalquest-nav","dalquest-nav-list":"dalquest-nav-list","dalquest-nav-item":"dalquest-nav-item","dalquest-navitem":"dalquest-navitem","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","next-word":"next-word","sig-response":"sig-response"};
 
 /***/ },
 /* 3 */,
@@ -41683,120 +41683,82 @@
 	
 	var _underscore2 = _interopRequireDefault(_underscore);
 	
+	var interval;
+	var endTime;
+	var startTime;
+	var timeDifference;
+	var minutes;
+	var hundredths;
+	var splitCount = 0;
+	var cumCount = 0;
+	// var timerRunning = false;
+	var splitTimes = [];
+	var index = 0;
+	
 	var app = {
 	  init: function init() {
 	    app.render();
 	  },
 	  render: function render() {
-	    (0, _jquery2['default'])('.stopwatch').each(function () {
-	      var element = (0, _jquery2['default'])(this);
-	      var running = element.data('autostart');
-	      var minutesElement = element.find('.minutes');
-	      var hundredthsElement = element.find('.hundredths');
-	      var toggleElement = element.find('.toggle');
-	      var resetElement = element.find('.reset');
-	      var pauseText = toggleElement.data('pausetext');
-	      var resumeText = toggleElement.data('resumetext');
-	      var splitElement = element.find('.split');
-	      var saveElement = element.find('.save');
-	      var startText = toggleElement.text();
-	      var minutes, hundredths, timer;
-	      var splitTimes = [];
-	
-	      function prependZero(time, length) {
-	        time = '' + (time | 0);
-	        while (time.length < length) time = '0' + time;
-	        return time;
-	      };
-	      function setStopwatch(minutes, hundredths) {
-	        minutesElement.text(prependZero(minutes, 2));
-	        hundredthsElement.text(prependZero(hundredths, 2));
-	      };
-	      function runTimer() {
-	        var startTime = Date.now();
-	        var prevMinutes = minutes;
-	        var prevHundredths = hundredths;
-	        timer = setInterval(function () {
-	          var timeElapsed = Date.now() - startTime;
-	          minutes = (timeElapsed / 60000 + prevMinutes) % 60;
-	          hundredths = (timeElapsed / 1000 / 0.6 + prevHundredths) % 100;
-	          setStopwatch(minutes, hundredths);
-	        }, 50);
-	      };
-	      function run() {
-	        running = true;
-	        runTimer();
-	        toggleElement.text(pauseText);
-	      };
-	      function pause() {
-	        running = false;
-	        clearTimeout(timer);
-	        var cumMinutes = (0, _jquery2['default'])('.minutes').html();
-	        var cumHundredths = (0, _jquery2['default'])('.hundredths').html();
-	        var endTime = cumMinutes + '.' + cumHundredths;
-	        var cumTime = Math.round(endTime * 100);
-	        (0, _jquery2['default'])('.stopwatch-container .cum-time').append('<br />' + cumTime);
-	        splitTimes.push(cumTime);
-	        // var indTime = Math.round(splitTimes[1] - splitTimes[0]);
-	        // $('.stopwatch-container .ind-time').append('<br />' + indTime);  
-	        // splitTimes.splice(0, 1);
-	        // toggleElement.text(resumeText);
-	      };
-	      function reset() {
-	        running = false;
-	        pause();
-	        (0, _jquery2['default'])('.stopwatch-container .cum-time').html('Cumulative Time' + ' ');
-	        (0, _jquery2['default'])('.stopwatch-container .ind-time').html('Individual Time' + ' ');
-	        minutes = hundredths = 0;
-	        setStopwatch(minutes, hundredths);
-	        toggleElement.text(startText);
-	      };
-	      function split() {
-	        var cumMinutes = (0, _jquery2['default'])('.minutes').html();
-	        var cumHundredths = (0, _jquery2['default'])('.hundredths').html();
-	        var endTime = cumMinutes + '.' + cumHundredths;
-	        var cumTime = Math.round(endTime * 100);
-	        (0, _jquery2['default'])('.stopwatch-container .cum-time').append('<br />' + cumTime);
-	        splitTimes.push(cumTime);
-	        // var indTime = Math.round(splitTimes[1] - splitTimes[0]);
-	        // $('.stopwatch-container .ind-time').append('<br />' + indTime);  
-	        // splitTimes.splice(0, 1);
-	      };
-	      function showTimes() {
-	        var splitTime = splitTimes.map(function (num, index) {
-	          if (index === splitTimes.length) {
-	            return 0;
-	          } else {
-	            return splitTimes[index + 1] - splitTimes[index];
-	          }
-	        });
-	        (0, _jquery2['default'])('.ind-time').html(splitTime);
+	    app.bindClickEvents();
+	  },
+	  startTimer: function startTimer() {
+	    var $startStop = (0, _jquery2['default'])('.start-stop-button');
+	    $startStop.on('click', function () {
+	      if ($startStop.html() === 'start') {
+	        // timerRunning = true;
+	        startTime = new Date();
+	        interval = setInterval(function () {
+	          splitCount++;
+	          (0, _jquery2['default'])('.split-counter').html('Ind. Time: ' + splitCount);
+	          cumCount++;
+	          (0, _jquery2['default'])('.cum-counter').html('Cum. Time: ' + cumCount);
+	        }, 600);
+	        $startStop.html('stop');
+	        $startStop.css({ 'background-color': '#FF2603' });
+	      } else {
+	        app.stopTimer();
+	        $startStop.html('start');
+	        $startStop.css({ 'background-color': '#01C700' });
 	      }
-	      // function saveTimes(){
-	      //   $.ajax({
-	      //     url: '/api/stopwatch',
-	      //     method: 'POST',
-	      //     complete: function(response){
-	      //       var dataString = response.responseText;
-	      //       var data = JSON.parse(dataString);
-	      //     }   
-	      //   });
-	      // };
-	      toggleElement.on('click', function () {
-	        running ? pause() : run();
-	      });
-	      resetElement.on('click', function () {
-	        reset();
-	      });
-	      splitElement.on('click', function () {
-	        split();
-	      });
-	      saveElement.on('click', function () {
-	        showTimes();
-	      });
-	      reset();
-	      if (running) run();
 	    });
+	  },
+	  stopTimer: function stopTimer() {
+	    interval = clearInterval(interval);
+	    // timerRunning = false;
+	    splitTimes.push(splitCount);
+	    splitCount = 0;
+	    app.displayTimes();
+	  },
+	  splitTimer: function splitTimer() {
+	    var $split = (0, _jquery2['default'])('.split-button');
+	    $split.on('click', function () {
+	      splitTimes.push(splitCount);
+	      splitCount = 0;
+	      app.displayTimes();
+	    });
+	  },
+	  resetTimer: function resetTimer() {
+	    var $reset = (0, _jquery2['default'])('.reset-button');
+	    $reset.on('click', function () {
+	      interval = clearInterval(interval);
+	      // timerRunning = false;
+	      splitCount = 0;
+	      cumCount = 0;
+	      splitTimes = [];
+	      (0, _jquery2['default'])('.times').html('Times');
+	      (0, _jquery2['default'])('.split-counter').html('Ind. Time: ' + splitCount);
+	      (0, _jquery2['default'])('.cum-counter').html('Cum. Time: ' + cumCount);
+	    });
+	  },
+	  displayTimes: function displayTimes() {
+	    (0, _jquery2['default'])('.times').append('Item ' + '' + (index + 1) + ': ' + ' ' + splitTimes[index] + '<br />');
+	    index++;
+	  },
+	  bindClickEvents: function bindClickEvents() {
+	    app.startTimer();
+	    app.splitTimer();
+	    app.resetTimer();
 	  }
 	};
 	
@@ -41880,6 +41842,10 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
+	var _handlebars = __webpack_require__(176);
+	
+	var _handlebars2 = _interopRequireDefault(_handlebars);
+	
 	var _templatesVDTVdtInstructionsHtml = __webpack_require__(238);
 	
 	var _templatesVDTVdtInstructionsHtml2 = _interopRequireDefault(_templatesVDTVdtInstructionsHtml);
@@ -41888,16 +41854,33 @@
 	
 	var _templatesVDTVdtItemsHtml2 = _interopRequireDefault(_templatesVDTVdtItemsHtml);
 	
+	var instructionTemplate;
+	var itemsTemplate;
+	var items;
+	
 	var app = {
 	  init: function init() {
+	    app.compileTemplates();
 	    app.render();
 	  },
 	  render: function render() {
-	    (0, _jquery2['default'])('.vdt-main').html(_templatesVDTVdtInstructionsHtml2['default']);
-	    (0, _jquery2['default'])('.btn-start').on('click', function () {
-	      (0, _jquery2['default'])('.vdt-main').html(_templatesVDTVdtItemsHtml2['default']);
-	    });
+	    var frontPage = instructionTemplate({});
+	    items = itemsTemplate({});
+	    (0, _jquery2['default'])('.vdt-main').html(frontPage);
+	    app.bindEvents();
+	  },
+	  bindEvents: function bindEvents() {
+	    app.startTest();
 	    app.selectImage();
+	  },
+	  compileTemplates: function compileTemplates() {
+	    instructionTemplate = _handlebars2['default'].compile(_templatesVDTVdtInstructionsHtml2['default']);
+	    itemsTemplate = _handlebars2['default'].compile(_templatesVDTVdtItemsHtml2['default']);
+	  },
+	  startTest: function startTest() {
+	    (0, _jquery2['default'])('.btn-start').on('click', function () {
+	      (0, _jquery2['default'])('.vdt-main').html(items);
+	    });
 	  },
 	  selectImage: function selectImage() {
 	    (0, _jquery2['default'])('#1a').on('click', function () {
@@ -41976,6 +41959,7 @@
 	  },
 	  render: function render() {
 	    (0, _jquery2['default'])('.word-container').html(wordTemplate(WordAssociationList[currentIndex]));
+	    currentIndex++;
 	    app.bindEvents();
 	  },
 	  bindEvents: function bindEvents() {

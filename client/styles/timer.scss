@@ -9,96 +9,68 @@
     display: block;
     margin: 100px auto;
     padding: 20px;
-    height: 600px;
-    width: 400px;
+    height: 1024px;
+    width: 768px;
     background-color: #fff;
     border-radius: 6px;
     box-shadow: 2px 2px 2px;
 
-    .stopwatch .time {
+    .cum-counter {
+      position: relative;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 50px;
+      left: 20px;
+    }
+    .split-counter {
+      position: relative;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 50px;
+      left: 20px;
+    }
+    .btn.start-stop-button {
+      position: relative;
+      display: inline-block;
+      height: 100px;
+      width: 100px;
+      margin: 20px;
+      left: 150px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 30px;
+      background-color: #01C700;
+      color: #fff;
+     }
+    .btn.start-stop-button:focus {
+      outline: none;
+    }
+    .btn.split-button {
+      position: relative;
+      display: inline-block;
+      height: 100px;
+      width: 100px;
+      margin: 20px;
+      left: 300px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 30px;
+      background-color: #720EFF;
+      color: #fff;
+    }
+    .btn.split-button:focus {
+      outline: none;
+    }
+    .reset-button {
+      position: relative;
+      display: inline-block;
+      left: 390px;
+      top: -200px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 20px;
+    }  
+    .times {
       position: relative;
       display: block;
-      left: 25%;
-      font-family: 'Taviraj', serif;
-      font-size: 64px;
+      left: 20px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 25px;
     }
-    .stopwatch .controls {
-      margin: -1.5vh 1.8vw;
-
-      .toggle {
-        position: relative;
-        display: inline-block;
-        width: 100px;
-        font-family: 'Taviraj', serif;
-        font-size: 3vmin;
-        color: #fff;
-        background-color: #28CC1D;
-        text-align: center;
-      }
-      .split {
-        position: relative;
-        display: inline-block;
-        width: 100px;
-        left: 110px;
-        font-family: 'Taviraj', serif;
-        font-size: 3vmin;
-        color: #fff;
-        background-color: #0D2CF8;
-        text-align: center;
-      }
-      .reset {
-        position: relative;
-        display: inline-block;
-        width: 100px;
-        top: 425px;
-        font-family: 'Taviraj', serif;
-        font-size: 3vmin;
-        color: #fff;
-        background-color: #FF2D2C;
-        text-align: center;
-      }
-      .save {
-        position: relative;
-        display: inline-block;
-        width: 150px;
-        top: 380px;
-        font-family: 'Taviraj', serif;
-        font-size: 3vmin;
-        text-align: center;
-      }
-    }
-  }
-  /*.cum-time {
-    position: relative;
-    float: left;
-    width: 160px;
-    height: 400px;
-    top: 30px;
-    margin-right: 10px;
-    font-family: 'Taviraj', serif;
-    font-size: 20px;
-    line-height: 20px;
-  }
-  .ind-time {
-    position: relative;
-    float: right;
-    width: 160px;
-    height: 400px;
-    top: 30px;
-    font-family: 'Taviraj', serif;
-    font-size: 20px;
-    line-height: 20px;
-    text-align: right;
-  }*/
-  .ind-time {
-    position: relative;
-    display: block;
-    width: 150px;
-    font-family: 'Taviraj', serif;
-    font-size: 20px;
-    line-height: 20px;
-    left: 400px;  
   }
 }
-
-

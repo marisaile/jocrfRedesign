@@ -699,28 +699,6 @@ input.search-photo {
 
 .timer-main {
   background-color: #aaa;
-  /*.cum-time {
-    position: relative;
-    float: left;
-    width: 160px;
-    height: 400px;
-    top: 30px;
-    margin-right: 10px;
-    font-family: 'Taviraj', serif;
-    font-size: 20px;
-    line-height: 20px;
-  }
-  .ind-time {
-    position: relative;
-    float: right;
-    width: 160px;
-    height: 400px;
-    top: 30px;
-    font-family: 'Taviraj', serif;
-    font-size: 20px;
-    line-height: 20px;
-    text-align: right;
-  }*/
 }
 
 .timer-main .stopwatch-container {
@@ -728,78 +706,76 @@ input.search-photo {
   display: block;
   margin: 100px auto;
   padding: 20px;
-  height: 600px;
-  width: 400px;
+  height: 1024px;
+  width: 768px;
   background-color: #fff;
   border-radius: 6px;
   box-shadow: 2px 2px 2px;
 }
 
-.timer-main .stopwatch-container .stopwatch .time {
+.timer-main .stopwatch-container .cum-counter {
   position: relative;
-  display: block;
-  left: 25%;
-  font-family: 'Taviraj', serif;
-  font-size: 64px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 50px;
+  left: 20px;
 }
 
-.timer-main .stopwatch-container .stopwatch .controls {
-  margin: -1.5vh 1.8vw;
+.timer-main .stopwatch-container .split-counter {
+  position: relative;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 50px;
+  left: 20px;
 }
 
-.timer-main .stopwatch-container .stopwatch .controls .toggle {
+.timer-main .stopwatch-container .btn.start-stop-button {
   position: relative;
   display: inline-block;
+  height: 100px;
   width: 100px;
-  font-family: 'Taviraj', serif;
-  font-size: 3vmin;
+  margin: 20px;
+  left: 150px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  background-color: #01C700;
   color: #fff;
-  background-color: #28CC1D;
-  text-align: center;
 }
 
-.timer-main .stopwatch-container .stopwatch .controls .split {
+.timer-main .stopwatch-container .btn.start-stop-button:focus {
+  outline: none;
+}
+
+.timer-main .stopwatch-container .btn.split-button {
   position: relative;
   display: inline-block;
+  height: 100px;
   width: 100px;
-  left: 110px;
-  font-family: 'Taviraj', serif;
-  font-size: 3vmin;
+  margin: 20px;
+  left: 300px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  background-color: #720EFF;
   color: #fff;
-  background-color: #0D2CF8;
-  text-align: center;
 }
 
-.timer-main .stopwatch-container .stopwatch .controls .reset {
+.timer-main .stopwatch-container .btn.split-button:focus {
+  outline: none;
+}
+
+.timer-main .stopwatch-container .reset-button {
   position: relative;
   display: inline-block;
-  width: 100px;
-  top: 425px;
-  font-family: 'Taviraj', serif;
-  font-size: 3vmin;
-  color: #fff;
-  background-color: #FF2D2C;
-  text-align: center;
-}
-
-.timer-main .stopwatch-container .stopwatch .controls .save {
-  position: relative;
-  display: inline-block;
-  width: 150px;
-  top: 380px;
-  font-family: 'Taviraj', serif;
-  font-size: 3vmin;
-  text-align: center;
-}
-
-.timer-main .ind-time {
-  position: relative;
-  display: block;
-  width: 150px;
-  font-family: 'Taviraj', serif;
+  left: 390px;
+  top: -200px;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 20px;
-  line-height: 20px;
-  left: 400px;
+}
+
+.timer-main .stopwatch-container .times {
+  position: relative;
+  display: block;
+  left: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 25px;
 }
 
 .no-bootstrap {
@@ -871,11 +847,6 @@ input.search-photo {
   box-shadow: 2px 2px 2px;
 }
 
-.dalquest-background {
-  background-image: url(/images/ddrs-landscape.jpg);
-}
-
-/*
 nav.dalquest-nav {
   position: relative;
   top: 0;
@@ -884,12 +855,13 @@ nav.dalquest-nav {
   height: 100%;
   background-color: #e8e8e8;
 }
-  
+
 ul.dalquest-nav-list {
   position: relative;
   display: block;
   margin: auto;
 }
+
 li.dalquest-nav-item {
   list-style-image: none;
 }
@@ -899,12 +871,12 @@ a.dalquest-navitem {
   font-size: 20px;
   color: #190000;
 }
+
 a.dalquest-navitem:hover {
   text-decoration: none;
   color: #331103;
 }
 
-*/
 body.word-association {
   margin: 0;
   background-color: #222;

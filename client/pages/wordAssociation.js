@@ -14,6 +14,7 @@ var app = {
   },
   render: function() {   
     $('.word-container').html(wordTemplate(WordAssociationList[currentIndex]));
+    currentIndex++
     app.bindEvents();    
   },
   bindEvents: function(){

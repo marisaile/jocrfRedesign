@@ -12,20 +12,12 @@
   </head>
 <body class="timer-main">
   <div class="stopwatch-container">
-    <div class="stopwatch" data-autostart="false">
-    <div class="time">
-      <span class="minutes"></span>. 
-      <span class="hundredths"></span>
-    </div>
-    <div class="controls">
-      <!-- Some configurability -->
-      <button class="btn btn-default toggle" data-pausetext="Pause" data-resumetext="Resume">Start</button>
-      <button class="btn btn-default split">Split</button>
-      <button class="btn btn-default reset">Reset</button>
-      <button class="btn btn-default save">Show Times</button>
-    </div>
-<!--     <div class="cum-time">Cumulative Time</div> -->
-    <div class="ind-time">Individual Time</div>
+    <div class="cum-counter">Cum. Time:  0</div>
+    <div class="split-counter">Ind. Time:  0</div>  
+    <button class="btn btn-default start-stop-button">start</button>
+    <button class="btn btn-default split-button">split</button>
+    <div class="reset-button">reset</div>
+    <div class="times">Times<br/></div>
   </div>
 </body>
 
