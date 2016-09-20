@@ -97,8 +97,8 @@ var app = {
     splitCount = 0;
     cumCount = 0;
     index = 0;
-    $('.time-col').html('Times <br />');
-    $('.points-col').html('Points <br />');
+    $('.time-col').html('<h1>Times</h1');
+    $('.points-col').html('<h1>Points</h1>');
     $('.split-counter').html('Individual Time: ' + '0' + splitCount);
     $('.cum-counter').html('Cumulative Time: ' + '0' + cumCount);
     $('.score').html('');

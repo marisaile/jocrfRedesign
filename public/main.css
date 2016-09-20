@@ -785,26 +785,28 @@ input.search-photo {
   top: 20px;
   overflow-y: scroll;
   height: 70%;
-  width: 700px;
+  width: 750px;
 }
 
-.timer-main .stopwatch-container .container.times .col-md-6.time-col {
+.timer-main .stopwatch-container .container.times .col-md-8.time-col {
   font-family: 'Inconsolata', monospace;
   font-size: 25px;
+  line-height: 30px;
 }
 
-.timer-main .stopwatch-container .container.times .col-md-6.points-col {
+.timer-main .stopwatch-container .container.times .col-md-4.points-col {
   font-family: 'Inconsolata', monospace;
   font-size: 25px;
+  line-height: 30px;
 }
 
 .timer-main .stopwatch-container .score {
   position: relative;
   display: block;
   top: 25px;
-  left: 500px;
+  left: 30px;
   font-family: 'Inconsolata', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .no-bootstrap {
