@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import _ from 'lodash';
 
 var interval; 
 // var endTime;
@@ -11,6 +12,8 @@ var cumCount = 0;
 var timerRunning = false; 
 var splitTimes = [];
 var index = 0;
+var points;
+var pointsArray = [];
 
 var app = {
   init: function(){
@@ -22,7 +25,7 @@ var app = {
   startTimer: function(){
     var $startStop = $('.start-stop-button');
     $startStop.on('click', function(){
-      if ($startStop.html() === 'start') {
+      if ($startStop.html() === 'Start') {
         if (timerRunning === false) {
           timerRunning = true;
         }
@@ -39,11 +42,11 @@ var app = {
           }
           $('.cum-counter').html('Cumulative Time: ' + cumCount);
         }, 600);
-        $startStop.html('stop');
+        $startStop.html('Stop');
         $startStop.css({'background-color': '#FF2603'});
       } else {
         app.stopTimer();
-        $startStop.html('start');
+        $startStop.html('Start');
         $startStop.css({'background-color': '#01C700'});
       }
     });   
@@ -56,6 +59,7 @@ var app = {
     splitTimes.push(splitCount);
     splitCount = 0;
     app.displayTimes();
+    app.addPoints();
   },
   splitTimer: function(){  
     var $split = $('.split-button');
@@ -70,22 +74,39 @@ var app = {
     $reset.on('click', function(){
       // interval = clearInterval(interval);
       if (timerRunning === false) {
-        app.clearTimes(); 
+        app.clearEverything(); 
       } 
     });   
   },
   displayTimes: function(){
-    $('.times').append('Item ' + '' + (index + 1) + ': ' + ' ' + splitTimes[index] + '<br />'); 
+    $('.time-col').append('Item ' + '' + (index + 1) + ': ' + ' ' + splitTimes[index] + '<br />'); 
+    if (splitTimes[index] < 10) {
+      points = 3;
+    } else if (splitTimes[index] > 9 && splitTimes[index] < 20) {
+      points = 2;
+    } else if (splitTimes[index] > 19 && splitTimes[index] < 30){
+      points = 1;
+    } else {
+      points = 0;
+    }
+    $('.points-col').append(points + '<br />');
     index++;
   },
-  clearTimes: function(){
+  clearEverything: function(){
     splitTimes = [];
     splitCount = 0;
     cumCount = 0;
     index = 0;
-    $('.times').html('Times <br />');
+    $('.time-col').html('Times <br />');
+    $('.points-col').html('Points <br />');
     $('.split-counter').html('Individual Time: ' + '0' + splitCount);
-    $('.cum-counter').html('Cumulatie Time: ' + '0' + cumCount);
+    $('.cum-counter').html('Cumulative Time: ' + '0' + cumCount);
+    $('.score').html('');
+  },
+  addPoints: function(){
+    pointsArray.push(points);
+    var pointsTotal = _.sum(pointsArray);
+    $('.score').html('Score = ' + pointsTotal);
   },
   bindClickEvents: function(){
     app.startTimer();

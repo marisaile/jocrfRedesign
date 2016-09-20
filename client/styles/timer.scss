@@ -78,16 +78,26 @@
       position: relative;
       display: block;
       top: 20px;
-      font-family: 'Inconsolata', monospace;
-      font-size: 25px;
-      width: 90%;
-      height: 70%;
-      border: solid 1px black;
       overflow-y: scroll;
-
-      h1 {
-        font-size: 30px;
+      height: 70%;
+      width: 700px;
+  
+      .col-md-6.time-col {
+        font-family: 'Inconsolata', monospace;
+        font-size: 25px;
       }
+      .col-md-6.points-col {
+        font-family: 'Inconsolata', monospace;
+        font-size: 25px;
+      }
+    }
+    .score {
+      position: relative;
+      display: block;
+      top: 25px;
+      left: 500px;
+      font-family: 'Inconsolata', sans-serif;
+      font-size: 20px;
     }
   }
 }
