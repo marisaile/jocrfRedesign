@@ -57,16 +57,17 @@ var app = {
       timerRunning = false;
     }
     splitTimes.push(splitCount);
-    splitCount = 0;
     app.displayTimes();
     app.addPoints();
+    splitCount = 0;
   },
   splitTimer: function(){  
     var $split = $('.split-button');
     $split.on('click', function(){
-      splitTimes.push(splitCount); 
-      splitCount = 0;
+      splitTimes.push(splitCount);
       app.displayTimes();
+      app.addPoints(); 
+      splitCount = 0;
     });     
   },
   resetTimer: function(){
@@ -94,6 +95,7 @@ var app = {
   },
   clearEverything: function(){
     splitTimes = [];
+    pointsArray = [];
     splitCount = 0;
     cumCount = 0;
     index = 0;

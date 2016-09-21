@@ -10003,7 +10003,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","option":"option","school-main":"school-main","school-books-item":"school-books-item","book-container":"book-container","book-image":"book-image","title":"title","author":"author","landing":"landing","notebook-paper":"notebook-paper","paper-title-line":"paper-title-line","books-header":"books-header","sticky-container":"sticky-container","sticky":"sticky","sticky-text":"sticky-text","left-shadow":"left-shadow","right-shadow":"right-shadow","tape":"tape","suggest-book":"suggest-book","book-suggestion":"book-suggestion","thank-you":"thank-you","hidden":"hidden","timer-main":"timer-main","stopwatch-container":"stopwatch-container","cum-counter":"cum-counter","split-counter":"split-counter","start-stop-button":"start-stop-button","split-button":"split-button","reset-button":"reset-button","container":"container","times":"times","col-md-8":"col-md-8","time-col":"time-col","col-md-4":"col-md-4","points-col":"points-col","score":"score","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-nav":"dalquest-nav","dalquest-nav-list":"dalquest-nav-list","dalquest-nav-item":"dalquest-nav-item","dalquest-navitem":"dalquest-navitem","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","next-word":"next-word","sig-response":"sig-response"};
+	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","school-nav":"school-nav","option":"option","school-main":"school-main","school-books-item":"school-books-item","img-responsive":"img-responsive","book-image":"book-image","landing":"landing","notebook-paper":"notebook-paper","paper-title-line":"paper-title-line","books-header":"books-header","timer-main":"timer-main","stopwatch-container":"stopwatch-container","cum-counter":"cum-counter","split-counter":"split-counter","start-stop-button":"start-stop-button","split-button":"split-button","reset-button":"reset-button","container":"container","times":"times","col-md-8":"col-md-8","time-col":"time-col","col-md-4":"col-md-4","points-col":"points-col","score":"score","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-body":"dalquest-body","dalquest-sidebar":"dalquest-sidebar","dalquest-title":"dalquest-title","dalquest-nav-list":"dalquest-nav-list","dalquest-nav-item":"dalquest-nav-item","dalquest-navitem":"dalquest-navitem","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","next-word":"next-word","sig-response":"sig-response"};
 
 /***/ },
 /* 3 */,
@@ -38521,13 +38521,13 @@
 /* 211 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  <div class=\"school-books-item\">\n    <div class=\"book-container\">\n    \t<a href=\"{{url}}\" target=\"new\"><img class=\"book-image\" src=\"{{image}}\"></a>\n    \t<div class=\"title\">{{title}}</div>\n      <div class=\"author\">{{author}}</div>\n    </div>\n  </div>\n\n";
+	module.exports = "\n  <div class=\"school-books-item\">\n    <a href=\"{{url}}\" target=\"new\">\n      <img class=\"img-responsive book-image\" src=\"{{image}}\" alt=\"Responsive image\">\n    </a>\n      <!-- <div class=\"title\">{{title}}</div>\n      <div class=\"author\">{{author}}</div> -->\n  </div>\n\n";
 
 /***/ },
 /* 212 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  <nav class=\"school-nav\">\n    <a href=\" \" role=\"navitem\" class=\"option\" id=\"books\">Home</a>\n    <a href=\"#\" role=\"navitem\" class=\"option\" id=\"english literature\">English Literature</a>\n    <a href=\"#\" role=\"navitem\" class=\"option\" id=\"history\">History</a>\n    <a href=\"#\" role=\"navitem\" class=\"option\" id=\"math\">Math/Statistics</a>\n    <a href=\"#\" role=\"navitem\" class=\"option\" id=\"polisci\">Political Science</a>\n    <a href=\"#\" role=\"navitem\" class=\"option\" id=\"psych\">Psychology</a>\n    <a href=\"#\" role=\"navitem\" class=\"option\" id=\"science\">Science</a>\n  </nav>\n";
+	module.exports = "\n<nav class=\"school-nav\">\n  <a href=\" \" role=\"navitem\" class=\"option\" id=\"books\">Home</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"english literature\">English Literature</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"history\">History</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"math\">Math/Statistics</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"polisci\">Political Science</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"psych\">Psychology</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"science\">Science</a>\n</nav>\n";
 
 /***/ },
 /* 213 */
@@ -41739,16 +41739,17 @@
 	      timerRunning = false;
 	    }
 	    splitTimes.push(splitCount);
-	    splitCount = 0;
 	    app.displayTimes();
 	    app.addPoints();
+	    splitCount = 0;
 	  },
 	  splitTimer: function splitTimer() {
 	    var $split = (0, _jquery2['default'])('.split-button');
 	    $split.on('click', function () {
 	      splitTimes.push(splitCount);
-	      splitCount = 0;
 	      app.displayTimes();
+	      app.addPoints();
+	      splitCount = 0;
 	    });
 	  },
 	  resetTimer: function resetTimer() {
@@ -41776,6 +41777,7 @@
 	  },
 	  clearEverything: function clearEverything() {
 	    splitTimes = [];
+	    pointsArray = [];
 	    splitCount = 0;
 	    cumCount = 0;
 	    index = 0;

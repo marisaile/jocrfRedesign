@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import splitTimes from 'pages/timer.js';
+
 var points;
 
 var app = {
@@ -7,17 +7,16 @@ var app = {
     app.render();
   },
   render: function(){
-    splitTimes.forEach(time, function(){
-      if (time < 10) {
-        points = 3;
-      } else if (10 < time < 20) {
-        points = 2;
-      } else if (20 < time < 30){
-        points = 1;
-      } else {
-        points = 0;
-      }
-    });
+    if (splitTimes[index] < 10) {
+      points = 3;
+    } else if (splitTimes[index] > 9 && splitTimes[index] < 20) {
+      points = 2;
+    } else if (splitTimes[index] > 19 && splitTimes[index] < 30){
+      points = 1;
+    } else {
+      points = 0;
+    }
+    $('.points-col').append(points + '<br />');
   }
 };
 

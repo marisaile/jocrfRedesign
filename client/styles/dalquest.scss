@@ -1,29 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=David+Libre);
 
-nav.dalquest-nav {
-  position: relative;
+.dalquest-body {
+  margin: 0;
+  background: url(/images/ddrs/ddrs-landscape.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.dalquest-sidebar {
+  position: absolute;
+  background-color: #660000;
+  box-shadow: 1px 1px 5px 1px #190000;
   top: 0;
   left: 0;
-  width: 150px;
+  width: 375px;
   height: 100%;
-  background-color: #e8e8e8;
-}
   
-ul.dalquest-nav-list {
-  position: relative;
-  display: block;
-  margin: auto;
-}
-li.dalquest-nav-item {
-  list-style-image: none;
-}
+  .img-responsive {
+    position: relative;
+    display: block;
+    top: 25px;
+    width: 350px;
+  }
+  h1.dalquest-title {
+    position: relative;
+    display: block;
+    top: 300px;
+    font-family: 'David Libre', sans-serif;
+    font-size: 40px;
+    color: #FCFCFC;
+    text-align: center;
+  }
+  ul.dalquest-nav-list {
+    position: relative;
+    display: block;
+    list-style: none;
+    top: 200px;
+    left: -15px;
 
-a.dalquest-navitem {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
-  color: #190000;
+    li.dalquest-nav-item {
+      margin-bottom: 20px;
+      
+      a.dalquest-navitem {
+        font-family: 'David Libre', sans-serif;
+        font-size: 20px;
+        line-height: 50px;
+        color: #FCFCFC;
+      }
+      a.dalquest-navitem:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }
-a.dalquest-navitem:hover {
-  text-decoration: none;
-  color: #331103;
-}
-
