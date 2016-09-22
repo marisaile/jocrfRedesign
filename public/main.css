@@ -434,7 +434,25 @@ input.search-photo {
 .school-header {
   position: relative;
   display: block;
-  height: 100px;
+  height: 50px;
+  /*a.option  {
+    display: inline-block;
+    font-family: 'Rock Salt', cursive;
+    font-size: 2.3vmin;
+    color: #212121; 
+    line-height: 75px;
+    margin-left: 75px;
+    margin-right: 15px;
+  }
+  a.option:hover {
+    text-decoration: none;
+    color: #FCFCFC;
+  }
+  a.option:active {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FCFCFC;
+  }*/
 }
 
 .school-header .school-nav {
@@ -442,33 +460,31 @@ input.search-photo {
   top: 0;
   left: 0;
   margin: 0;
+  padding-bottom: 0;
   width: 100%;
-  height: 75px;
-  background-color: #3BB213;
-  box-shadow: 0px 0px 10px 1px #8A8C8C;
+  height: 125px;
   z-index: 1;
+  background-color: #2CAB0B;
+  box-shadow: 1px 1px 10px 1px #8A8C8C;
 }
 
-.school-header a.option {
-  display: inline-block;
-  font-family: 'Rock Salt', cursive;
-  font-size: 2.3vmin;
-  color: #212121;
-  line-height: 75px;
-  /*text-decoration: underline;*/
-  margin-left: 75px;
-  margin-right: 15px;
+.school-header .school-nav h1 {
+  display: relative;
+  top: 50px;
+  font-family: 'Taviraj', serif;
+  font-size: 50px;
+  vertical-align: bottom;
+  text-align: center;
+  margin-bottom: 0;
+  color: #F5F4F5;
 }
 
-.school-header a.option:hover {
-  text-decoration: none;
-  color: #FCFCFC;
-}
-
-.school-header a.option:active {
-  font-size: 20px;
-  font-weight: bold;
-  color: #FCFCFC;
+.school-header .school-nav h6 {
+  font-family: 'Over the Rainbow', cursive;
+  font-size: 25px;
+  vertical-align: bottom;
+  text-align: center;
+  color: #F5F4F5;
 }
 
 .school-main {
@@ -481,15 +497,23 @@ input.search-photo {
   position: relative;
   width: 200px;
   height: 300px;
-  box-shadow: 1px 3px 7px 2px #aaa;
-  border-radius: 2px;
-  transition: transform .5s;
+  border-radius: 4px;
 }
 
-.school-main img.img-responsive.book-image:hover {
-  box-shadow: 1px 3px 5px 2px #aaa;
-  transform: translateZ(30px);
-  transition: transform .5s;
+.school-main .row {
+  height: 30%;
+  margin-top: 175px;
+  background: linear-gradient(#F5F4F5, #D8D8D8, #F5F4F5);
+  transform: rotateX(30deg);
+}
+
+.school-main .row h2 {
+  position: relative;
+  font-family: 'Over the Rainbow', cursive;
+  font-size: 50px;
+  color: #363636;
+  left: 175px;
+  top: -75px;
 }
 
 ul#menu {
@@ -528,7 +552,7 @@ ul#menu li {
   -moz-transition: all .45s;
   -webkit-transition: all .45s;
   transition: all .45s;
-  opacity: .8;
+  opacity: 1;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 0 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -632,75 +656,71 @@ ul#menu li:nth-child(6) { background-image: url(6.jpg); }*/
     perspective: 500px;
     perspective-origin: top;
     */
-.landing {
+/*.landing {
   position: relative;
   display: block;
   width: 100%;
-}
 
-.landing .notebook-paper {
-  position: relative;
-  display: block;
-  width: 40%;
-  height: 100%;
-  margin: 0 auto;
-  background: linear-gradient(to bottom, white 29px, #00b0d7 1px);
-  /*top: -130px;*/
-  background-size: 100% 30px;
-  position: relative;
-  padding-top: 20vh;
-  padding-right: 20px;
-  overflow: hidden;
-  border-radius: 5px;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2), 0px 0px 6px rgba(0, 0, 0, 0.2);
-}
+  .notebook-paper {
+    position: relative;
+    display: block;
+    width: 40%;
+    height: 100%;
+    margin: 0 auto;
 
-.landing .notebook-paper:before {
-  content: '';
-  display: block;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 125px;
-  height: 100%;
-  width: 1px;
-  background: #db4034;
-}
+    background: linear-gradient(to bottom, white 29px, #00b0d7 1px);
+    top: -130px;
+    background-size: 100% 30px;
+    position: relative;
+    padding-top: 20vh;
+    padding-right: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+    &:before {
+      content:'';
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 125px;
+      height: 100%;
+      width: 1px;
+      background: #db4034;
+    }
+    .paper-title-line {
+      height: 100px;
+      width: 100%;
+      background: white;
+      position: absolute;
+      top: 0;
+      left: 0;
 
-.landing .notebook-paper .paper-title-line {
-  height: 100px;
-  width: 100%;
-  background: white;
-  position: absolute;
-  top: 0;
-  left: 0;
+      .books-header {
+        position: relative;
+        top: 2vh;
+        left: 6vw;
+        font-family: 'Rock Salt', cursive;
+        font-size: 7vmin;
+        color: #323333;
+      }
+    }
+    .option {
+      position: relative;
+      display: block;
+      margin-bottom: 56px;
+      font-family: 'Rock Salt', cursive;
+      font-size: 3vmin;
+      left: 6vw;
+      color: #323333;
+    }
+    .option:hover {
+      text-decoration: none;
+      color: #4B4C4D;
+    }
+  }
 }
-
-.landing .notebook-paper .paper-title-line .books-header {
-  position: relative;
-  top: 2vh;
-  left: 6vw;
-  font-family: 'Rock Salt', cursive;
-  font-size: 7vmin;
-  color: #323333;
-}
-
-.landing .notebook-paper .option {
-  position: relative;
-  display: block;
-  margin-bottom: 56px;
-  font-family: 'Rock Salt', cursive;
-  font-size: 3vmin;
-  left: 6vw;
-  color: #323333;
-}
-
-.landing .notebook-paper .option:hover {
-  text-decoration: none;
-  color: #4B4C4D;
-}
-
-/*.sticky-container {
+  /*.sticky-container {
     width: 320px;
     margin: -500px 1050px;  
   }

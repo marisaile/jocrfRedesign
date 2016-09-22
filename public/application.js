@@ -10003,7 +10003,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","school-nav":"school-nav","option":"option","school-main":"school-main","img-responsive":"img-responsive","book-image":"book-image","menu":"menu","highlighted":"highlighted","landing":"landing","notebook-paper":"notebook-paper","paper-title-line":"paper-title-line","books-header":"books-header","timer-main":"timer-main","stopwatch-container":"stopwatch-container","cum-counter":"cum-counter","split-counter":"split-counter","start-stop-button":"start-stop-button","split-button":"split-button","reset-button":"reset-button","container":"container","times":"times","col-md-8":"col-md-8","time-col":"time-col","col-md-4":"col-md-4","points-col":"points-col","score":"score","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-body":"dalquest-body","dalquest-sidebar":"dalquest-sidebar","dalquest-title":"dalquest-title","dalquest-nav-list":"dalquest-nav-list","dalquest-nav-item":"dalquest-nav-item","dalquest-navitem":"dalquest-navitem","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","next-word":"next-word","sig-response":"sig-response"};
+	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","school-nav":"school-nav","school-main":"school-main","img-responsive":"img-responsive","book-image":"book-image","row":"row","menu":"menu","highlighted":"highlighted","timer-main":"timer-main","stopwatch-container":"stopwatch-container","cum-counter":"cum-counter","split-counter":"split-counter","start-stop-button":"start-stop-button","split-button":"split-button","reset-button":"reset-button","container":"container","times":"times","col-md-8":"col-md-8","time-col":"time-col","col-md-4":"col-md-4","points-col":"points-col","score":"score","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-body":"dalquest-body","dalquest-sidebar":"dalquest-sidebar","dalquest-title":"dalquest-title","dalquest-nav-list":"dalquest-nav-list","dalquest-nav-item":"dalquest-nav-item","dalquest-navitem":"dalquest-navitem","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","next-word":"next-word","sig-response":"sig-response"};
 
 /***/ },
 /* 3 */,
@@ -38466,12 +38466,13 @@
 	  init: function init() {
 	    app.render();
 	  },
-	  render: function render() {}
-	  // app.fetchBooks();
-	  // $('.btn-suggestion').click(function(){
-	  //   $('.thank-you').removeClass('hidden');
-	  // });
-	
+	  render: function render() {
+	    $('.school-header').html(_templatesSchoolBookPageHeaderHtml2['default']);
+	    // app.fetchBooks();
+	    // $('.btn-suggestion').click(function(){
+	    //   $('.thank-you').removeClass('hidden');
+	    // });
+	  }
 	  // fetchBooks: function(){
 	  //   $.ajax({
 	  //     url: '/api/books',
@@ -38522,13 +38523,13 @@
 /* 211 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<nav class=\"school-nav\">\n  <a href=\" \" role=\"navitem\" class=\"option\" id=\"books\">Home</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"english literature\">English Literature</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"history\">History</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"math\">Math/Statistics</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"polisci\">Political Science</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"psych\">Psychology</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"science\">Science</a>\n</nav>\n";
+	module.exports = "\n<nav class=\"school-nav\">\n   <h1>Go Beyond the Textbook.</h1>\n   <h6>Read fiction and nonfiction books related to school subjects and discover a love learning!</h6>\n</nav>\n\n\n";
 
 /***/ },
 /* 212 */
 /***/ function(module, exports) {
 
-	module.exports = "<ul id=\"menu english\">\n\n  <li> \n  \t<a href=\"https://books.google.com/books?id=nfjGMgEACAAJ&dq=love,+dishonor,+marry,+perish,+cherish&hl=en&sa=X&ved=0ahUKEwj44reg2vfOAhUq6oMKHciEAewQ6AEIHjAA\">\n      <img class=\"img-responsive book-image\" src=\"/images/books/rakoff.png\" alt=\"Responsive image\">\n    </a> \n   </li>\n\n  <li>\n    <a href=\"https://books.google.com/books?id=9H9aAAAAMAAJ&dq=editions:5iTbjefdfnYC\">\n      <img class=\"img-responsive book-image\" src=\"/images/books/dillard.png\" alt=\"Responsive image\">\n    </a> \n  </li>\n\n  <li class=\"highlighted\">\n    <a href=\"https://books.google.com/books?id=Zd1l0Ivij8wC&printsec=frontcover&dq=the+unbearable+lightness+of+being&hl=en&sa=X&ved=0ahUKEwiC2e-c2_fOAhUH6WMKHTvGCScQ6AEIHjAA\">\n      <img class=\"img-responsive book-image\" src=\"/images/books/kundera.png\" alt=\"Responsive image\">\n    </a>\n </li>\n\n  <li> \n    <a href=\"https://books.google.com/books?id=xZWKctOqg8YC&dq=alphabet+juice&source=gbs_navlinks_s\">\n      <img class=\"img-responsive book-image\" src=\"/images/books/juice.png\" alt=\"Responsive image\">\n    </a>\n  </li>\n\n  <li> \n    <a href=\"https://books.google.com/books?id=tOjE5Usv_HQC&dq=lake+wobegon,+summer+1956&source=gbs_navlinks_s\">\n      <img class=\"img-responsive book-image\" src=\"/images/books/garrison.png\" alt=\"Responsive image\">\n    </a>\n  </li>\n\n  <li>\n    <a href=\"https://books.google.com/books?id=EJprQgAACAAJ&dq=the+dream+of+a+common+language&hl=en&sa=X&sqi=2&ved=0ahUKEwizmoaX3PfOAhUb24MKHfmLAA0Q6AEIHDAA\">\n      <img class=\"img-responsive book-image\" src=\"/images/books/adrienne.png\" alt=\"Responsive image\">\n    </a>\n  </li>\n\n</ul>";
+	module.exports = "<div class=\"modal fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\">\n  <div class=\"modal-dialog\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-body\">\n\n      </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 213 */
@@ -41758,16 +41759,6 @@
 	  },
 	  displayTimes: function displayTimes() {
 	    (0, _jquery2['default'])('.time-col').append('Item ' + '' + (index + 1) + ': ' + ' ' + splitTimes[index] + '<br />');
-	    if (splitTimes[index] < 10) {
-	      points = 3;
-	    } else if (splitTimes[index] > 9 && splitTimes[index] < 20) {
-	      points = 2;
-	    } else if (splitTimes[index] > 19 && splitTimes[index] < 30) {
-	      points = 1;
-	    } else {
-	      points = 0;
-	    }
-	    (0, _jquery2['default'])('.points-col').append(points + '<br />');
 	    index++;
 	  },
 	  clearEverything: function clearEverything() {

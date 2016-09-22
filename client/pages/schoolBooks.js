@@ -19,6 +19,7 @@ var app = {
     app.render();
   },
   render: function(){
+    $('.school-header').html(header);
     // app.fetchBooks();
     // $('.btn-suggestion').click(function(){
     //   $('.thank-you').removeClass('hidden');
