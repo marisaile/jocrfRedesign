@@ -5,7 +5,7 @@ var app = {
     app.render();
   },
   render: function(){
-
+x
   }
 };
 

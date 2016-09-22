@@ -81,23 +81,23 @@
 	
 	var _pagesSchoolBooks2 = _interopRequireDefault(_pagesSchoolBooks);
 	
-	var _pagesBooksBooksController = __webpack_require__(227);
+	var _pagesBooksBooksController = __webpack_require__(226);
 	
 	var _pagesBooksBooksController2 = _interopRequireDefault(_pagesBooksBooksController);
 	
-	var _pagesTimer = __webpack_require__(236);
+	var _pagesTimer = __webpack_require__(235);
 	
 	var _pagesTimer2 = _interopRequireDefault(_pagesTimer);
 	
-	var _pagesVisualDesigns = __webpack_require__(239);
+	var _pagesVisualDesigns = __webpack_require__(238);
 	
 	var _pagesVisualDesigns2 = _interopRequireDefault(_pagesVisualDesigns);
 	
-	var _pagesDalquest = __webpack_require__(242);
+	var _pagesDalquest = __webpack_require__(241);
 	
 	var _pagesDalquest2 = _interopRequireDefault(_pagesDalquest);
 	
-	var _pagesWordAssociation = __webpack_require__(243);
+	var _pagesWordAssociation = __webpack_require__(242);
 	
 	var _pagesWordAssociation2 = _interopRequireDefault(_pagesWordAssociation);
 	
@@ -10003,7 +10003,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","school-nav":"school-nav","option":"option","school-main":"school-main","school-books-item":"school-books-item","img-responsive":"img-responsive","book-image":"book-image","landing":"landing","notebook-paper":"notebook-paper","paper-title-line":"paper-title-line","books-header":"books-header","timer-main":"timer-main","stopwatch-container":"stopwatch-container","cum-counter":"cum-counter","split-counter":"split-counter","start-stop-button":"start-stop-button","split-button":"split-button","reset-button":"reset-button","container":"container","times":"times","col-md-8":"col-md-8","time-col":"time-col","col-md-4":"col-md-4","points-col":"points-col","score":"score","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-body":"dalquest-body","dalquest-sidebar":"dalquest-sidebar","dalquest-title":"dalquest-title","dalquest-nav-list":"dalquest-nav-list","dalquest-nav-item":"dalquest-nav-item","dalquest-navitem":"dalquest-navitem","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","next-word":"next-word","sig-response":"sig-response"};
+	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","school-nav":"school-nav","option":"option","school-main":"school-main","img-responsive":"img-responsive","book-image":"book-image","menu":"menu","highlighted":"highlighted","landing":"landing","notebook-paper":"notebook-paper","paper-title-line":"paper-title-line","books-header":"books-header","timer-main":"timer-main","stopwatch-container":"stopwatch-container","cum-counter":"cum-counter","split-counter":"split-counter","start-stop-button":"start-stop-button","split-button":"split-button","reset-button":"reset-button","container":"container","times":"times","col-md-8":"col-md-8","time-col":"time-col","col-md-4":"col-md-4","points-col":"points-col","score":"score","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-body":"dalquest-body","dalquest-sidebar":"dalquest-sidebar","dalquest-title":"dalquest-title","dalquest-nav-list":"dalquest-nav-list","dalquest-nav-item":"dalquest-nav-item","dalquest-navitem":"dalquest-navitem","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","next-word":"next-word","sig-response":"sig-response"};
 
 /***/ },
 /* 3 */,
@@ -38442,63 +38442,64 @@
 	
 	var _templatesSchoolSchoolBooksLandingHtml2 = _interopRequireDefault(_templatesSchoolSchoolBooksLandingHtml);
 	
-	var _templatesSchoolSchoolBookContainerHtml = __webpack_require__(211);
+	// import template from 'templates/school/schoolBookContainer.html';
 	
-	var _templatesSchoolSchoolBookContainerHtml2 = _interopRequireDefault(_templatesSchoolSchoolBookContainerHtml);
-	
-	var _templatesSchoolBookPageHeaderHtml = __webpack_require__(212);
+	var _templatesSchoolBookPageHeaderHtml = __webpack_require__(211);
 	
 	var _templatesSchoolBookPageHeaderHtml2 = _interopRequireDefault(_templatesSchoolBookPageHeaderHtml);
 	
-	var _templatesSchoolSuggestBookHtml = __webpack_require__(213);
+	// import bookSuggestion from 'templates/school/suggestBook.html';
 	
-	var _templatesSchoolSuggestBookHtml2 = _interopRequireDefault(_templatesSchoolSuggestBookHtml);
+	var _templatesSchoolEnglishHtml = __webpack_require__(212);
+	
+	var _templatesSchoolEnglishHtml2 = _interopRequireDefault(_templatesSchoolEnglishHtml);
+	
+	// var compiledTemplate = Handlebars.compile(template);
+	// var books = [];
 	
 	var $ = __webpack_require__(1);
 	
 	window.jQuery = window.$ = $;
-	__webpack_require__(214);
-	
-	var compiledTemplate = _handlebars2['default'].compile(_templatesSchoolSchoolBookContainerHtml2['default']);
-	var books = [];
+	__webpack_require__(213);
 	
 	var app = {
 	  init: function init() {
 	    app.render();
 	  },
-	  render: function render() {
-	    $('.school-main').html(_templatesSchoolSchoolBooksLandingHtml2['default']);
-	    app.fetchBooks();
-	    // $('.btn-suggestion').click(function(){
-	    //   $('.thank-you').removeClass('hidden');
-	    // });
-	  },
-	  fetchBooks: function fetchBooks() {
-	    $.ajax({
-	      url: '/api/books',
-	      method: 'GET',
-	      complete: function complete(response) {
-	        var dataString = response.responseText;
-	        var data = JSON.parse(dataString);
-	        books = data;
-	        app.displayBooks();
-	      }
-	    });
-	  },
-	  displayBooks: function displayBooks() {
-	    $('a').click(function (event) {
-	      var currentSubject = event.target.id;
-	      var filteredBooks = _underscore2['default'].filter(books, function (book) {
-	        return book.subject === currentSubject;
-	      });
-	      var booksHtml = filteredBooks.map(function (book) {
-	        return compiledTemplate(book);
-	      });
-	      $('.school-header').html(_templatesSchoolBookPageHeaderHtml2['default']);
-	      app.render();
-	      $('.school-main').html(booksHtml);
-	    });
-	  }
+	  render: function render() {}
+	  // app.fetchBooks();
+	  // $('.btn-suggestion').click(function(){
+	  //   $('.thank-you').removeClass('hidden');
+	  // });
+	
+	  // fetchBooks: function(){
+	  //   $.ajax({
+	  //     url: '/api/books',
+	  //     method: 'GET',
+	  //     complete: function(response){
+	  //       var dataString = response.responseText;
+	  //       var data = JSON.parse(dataString);
+	  //       books = data; 
+	  //       app.displayBooks();
+	  //       app.coverflow();
+	  //     } 
+	  //   });   
+	  // },
+	  // displayBooks: function() {
+	  //   $('a').click(function(event){
+	
+	  // var currentSubject = event.target.id;
+	  // var filteredBooks = _.filter(books, function(book){
+	  //   return (book.subject === currentSubject);
+	  // });
+	  // var booksHtml = filteredBooks.map(function(book){
+	  //   return compiledTemplate(book);
+	  // });
+	  // $('.school-header').html(header);
+	  // app.render();
+	  //     $('.school-main').html(booksHtml);
+	  //   }); 
+	  // }
 	};
 	
 	module.exports = app;
@@ -38521,25 +38522,20 @@
 /* 211 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  <div class=\"school-books-item\">\n    <a href=\"{{url}}\" target=\"new\">\n      <img class=\"img-responsive book-image\" src=\"{{image}}\" alt=\"Responsive image\">\n    </a>\n      <!-- <div class=\"title\">{{title}}</div>\n      <div class=\"author\">{{author}}</div> -->\n  </div>\n\n";
+	module.exports = "\n<nav class=\"school-nav\">\n  <a href=\" \" role=\"navitem\" class=\"option\" id=\"books\">Home</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"english literature\">English Literature</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"history\">History</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"math\">Math/Statistics</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"polisci\">Political Science</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"psych\">Psychology</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"science\">Science</a>\n</nav>\n";
 
 /***/ },
 /* 212 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<nav class=\"school-nav\">\n  <a href=\" \" role=\"navitem\" class=\"option\" id=\"books\">Home</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"english literature\">English Literature</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"history\">History</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"math\">Math/Statistics</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"polisci\">Political Science</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"psych\">Psychology</a>\n  <a href=\"#\" role=\"navitem\" class=\"option\" id=\"science\">Science</a>\n</nav>\n";
+	module.exports = "<ul id=\"menu english\">\n\n  <li> \n  \t<a href=\"https://books.google.com/books?id=nfjGMgEACAAJ&dq=love,+dishonor,+marry,+perish,+cherish&hl=en&sa=X&ved=0ahUKEwj44reg2vfOAhUq6oMKHciEAewQ6AEIHjAA\">\n      <img class=\"img-responsive book-image\" src=\"/images/books/rakoff.png\" alt=\"Responsive image\">\n    </a> \n   </li>\n\n  <li>\n    <a href=\"https://books.google.com/books?id=9H9aAAAAMAAJ&dq=editions:5iTbjefdfnYC\">\n      <img class=\"img-responsive book-image\" src=\"/images/books/dillard.png\" alt=\"Responsive image\">\n    </a> \n  </li>\n\n  <li class=\"highlighted\">\n    <a href=\"https://books.google.com/books?id=Zd1l0Ivij8wC&printsec=frontcover&dq=the+unbearable+lightness+of+being&hl=en&sa=X&ved=0ahUKEwiC2e-c2_fOAhUH6WMKHTvGCScQ6AEIHjAA\">\n      <img class=\"img-responsive book-image\" src=\"/images/books/kundera.png\" alt=\"Responsive image\">\n    </a>\n </li>\n\n  <li> \n    <a href=\"https://books.google.com/books?id=xZWKctOqg8YC&dq=alphabet+juice&source=gbs_navlinks_s\">\n      <img class=\"img-responsive book-image\" src=\"/images/books/juice.png\" alt=\"Responsive image\">\n    </a>\n  </li>\n\n  <li> \n    <a href=\"https://books.google.com/books?id=tOjE5Usv_HQC&dq=lake+wobegon,+summer+1956&source=gbs_navlinks_s\">\n      <img class=\"img-responsive book-image\" src=\"/images/books/garrison.png\" alt=\"Responsive image\">\n    </a>\n  </li>\n\n  <li>\n    <a href=\"https://books.google.com/books?id=EJprQgAACAAJ&dq=the+dream+of+a+common+language&hl=en&sa=X&sqi=2&ved=0ahUKEwizmoaX3PfOAhUb24MKHfmLAA0Q6AEIHDAA\">\n      <img class=\"img-responsive book-image\" src=\"/images/books/adrienne.png\" alt=\"Responsive image\">\n    </a>\n  </li>\n\n</ul>";
 
 /***/ },
 /* 213 */
-/***/ function(module, exports) {
-
-	module.exports = "\n  <!-- <div class=\"suggest-book\">\n    <form class= \"book-suggestion\">\n      <div class=\"form-group subject\">\n        <label for=\"subject\">Subject</label>\n        <input class=\"form-control subject\" type=\"text\">\n      </div>\n      <div class=\"form-group title\">\n        <label for=\"title\">Title</label>\n        <input class=\"form-control title\" type=\"text\">\n      </div>\n      <div class=\"form-group author\">\n        <label for=\"author\">Author</label>\n        <input class=\"form-control author\" type=\"text\">\n      </div>\n      <button class=\"btn btn-default btn-suggestion\">Submit</button>\n    </form>\n  </div>\n</div>\n<div class=\"thank-you hidden\">\n  <h3>Thanks! We will let you know if your suggestion gets added to the list. In the meantime, keep reading!</h3>\n</div>\n\n -->";
-
-/***/ },
-/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// This file is autogenerated via the `commonjs` Grunt task. You can require() this file in a CommonJS environment.
+	__webpack_require__(214)
 	__webpack_require__(215)
 	__webpack_require__(216)
 	__webpack_require__(217)
@@ -38551,10 +38547,9 @@
 	__webpack_require__(223)
 	__webpack_require__(224)
 	__webpack_require__(225)
-	__webpack_require__(226)
 
 /***/ },
-/* 215 */
+/* 214 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -38619,7 +38614,7 @@
 
 
 /***/ },
-/* 216 */
+/* 215 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -38719,7 +38714,7 @@
 
 
 /***/ },
-/* 217 */
+/* 216 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -38845,7 +38840,7 @@
 
 
 /***/ },
-/* 218 */
+/* 217 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -39088,7 +39083,7 @@
 
 
 /***/ },
-/* 219 */
+/* 218 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -39305,7 +39300,7 @@
 
 
 /***/ },
-/* 220 */
+/* 219 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -39476,7 +39471,7 @@
 
 
 /***/ },
-/* 221 */
+/* 220 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -39819,7 +39814,7 @@
 
 
 /***/ },
-/* 222 */
+/* 221 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40339,7 +40334,7 @@
 
 
 /***/ },
-/* 223 */
+/* 222 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40453,7 +40448,7 @@
 
 
 /***/ },
-/* 224 */
+/* 223 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40631,7 +40626,7 @@
 
 
 /***/ },
-/* 225 */
+/* 224 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40792,7 +40787,7 @@
 
 
 /***/ },
-/* 226 */
+/* 225 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -40960,7 +40955,7 @@
 
 
 /***/ },
-/* 227 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40971,19 +40966,19 @@
 	
 	var _backbone2 = _interopRequireDefault(_backbone);
 	
-	var _pagesBooksBooksModel = __webpack_require__(228);
+	var _pagesBooksBooksModel = __webpack_require__(227);
 	
 	var _pagesBooksBooksModel2 = _interopRequireDefault(_pagesBooksBooksModel);
 	
-	var _pagesBooksBookItemView = __webpack_require__(230);
+	var _pagesBooksBookItemView = __webpack_require__(229);
 	
 	var _pagesBooksBookItemView2 = _interopRequireDefault(_pagesBooksBookItemView);
 	
-	var _pagesBooksBooksListView = __webpack_require__(232);
+	var _pagesBooksBooksListView = __webpack_require__(231);
 	
 	var _pagesBooksBooksListView2 = _interopRequireDefault(_pagesBooksBooksListView);
 	
-	var _pagesBooksAddBookView = __webpack_require__(234);
+	var _pagesBooksAddBookView = __webpack_require__(233);
 	
 	var _pagesBooksAddBookView2 = _interopRequireDefault(_pagesBooksAddBookView);
 	
@@ -41035,7 +41030,7 @@
 	module.exports = bookController;
 
 /***/ },
-/* 228 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41054,7 +41049,7 @@
 	
 	var _backbone2 = _interopRequireDefault(_backbone);
 	
-	var _lscache = __webpack_require__(229);
+	var _lscache = __webpack_require__(228);
 	
 	var _lscache2 = _interopRequireDefault(_lscache);
 	
@@ -41123,7 +41118,7 @@
 	module.exports = bookModel;
 
 /***/ },
-/* 229 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -41479,7 +41474,7 @@
 
 
 /***/ },
-/* 230 */
+/* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41498,7 +41493,7 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _templatesBooksBookItemHtml = __webpack_require__(231);
+	var _templatesBooksBookItemHtml = __webpack_require__(230);
 	
 	var _templatesBooksBookItemHtml2 = _interopRequireDefault(_templatesBooksBookItemHtml);
 	
@@ -41524,13 +41519,13 @@
 	module.exports = BookItemView;
 
 /***/ },
-/* 231 */
+/* 230 */
 /***/ function(module, exports) {
 
 	module.exports = "\n  <div class=\"title col-md-3\">{{title}}</div>\n  <div class=\"author col-md-3\">{{author}}</div>\n  <div class=\"friend col-md-2\">{{friend}}</div>\n  <div class=\"genre col-md-2\">{{genre}}</div>\n  <div class=\"rating col-md-1\"><input type=\"checkbox\"></div>\n  <div class=\"read col-md-1\"><button type=\"button\" class=\"close close-book\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button></div>\n";
 
 /***/ },
-/* 232 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41553,11 +41548,11 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _pagesBooksBookItemView = __webpack_require__(230);
+	var _pagesBooksBookItemView = __webpack_require__(229);
 	
 	var _pagesBooksBookItemView2 = _interopRequireDefault(_pagesBooksBookItemView);
 	
-	var _templatesBooksBookListHtml = __webpack_require__(233);
+	var _templatesBooksBookListHtml = __webpack_require__(232);
 	
 	var _templatesBooksBookListHtml2 = _interopRequireDefault(_templatesBooksBookListHtml);
 	
@@ -41604,13 +41599,13 @@
 	module.exports = BookListView;
 
 /***/ },
-/* 233 */
+/* 232 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"book-list-container\">\n  <ul class=\"list-group book-list\">\n    <li class=\"list-group-item row book-item\">\n      <div class=\"col-md-3\">Title</div>\n      <div class=\"col-md-3\">Author</div>\n      <div class=\"col-md-2\">Friend</div>\n      <div class=\"col-md-2\">Genre</div>\n      <div class=\"col-md-1\">Got it!</div>\n      <div class=\"col-md-1\">Read</div>   \n    </li>\n  </ul>\n  <button class=\"btn btn-default btn-add-book\">New book!</button>\n</div>\n\n\n\n";
 
 /***/ },
-/* 234 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41625,7 +41620,7 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _templatesBooksNewBookFormHtml = __webpack_require__(235);
+	var _templatesBooksNewBookFormHtml = __webpack_require__(234);
 	
 	var _templatesBooksNewBookFormHtml2 = _interopRequireDefault(_templatesBooksNewBookFormHtml);
 	
@@ -41662,13 +41657,13 @@
 	module.exports = AddBookView;
 
 /***/ },
-/* 235 */
+/* 234 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"new-book-container\">\n  <form>\n    <div class=\"form-group form-label\">\n      <label for=\"title\">Book Title</label>\n      <input type=\"text\" class=\"form-control title\" placeholder=\"Title\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"author\">Author</label>\n      <input type=\"text\" class=\"form-control author\" placeholder=\"Author\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"friend\">Who recommended it?</label>\n      <input type=\"text\" class=\"form-control friend\" placeholder=\"New Friend!\">\n    </div>\n    <div class=\"form-group form-label\">\n      <label for=\"genre\">Genre</label>\n      <input type=\"text\" class=\"form-control genre\" placeholder=\"Genre\">\n    </div>\n    <svg class=\"book-shelf btn btn-add\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" viewBox=\"0 0 84 94\" height=\"94\" width=\"84\">\n      <path fill=\"none\" d=\"M37.612 92.805L4.487 73.71c-2.75-1.587-4.45-4.52-4.45-7.687L.008 27.877c-.003-3.154 1.676-6.063 4.405-7.634L37.558 1.167c2.73-1.57 6.096-1.566 8.835.013l33.124 19.096c2.75 1.586 4.45 4.518 4.45 7.686l.028 38.146c.002 3.154-1.677 6.063-4.406 7.634L46.445 92.818c-2.73 1.57-6.096 1.566-8.834-.013z\"/>\n      <g class=\"book-shelf__book book-shelf__book--one\" fill-rule=\"evenodd\">\n        <path fill=\"#5199fc\" d=\"M31 29h4c1.105 0 2 .895 2 2v29c0 1.105-.895 2-2 2h-4c-1.105 0-2-.895-2-2V31c0-1.105.895-2 2-2z\"/>\n        <path fill=\"#afd7fb\" d=\"M34 36h-2c-.552 0-1-.448-1-1s.448-1 1-1h2c.552 0 1 .448 1 1s-.448 1-1 1zm-2 1h2c.552 0 1 .448 1 1s-.448 1-1 1h-2c-.552 0-1-.448-1-1s.448-1 1-1z\"/>\n      </g>\n      <g class=\"book-shelf__book book-shelf__book--two\" fill-rule=\"evenodd\">\n        <path fill=\"#ff9868\" d=\"M39 34h6c1.105 0 2 .895 2 2v24c0 1.105-.895 2-2 2h-6c-1.105 0-2-.895-2-2V36c0-1.105.895-2 2-2z\"/>\n        <path fill=\"#d06061\" d=\"M42 38c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2z\"/>\n      </g>\n      <g class=\"book-shelf__book book-shelf__book--three\" fill-rule=\"evenodd\">\n        <path fill=\"#ff5068\" d=\"M49 32h2c1.105 0 2 .86 2 1.92v25.906c0 1.06-.895 1.92-2 1.92h-2c-1.105 0-2-.86-2-1.92V33.92c0-1.06.895-1.92 2-1.92z\"/>\n        <path fill=\"#d93368\" d=\"M50 35c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1s-1-.448-1-1v-2c0-.552.448-1 1-1z\"/>\n      </g>\n      <g fill-rule=\"evenodd\">\n        <path class=\"book-shelf__shelf\" fill=\"#ae8280\" d=\"M21 60h40c1.105 0 2 .895 2 2s-.895 2-2 2H21c-1.105 0-2-.895-2-2s.895-2 2-2z\"/>\n        <path fill=\"#855f6d\" d=\"M51.5 67c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5zm-21 0c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5z\"/>\n      </g>\n    </svg>\n  </form>\n </div>";
 
 /***/ },
-/* 236 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41679,7 +41674,7 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _lodash = __webpack_require__(237);
+	var _lodash = __webpack_require__(236);
 	
 	var _lodash2 = _interopRequireDefault(_lodash);
 	
@@ -41866,7 +41861,7 @@
 	// module.exports = app;
 
 /***/ },
-/* 237 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/**
@@ -54221,10 +54216,10 @@
 	  }
 	}.call(this));
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(238)(module), (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(237)(module), (function() { return this; }())))
 
 /***/ },
-/* 238 */
+/* 237 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -54240,7 +54235,7 @@
 
 
 /***/ },
-/* 239 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54255,11 +54250,11 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _templatesVDTVdtInstructionsHtml = __webpack_require__(240);
+	var _templatesVDTVdtInstructionsHtml = __webpack_require__(239);
 	
 	var _templatesVDTVdtInstructionsHtml2 = _interopRequireDefault(_templatesVDTVdtInstructionsHtml);
 	
-	var _templatesVDTVdtItemsHtml = __webpack_require__(241);
+	var _templatesVDTVdtItemsHtml = __webpack_require__(240);
 	
 	var _templatesVDTVdtItemsHtml2 = _interopRequireDefault(_templatesVDTVdtItemsHtml);
 	
@@ -54304,19 +54299,19 @@
 	module.exports = app;
 
 /***/ },
-/* 240 */
+/* 239 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"vdt-container\">\n  <h1 class=\"vdt-title\">Visual Designs</h1>\n  <h2 class=\"vdt-instructions\">\n    For each item on this test, look at the two pictures and click on the one you like better.\n  </h2>\n  <button class=\"btn btn-default btn-start\">Start</button>\n</div>";
 
 /***/ },
-/* 241 */
+/* 240 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"1a\" src=\"/images/VDT/vdt-1a.png\">\n  <img class=\"vdt-image\" id=\"1b\" src=\"/images/VDT/vdt-1b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"2a\" src=\"/images/VDT/vdt-2a.png\">\n  <img class=\"vdt-image\" id=\"2b\" src=\"/images/VDT/vdt-2b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"3a\" src=\"/images/VDT/vdt-3a.png\">\n  <img class=\"vdt-image\" id=\"3b\" src=\"/images/VDT/vdt-3b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"4a\" src=\"/images/VDT/vdt-4a.png\">\n  <img class=\"vdt-image\" id=\"4b\" src=\"/images/VDT/vdt-4b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"5a\" src=\"/images/VDT/vdt-5a.png\">\n  <img class=\"vdt-image\" id=\"5b\" src=\"/images/VDT/vdt-5b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"6a\" src=\"/images/VDT/vdt-6a.png\">\n  <img class=\"vdt-image\" id=\"6b\" src=\"/images/VDT/vdt-6b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"7a\" src=\"/images/VDT/vdt-7a.png\">\n  <img class=\"vdt-image\" id=\"7b\" src=\"/images/VDT/vdt-7b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"8a\" src=\"/images/VDT/vdt-8a.png\">\n  <img class=\"vdt-image\" id=\"8b\" src=\"/images/VDT/vdt-8b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"9a\" src=\"/images/VDT/vdt-9a.png\">\n  <img class=\"vdt-image\" id=\"9b\" src=\"/images/VDT/vdt-9b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"10a\" src=\"/images/VDT/vdt-10a.png\">\n  <img class=\"vdt-image\" id=\"10b\" src=\"/images/VDT/vdt-10b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"11a\" src=\"/images/VDT/vdt-11a.png\">\n  <img class=\"vdt-image\" id=\"11b\" src=\"/images/VDT/vdt-11b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"12a\" src=\"/images/VDT/vdt-12a.png\">\n  <img class=\"vdt-image\" id=\"12b\" src=\"/images/VDT/vdt-12b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"13a\" src=\"/images/VDT/vdt-13a.png\">\n  <img class=\"vdt-image\" id=\"13b\" src=\"/images/VDT/vdt-13b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"14a\" src=\"/images/VDT/vdt-14a.png\">\n  <img class=\"vdt-image\" id=\"14b\" src=\"/images/VDT/vdt-14b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"15a\" src=\"/images/VDT/vdt-15a.png\">\n  <img class=\"vdt-image\" id=\"15b\" src=\"/images/VDT/vdt-15b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"16a\" src=\"/images/VDT/vdt-16a.png\">\n  <img class=\"vdt-image\" id=\"16b\" src=\"/images/VDT/vdt-16b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"17a\" src=\"/images/VDT/vdt-17a.png\">\n  <img class=\"vdt-image\" id=\"17b\" src=\"/images/VDT/vdt-17b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"18a\" src=\"/images/VDT/vdt-18a.png\">\n  <img class=\"vdt-image\" id=\"18b\" src=\"/images/VDT/vdt-18b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"19a\" src=\"/images/VDT/vdt-19a.png\">\n  <img class=\"vdt-image\" id=\"19b\" src=\"/images/VDT/vdt-19b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"20a\" src=\"/images/VDT/vdt-20a.png\">\n  <img class=\"vdt-image\" id=\"20b\" src=\"/images/VDT/vdt-20b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"21a\" src=\"/images/VDT/vdt-21a.png\">\n  <img class=\"vdt-image\" id=\"21b\" src=\"/images/VDT/vdt-21b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"22a\" src=\"/images/VDT/vdt-22a.png\">\n  <img class=\"vdt-image\" id=\"22b\" src=\"/images/VDT/vdt-22b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"23a\" src=\"/images/VDT/vdt-23a.png\">\n  <img class=\"vdt-image\" id=\"23b\" src=\"/images/VDT/vdt-23b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"24a\" src=\"/images/VDT/vdt-24a.png\">\n  <img class=\"vdt-image\" id=\"24b\" src=\"/images/VDT/vdt-24b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"25a\" src=\"/images/VDT/vdt-25a.png\">\n  <img class=\"vdt-image\" id=\"25b\" src=\"/images/VDT/vdt-25b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"26a\" src=\"/images/VDT/vdt-26a.png\">\n  <img class=\"vdt-image\" id=\"26b\" src=\"/images/VDT/vdt-26b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"27a\" src=\"/images/VDT/vdt-27a.png\">\n  <img class=\"vdt-image\" id=\"27b\" src=\"/images/VDT/vdt-27b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"28a\" src=\"/images/VDT/vdt-28a.png\">\n  <img class=\"vdt-image\" id=\"28b\" src=\"/images/VDT/vdt-28b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"29a\" src=\"/images/VDT/vdt-29a.png\">\n  <img class=\"vdt-image\" id=\"29b\" src=\"/images/VDT/vdt-29b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"30a\" src=\"/images/VDT/vdt-30a.png\">\n  <img class=\"vdt-image\" id=\"30b\" src=\"/images/VDT/vdt-30b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"31a\" src=\"/images/VDT/vdt-31a.png\">\n  <img class=\"vdt-image\" id=\"31b\" src=\"/images/VDT/vdt-31b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"32a\" src=\"/images/VDT/vdt-32a.png\">\n  <img class=\"vdt-image\" id=\"32b\" src=\"/images/VDT/vdt-32b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"33a\" src=\"/images/VDT/vdt-33a.png\">\n  <img class=\"vdt-image\" id=\"33b\" src=\"/images/VDT/vdt-33b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"34a\" src=\"/images/VDT/vdt-34a.png\">\n  <img class=\"vdt-image\" id=\"34b\" src=\"/images/VDT/vdt-34b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"35a\" src=\"/images/VDT/vdt-35a.png\">\n  <img class=\"vdt-image\" id=\"35b\" src=\"/images/VDT/vdt-35b.png\">\n</div>\n<hr> \n";
 
 /***/ },
-/* 242 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54331,13 +54326,15 @@
 	  init: function init() {
 	    app.render();
 	  },
-	  render: function render() {}
+	  render: function render() {
+	    x;
+	  }
 	};
 	
 	module.exports = app;
 
 /***/ },
-/* 243 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54352,11 +54349,11 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _templatesWordHtml = __webpack_require__(244);
+	var _templatesWordHtml = __webpack_require__(243);
 	
 	var _templatesWordHtml2 = _interopRequireDefault(_templatesWordHtml);
 	
-	var WordAssociationList = __webpack_require__(245);
+	var WordAssociationList = __webpack_require__(244);
 	var wordTemplate;
 	var currentIndex = 0;
 	var significantResponse = 0;
@@ -54400,13 +54397,13 @@
 	module.exports = app;
 
 /***/ },
-/* 244 */
+/* 243 */
 /***/ function(module, exports) {
 
 	module.exports = "\n  <div class=\"word\">{{word}}</div>\n  <button class=\"response\">{{response}}</button>\n  \n\n";
 
 /***/ },
-/* 245 */
+/* 244 */
 /***/ function(module, exports) {
 
 	'use strict';
