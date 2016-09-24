@@ -521,7 +521,7 @@ ul#menu {
   position: relative;
   padding: 0;
   margin: 0;
-  left: 30%;
+  left: 25%;
   -moz-perspective: 780px;
   -webkit-perspective: 780px;
   perspective: 780px;
@@ -1079,7 +1079,8 @@ ul#menu li:nth-child(6) { background-image: url(6.jpg); }*/
   position: relative;
   display: block;
   list-style: none;
-  left: -1500px;
+  top: 100px;
+  left: 100px;
 }
 
 .dalquest-sidebar.col-sm-2 ul.dalquest-nav-list li.dalquest-nav-item {
@@ -1105,20 +1106,18 @@ ul#menu li:nth-child(6) { background-image: url(6.jpg); }*/
 .dalquest-main.col-sm-10 h1.dalquest-header {
   position: relative;
   font-family: 'Cookie', sans-serif;
-  font-size: 100px;
-  line-height: 60px;
+  font-size: 75px;
+  line-height: 75px;
   vertical-align: bottom;
   color: #660000;
-  left: 50%;
+  left: 40%;
   z-index: 1;
 }
 
 .dalquest-main.col-sm-10 img.img-responsive.dalquest-landscape {
   position: relative;
   display: block;
-  left: 25%;
-  width: 1800px;
-  height: 1000px;
+  left: 20%;
   z-index: 0;
 }
 
