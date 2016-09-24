@@ -8,18 +8,26 @@
     <link rel="stylesheet" type="text/css" href="/main.css">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <script type="text/javascript" async="async" defer="defer" src="/application.js"></script>
+    <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
   </head>
   <body class="override-bootstrap">
     <header class="school-header container-fluid"></header>
     <main class="school-main">  
+    <!-- Large modal -->
+    <button type="button" class="btn btn-primary btn-modal" data-toggle="modal" data-target="#myModal">Large modal</button>
+    <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <iframe src=""></iframe>
+        </div>
+      </div>
+    </div>
       <div class="row english">
         <h2 class="subject">English Literature</h2>
         <ul id="menu">
           <li> 
-            <a href="https://books.google.com/books?id=Zd1l0Ivij8wC&printsec=frontcover&dq=the+unbearable+lightness+of+being&hl=en&sa=X&ved=0ahUKEwiC2e-c2_fOAhUH6WMKHTvGCScQ6AEIHjAA">
-              <img class="img-responsive book-image" src="/images/books/kundera.png" alt="Responsive image">
-            </a>
-           </li>
+            <img class="img-responsive book-image" src="/images/books/kundera.png" alt="Responsive image"><a href="https://books.google.com/books?id=Zd1l0Ivij8wC&printsec=frontcover&dq=the+unbearable+lightness+of+being&hl=en&sa=X&ved=0ahUKEwiC2e-c2_fOAhUH6WMKHTvGCScQ6AEIHjAA" title="The Unbearable Lightness of Being" target="myModal"></a>
+          </li>
           <li>
             <a href="https://books.google.com/books?id=9H9aAAAAMAAJ&dq=editions:5iTbjefdfnYC">
               <img class="img-responsive book-image" src="/images/books/dillard.png" alt="Responsive image">

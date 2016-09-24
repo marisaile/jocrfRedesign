@@ -9,7 +9,7 @@ import landing from 'templates/school/schoolBooksLanding.html';
 // import template from 'templates/school/schoolBookContainer.html';
 import header from 'templates/school/bookPageHeader.html';
 // import bookSuggestion from 'templates/school/suggestBook.html';
-import english from 'templates/school/english.html';
+
 
 // var compiledTemplate = Handlebars.compile(template);
 // var books = [];
@@ -20,6 +20,21 @@ var app = {
   },
   render: function(){
     $('.school-header').html(header);
+    // $('.btn-modal').click(function(){
+    //   $('#myModal').modal();
+    // });
+    // $(".test").click(function () {
+    //   $("#thedialog").attr('src', $(this).attr("href"));
+    //   $("#somediv").dialog({
+    //     width: 400,
+    //     height: 450,
+    //     modal: true,
+    //     close: function () {
+    //       $("#thedialog").attr('src', "about:blank");
+    //     }
+    //   });
+    //   return false;
+    // });
     // app.fetchBooks();
     // $('.btn-suggestion').click(function(){
     //   $('.thank-you').removeClass('hidden');

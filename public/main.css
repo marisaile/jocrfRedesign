@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Rock+Salt);@import url(https://fonts.googleapis.com/css?family=Over+the+Rainbow);@import url(https://fonts.googleapis.com/css?family=Comfortaa);@import url(https://fonts.googleapis.com/css?family=Inconsolata);@import url(https://fonts.googleapis.com/css?family=Cabin);@import url(https://fonts.googleapis.com/css?family=Open+Sans);@import url(https://fonts.googleapis.com/css?family=David+Libre);/*  body.landing-page {
+@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Rock+Salt);@import url(https://fonts.googleapis.com/css?family=Over+the+Rainbow);@import url(https://fonts.googleapis.com/css?family=Yatra+One);@import url(https://fonts.googleapis.com/css?family=Acme);@import url(https://fonts.googleapis.com/css?family=Satisfy);@import url(https://fonts.googleapis.com/css?family=Philosopher);@import url(https://fonts.googleapis.com/css?family=Arima+Madurai);@import url(https://fonts.googleapis.com/css?family=Cookie);@import url(https://fonts.googleapis.com/css?family=Sacramento);@import url(https://fonts.googleapis.com/css?family=Cherry+Cream+Soda);@import url(https://fonts.googleapis.com/css?family=Jomhuria);@import url(https://fonts.googleapis.com/css?family=Comfortaa);@import url(https://fonts.googleapis.com/css?family=Inconsolata);@import url(https://fonts.googleapis.com/css?family=Cabin);@import url(https://fonts.googleapis.com/css?family=Open+Sans);@import url(https://fonts.googleapis.com/css?family=David+Libre);/*  body.landing-page {
     margin: 0;
     background-color: #720EFF;
 
@@ -462,7 +462,7 @@ input.search-photo {
   margin: 0;
   padding-bottom: 0;
   width: 100%;
-  height: 125px;
+  height: 140px;
   z-index: 1;
   background-color: #2CAB0B;
   box-shadow: 1px 1px 10px 1px #8A8C8C;
@@ -471,8 +471,8 @@ input.search-photo {
 .school-header .school-nav h1 {
   display: relative;
   top: 50px;
-  font-family: 'Taviraj', serif;
-  font-size: 50px;
+  font-family: 'Jomhuria', serif;
+  font-size: 90px;
   vertical-align: bottom;
   text-align: center;
   margin-bottom: 0;
@@ -480,8 +480,9 @@ input.search-photo {
 }
 
 .school-header .school-nav h6 {
-  font-family: 'Over the Rainbow', cursive;
+  font-family: 'Arima Madurai', cursive;
   font-size: 25px;
+  margin-top: -10px;
   vertical-align: bottom;
   text-align: center;
   color: #F5F4F5;
@@ -509,7 +510,7 @@ input.search-photo {
 
 .school-main .row h2 {
   position: relative;
-  font-family: 'Over the Rainbow', cursive;
+  font-family: 'Montez', cursive;
   font-size: 50px;
   color: #363636;
   left: 175px;
@@ -627,6 +628,17 @@ ul#menu li:after {
   bottom: -20px;
   left: 0;
   -webkit-mask-image: -webkit-gradient(linear, left 10%, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent));
+}
+
+.btn-modal {
+  position: relative;
+  display: block;
+  top: 200px;
+}
+
+iframe {
+  height: 500px;
+  width: 750px;
 }
 
 /*ul#menu li:nth-child(1) { background-image: url(1.jpg); }
@@ -1031,61 +1043,83 @@ ul#menu li:nth-child(6) { background-image: url(6.jpg); }*/
 
 .dalquest-body {
   margin: 0;
-  background: url(/images/ddrs/ddrs-landscape.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-color: #ECECEC;
 }
 
-.dalquest-sidebar {
-  position: absolute;
+.dalquest-sidebar.col-sm-2 {
+  position: fixed;
+  display: block;
+  width: 18%;
+  height: 100%;
   background-color: #660000;
   box-shadow: 1px 1px 5px 1px #190000;
   top: 0;
   left: 0;
-  width: 375px;
-  height: 100%;
+  bottom: 0;
+  z-index: 2;
+  /*  h1.dalquest-title {
+    position: relative;
+    display: block;
+    top: 300px;
+    font-family: 'David Libre', sans-serif;
+    font-size: 40px;
+    color: #FCFCFC;
+    text-align: center;
+  }*/
 }
 
-.dalquest-sidebar .img-responsive {
+.dalquest-sidebar.col-sm-2 .img-responsive {
   position: relative;
   display: block;
   top: 25px;
   width: 350px;
 }
 
-.dalquest-sidebar h1.dalquest-title {
-  position: relative;
-  display: block;
-  top: 300px;
-  font-family: 'David Libre', sans-serif;
-  font-size: 40px;
-  color: #FCFCFC;
-  text-align: center;
-}
-
-.dalquest-sidebar ul.dalquest-nav-list {
+.dalquest-sidebar.col-sm-2 ul.dalquest-nav-list {
   position: relative;
   display: block;
   list-style: none;
-  top: 400px;
   left: -1500px;
 }
 
-.dalquest-sidebar ul.dalquest-nav-list li.dalquest-nav-item {
+.dalquest-sidebar.col-sm-2 ul.dalquest-nav-list li.dalquest-nav-item {
   margin-bottom: 20px;
 }
 
-.dalquest-sidebar ul.dalquest-nav-list li.dalquest-nav-item a.dalquest-navitem {
+.dalquest-sidebar.col-sm-2 ul.dalquest-nav-list li.dalquest-nav-item a.dalquest-navitem {
   font-family: 'David Libre', sans-serif;
   font-size: 20px;
   line-height: 50px;
   color: #FCFCFC;
 }
 
-.dalquest-sidebar ul.dalquest-nav-list li.dalquest-nav-item a.dalquest-navitem:hover {
+.dalquest-sidebar.col-sm-2 ul.dalquest-nav-list li.dalquest-nav-item a.dalquest-navitem:hover {
   text-decoration: none;
+}
+
+.dalquest-main.col-sm-10 {
+  position: relative;
+  width: 85%;
+}
+
+.dalquest-main.col-sm-10 h1.dalquest-header {
+  position: relative;
+  font-family: 'Cookie', sans-serif;
+  font-size: 100px;
+  line-height: 60px;
+  vertical-align: bottom;
+  color: #660000;
+  left: 50%;
+  z-index: 1;
+}
+
+.dalquest-main.col-sm-10 img.img-responsive.dalquest-landscape {
+  position: relative;
+  display: block;
+  left: 25%;
+  width: 1800px;
+  height: 1000px;
+  z-index: 0;
 }
 
 body.word-association {

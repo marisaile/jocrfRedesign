@@ -3,28 +3,27 @@
 
 .dalquest-body {
   margin: 0;
-  background: url(/images/ddrs/ddrs-landscape.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-color: #ECECEC;
 }
-.dalquest-sidebar {
-  position: absolute;
+.dalquest-sidebar.col-sm-2 {
+  position: fixed;
+  display: block; 
+  width: 18%;
+  height: 100%;
   background-color: #660000;
   box-shadow: 1px 1px 5px 1px #190000;
   top: 0;
   left: 0;
-  width: 375px;
-  height: 100%;
-  
+  bottom: 0;
+  z-index: 2;
+
   .img-responsive {
     position: relative;
     display: block;
     top: 25px;
     width: 350px;
   }
-  h1.dalquest-title {
+/*  h1.dalquest-title {
     position: relative;
     display: block;
     top: 300px;
@@ -32,12 +31,11 @@
     font-size: 40px;
     color: #FCFCFC;
     text-align: center;
-  }
+  }*/
   ul.dalquest-nav-list {
     position: relative;
     display: block;
     list-style: none;
-    top: 400px;
     left: -1500px;
 
     li.dalquest-nav-item {
@@ -55,3 +53,28 @@
     }
   }
 }
+.dalquest-main.col-sm-10 {
+  position: relative;
+  width: 85%;
+
+  h1.dalquest-header {
+    position: relative;
+    font-family: 'Cookie', sans-serif;
+    font-size: 100px;
+    line-height: 60px;
+    vertical-align: bottom;
+    color: #660000;
+    left: 50%;
+    z-index: 1;
+  }
+  img.img-responsive.dalquest-landscape {
+    position: relative;
+    display: block;
+    left: 25%;
+    width: 1800px;
+    height: 1000px;
+    z-index: 0;
+  }
+}
+
+
