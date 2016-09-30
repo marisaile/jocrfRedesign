@@ -19,14 +19,16 @@
 
     .cum-counter {
       position: relative;
-      font-family: 'Inconsolata', sans-serif;
+      font-family: 'David Libre', sans-serif;
       font-size: 20px;
+      top: 75px;
       left: 20px;
     }
     .split-counter {
       position: relative;
-      font-family: 'Inconsolata', sans-serif;
+      font-family: 'David Libre', sans-serif;
       font-size: 35px;
+      top: 75px;
       left: 20px;
     }
     .btn.start-stop-button {
@@ -34,10 +36,11 @@
       display: inline-block;
       padding: 0;
       height: 110px;
-      width: 110px;
+      width: 150px;
       margin: 20px;
-      left: 125px;
-      font-family: 'Inconsolata', sans-serif;
+      top: 100px;
+      left: 100px;
+      font-family: 'David Libre', sans-serif;
       font-size: 30px;
       text-align: center;
       background-color: #01C700;
@@ -51,10 +54,11 @@
       display: inline-block;
       padding: 0;
       height: 110px;
-      width: 110px;
+      width: 150px;
       margin: 20px;
-      left: 275px;
-      font-family: 'Inconsolata', sans-serif;
+      top: 100px;
+      left: 200px;
+      font-family: 'David Libre', sans-serif;
       font-size: 30px;
       text-align: center;
       background-color: #720EFF;
@@ -66,9 +70,9 @@
     .reset-button {
       position: relative;
       display: inline-block;
-      left: 320px;
-      top: -140px;
-      font-family: 'Inconsolata', sans-serif;
+      left: 260px;
+      top: 800px;
+      font-family: 'David Libre', sans-serif;
       font-size: 20px;
     }  
     .reset-button:hover {
@@ -77,7 +81,7 @@
     .container.times {
       position: relative;
       display: block;
-      top: 20px;
+      top: 75px;
       overflow-y: scroll;
       height: 70%;
       width: 750px;
