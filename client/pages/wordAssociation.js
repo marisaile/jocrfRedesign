@@ -18,26 +18,27 @@ var app = {
     app.bindEvents();    
   },
   bindEvents: function(){
-    app.noResponse();     
+    app.noResponse();
+    app.countSignificantResponses();     
   },
   compileTemplate: function(){
     wordTemplate = Handlebars.compile(template);
   },
   countSignificantResponses: function(){
-    var $response = $('.response');
+    var $response = $('.sig-yes');
     $response.on('click', function(){
       significantResponse++;
       $('.sig-response').html('Significant Responses: ' + significantResponse);
+      app.nextWord();
     });
   },
   nextWord: function(){
     $('.word-container').html(wordTemplate(WordAssociationList[currentIndex]));
     currentIndex++;
-    app.countSignificantResponses();
   },
   noResponse: function(){
-    var $nextWord = $('.next-word');
-    $nextWord.on('click', function(){
+    var $noResponse = $('.sig-no');
+    $noResponse.on('click', function(){
       app.nextWord();
     });
   }

@@ -10003,7 +10003,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","school-nav":"school-nav","row":"row","school-main":"school-main","img-responsive":"img-responsive","book-image":"book-image","menu":"menu","highlighted":"highlighted","timer-main":"timer-main","stopwatch-container":"stopwatch-container","cum-counter":"cum-counter","split-counter":"split-counter","start-stop-button":"start-stop-button","split-button":"split-button","reset-button":"reset-button","container":"container","times":"times","col-md-8":"col-md-8","time-col":"time-col","col-md-4":"col-md-4","points-col":"points-col","score":"score","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-body":"dalquest-body","dalquest-sidebar":"dalquest-sidebar","col-sm-2":"col-sm-2","dalquest-nav-list":"dalquest-nav-list","dalquest-nav-item":"dalquest-nav-item","dalquest-navitem":"dalquest-navitem","dalquest-main":"dalquest-main","col-sm-10":"col-sm-10","dalquest-header":"dalquest-header","dalquest-landscape":"dalquest-landscape","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","next-word":"next-word","sig-response":"sig-response"};
+	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","school-nav":"school-nav","row":"row","school-main":"school-main","img-responsive":"img-responsive","book-image":"book-image","menu":"menu","highlighted":"highlighted","timer-main":"timer-main","stopwatch-container":"stopwatch-container","cum-counter":"cum-counter","split-counter":"split-counter","start-stop-button":"start-stop-button","split-button":"split-button","reset-button":"reset-button","container":"container","times":"times","col-md-8":"col-md-8","time-col":"time-col","col-md-4":"col-md-4","points-col":"points-col","score":"score","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-body":"dalquest-body","dalquest-sidebar":"dalquest-sidebar","col-sm-2":"col-sm-2","dalquest-nav-list":"dalquest-nav-list","dalquest-nav-item":"dalquest-nav-item","dalquest-navitem":"dalquest-navitem","dalquest-main":"dalquest-main","col-sm-10":"col-sm-10","dalquest-header":"dalquest-header","dalquest-landscape":"dalquest-landscape","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","sig-yes":"sig-yes","sig-no":"sig-no","sig-response":"sig-response"};
 
 /***/ },
 /* 3 */,
@@ -38534,7 +38534,7 @@
 /* 211 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<nav class=\"school-nav row\">\n   <h1>Go Beyond the Textbook.</h1>\n   <h6>Read fiction and nonfiction books related to what you're studying in school and fuel your love of learning!</h6>\n</nav>\n\n\n";
+	module.exports = "\n<nav class=\"school-nav row\">\n   <h1>Go Beyond the Textbook.</h1>\n   <h6>Read fiction and nonfiction books related to what you're studying in school and fuel your love of learning!</h6>\n   <!-- <a href=\"#\">English Literature</a>\n   <a href=\"#\">History</a>\n   <a href=\"#\">Math</a>\n   <a href=\"#\">Political Science</a>\n   <a href=\"#\">Psychology</a>\n   <a href=\"#\">Science</a> -->\n</nav>\n\n\n";
 
 /***/ },
 /* 212 */
@@ -54376,25 +54376,26 @@
 	  },
 	  bindEvents: function bindEvents() {
 	    app.noResponse();
+	    app.countSignificantResponses();
 	  },
 	  compileTemplate: function compileTemplate() {
 	    wordTemplate = _handlebars2['default'].compile(_templatesWordHtml2['default']);
 	  },
 	  countSignificantResponses: function countSignificantResponses() {
-	    var $response = (0, _jquery2['default'])('.response');
+	    var $response = (0, _jquery2['default'])('.sig-yes');
 	    $response.on('click', function () {
 	      significantResponse++;
 	      (0, _jquery2['default'])('.sig-response').html('Significant Responses: ' + significantResponse);
+	      app.nextWord();
 	    });
 	  },
 	  nextWord: function nextWord() {
 	    (0, _jquery2['default'])('.word-container').html(wordTemplate(WordAssociationList[currentIndex]));
 	    currentIndex++;
-	    app.countSignificantResponses();
 	  },
 	  noResponse: function noResponse() {
-	    var $nextWord = (0, _jquery2['default'])('.next-word');
-	    $nextWord.on('click', function () {
+	    var $noResponse = (0, _jquery2['default'])('.sig-no');
+	    $noResponse.on('click', function () {
 	      app.nextWord();
 	    });
 	  }
@@ -54406,7 +54407,7 @@
 /* 242 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  <div class=\"word\">{{word}}</div>\n  <button class=\"response\">{{response}}</button>\n  \n\n";
+	module.exports = "\n  <div class=\"word\">{{word}}</div>\n  <div class=\"response\">(Sig.: {{response}})</div>\n  \n\n";
 
 /***/ },
 /* 243 */

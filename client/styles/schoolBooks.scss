@@ -47,6 +47,9 @@
         text-align: center;
         color: #F5F4F5;
       }
+      a {
+        display: none;
+      }
     }
   }
   .school-main {
@@ -215,6 +218,9 @@
         text-align: center;
         color: #F5F4F5;
       }
+      a {
+        display: none;
+      }
     }
   }
   .school-main {
@@ -351,7 +357,7 @@
 @media screen and (min-width: 375px) and (max-width: 768px) {
   .school-header & .school-nav {
     position: absolute;
-    /*display: block;*/
+    display: block;
     background-color: #2CAB0B;
     margin: 0;
     width: 100%;
@@ -360,19 +366,29 @@
     h1 {
       display: block;
       width: 300px;
-      margin: 50px auto;
+      margin: 35px auto;
       font-family: 'Jomhuria', serif;
       font-size: 120px;
       text-align: center;
       color: #F5F4F5;
     }
     h6 {
-      display: none;
+      display: block;
       font-family: 'Arima Madurai', cursive;
       font-size: 15px;
       text-align: center;
       color: #F5F4F5;
     }
+/*    a {
+      display: inline-flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      font-family: 'Montez', cursive;
+      text-align: center;
+      font-size: 15px;
+      margin: 15px;
+      color: #F5F4F5;
+    }*/
   }
   .school-main {
     position: relative;

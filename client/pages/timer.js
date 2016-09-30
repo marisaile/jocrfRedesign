@@ -81,7 +81,7 @@ var app = {
   },
   displayTimes: function(){
     $('.time-col').append('Item ' + '' + (index + 1) + ': ' + ' ' + splitTimes[index] + '<br />'); 
-     if (splitTimes[index] < 10) {
+    if (splitTimes[index] < 10) {
       points = 3;
     } else if (splitTimes[index] > 9 && splitTimes[index] < 20) {
       points = 2;

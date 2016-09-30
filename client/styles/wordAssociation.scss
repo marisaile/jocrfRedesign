@@ -10,6 +10,15 @@ body.word-association {
   width: 768px;
   background-color: #eee;
 
+  h1 {
+    position: relative;
+    display: block;
+    top: 50px;
+    text-align: center;
+    font-family: 'David Libre', sans-serif;
+    font-size: 50px;
+  }
+
   .word-container {
     position: relative;
     display: block;
@@ -20,50 +29,72 @@ body.word-association {
     .word {
       position: relative;
       display: block;
-      top: 150px;
+      top: 200px;
       height: 100px;
       width: 200px;
-      font-family: 'Taviraj', serif;
+      font-family: 'David Libre', serif;
       font-size: 50px;
       color: #222;
       text-align: center;
     }
     .response {
       position: relative;
+      display: block;
       top: 150px;
       height: 75px;
       width: 200px;
-      border: 1px solid #222;
-      font-family: 'Taviraj', serif;
+      font-family: 'David Libre', sans-serif;
       font-size: 30px;
-      color: #eee;
+      color: #222;
       text-align: center;
       line-height: 75px;
-      background-color: #222;
-    }
-    .response:focus {
-      outline: none;
     }
   }
-  .next-word {
+  .sig-yes {
     position: relative;
-    display: block;
-    left: 620px;
-    top: 200px;
-    width: 120px;
-    height: 60px;
+    display: inline-block;
+    left: 75px;
+    width: 225px;
+    height: 75px;
     background-color: #eee;
     color: #222;
-    font-family: 'Taviraj', serif;
-    font-size: 20px;
+    font-family: 'David Libre', sans-serif;
+    font-size: 25px;
+    background-color: #0EFCFF;
+  }
+  .sig-yes:hover {
+    background-color: #0EFCFF;
+  }
+  .sig-yes:focus {
+    outline: none;
+    background-color: #0EFCFF;
+  }
+  .sig-no {
+    position: relative;
+    display: inline-block;
+    left: 225px;
+    width: 225px;
+    height: 75px;
+    background-color: #eee;
+    color: #222;
+    font-family: 'David Libre', sans-serif;
+    font-size: 25px;
+    background-color: #FF6735;
+  }
+  .sig-no:hover {
+    background-color: #FF6735;
+  }
+  .sig-no:focus {
+    outline: none;
+    background-color: #FF6735;
   }
   .sig-response {
     position: relative;
     display: block;
-    top: 200px;
+    top: 450px;
     left: 20px;
-    font-family: 'Taviraj', serif;
-    font-size: 20px;
+    font-family: 'David Libre', serif;
+    font-size: 25px;
     color: #222;
   }
 }

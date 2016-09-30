@@ -467,6 +467,9 @@ input.search-photo {
     text-align: center;
     color: #F5F4F5;
   }
+  .school-header .school-nav.row a {
+    display: none;
+  }
   .school-main {
     position: relative;
     display: block;
@@ -628,6 +631,9 @@ input.search-photo {
     text-align: center;
     color: #F5F4F5;
   }
+  .school-header .school-nav.row a {
+    display: none;
+  }
   .school-main {
     position: relative;
     display: block;
@@ -756,23 +762,33 @@ input.search-photo {
 @media screen and (min-width: 375px) and (max-width: 768px) {
   .school-header .school-nav {
     position: absolute;
-    /*display: block;*/
+    display: block;
     background-color: #2CAB0B;
     margin: 0;
     width: 100%;
     height: 100%;
+    /*    a {
+      display: inline-flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      font-family: 'Montez', cursive;
+      text-align: center;
+      font-size: 15px;
+      margin: 15px;
+      color: #F5F4F5;
+    }*/
   }
   .school-header .school-nav h1 {
     display: block;
     width: 300px;
-    margin: 50px auto;
+    margin: 35px auto;
     font-family: 'Jomhuria', serif;
     font-size: 120px;
     text-align: center;
     color: #F5F4F5;
   }
   .school-header .school-nav h6 {
-    display: none;
+    display: block;
     font-family: 'Arima Madurai', cursive;
     font-size: 15px;
     text-align: center;
@@ -1369,6 +1385,15 @@ body.word-association {
   background-color: #eee;
 }
 
+.wa-container h1 {
+  position: relative;
+  display: block;
+  top: 50px;
+  text-align: center;
+  font-family: 'David Libre', sans-serif;
+  font-size: 50px;
+}
+
 .wa-container .word-container {
   position: relative;
   display: block;
@@ -1380,10 +1405,10 @@ body.word-association {
 .wa-container .word-container .word {
   position: relative;
   display: block;
-  top: 150px;
+  top: 200px;
   height: 100px;
   width: 200px;
-  font-family: 'Taviraj', serif;
+  font-family: 'David Libre', serif;
   font-size: 50px;
   color: #222;
   text-align: center;
@@ -1391,42 +1416,68 @@ body.word-association {
 
 .wa-container .word-container .response {
   position: relative;
+  display: block;
   top: 150px;
   height: 75px;
   width: 200px;
-  border: 1px solid #222;
-  font-family: 'Taviraj', serif;
+  font-family: 'David Libre', sans-serif;
   font-size: 30px;
-  color: #eee;
+  color: #222;
   text-align: center;
   line-height: 75px;
-  background-color: #222;
 }
 
-.wa-container .word-container .response:focus {
-  outline: none;
-}
-
-.wa-container .next-word {
+.wa-container .sig-yes {
   position: relative;
-  display: block;
-  left: 620px;
-  top: 200px;
-  width: 120px;
-  height: 60px;
+  display: inline-block;
+  left: 75px;
+  width: 225px;
+  height: 75px;
   background-color: #eee;
   color: #222;
-  font-family: 'Taviraj', serif;
-  font-size: 20px;
+  font-family: 'David Libre', sans-serif;
+  font-size: 25px;
+  background-color: #0EFCFF;
+}
+
+.wa-container .sig-yes:hover {
+  background-color: #0EFCFF;
+}
+
+.wa-container .sig-yes:focus {
+  outline: none;
+  background-color: #0EFCFF;
+}
+
+.wa-container .sig-no {
+  position: relative;
+  display: inline-block;
+  left: 225px;
+  width: 225px;
+  height: 75px;
+  background-color: #eee;
+  color: #222;
+  font-family: 'David Libre', sans-serif;
+  font-size: 25px;
+  background-color: #FF6735;
+}
+
+.wa-container .sig-no:hover {
+  background-color: #FF6735;
+}
+
+.wa-container .sig-no:focus {
+  outline: none;
+  background-color: #FF6735;
 }
 
 .wa-container .sig-response {
   position: relative;
   display: block;
-  top: 200px;
+  top: 450px;
   left: 20px;
-  font-family: 'Taviraj', serif;
-  font-size: 20px;
+  font-family: 'David Libre', serif;
+  font-size: 25px;
   color: #222;
 }
 
