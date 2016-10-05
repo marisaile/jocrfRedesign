@@ -36,7 +36,7 @@ var app = {
         method: 'flickr.photos.search',
         api_key: '731717db25329eb6aa65703cb6b71970',
         format: 'json',
-        per_page: 30
+        per_page: 10
       },
       complete: function(response){
         var text = response.responseText;
@@ -46,6 +46,18 @@ var app = {
       }
     });
   }, 
+  imagePreloader: function(){
+    $('img').each(function($oneImage){
+      var source = $oneImage.attr('data-src');
+      var $newImage = $('<img>');
+      $newImage.on('load', function(){
+        $newImage.css('opacity', 0);
+        $oneImage.replaceWith($newImage);
+        $newImage.fadeIn();
+      });
+      $newImage.attr('src', source)
+    });
+  },
   renderResults: function(data){
     var html = '';
     var dataArray = data.photos.photo;

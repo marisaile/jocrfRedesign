@@ -10,10 +10,11 @@ import photoSearch from 'pages/photoSearch';
 // import three from 'pages/three';
 import schoolBooks from 'pages/schoolBooks';
 import bookController from 'pages/books/booksController';
-import timer from 'pages/timer';
+import timer from 'pages/timerAlt';
 import vdt from 'pages/visualDesigns';
 import dalquest from 'pages/dalquest';
 import wordAss from 'pages/wordAssociation';
+import joc2012 from 'pages/joc2012';
 
 $(function() {
 
@@ -54,6 +55,9 @@ $(function() {
     break;
     case '/pages/wordAssociation.html':
       wordAss.init();
+    break;
+    case '/pages/joc2012.html':
+      joc2012.init();
     default: break;
   }
 

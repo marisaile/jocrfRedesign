@@ -10,18 +10,18 @@
 }
 input.search-photo {
   position: relative;
-  display: block;
+  display: inline-block;
   top: 110px;
   left: 125px;
-  width: 400px;
+  width: 350px;
   background-color: #fff;
 }
 .btn.search-photos {
   position: relative;
   display: inline-block;
   width: 100px;
-  top: -75px;
-  left: 550px;
+  top: 110px;
+  left: 150px;
   background-color: #F501FF;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
@@ -41,7 +41,6 @@ input.search-photo {
     display: inline-block;
     img {
       width: 100%;
-      border: solid 1px #383838;
     }
   }
 }

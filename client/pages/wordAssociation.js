@@ -27,9 +27,9 @@ var app = {
   countSignificantResponses: function(){
     var $response = $('.sig-yes');
     $response.on('click', function(){
-      significantResponse++;
-      $('.sig-response').html('Significant Responses: ' + significantResponse);
-      app.nextWord();
+        significantResponse++;
+        $('.sig-response').html('Significant Responses: ' + significantResponse);
+        app.nextWord(); 
     });
   },
   nextWord: function(){

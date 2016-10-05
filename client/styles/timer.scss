@@ -78,7 +78,46 @@
     .reset-button:hover {
       cursor: pointer;
     }
-    .container.times {
+    .item-container {
+      position: relative;
+      display: block;
+      left: 25px;
+      top: 290px;
+      height: 400px;
+      width: 400px;
+      border: 1px solid black;
+
+      h2 {
+        position: relative;
+        font-family: 'David Libre', serif;
+        font-size: 30px;
+        text-align: center;
+        top: 100px;
+      }
+      h4 {
+        position: relative;
+        font-family: 'David Libre', serif;
+        font-size: 50px;
+        text-align: center;
+        top: 145px;
+      }
+    }
+    .score {
+      position: relative;
+      display: block;
+      top: 200px;
+      left: 30px;
+      font-family: 'David Libre', sans-serif;
+      font-size: 25px;
+    }
+  }
+}
+
+
+
+
+
+/*    .container.times {
       position: relative;
       display: block;
       top: 75px;
@@ -96,14 +135,5 @@
         font-size: 25px;
         line-height: 30px;
       }
-    }
-    .score {
-      position: relative;
-      display: block;
-      top: 25px;
-      left: 30px;
-      font-family: 'Inconsolata', sans-serif;
-      font-size: 25px;
-    }
-  }
-}
+    }*/
+

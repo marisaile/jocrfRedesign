@@ -85,21 +85,25 @@
 	
 	var _pagesBooksBooksController2 = _interopRequireDefault(_pagesBooksBooksController);
 	
-	var _pagesTimer = __webpack_require__(234);
+	var _pagesTimerAlt = __webpack_require__(234);
 	
-	var _pagesTimer2 = _interopRequireDefault(_pagesTimer);
+	var _pagesTimerAlt2 = _interopRequireDefault(_pagesTimerAlt);
 	
-	var _pagesVisualDesigns = __webpack_require__(237);
+	var _pagesVisualDesigns = __webpack_require__(235);
 	
 	var _pagesVisualDesigns2 = _interopRequireDefault(_pagesVisualDesigns);
 	
-	var _pagesDalquest = __webpack_require__(240);
+	var _pagesDalquest = __webpack_require__(238);
 	
 	var _pagesDalquest2 = _interopRequireDefault(_pagesDalquest);
 	
-	var _pagesWordAssociation = __webpack_require__(241);
+	var _pagesWordAssociation = __webpack_require__(239);
 	
 	var _pagesWordAssociation2 = _interopRequireDefault(_pagesWordAssociation);
+	
+	var _pagesJoc2012 = __webpack_require__(242);
+	
+	var _pagesJoc20122 = _interopRequireDefault(_pagesJoc2012);
 	
 	(0, _jquery2['default'])(function () {
 	
@@ -130,7 +134,7 @@
 	      _pagesBooksBooksController2['default'].render();
 	      break;
 	    case '/pages/timer.html':
-	      _pagesTimer2['default'].init();
+	      _pagesTimerAlt2['default'].init();
 	      break;
 	    case '/pages/visualDesigns.html':
 	      _pagesVisualDesigns2['default'].init();
@@ -140,6 +144,9 @@
 	      break;
 	    case '/pages/wordAssociation.html':
 	      _pagesWordAssociation2['default'].init();
+	      break;
+	    case '/pages/joc2012.html':
+	      _pagesJoc20122['default'].init();
 	    default:
 	      break;
 	  }
@@ -10003,7 +10010,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","school-nav":"school-nav","row":"row","school-main":"school-main","img-responsive":"img-responsive","book-image":"book-image","menu":"menu","highlighted":"highlighted","timer-main":"timer-main","stopwatch-container":"stopwatch-container","cum-counter":"cum-counter","split-counter":"split-counter","start-stop-button":"start-stop-button","split-button":"split-button","reset-button":"reset-button","container":"container","times":"times","col-md-8":"col-md-8","time-col":"time-col","col-md-4":"col-md-4","points-col":"points-col","score":"score","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-body":"dalquest-body","dalquest-sidebar":"dalquest-sidebar","col-sm-2":"col-sm-2","dalquest-nav-list":"dalquest-nav-list","dalquest-nav-item":"dalquest-nav-item","dalquest-navitem":"dalquest-navitem","dalquest-main":"dalquest-main","col-sm-10":"col-sm-10","dalquest-header":"dalquest-header","dalquest-landscape":"dalquest-landscape","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","sig-yes":"sig-yes","sig-no":"sig-no","sig-response":"sig-response"};
+	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","school-nav":"school-nav","row":"row","school-main":"school-main","img-responsive":"img-responsive","book-image":"book-image","menu":"menu","highlighted":"highlighted","timer-main":"timer-main","stopwatch-container":"stopwatch-container","cum-counter":"cum-counter","split-counter":"split-counter","start-stop-button":"start-stop-button","split-button":"split-button","reset-button":"reset-button","item-container":"item-container","score":"score","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","dalquest-body":"dalquest-body","dalquest-sidebar":"dalquest-sidebar","col-sm-2":"col-sm-2","dalquest-nav-list":"dalquest-nav-list","dalquest-nav-item":"dalquest-nav-item","dalquest-navitem":"dalquest-navitem","dalquest-main":"dalquest-main","col-sm-10":"col-sm-10","dalquest-header":"dalquest-header","dalquest-landscape":"dalquest-landscape","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","sig-yes":"sig-yes","sig-no":"sig-no","sig-response":"sig-response","joc2012":"joc2012","joc2012-header":"joc2012-header","slideshow":"slideshow"};
 
 /***/ },
 /* 3 */,
@@ -10095,7 +10102,7 @@
 /* 10 */
 /***/ function(module, exports) {
 
-	module.exports = "\n      <div class=\"nav-items\">  \n        <a class=\"marisaile\" role=\"menuitem\" href=\"/server/view.ejs\">Marisaile</a>\n        <a class=\"nav-stay\" role=\"menuitem\" href=\"/pages/todo.html\">To Do App</a>\n        <a class=\"nav-stay\" role=\"menuitem\" href=\"/pages/photoSearch.html\">Photo Search</a>\n        <!-- <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/d3.html\">d3 Chart</a> -->\n        <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/funnySquares.html\">Funny Squares</a>\n        <!-- <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/three.html\">THREE Animation</a> -->\n        <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/schoolBooks.html\">School</a>\n        <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/images/Website%20Proposal/assets/player/KeynoteDHTMLPlayer.html#0\">Old Work</a>\n        <!-- <a class=\"nav-stay nav-joc\" role=\"menuitem\" href=\"/pages/wordAssociation.html\">Word Association</a> -->\n        <!-- <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/books.html\">Book Tracker</a>\n        <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/dalquest.html\">Dalquest Research Site</a> -->\n        <!-- <a class=\"nav-stay nav-joc\" role=\"menuitem\" href=\"/pages/timer.html\">Timer</a> -->\n      </div>\n    ";
+	module.exports = "\n      <div class=\"nav-items\">  \n        <a class=\"marisaile\" role=\"menuitem\" href=\"/server/view.ejs\">Marisaile</a>\n        <a class=\"nav-stay\" role=\"menuitem\" href=\"/pages/todo.html\">To Do App</a>\n        <a class=\"nav-stay\" role=\"menuitem\" href=\"/pages/photoSearch.html\">Photo Search</a>\n        <!-- <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/d3.html\">d3 Chart</a> -->\n        <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/funnySquares.html\">Funny Squares</a>\n        <!-- <a class=\"nav-stay davinci-nav\" role=\"menuitem\" href=\"/pages/three.html\">THREE Animation</a> -->\n        <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/schoolBooks.html\">School</a>\n        <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/joc2012.html\">Old Work</a>\n        <!-- <a class=\"nav-stay nav-joc\" role=\"menuitem\" href=\"/pages/wordAssociation.html\">Word Association</a> -->\n        <!-- <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/books.html\">Book Tracker</a>\n        <a class=\"nav-stay projects-nav\" role=\"menuitem\" href=\"/pages/dalquest.html\">Dalquest Research Site</a> -->\n        <!-- <a class=\"nav-stay nav-joc\" role=\"menuitem\" href=\"/pages/timer.html\">Timer</a> -->\n      </div>\n    ";
 
 /***/ },
 /* 11 */
@@ -38394,7 +38401,7 @@
 	        method: 'flickr.photos.search',
 	        api_key: '731717db25329eb6aa65703cb6b71970',
 	        format: 'json',
-	        per_page: 30
+	        per_page: 10
 	      },
 	      complete: function complete(response) {
 	        var text = response.responseText;
@@ -38402,6 +38409,18 @@
 	        var data = JSON.parse(text);
 	        app.renderResults(data);
 	      }
+	    });
+	  },
+	  imagePreloader: function imagePreloader() {
+	    (0, _jquery2['default'])('img').each(function ($oneImage) {
+	      var source = $oneImage.attr('data-src');
+	      var $newImage = (0, _jquery2['default'])('<img>');
+	      $newImage.on('load', function () {
+	        $newImage.css('opacity', 0);
+	        $oneImage.replaceWith($newImage);
+	        $newImage.fadeIn();
+	      });
+	      $newImage.attr('src', source);
 	    });
 	  },
 	  renderResults: function renderResults(data) {
@@ -41680,30 +41699,71 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _lodash = __webpack_require__(235);
+	var _handlebars = __webpack_require__(176);
+	
+	var _handlebars2 = _interopRequireDefault(_handlebars);
+	
+	var _lscache = __webpack_require__(227);
+	
+	var _lscache2 = _interopRequireDefault(_lscache);
+	
+	var _lodash = __webpack_require__(243);
 	
 	var _lodash2 = _interopRequireDefault(_lodash);
 	
+	var _templatesObsItemHtml = __webpack_require__(246);
+	
+	var _templatesObsItemHtml2 = _interopRequireDefault(_templatesObsItemHtml);
+	
+	// observation specific
+	var obsItems = __webpack_require__(245);
+	var obsItemTemplate;
+	var currentIndex = 0;
+	
 	var interval;
-	// var endTime;
-	// var startTime;
-	// var timeDifference;
-	// var minutes;
-	// var hundredths;
+	var timerRunning = false;
 	var splitCount = 0;
 	var cumCount = 0;
-	var timerRunning = false;
-	var splitTimes = [];
-	var index = 0;
 	var points;
+	var index = 0;
 	var pointsArray = [];
+	var testData = [];
+	var itemData;
+	var pointsTotal;
+	var testScore = [];
+	
+	var model = {
+	  init: function init() {
+	    var savedData = _lscache2['default'].get('testData');
+	    if (savedData) {
+	      testData = savedData;
+	    } else {
+	      testData = [];
+	    }
+	  },
+	  save: function save() {
+	    var dataToSave = JSON.stringify(testData);
+	    _lscache2['default'].set('testData', dataToSave);
+	  },
+	  get: function get() {
+	    return testData;
+	  }
+	};
+	
+	// var view = $('script[type="text/x-template"]').html();
 	
 	var app = {
 	  init: function init() {
+	    model.init();
+	    app.compileTemplate();
 	    app.render();
 	  },
 	  render: function render() {
 	    app.bindClickEvents();
+	  },
+	  // observation specific
+	  compileTemplate: function compileTemplate() {
+	    obsItemTemplate = _handlebars2['default'].compile(_templatesObsItemHtml2['default']);
 	  },
 	  startTimer: function startTimer() {
 	    var $startStop = (0, _jquery2['default'])('.start-stop-button');
@@ -41727,6 +41787,7 @@
 	        }, 600);
 	        $startStop.html('Stop');
 	        $startStop.css({ 'background-color': '#FF2603' });
+	        app.showItem();
 	      } else {
 	        app.stopTimer();
 	        $startStop.html('Start');
@@ -41739,17 +41800,30 @@
 	    if (timerRunning === true) {
 	      timerRunning = false;
 	    }
-	    splitTimes.push(splitCount);
+	
 	    app.displayTimes();
-	    app.addPoints();
+	    // app.addPoints();
+	    itemData = {
+	      itemNumber: index + 1,
+	      time: splitCount,
+	      points: points
+	    };
+	    testData.push(itemData);
+	    model.save();
 	    splitCount = 0;
 	  },
 	  splitTimer: function splitTimer() {
 	    var $split = (0, _jquery2['default'])('.split-button');
 	    $split.on('click', function () {
-	      splitTimes.push(splitCount);
 	      app.displayTimes();
-	      app.addPoints();
+	      itemData = {
+	        itemNumber: index + 1,
+	        time: splitCount,
+	        points: points
+	      };
+	      // app.addPoints();
+	      testData.push(itemData);
+	      model.save();
 	      splitCount = 0;
 	    });
 	  },
@@ -41763,35 +41837,36 @@
 	    });
 	  },
 	  displayTimes: function displayTimes() {
-	    (0, _jquery2['default'])('.time-col').append('Item ' + '' + (index + 1) + ': ' + ' ' + splitTimes[index] + '<br />');
-	    if (splitTimes[index] < 10) {
+	    if (splitCount < 10) {
 	      points = 3;
-	    } else if (splitTimes[index] > 9 && splitTimes[index] < 20) {
+	    } else if (splitCount > 9 && splitCount < 20) {
 	      points = 2;
-	    } else if (splitTimes[index] > 19 && splitTimes[index] < 30) {
+	    } else if (splitCount > 19 && splitCount < 30) {
 	      points = 1;
 	    } else {
 	      points = 0;
 	    }
-	    (0, _jquery2['default'])('.points-col').append(points + '<br />');
 	    index++;
+	    app.addPoints();
 	  },
 	  clearEverything: function clearEverything() {
-	    splitTimes = [];
-	    pointsArray = [];
+	    testData = [];
 	    splitCount = 0;
 	    cumCount = 0;
 	    index = 0;
-	    (0, _jquery2['default'])('.time-col').html('<h1>Times</h1');
-	    (0, _jquery2['default'])('.points-col').html('<h1>Points</h1>');
+	
 	    (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + '0' + splitCount);
 	    (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + '0' + cumCount);
-	    (0, _jquery2['default'])('.score').html('');
 	  },
 	  addPoints: function addPoints() {
 	    pointsArray.push(points);
 	    var pointsTotal = _lodash2['default'].sum(pointsArray);
 	    (0, _jquery2['default'])('.score').html('Score = ' + pointsTotal);
+	  },
+	  // observation specific
+	  showItem: function showItem() {
+	    (0, _jquery2['default'])('.item-container').html(obsItemTemplate(obsItems[currentIndex]));
+	    currentIndex++;
 	  },
 	  bindClickEvents: function bindClickEvents() {
 	    app.startTimer();
@@ -41801,73 +41876,491 @@
 	};
 	
 	module.exports = app;
-	
-	// var startTime;
-	// var interval;
-	// var minutes;
-	// var hundredths;
-	// var endTime;
-	// var timeDifference; 
-	// var splitTimes = [0];
-
-	// var app = {
-	//   init: function(){
-	//     app.render();
-	//   },
-	//   render: function(){
-	//     var updateTimer = function() {
-	//       endTime = new Date();
-	//       timeDifference = (endTime - startTime) / 1000;
-	//       minutes = Math.floor(timeDifference / 60);
-	//       hundredths = Math.floor(timeDifference / 0.6) % 100;
-	//       if (minutes < 10) {
-	//         minutes = '0' + minutes; //converting to a string
-	//       }
-	//       if (hundredths < 10) {
-	//         hundredths = '0' + hundredths; //converting to a string
-	//       }
-	//       endTime = (minutes + '.' + hundredths);
-	//       $('.counter').html(endTime);
-	//     };
-	//     var startTimer = function(){
-	//       startTime = new Date();
-	//       interval = setInterval(updateTimer, 100);
-	//     };
-	//     var stopTimer = function(){
-	//       interval = clearInterval(interval);
-	//     };
-	//     var splitTimer = function(){
-	//       var cumTime = Math.round(endTime * 100);
-	//       $('.timer-container .cum-time').append('<br />' + cumTime);     
-	//       splitTimes.push(cumTime);
-	//       var indTime = Math.round(splitTimes[1] - splitTimes[0]);
-	//       $('.timer-container .ind-time').append('<br />' + indTime);  
-	//       splitTimes.splice(0, 1);
-	//     };
-	//     var resetTimer = function(){
-	//       $('.counter').html('00' + '.' + '00' );
-	//       $('.timer-container .cum-time').html( 'Cumulative Time' + ' ' );
-	//       $('.timer-container .ind-time').html( 'Individual Time' + ' ' );
-	//     };
-	//     $('.timer-container .start-stop-button').on('click', function(){
-	//       if ($('.start-stop-button').html() === 'start') {
-	//         startTimer();
-	//         $('.start-stop-button').html('stop');
-	//       } else {
-	//         stopTimer();
-	//         $('.start-stop-button').html('start');
-	//       }
-	//       splitTimes = [0];
-	//     });
-	//     $('.timer-container .split-button').on('click', splitTimer);
-	//     $('.timer-container .reset-button').on('click', resetTimer);
-	//   }
-	// };
-
-	// module.exports = app;
 
 /***/ },
 /* 235 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _handlebars = __webpack_require__(176);
+	
+	var _handlebars2 = _interopRequireDefault(_handlebars);
+	
+	var _templatesVDTVdtInstructionsHtml = __webpack_require__(236);
+	
+	var _templatesVDTVdtInstructionsHtml2 = _interopRequireDefault(_templatesVDTVdtInstructionsHtml);
+	
+	var _templatesVDTVdtItemsHtml = __webpack_require__(237);
+	
+	var _templatesVDTVdtItemsHtml2 = _interopRequireDefault(_templatesVDTVdtItemsHtml);
+	
+	var instructionTemplate;
+	var itemsTemplate;
+	var items;
+	
+	var app = {
+	  init: function init() {
+	    app.compileTemplates();
+	    app.render();
+	  },
+	  render: function render() {
+	    var frontPage = instructionTemplate({});
+	    items = itemsTemplate({});
+	    (0, _jquery2['default'])('.vdt-main').html(frontPage);
+	    app.bindEvents();
+	  },
+	  bindEvents: function bindEvents() {
+	    app.startTest();
+	    app.selectImage();
+	  },
+	  compileTemplates: function compileTemplates() {
+	    instructionTemplate = _handlebars2['default'].compile(_templatesVDTVdtInstructionsHtml2['default']);
+	    itemsTemplate = _handlebars2['default'].compile(_templatesVDTVdtItemsHtml2['default']);
+	  },
+	  startTest: function startTest() {
+	    (0, _jquery2['default'])('.btn-start').on('click', function () {
+	      (0, _jquery2['default'])('.vdt-main').html(items);
+	    });
+	  },
+	  selectImage: function selectImage() {
+	    (0, _jquery2['default'])('#1a').on('click', function () {
+	      (0, _jquery2['default'])('#1a').animate({
+	        height: '85%',
+	        width: '85%'
+	      }, 1000, 'easeInBounce');
+	    });
+	  }
+	};
+	
+	module.exports = app;
+
+/***/ },
+/* 236 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"vdt-container\">\n  <h1 class=\"vdt-title\">Visual Designs</h1>\n  <h2 class=\"vdt-instructions\">\n    For each item on this test, look at the two pictures and click on the one you like better.\n  </h2>\n  <button class=\"btn btn-default btn-start\">Start</button>\n</div>";
+
+/***/ },
+/* 237 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"1a\" src=\"/images/VDT/vdt-1a.png\">\n  <img class=\"vdt-image\" id=\"1b\" src=\"/images/VDT/vdt-1b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"2a\" src=\"/images/VDT/vdt-2a.png\">\n  <img class=\"vdt-image\" id=\"2b\" src=\"/images/VDT/vdt-2b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"3a\" src=\"/images/VDT/vdt-3a.png\">\n  <img class=\"vdt-image\" id=\"3b\" src=\"/images/VDT/vdt-3b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"4a\" src=\"/images/VDT/vdt-4a.png\">\n  <img class=\"vdt-image\" id=\"4b\" src=\"/images/VDT/vdt-4b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"5a\" src=\"/images/VDT/vdt-5a.png\">\n  <img class=\"vdt-image\" id=\"5b\" src=\"/images/VDT/vdt-5b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"6a\" src=\"/images/VDT/vdt-6a.png\">\n  <img class=\"vdt-image\" id=\"6b\" src=\"/images/VDT/vdt-6b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"7a\" src=\"/images/VDT/vdt-7a.png\">\n  <img class=\"vdt-image\" id=\"7b\" src=\"/images/VDT/vdt-7b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"8a\" src=\"/images/VDT/vdt-8a.png\">\n  <img class=\"vdt-image\" id=\"8b\" src=\"/images/VDT/vdt-8b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"9a\" src=\"/images/VDT/vdt-9a.png\">\n  <img class=\"vdt-image\" id=\"9b\" src=\"/images/VDT/vdt-9b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"10a\" src=\"/images/VDT/vdt-10a.png\">\n  <img class=\"vdt-image\" id=\"10b\" src=\"/images/VDT/vdt-10b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"11a\" src=\"/images/VDT/vdt-11a.png\">\n  <img class=\"vdt-image\" id=\"11b\" src=\"/images/VDT/vdt-11b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"12a\" src=\"/images/VDT/vdt-12a.png\">\n  <img class=\"vdt-image\" id=\"12b\" src=\"/images/VDT/vdt-12b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"13a\" src=\"/images/VDT/vdt-13a.png\">\n  <img class=\"vdt-image\" id=\"13b\" src=\"/images/VDT/vdt-13b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"14a\" src=\"/images/VDT/vdt-14a.png\">\n  <img class=\"vdt-image\" id=\"14b\" src=\"/images/VDT/vdt-14b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"15a\" src=\"/images/VDT/vdt-15a.png\">\n  <img class=\"vdt-image\" id=\"15b\" src=\"/images/VDT/vdt-15b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"16a\" src=\"/images/VDT/vdt-16a.png\">\n  <img class=\"vdt-image\" id=\"16b\" src=\"/images/VDT/vdt-16b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"17a\" src=\"/images/VDT/vdt-17a.png\">\n  <img class=\"vdt-image\" id=\"17b\" src=\"/images/VDT/vdt-17b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"18a\" src=\"/images/VDT/vdt-18a.png\">\n  <img class=\"vdt-image\" id=\"18b\" src=\"/images/VDT/vdt-18b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"19a\" src=\"/images/VDT/vdt-19a.png\">\n  <img class=\"vdt-image\" id=\"19b\" src=\"/images/VDT/vdt-19b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"20a\" src=\"/images/VDT/vdt-20a.png\">\n  <img class=\"vdt-image\" id=\"20b\" src=\"/images/VDT/vdt-20b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"21a\" src=\"/images/VDT/vdt-21a.png\">\n  <img class=\"vdt-image\" id=\"21b\" src=\"/images/VDT/vdt-21b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"22a\" src=\"/images/VDT/vdt-22a.png\">\n  <img class=\"vdt-image\" id=\"22b\" src=\"/images/VDT/vdt-22b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"23a\" src=\"/images/VDT/vdt-23a.png\">\n  <img class=\"vdt-image\" id=\"23b\" src=\"/images/VDT/vdt-23b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"24a\" src=\"/images/VDT/vdt-24a.png\">\n  <img class=\"vdt-image\" id=\"24b\" src=\"/images/VDT/vdt-24b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"25a\" src=\"/images/VDT/vdt-25a.png\">\n  <img class=\"vdt-image\" id=\"25b\" src=\"/images/VDT/vdt-25b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"26a\" src=\"/images/VDT/vdt-26a.png\">\n  <img class=\"vdt-image\" id=\"26b\" src=\"/images/VDT/vdt-26b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"27a\" src=\"/images/VDT/vdt-27a.png\">\n  <img class=\"vdt-image\" id=\"27b\" src=\"/images/VDT/vdt-27b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"28a\" src=\"/images/VDT/vdt-28a.png\">\n  <img class=\"vdt-image\" id=\"28b\" src=\"/images/VDT/vdt-28b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"29a\" src=\"/images/VDT/vdt-29a.png\">\n  <img class=\"vdt-image\" id=\"29b\" src=\"/images/VDT/vdt-29b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"30a\" src=\"/images/VDT/vdt-30a.png\">\n  <img class=\"vdt-image\" id=\"30b\" src=\"/images/VDT/vdt-30b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"31a\" src=\"/images/VDT/vdt-31a.png\">\n  <img class=\"vdt-image\" id=\"31b\" src=\"/images/VDT/vdt-31b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"32a\" src=\"/images/VDT/vdt-32a.png\">\n  <img class=\"vdt-image\" id=\"32b\" src=\"/images/VDT/vdt-32b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"33a\" src=\"/images/VDT/vdt-33a.png\">\n  <img class=\"vdt-image\" id=\"33b\" src=\"/images/VDT/vdt-33b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"34a\" src=\"/images/VDT/vdt-34a.png\">\n  <img class=\"vdt-image\" id=\"34b\" src=\"/images/VDT/vdt-34b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"35a\" src=\"/images/VDT/vdt-35a.png\">\n  <img class=\"vdt-image\" id=\"35b\" src=\"/images/VDT/vdt-35b.png\">\n</div>\n<hr> \n";
+
+/***/ },
+/* 238 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var app = {
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {
+	    x;
+	  }
+	};
+	
+	module.exports = app;
+
+/***/ },
+/* 239 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _handlebars = __webpack_require__(176);
+	
+	var _handlebars2 = _interopRequireDefault(_handlebars);
+	
+	var _templatesWordHtml = __webpack_require__(240);
+	
+	var _templatesWordHtml2 = _interopRequireDefault(_templatesWordHtml);
+	
+	var WordAssociationList = __webpack_require__(241);
+	var wordTemplate;
+	var currentIndex = 0;
+	var significantResponse = 0;
+	
+	var app = {
+	  init: function init() {
+	    app.compileTemplate();
+	    app.render();
+	  },
+	  render: function render() {
+	    (0, _jquery2['default'])('.word-container').html(wordTemplate(WordAssociationList[currentIndex]));
+	    currentIndex++;
+	    app.bindEvents();
+	  },
+	  bindEvents: function bindEvents() {
+	    app.noResponse();
+	    app.countSignificantResponses();
+	  },
+	  compileTemplate: function compileTemplate() {
+	    wordTemplate = _handlebars2['default'].compile(_templatesWordHtml2['default']);
+	  },
+	  countSignificantResponses: function countSignificantResponses() {
+	    var $response = (0, _jquery2['default'])('.sig-yes');
+	    $response.on('click', function () {
+	      significantResponse++;
+	      (0, _jquery2['default'])('.sig-response').html('Significant Responses: ' + significantResponse);
+	      app.nextWord();
+	    });
+	  },
+	  nextWord: function nextWord() {
+	    (0, _jquery2['default'])('.word-container').html(wordTemplate(WordAssociationList[currentIndex]));
+	    currentIndex++;
+	  },
+	  noResponse: function noResponse() {
+	    var $noResponse = (0, _jquery2['default'])('.sig-no');
+	    $noResponse.on('click', function () {
+	      app.nextWord();
+	    });
+	  }
+	};
+	
+	module.exports = app;
+
+/***/ },
+/* 240 */
+/***/ function(module, exports) {
+
+	module.exports = "\n  <div class=\"word\">{{word}}</div>\n  <div class=\"response\">(Sig.: {{response}})</div>\n  \n\n";
+
+/***/ },
+/* 241 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	module.exports = [{
+	  word: 'lamp',
+	  response: 'none'
+	}, {
+	  word: 'umbrella',
+	  response: 'none'
+	}, {
+	  word: 'eagle',
+	  response: 'none'
+	}, {
+	  word: 'cap',
+	  response: 'none'
+	}, {
+	  word: 'burglar',
+	  response: 'none'
+	}, {
+	  word: 'tobacco',
+	  response: 'none'
+	}, {
+	  word: 'blossom',
+	  response: 'none'
+	}, {
+	  word: 'gift',
+	  response: 'none'
+	}, {
+	  word: 'cedar',
+	  response: 'none'
+	}, {
+	  word: 'bible',
+	  response: 'none'
+	}, {
+	  word: 'cottage',
+	  response: 'none'
+	}, {
+	  word: 'slow',
+	  response: 'none'
+	}, {
+	  word: 'baker',
+	  'response': ['butcher', 'cook']
+	}, {
+	  word: 'bitter',
+	  response: 'sweet'
+	}, {
+	  word: 'omelet',
+	  response: 'none'
+	}, {
+	  word: 'soft',
+	  response: 'hard'
+	}, {
+	  word: 'bed',
+	  response: 'none'
+	}, {
+	  word: 'black',
+	  response: 'white'
+	}, {
+	  word: 'scissors',
+	  response: 'none'
+	}, {
+	  word: 'sister',
+	  response: 'none'
+	}, {
+	  word: 'hard',
+	  response: 'soft'
+	}, {
+	  word: 'costume',
+	  response: 'none'
+	}, {
+	  word: 'long',
+	  response: 'short'
+	}, {
+	  word: 'tough',
+	  response: ['soft', 'easy']
+	}, {
+	  word: 'wicked',
+	  response: ['good', 'nice']
+	}, {
+	  word: 'tank',
+	  response: 'none'
+	}, {
+	  word: 'dark',
+	  response: 'light'
+	}, {
+	  word: 'city',
+	  response: ['town', 'country']
+	}, {
+	  word: 'square',
+	  response: ['circle', 'round']
+	}, {
+	  word: 'drink',
+	  response: 'none'
+	}, {
+	  word: 'sour',
+	  response: 'sweet'
+	}, {
+	  word: 'seed',
+	  response: 'none'
+	}, {
+	  word: 'high',
+	  response: 'low'
+	}, {
+	  word: 'railroad',
+	  response: 'none'
+	}, {
+	  word: 'grocery',
+	  response: 'none'
+	}, {
+	  word: 'tiger',
+	  response: 'lion'
+	}, {
+	  word: 'river',
+	  response: 'stream'
+	}, {
+	  word: 'heavy',
+	  response: 'light'
+	}, {
+	  word: 'fruit',
+	  response: 'vegetable'
+	}, {
+	  word: 'cabbage',
+	  response: 'lettuce'
+	}, {
+	  word: 'ocean',
+	  response: 'sea'
+	}, {
+	  word: 'king',
+	  response: 'queen'
+	}, {
+	  word: 'girl',
+	  response: 'none'
+	}, {
+	  word: 'age',
+	  response: 'none'
+	}, {
+	  word: 'hammer',
+	  response: 'none'
+	}, {
+	  word: 'thick',
+	  response: 'thin'
+	}, {
+	  word: 'afraid',
+	  response: 'brave'
+	}, {
+	  word: 'joy',
+	  response: ['sorrow', 'sad', 'sadness']
+	}, {
+	  word: 'dream',
+	  response: 'none'
+	}, {
+	  word: 'smooth',
+	  response: 'rough'
+	}, {
+	  word: 'also',
+	  response: 'none'
+	}, {
+	  word: 'table',
+	  response: 'chair'
+	}, {
+	  word: 'bashful',
+	  response: 'none'
+	}, {
+	  word: 'man',
+	  response: 'none'
+	}, {
+	  word: 'roof',
+	  response: 'none'
+	}, {
+	  word: 'whiskey',
+	  response: 'sour'
+	}, {
+	  word: 'yellow',
+	  response: ['white', 'black', 'red', 'blue', 'green']
+	}, {
+	  word: 'path',
+	  response: 'none'
+	}, {
+	  word: 'pretty',
+	  response: 'ugly'
+	}, {
+	  word: 'bath',
+	  reponse: 'shower'
+	}, {
+	  word: 'window',
+	  response: 'none'
+	}, {
+	  word: 'together',
+	  response: ['apart', 'separate']
+	}, {
+	  word: 'clean',
+	  response: 'dirty'
+	}, {
+	  word: 'captain',
+	  response: 'none'
+	}, {
+	  word: 'wish',
+	  response: 'none'
+	}, {
+	  word: 'far',
+	  response: ['near', 'close']
+	}, {
+	  word: 'citizen',
+	  response: 'none'
+	}, {
+	  word: 'stem',
+	  response: 'none'
+	}, {
+	  word: 'salt',
+	  response: 'none'
+	}, {
+	  word: 'sleep',
+	  response: ['wake', 'awake']
+	}, {
+	  word: 'parlor',
+	  response: 'living room'
+	}, {
+	  word: 'lightning',
+	  response: 'thunder'
+	}, {
+	  word: 'divide',
+	  response: 'multiply'
+	}, {
+	  word: 'whistle',
+	  response: 'sing'
+	}, {
+	  word: 'rough',
+	  response: ['smooth', 'soft']
+	}, {
+	  word: 'trap',
+	  response: 'none'
+	}, {
+	  word: 'unseen',
+	  response: ['unheard', 'seen']
+	}, {
+	  word: 'ride',
+	  response: 'walk'
+	}, {
+	  word: 'death',
+	  response: 'life'
+	}, {
+	  word: 'butter',
+	  response: 'margarine'
+	}, {
+	  word: 'hand',
+	  response: 'foot'
+	}, {
+	  word: 'butterfly',
+	  response: 'none'
+	}, {
+	  word: 'drift',
+	  response: 'none'
+	}, {
+	  word: 'follow',
+	  response: 'lead'
+	}, {
+	  word: 'memory',
+	  response: 'none'
+	}, {
+	  word: 'ham',
+	  response: ['egg', 'eggs']
+	}, {
+	  word: 'tooth',
+	  response: 'mouth'
+	}, {
+	  word: 'athlete',
+	  response: 'none'
+	}, {
+	  word: 'sailor',
+	  response: 'none'
+	}, {
+	  word: 'cry',
+	  response: 'laugh'
+	}, {
+	  word: 'health',
+	  response: ['sick', 'sickness']
+	}, {
+	  word: 'thief',
+	  response: 'none'
+	}, {
+	  word: 'delicate',
+	  response: 'none'
+	}];
+
+/***/ },
+/* 242 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var app = {
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {
+	    (0, _jquery2['default'])("#slideshow > div:gt(0)").hide();
+	    setInterval(function () {
+	      (0, _jquery2['default'])('#slideshow > div:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('#slideshow');
+	    }, 3000);
+	  }
+	};
+	
+	module.exports = app;
+
+/***/ },
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/**
@@ -54222,10 +54715,10 @@
 	  }
 	}.call(this));
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(236)(module), (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(244)(module), (function() { return this; }())))
 
 /***/ },
-/* 236 */
+/* 244 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -54241,460 +54734,138 @@
 
 
 /***/ },
-/* 237 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _jquery = __webpack_require__(1);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
-	
-	var _handlebars = __webpack_require__(176);
-	
-	var _handlebars2 = _interopRequireDefault(_handlebars);
-	
-	var _templatesVDTVdtInstructionsHtml = __webpack_require__(238);
-	
-	var _templatesVDTVdtInstructionsHtml2 = _interopRequireDefault(_templatesVDTVdtInstructionsHtml);
-	
-	var _templatesVDTVdtItemsHtml = __webpack_require__(239);
-	
-	var _templatesVDTVdtItemsHtml2 = _interopRequireDefault(_templatesVDTVdtItemsHtml);
-	
-	var instructionTemplate;
-	var itemsTemplate;
-	var items;
-	
-	var app = {
-	  init: function init() {
-	    app.compileTemplates();
-	    app.render();
-	  },
-	  render: function render() {
-	    var frontPage = instructionTemplate({});
-	    items = itemsTemplate({});
-	    (0, _jquery2['default'])('.vdt-main').html(frontPage);
-	    app.bindEvents();
-	  },
-	  bindEvents: function bindEvents() {
-	    app.startTest();
-	    app.selectImage();
-	  },
-	  compileTemplates: function compileTemplates() {
-	    instructionTemplate = _handlebars2['default'].compile(_templatesVDTVdtInstructionsHtml2['default']);
-	    itemsTemplate = _handlebars2['default'].compile(_templatesVDTVdtItemsHtml2['default']);
-	  },
-	  startTest: function startTest() {
-	    (0, _jquery2['default'])('.btn-start').on('click', function () {
-	      (0, _jquery2['default'])('.vdt-main').html(items);
-	    });
-	  },
-	  selectImage: function selectImage() {
-	    (0, _jquery2['default'])('#1a').on('click', function () {
-	      (0, _jquery2['default'])('#1a').animate({
-	        height: '85%',
-	        width: '85%'
-	      }, 1000, 'easeInBounce');
-	    });
-	  }
-	};
-	
-	module.exports = app;
-
-/***/ },
-/* 238 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"vdt-container\">\n  <h1 class=\"vdt-title\">Visual Designs</h1>\n  <h2 class=\"vdt-instructions\">\n    For each item on this test, look at the two pictures and click on the one you like better.\n  </h2>\n  <button class=\"btn btn-default btn-start\">Start</button>\n</div>";
-
-/***/ },
-/* 239 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"1a\" src=\"/images/VDT/vdt-1a.png\">\n  <img class=\"vdt-image\" id=\"1b\" src=\"/images/VDT/vdt-1b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"2a\" src=\"/images/VDT/vdt-2a.png\">\n  <img class=\"vdt-image\" id=\"2b\" src=\"/images/VDT/vdt-2b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"3a\" src=\"/images/VDT/vdt-3a.png\">\n  <img class=\"vdt-image\" id=\"3b\" src=\"/images/VDT/vdt-3b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"4a\" src=\"/images/VDT/vdt-4a.png\">\n  <img class=\"vdt-image\" id=\"4b\" src=\"/images/VDT/vdt-4b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"5a\" src=\"/images/VDT/vdt-5a.png\">\n  <img class=\"vdt-image\" id=\"5b\" src=\"/images/VDT/vdt-5b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"6a\" src=\"/images/VDT/vdt-6a.png\">\n  <img class=\"vdt-image\" id=\"6b\" src=\"/images/VDT/vdt-6b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"7a\" src=\"/images/VDT/vdt-7a.png\">\n  <img class=\"vdt-image\" id=\"7b\" src=\"/images/VDT/vdt-7b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"8a\" src=\"/images/VDT/vdt-8a.png\">\n  <img class=\"vdt-image\" id=\"8b\" src=\"/images/VDT/vdt-8b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"9a\" src=\"/images/VDT/vdt-9a.png\">\n  <img class=\"vdt-image\" id=\"9b\" src=\"/images/VDT/vdt-9b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"10a\" src=\"/images/VDT/vdt-10a.png\">\n  <img class=\"vdt-image\" id=\"10b\" src=\"/images/VDT/vdt-10b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"11a\" src=\"/images/VDT/vdt-11a.png\">\n  <img class=\"vdt-image\" id=\"11b\" src=\"/images/VDT/vdt-11b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"12a\" src=\"/images/VDT/vdt-12a.png\">\n  <img class=\"vdt-image\" id=\"12b\" src=\"/images/VDT/vdt-12b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"13a\" src=\"/images/VDT/vdt-13a.png\">\n  <img class=\"vdt-image\" id=\"13b\" src=\"/images/VDT/vdt-13b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"14a\" src=\"/images/VDT/vdt-14a.png\">\n  <img class=\"vdt-image\" id=\"14b\" src=\"/images/VDT/vdt-14b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"15a\" src=\"/images/VDT/vdt-15a.png\">\n  <img class=\"vdt-image\" id=\"15b\" src=\"/images/VDT/vdt-15b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"16a\" src=\"/images/VDT/vdt-16a.png\">\n  <img class=\"vdt-image\" id=\"16b\" src=\"/images/VDT/vdt-16b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"17a\" src=\"/images/VDT/vdt-17a.png\">\n  <img class=\"vdt-image\" id=\"17b\" src=\"/images/VDT/vdt-17b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"18a\" src=\"/images/VDT/vdt-18a.png\">\n  <img class=\"vdt-image\" id=\"18b\" src=\"/images/VDT/vdt-18b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"19a\" src=\"/images/VDT/vdt-19a.png\">\n  <img class=\"vdt-image\" id=\"19b\" src=\"/images/VDT/vdt-19b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"20a\" src=\"/images/VDT/vdt-20a.png\">\n  <img class=\"vdt-image\" id=\"20b\" src=\"/images/VDT/vdt-20b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"21a\" src=\"/images/VDT/vdt-21a.png\">\n  <img class=\"vdt-image\" id=\"21b\" src=\"/images/VDT/vdt-21b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"22a\" src=\"/images/VDT/vdt-22a.png\">\n  <img class=\"vdt-image\" id=\"22b\" src=\"/images/VDT/vdt-22b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"23a\" src=\"/images/VDT/vdt-23a.png\">\n  <img class=\"vdt-image\" id=\"23b\" src=\"/images/VDT/vdt-23b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"24a\" src=\"/images/VDT/vdt-24a.png\">\n  <img class=\"vdt-image\" id=\"24b\" src=\"/images/VDT/vdt-24b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"25a\" src=\"/images/VDT/vdt-25a.png\">\n  <img class=\"vdt-image\" id=\"25b\" src=\"/images/VDT/vdt-25b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"26a\" src=\"/images/VDT/vdt-26a.png\">\n  <img class=\"vdt-image\" id=\"26b\" src=\"/images/VDT/vdt-26b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"27a\" src=\"/images/VDT/vdt-27a.png\">\n  <img class=\"vdt-image\" id=\"27b\" src=\"/images/VDT/vdt-27b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"28a\" src=\"/images/VDT/vdt-28a.png\">\n  <img class=\"vdt-image\" id=\"28b\" src=\"/images/VDT/vdt-28b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"29a\" src=\"/images/VDT/vdt-29a.png\">\n  <img class=\"vdt-image\" id=\"29b\" src=\"/images/VDT/vdt-29b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"30a\" src=\"/images/VDT/vdt-30a.png\">\n  <img class=\"vdt-image\" id=\"30b\" src=\"/images/VDT/vdt-30b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"31a\" src=\"/images/VDT/vdt-31a.png\">\n  <img class=\"vdt-image\" id=\"31b\" src=\"/images/VDT/vdt-31b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"32a\" src=\"/images/VDT/vdt-32a.png\">\n  <img class=\"vdt-image\" id=\"32b\" src=\"/images/VDT/vdt-32b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"33a\" src=\"/images/VDT/vdt-33a.png\">\n  <img class=\"vdt-image\" id=\"33b\" src=\"/images/VDT/vdt-33b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"34a\" src=\"/images/VDT/vdt-34a.png\">\n  <img class=\"vdt-image\" id=\"34b\" src=\"/images/VDT/vdt-34b.png\">\n</div>\n<hr> \n<div class=\"vdt-image-container\">\n  <img class=\"vdt-image\" id=\"35a\" src=\"/images/VDT/vdt-35a.png\">\n  <img class=\"vdt-image\" id=\"35b\" src=\"/images/VDT/vdt-35b.png\">\n</div>\n<hr> \n";
-
-/***/ },
-/* 240 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _jquery = __webpack_require__(1);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
-	
-	var app = {
-	  init: function init() {
-	    app.render();
-	  },
-	  render: function render() {
-	    x;
-	  }
-	};
-	
-	module.exports = app;
-
-/***/ },
-/* 241 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _jquery = __webpack_require__(1);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
-	
-	var _handlebars = __webpack_require__(176);
-	
-	var _handlebars2 = _interopRequireDefault(_handlebars);
-	
-	var _templatesWordHtml = __webpack_require__(242);
-	
-	var _templatesWordHtml2 = _interopRequireDefault(_templatesWordHtml);
-	
-	var WordAssociationList = __webpack_require__(243);
-	var wordTemplate;
-	var currentIndex = 0;
-	var significantResponse = 0;
-	
-	var app = {
-	  init: function init() {
-	    app.compileTemplate();
-	    app.render();
-	  },
-	  render: function render() {
-	    (0, _jquery2['default'])('.word-container').html(wordTemplate(WordAssociationList[currentIndex]));
-	    currentIndex++;
-	    app.bindEvents();
-	  },
-	  bindEvents: function bindEvents() {
-	    app.noResponse();
-	    app.countSignificantResponses();
-	  },
-	  compileTemplate: function compileTemplate() {
-	    wordTemplate = _handlebars2['default'].compile(_templatesWordHtml2['default']);
-	  },
-	  countSignificantResponses: function countSignificantResponses() {
-	    var $response = (0, _jquery2['default'])('.sig-yes');
-	    $response.on('click', function () {
-	      significantResponse++;
-	      (0, _jquery2['default'])('.sig-response').html('Significant Responses: ' + significantResponse);
-	      app.nextWord();
-	    });
-	  },
-	  nextWord: function nextWord() {
-	    (0, _jquery2['default'])('.word-container').html(wordTemplate(WordAssociationList[currentIndex]));
-	    currentIndex++;
-	  },
-	  noResponse: function noResponse() {
-	    var $noResponse = (0, _jquery2['default'])('.sig-no');
-	    $noResponse.on('click', function () {
-	      app.nextWord();
-	    });
-	  }
-	};
-	
-	module.exports = app;
-
-/***/ },
-/* 242 */
-/***/ function(module, exports) {
-
-	module.exports = "\n  <div class=\"word\">{{word}}</div>\n  <div class=\"response\">(Sig.: {{response}})</div>\n  \n\n";
-
-/***/ },
-/* 243 */
+/* 245 */
 /***/ function(module, exports) {
 
 	'use strict';
 	
 	module.exports = [{
-	  word: 'lamp',
-	  response: 'none'
+	  id: 'Item 1',
+	  change: 'brush gone'
 	}, {
-	  word: 'umbrella',
-	  response: 'none'
+	  id: 'Item 2',
+	  change: 'paperclips moved'
 	}, {
-	  word: 'eagle',
-	  response: 'none'
+	  id: 'Item 3',
+	  change: 'fish rotated'
 	}, {
-	  word: 'cap',
-	  response: 'none'
+	  id: 'Item 4',
+	  change: '2nd pencil added'
 	}, {
-	  word: 'burglar',
-	  response: 'none'
+	  id: 'Item 5',
+	  change: 'star smaller'
 	}, {
-	  word: 'tobacco',
-	  response: 'none'
+	  id: 'Item 6',
+	  change: '3rd paperclip added'
 	}, {
-	  word: 'blossom',
-	  response: 'none'
+	  id: 'Item 7',
+	  change: 'fish gone'
 	}, {
-	  word: 'gift',
-	  response: 'none'
+	  id: 'Item 8',
+	  change: 'more pushpins'
 	}, {
-	  word: 'cedar',
-	  response: 'none'
+	  id: 'Item 9',
+	  change: 'phone cord gone'
 	}, {
-	  word: 'bible',
-	  response: 'none'
+	  id: 'Item 10',
+	  change: 'dollar moved'
 	}, {
-	  word: 'cottage',
-	  response: 'none'
+	  id: 'Item 11',
+	  change: 'lightbulb larger'
 	}, {
-	  word: 'slow',
-	  response: 'none'
+	  id: 'Item 12',
+	  change: 'scissors gone'
 	}, {
-	  word: 'baker',
-	  'response': ['butcher', 'cook']
+	  id: 'Item 13',
+	  change: 'candle added'
 	}, {
-	  word: 'bitter',
-	  response: 'sweet'
+	  id: 'Item 14',
+	  change: 'towel in bucket gone'
 	}, {
-	  word: 'omelet',
-	  response: 'none'
+	  id: 'Item 15',
+	  change: 'watch time changed'
 	}, {
-	  word: 'soft',
-	  response: 'hard'
+	  id: 'Item 16',
+	  change: 'still more pushpins'
 	}, {
-	  word: 'bed',
-	  response: 'none'
+	  id: 'Item 17',
+	  change: 'star gone'
 	}, {
-	  word: 'black',
-	  response: 'white'
+	  id: 'Item 18',
+	  change: 'fork rotated'
 	}, {
-	  word: 'scissors',
-	  response: 'none'
+	  id: 'Item 19',
+	  change: '2nd pencil gone'
 	}, {
-	  word: 'sister',
-	  response: 'none'
+	  id: 'Item 20',
+	  change: 'hammer rotated'
 	}, {
-	  word: 'hard',
-	  response: 'soft'
+	  id: 'Item 21',
+	  change: 'lightbulb gone'
 	}, {
-	  word: 'costume',
-	  response: 'none'
+	  id: 'Item 22',
+	  change: 'dollar straightened'
 	}, {
-	  word: 'long',
-	  response: 'short'
+	  id: 'Item 23',
+	  change: 'baseball added'
 	}, {
-	  word: 'tough',
-	  response: ['soft', 'easy']
+	  id: 'Item 24',
+	  change: 'corn gone'
 	}, {
-	  word: 'wicked',
-	  response: ['good', 'nice']
+	  id: 'Item 25',
+	  change: '4th paperclip added'
 	}, {
-	  word: 'tank',
-	  response: 'none'
+	  id: 'Item 26',
+	  change: 'ruler scale changed'
 	}, {
-	  word: 'dark',
-	  response: 'light'
+	  id: 'Item 27',
+	  change: 'phone gone'
 	}, {
-	  word: 'city',
-	  response: ['town', 'country']
+	  id: 'Item 28',
+	  change: 'knife moved'
 	}, {
-	  word: 'square',
-	  response: ['circle', 'round']
+	  id: 'Item 29',
+	  change: 'pencil gone'
 	}, {
-	  word: 'drink',
-	  response: 'none'
+	  id: 'Item 30',
+	  change: 'candle flame out'
 	}, {
-	  word: 'sour',
-	  response: 'sweet'
+	  id: 'Item 31',
+	  change: 'spoon gone'
 	}, {
-	  word: 'seed',
-	  response: 'none'
+	  id: 'Item 32',
+	  change: 'hammer smaller'
 	}, {
-	  word: 'high',
-	  response: 'low'
+	  id: 'Item 33',
+	  change: 'ruler moved'
 	}, {
-	  word: 'railroad',
-	  response: 'none'
+	  id: 'Item 34',
+	  change: 'pushpins gone'
 	}, {
-	  word: 'grocery',
-	  response: 'none'
+	  id: 'Item 35',
+	  change: 'brush gone'
 	}, {
-	  word: 'tiger',
-	  response: 'lion'
+	  id: 'Item 36',
+	  change: 'bucket gone'
 	}, {
-	  word: 'river',
-	  response: 'stream'
+	  id: 'Item 37',
+	  change: 'baseball stitches gone'
 	}, {
-	  word: 'heavy',
-	  response: 'light'
+	  id: 'Item 38',
+	  change: 'dollar gone'
 	}, {
-	  word: 'fruit',
-	  response: 'vegetable'
+	  id: 'Item 39',
+	  change: 'ruler gone'
 	}, {
-	  word: 'cabbage',
-	  response: 'lettuce'
-	}, {
-	  word: 'ocean',
-	  response: 'sea'
-	}, {
-	  word: 'king',
-	  response: 'queen'
-	}, {
-	  word: 'girl',
-	  response: 'none'
-	}, {
-	  word: 'age',
-	  response: 'none'
-	}, {
-	  word: 'hammer',
-	  response: 'none'
-	}, {
-	  word: 'thick',
-	  response: 'thin'
-	}, {
-	  word: 'afraid',
-	  response: 'brave'
-	}, {
-	  word: 'joy',
-	  response: ['sorrow', 'sad', 'sadness']
-	}, {
-	  word: 'dream',
-	  response: 'none'
-	}, {
-	  word: 'smooth',
-	  response: 'rough'
-	}, {
-	  word: 'also',
-	  response: 'none'
-	}, {
-	  word: 'table',
-	  response: 'chair'
-	}, {
-	  word: 'bashful',
-	  response: 'none'
-	}, {
-	  word: 'man',
-	  response: 'none'
-	}, {
-	  word: 'roof',
-	  response: 'none'
-	}, {
-	  word: 'whiskey',
-	  response: 'sour'
-	}, {
-	  word: 'yellow',
-	  response: ['white', 'black', 'red', 'blue', 'green']
-	}, {
-	  word: 'path',
-	  response: 'none'
-	}, {
-	  word: 'pretty',
-	  response: 'ugly'
-	}, {
-	  word: 'bath',
-	  reponse: 'shower'
-	}, {
-	  word: 'window',
-	  response: 'none'
-	}, {
-	  word: 'together',
-	  response: ['apart', 'separate']
-	}, {
-	  word: 'clean',
-	  response: 'dirty'
-	}, {
-	  word: 'captain',
-	  response: 'none'
-	}, {
-	  word: 'wish',
-	  response: 'none'
-	}, {
-	  word: 'far',
-	  response: ['near', 'close']
-	}, {
-	  word: 'citizen',
-	  response: 'none'
-	}, {
-	  word: 'stem',
-	  response: 'none'
-	}, {
-	  word: 'salt',
-	  response: 'none'
-	}, {
-	  word: 'sleep',
-	  response: ['wake', 'awake']
-	}, {
-	  word: 'parlor',
-	  response: 'living room'
-	}, {
-	  word: 'lightning',
-	  response: 'thunder'
-	}, {
-	  word: 'divide',
-	  response: 'multiply'
-	}, {
-	  word: 'whistle',
-	  response: 'sing'
-	}, {
-	  word: 'rough',
-	  response: ['smooth', 'soft']
-	}, {
-	  word: 'trap',
-	  response: 'none'
-	}, {
-	  word: 'unseen',
-	  response: ['unheard', 'seen']
-	}, {
-	  word: 'ride',
-	  response: 'walk'
-	}, {
-	  word: 'death',
-	  response: 'life'
-	}, {
-	  word: 'butter',
-	  response: 'margarine'
-	}, {
-	  word: 'hand',
-	  response: 'foot'
-	}, {
-	  word: 'butterfly',
-	  response: 'none'
-	}, {
-	  word: 'drift',
-	  response: 'none'
-	}, {
-	  word: 'follow',
-	  response: 'lead'
-	}, {
-	  word: 'memory',
-	  response: 'none'
-	}, {
-	  word: 'ham',
-	  response: ['egg', 'eggs']
-	}, {
-	  word: 'tooth',
-	  response: 'mouth'
-	}, {
-	  word: 'athlete',
-	  response: 'none'
-	}, {
-	  word: 'sailor',
-	  response: 'none'
-	}, {
-	  word: 'cry',
-	  response: 'laugh'
-	}, {
-	  word: 'health',
-	  response: ['sick', 'sickness']
-	}, {
-	  word: 'thief',
-	  response: 'none'
-	}, {
-	  word: 'delicate',
-	  response: 'none'
+	  id: 'Item 40',
+	  change: 'one paperclip gone'
 	}];
+
+/***/ },
+/* 246 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"obs-item\">\n  <h2>{{id}}</h2>\n  <h4>{{change}}</h4>\n</div>";
 
 /***/ }
 /******/ ]);

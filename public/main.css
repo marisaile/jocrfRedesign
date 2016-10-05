@@ -248,7 +248,7 @@ body.override-bootstrap {
 .shadow-container {
   position: relative;
   display: inline-block;
-  top: 150px;
+  top: 140px;
   left: 245px;
   perspective: 250px;
 }
@@ -263,7 +263,7 @@ body.override-bootstrap {
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 100px 50px #8A8C8C;
   transition: all 0.5s;
-  opacity: .25;
+  opacity: .30;
   transform: rotateX(95deg) translateZ(-80px) scale(0.75);
   transform-origin: bottom;
 }
@@ -345,10 +345,10 @@ body.override-bootstrap {
 
 input.search-photo {
   position: relative;
-  display: block;
+  display: inline-block;
   top: 110px;
   left: 125px;
-  width: 400px;
+  width: 350px;
   background-color: #fff;
 }
 
@@ -356,8 +356,8 @@ input.search-photo {
   position: relative;
   display: inline-block;
   width: 100px;
-  top: -75px;
-  left: 550px;
+  top: 110px;
+  left: 150px;
   background-color: #F501FF;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
@@ -381,7 +381,6 @@ input.search-photo {
 
 .search-results .photo img {
   width: 100%;
-  border: solid 1px #383838;
 }
 
 .new-book-container {
@@ -1196,36 +1195,60 @@ input.search-photo {
   cursor: pointer;
 }
 
-.timer-main .stopwatch-container .container.times {
+.timer-main .stopwatch-container .item-container {
   position: relative;
   display: block;
-  top: 75px;
-  overflow-y: scroll;
-  height: 70%;
-  width: 750px;
+  left: 25px;
+  top: 290px;
+  height: 400px;
+  width: 400px;
+  border: 1px solid black;
 }
 
-.timer-main .stopwatch-container .container.times .col-md-8.time-col {
-  font-family: 'Inconsolata', monospace;
-  font-size: 25px;
-  line-height: 30px;
+.timer-main .stopwatch-container .item-container h2 {
+  position: relative;
+  font-family: 'David Libre', serif;
+  font-size: 30px;
+  text-align: center;
+  top: 100px;
 }
 
-.timer-main .stopwatch-container .container.times .col-md-4.points-col {
-  font-family: 'Inconsolata', monospace;
-  font-size: 25px;
-  line-height: 30px;
+.timer-main .stopwatch-container .item-container h4 {
+  position: relative;
+  font-family: 'David Libre', serif;
+  font-size: 50px;
+  text-align: center;
+  top: 145px;
 }
 
 .timer-main .stopwatch-container .score {
   position: relative;
   display: block;
-  top: 25px;
+  top: 200px;
   left: 30px;
-  font-family: 'Inconsolata', sans-serif;
+  font-family: 'David Libre', sans-serif;
   font-size: 25px;
 }
 
+/*    .container.times {
+      position: relative;
+      display: block;
+      top: 75px;
+      overflow-y: scroll;
+      height: 70%;
+      width: 750px;
+  
+      .col-md-8.time-col {
+        font-family: 'Inconsolata', monospace;
+        font-size: 25px;
+        line-height: 30px;
+      }
+      .col-md-4.points-col {
+        font-family: 'Inconsolata', monospace;
+        font-size: 25px;
+        line-height: 30px;
+      }
+    }*/
 .no-bootstrap {
   background-color: #888;
 }
@@ -1483,6 +1506,40 @@ body.word-association {
   font-family: 'David Libre', serif;
   font-size: 25px;
   color: #222;
+}
+
+body.joc2012 {
+  background-color: #F2F2F2;
+}
+
+h1.joc2012-header {
+  font-family: 'David Libre', serif;
+  font-size: 35px;
+  line-height: 125px;
+  text-align: center;
+  color: #5C5C5C;
+}
+
+#slideshow {
+  margin: -40px auto;
+  position: relative;
+  width: 900px;
+  height: 650px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#slideshow > div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+}
+
+img {
+  width: 880px;
+  height: 630px;
 }
 
 /*# sourceMappingURL=main.css.map*/

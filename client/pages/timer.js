@@ -2,11 +2,6 @@ import $ from 'jquery';
 import _ from 'lodash';
 
 var interval; 
-// var endTime;
-// var startTime;
-// var timeDifference;
-// var minutes;
-// var hundredths;
 var splitCount = 0;
 var cumCount = 0;
 var timerRunning = false; 

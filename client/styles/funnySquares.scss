@@ -24,7 +24,7 @@
 .shadow-container {
   position: relative;
   display: inline-block;
-  top: 150px;
+  top: 140px;
   left: 245px;
   perspective: 250px;
 }
@@ -34,7 +34,7 @@
   background: rgba(0, 0, 0, 0.5); 
   box-shadow: 0 0 100px 50px #8A8C8C;
   transition: all 0.5s; 
-  opacity: .25;
+  opacity: .30;
   transform: rotateX(95deg) translateZ(-80px) scale(0.75);
   transform-origin: bottom;
 }
