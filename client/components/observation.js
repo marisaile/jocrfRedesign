@@ -24,15 +24,15 @@ module.exports = [
     change: '3rd paperclip added'
   },
   {
-    id:'Item 7',
+    id: 'Item 7',
     change: 'fish gone'
   },
   {
-    id:'Item 8',
+    id: 'Item 8',
     change: 'more pushpins'
   },
   {
-    id:'Item 9',
+    id: 'Item 9',
     change: 'phone cord gone'
   },
   {
@@ -158,12 +158,5 @@ module.exports = [
   {
     id: 'Item 40',
     change: 'one paperclip gone'
-  },
-
-
-
-
-
-
-
-]
+  }
+];

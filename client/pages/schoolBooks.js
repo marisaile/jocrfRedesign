@@ -3,9 +3,9 @@ var $ = require('jquery');
 window.jQuery = window.$ = $;
 require('bootstrap');
 
-import Handlebars from 'handlebars';
-import _ from 'underscore';
-import landing from 'templates/school/schoolBooksLanding.html';
+// import Handlebars from 'handlebars';
+// import _ from 'underscore';
+// import landing from 'templates/school/schoolBooksLanding.html';
 // import template from 'templates/school/schoolBookContainer.html';
 import header from 'templates/school/bookPageHeader.html';
 // import bookSuggestion from 'templates/school/suggestBook.html';

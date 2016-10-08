@@ -5,7 +5,7 @@ var app = {
     app.render();
   },
   render: function(){
-    $("#slideshow > div:gt(0)").hide();
+    $('#slideshow > div:gt(0)').hide();
     setInterval(function() { 
       $('#slideshow > div:first')
         .fadeOut(1000)
@@ -13,7 +13,7 @@ var app = {
         .fadeIn(1000)
         .end()
         .appendTo('#slideshow');
-    },  3000);
+    }, 3000);
   }
 };  
 

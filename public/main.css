@@ -1126,6 +1126,12 @@ input.search-photo {
   box-shadow: 2px 2px 2px;
 }
 
+.timer-main .stopwatch-container .test-name {
+  font-family: 'David Libre', sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+
 .timer-main .stopwatch-container .cum-counter {
   position: relative;
   font-family: 'David Libre', sans-serif;
@@ -1185,21 +1191,27 @@ input.search-photo {
 .timer-main .stopwatch-container .reset-button {
   position: relative;
   display: inline-block;
-  left: 260px;
-  top: 800px;
+  left: 240px;
+  top: 700px;
   font-family: 'David Libre', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
+  background-color: white;
 }
 
-.timer-main .stopwatch-container .reset-button:hover {
-  cursor: pointer;
+.timer-main .stopwatch-container .score {
+  position: relative;
+  display: inline-block;
+  top: 700px;
+  left: -425px;
+  font-family: 'David Libre', sans-serif;
+  font-size: 25px;
 }
 
 .timer-main .stopwatch-container .item-container {
   position: relative;
   display: block;
   left: 25px;
-  top: 290px;
+  top: 150px;
   height: 400px;
   width: 400px;
   border: 1px solid black;
@@ -1221,34 +1233,51 @@ input.search-photo {
   top: 145px;
 }
 
-.timer-main .stopwatch-container .score {
+.timer-main .stopwatch-container .create-csv {
+  background-color: white;
   position: relative;
   display: block;
-  top: 200px;
-  left: 30px;
+  top: -550px;
+  left: 550px;
   font-family: 'David Libre', sans-serif;
   font-size: 25px;
 }
 
-/*    .container.times {
-      position: relative;
-      display: block;
-      top: 75px;
-      overflow-y: scroll;
-      height: 70%;
-      width: 750px;
-  
-      .col-md-8.time-col {
-        font-family: 'Inconsolata', monospace;
-        font-size: 25px;
-        line-height: 30px;
-      }
-      .col-md-4.points-col {
-        font-family: 'Inconsolata', monospace;
-        font-size: 25px;
-        line-height: 30px;
-      }
-    }*/
+.timer-main .stopwatch-container .container.times {
+  position: relative;
+  display: block;
+  top: 100px;
+  height: 70%;
+  width: 95%;
+}
+
+.timer-main .stopwatch-container .container.times .col-md-8.time-col {
+  font-family: 'Inconsolata', monospace;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.timer-main .stopwatch-container .container.times .col-md-4.points-col {
+  font-family: 'Inconsolata', monospace;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+table {
+  font-family: 'David Libre', sans-serif;
+  font-size: 20px;
+}
+
+table tr {
+  height: 20px;
+  width: 100px;
+}
+
+table td {
+  border: 1px black solid;
+  padding: 5px;
+}
+
 .no-bootstrap {
   background-color: #888;
 }

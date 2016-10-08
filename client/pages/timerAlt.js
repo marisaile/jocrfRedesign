@@ -4,6 +4,9 @@ import Handlebars from 'handlebars';
 import lscache from 'lscache';
 import _ from 'lodash';
 import template from 'templates/obsItem.html';
+import json2csv from 'json2csv';
+import d3 from 'd3';
+import dataTable from 'templates/dataTable.html';
 
 // observation specific 
 var obsItems = require('components/observation');
@@ -19,8 +22,9 @@ var index = 0;
 var pointsArray = [];
 var testData = [];
 var itemData;
-var pointsTotal;
-var testScore = [];
+var result;
+// var pointsTotal;
+// var testScore = [];
 
 var model = {
   init: function(){
@@ -97,7 +101,7 @@ var app = {
       itemNumber: index + 1,
       time: splitCount,
       points: points
-    }
+    };
     testData.push(itemData);
     model.save();
     splitCount = 0;
@@ -110,7 +114,7 @@ var app = {
         itemNumber: index + 1,
         time: splitCount,
         points: points
-      }
+      };
       // app.addPoints(); 
       testData.push(itemData);
       model.save();
@@ -147,7 +151,7 @@ var app = {
     
     $('.split-counter').html('Individual Time: ' + '0' + splitCount);
     $('.cum-counter').html('Cumulative Time: ' + '0' + cumCount);
-    
+    $('.score').html('Score =');
   },
   addPoints: function(){
     pointsArray.push(points);
@@ -157,12 +161,45 @@ var app = {
   // observation specific
   showItem: function(){
     $('.item-container').html(obsItemTemplate(obsItems[currentIndex]));
-    currentIndex++
+    currentIndex++;
+  },
+  // createTable: function(){
+  //   $('body').html(dataTable);
+  //   d3.text(result, function(data) {
+  //     var parsedCSV = d3.csv.parseRows(result);
+
+  //     var container = d3.select('.datatable')
+  //       .append("table")
+
+  //       .selectAll("tr")
+  //         .data(parsedCSV).enter()
+  //         .append("tr")
+
+  //       .selectAll("td")
+  //         .data(function(d) { return d; }).enter()
+  //         .append("td")
+  //         .text(function(d) { return d; });
+  //   });
+  // },
+  createCSV: function(){
+    $('.create-csv').on('click', function(){
+      var fields = ['Item', 'Time', 'Points'];
+      try {
+        var result = json2csv({ data: testData, fields: fields });
+        // app.createTable()
+        console.log(result)
+      } catch (err) {
+          // Errors are thrown for bad options, or if the data is empty and no fields are provided. 
+          // Be sure to provide fields if it is possible that your data array will be empty. 
+        console.log(err);
+      }
+    }); 
   },
   bindClickEvents: function(){
     app.startTimer();
     app.splitTimer();
     app.resetTimer();
+    app.createCSV();
   }
 };
 

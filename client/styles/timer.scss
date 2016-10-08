@@ -17,6 +17,12 @@
     border-radius: 6px;
     box-shadow: 2px 2px 2px;
 
+    .test-name {
+      font-family: 'David Libre', sans-serif;
+      font-size: 40px;
+      text-align: center;
+    }
+
     .cum-counter {
       position: relative;
       font-family: 'David Libre', sans-serif;
@@ -70,19 +76,25 @@
     .reset-button {
       position: relative;
       display: inline-block;
-      left: 260px;
-      top: 800px;
+      left: 240px;
+      top: 700px;
       font-family: 'David Libre', sans-serif;
-      font-size: 20px;
+      font-size: 25px;
+      background-color: white;
     }  
-    .reset-button:hover {
-      cursor: pointer;
+    .score {
+      position: relative;
+      display: inline-block;
+      top: 700px;
+      left: -425px;
+      font-family: 'David Libre', sans-serif;
+      font-size: 25px;
     }
     .item-container {
       position: relative;
       display: block;
       left: 25px;
-      top: 290px;
+      top: 150px;
       height: 400px;
       width: 400px;
       border: 1px solid black;
@@ -102,28 +114,21 @@
         top: 145px;
       }
     }
-    .score {
+    .create-csv {
+      background-color: white;
       position: relative;
       display: block;
-      top: 200px;
-      left: 30px;
+      top: -550px;
+      left: 550px;
       font-family: 'David Libre', sans-serif;
       font-size: 25px;
     }
-  }
-}
-
-
-
-
-
-/*    .container.times {
+    .container.times {
       position: relative;
       display: block;
-      top: 75px;
-      overflow-y: scroll;
+      top: 100px;
       height: 70%;
-      width: 750px;
+      width: 95%;
   
       .col-md-8.time-col {
         font-family: 'Inconsolata', monospace;
@@ -135,5 +140,29 @@
         font-size: 25px;
         line-height: 30px;
       }
-    }*/
+    }
+  }
+}
+
+table {
+
+  font-family: 'David Libre', sans-serif;
+  font-size: 20px;
+
+  tr {
+    height: 20px;
+    width: 100px;
+  }
+
+  td {
+    border: 1px black solid;
+    padding: 5px;
+  }
+}
+
+
+
+
+
+    
 

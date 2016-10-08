@@ -22,7 +22,7 @@ var app = {
     app.startTest();
     app.selectImage();
   },
-  compileTemplates: function (){
+  compileTemplates: function(){
     instructionTemplate = Handlebars.compile(vdtInstructions);
     itemsTemplate = Handlebars.compile(vdtItems);
   },

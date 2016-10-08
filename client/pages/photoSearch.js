@@ -55,7 +55,7 @@ var app = {
         $oneImage.replaceWith($newImage);
         $newImage.fadeIn();
       });
-      $newImage.attr('src', source)
+      $newImage.attr('src', source);
     });
   },
   renderResults: function(data){

@@ -66,8 +66,7 @@ var commonConfiguration = {
     modulesDirectories: [
       "client", "node_modules"
     ]
-  },
-            
+  }      
 };
 
 console.log('node environment: ' + process.env.NODE_ENV);

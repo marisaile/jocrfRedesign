@@ -35,7 +35,7 @@ var TodoControllerView = Backbone.View.extend({
       );
     }); 
   },
-  addTodoItem: function(event) {
+  addTodoItem: function() {
     var $input = this.$el.find('.input-name');
     var newTitle = $input.val();
     dispatcher.addTodo(newTitle);
