@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Comfortaa);
 @import url(https://fonts.googleapis.com/css?family=Inconsolata);
 @import url(https://fonts.googleapis.com/css?family=Cabin);
-
+@import url(https://fonts.googleapis.com/css?family=Exo+2);
 .timer-main {
   background-color: #555;
 
@@ -18,21 +18,21 @@
     box-shadow: 2px 2px 2px;
 
     .test-name {
-      font-family: 'David Libre', sans-serif;
+      font-family: 'Exo 2', sans-serif;
       font-size: 40px;
       text-align: center;
     }
 
     .cum-counter {
       position: relative;
-      font-family: 'David Libre', sans-serif;
+      font-family: 'Exo 2', sans-serif;
       font-size: 20px;
       top: 75px;
       left: 20px;
     }
     .split-counter {
       position: relative;
-      font-family: 'David Libre', sans-serif;
+      font-family: 'Exo 2', sans-serif;
       font-size: 35px;
       top: 75px;
       left: 20px;
@@ -46,7 +46,7 @@
       margin: 20px;
       top: 100px;
       left: 100px;
-      font-family: 'David Libre', sans-serif;
+      font-family: 'Exo 2', sans-serif;
       font-size: 30px;
       text-align: center;
       background-color: #01C700;
@@ -64,7 +64,7 @@
       margin: 20px;
       top: 100px;
       left: 200px;
-      font-family: 'David Libre', sans-serif;
+      font-family: 'Exo 2', sans-serif;
       font-size: 30px;
       text-align: center;
       background-color: #720EFF;
@@ -78,7 +78,7 @@
       display: inline-block;
       left: 240px;
       top: 700px;
-      font-family: 'David Libre', sans-serif;
+      font-family: 'Exo 2', sans-serif;
       font-size: 25px;
       background-color: white;
     }  
@@ -87,7 +87,7 @@
       display: inline-block;
       top: 700px;
       left: -425px;
-      font-family: 'David Libre', sans-serif;
+      font-family: 'Exo 2', sans-serif;
       font-size: 25px;
     }
     .item-container {
@@ -101,14 +101,14 @@
 
       h2 {
         position: relative;
-        font-family: 'David Libre', serif;
+        font-family: 'Exo 2', serif;
         font-size: 30px;
         text-align: center;
         top: 100px;
       }
       h4 {
         position: relative;
-        font-family: 'David Libre', serif;
+        font-family: 'Exo 2', serif;
         font-size: 50px;
         text-align: center;
         top: 145px;
@@ -120,10 +120,10 @@
       display: block;
       top: -550px;
       left: 550px;
-      font-family: 'David Libre', sans-serif;
+      font-family: 'Exo 2', sans-serif;
       font-size: 25px;
     }
-    .container.times {
+    /*.container.times {
       position: relative;
       display: block;
       top: 100px;
@@ -140,13 +140,13 @@
         font-size: 25px;
         line-height: 30px;
       }
-    }
+    }*/
   }
 }
 
 table {
 
-  font-family: 'David Libre', sans-serif;
+  font-family: 'Inconsolata', monospace;
   font-size: 20px;
 
   tr {

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Rock+Salt);@import url(https://fonts.googleapis.com/css?family=Over+the+Rainbow);@import url(https://fonts.googleapis.com/css?family=Yatra+One);@import url(https://fonts.googleapis.com/css?family=Acme);@import url(https://fonts.googleapis.com/css?family=Satisfy);@import url(https://fonts.googleapis.com/css?family=Philosopher);@import url(https://fonts.googleapis.com/css?family=Arima+Madurai);@import url(https://fonts.googleapis.com/css?family=Cookie);@import url(https://fonts.googleapis.com/css?family=Sacramento);@import url(https://fonts.googleapis.com/css?family=Cherry+Cream+Soda);@import url(https://fonts.googleapis.com/css?family=Jomhuria);@import url(https://fonts.googleapis.com/css?family=Comfortaa);@import url(https://fonts.googleapis.com/css?family=Inconsolata);@import url(https://fonts.googleapis.com/css?family=Cabin);@import url(https://fonts.googleapis.com/css?family=Open+Sans);@import url(https://fonts.googleapis.com/css?family=David+Libre);/*  body.landing-page {
+@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Rock+Salt);@import url(https://fonts.googleapis.com/css?family=Over+the+Rainbow);@import url(https://fonts.googleapis.com/css?family=Yatra+One);@import url(https://fonts.googleapis.com/css?family=Acme);@import url(https://fonts.googleapis.com/css?family=Satisfy);@import url(https://fonts.googleapis.com/css?family=Philosopher);@import url(https://fonts.googleapis.com/css?family=Arima+Madurai);@import url(https://fonts.googleapis.com/css?family=Cookie);@import url(https://fonts.googleapis.com/css?family=Sacramento);@import url(https://fonts.googleapis.com/css?family=Cherry+Cream+Soda);@import url(https://fonts.googleapis.com/css?family=Jomhuria);@import url(https://fonts.googleapis.com/css?family=Comfortaa);@import url(https://fonts.googleapis.com/css?family=Inconsolata);@import url(https://fonts.googleapis.com/css?family=Cabin);@import url(https://fonts.googleapis.com/css?family=Exo+2);@import url(https://fonts.googleapis.com/css?family=Open+Sans);@import url(https://fonts.googleapis.com/css?family=David+Libre);/*  body.landing-page {
     margin: 0;
     background-color: #720EFF;
 
@@ -1124,17 +1124,35 @@ input.search-photo {
   background-color: #fff;
   border-radius: 6px;
   box-shadow: 2px 2px 2px;
+  /*.container.times {
+      position: relative;
+      display: block;
+      top: 100px;
+      height: 70%;
+      width: 95%;
+  
+      .col-md-8.time-col {
+        font-family: 'Inconsolata', monospace;
+        font-size: 25px;
+        line-height: 30px;
+      }
+      .col-md-4.points-col {
+        font-family: 'Inconsolata', monospace;
+        font-size: 25px;
+        line-height: 30px;
+      }
+    }*/
 }
 
 .timer-main .stopwatch-container .test-name {
-  font-family: 'David Libre', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 40px;
   text-align: center;
 }
 
 .timer-main .stopwatch-container .cum-counter {
   position: relative;
-  font-family: 'David Libre', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 20px;
   top: 75px;
   left: 20px;
@@ -1142,7 +1160,7 @@ input.search-photo {
 
 .timer-main .stopwatch-container .split-counter {
   position: relative;
-  font-family: 'David Libre', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 35px;
   top: 75px;
   left: 20px;
@@ -1157,7 +1175,7 @@ input.search-photo {
   margin: 20px;
   top: 100px;
   left: 100px;
-  font-family: 'David Libre', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 30px;
   text-align: center;
   background-color: #01C700;
@@ -1177,7 +1195,7 @@ input.search-photo {
   margin: 20px;
   top: 100px;
   left: 200px;
-  font-family: 'David Libre', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 30px;
   text-align: center;
   background-color: #720EFF;
@@ -1193,7 +1211,7 @@ input.search-photo {
   display: inline-block;
   left: 240px;
   top: 700px;
-  font-family: 'David Libre', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 25px;
   background-color: white;
 }
@@ -1203,7 +1221,7 @@ input.search-photo {
   display: inline-block;
   top: 700px;
   left: -425px;
-  font-family: 'David Libre', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 25px;
 }
 
@@ -1219,7 +1237,7 @@ input.search-photo {
 
 .timer-main .stopwatch-container .item-container h2 {
   position: relative;
-  font-family: 'David Libre', serif;
+  font-family: 'Exo 2', serif;
   font-size: 30px;
   text-align: center;
   top: 100px;
@@ -1227,7 +1245,7 @@ input.search-photo {
 
 .timer-main .stopwatch-container .item-container h4 {
   position: relative;
-  font-family: 'David Libre', serif;
+  font-family: 'Exo 2', serif;
   font-size: 50px;
   text-align: center;
   top: 145px;
@@ -1239,32 +1257,12 @@ input.search-photo {
   display: block;
   top: -550px;
   left: 550px;
-  font-family: 'David Libre', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 25px;
-}
-
-.timer-main .stopwatch-container .container.times {
-  position: relative;
-  display: block;
-  top: 100px;
-  height: 70%;
-  width: 95%;
-}
-
-.timer-main .stopwatch-container .container.times .col-md-8.time-col {
-  font-family: 'Inconsolata', monospace;
-  font-size: 25px;
-  line-height: 30px;
-}
-
-.timer-main .stopwatch-container .container.times .col-md-4.points-col {
-  font-family: 'Inconsolata', monospace;
-  font-size: 25px;
-  line-height: 30px;
 }
 
 table {
-  font-family: 'David Libre', sans-serif;
+  font-family: 'Inconsolata', monospace;
   font-size: 20px;
 }
 
