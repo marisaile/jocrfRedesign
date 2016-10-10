@@ -41056,7 +41056,7 @@
 	    app.displayTimes();
 	    // app.addPoints();
 	    itemData = {
-	      itemNumber: index + 1,
+	      itemNumber: index,
 	      time: splitCount,
 	      points: points
 	    };
@@ -41069,7 +41069,7 @@
 	    $split.on('click', function () {
 	      app.displayTimes();
 	      itemData = {
-	        itemNumber: index + 1,
+	        itemNumber: index,
 	        time: splitCount,
 	        points: points
 	      };
@@ -41121,34 +41121,26 @@
 	    (0, _jquery2['default'])('.item-container').html(obsItemTemplate(obsItems[currentIndex]));
 	    currentIndex++;
 	  },
-	  // createTable: function(){
-	  //   $('body').html(dataTable);
-	  //   d3.text(result, function(data) {
-	  //     var parsedCSV = d3.csv.parseRows(result);
+	  createTable: function createTable() {
+	    (0, _jquery2['default'])('.stopwatch-container').html(_templatesDataTableHtml2['default']);
+	    _d32['default'].text(result, function (data) {
+	      var parsedCSV = _d32['default'].csv.parseRows(result);
 	
-	  //     var container = d3.select('.datatable')
-	  //       .append("table")
-	
-	  //       .selectAll("tr")
-	  //         .data(parsedCSV).enter()
-	  //         .append("tr")
-	
-	  //       .selectAll("td")
-	  //         .data(function(d) { return d; }).enter()
-	  //         .append("td")
-	  //         .text(function(d) { return d; });
-	  //   });
-	  // },
+	      var container = _d32['default'].select('.datatable').append("table").selectAll("tr").data(parsedCSV).enter().append("tr").selectAll("td").data(function (d) {
+	        return d;
+	      }).enter().append("td").text(function (d) {
+	        return d;
+	      });
+	    });
+	  },
 	  createCSV: function createCSV() {
 	    (0, _jquery2['default'])('.create-csv').on('click', function () {
-	      var fields = ['Item', 'Time', 'Points'];
+	
+	      var fields = ['itemNumber', 'time', 'points'];
 	      try {
-	        var result = (0, _json2csv2['default'])({ data: testData, fields: fields });
-	        // app.createTable()
-	        console.log(result);
+	        result = (0, _json2csv2['default'])({ data: testData, fields: fields });
+	        app.createTable();
 	      } catch (err) {
-	        // Errors are thrown for bad options, or if the data is empty and no fields are provided.
-	        // Be sure to provide fields if it is possible that your data array will be empty.
 	        console.log(err);
 	      }
 	    });

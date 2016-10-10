@@ -98,7 +98,7 @@ var app = {
     app.displayTimes();
     // app.addPoints();
     itemData = {
-      itemNumber: index + 1,
+      itemNumber: index,
       time: splitCount,
       points: points
     };
@@ -111,7 +111,7 @@ var app = {
     $split.on('click', function(){
       app.displayTimes();
       itemData = {
-        itemNumber: index + 1,
+        itemNumber: index,
         time: splitCount,
         points: points
       };
@@ -163,34 +163,32 @@ var app = {
     $('.item-container').html(obsItemTemplate(obsItems[currentIndex]));
     currentIndex++;
   },
-  // createTable: function(){
-  //   $('body').html(dataTable);
-  //   d3.text(result, function(data) {
-  //     var parsedCSV = d3.csv.parseRows(result);
+  createTable: function(){
+    $('.stopwatch-container').html(dataTable);
+    d3.text(result, function(data) {
+      var parsedCSV = d3.csv.parseRows(result);
 
-  //     var container = d3.select('.datatable')
-  //       .append("table")
+      var container = d3.select('.datatable')
+        .append("table")
 
-  //       .selectAll("tr")
-  //         .data(parsedCSV).enter()
-  //         .append("tr")
+        .selectAll("tr")
+          .data(parsedCSV).enter()
+          .append("tr")
 
-  //       .selectAll("td")
-  //         .data(function(d) { return d; }).enter()
-  //         .append("td")
-  //         .text(function(d) { return d; });
-  //   });
-  // },
+        .selectAll("td")
+          .data(function(d) { return d; }).enter()
+          .append("td")
+          .text(function(d) { return d; });
+    });
+  },
   createCSV: function(){
     $('.create-csv').on('click', function(){
-      var fields = ['Item', 'Time', 'Points'];
+
+      var fields = ['itemNumber', 'time', 'points'];
       try {
-        var result = json2csv({ data: testData, fields: fields });
-        // app.createTable()
-        console.log(result)
+        result = json2csv({ data: testData, fields: fields });
+        app.createTable();
       } catch (err) {
-          // Errors are thrown for bad options, or if the data is empty and no fields are provided. 
-          // Be sure to provide fields if it is possible that your data array will be empty. 
         console.log(err);
       }
     }); 
