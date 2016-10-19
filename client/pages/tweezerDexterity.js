@@ -3,28 +3,27 @@ import $ from 'jquery';
 import Handlebars from 'handlebars';
 import lscache from 'lscache';
 import _ from 'lodash';
-import template from 'templates/obsItem.html';
+import template from 'templates/tweezerTemplate.html';
 import json2csv from 'json2csv';
 import d3 from 'd3';
 import dataTable from 'templates/dataTable.html';
 
-// observation specific 
-var obsItems = require('components/observation');
-var obsItemTemplate; 
-var currentIndex = 0;
 
+var twzRows = require('components/tweezerRow');
+var tweezerTemplate;
+var currentIndex = 0;
 var interval; 
 var timerRunning = false;
 var splitCount = 0;
 var cumCount = 0;
 var points;
-var index = 0;
 var pointsArray = [];
 var testData = [];
 var itemData;
 var result;
-// var pointsTotal;
-// var testScore = [];
+var extraTime = 0;
+var pinDropped = 0;
+var rowTime;
 
 var model = {
   init: function(){
@@ -44,20 +43,17 @@ var model = {
   }
 };
 
-// var view = $('script[type="text/x-template"]').html();
-
 var app = {
   init: function(){
     model.init();
-    app.compileTemplate();
+    app.compileTemplates();
     app.render();
-  },
+  }, 
   render: function(){
-    app.bindClickEvents();
+    app.bindClickEvents(); 
   },
-  // observation specific
-  compileTemplate: function(){
-    obsItemTemplate = Handlebars.compile(template);
+  compileTemplates: function(){
+    tweezerTemplate = Handlebars.compile(template);
   },
   startTimer: function(){
     var $startStop = $('.start-stop-button');
@@ -79,9 +75,9 @@ var app = {
           }
           $('.cum-counter').html('Cumulative Time: ' + cumCount);
         }, 600);
+        app.showRow();
         $startStop.html('Stop');
         $startStop.css({'background-color': '#FF2603'});
-        app.showItem();
       } else {
         app.stopTimer();
         $startStop.html('Start');
@@ -94,74 +90,95 @@ var app = {
     if (timerRunning === true) {
       timerRunning = false;
     }
-    
+    // app.addPoints();  
     app.displayTimes();
-    // app.addPoints();
     itemData = {
-      itemNumber: index,
+      row: currentIndex,
       time: splitCount,
-      points: points
+      penalty: extraTime,
+      rowTime: rowTime,
+      points: points,
+      droppedPin: pinDropped
     };
+
     testData.push(itemData);
+    
     model.save();
     splitCount = 0;
   },
   splitTimer: function(){  
-    var $split = $('.split-button');
+    var $split = $('.misc-button');
     $split.on('click', function(){
+      // app.addPoints();
       app.displayTimes();
       itemData = {
-        itemNumber: index,
+        row: currentIndex,
         time: splitCount,
-        points: points
+        penalty: extraTime,
+        rowTime: rowTime,
+        points: points,
+        droppedPin: pinDropped
       };
-      // app.addPoints(); 
-      testData.push(itemData);
+      app.showRow();
+      
+      
+      
+      testData.push(itemData);  
       model.save();
       splitCount = 0;
     });     
   },
-  resetTimer: function(){
-    var $reset = $('.reset-button');
-    $reset.on('click', function(){
-      // interval = clearInterval(interval);
-      if (timerRunning === false) {
-        app.clearEverything(); 
-      } 
-    });   
+  showRow: function(){
+    $('.item-container').html(tweezerTemplate(twzRows[currentIndex]));
+    currentIndex++;   
+    app.droppedPin();
   },
+  // resetTimer: function(){
+  //   var $reset = $('.reset-button');
+  //   $reset.on('click', function(){
+  //     // interval = clearInterval(interval);
+  //     if (timerRunning === false) {
+  //       app.clearEverything(); 
+  //     } 
+  //   });   
+  // },
   displayTimes: function(){
-    if (splitCount < 10) {
-      points = 3;
-    } else if (splitCount > 9 && splitCount < 20) {
-      points = 2;
-    } else if (splitCount > 19 && splitCount < 30){
-      points = 1;
+    if (extraTime > 0) {
+      rowTime = splitCount + extraTime;
     } else {
-      points = 0;
+      rowTime = splitCount;
     }
-    index++;
+    if (rowTime < 32) {
+    points = 8;
+    } else if (rowTime === 33 || rowTime === 34) {
+      points = 7;
+    } else if (rowTime === 35 || rowTime === 36) {
+      points = 6;
+    } else if (rowTime === 37 || rowTime === 38) {
+      points = 5;
+    } else if (rowTime === 39 || rowTime === 40) {
+      points = 4;
+    } else if (rowTime === 41 || rowTime === 42 || rowTime === 43) {
+      points = 3;
+    } else if (rowTime > 43 && rowTime < 48) {
+      points = 2;
+    } else if (rowTime > 47) {
+      points = 1;
+    }
     app.addPoints();
-  },
-  clearEverything: function(){
-    testData = [];
-    splitCount = 0;
-    cumCount = 0;
-    index = 0;
-    
-    $('.split-counter').html('Individual Time: ' + '0' + splitCount);
-    $('.cum-counter').html('Cumulative Time: ' + '0' + cumCount);
-    $('.score').html('Score =');
-  },
+  }, 
   addPoints: function(){
     pointsArray.push(points);
     var pointsTotal = _.sum(pointsArray);
     $('.score').html('Score = ' + pointsTotal);
   },
-  // observation specific
-  showItem: function(){
-    $('.item-container').html(obsItemTemplate(obsItems[currentIndex]));
-    currentIndex++;
+  droppedPin: function(){
+    $('.dropped-pin').click(function(){
+      pinDropped++;
+      extraTime += 5;
+    });  
+    pinDropped = 0
+    extraTime = 0;
   },
   createTable: function(){
     $('.stopwatch-container').html(dataTable);
@@ -169,22 +186,21 @@ var app = {
       var parsedCSV = d3.csv.parseRows(result);
 
       var container = d3.select('.datatable')
-        .append("table")
+        .append('table')
 
-        .selectAll("tr")
+        .selectAll('tr')
           .data(parsedCSV).enter()
-          .append("tr")
+          .append('tr')
 
-        .selectAll("td")
+        .selectAll('td')
           .data(function(d) { return d; }).enter()
-          .append("td")
+          .append('td')
           .text(function(d) { return d; });
     });
   },
   createCSV: function(){
     $('.create-csv').on('click', function(){
-
-      var fields = ['itemNumber', 'time', 'points'];
+      var fields = ['row', 'time', 'penalty', 'rowTime', 'points', 'droppedPin'];
       try {
         result = json2csv({ data: testData, fields: fields });
         app.createTable();
@@ -193,12 +209,44 @@ var app = {
       }
     }); 
   },
+  // displayTimes: function(){
+  //   $('.time-col').append('Item ' + '' + (index + 1) + ': ' + ' ' + splitTimes[index] + '<br />'); 
+  //   if (splitTimes[index] < 10) {
+  //     points = 3;
+  //   } else if (splitTimes[index] > 9 && splitTimes[index] < 20) {
+  //     points = 2;
+  //   } else if (splitTimes[index] > 19 && splitTimes[index] < 30){
+  //     points = 1;
+  //   } else {
+  //     points = 0;
+  //   }
+  //   $('.points-col').append(points + '<br />');
+  //   index++;
+  // },
+  clearEverything: function(){
+    testData = [];
+    pointsArray = [];
+    splitCount = 0;
+    cumCount = 0;
+    currentIndex = 0;
+    $('.time-col').html('<h1>Times</h1');
+    $('.points-col').html('<h1>Points</h1>');
+    $('.split-counter').html('Individual Time: ' + '0' + splitCount);
+    $('.cum-counter').html('Cumulative Time: ' + '0' + cumCount);
+    $('.score').html('');
+  },
+  addPoints: function(){
+    pointsArray.push(points);
+    var pointsTotal = _.sum(pointsArray);
+    $('.score').html('Score = ' + pointsTotal);
+  },
   bindClickEvents: function(){
     app.startTimer();
     app.splitTimer();
-    app.resetTimer();
     app.createCSV();
   }
 };
 
 module.exports = app;
+
+

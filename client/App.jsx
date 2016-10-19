@@ -1,21 +1,23 @@
 
 import $ from 'jquery';
 import 'styles/main.scss';
-// import landingPage from 'pages/landingPage';
+
 import mainPage from 'components/mainPage';
-import TodoListView from 'pages/todoReact/todoListView';
-import funnySquares from 'pages/funnySquares';
-import photoSearch from 'pages/photoSearch';
+import schoolBooks from 'pages/schoolBooks';
+import timerObs from 'pages/timerObs';
+import wordAss from 'pages/wordAssociation';
+import tweezer from 'pages/tweezerDexterity';
+import timerGen from 'pages/timerGen';
+// import joc2012 from 'pages/joc2012';
+// import landingPage from 'pages/landingPage';
+// import TodoListView from 'pages/todoReact/todoListView';
+// import funnySquares from 'pages/funnySquares';
+// import photoSearch from 'pages/photoSearch';
 // import d3 from 'pages/d3';
 // import three from 'pages/three';
-import schoolBooks from 'pages/schoolBooks';
 // import bookController from 'pages/books/booksController';
-import timer from 'pages/timerAlt';
-import vdt from 'pages/visualDesigns';
-import dalquest from 'pages/dalquest';
-import wordAss from 'pages/wordAssociation';
-import joc2012 from 'pages/joc2012';
-
+// import vdt from 'pages/visualDesigns';
+// import Conclave from 'pages/dalquest';
 $(function() {
 
   mainPage.init();
@@ -23,42 +25,52 @@ $(function() {
   var url = window.location.pathname;
 
   switch (url) {
-    case '/pages/todo.html':
-      var todoListView = new TodoListView(); 
+    
+    case '/pages/schoolBooks.html':
+      schoolBooks.init();
+    break; 
+    case '/pages/timerObs.html':
+      timerObs.init();
     break;
-    case '/pages/funnySquares.html':
-      funnySquares.init();
+    case '/pages/timerGen.html': 
+      timerGen.init();
     break;
+    case '/pages/wordAssociation.html':
+      wordAss.init();
+    break;
+    case '/pages/timerTD.html':
+      tweezer.init();
+    break;
+    // case '/pages/laterality.html':
+    //   laterality.init();
+    // break;
+    // case '/pages/joc2012.html':
+    //   joc2012.init();
+    // break;
+    // case '/pages/todo.html':
+    //   var todoListView = new TodoListView(); 
+    // break;
+    // case '/pages/funnySquares.html':
+    //   funnySquares.init();
+    // break;
     // case '/pages/d3.html':
     //   d3.init();
     // break;
     // case '/pages/three.html':
     //   three.init();
     // break;
-    case '/pages/schoolBooks.html':
-      schoolBooks.init();
-    break;
-    case '/pages/photoSearch.html':
-      photoSearch.init(); 
-    break;
+    // case '/pages/photoSearch.html':
+    //   photoSearch.init(); 
+    // break;
     // case '/pages/books.html':
     //   bookController.render();
     // break;
-    case '/pages/timer.html':
-      timer.init();
-    break;
-    case '/pages/visualDesigns.html':
-      vdt.init();
-    break;
-    case '/pages/dalquest.html':
-      dalquest.init();
-    break;
-    case '/pages/wordAssociation.html':
-      wordAss.init();
-    break;
-    case '/pages/joc2012.html':
-      joc2012.init();
-    break;
+    // case '/pages/visualDesigns.html':
+    //   vdt.init();
+    // break;
+    // case '/pages/dalquest.html':
+    //   Conclave.init();
+    // break;
     default: break;
   }
 

@@ -5,7 +5,8 @@ import vdtItems from 'templates/VDT/vdtItems.html';
 
 var instructionTemplate;
 var itemsTemplate;
-var items;
+var items = require('components/vdtItems');
+var currentIndex = 0
 
 var app = {
   init: function(){
@@ -14,13 +15,11 @@ var app = {
   },
   render: function(){
     var frontPage = instructionTemplate({});
-    items = itemsTemplate({});
     $('.vdt-main').html(frontPage);
     app.bindEvents();
   },
   bindEvents: function(){
     app.startTest();
-    app.selectImage();
   },
   compileTemplates: function(){
     instructionTemplate = Handlebars.compile(vdtInstructions);
@@ -28,17 +27,18 @@ var app = {
   },
   startTest: function(){
     $('.btn-start').on('click', function(){
-      $('.vdt-main').html(items);
-    });
-  },
-  selectImage: function(){
-    $('#1a').on('click', function(){
-      $('#1a').animate({
-        height: '85%',
-        width: '85%'
-      }, 1000, 'easeInBounce');
+      $('.vdt-main').html(itemsTemplate(items[currentIndex]));
+      // app.selectImage();
     });
   }
+  // selectImage: function(){
+  //   $('img').on('click', function(){
+  //     $('img').animate({
+  //       height: '200',
+  //       width: '350'
+  //     }, 500);
+  //   });
+  // }
 };
 
 module.exports = app;

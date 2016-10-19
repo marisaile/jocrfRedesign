@@ -52,15 +52,15 @@ var app = {
       timerRunning = false;
     }
     splitTimes.push(splitCount);
-    app.displayTimes();
+    // app.displayTimes();
     app.addPoints();
     splitCount = 0;
   },
   splitTimer: function(){  
-    var $split = $('.split-button');
+    var $split = $('.misc-button');
     $split.on('click', function(){
       splitTimes.push(splitCount);
-      app.displayTimes();
+      // app.displayTimes();
       app.addPoints(); 
       splitCount = 0;
     });     
@@ -74,20 +74,20 @@ var app = {
       } 
     });   
   },
-  displayTimes: function(){
-    $('.time-col').append('Item ' + '' + (index + 1) + ': ' + ' ' + splitTimes[index] + '<br />'); 
-    if (splitTimes[index] < 10) {
-      points = 3;
-    } else if (splitTimes[index] > 9 && splitTimes[index] < 20) {
-      points = 2;
-    } else if (splitTimes[index] > 19 && splitTimes[index] < 30){
-      points = 1;
-    } else {
-      points = 0;
-    }
-    $('.points-col').append(points + '<br />');
-    index++;
-  },
+  // displayTimes: function(){
+  //   $('.time-col').append('Item ' + '' + (index + 1) + ': ' + ' ' + splitTimes[index] + '<br />'); 
+  //   if (splitTimes[index] < 10) {
+  //     points = 3;
+  //   } else if (splitTimes[index] > 9 && splitTimes[index] < 20) {
+  //     points = 2;
+  //   } else if (splitTimes[index] > 19 && splitTimes[index] < 30){
+  //     points = 1;
+  //   } else {
+  //     points = 0;
+  //   }
+  //   $('.points-col').append(points + '<br />');
+  //   index++;
+  // },
   clearEverything: function(){
     splitTimes = [];
     pointsArray = [];
