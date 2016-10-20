@@ -19,7 +19,6 @@ var app = {
   },
   render: function(){
     $('.school-header').html(header);
-    $('.school-main').html(template);
     // Conclave.init();
     // app.fetchBooks();
     // $('.btn-suggestion').click(function(){

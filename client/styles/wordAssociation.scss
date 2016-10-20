@@ -1,21 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Marcellus);
+
 body.word-association {
   margin: 0;
-  background-color: #222;
+  background-color: #555;
 }
 .wa-container {
   position: relative;
   display: block;
-  margin: auto;
+  margin: 100px auto;
   height: 1024px;
   width: 768px;
-  background-color: #eee;
+  background-color: #F0F1F3;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px;
 
   h1 {
     position: relative;
     display: block;
     top: 50px;
     text-align: center;
-    font-family: 'David Libre', sans-serif;
+    font-family: 'Marcellus', sans-serif;
     font-size: 50px;
   }
 
@@ -24,16 +28,15 @@ body.word-association {
     display: block;
     margin: auto;
     height: 400px;
-    width: 200px;
+    width: 500px;
   
     .word {
       position: relative;
       display: block;
       top: 200px;
       height: 100px;
-      width: 200px;
-      font-family: 'David Libre', serif;
-      font-size: 50px;
+      font-family: 'Marcellus', serif;
+      font-size: 45px;
       color: #222;
       text-align: center;
     }
@@ -42,12 +45,11 @@ body.word-association {
       display: block;
       top: 150px;
       height: 75px;
-      width: 200px;
-      font-family: 'David Libre', sans-serif;
+      font-family: 'Marcellus', sans-serif;
       font-size: 30px;
       color: #222;
       text-align: center;
-      line-height: 75px;
+      line-height: 50px;
     }
   }
   .sig-yes {
@@ -56,18 +58,17 @@ body.word-association {
     left: 75px;
     width: 225px;
     height: 75px;
-    background-color: #eee;
     color: #222;
-    font-family: 'David Libre', sans-serif;
+    font-family: 'Marcellus', sans-serif;
     font-size: 25px;
-    background-color: #0EFCFF;
+    background-color: #17B20A;
   }
   .sig-yes:hover {
-    background-color: #0EFCFF;
+    background-color: #17B20A;
   }
   .sig-yes:focus {
     outline: none;
-    background-color: #0EFCFF;
+    background-color: #17B20A;
   }
   .sig-no {
     position: relative;
@@ -76,24 +77,23 @@ body.word-association {
     width: 225px;
     height: 75px;
     background-color: #eee;
-    color: #222;
-    font-family: 'David Libre', sans-serif;
+    font-family: 'Marcellus', sans-serif;
     font-size: 25px;
-    background-color: #FF6735;
+    background-color: #089D9A;
   }
   .sig-no:hover {
-    background-color: #FF6735;
+    background-color: #089D9A;
   }
   .sig-no:focus {
     outline: none;
-    background-color: #FF6735;
+    background-color: #089D9A;
   }
   .sig-response {
     position: relative;
     display: block;
-    top: 450px;
-    left: 20px;
-    font-family: 'David Libre', serif;
+    top: 500px;
+    left: 65px;
+    font-family: 'Marcellus', serif;
     font-size: 25px;
     color: #222;
   }

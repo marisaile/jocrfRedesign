@@ -27,12 +27,7 @@ var rowTime;
 
 var model = {
   init: function(){
-    var savedData = lscache.get('testData');
-    if (savedData) {      
-      testData = savedData;
-    } else {
-      testData = [];
-    }
+    testData = [];
   },
   save: function(){
     var dataToSave = JSON.stringify(testData);
@@ -77,11 +72,11 @@ var app = {
         }, 600);
         app.showRow();
         $startStop.html('Stop');
-        $startStop.css({'background-color': '#FF2603'});
+        $startStop.css({'background-color': '#192837'});
       } else {
         app.stopTimer();
         $startStop.html('Start');
-        $startStop.css({'background-color': '#01C700'});
+        $startStop.css({'background-color': '#17B20A'});
       }
     });   
   },
@@ -114,15 +109,12 @@ var app = {
       itemData = {
         row: currentIndex,
         time: splitCount,
+        droppedPin: pinDropped,
         penalty: extraTime,
         rowTime: rowTime,
-        points: points,
-        droppedPin: pinDropped
+        points: points
       };
       app.showRow();
-      
-      
-      
       testData.push(itemData);  
       model.save();
       splitCount = 0;
@@ -132,6 +124,7 @@ var app = {
     $('.item-container').html(tweezerTemplate(twzRows[currentIndex]));
     currentIndex++;   
     app.droppedPin();
+    app.pickedUp();
   },
   // resetTimer: function(){
   //   var $reset = $('.reset-button');
@@ -180,6 +173,12 @@ var app = {
     pinDropped = 0
     extraTime = 0;
   },
+  pickedUp: function(){
+    $('.picked-up').click(function(){
+      pinDropped--;
+      extraTime -= 5;
+    });
+  },
   createTable: function(){
     $('.stopwatch-container').html(dataTable);
     d3.text(result, function(data) {
@@ -197,10 +196,11 @@ var app = {
           .append('td')
           .text(function(d) { return d; });
     });
+    localStorage.clear();
   },
   createCSV: function(){
     $('.create-csv').on('click', function(){
-      var fields = ['row', 'time', 'penalty', 'rowTime', 'points', 'droppedPin'];
+      var fields = ['row', 'time', 'droppedPin', 'penalty', 'rowTime', 'points'];
       try {
         result = json2csv({ data: testData, fields: fields });
         app.createTable();

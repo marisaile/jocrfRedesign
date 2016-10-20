@@ -10004,7 +10004,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","school-nav":"school-nav","row":"row","school-main":"school-main","img-responsive":"img-responsive","book-image":"book-image","wrapper_bu":"wrapper_bu","txt_Center":"txt_Center","txt_h1":"txt_h1","holder_bu":"holder_bu","holder_bu_awayL1":"holder_bu_awayL1","holder_bu_awayL2":"holder_bu_awayL2","holder_bu_center":"holder_bu_center","holder_bu_awayR1":"holder_bu_awayR1","holder_bu_awayR2":"holder_bu_awayR2","timer-main":"timer-main","stopwatch-container":"stopwatch-container","test-name":"test-name","cum-counter":"cum-counter","split-counter":"split-counter","start-stop-button":"start-stop-button","misc-button":"misc-button","score":"score","create-csv":"create-csv","item-container":"item-container","tweezer-row":"tweezer-row","dropped-pin":"dropped-pin","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","sig-yes":"sig-yes","sig-no":"sig-no","sig-response":"sig-response","joc2012":"joc2012","joc2012-header":"joc2012-header","slideshow":"slideshow"};
+	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","school-nav":"school-nav","row":"row","school-main":"school-main","img-responsive":"img-responsive","book-image":"book-image","menu":"menu","highlighted":"highlighted","timer-main":"timer-main","stopwatch-container":"stopwatch-container","test-name":"test-name","cum-counter":"cum-counter","split-counter":"split-counter","start-stop-button":"start-stop-button","misc-button":"misc-button","score":"score","create-csv":"create-csv","item-container":"item-container","tweezer-row":"tweezer-row","dropped-pin":"dropped-pin","picked-up":"picked-up","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","sig-yes":"sig-yes","sig-no":"sig-no","sig-response":"sig-response","joc2012":"joc2012","joc2012-header":"joc2012-header","slideshow":"slideshow"};
 
 /***/ },
 /* 3 */,
@@ -10101,7 +10101,6 @@
 	  },
 	  render: function render() {
 	    $('.school-header').html(_templatesSchoolBookPageHeaderHtml2['default']);
-	    $('.school-main').html(_templatesSchoolSchoolBookContainerHtml2['default']);
 	    // Conclave.init();
 	    // app.fetchBooks();
 	    // $('.btn-suggestion').click(function(){
@@ -11700,7 +11699,7 @@
 /* 11 */
 /***/ function(module, exports) {
 
-	module.exports = "<!-- \n  <div class=\"school-books-item\">\n    <a href=\"{{url}}\" target=\"new\">\n      <img class=\"img-responsive book-image\" src=\"{{image}}\" alt=\"Responsive image\">\n    </a>\n       <div class=\"title\">{{title}}</div>\n      <div class=\"author\">{{author}}</div>\n  </div>\n -->\n\n\n<!-- <ul id=\"menu\">\n\n  <li> \n  \t<a href=\"\">\n      <img class=\"img-responsive book-image\" src=\"xxxHTMLLINKxxx0.33015752793289720.8650327536743134xxx\" alt=\"Responsive image\">\n    </a> \n   </li>\n\n  <li> <a href=\"#\">Item 2</a> </li>\n\n  <li class=\"highlighted\"> <a href=\"#\">Item 3</a> </li>\n\n  <li> <a href=\"#\">Item 4</a> </li>\n\n  <li> <a href=\"#\">Item 5</a> </li>\n\n  <li> <a href=\"#\">Item 6</a> </li>\n\n</ul>\n -->\n\n <div class=\"row english\">\n  <h2 class=\"subject\">English Literature</h2>\n  <div id=\"wrapper_bu\">\n    <div id=\"bu1\"> <img class=\"img-responsive book-image\" src=\"/images/books/kundera.png\" alt=\"Responsive image\"><a href=\"https://books.google.com/books?id=Zd1l0Ivij8wC&printsec=frontcover&dq=the+unbearable+lightness+of+being&hl=en&sa=X&ved=0ahUKEwiC2e-c2_fOAhUH6WMKHTvGCScQ6AEIHjAA\" title=\"The Unbearable Lightness of Being\" target=\"new\"></a> </div>\n    <div id=\"bu2\"> <a href=\"https://books.google.com/books?id=9H9aAAAAMAAJ&dq=editions:5iTbjefdfnYC\" target=\"new\">\n              <img class=\"img-responsive book-image\" src=\"/images/books/dillard.png\" alt=\"Responsive image\">\n            </a>  </div>\n    <div id=\"bu3\"> <a href=\"https://books.google.com/books?id=nfjGMgEACAAJ&dq=love,+dishonor,+marry,+perish,+cherish&hl=en&sa=X&ved=0ahUKEwj44reg2vfOAhUq6oMKHciEAewQ6AEIHjAA\" target=\"new\">\n              <img class=\"img-responsive book-image\" src=\"/images/books/rakoff.png\" alt=\"Responsive image\">\n            </a> </div>\n    <div id=\"bu4\"> <a href=\"https://books.google.com/books?id=tOjE5Usv_HQC&dq=lake+wobegon,+summer+1956&source=gbs_navlinks_s\" target=\"new\">\n              <img class=\"img-responsive book-image\" src=\"/images/books/garrison.png\" alt=\"Responsive image\">\n            </a></div>\n    <div id=\"bu5\"> <a href=\"https://books.google.com/books?id=EJprQgAACAAJ&dq=the+dream+of+a+common+language&hl=en&sa=X&sqi=2&ved=0ahUKEwizmoaX3PfOAhUb24MKHfmLAA0Q6AEIHDAA\" target=\"new\">\n              <img class=\"img-responsive book-image\" src=\"/images/books/adrienne.png\" alt=\"Responsive image\">\n            </a> </div>\n  </div>\n</div>\n\n";
+	module.exports = "<!-- \n  <div class=\"school-books-item\">\n    <a href=\"{{url}}\" target=\"new\">\n      <img class=\"img-responsive book-image\" src=\"{{image}}\" alt=\"Responsive image\">\n    </a>\n       <div class=\"title\">{{title}}</div>\n      <div class=\"author\">{{author}}</div>\n  </div>\n -->\n\n\n<!-- <ul id=\"menu\">\n\n  <li> \n  \t<a href=\"\">\n      <img class=\"img-responsive book-image\" src=\"xxxHTMLLINKxxx0.30416594701819120.9706197981722653xxx\" alt=\"Responsive image\">\n    </a> \n   </li>\n\n  <li> <a href=\"#\">Item 2</a> </li>\n\n  <li class=\"highlighted\"> <a href=\"#\">Item 3</a> </li>\n\n  <li> <a href=\"#\">Item 4</a> </li>\n\n  <li> <a href=\"#\">Item 5</a> </li>\n\n  <li> <a href=\"#\">Item 6</a> </li>\n\n</ul>\n -->\n\n <div class=\"row english\">\n  <h2 class=\"subject\">English Literature</h2>\n  <div id=\"wrapper_bu\">\n    <div id=\"bu1\"> <img class=\"img-responsive book-image\" src=\"/images/books/kundera.png\" alt=\"Responsive image\"><a href=\"https://books.google.com/books?id=Zd1l0Ivij8wC&printsec=frontcover&dq=the+unbearable+lightness+of+being&hl=en&sa=X&ved=0ahUKEwiC2e-c2_fOAhUH6WMKHTvGCScQ6AEIHjAA\" title=\"The Unbearable Lightness of Being\" target=\"new\"></a> </div>\n    <div id=\"bu2\"> <a href=\"https://books.google.com/books?id=9H9aAAAAMAAJ&dq=editions:5iTbjefdfnYC\" target=\"new\">\n              <img class=\"img-responsive book-image\" src=\"/images/books/dillard.png\" alt=\"Responsive image\">\n            </a>  </div>\n    <div id=\"bu3\"> <a href=\"https://books.google.com/books?id=nfjGMgEACAAJ&dq=love,+dishonor,+marry,+perish,+cherish&hl=en&sa=X&ved=0ahUKEwj44reg2vfOAhUq6oMKHciEAewQ6AEIHjAA\" target=\"new\">\n              <img class=\"img-responsive book-image\" src=\"/images/books/rakoff.png\" alt=\"Responsive image\">\n            </a> </div>\n    <div id=\"bu4\"> <a href=\"https://books.google.com/books?id=tOjE5Usv_HQC&dq=lake+wobegon,+summer+1956&source=gbs_navlinks_s\" target=\"new\">\n              <img class=\"img-responsive book-image\" src=\"/images/books/garrison.png\" alt=\"Responsive image\">\n            </a></div>\n    <div id=\"bu5\"> <a href=\"https://books.google.com/books?id=EJprQgAACAAJ&dq=the+dream+of+a+common+language&hl=en&sa=X&sqi=2&ved=0ahUKEwizmoaX3PfOAhUb24MKHfmLAA0Q6AEIHDAA\" target=\"new\">\n              <img class=\"img-responsive book-image\" src=\"/images/books/adrienne.png\" alt=\"Responsive image\">\n            </a> </div>\n  </div>\n</div>\n\n";
 
 /***/ },
 /* 12 */
@@ -11819,7 +11818,7 @@
 	          (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + cumCount);
 	        }, 600);
 	        $startStop.html('Stop');
-	        $startStop.css({ 'background-color': '#DB3107' });
+	        $startStop.css({ 'background-color': '#192837' });
 	        app.showItem();
 	      } else {
 	        app.stopTimer();
@@ -11836,7 +11835,7 @@
 	    app.displayTimes();
 	    // app.addPoints();
 	    itemData = {
-	      itemNumber: index - 1,
+	      itemNumber: index,
 	      time: splitCount,
 	      points: points
 	    };
@@ -11848,6 +11847,7 @@
 	    var $study = (0, _jquery2['default'])('.misc-button');
 	    $study.on('click', function () {
 	      if (timerRunning === false) {
+	        timerRunning = true;
 	        interval = setInterval(function () {
 	          if (splitCount === 50) {
 	            interval = clearInterval(interval);
@@ -11929,6 +11929,7 @@
 	        return d;
 	      });
 	    });
+	    localStorage.clear();
 	  },
 	  createCSV: function createCSV() {
 	    (0, _jquery2['default'])('.create-csv').on('click', function () {
@@ -44820,7 +44821,7 @@
 	  response: 'none'
 	}, {
 	  word: 'baker',
-	  'response': ['butcher', 'cook']
+	  'response': ['butcher', ' cook']
 	}, {
 	  word: 'bitter',
 	  response: 'sweet'
@@ -44853,10 +44854,10 @@
 	  response: 'short'
 	}, {
 	  word: 'tough',
-	  response: ['soft', 'easy']
+	  response: ['soft', ' easy']
 	}, {
 	  word: 'wicked',
-	  response: ['good', 'nice']
+	  response: ['good', ' nice']
 	}, {
 	  word: 'tank',
 	  response: 'none'
@@ -44865,10 +44866,10 @@
 	  response: 'light'
 	}, {
 	  word: 'city',
-	  response: ['town', 'country']
+	  response: ['town', ' country']
 	}, {
 	  word: 'square',
-	  response: ['circle', 'round']
+	  response: ['circle', ' round']
 	}, {
 	  word: 'drink',
 	  response: 'none'
@@ -44925,7 +44926,7 @@
 	  response: 'brave'
 	}, {
 	  word: 'joy',
-	  response: ['sorrow', 'sad', 'sadness']
+	  response: ['sorrow', ' sad', ' sadness']
 	}, {
 	  word: 'dream',
 	  response: 'none'
@@ -44952,7 +44953,7 @@
 	  response: 'sour'
 	}, {
 	  word: 'yellow',
-	  response: ['white', 'black', 'red', 'blue', 'green']
+	  response: ['white', ' black', ' red', ' blue', ' green']
 	}, {
 	  word: 'path',
 	  response: 'none'
@@ -44961,13 +44962,13 @@
 	  response: 'ugly'
 	}, {
 	  word: 'bath',
-	  reponse: 'shower'
+	  response: 'shower'
 	}, {
 	  word: 'window',
 	  response: 'none'
 	}, {
 	  word: 'together',
-	  response: ['apart', 'separate']
+	  response: ['apart', ' separate']
 	}, {
 	  word: 'clean',
 	  response: 'dirty'
@@ -44979,7 +44980,7 @@
 	  response: 'none'
 	}, {
 	  word: 'far',
-	  response: ['near', 'close']
+	  response: ['near', ' close']
 	}, {
 	  word: 'citizen',
 	  response: 'none'
@@ -44991,7 +44992,7 @@
 	  response: 'none'
 	}, {
 	  word: 'sleep',
-	  response: ['wake', 'awake']
+	  response: ['wake', ' awake']
 	}, {
 	  word: 'parlor',
 	  response: 'living room'
@@ -45006,13 +45007,13 @@
 	  response: 'sing'
 	}, {
 	  word: 'rough',
-	  response: ['smooth', 'soft']
+	  response: ['smooth', ' soft']
 	}, {
 	  word: 'trap',
 	  response: 'none'
 	}, {
 	  word: 'unseen',
-	  response: ['unheard', 'seen']
+	  response: ['unheard', ' seen']
 	}, {
 	  word: 'ride',
 	  response: 'walk'
@@ -45039,7 +45040,7 @@
 	  response: 'none'
 	}, {
 	  word: 'ham',
-	  response: ['egg', 'eggs']
+	  response: ['egg', ' eggs']
 	}, {
 	  word: 'tooth',
 	  response: 'mouth'
@@ -45054,7 +45055,7 @@
 	  response: 'laugh'
 	}, {
 	  word: 'health',
-	  response: ['sick', 'sickness']
+	  response: ['sick', ' sickness']
 	}, {
 	  word: 'thief',
 	  response: 'none'
@@ -45121,12 +45122,7 @@
 	
 	var model = {
 	  init: function init() {
-	    var savedData = _lscache2['default'].get('testData');
-	    if (savedData) {
-	      testData = savedData;
-	    } else {
-	      testData = [];
-	    }
+	    testData = [];
 	  },
 	  save: function save() {
 	    var dataToSave = JSON.stringify(testData);
@@ -45171,11 +45167,11 @@
 	        }, 600);
 	        app.showRow();
 	        $startStop.html('Stop');
-	        $startStop.css({ 'background-color': '#FF2603' });
+	        $startStop.css({ 'background-color': '#192837' });
 	      } else {
 	        app.stopTimer();
 	        $startStop.html('Start');
-	        $startStop.css({ 'background-color': '#01C700' });
+	        $startStop.css({ 'background-color': '#17B20A' });
 	      }
 	    });
 	  },
@@ -45208,13 +45204,12 @@
 	      itemData = {
 	        row: currentIndex,
 	        time: splitCount,
+	        droppedPin: pinDropped,
 	        penalty: extraTime,
 	        rowTime: rowTime,
-	        points: points,
-	        droppedPin: pinDropped
+	        points: points
 	      };
 	      app.showRow();
-	
 	      testData.push(itemData);
 	      model.save();
 	      splitCount = 0;
@@ -45224,6 +45219,7 @@
 	    (0, _jquery2['default'])('.item-container').html(tweezerTemplate(twzRows[currentIndex]));
 	    currentIndex++;
 	    app.droppedPin();
+	    app.pickedUp();
 	  },
 	  // resetTimer: function(){
 	  //   var $reset = $('.reset-button');
@@ -45272,6 +45268,12 @@
 	    pinDropped = 0;
 	    extraTime = 0;
 	  },
+	  pickedUp: function pickedUp() {
+	    (0, _jquery2['default'])('.picked-up').click(function () {
+	      pinDropped--;
+	      extraTime -= 5;
+	    });
+	  },
 	  createTable: function createTable() {
 	    (0, _jquery2['default'])('.stopwatch-container').html(_templatesDataTableHtml2['default']);
 	    _d32['default'].text(result, function (data) {
@@ -45283,10 +45285,11 @@
 	        return d;
 	      });
 	    });
+	    localStorage.clear();
 	  },
 	  createCSV: function createCSV() {
 	    (0, _jquery2['default'])('.create-csv').on('click', function () {
-	      var fields = ['row', 'time', 'penalty', 'rowTime', 'points', 'droppedPin'];
+	      var fields = ['row', 'time', 'droppedPin', 'penalty', 'rowTime', 'points'];
 	      try {
 	        result = (0, _json2csv2['default'])({ data: testData, fields: fields });
 	        app.createTable();
@@ -45339,7 +45342,7 @@
 /* 65 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"tweezer-row\">{{id}}</div>\n<button class=\"dropped-pin\">Dropped Pin</button>";
+	module.exports = "<div class=\"tweezer-row\">{{id}}</div>\n<button class=\"btn btn-default dropped-pin\">Dropped</button>\n<button class=\"btn btn-default picked-up\">Picked Up</button>";
 
 /***/ },
 /* 66 */

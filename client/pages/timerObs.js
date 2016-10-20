@@ -79,7 +79,7 @@ var app = {
         $('.cum-counter').html('Cumulative Time: ' + cumCount);
       }, 600);
       $startStop.html('Stop');
-      $startStop.css({'background-color': '#DB3107'});
+      $startStop.css({'background-color': '#192837'});
       app.showItem();
       } else {
         app.stopTimer();
@@ -96,7 +96,7 @@ var app = {
     app.displayTimes();
     // app.addPoints();
     itemData = {
-      itemNumber: index - 1,
+      itemNumber: index,
       time: splitCount,
       points: points
     };
@@ -108,6 +108,7 @@ var app = {
     var $study = $('.misc-button');
     $study.on('click', function(){
       if (timerRunning === false) {
+        timerRunning = true;
         interval = setInterval(function(){ 
           if (splitCount === 50) {
             interval = clearInterval(interval);
@@ -195,6 +196,7 @@ var app = {
           .append('td')
           .text(function(d) { return d; });
     });
+    localStorage.clear();
   },
   createCSV: function(){
     $('.create-csv').on('click', function(){

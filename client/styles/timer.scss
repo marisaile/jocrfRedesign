@@ -22,7 +22,7 @@
 
     .test-name {
       font-family: 'Marcellus', sans-serif;
-      font-size: 40px;
+      font-size: 50px;
       text-align: center;
     }
     .cum-counter {
@@ -136,16 +136,34 @@
       }
       .dropped-pin {
         position: relative;
+        display: inline-block;
+        top: 150px;
+        left: 50px;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        font-size: 18px;
+        text-align: center;
+        background-color: #555;
+        color: #fff;
+      }
+      .dropped-pin:focus {
+        outline: none;
+      }
+      .picked-up {
+        position: relative;
+        display: inline-block;
         top: 150px;
         left: 150px;
         width: 100px;
         height: 100px;
         border-radius: 100%;
         font-size: 18px;
-        background-color: #5D0A57;
-        color: #fff;
+        text-align: center;
+        background-color: #fff;
+        color: #555;
       }
-      .dropped-pin:focus {
+      .picked-up:focus {
         outline: none;
       }
     }
@@ -172,7 +190,8 @@
 }
 
 table {
-
+  position: relative;
+  margin: 50px auto;
   font-family: 'Ubuntu Mono', monospace;
   font-size: 20px;
 

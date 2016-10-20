@@ -51,7 +51,7 @@ module.exports = [
     word: 'baker',
     'response': [
       'butcher', 
-      'cook'
+      ' cook'
     ] 
   },
   {
@@ -98,14 +98,14 @@ module.exports = [
     word: 'tough',
     response: [
       'soft', 
-      'easy'
+      ' easy'
     ] 
   },
   {
     word: 'wicked', 
     response: [
       'good', 
-      'nice'
+      ' nice'
     ] 
   },
   {
@@ -120,14 +120,14 @@ module.exports = [
     word: 'city', 
     response: [
       'town', 
-      'country'
+      ' country'
     ] 
   },
   {
     word: 'square', 
     response: [
       'circle', 
-      'round'
+      ' round'
     ] 
   },
   {
@@ -206,8 +206,8 @@ module.exports = [
     word: 'joy',
     response: [
       'sorrow', 
-      'sad', 
-      'sadness'
+      ' sad', 
+      ' sadness'
     ] 
   },
   {
@@ -246,10 +246,10 @@ module.exports = [
     word: 'yellow',
     response: [
       'white', 
-      'black', 
-      'red', 
-      'blue', 
-      'green'
+      ' black', 
+      ' red', 
+      ' blue', 
+      ' green'
     ] 
   },
   {
@@ -262,7 +262,7 @@ module.exports = [
   },
   {
     word: 'bath',
-    reponse: 'shower'
+    response: 'shower'
   },
   {
     word: 'window',
@@ -272,7 +272,7 @@ module.exports = [
     word: 'together',
     response: [
       'apart', 
-      'separate'
+      ' separate'
     ] 
   },
   {
@@ -291,7 +291,7 @@ module.exports = [
     word: 'far',
     response: [
       'near', 
-      'close'
+      ' close'
     ] 
   },
   {
@@ -310,7 +310,7 @@ module.exports = [
     word: 'sleep',
     response: [
       'wake',
-      'awake'
+      ' awake'
     ]
   },
   {
@@ -333,7 +333,7 @@ module.exports = [
     word: 'rough',
     response: [
       'smooth',
-      'soft'
+      ' soft'
     ]
   },
   {
@@ -344,7 +344,7 @@ module.exports = [
     word: 'unseen',
     response: [
       'unheard', 
-      'seen'
+      ' seen'
     ]
   },
   {
@@ -383,7 +383,7 @@ module.exports = [
     word: 'ham',
     response: [
       'egg', 
-      'eggs'
+      ' eggs'
     ]
   },
   {
@@ -406,7 +406,7 @@ module.exports = [
     word: 'health',
     response: [
       'sick', 
-      'sickness'
+      ' sickness'
     ]
   },
   {
