@@ -8,7 +8,7 @@ import json2csv from 'json2csv';
 import d3 from 'd3';
 import dataTable from 'templates/dataTable.html';
 
-// observation specific 
+
 var obsItems = require('components/observation');
 var obsItemTemplate; 
 var currentIndex = 0;
@@ -54,7 +54,6 @@ var app = {
   render: function(){
     app.bindClickEvents();
   },
-  // observation specific
   compileTemplate: function(){
     obsItemTemplate = Handlebars.compile(template);
   },
@@ -65,22 +64,21 @@ var app = {
         if (timerRunning === false) {
           timerRunning = true;
         }
-      // startTime = new Date();
-      interval = setInterval(function(){
-        splitCount++;
-        if (splitCount < 10) {
-          splitCount = '0' + splitCount;
-        }
-        $('.split-counter').html('Individual Time: ' + splitCount);
-        cumCount++;
-        if (cumCount < 10) {
-          cumCount = '0' + cumCount;
-        }
-        $('.cum-counter').html('Cumulative Time: ' + cumCount);
-      }, 600);
-      $startStop.html('Stop');
-      $startStop.css({'background-color': '#192837'});
-      app.showItem();
+        interval = setInterval(function(){
+          splitCount++;
+          if (splitCount < 10) {
+            splitCount = '0' + splitCount;
+          }
+          $('.split-counter').html('Individual Time: ' + splitCount);
+          cumCount++;
+          if (cumCount < 10) {
+            cumCount = '0' + cumCount;
+          }
+          $('.cum-counter').html('Cumulative Time: ' + cumCount);
+        }, 600);
+        $startStop.html('Stop');
+        $startStop.css({'background-color': '#192837'});
+        app.showItem();
       } else {
         app.stopTimer();
         $startStop.html('Start');
@@ -94,7 +92,6 @@ var app = {
       timerRunning = false;
     }
     app.displayTimes();
-    // app.addPoints();
     itemData = {
       itemNumber: index,
       time: splitCount,
@@ -121,7 +118,7 @@ var app = {
             splitCount++;
             $study.css({
               'background-color': '#5D0A57'
-            })
+            });
             if (splitCount < 10) {
               splitCount = '0' + splitCount;
             }
@@ -139,7 +136,6 @@ var app = {
   resetTimer: function(){
     var $reset = $('.reset-button');
     $reset.on('click', function(){
-      // interval = clearInterval(interval);
       if (timerRunning === false) {
         app.clearEverything(); 
       } 
@@ -160,12 +156,16 @@ var app = {
   },
   clearEverything: function(){
     testData = [];
+    pointsArray = [];
     splitCount = 0;
     cumCount = 0;
     index = 0;
+    currentIndex = 0;
+
     
     $('.split-counter').html('Individual Time: ' + '0' + splitCount);
     $('.cum-counter').html('Cumulative Time: ' + '0' + cumCount);
+    $('.item-container').html('');
     $('.score').html('Score =');
   },
 
@@ -174,7 +174,6 @@ var app = {
     var pointsTotal = _.sum(pointsArray);
     $('.score').html('Score = ' + pointsTotal);
   },
-  // observation specific
   showItem: function(){
     $('.item-container').html(obsItemTemplate(obsItems[currentIndex]));
     currentIndex++;
@@ -183,14 +182,11 @@ var app = {
     $('.stopwatch-container').html(dataTable);
     d3.text(result, function(data) {
       var parsedCSV = d3.csv.parseRows(result);
-
       var container = d3.select('.datatable')
         .append('table')
-
         .selectAll('tr')
           .data(parsedCSV).enter()
           .append('tr')
-
         .selectAll('td')
           .data(function(d) { return d; }).enter()
           .append('td')
@@ -200,7 +196,6 @@ var app = {
   },
   createCSV: function(){
     $('.create-csv').on('click', function(){
-
       var fields = ['itemNumber', 'time', 'points'];
       try {
         result = json2csv({ data: testData, fields: fields });
@@ -219,10 +214,6 @@ var app = {
 };
 
 module.exports = app;
-
-
-
-
 
 // app.displayTimes();
       // itemData = {

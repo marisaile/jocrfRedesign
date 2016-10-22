@@ -6,7 +6,6 @@ var splitCount = 0;
 var cumCount = 0;
 var timerRunning = false; 
 var splitTimes = [];
-var index = 0;
 var points;
 var pointsArray = [];
 
@@ -24,7 +23,6 @@ var app = {
         if (timerRunning === false) {
           timerRunning = true;
         }
-        // startTime = new Date();
         interval = setInterval(function(){
           splitCount++;
           if (splitCount < 10) {
@@ -52,7 +50,6 @@ var app = {
       timerRunning = false;
     }
     splitTimes.push(splitCount);
-    // app.displayTimes();
     app.addPoints();
     splitCount = 0;
   },
@@ -60,7 +57,6 @@ var app = {
     var $split = $('.misc-button');
     $split.on('click', function(){
       splitTimes.push(splitCount);
-      // app.displayTimes();
       app.addPoints(); 
       splitCount = 0;
     });     
@@ -68,32 +64,17 @@ var app = {
   resetTimer: function(){
     var $reset = $('.reset-button');
     $reset.on('click', function(){
-      // interval = clearInterval(interval);
       if (timerRunning === false) {
         app.clearEverything(); 
       } 
     });   
   },
-  // displayTimes: function(){
-  //   $('.time-col').append('Item ' + '' + (index + 1) + ': ' + ' ' + splitTimes[index] + '<br />'); 
-  //   if (splitTimes[index] < 10) {
-  //     points = 3;
-  //   } else if (splitTimes[index] > 9 && splitTimes[index] < 20) {
-  //     points = 2;
-  //   } else if (splitTimes[index] > 19 && splitTimes[index] < 30){
-  //     points = 1;
-  //   } else {
-  //     points = 0;
-  //   }
-  //   $('.points-col').append(points + '<br />');
-  //   index++;
-  // },
   clearEverything: function(){
     splitTimes = [];
     pointsArray = [];
     splitCount = 0;
     cumCount = 0;
-    index = 0;
+
     $('.time-col').html('<h1>Times</h1');
     $('.points-col').html('<h1>Points</h1>');
     $('.split-counter').html('Individual Time: ' + '0' + splitCount);
@@ -111,8 +92,8 @@ var app = {
     app.resetTimer();
   }
 };
-
 module.exports = app;
+
 
 // var startTime; 
 // var interval; 
@@ -177,5 +158,6 @@ module.exports = app;
 // };
 
 // module.exports = app;
+
 
      

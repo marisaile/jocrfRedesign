@@ -17,7 +17,8 @@ import timerGen from 'pages/timerGen';
 // import three from 'pages/three';
 // import bookController from 'pages/books/booksController';
 // import vdt from 'pages/visualDesigns';
-// import Conclave from 'pages/dalquest';
+import Conclave from 'pages/dalquest';
+
 $(function() {
 
   mainPage.init();
@@ -68,9 +69,9 @@ $(function() {
     // case '/pages/visualDesigns.html':
     //   vdt.init();
     // break;
-    // case '/pages/dalquest.html':
-    //   Conclave.init();
-    // break;
+    case '/pages/dalquest.html':
+      Conclave.init();
+    break;
     default: break;
   }
 

@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Monda);
-@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
 @import url(https://fonts.googleapis.com/css?family=Marcellus);
 @import url(https://fonts.googleapis.com/css?family=Cagliostro);
 @import url(https://fonts.googleapis.com/css?family=Reem+Kufi);
@@ -25,6 +25,20 @@
       font-size: 50px;
       text-align: center;
     }
+    .form-number {
+      font-family: 'Marcellus', sans-serif;
+      font-size: 25px;
+      text-align: center;
+    }
+    .reset-button {
+      position: relative;
+      display: block;
+      left: 20px;
+      top: 60px;
+      font-family: 'Marcellus', sans-serif;
+      font-size: 15px;
+      background-color: #F2F3F5;
+    } 
     .cum-counter {
       position: relative;
       font-family: 'Marcellus', sans-serif;
@@ -74,20 +88,11 @@
     }
     .btn.misc-button:focus {
       outline: none;
-    }
-    /*.reset-button {
-      position: relative;
-      display: inline-block;
-      left: 240px;
-      top: 700px;
-      font-family: 'Exo 2', sans-serif;
-      font-size: 25px;
-      background-color: white;
-    }  */
+    } 
     .score {
       position: relative;
       display: block;
-      top: 550px;
+      top: 500px;
       left: 550px;
       font-family: 'Marcellus', sans-serif;
       font-size: 25px;
@@ -96,7 +101,7 @@
       background-color: #F0F1F3;
       position: relative;
       display: block;
-      top: 150px;
+      top: 110px;
       left: 550px;
       font-family: 'Marcellus', sans-serif;
       font-size: 25px;
@@ -108,7 +113,7 @@
       position: relative;
       display: block;
       left: 25px;
-      top: 200px;
+      top: 150px;
       height: 400px;
       width: 400px;
       border: 1px solid black;
@@ -192,7 +197,7 @@
 table {
   position: relative;
   margin: 50px auto;
-  font-family: 'Ubuntu Mono', monospace;
+  font-family: 'Ubuntu', monospace;
   font-size: 20px;
 
   tr {

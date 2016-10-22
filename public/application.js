@@ -62,7 +62,7 @@
 	
 	var _pagesSchoolBooks2 = _interopRequireDefault(_pagesSchoolBooks);
 	
-	var _pagesTimerObs = __webpack_require__(13);
+	var _pagesTimerObs = __webpack_require__(43);
 	
 	var _pagesTimerObs2 = _interopRequireDefault(_pagesTimerObs);
 	
@@ -87,7 +87,11 @@
 	// import three from 'pages/three';
 	// import bookController from 'pages/books/booksController';
 	// import vdt from 'pages/visualDesigns';
-	// import Conclave from 'pages/dalquest';
+	
+	var _pagesDalquest = __webpack_require__(68);
+	
+	var _pagesDalquest2 = _interopRequireDefault(_pagesDalquest);
+	
 	(0, _jquery2['default'])(function () {
 	
 	  _componentsMainPage2['default'].init();
@@ -138,9 +142,9 @@
 	    // case '/pages/visualDesigns.html':
 	    //   vdt.init();
 	    // break;
-	    // case '/pages/dalquest.html':
-	    //   Conclave.init();
-	    // break;
+	    case '/pages/dalquest.html':
+	      _pagesDalquest2['default'].init();
+	      break;
 	    default:
 	      break;
 	  }
@@ -10004,7 +10008,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","school-nav":"school-nav","row":"row","school-main":"school-main","img-responsive":"img-responsive","book-image":"book-image","menu":"menu","highlighted":"highlighted","timer-main":"timer-main","stopwatch-container":"stopwatch-container","test-name":"test-name","cum-counter":"cum-counter","split-counter":"split-counter","start-stop-button":"start-stop-button","misc-button":"misc-button","score":"score","create-csv":"create-csv","item-container":"item-container","tweezer-row":"tweezer-row","dropped-pin":"dropped-pin","picked-up":"picked-up","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","sig-yes":"sig-yes","sig-no":"sig-no","sig-response":"sig-response","joc2012":"joc2012","joc2012-header":"joc2012-header","slideshow":"slideshow"};
+	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-header":"school-header","school-nav":"school-nav","row":"row","school-main":"school-main","image-container":"image-container","col-md-4":"col-md-4","img-responsive":"img-responsive","book-image":"book-image","timer-main":"timer-main","stopwatch-container":"stopwatch-container","test-name":"test-name","form-number":"form-number","reset-button":"reset-button","cum-counter":"cum-counter","split-counter":"split-counter","start-stop-button":"start-stop-button","misc-button":"misc-button","score":"score","create-csv":"create-csv","item-container":"item-container","tweezer-row":"tweezer-row","dropped-pin":"dropped-pin","picked-up":"picked-up","no-bootstrap":"no-bootstrap","vdt-container":"vdt-container","btn-start":"btn-start","vdt-image-container":"vdt-image-container","vdt-image":"vdt-image","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","sig-yes":"sig-yes","sig-no":"sig-no","sig-response":"sig-response","joc2012":"joc2012","joc2012-header":"joc2012-header","slideshow":"slideshow"};
 
 /***/ },
 /* 3 */,
@@ -10073,62 +10077,64 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	// import Handlebars from 'handlebars';
+	var _handlebars = __webpack_require__(10);
 	
-	var _underscore = __webpack_require__(10);
+	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _underscore2 = _interopRequireDefault(_underscore);
+	// import _ from 'underscore';
 	
-	var _templatesSchoolSchoolBookContainerHtml = __webpack_require__(11);
+	var _templatesSchoolSchoolBookContainerHtml = __webpack_require__(41);
 	
 	var _templatesSchoolSchoolBookContainerHtml2 = _interopRequireDefault(_templatesSchoolSchoolBookContainerHtml);
 	
-	var _templatesSchoolBookPageHeaderHtml = __webpack_require__(12);
+	var _templatesSchoolBookPageHeaderHtml = __webpack_require__(42);
 	
 	var _templatesSchoolBookPageHeaderHtml2 = _interopRequireDefault(_templatesSchoolBookPageHeaderHtml);
 	
 	// import bookSuggestion from 'templates/school/suggestBook.html';
 	// import Conclave from 'components/schoolbooks/carousel';
 	
-	// var compiledTemplate = Handlebars.compile(template);
-	// var books = [];
-	
 	var $ = __webpack_require__(1);
 	
-	window.jQuery = window.$ = $;var app = {
+	window.jQuery = window.$ = $;
+	
+	var compiledTemplate = _handlebars2['default'].compile(_templatesSchoolSchoolBookContainerHtml2['default']);
+	var books = [];
+	
+	var app = {
 	  init: function init() {
 	    app.render();
 	  },
 	  render: function render() {
 	    $('.school-header').html(_templatesSchoolBookPageHeaderHtml2['default']);
-	    // Conclave.init();
-	    // app.fetchBooks();
+	    app.fetchBooks();
 	    // $('.btn-suggestion').click(function(){
 	    //   $('.thank-you').removeClass('hidden');
 	    // });
+	  },
+	  fetchBooks: function fetchBooks() {
+	    $.ajax({
+	      url: '/api/books',
+	      method: 'GET',
+	      complete: function complete(response) {
+	        var dataString = response.responseText;
+	        var data = JSON.parse(dataString);
+	        books = data;
+	        app.displayBooks();
+	      }
+	    });
+	  },
+	  displayBooks: function displayBooks() {
+	    // var currentSubject = event.target.id;
+	    // var filteredBooks = _.filter(books, function(book){
+	    //   return (book.subject === currentSubject);
+	    // });
+	    var booksHtml = books.map(function (book) {
+	      return compiledTemplate(book);
+	    });
+	    $('.gallery').html(booksHtml);
+	    $('.school-header').html(_templatesSchoolBookPageHeaderHtml2['default']);
 	  }
-	  // fetchBooks: function(){
-	  //   $.ajax({
-	  //     url: '/api/books',
-	  //     method: 'GET',
-	  //     complete: function(response){
-	  //       var dataString = response.responseText;
-	  //       var data = JSON.parse(dataString);
-	  //       books = data; 
-	  //       app.displayBooks();
-	  //     } 
-	  //   });   
-	  // },
-	  // displayBooks: function() {
-	  //   // var currentSubject = event.target.id;
-	  //   // var filteredBooks = _.filter(books, function(book){
-	  //   //   return (book.subject === currentSubject);
-	  //   // });
-	  // //   var booksHtml = filteredBooks.map(function(book){
-	  // //     return compiledTemplate(book);
-	  // //   });
-	  // //   $('.school-header').html(header);   
-	  // // }
 	};
 	
 	module.exports = app;
@@ -10145,1837 +10151,15 @@
 /* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscore.js 1.8.3
-	//     http://underscorejs.org
-	//     (c) 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
-	//     Underscore may be freely distributed under the MIT license.
-	
-	(function() {
-	
-	  // Baseline setup
-	  // --------------
-	
-	  // Establish the root object, `window` in the browser, or `exports` on the server.
-	  var root = this;
-	
-	  // Save the previous value of the `_` variable.
-	  var previousUnderscore = root._;
-	
-	  // Save bytes in the minified (but not gzipped) version:
-	  var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;
-	
-	  // Create quick reference variables for speed access to core prototypes.
-	  var
-	    push             = ArrayProto.push,
-	    slice            = ArrayProto.slice,
-	    toString         = ObjProto.toString,
-	    hasOwnProperty   = ObjProto.hasOwnProperty;
-	
-	  // All **ECMAScript 5** native function implementations that we hope to use
-	  // are declared here.
-	  var
-	    nativeIsArray      = Array.isArray,
-	    nativeKeys         = Object.keys,
-	    nativeBind         = FuncProto.bind,
-	    nativeCreate       = Object.create;
-	
-	  // Naked function reference for surrogate-prototype-swapping.
-	  var Ctor = function(){};
-	
-	  // Create a safe reference to the Underscore object for use below.
-	  var _ = function(obj) {
-	    if (obj instanceof _) return obj;
-	    if (!(this instanceof _)) return new _(obj);
-	    this._wrapped = obj;
-	  };
-	
-	  // Export the Underscore object for **Node.js**, with
-	  // backwards-compatibility for the old `require()` API. If we're in
-	  // the browser, add `_` as a global object.
-	  if (true) {
-	    if (typeof module !== 'undefined' && module.exports) {
-	      exports = module.exports = _;
-	    }
-	    exports._ = _;
-	  } else {
-	    root._ = _;
-	  }
-	
-	  // Current version.
-	  _.VERSION = '1.8.3';
-	
-	  // Internal function that returns an efficient (for current engines) version
-	  // of the passed-in callback, to be repeatedly applied in other Underscore
-	  // functions.
-	  var optimizeCb = function(func, context, argCount) {
-	    if (context === void 0) return func;
-	    switch (argCount == null ? 3 : argCount) {
-	      case 1: return function(value) {
-	        return func.call(context, value);
-	      };
-	      case 2: return function(value, other) {
-	        return func.call(context, value, other);
-	      };
-	      case 3: return function(value, index, collection) {
-	        return func.call(context, value, index, collection);
-	      };
-	      case 4: return function(accumulator, value, index, collection) {
-	        return func.call(context, accumulator, value, index, collection);
-	      };
-	    }
-	    return function() {
-	      return func.apply(context, arguments);
-	    };
-	  };
-	
-	  // A mostly-internal function to generate callbacks that can be applied
-	  // to each element in a collection, returning the desired result — either
-	  // identity, an arbitrary callback, a property matcher, or a property accessor.
-	  var cb = function(value, context, argCount) {
-	    if (value == null) return _.identity;
-	    if (_.isFunction(value)) return optimizeCb(value, context, argCount);
-	    if (_.isObject(value)) return _.matcher(value);
-	    return _.property(value);
-	  };
-	  _.iteratee = function(value, context) {
-	    return cb(value, context, Infinity);
-	  };
-	
-	  // An internal function for creating assigner functions.
-	  var createAssigner = function(keysFunc, undefinedOnly) {
-	    return function(obj) {
-	      var length = arguments.length;
-	      if (length < 2 || obj == null) return obj;
-	      for (var index = 1; index < length; index++) {
-	        var source = arguments[index],
-	            keys = keysFunc(source),
-	            l = keys.length;
-	        for (var i = 0; i < l; i++) {
-	          var key = keys[i];
-	          if (!undefinedOnly || obj[key] === void 0) obj[key] = source[key];
-	        }
-	      }
-	      return obj;
-	    };
-	  };
-	
-	  // An internal function for creating a new object that inherits from another.
-	  var baseCreate = function(prototype) {
-	    if (!_.isObject(prototype)) return {};
-	    if (nativeCreate) return nativeCreate(prototype);
-	    Ctor.prototype = prototype;
-	    var result = new Ctor;
-	    Ctor.prototype = null;
-	    return result;
-	  };
-	
-	  var property = function(key) {
-	    return function(obj) {
-	      return obj == null ? void 0 : obj[key];
-	    };
-	  };
-	
-	  // Helper for collection methods to determine whether a collection
-	  // should be iterated as an array or as an object
-	  // Related: http://people.mozilla.org/~jorendorff/es6-draft.html#sec-tolength
-	  // Avoids a very nasty iOS 8 JIT bug on ARM-64. #2094
-	  var MAX_ARRAY_INDEX = Math.pow(2, 53) - 1;
-	  var getLength = property('length');
-	  var isArrayLike = function(collection) {
-	    var length = getLength(collection);
-	    return typeof length == 'number' && length >= 0 && length <= MAX_ARRAY_INDEX;
-	  };
-	
-	  // Collection Functions
-	  // --------------------
-	
-	  // The cornerstone, an `each` implementation, aka `forEach`.
-	  // Handles raw objects in addition to array-likes. Treats all
-	  // sparse array-likes as if they were dense.
-	  _.each = _.forEach = function(obj, iteratee, context) {
-	    iteratee = optimizeCb(iteratee, context);
-	    var i, length;
-	    if (isArrayLike(obj)) {
-	      for (i = 0, length = obj.length; i < length; i++) {
-	        iteratee(obj[i], i, obj);
-	      }
-	    } else {
-	      var keys = _.keys(obj);
-	      for (i = 0, length = keys.length; i < length; i++) {
-	        iteratee(obj[keys[i]], keys[i], obj);
-	      }
-	    }
-	    return obj;
-	  };
-	
-	  // Return the results of applying the iteratee to each element.
-	  _.map = _.collect = function(obj, iteratee, context) {
-	    iteratee = cb(iteratee, context);
-	    var keys = !isArrayLike(obj) && _.keys(obj),
-	        length = (keys || obj).length,
-	        results = Array(length);
-	    for (var index = 0; index < length; index++) {
-	      var currentKey = keys ? keys[index] : index;
-	      results[index] = iteratee(obj[currentKey], currentKey, obj);
-	    }
-	    return results;
-	  };
-	
-	  // Create a reducing function iterating left or right.
-	  function createReduce(dir) {
-	    // Optimized iterator function as using arguments.length
-	    // in the main function will deoptimize the, see #1991.
-	    function iterator(obj, iteratee, memo, keys, index, length) {
-	      for (; index >= 0 && index < length; index += dir) {
-	        var currentKey = keys ? keys[index] : index;
-	        memo = iteratee(memo, obj[currentKey], currentKey, obj);
-	      }
-	      return memo;
-	    }
-	
-	    return function(obj, iteratee, memo, context) {
-	      iteratee = optimizeCb(iteratee, context, 4);
-	      var keys = !isArrayLike(obj) && _.keys(obj),
-	          length = (keys || obj).length,
-	          index = dir > 0 ? 0 : length - 1;
-	      // Determine the initial value if none is provided.
-	      if (arguments.length < 3) {
-	        memo = obj[keys ? keys[index] : index];
-	        index += dir;
-	      }
-	      return iterator(obj, iteratee, memo, keys, index, length);
-	    };
-	  }
-	
-	  // **Reduce** builds up a single result from a list of values, aka `inject`,
-	  // or `foldl`.
-	  _.reduce = _.foldl = _.inject = createReduce(1);
-	
-	  // The right-associative version of reduce, also known as `foldr`.
-	  _.reduceRight = _.foldr = createReduce(-1);
-	
-	  // Return the first value which passes a truth test. Aliased as `detect`.
-	  _.find = _.detect = function(obj, predicate, context) {
-	    var key;
-	    if (isArrayLike(obj)) {
-	      key = _.findIndex(obj, predicate, context);
-	    } else {
-	      key = _.findKey(obj, predicate, context);
-	    }
-	    if (key !== void 0 && key !== -1) return obj[key];
-	  };
-	
-	  // Return all the elements that pass a truth test.
-	  // Aliased as `select`.
-	  _.filter = _.select = function(obj, predicate, context) {
-	    var results = [];
-	    predicate = cb(predicate, context);
-	    _.each(obj, function(value, index, list) {
-	      if (predicate(value, index, list)) results.push(value);
-	    });
-	    return results;
-	  };
-	
-	  // Return all the elements for which a truth test fails.
-	  _.reject = function(obj, predicate, context) {
-	    return _.filter(obj, _.negate(cb(predicate)), context);
-	  };
-	
-	  // Determine whether all of the elements match a truth test.
-	  // Aliased as `all`.
-	  _.every = _.all = function(obj, predicate, context) {
-	    predicate = cb(predicate, context);
-	    var keys = !isArrayLike(obj) && _.keys(obj),
-	        length = (keys || obj).length;
-	    for (var index = 0; index < length; index++) {
-	      var currentKey = keys ? keys[index] : index;
-	      if (!predicate(obj[currentKey], currentKey, obj)) return false;
-	    }
-	    return true;
-	  };
-	
-	  // Determine if at least one element in the object matches a truth test.
-	  // Aliased as `any`.
-	  _.some = _.any = function(obj, predicate, context) {
-	    predicate = cb(predicate, context);
-	    var keys = !isArrayLike(obj) && _.keys(obj),
-	        length = (keys || obj).length;
-	    for (var index = 0; index < length; index++) {
-	      var currentKey = keys ? keys[index] : index;
-	      if (predicate(obj[currentKey], currentKey, obj)) return true;
-	    }
-	    return false;
-	  };
-	
-	  // Determine if the array or object contains a given item (using `===`).
-	  // Aliased as `includes` and `include`.
-	  _.contains = _.includes = _.include = function(obj, item, fromIndex, guard) {
-	    if (!isArrayLike(obj)) obj = _.values(obj);
-	    if (typeof fromIndex != 'number' || guard) fromIndex = 0;
-	    return _.indexOf(obj, item, fromIndex) >= 0;
-	  };
-	
-	  // Invoke a method (with arguments) on every item in a collection.
-	  _.invoke = function(obj, method) {
-	    var args = slice.call(arguments, 2);
-	    var isFunc = _.isFunction(method);
-	    return _.map(obj, function(value) {
-	      var func = isFunc ? method : value[method];
-	      return func == null ? func : func.apply(value, args);
-	    });
-	  };
-	
-	  // Convenience version of a common use case of `map`: fetching a property.
-	  _.pluck = function(obj, key) {
-	    return _.map(obj, _.property(key));
-	  };
-	
-	  // Convenience version of a common use case of `filter`: selecting only objects
-	  // containing specific `key:value` pairs.
-	  _.where = function(obj, attrs) {
-	    return _.filter(obj, _.matcher(attrs));
-	  };
-	
-	  // Convenience version of a common use case of `find`: getting the first object
-	  // containing specific `key:value` pairs.
-	  _.findWhere = function(obj, attrs) {
-	    return _.find(obj, _.matcher(attrs));
-	  };
-	
-	  // Return the maximum element (or element-based computation).
-	  _.max = function(obj, iteratee, context) {
-	    var result = -Infinity, lastComputed = -Infinity,
-	        value, computed;
-	    if (iteratee == null && obj != null) {
-	      obj = isArrayLike(obj) ? obj : _.values(obj);
-	      for (var i = 0, length = obj.length; i < length; i++) {
-	        value = obj[i];
-	        if (value > result) {
-	          result = value;
-	        }
-	      }
-	    } else {
-	      iteratee = cb(iteratee, context);
-	      _.each(obj, function(value, index, list) {
-	        computed = iteratee(value, index, list);
-	        if (computed > lastComputed || computed === -Infinity && result === -Infinity) {
-	          result = value;
-	          lastComputed = computed;
-	        }
-	      });
-	    }
-	    return result;
-	  };
-	
-	  // Return the minimum element (or element-based computation).
-	  _.min = function(obj, iteratee, context) {
-	    var result = Infinity, lastComputed = Infinity,
-	        value, computed;
-	    if (iteratee == null && obj != null) {
-	      obj = isArrayLike(obj) ? obj : _.values(obj);
-	      for (var i = 0, length = obj.length; i < length; i++) {
-	        value = obj[i];
-	        if (value < result) {
-	          result = value;
-	        }
-	      }
-	    } else {
-	      iteratee = cb(iteratee, context);
-	      _.each(obj, function(value, index, list) {
-	        computed = iteratee(value, index, list);
-	        if (computed < lastComputed || computed === Infinity && result === Infinity) {
-	          result = value;
-	          lastComputed = computed;
-	        }
-	      });
-	    }
-	    return result;
-	  };
-	
-	  // Shuffle a collection, using the modern version of the
-	  // [Fisher-Yates shuffle](http://en.wikipedia.org/wiki/Fisher–Yates_shuffle).
-	  _.shuffle = function(obj) {
-	    var set = isArrayLike(obj) ? obj : _.values(obj);
-	    var length = set.length;
-	    var shuffled = Array(length);
-	    for (var index = 0, rand; index < length; index++) {
-	      rand = _.random(0, index);
-	      if (rand !== index) shuffled[index] = shuffled[rand];
-	      shuffled[rand] = set[index];
-	    }
-	    return shuffled;
-	  };
-	
-	  // Sample **n** random values from a collection.
-	  // If **n** is not specified, returns a single random element.
-	  // The internal `guard` argument allows it to work with `map`.
-	  _.sample = function(obj, n, guard) {
-	    if (n == null || guard) {
-	      if (!isArrayLike(obj)) obj = _.values(obj);
-	      return obj[_.random(obj.length - 1)];
-	    }
-	    return _.shuffle(obj).slice(0, Math.max(0, n));
-	  };
-	
-	  // Sort the object's values by a criterion produced by an iteratee.
-	  _.sortBy = function(obj, iteratee, context) {
-	    iteratee = cb(iteratee, context);
-	    return _.pluck(_.map(obj, function(value, index, list) {
-	      return {
-	        value: value,
-	        index: index,
-	        criteria: iteratee(value, index, list)
-	      };
-	    }).sort(function(left, right) {
-	      var a = left.criteria;
-	      var b = right.criteria;
-	      if (a !== b) {
-	        if (a > b || a === void 0) return 1;
-	        if (a < b || b === void 0) return -1;
-	      }
-	      return left.index - right.index;
-	    }), 'value');
-	  };
-	
-	  // An internal function used for aggregate "group by" operations.
-	  var group = function(behavior) {
-	    return function(obj, iteratee, context) {
-	      var result = {};
-	      iteratee = cb(iteratee, context);
-	      _.each(obj, function(value, index) {
-	        var key = iteratee(value, index, obj);
-	        behavior(result, value, key);
-	      });
-	      return result;
-	    };
-	  };
-	
-	  // Groups the object's values by a criterion. Pass either a string attribute
-	  // to group by, or a function that returns the criterion.
-	  _.groupBy = group(function(result, value, key) {
-	    if (_.has(result, key)) result[key].push(value); else result[key] = [value];
-	  });
-	
-	  // Indexes the object's values by a criterion, similar to `groupBy`, but for
-	  // when you know that your index values will be unique.
-	  _.indexBy = group(function(result, value, key) {
-	    result[key] = value;
-	  });
-	
-	  // Counts instances of an object that group by a certain criterion. Pass
-	  // either a string attribute to count by, or a function that returns the
-	  // criterion.
-	  _.countBy = group(function(result, value, key) {
-	    if (_.has(result, key)) result[key]++; else result[key] = 1;
-	  });
-	
-	  // Safely create a real, live array from anything iterable.
-	  _.toArray = function(obj) {
-	    if (!obj) return [];
-	    if (_.isArray(obj)) return slice.call(obj);
-	    if (isArrayLike(obj)) return _.map(obj, _.identity);
-	    return _.values(obj);
-	  };
-	
-	  // Return the number of elements in an object.
-	  _.size = function(obj) {
-	    if (obj == null) return 0;
-	    return isArrayLike(obj) ? obj.length : _.keys(obj).length;
-	  };
-	
-	  // Split a collection into two arrays: one whose elements all satisfy the given
-	  // predicate, and one whose elements all do not satisfy the predicate.
-	  _.partition = function(obj, predicate, context) {
-	    predicate = cb(predicate, context);
-	    var pass = [], fail = [];
-	    _.each(obj, function(value, key, obj) {
-	      (predicate(value, key, obj) ? pass : fail).push(value);
-	    });
-	    return [pass, fail];
-	  };
-	
-	  // Array Functions
-	  // ---------------
-	
-	  // Get the first element of an array. Passing **n** will return the first N
-	  // values in the array. Aliased as `head` and `take`. The **guard** check
-	  // allows it to work with `_.map`.
-	  _.first = _.head = _.take = function(array, n, guard) {
-	    if (array == null) return void 0;
-	    if (n == null || guard) return array[0];
-	    return _.initial(array, array.length - n);
-	  };
-	
-	  // Returns everything but the last entry of the array. Especially useful on
-	  // the arguments object. Passing **n** will return all the values in
-	  // the array, excluding the last N.
-	  _.initial = function(array, n, guard) {
-	    return slice.call(array, 0, Math.max(0, array.length - (n == null || guard ? 1 : n)));
-	  };
-	
-	  // Get the last element of an array. Passing **n** will return the last N
-	  // values in the array.
-	  _.last = function(array, n, guard) {
-	    if (array == null) return void 0;
-	    if (n == null || guard) return array[array.length - 1];
-	    return _.rest(array, Math.max(0, array.length - n));
-	  };
-	
-	  // Returns everything but the first entry of the array. Aliased as `tail` and `drop`.
-	  // Especially useful on the arguments object. Passing an **n** will return
-	  // the rest N values in the array.
-	  _.rest = _.tail = _.drop = function(array, n, guard) {
-	    return slice.call(array, n == null || guard ? 1 : n);
-	  };
-	
-	  // Trim out all falsy values from an array.
-	  _.compact = function(array) {
-	    return _.filter(array, _.identity);
-	  };
-	
-	  // Internal implementation of a recursive `flatten` function.
-	  var flatten = function(input, shallow, strict, startIndex) {
-	    var output = [], idx = 0;
-	    for (var i = startIndex || 0, length = getLength(input); i < length; i++) {
-	      var value = input[i];
-	      if (isArrayLike(value) && (_.isArray(value) || _.isArguments(value))) {
-	        //flatten current level of array or arguments object
-	        if (!shallow) value = flatten(value, shallow, strict);
-	        var j = 0, len = value.length;
-	        output.length += len;
-	        while (j < len) {
-	          output[idx++] = value[j++];
-	        }
-	      } else if (!strict) {
-	        output[idx++] = value;
-	      }
-	    }
-	    return output;
-	  };
-	
-	  // Flatten out an array, either recursively (by default), or just one level.
-	  _.flatten = function(array, shallow) {
-	    return flatten(array, shallow, false);
-	  };
-	
-	  // Return a version of the array that does not contain the specified value(s).
-	  _.without = function(array) {
-	    return _.difference(array, slice.call(arguments, 1));
-	  };
-	
-	  // Produce a duplicate-free version of the array. If the array has already
-	  // been sorted, you have the option of using a faster algorithm.
-	  // Aliased as `unique`.
-	  _.uniq = _.unique = function(array, isSorted, iteratee, context) {
-	    if (!_.isBoolean(isSorted)) {
-	      context = iteratee;
-	      iteratee = isSorted;
-	      isSorted = false;
-	    }
-	    if (iteratee != null) iteratee = cb(iteratee, context);
-	    var result = [];
-	    var seen = [];
-	    for (var i = 0, length = getLength(array); i < length; i++) {
-	      var value = array[i],
-	          computed = iteratee ? iteratee(value, i, array) : value;
-	      if (isSorted) {
-	        if (!i || seen !== computed) result.push(value);
-	        seen = computed;
-	      } else if (iteratee) {
-	        if (!_.contains(seen, computed)) {
-	          seen.push(computed);
-	          result.push(value);
-	        }
-	      } else if (!_.contains(result, value)) {
-	        result.push(value);
-	      }
-	    }
-	    return result;
-	  };
-	
-	  // Produce an array that contains the union: each distinct element from all of
-	  // the passed-in arrays.
-	  _.union = function() {
-	    return _.uniq(flatten(arguments, true, true));
-	  };
-	
-	  // Produce an array that contains every item shared between all the
-	  // passed-in arrays.
-	  _.intersection = function(array) {
-	    var result = [];
-	    var argsLength = arguments.length;
-	    for (var i = 0, length = getLength(array); i < length; i++) {
-	      var item = array[i];
-	      if (_.contains(result, item)) continue;
-	      for (var j = 1; j < argsLength; j++) {
-	        if (!_.contains(arguments[j], item)) break;
-	      }
-	      if (j === argsLength) result.push(item);
-	    }
-	    return result;
-	  };
-	
-	  // Take the difference between one array and a number of other arrays.
-	  // Only the elements present in just the first array will remain.
-	  _.difference = function(array) {
-	    var rest = flatten(arguments, true, true, 1);
-	    return _.filter(array, function(value){
-	      return !_.contains(rest, value);
-	    });
-	  };
-	
-	  // Zip together multiple lists into a single array -- elements that share
-	  // an index go together.
-	  _.zip = function() {
-	    return _.unzip(arguments);
-	  };
-	
-	  // Complement of _.zip. Unzip accepts an array of arrays and groups
-	  // each array's elements on shared indices
-	  _.unzip = function(array) {
-	    var length = array && _.max(array, getLength).length || 0;
-	    var result = Array(length);
-	
-	    for (var index = 0; index < length; index++) {
-	      result[index] = _.pluck(array, index);
-	    }
-	    return result;
-	  };
-	
-	  // Converts lists into objects. Pass either a single array of `[key, value]`
-	  // pairs, or two parallel arrays of the same length -- one of keys, and one of
-	  // the corresponding values.
-	  _.object = function(list, values) {
-	    var result = {};
-	    for (var i = 0, length = getLength(list); i < length; i++) {
-	      if (values) {
-	        result[list[i]] = values[i];
-	      } else {
-	        result[list[i][0]] = list[i][1];
-	      }
-	    }
-	    return result;
-	  };
-	
-	  // Generator function to create the findIndex and findLastIndex functions
-	  function createPredicateIndexFinder(dir) {
-	    return function(array, predicate, context) {
-	      predicate = cb(predicate, context);
-	      var length = getLength(array);
-	      var index = dir > 0 ? 0 : length - 1;
-	      for (; index >= 0 && index < length; index += dir) {
-	        if (predicate(array[index], index, array)) return index;
-	      }
-	      return -1;
-	    };
-	  }
-	
-	  // Returns the first index on an array-like that passes a predicate test
-	  _.findIndex = createPredicateIndexFinder(1);
-	  _.findLastIndex = createPredicateIndexFinder(-1);
-	
-	  // Use a comparator function to figure out the smallest index at which
-	  // an object should be inserted so as to maintain order. Uses binary search.
-	  _.sortedIndex = function(array, obj, iteratee, context) {
-	    iteratee = cb(iteratee, context, 1);
-	    var value = iteratee(obj);
-	    var low = 0, high = getLength(array);
-	    while (low < high) {
-	      var mid = Math.floor((low + high) / 2);
-	      if (iteratee(array[mid]) < value) low = mid + 1; else high = mid;
-	    }
-	    return low;
-	  };
-	
-	  // Generator function to create the indexOf and lastIndexOf functions
-	  function createIndexFinder(dir, predicateFind, sortedIndex) {
-	    return function(array, item, idx) {
-	      var i = 0, length = getLength(array);
-	      if (typeof idx == 'number') {
-	        if (dir > 0) {
-	            i = idx >= 0 ? idx : Math.max(idx + length, i);
-	        } else {
-	            length = idx >= 0 ? Math.min(idx + 1, length) : idx + length + 1;
-	        }
-	      } else if (sortedIndex && idx && length) {
-	        idx = sortedIndex(array, item);
-	        return array[idx] === item ? idx : -1;
-	      }
-	      if (item !== item) {
-	        idx = predicateFind(slice.call(array, i, length), _.isNaN);
-	        return idx >= 0 ? idx + i : -1;
-	      }
-	      for (idx = dir > 0 ? i : length - 1; idx >= 0 && idx < length; idx += dir) {
-	        if (array[idx] === item) return idx;
-	      }
-	      return -1;
-	    };
-	  }
-	
-	  // Return the position of the first occurrence of an item in an array,
-	  // or -1 if the item is not included in the array.
-	  // If the array is large and already in sort order, pass `true`
-	  // for **isSorted** to use binary search.
-	  _.indexOf = createIndexFinder(1, _.findIndex, _.sortedIndex);
-	  _.lastIndexOf = createIndexFinder(-1, _.findLastIndex);
-	
-	  // Generate an integer Array containing an arithmetic progression. A port of
-	  // the native Python `range()` function. See
-	  // [the Python documentation](http://docs.python.org/library/functions.html#range).
-	  _.range = function(start, stop, step) {
-	    if (stop == null) {
-	      stop = start || 0;
-	      start = 0;
-	    }
-	    step = step || 1;
-	
-	    var length = Math.max(Math.ceil((stop - start) / step), 0);
-	    var range = Array(length);
-	
-	    for (var idx = 0; idx < length; idx++, start += step) {
-	      range[idx] = start;
-	    }
-	
-	    return range;
-	  };
-	
-	  // Function (ahem) Functions
-	  // ------------------
-	
-	  // Determines whether to execute a function as a constructor
-	  // or a normal function with the provided arguments
-	  var executeBound = function(sourceFunc, boundFunc, context, callingContext, args) {
-	    if (!(callingContext instanceof boundFunc)) return sourceFunc.apply(context, args);
-	    var self = baseCreate(sourceFunc.prototype);
-	    var result = sourceFunc.apply(self, args);
-	    if (_.isObject(result)) return result;
-	    return self;
-	  };
-	
-	  // Create a function bound to a given object (assigning `this`, and arguments,
-	  // optionally). Delegates to **ECMAScript 5**'s native `Function.bind` if
-	  // available.
-	  _.bind = function(func, context) {
-	    if (nativeBind && func.bind === nativeBind) return nativeBind.apply(func, slice.call(arguments, 1));
-	    if (!_.isFunction(func)) throw new TypeError('Bind must be called on a function');
-	    var args = slice.call(arguments, 2);
-	    var bound = function() {
-	      return executeBound(func, bound, context, this, args.concat(slice.call(arguments)));
-	    };
-	    return bound;
-	  };
-	
-	  // Partially apply a function by creating a version that has had some of its
-	  // arguments pre-filled, without changing its dynamic `this` context. _ acts
-	  // as a placeholder, allowing any combination of arguments to be pre-filled.
-	  _.partial = function(func) {
-	    var boundArgs = slice.call(arguments, 1);
-	    var bound = function() {
-	      var position = 0, length = boundArgs.length;
-	      var args = Array(length);
-	      for (var i = 0; i < length; i++) {
-	        args[i] = boundArgs[i] === _ ? arguments[position++] : boundArgs[i];
-	      }
-	      while (position < arguments.length) args.push(arguments[position++]);
-	      return executeBound(func, bound, this, this, args);
-	    };
-	    return bound;
-	  };
-	
-	  // Bind a number of an object's methods to that object. Remaining arguments
-	  // are the method names to be bound. Useful for ensuring that all callbacks
-	  // defined on an object belong to it.
-	  _.bindAll = function(obj) {
-	    var i, length = arguments.length, key;
-	    if (length <= 1) throw new Error('bindAll must be passed function names');
-	    for (i = 1; i < length; i++) {
-	      key = arguments[i];
-	      obj[key] = _.bind(obj[key], obj);
-	    }
-	    return obj;
-	  };
-	
-	  // Memoize an expensive function by storing its results.
-	  _.memoize = function(func, hasher) {
-	    var memoize = function(key) {
-	      var cache = memoize.cache;
-	      var address = '' + (hasher ? hasher.apply(this, arguments) : key);
-	      if (!_.has(cache, address)) cache[address] = func.apply(this, arguments);
-	      return cache[address];
-	    };
-	    memoize.cache = {};
-	    return memoize;
-	  };
-	
-	  // Delays a function for the given number of milliseconds, and then calls
-	  // it with the arguments supplied.
-	  _.delay = function(func, wait) {
-	    var args = slice.call(arguments, 2);
-	    return setTimeout(function(){
-	      return func.apply(null, args);
-	    }, wait);
-	  };
-	
-	  // Defers a function, scheduling it to run after the current call stack has
-	  // cleared.
-	  _.defer = _.partial(_.delay, _, 1);
-	
-	  // Returns a function, that, when invoked, will only be triggered at most once
-	  // during a given window of time. Normally, the throttled function will run
-	  // as much as it can, without ever going more than once per `wait` duration;
-	  // but if you'd like to disable the execution on the leading edge, pass
-	  // `{leading: false}`. To disable execution on the trailing edge, ditto.
-	  _.throttle = function(func, wait, options) {
-	    var context, args, result;
-	    var timeout = null;
-	    var previous = 0;
-	    if (!options) options = {};
-	    var later = function() {
-	      previous = options.leading === false ? 0 : _.now();
-	      timeout = null;
-	      result = func.apply(context, args);
-	      if (!timeout) context = args = null;
-	    };
-	    return function() {
-	      var now = _.now();
-	      if (!previous && options.leading === false) previous = now;
-	      var remaining = wait - (now - previous);
-	      context = this;
-	      args = arguments;
-	      if (remaining <= 0 || remaining > wait) {
-	        if (timeout) {
-	          clearTimeout(timeout);
-	          timeout = null;
-	        }
-	        previous = now;
-	        result = func.apply(context, args);
-	        if (!timeout) context = args = null;
-	      } else if (!timeout && options.trailing !== false) {
-	        timeout = setTimeout(later, remaining);
-	      }
-	      return result;
-	    };
-	  };
-	
-	  // Returns a function, that, as long as it continues to be invoked, will not
-	  // be triggered. The function will be called after it stops being called for
-	  // N milliseconds. If `immediate` is passed, trigger the function on the
-	  // leading edge, instead of the trailing.
-	  _.debounce = function(func, wait, immediate) {
-	    var timeout, args, context, timestamp, result;
-	
-	    var later = function() {
-	      var last = _.now() - timestamp;
-	
-	      if (last < wait && last >= 0) {
-	        timeout = setTimeout(later, wait - last);
-	      } else {
-	        timeout = null;
-	        if (!immediate) {
-	          result = func.apply(context, args);
-	          if (!timeout) context = args = null;
-	        }
-	      }
-	    };
-	
-	    return function() {
-	      context = this;
-	      args = arguments;
-	      timestamp = _.now();
-	      var callNow = immediate && !timeout;
-	      if (!timeout) timeout = setTimeout(later, wait);
-	      if (callNow) {
-	        result = func.apply(context, args);
-	        context = args = null;
-	      }
-	
-	      return result;
-	    };
-	  };
-	
-	  // Returns the first function passed as an argument to the second,
-	  // allowing you to adjust arguments, run code before and after, and
-	  // conditionally execute the original function.
-	  _.wrap = function(func, wrapper) {
-	    return _.partial(wrapper, func);
-	  };
-	
-	  // Returns a negated version of the passed-in predicate.
-	  _.negate = function(predicate) {
-	    return function() {
-	      return !predicate.apply(this, arguments);
-	    };
-	  };
-	
-	  // Returns a function that is the composition of a list of functions, each
-	  // consuming the return value of the function that follows.
-	  _.compose = function() {
-	    var args = arguments;
-	    var start = args.length - 1;
-	    return function() {
-	      var i = start;
-	      var result = args[start].apply(this, arguments);
-	      while (i--) result = args[i].call(this, result);
-	      return result;
-	    };
-	  };
-	
-	  // Returns a function that will only be executed on and after the Nth call.
-	  _.after = function(times, func) {
-	    return function() {
-	      if (--times < 1) {
-	        return func.apply(this, arguments);
-	      }
-	    };
-	  };
-	
-	  // Returns a function that will only be executed up to (but not including) the Nth call.
-	  _.before = function(times, func) {
-	    var memo;
-	    return function() {
-	      if (--times > 0) {
-	        memo = func.apply(this, arguments);
-	      }
-	      if (times <= 1) func = null;
-	      return memo;
-	    };
-	  };
-	
-	  // Returns a function that will be executed at most one time, no matter how
-	  // often you call it. Useful for lazy initialization.
-	  _.once = _.partial(_.before, 2);
-	
-	  // Object Functions
-	  // ----------------
-	
-	  // Keys in IE < 9 that won't be iterated by `for key in ...` and thus missed.
-	  var hasEnumBug = !{toString: null}.propertyIsEnumerable('toString');
-	  var nonEnumerableProps = ['valueOf', 'isPrototypeOf', 'toString',
-	                      'propertyIsEnumerable', 'hasOwnProperty', 'toLocaleString'];
-	
-	  function collectNonEnumProps(obj, keys) {
-	    var nonEnumIdx = nonEnumerableProps.length;
-	    var constructor = obj.constructor;
-	    var proto = (_.isFunction(constructor) && constructor.prototype) || ObjProto;
-	
-	    // Constructor is a special case.
-	    var prop = 'constructor';
-	    if (_.has(obj, prop) && !_.contains(keys, prop)) keys.push(prop);
-	
-	    while (nonEnumIdx--) {
-	      prop = nonEnumerableProps[nonEnumIdx];
-	      if (prop in obj && obj[prop] !== proto[prop] && !_.contains(keys, prop)) {
-	        keys.push(prop);
-	      }
-	    }
-	  }
-	
-	  // Retrieve the names of an object's own properties.
-	  // Delegates to **ECMAScript 5**'s native `Object.keys`
-	  _.keys = function(obj) {
-	    if (!_.isObject(obj)) return [];
-	    if (nativeKeys) return nativeKeys(obj);
-	    var keys = [];
-	    for (var key in obj) if (_.has(obj, key)) keys.push(key);
-	    // Ahem, IE < 9.
-	    if (hasEnumBug) collectNonEnumProps(obj, keys);
-	    return keys;
-	  };
-	
-	  // Retrieve all the property names of an object.
-	  _.allKeys = function(obj) {
-	    if (!_.isObject(obj)) return [];
-	    var keys = [];
-	    for (var key in obj) keys.push(key);
-	    // Ahem, IE < 9.
-	    if (hasEnumBug) collectNonEnumProps(obj, keys);
-	    return keys;
-	  };
-	
-	  // Retrieve the values of an object's properties.
-	  _.values = function(obj) {
-	    var keys = _.keys(obj);
-	    var length = keys.length;
-	    var values = Array(length);
-	    for (var i = 0; i < length; i++) {
-	      values[i] = obj[keys[i]];
-	    }
-	    return values;
-	  };
-	
-	  // Returns the results of applying the iteratee to each element of the object
-	  // In contrast to _.map it returns an object
-	  _.mapObject = function(obj, iteratee, context) {
-	    iteratee = cb(iteratee, context);
-	    var keys =  _.keys(obj),
-	          length = keys.length,
-	          results = {},
-	          currentKey;
-	      for (var index = 0; index < length; index++) {
-	        currentKey = keys[index];
-	        results[currentKey] = iteratee(obj[currentKey], currentKey, obj);
-	      }
-	      return results;
-	  };
-	
-	  // Convert an object into a list of `[key, value]` pairs.
-	  _.pairs = function(obj) {
-	    var keys = _.keys(obj);
-	    var length = keys.length;
-	    var pairs = Array(length);
-	    for (var i = 0; i < length; i++) {
-	      pairs[i] = [keys[i], obj[keys[i]]];
-	    }
-	    return pairs;
-	  };
-	
-	  // Invert the keys and values of an object. The values must be serializable.
-	  _.invert = function(obj) {
-	    var result = {};
-	    var keys = _.keys(obj);
-	    for (var i = 0, length = keys.length; i < length; i++) {
-	      result[obj[keys[i]]] = keys[i];
-	    }
-	    return result;
-	  };
-	
-	  // Return a sorted list of the function names available on the object.
-	  // Aliased as `methods`
-	  _.functions = _.methods = function(obj) {
-	    var names = [];
-	    for (var key in obj) {
-	      if (_.isFunction(obj[key])) names.push(key);
-	    }
-	    return names.sort();
-	  };
-	
-	  // Extend a given object with all the properties in passed-in object(s).
-	  _.extend = createAssigner(_.allKeys);
-	
-	  // Assigns a given object with all the own properties in the passed-in object(s)
-	  // (https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
-	  _.extendOwn = _.assign = createAssigner(_.keys);
-	
-	  // Returns the first key on an object that passes a predicate test
-	  _.findKey = function(obj, predicate, context) {
-	    predicate = cb(predicate, context);
-	    var keys = _.keys(obj), key;
-	    for (var i = 0, length = keys.length; i < length; i++) {
-	      key = keys[i];
-	      if (predicate(obj[key], key, obj)) return key;
-	    }
-	  };
-	
-	  // Return a copy of the object only containing the whitelisted properties.
-	  _.pick = function(object, oiteratee, context) {
-	    var result = {}, obj = object, iteratee, keys;
-	    if (obj == null) return result;
-	    if (_.isFunction(oiteratee)) {
-	      keys = _.allKeys(obj);
-	      iteratee = optimizeCb(oiteratee, context);
-	    } else {
-	      keys = flatten(arguments, false, false, 1);
-	      iteratee = function(value, key, obj) { return key in obj; };
-	      obj = Object(obj);
-	    }
-	    for (var i = 0, length = keys.length; i < length; i++) {
-	      var key = keys[i];
-	      var value = obj[key];
-	      if (iteratee(value, key, obj)) result[key] = value;
-	    }
-	    return result;
-	  };
-	
-	   // Return a copy of the object without the blacklisted properties.
-	  _.omit = function(obj, iteratee, context) {
-	    if (_.isFunction(iteratee)) {
-	      iteratee = _.negate(iteratee);
-	    } else {
-	      var keys = _.map(flatten(arguments, false, false, 1), String);
-	      iteratee = function(value, key) {
-	        return !_.contains(keys, key);
-	      };
-	    }
-	    return _.pick(obj, iteratee, context);
-	  };
-	
-	  // Fill in a given object with default properties.
-	  _.defaults = createAssigner(_.allKeys, true);
-	
-	  // Creates an object that inherits from the given prototype object.
-	  // If additional properties are provided then they will be added to the
-	  // created object.
-	  _.create = function(prototype, props) {
-	    var result = baseCreate(prototype);
-	    if (props) _.extendOwn(result, props);
-	    return result;
-	  };
-	
-	  // Create a (shallow-cloned) duplicate of an object.
-	  _.clone = function(obj) {
-	    if (!_.isObject(obj)) return obj;
-	    return _.isArray(obj) ? obj.slice() : _.extend({}, obj);
-	  };
-	
-	  // Invokes interceptor with the obj, and then returns obj.
-	  // The primary purpose of this method is to "tap into" a method chain, in
-	  // order to perform operations on intermediate results within the chain.
-	  _.tap = function(obj, interceptor) {
-	    interceptor(obj);
-	    return obj;
-	  };
-	
-	  // Returns whether an object has a given set of `key:value` pairs.
-	  _.isMatch = function(object, attrs) {
-	    var keys = _.keys(attrs), length = keys.length;
-	    if (object == null) return !length;
-	    var obj = Object(object);
-	    for (var i = 0; i < length; i++) {
-	      var key = keys[i];
-	      if (attrs[key] !== obj[key] || !(key in obj)) return false;
-	    }
-	    return true;
-	  };
-	
-	
-	  // Internal recursive comparison function for `isEqual`.
-	  var eq = function(a, b, aStack, bStack) {
-	    // Identical objects are equal. `0 === -0`, but they aren't identical.
-	    // See the [Harmony `egal` proposal](http://wiki.ecmascript.org/doku.php?id=harmony:egal).
-	    if (a === b) return a !== 0 || 1 / a === 1 / b;
-	    // A strict comparison is necessary because `null == undefined`.
-	    if (a == null || b == null) return a === b;
-	    // Unwrap any wrapped objects.
-	    if (a instanceof _) a = a._wrapped;
-	    if (b instanceof _) b = b._wrapped;
-	    // Compare `[[Class]]` names.
-	    var className = toString.call(a);
-	    if (className !== toString.call(b)) return false;
-	    switch (className) {
-	      // Strings, numbers, regular expressions, dates, and booleans are compared by value.
-	      case '[object RegExp]':
-	      // RegExps are coerced to strings for comparison (Note: '' + /a/i === '/a/i')
-	      case '[object String]':
-	        // Primitives and their corresponding object wrappers are equivalent; thus, `"5"` is
-	        // equivalent to `new String("5")`.
-	        return '' + a === '' + b;
-	      case '[object Number]':
-	        // `NaN`s are equivalent, but non-reflexive.
-	        // Object(NaN) is equivalent to NaN
-	        if (+a !== +a) return +b !== +b;
-	        // An `egal` comparison is performed for other numeric values.
-	        return +a === 0 ? 1 / +a === 1 / b : +a === +b;
-	      case '[object Date]':
-	      case '[object Boolean]':
-	        // Coerce dates and booleans to numeric primitive values. Dates are compared by their
-	        // millisecond representations. Note that invalid dates with millisecond representations
-	        // of `NaN` are not equivalent.
-	        return +a === +b;
-	    }
-	
-	    var areArrays = className === '[object Array]';
-	    if (!areArrays) {
-	      if (typeof a != 'object' || typeof b != 'object') return false;
-	
-	      // Objects with different constructors are not equivalent, but `Object`s or `Array`s
-	      // from different frames are.
-	      var aCtor = a.constructor, bCtor = b.constructor;
-	      if (aCtor !== bCtor && !(_.isFunction(aCtor) && aCtor instanceof aCtor &&
-	                               _.isFunction(bCtor) && bCtor instanceof bCtor)
-	                          && ('constructor' in a && 'constructor' in b)) {
-	        return false;
-	      }
-	    }
-	    // Assume equality for cyclic structures. The algorithm for detecting cyclic
-	    // structures is adapted from ES 5.1 section 15.12.3, abstract operation `JO`.
-	
-	    // Initializing stack of traversed objects.
-	    // It's done here since we only need them for objects and arrays comparison.
-	    aStack = aStack || [];
-	    bStack = bStack || [];
-	    var length = aStack.length;
-	    while (length--) {
-	      // Linear search. Performance is inversely proportional to the number of
-	      // unique nested structures.
-	      if (aStack[length] === a) return bStack[length] === b;
-	    }
-	
-	    // Add the first object to the stack of traversed objects.
-	    aStack.push(a);
-	    bStack.push(b);
-	
-	    // Recursively compare objects and arrays.
-	    if (areArrays) {
-	      // Compare array lengths to determine if a deep comparison is necessary.
-	      length = a.length;
-	      if (length !== b.length) return false;
-	      // Deep compare the contents, ignoring non-numeric properties.
-	      while (length--) {
-	        if (!eq(a[length], b[length], aStack, bStack)) return false;
-	      }
-	    } else {
-	      // Deep compare objects.
-	      var keys = _.keys(a), key;
-	      length = keys.length;
-	      // Ensure that both objects contain the same number of properties before comparing deep equality.
-	      if (_.keys(b).length !== length) return false;
-	      while (length--) {
-	        // Deep compare each member
-	        key = keys[length];
-	        if (!(_.has(b, key) && eq(a[key], b[key], aStack, bStack))) return false;
-	      }
-	    }
-	    // Remove the first object from the stack of traversed objects.
-	    aStack.pop();
-	    bStack.pop();
-	    return true;
-	  };
-	
-	  // Perform a deep comparison to check if two objects are equal.
-	  _.isEqual = function(a, b) {
-	    return eq(a, b);
-	  };
-	
-	  // Is a given array, string, or object empty?
-	  // An "empty" object has no enumerable own-properties.
-	  _.isEmpty = function(obj) {
-	    if (obj == null) return true;
-	    if (isArrayLike(obj) && (_.isArray(obj) || _.isString(obj) || _.isArguments(obj))) return obj.length === 0;
-	    return _.keys(obj).length === 0;
-	  };
-	
-	  // Is a given value a DOM element?
-	  _.isElement = function(obj) {
-	    return !!(obj && obj.nodeType === 1);
-	  };
-	
-	  // Is a given value an array?
-	  // Delegates to ECMA5's native Array.isArray
-	  _.isArray = nativeIsArray || function(obj) {
-	    return toString.call(obj) === '[object Array]';
-	  };
-	
-	  // Is a given variable an object?
-	  _.isObject = function(obj) {
-	    var type = typeof obj;
-	    return type === 'function' || type === 'object' && !!obj;
-	  };
-	
-	  // Add some isType methods: isArguments, isFunction, isString, isNumber, isDate, isRegExp, isError.
-	  _.each(['Arguments', 'Function', 'String', 'Number', 'Date', 'RegExp', 'Error'], function(name) {
-	    _['is' + name] = function(obj) {
-	      return toString.call(obj) === '[object ' + name + ']';
-	    };
-	  });
-	
-	  // Define a fallback version of the method in browsers (ahem, IE < 9), where
-	  // there isn't any inspectable "Arguments" type.
-	  if (!_.isArguments(arguments)) {
-	    _.isArguments = function(obj) {
-	      return _.has(obj, 'callee');
-	    };
-	  }
-	
-	  // Optimize `isFunction` if appropriate. Work around some typeof bugs in old v8,
-	  // IE 11 (#1621), and in Safari 8 (#1929).
-	  if (typeof /./ != 'function' && typeof Int8Array != 'object') {
-	    _.isFunction = function(obj) {
-	      return typeof obj == 'function' || false;
-	    };
-	  }
-	
-	  // Is a given object a finite number?
-	  _.isFinite = function(obj) {
-	    return isFinite(obj) && !isNaN(parseFloat(obj));
-	  };
-	
-	  // Is the given value `NaN`? (NaN is the only number which does not equal itself).
-	  _.isNaN = function(obj) {
-	    return _.isNumber(obj) && obj !== +obj;
-	  };
-	
-	  // Is a given value a boolean?
-	  _.isBoolean = function(obj) {
-	    return obj === true || obj === false || toString.call(obj) === '[object Boolean]';
-	  };
-	
-	  // Is a given value equal to null?
-	  _.isNull = function(obj) {
-	    return obj === null;
-	  };
-	
-	  // Is a given variable undefined?
-	  _.isUndefined = function(obj) {
-	    return obj === void 0;
-	  };
-	
-	  // Shortcut function for checking if an object has a given property directly
-	  // on itself (in other words, not on a prototype).
-	  _.has = function(obj, key) {
-	    return obj != null && hasOwnProperty.call(obj, key);
-	  };
-	
-	  // Utility Functions
-	  // -----------------
-	
-	  // Run Underscore.js in *noConflict* mode, returning the `_` variable to its
-	  // previous owner. Returns a reference to the Underscore object.
-	  _.noConflict = function() {
-	    root._ = previousUnderscore;
-	    return this;
-	  };
-	
-	  // Keep the identity function around for default iteratees.
-	  _.identity = function(value) {
-	    return value;
-	  };
-	
-	  // Predicate-generating functions. Often useful outside of Underscore.
-	  _.constant = function(value) {
-	    return function() {
-	      return value;
-	    };
-	  };
-	
-	  _.noop = function(){};
-	
-	  _.property = property;
-	
-	  // Generates a function for a given object that returns a given property.
-	  _.propertyOf = function(obj) {
-	    return obj == null ? function(){} : function(key) {
-	      return obj[key];
-	    };
-	  };
-	
-	  // Returns a predicate for checking whether an object has a given set of
-	  // `key:value` pairs.
-	  _.matcher = _.matches = function(attrs) {
-	    attrs = _.extendOwn({}, attrs);
-	    return function(obj) {
-	      return _.isMatch(obj, attrs);
-	    };
-	  };
-	
-	  // Run a function **n** times.
-	  _.times = function(n, iteratee, context) {
-	    var accum = Array(Math.max(0, n));
-	    iteratee = optimizeCb(iteratee, context, 1);
-	    for (var i = 0; i < n; i++) accum[i] = iteratee(i);
-	    return accum;
-	  };
-	
-	  // Return a random integer between min and max (inclusive).
-	  _.random = function(min, max) {
-	    if (max == null) {
-	      max = min;
-	      min = 0;
-	    }
-	    return min + Math.floor(Math.random() * (max - min + 1));
-	  };
-	
-	  // A (possibly faster) way to get the current timestamp as an integer.
-	  _.now = Date.now || function() {
-	    return new Date().getTime();
-	  };
-	
-	   // List of HTML entities for escaping.
-	  var escapeMap = {
-	    '&': '&amp;',
-	    '<': '&lt;',
-	    '>': '&gt;',
-	    '"': '&quot;',
-	    "'": '&#x27;',
-	    '`': '&#x60;'
-	  };
-	  var unescapeMap = _.invert(escapeMap);
-	
-	  // Functions for escaping and unescaping strings to/from HTML interpolation.
-	  var createEscaper = function(map) {
-	    var escaper = function(match) {
-	      return map[match];
-	    };
-	    // Regexes for identifying a key that needs to be escaped
-	    var source = '(?:' + _.keys(map).join('|') + ')';
-	    var testRegexp = RegExp(source);
-	    var replaceRegexp = RegExp(source, 'g');
-	    return function(string) {
-	      string = string == null ? '' : '' + string;
-	      return testRegexp.test(string) ? string.replace(replaceRegexp, escaper) : string;
-	    };
-	  };
-	  _.escape = createEscaper(escapeMap);
-	  _.unescape = createEscaper(unescapeMap);
-	
-	  // If the value of the named `property` is a function then invoke it with the
-	  // `object` as context; otherwise, return it.
-	  _.result = function(object, property, fallback) {
-	    var value = object == null ? void 0 : object[property];
-	    if (value === void 0) {
-	      value = fallback;
-	    }
-	    return _.isFunction(value) ? value.call(object) : value;
-	  };
-	
-	  // Generate a unique integer id (unique within the entire client session).
-	  // Useful for temporary DOM ids.
-	  var idCounter = 0;
-	  _.uniqueId = function(prefix) {
-	    var id = ++idCounter + '';
-	    return prefix ? prefix + id : id;
-	  };
-	
-	  // By default, Underscore uses ERB-style template delimiters, change the
-	  // following template settings to use alternative delimiters.
-	  _.templateSettings = {
-	    evaluate    : /<%([\s\S]+?)%>/g,
-	    interpolate : /<%=([\s\S]+?)%>/g,
-	    escape      : /<%-([\s\S]+?)%>/g
-	  };
-	
-	  // When customizing `templateSettings`, if you don't want to define an
-	  // interpolation, evaluation or escaping regex, we need one that is
-	  // guaranteed not to match.
-	  var noMatch = /(.)^/;
-	
-	  // Certain characters need to be escaped so that they can be put into a
-	  // string literal.
-	  var escapes = {
-	    "'":      "'",
-	    '\\':     '\\',
-	    '\r':     'r',
-	    '\n':     'n',
-	    '\u2028': 'u2028',
-	    '\u2029': 'u2029'
-	  };
-	
-	  var escaper = /\\|'|\r|\n|\u2028|\u2029/g;
-	
-	  var escapeChar = function(match) {
-	    return '\\' + escapes[match];
-	  };
-	
-	  // JavaScript micro-templating, similar to John Resig's implementation.
-	  // Underscore templating handles arbitrary delimiters, preserves whitespace,
-	  // and correctly escapes quotes within interpolated code.
-	  // NB: `oldSettings` only exists for backwards compatibility.
-	  _.template = function(text, settings, oldSettings) {
-	    if (!settings && oldSettings) settings = oldSettings;
-	    settings = _.defaults({}, settings, _.templateSettings);
-	
-	    // Combine delimiters into one regular expression via alternation.
-	    var matcher = RegExp([
-	      (settings.escape || noMatch).source,
-	      (settings.interpolate || noMatch).source,
-	      (settings.evaluate || noMatch).source
-	    ].join('|') + '|$', 'g');
-	
-	    // Compile the template source, escaping string literals appropriately.
-	    var index = 0;
-	    var source = "__p+='";
-	    text.replace(matcher, function(match, escape, interpolate, evaluate, offset) {
-	      source += text.slice(index, offset).replace(escaper, escapeChar);
-	      index = offset + match.length;
-	
-	      if (escape) {
-	        source += "'+\n((__t=(" + escape + "))==null?'':_.escape(__t))+\n'";
-	      } else if (interpolate) {
-	        source += "'+\n((__t=(" + interpolate + "))==null?'':__t)+\n'";
-	      } else if (evaluate) {
-	        source += "';\n" + evaluate + "\n__p+='";
-	      }
-	
-	      // Adobe VMs need the match returned to produce the correct offest.
-	      return match;
-	    });
-	    source += "';\n";
-	
-	    // If a variable is not specified, place data values in local scope.
-	    if (!settings.variable) source = 'with(obj||{}){\n' + source + '}\n';
-	
-	    source = "var __t,__p='',__j=Array.prototype.join," +
-	      "print=function(){__p+=__j.call(arguments,'');};\n" +
-	      source + 'return __p;\n';
-	
-	    try {
-	      var render = new Function(settings.variable || 'obj', '_', source);
-	    } catch (e) {
-	      e.source = source;
-	      throw e;
-	    }
-	
-	    var template = function(data) {
-	      return render.call(this, data, _);
-	    };
-	
-	    // Provide the compiled source as a convenience for precompilation.
-	    var argument = settings.variable || 'obj';
-	    template.source = 'function(' + argument + '){\n' + source + '}';
-	
-	    return template;
-	  };
-	
-	  // Add a "chain" function. Start chaining a wrapped Underscore object.
-	  _.chain = function(obj) {
-	    var instance = _(obj);
-	    instance._chain = true;
-	    return instance;
-	  };
-	
-	  // OOP
-	  // ---------------
-	  // If Underscore is called as a function, it returns a wrapped object that
-	  // can be used OO-style. This wrapper holds altered versions of all the
-	  // underscore functions. Wrapped objects may be chained.
-	
-	  // Helper function to continue chaining intermediate results.
-	  var result = function(instance, obj) {
-	    return instance._chain ? _(obj).chain() : obj;
-	  };
-	
-	  // Add your own custom functions to the Underscore object.
-	  _.mixin = function(obj) {
-	    _.each(_.functions(obj), function(name) {
-	      var func = _[name] = obj[name];
-	      _.prototype[name] = function() {
-	        var args = [this._wrapped];
-	        push.apply(args, arguments);
-	        return result(this, func.apply(_, args));
-	      };
-	    });
-	  };
-	
-	  // Add all of the Underscore functions to the wrapper object.
-	  _.mixin(_);
-	
-	  // Add all mutator Array functions to the wrapper.
-	  _.each(['pop', 'push', 'reverse', 'shift', 'sort', 'splice', 'unshift'], function(name) {
-	    var method = ArrayProto[name];
-	    _.prototype[name] = function() {
-	      var obj = this._wrapped;
-	      method.apply(obj, arguments);
-	      if ((name === 'shift' || name === 'splice') && obj.length === 0) delete obj[0];
-	      return result(this, obj);
-	    };
-	  });
-	
-	  // Add all accessor Array functions to the wrapper.
-	  _.each(['concat', 'join', 'slice'], function(name) {
-	    var method = ArrayProto[name];
-	    _.prototype[name] = function() {
-	      return result(this, method.apply(this._wrapped, arguments));
-	    };
-	  });
-	
-	  // Extracts the result from a wrapped and chained object.
-	  _.prototype.value = function() {
-	    return this._wrapped;
-	  };
-	
-	  // Provide unwrapping proxy for some methods used in engine operations
-	  // such as arithmetic and JSON stringification.
-	  _.prototype.valueOf = _.prototype.toJSON = _.prototype.value;
-	
-	  _.prototype.toString = function() {
-	    return '' + this._wrapped;
-	  };
-	
-	  // AMD registration happens at the end for compatibility with AMD loaders
-	  // that may not enforce next-turn semantics on modules. Even though general
-	  // practice for AMD registration is to be anonymous, underscore registers
-	  // as a named module because, like jQuery, it is a base library that is
-	  // popular enough to be bundled in a third party lib, but not be part of
-	  // an AMD load request. Those cases could generate an error when an
-	  // anonymous define() is called outside of a loader request.
-	  if (true) {
-	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
-	      return _;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	  }
-	}.call(this));
-
-
-/***/ },
-/* 11 */
-/***/ function(module, exports) {
-
-	module.exports = "<!-- \n  <div class=\"school-books-item\">\n    <a href=\"{{url}}\" target=\"new\">\n      <img class=\"img-responsive book-image\" src=\"{{image}}\" alt=\"Responsive image\">\n    </a>\n       <div class=\"title\">{{title}}</div>\n      <div class=\"author\">{{author}}</div>\n  </div>\n -->\n\n\n<!-- <ul id=\"menu\">\n\n  <li> \n  \t<a href=\"\">\n      <img class=\"img-responsive book-image\" src=\"xxxHTMLLINKxxx0.30416594701819120.9706197981722653xxx\" alt=\"Responsive image\">\n    </a> \n   </li>\n\n  <li> <a href=\"#\">Item 2</a> </li>\n\n  <li class=\"highlighted\"> <a href=\"#\">Item 3</a> </li>\n\n  <li> <a href=\"#\">Item 4</a> </li>\n\n  <li> <a href=\"#\">Item 5</a> </li>\n\n  <li> <a href=\"#\">Item 6</a> </li>\n\n</ul>\n -->\n\n <div class=\"row english\">\n  <h2 class=\"subject\">English Literature</h2>\n  <div id=\"wrapper_bu\">\n    <div id=\"bu1\"> <img class=\"img-responsive book-image\" src=\"/images/books/kundera.png\" alt=\"Responsive image\"><a href=\"https://books.google.com/books?id=Zd1l0Ivij8wC&printsec=frontcover&dq=the+unbearable+lightness+of+being&hl=en&sa=X&ved=0ahUKEwiC2e-c2_fOAhUH6WMKHTvGCScQ6AEIHjAA\" title=\"The Unbearable Lightness of Being\" target=\"new\"></a> </div>\n    <div id=\"bu2\"> <a href=\"https://books.google.com/books?id=9H9aAAAAMAAJ&dq=editions:5iTbjefdfnYC\" target=\"new\">\n              <img class=\"img-responsive book-image\" src=\"/images/books/dillard.png\" alt=\"Responsive image\">\n            </a>  </div>\n    <div id=\"bu3\"> <a href=\"https://books.google.com/books?id=nfjGMgEACAAJ&dq=love,+dishonor,+marry,+perish,+cherish&hl=en&sa=X&ved=0ahUKEwj44reg2vfOAhUq6oMKHciEAewQ6AEIHjAA\" target=\"new\">\n              <img class=\"img-responsive book-image\" src=\"/images/books/rakoff.png\" alt=\"Responsive image\">\n            </a> </div>\n    <div id=\"bu4\"> <a href=\"https://books.google.com/books?id=tOjE5Usv_HQC&dq=lake+wobegon,+summer+1956&source=gbs_navlinks_s\" target=\"new\">\n              <img class=\"img-responsive book-image\" src=\"/images/books/garrison.png\" alt=\"Responsive image\">\n            </a></div>\n    <div id=\"bu5\"> <a href=\"https://books.google.com/books?id=EJprQgAACAAJ&dq=the+dream+of+a+common+language&hl=en&sa=X&sqi=2&ved=0ahUKEwizmoaX3PfOAhUb24MKHfmLAA0Q6AEIHDAA\" target=\"new\">\n              <img class=\"img-responsive book-image\" src=\"/images/books/adrienne.png\" alt=\"Responsive image\">\n            </a> </div>\n  </div>\n</div>\n\n";
-
-/***/ },
-/* 12 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<nav class=\"school-nav row\">\n   <h1>Go Beyond the Textbook.</h1>\n   <h6>Read fiction and nonfiction books related to what you're studying in school and fuel your love of learning!</h6>\n   <!-- <a href=\"#\">English Literature</a>\n   <a href=\"#\">History</a>\n   <a href=\"#\">Math</a>\n   <a href=\"#\">Political Science</a>\n   <a href=\"#\">Psychology</a>\n   <a href=\"#\">Science</a> -->\n</nav>\n\n\n";
-
-/***/ },
-/* 13 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _jquery = __webpack_require__(1);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
-	
-	var _handlebars = __webpack_require__(14);
-	
-	var _handlebars2 = _interopRequireDefault(_handlebars);
-	
-	var _lscache = __webpack_require__(44);
-	
-	var _lscache2 = _interopRequireDefault(_lscache);
-	
-	var _lodash = __webpack_require__(45);
-	
-	var _lodash2 = _interopRequireDefault(_lodash);
-	
-	var _templatesObsItemHtml = __webpack_require__(47);
-	
-	var _templatesObsItemHtml2 = _interopRequireDefault(_templatesObsItemHtml);
-	
-	var _json2csv = __webpack_require__(48);
-	
-	var _json2csv2 = _interopRequireDefault(_json2csv);
-	
-	var _d3 = __webpack_require__(58);
-	
-	var _d32 = _interopRequireDefault(_d3);
-	
-	var _templatesDataTableHtml = __webpack_require__(59);
-	
-	var _templatesDataTableHtml2 = _interopRequireDefault(_templatesDataTableHtml);
-	
-	// observation specific
-	var obsItems = __webpack_require__(60);
-	var obsItemTemplate;
-	var currentIndex = 0;
-	var interval;
-	var timerRunning = false;
-	var splitCount = 0;
-	var cumCount = 0;
-	var points;
-	var index = 0;
-	var pointsArray = [];
-	var testData = [];
-	var itemData;
-	var result;
-	// var pointsTotal;
-	// var testScore = [];
-	
-	var model = {
-	  init: function init() {
-	    var savedData = _lscache2['default'].get('testData');
-	    if (savedData) {
-	      testData = savedData;
-	    } else {
-	      testData = [];
-	    }
-	  },
-	  save: function save() {
-	    var dataToSave = JSON.stringify(testData);
-	    _lscache2['default'].set('testData', dataToSave);
-	  },
-	  get: function get() {
-	    return testData;
-	  }
-	};
-	
-	// var view = $('script[type="text/x-template"]').html();
-	
-	var app = {
-	  init: function init() {
-	    model.init();
-	    app.compileTemplate();
-	    app.render();
-	  },
-	  render: function render() {
-	    app.bindClickEvents();
-	  },
-	  // observation specific
-	  compileTemplate: function compileTemplate() {
-	    obsItemTemplate = _handlebars2['default'].compile(_templatesObsItemHtml2['default']);
-	  },
-	  startTimer: function startTimer() {
-	    var $startStop = (0, _jquery2['default'])('.start-stop-button');
-	    $startStop.on('click', function () {
-	      if ($startStop.html() === 'Start') {
-	        if (timerRunning === false) {
-	          timerRunning = true;
-	        }
-	        // startTime = new Date();
-	        interval = setInterval(function () {
-	          splitCount++;
-	          if (splitCount < 10) {
-	            splitCount = '0' + splitCount;
-	          }
-	          (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + splitCount);
-	          cumCount++;
-	          if (cumCount < 10) {
-	            cumCount = '0' + cumCount;
-	          }
-	          (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + cumCount);
-	        }, 600);
-	        $startStop.html('Stop');
-	        $startStop.css({ 'background-color': '#192837' });
-	        app.showItem();
-	      } else {
-	        app.stopTimer();
-	        $startStop.html('Start');
-	        $startStop.css({ 'background-color': '#17B20A' });
-	      }
-	    });
-	  },
-	  stopTimer: function stopTimer() {
-	    interval = clearInterval(interval);
-	    if (timerRunning === true) {
-	      timerRunning = false;
-	    }
-	    app.displayTimes();
-	    // app.addPoints();
-	    itemData = {
-	      itemNumber: index,
-	      time: splitCount,
-	      points: points
-	    };
-	    testData.push(itemData);
-	    model.save();
-	    splitCount = 0;
-	  },
-	  studyPage: function studyPage() {
-	    var $study = (0, _jquery2['default'])('.misc-button');
-	    $study.on('click', function () {
-	      if (timerRunning === false) {
-	        timerRunning = true;
-	        interval = setInterval(function () {
-	          if (splitCount === 50) {
-	            interval = clearInterval(interval);
-	            splitCount = 0;
-	            cumCount = 0;
-	            $study.css({
-	              'background-color': '#089D9A'
-	            });
-	          } else {
-	            splitCount++;
-	            $study.css({
-	              'background-color': '#5D0A57'
-	            });
-	            if (splitCount < 10) {
-	              splitCount = '0' + splitCount;
-	            }
-	            (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + splitCount);
-	            cumCount++;
-	            if (cumCount < 10) {
-	              cumCount = '0' + cumCount;
-	            }
-	            (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + cumCount);
-	          }
-	        }, 600);
-	      }
-	    });
-	  },
-	  resetTimer: function resetTimer() {
-	    var $reset = (0, _jquery2['default'])('.reset-button');
-	    $reset.on('click', function () {
-	      // interval = clearInterval(interval);
-	      if (timerRunning === false) {
-	        app.clearEverything();
-	      }
-	    });
-	  },
-	  displayTimes: function displayTimes() {
-	    if (splitCount < 10) {
-	      points = 3;
-	    } else if (splitCount > 9 && splitCount < 20) {
-	      points = 2;
-	    } else if (splitCount > 19 && splitCount < 30) {
-	      points = 1;
-	    } else {
-	      points = 0;
-	    }
-	    index++;
-	    app.addPoints();
-	  },
-	  clearEverything: function clearEverything() {
-	    testData = [];
-	    splitCount = 0;
-	    cumCount = 0;
-	    index = 0;
-	
-	    (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + '0' + splitCount);
-	    (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + '0' + cumCount);
-	    (0, _jquery2['default'])('.score').html('Score =');
-	  },
-	
-	  addPoints: function addPoints() {
-	    pointsArray.push(points);
-	    var pointsTotal = _lodash2['default'].sum(pointsArray);
-	    (0, _jquery2['default'])('.score').html('Score = ' + pointsTotal);
-	  },
-	  // observation specific
-	  showItem: function showItem() {
-	    (0, _jquery2['default'])('.item-container').html(obsItemTemplate(obsItems[currentIndex]));
-	    currentIndex++;
-	  },
-	  createTable: function createTable() {
-	    (0, _jquery2['default'])('.stopwatch-container').html(_templatesDataTableHtml2['default']);
-	    _d32['default'].text(result, function (data) {
-	      var parsedCSV = _d32['default'].csv.parseRows(result);
-	
-	      var container = _d32['default'].select('.datatable').append('table').selectAll('tr').data(parsedCSV).enter().append('tr').selectAll('td').data(function (d) {
-	        return d;
-	      }).enter().append('td').text(function (d) {
-	        return d;
-	      });
-	    });
-	    localStorage.clear();
-	  },
-	  createCSV: function createCSV() {
-	    (0, _jquery2['default'])('.create-csv').on('click', function () {
-	
-	      var fields = ['itemNumber', 'time', 'points'];
-	      try {
-	        result = (0, _json2csv2['default'])({ data: testData, fields: fields });
-	        app.createTable();
-	      } catch (err) {
-	        console.log(err);
-	      }
-	    });
-	  },
-	  bindClickEvents: function bindClickEvents() {
-	    app.startTimer();
-	    app.studyPage();
-	    app.resetTimer();
-	    app.createCSV();
-	  }
-	};
-	
-	module.exports = app;
-	
-	// app.displayTimes();
-	// itemData = {
-	//   itemNumber: index - 1,
-	//   time: splitCount,
-	//   points: points
-	// };
-	// // app.addPoints();
-	// testData.push(itemData);
-	// model.save();
-
-/***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
 	// USAGE:
 	// var handlebars = require('handlebars');
 	/* eslint-disable no-var */
 	
 	// var local = handlebars.create();
 	
-	var handlebars = __webpack_require__(15)['default'];
+	var handlebars = __webpack_require__(11)['default'];
 	
-	var printer = __webpack_require__(43);
+	var printer = __webpack_require__(39);
 	handlebars.PrintVisitor = printer.PrintVisitor;
 	handlebars.print = printer.print;
 	
@@ -11995,7 +10179,7 @@
 
 
 /***/ },
-/* 15 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12005,29 +10189,29 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _handlebarsRuntime = __webpack_require__(16);
+	var _handlebarsRuntime = __webpack_require__(12);
 	
 	var _handlebarsRuntime2 = _interopRequireDefault(_handlebarsRuntime);
 	
 	// Compiler imports
 	
-	var _handlebarsCompilerAst = __webpack_require__(34);
+	var _handlebarsCompilerAst = __webpack_require__(30);
 	
 	var _handlebarsCompilerAst2 = _interopRequireDefault(_handlebarsCompilerAst);
 	
-	var _handlebarsCompilerBase = __webpack_require__(35);
+	var _handlebarsCompilerBase = __webpack_require__(31);
 	
-	var _handlebarsCompilerCompiler = __webpack_require__(40);
+	var _handlebarsCompilerCompiler = __webpack_require__(36);
 	
-	var _handlebarsCompilerJavascriptCompiler = __webpack_require__(41);
+	var _handlebarsCompilerJavascriptCompiler = __webpack_require__(37);
 	
 	var _handlebarsCompilerJavascriptCompiler2 = _interopRequireDefault(_handlebarsCompilerJavascriptCompiler);
 	
-	var _handlebarsCompilerVisitor = __webpack_require__(38);
+	var _handlebarsCompilerVisitor = __webpack_require__(34);
 	
 	var _handlebarsCompilerVisitor2 = _interopRequireDefault(_handlebarsCompilerVisitor);
 	
-	var _handlebarsNoConflict = __webpack_require__(33);
+	var _handlebarsNoConflict = __webpack_require__(29);
 	
 	var _handlebarsNoConflict2 = _interopRequireDefault(_handlebarsNoConflict);
 	
@@ -12066,7 +10250,7 @@
 
 
 /***/ },
-/* 16 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12080,30 +10264,30 @@
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 	
-	var _handlebarsBase = __webpack_require__(17);
+	var _handlebarsBase = __webpack_require__(13);
 	
 	var base = _interopRequireWildcard(_handlebarsBase);
 	
 	// Each of these augment the Handlebars object. No need to setup here.
 	// (This is done to easily share code between commonjs and browse envs)
 	
-	var _handlebarsSafeString = __webpack_require__(31);
+	var _handlebarsSafeString = __webpack_require__(27);
 	
 	var _handlebarsSafeString2 = _interopRequireDefault(_handlebarsSafeString);
 	
-	var _handlebarsException = __webpack_require__(19);
+	var _handlebarsException = __webpack_require__(15);
 	
 	var _handlebarsException2 = _interopRequireDefault(_handlebarsException);
 	
-	var _handlebarsUtils = __webpack_require__(18);
+	var _handlebarsUtils = __webpack_require__(14);
 	
 	var Utils = _interopRequireWildcard(_handlebarsUtils);
 	
-	var _handlebarsRuntime = __webpack_require__(32);
+	var _handlebarsRuntime = __webpack_require__(28);
 	
 	var runtime = _interopRequireWildcard(_handlebarsRuntime);
 	
-	var _handlebarsNoConflict = __webpack_require__(33);
+	var _handlebarsNoConflict = __webpack_require__(29);
 	
 	var _handlebarsNoConflict2 = _interopRequireDefault(_handlebarsNoConflict);
 	
@@ -12138,7 +10322,7 @@
 
 
 /***/ },
-/* 17 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12149,17 +10333,17 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utils = __webpack_require__(18);
+	var _utils = __webpack_require__(14);
 	
-	var _exception = __webpack_require__(19);
+	var _exception = __webpack_require__(15);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
-	var _helpers = __webpack_require__(20);
+	var _helpers = __webpack_require__(16);
 	
-	var _decorators = __webpack_require__(28);
+	var _decorators = __webpack_require__(24);
 	
-	var _logger = __webpack_require__(30);
+	var _logger = __webpack_require__(26);
 	
 	var _logger2 = _interopRequireDefault(_logger);
 	
@@ -12248,7 +10432,7 @@
 
 
 /***/ },
-/* 18 */
+/* 14 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -12378,7 +10562,7 @@
 
 
 /***/ },
-/* 19 */
+/* 15 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -12424,7 +10608,7 @@
 
 
 /***/ },
-/* 20 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12435,31 +10619,31 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _helpersBlockHelperMissing = __webpack_require__(21);
+	var _helpersBlockHelperMissing = __webpack_require__(17);
 	
 	var _helpersBlockHelperMissing2 = _interopRequireDefault(_helpersBlockHelperMissing);
 	
-	var _helpersEach = __webpack_require__(22);
+	var _helpersEach = __webpack_require__(18);
 	
 	var _helpersEach2 = _interopRequireDefault(_helpersEach);
 	
-	var _helpersHelperMissing = __webpack_require__(23);
+	var _helpersHelperMissing = __webpack_require__(19);
 	
 	var _helpersHelperMissing2 = _interopRequireDefault(_helpersHelperMissing);
 	
-	var _helpersIf = __webpack_require__(24);
+	var _helpersIf = __webpack_require__(20);
 	
 	var _helpersIf2 = _interopRequireDefault(_helpersIf);
 	
-	var _helpersLog = __webpack_require__(25);
+	var _helpersLog = __webpack_require__(21);
 	
 	var _helpersLog2 = _interopRequireDefault(_helpersLog);
 	
-	var _helpersLookup = __webpack_require__(26);
+	var _helpersLookup = __webpack_require__(22);
 	
 	var _helpersLookup2 = _interopRequireDefault(_helpersLookup);
 	
-	var _helpersWith = __webpack_require__(27);
+	var _helpersWith = __webpack_require__(23);
 	
 	var _helpersWith2 = _interopRequireDefault(_helpersWith);
 	
@@ -12476,14 +10660,14 @@
 
 
 /***/ },
-/* 21 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _utils = __webpack_require__(18);
+	var _utils = __webpack_require__(14);
 	
 	exports['default'] = function (instance) {
 	  instance.registerHelper('blockHelperMissing', function (context, options) {
@@ -12521,7 +10705,7 @@
 
 
 /***/ },
-/* 22 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12531,9 +10715,9 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utils = __webpack_require__(18);
+	var _utils = __webpack_require__(14);
 	
-	var _exception = __webpack_require__(19);
+	var _exception = __webpack_require__(15);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
@@ -12621,7 +10805,7 @@
 
 
 /***/ },
-/* 23 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12631,7 +10815,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _exception = __webpack_require__(19);
+	var _exception = __webpack_require__(15);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
@@ -12652,14 +10836,14 @@
 
 
 /***/ },
-/* 24 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _utils = __webpack_require__(18);
+	var _utils = __webpack_require__(14);
 	
 	exports['default'] = function (instance) {
 	  instance.registerHelper('if', function (conditional, options) {
@@ -12687,7 +10871,7 @@
 
 
 /***/ },
-/* 25 */
+/* 21 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -12719,7 +10903,7 @@
 
 
 /***/ },
-/* 26 */
+/* 22 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -12737,14 +10921,14 @@
 
 
 /***/ },
-/* 27 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _utils = __webpack_require__(18);
+	var _utils = __webpack_require__(14);
 	
 	exports['default'] = function (instance) {
 	  instance.registerHelper('with', function (context, options) {
@@ -12776,7 +10960,7 @@
 
 
 /***/ },
-/* 28 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12787,7 +10971,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _decoratorsInline = __webpack_require__(29);
+	var _decoratorsInline = __webpack_require__(25);
 	
 	var _decoratorsInline2 = _interopRequireDefault(_decoratorsInline);
 	
@@ -12798,14 +10982,14 @@
 
 
 /***/ },
-/* 29 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _utils = __webpack_require__(18);
+	var _utils = __webpack_require__(14);
 	
 	exports['default'] = function (instance) {
 	  instance.registerDecorator('inline', function (fn, props, container, options) {
@@ -12833,14 +11017,14 @@
 
 
 /***/ },
-/* 30 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _utils = __webpack_require__(18);
+	var _utils = __webpack_require__(14);
 	
 	var logger = {
 	  methodMap: ['debug', 'info', 'warn', 'error'],
@@ -12886,7 +11070,7 @@
 
 
 /***/ },
-/* 31 */
+/* 27 */
 /***/ function(module, exports) {
 
 	// Build out our basic SafeString type
@@ -12907,7 +11091,7 @@
 
 
 /***/ },
-/* 32 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12927,15 +11111,15 @@
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 	
-	var _utils = __webpack_require__(18);
+	var _utils = __webpack_require__(14);
 	
 	var Utils = _interopRequireWildcard(_utils);
 	
-	var _exception = __webpack_require__(19);
+	var _exception = __webpack_require__(15);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
-	var _base = __webpack_require__(17);
+	var _base = __webpack_require__(13);
 	
 	function checkRevision(compilerInfo) {
 	  var compilerRevision = compilerInfo && compilerInfo[0] || 1,
@@ -13205,7 +11389,7 @@
 
 
 /***/ },
-/* 33 */
+/* 29 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/* global window */
@@ -13232,7 +11416,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 34 */
+/* 30 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -13269,7 +11453,7 @@
 
 
 /***/ },
-/* 35 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13284,19 +11468,19 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _parser = __webpack_require__(36);
+	var _parser = __webpack_require__(32);
 	
 	var _parser2 = _interopRequireDefault(_parser);
 	
-	var _whitespaceControl = __webpack_require__(37);
+	var _whitespaceControl = __webpack_require__(33);
 	
 	var _whitespaceControl2 = _interopRequireDefault(_whitespaceControl);
 	
-	var _helpers = __webpack_require__(39);
+	var _helpers = __webpack_require__(35);
 	
 	var Helpers = _interopRequireWildcard(_helpers);
 	
-	var _utils = __webpack_require__(18);
+	var _utils = __webpack_require__(14);
 	
 	exports.parser = _parser2['default'];
 	
@@ -13323,7 +11507,7 @@
 
 
 /***/ },
-/* 36 */
+/* 32 */
 /***/ function(module, exports) {
 
 	/* istanbul ignore next */
@@ -14067,7 +12251,7 @@
 
 
 /***/ },
-/* 37 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14077,7 +12261,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _visitor = __webpack_require__(38);
+	var _visitor = __webpack_require__(34);
 	
 	var _visitor2 = _interopRequireDefault(_visitor);
 	
@@ -14294,7 +12478,7 @@
 
 
 /***/ },
-/* 38 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14304,7 +12488,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _exception = __webpack_require__(19);
+	var _exception = __webpack_require__(15);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
@@ -14440,7 +12624,7 @@
 
 
 /***/ },
-/* 39 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14460,7 +12644,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _exception = __webpack_require__(19);
+	var _exception = __webpack_require__(15);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
@@ -14676,7 +12860,7 @@
 
 
 /***/ },
-/* 40 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* eslint-disable new-cap */
@@ -14691,13 +12875,13 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _exception = __webpack_require__(19);
+	var _exception = __webpack_require__(15);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
-	var _utils = __webpack_require__(18);
+	var _utils = __webpack_require__(14);
 	
-	var _ast = __webpack_require__(34);
+	var _ast = __webpack_require__(30);
 	
 	var _ast2 = _interopRequireDefault(_ast);
 	
@@ -15254,7 +13438,7 @@
 
 
 /***/ },
-/* 41 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15264,15 +13448,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _base = __webpack_require__(17);
+	var _base = __webpack_require__(13);
 	
-	var _exception = __webpack_require__(19);
+	var _exception = __webpack_require__(15);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
-	var _utils = __webpack_require__(18);
+	var _utils = __webpack_require__(14);
 	
-	var _codeGen = __webpack_require__(42);
+	var _codeGen = __webpack_require__(38);
 	
 	var _codeGen2 = _interopRequireDefault(_codeGen);
 	
@@ -16386,7 +14570,7 @@
 
 
 /***/ },
-/* 42 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* global define */
@@ -16394,7 +14578,7 @@
 	
 	exports.__esModule = true;
 	
-	var _utils = __webpack_require__(18);
+	var _utils = __webpack_require__(14);
 	
 	var SourceNode = undefined;
 	
@@ -16558,7 +14742,7 @@
 
 
 /***/ },
-/* 43 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* eslint-disable new-cap */
@@ -16571,7 +14755,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _visitor = __webpack_require__(38);
+	var _visitor = __webpack_require__(34);
 	
 	var _visitor2 = _interopRequireDefault(_visitor);
 	
@@ -16748,6 +14932,270 @@
 	/* eslint-enable new-cap */
 	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL2xpYi9oYW5kbGViYXJzL2NvbXBpbGVyL3ByaW50ZXIuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozt1QkFDb0IsV0FBVzs7OztBQUV4QixTQUFTLEtBQUssQ0FBQyxHQUFHLEVBQUU7QUFDekIsU0FBTyxJQUFJLFlBQVksRUFBRSxDQUFDLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQztDQUN2Qzs7QUFFTSxTQUFTLFlBQVksR0FBRztBQUM3QixNQUFJLENBQUMsT0FBTyxHQUFHLENBQUMsQ0FBQztDQUNsQjs7QUFFRCxZQUFZLENBQUMsU0FBUyxHQUFHLDBCQUFhLENBQUM7O0FBRXZDLFlBQVksQ0FBQyxTQUFTLENBQUMsR0FBRyxHQUFHLFVBQVMsTUFBTSxFQUFFO0FBQzVDLE1BQUksR0FBRyxHQUFHLEVBQUUsQ0FBQzs7QUFFYixPQUFLLElBQUksQ0FBQyxHQUFHLENBQUMsRUFBRSxDQUFDLEdBQUcsSUFBSSxDQUFDLE9BQU8sRUFBRSxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMsRUFBRSxFQUFFO0FBQzVDLE9BQUcsSUFBSSxJQUFJLENBQUM7R0FDYjs7QUFFRCxLQUFHLElBQUksTUFBTSxHQUFHLElBQUksQ0FBQztBQUNyQixTQUFPLEdBQUcsQ0FBQztDQUNaLENBQUM7O0FBRUYsWUFBWSxDQUFDLFNBQVMsQ0FBQyxPQUFPLEdBQUcsVUFBUyxPQUFPLEVBQUU7QUFDakQsTUFBSSxHQUFHLEdBQUcsRUFBRTtNQUNSLElBQUksR0FBRyxPQUFPLENBQUMsSUFBSTtNQUNuQixDQUFDLFlBQUE7TUFBRSxDQUFDLFlBQUEsQ0FBQzs7QUFFVCxNQUFJLE9BQU8sQ0FBQyxXQUFXLEVBQUU7QUFDdkIsUUFBSSxXQUFXLEdBQUcsaUJBQWlCLENBQUM7QUFDcEMsU0FBSyxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMsR0FBRyxPQUFPLENBQUMsV0FBVyxDQUFDLE1BQU0sRUFBRSxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMs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SUFBSSxDQUFDLE1BQU0sQ0FBQyxLQUFLLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO0dBQ3pDOztBQUVELFNBQU8sT0FBTyxHQUFHLFdBQVcsQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLEdBQUcsR0FBRyxDQUFDO0NBQy9DLENBQUM7QUFDRixZQUFZLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyxVQUFTLElBQUksRUFBRTtBQUMvQyxTQUFPLElBQUksQ0FBQyxHQUFHLEdBQUcsR0FBRyxHQUFHLElBQUksQ0FBQyxNQUFNLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyxDQUFDO0NBQ2pELENBQUMiLCJmaWxlIjoicHJpbnRlci5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG5ldy1jYXAgKi9cbmltcG9ydCBWaXNpdG9yIGZyb20gJy4vdmlzaXRvcic7XG5cbmV4cG9ydCBmdW5jdGlvbiBwcmludChhc3QpIHtcbiAgcmV0dXJuIG5ldyBQcmludFZpc2l0b3IoKS5hY2NlcHQoYXN0KTtcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIFByaW50VmlzaXRvcigpIHtcbiAgdGhpcy5wYWRkaW5nID0gMDtcbn1cblxuUHJpbnRWaXNpdG9yLnByb3RvdHlwZSA9IG5ldyBWaXNpdG9yKCk7XG5cblByaW50VmlzaXRvci5wcm90b3R5cGUucGFkID0gZnVuY3Rpb24oc3RyaW5nKSB7XG4gIGxldCBvdXQgPSAnJztcblxuICBmb3IgKGxldCBpID0gMCwgbCA9IHRoaXMucGFkZGluZzsgaSA8IGw7IGkrKykge1xuICAgIG91dCArPSAnICAnO1xuICB9XG5cbiAgb3V0ICs9IHN0cmluZyArICdcXG4nO1xuICByZXR1cm4gb3V0O1xufTtcblxuUHJpbnRWaXNpdG9yLnByb3RvdHlwZS5Qcm9ncmFtID0gZnVuY3Rpb24ocHJvZ3JhbSkge1xuICBsZXQgb3V0ID0gJycsXG4gICAgICBib2R5ID0gcHJvZ3JhbS5ib2R5LFxuICAgICAgaSwgbDtcblxuICBpZiAocHJvZ3JhbS5ibG9ja1BhcmFtcykge1xuICAgIGxldCBibG9ja1BhcmFtcyA9ICdCTE9DSyBQQVJBTVM6IFsnO1xuICAgIGZvciAoaSA9IDAsIGwgPSBwcm9ncmFtLmJsb2NrUGFyYW1zLmxlbmd0aDsgaSA8IGw7IGkrKykge1xuICAgICAgIGJsb2NrUGFyYW1zICs9ICcgJyArIHByb2dyYW0uYmxvY2tQYXJhbXNbaV07XG4gICAgfVxuICAgIGJsb2NrUGFyYW1zICs9ICcgXSc7XG4gICAgb3V0ICs9IHRoaXMucGFkKGJsb2NrUGFyYW1zKTtcbiAgfVxuXG4gIGZvciAoaSA9IDAsIGwgPSBib2R5Lmxlbmd0aDsgaSA8IGw7IGkrKykge1xuICAgIG91dCArPSB0aGlzLmFjY2VwdChib2R5W2ldKTtcbiAgfVxuXG4gIHRoaXMucGFkZGluZy0tO1xuXG4gIHJldHVybiBvdXQ7XG59O1xuXG5QcmludFZpc2l0b3IucHJvdG90eXBlLk11c3RhY2hlU3RhdGVtZW50ID0gZnVuY3Rpb24obXVzdGFjaGUpIHtcbiAgcmV0dXJuIHRoaXMucGFkKCd7eyAnICsgdGhpcy5TdWJFeHByZXNzaW9uKG11c3RhY2hlKSArICcgfX0nKTtcbn07XG5QcmludFZpc2l0b3IucHJvdG90eXBlLkRlY29yYXRvciA9IGZ1bmN0aW9uKG11c3RhY2hlKSB7XG4gIHJldHVybiB0aGlzLnBhZCgne3sgRElSRUNUSVZFICcgKyB0aGlzLlN1YkV4cHJlc3Npb24obXVzdGFjaGUpICsgJyB9fScpO1xufTtcblxuUHJpbnRWaXNpdG9yLnByb3RvdHlwZS5CbG9ja1N0YXRlbWVudCA9XG5QcmludFZpc2l0b3IucHJvdG90eXBlLkRlY29yYXRvckJsb2NrID0gZnVuY3Rpb24oYmxvY2spIHtcbiAgbGV0IG91dCA9ICcnO1xuXG4gIG91dCArPSB0aGlzLnBhZCgoYmxvY2sudHlwZSA9PT0gJ0RlY29yYXRvckJsb2NrJyA/ICdESVJFQ1RJVkUgJyA6ICcnKSArICdCTE9DSzonKTtcbiAgdGhpcy5wYWRkaW5nKys7XG4gIG91dCArPSB0aGlzLnBhZCh0aGlzLlN1YkV4cHJlc3Npb24oYmxvY2spKTtcbiAgaWYgKGJsb2NrLnByb2dyYW0pIHtcbiAgICBvdXQgKz0gdGhpcy5wYWQoJ1BST0dSQU06Jyk7XG4gICAgdGhpcy5wYWRkaW5nKys7XG4gICAgb3V0ICs9IHRoaXMuYWNjZXB0KGJsb2NrLnByb2dyYW0pO1xuICAgIHRoaXMucGFkZGluZy0tO1xuICB9XG4gIGlmIChibG9jay5pbnZlcnNlKSB7XG4gICAgaWYgKGJsb2NrLnByb2dyYW0pIHsgdGhpcy5wYWRkaW5nKys7IH1cbiAgICBvdXQgKz0gdGhpcy5wYWQoJ3t7Xn19Jyk7XG4gICAgdGhpcy5wYWRkaW5nKys7XG4gICAgb3V0ICs9IHRoaXMuYWNjZXB0KGJsb2NrLmludmVyc2UpO1xuICAgIHRoaXMucGFkZGluZy0tO1xuICAgIGlmIChibG9jay5wcm9ncmFtKSB7IHRoaXMucGFkZGluZy0tOyB9XG4gIH1cbiAgdGhpcy5wYWRkaW5nLS07XG5cbiAgcmV0dXJuIG91dDtcbn07XG5cblByaW50VmlzaXRvci5wcm90b3R5cGUuUGFydGlhbFN0YXRlbWVudCA9IGZ1bmN0aW9uKHBhcnRpYWwpIHtcbiAgbGV0IGNvbnRlbnQgPSAnUEFSVElBTDonICsgcGFydGlhbC5uYW1lLm9yaWdpbmFsO1xuICBpZiAocGFydGlhbC5wYXJhbXNbMF0pIHtcbiAgICBjb250ZW50ICs9ICcgJyArIHRoaXMuYWNjZXB0KHBhcnRpYWwucGFyYW1zWzBdKTtcbiAgfVxuICBpZiAocGFydGlhbC5oYXNoKSB7XG4gICAgY29udGVudCArPSAnICcgKyB0aGlzLmFjY2VwdChwYXJ0aWFsLmhhc2gpO1xuICB9XG4gIHJldHVybiB0aGlzLnBhZCgne3s+ICcgKyBjb250ZW50ICsgJyB9fScpO1xufTtcblByaW50VmlzaXRvci5wcm90b3R5cGUuUGFydGlhbEJsb2NrU3RhdGVtZW50ID0gZnVuY3Rpb24ocGFydGlhbCkge1xuICBsZXQgY29udGVudCA9ICdQQVJUSUFMIEJMT0NLOicgKyBwYXJ0aWFsLm5hbWUub3JpZ2luYWw7XG4gIGlmIChwYXJ0aWFsLnBhcmFtc1swXSkge1xuICAgIGNvbnRlbnQgKz0gJyAnICsgdGhpcy5hY2NlcHQocGFydGlhbC5wYXJhbXNbMF0pO1xuICB9XG4gIGlmIChwYXJ0aWFsLmhhc2gpIHtcbiAgICBjb250ZW50ICs9ICcgJyArIHRoaXMuYWNjZXB0KHBhcnRpYWwuaGFzaCk7XG4gIH1cblxuICBjb250ZW50ICs9ICcgJyArIHRoaXMucGFkKCdQUk9HUkFNOicpO1xuICB0aGlzLnBhZGRpbmcrKztcbiAgY29udGVudCArPSB0aGlzLmFjY2VwdChwYXJ0aWFsLnByb2dyYW0pO1xuICB0aGlzLnBhZGRpbmctLTtcblxuICByZXR1cm4gdGhpcy5wYWQoJ3t7PiAnICsgY29udGVudCArICcgfX0nKTtcbn07XG5cblByaW50VmlzaXRvci5wcm90b3R5cGUuQ29udGVudFN0YXRlbWVudCA9IGZ1bmN0aW9uKGNvbnRlbnQpIHtcbiAgcmV0dXJuIHRoaXMucGFkKFwiQ09OVEVOVFsgJ1wiICsgY29udGVudC52YWx1ZSArIFwiJyBdXCIpO1xufTtcblxuUHJpbnRWaXNpdG9yLnByb3RvdHlwZS5Db21tZW50U3RhdGVtZW50ID0gZnVuY3Rpb24oY29tbWVudCkge1xuICByZXR1cm4gdGhpcy5wYWQoXCJ7eyEgJ1wiICsgY29tbWVudC52YWx1ZSArIFwiJyB9fVwiKTtcbn07XG5cblByaW50VmlzaXRvci5wcm90b3R5cGUuU3ViRXhwcmVzc2lvbiA9IGZ1bmN0aW9uKHNleHByKSB7XG4gIGxldCBwYXJhbXMgPSBzZXhwci5wYXJhbXMsXG4gICAgICBwYXJhbVN0cmluZ3MgPSBbXSxcbiAgICAgIGhhc2g7XG5cbiAgZm9yIChsZXQgaSA9IDAsIGwgPSBwYXJhbXMubGVuZ3RoOyBpIDwgbDsgaSsrKSB7XG4gICAgcGFyYW1TdHJpbmdzLnB1c2godGhpcy5hY2NlcHQocGFyYW1zW2ldKSk7XG4gIH1cblxuICBwYXJhbXMgPSAnWycgKyBwYXJhbVN0cmluZ3Muam9pbignLCAnKSArICddJztcblxuICBoYXNoID0gc2V4cHIuaGFzaCA/ICcgJyArIHRoaXMuYWNjZXB0KHNleHByLmhhc2gpIDogJyc7XG5cbiAgcmV0dXJuIHRoaXMuYWNjZXB0KHNleHByLnBhdGgpICsgJyAnICsgcGFyYW1zICsgaGFzaDtcbn07XG5cblByaW50VmlzaXRvci5wcm90b3R5cGUuUGF0aEV4cHJlc3Npb24gPSBmdW5jdGlvbihpZCkge1xuICBsZXQgcGF0aCA9IGlkLnBhcnRzLmpvaW4oJy8nKTtcbiAgcmV0dXJuIChpZC5kYXRhID8gJ0AnIDogJycpICsgJ1BBVEg6JyArIHBhdGg7XG59O1xuXG5cblByaW50VmlzaXRvci5wcm90b3R5cGUuU3RyaW5nTGl0ZXJhbCA9IGZ1bmN0aW9uKHN0cmluZykge1xuICByZXR1cm4gJ1wiJyArIHN0cmluZy52YWx1ZSArICdcIic7XG59O1xuXG5QcmludFZpc2l0b3IucHJvdG90eXBlLk51bWJlckxpdGVyYWwgPSBmdW5jdGlvbihudW1iZXIpIHtcbiAgcmV0dXJuICdOVU1CRVJ7JyArIG51bWJlci52YWx1ZSArICd9Jztcbn07XG5cblByaW50VmlzaXRvci5wcm90b3R5cGUuQm9vbGVhbkxpdGVyYWwgPSBmdW5jdGlvbihib29sKSB7XG4gIHJldHVybiAnQk9PTEVBTnsnICsgYm9vbC52YWx1ZSArICd9Jztcbn07XG5cblByaW50VmlzaXRvci5wcm90b3R5cGUuVW5kZWZpbmVkTGl0ZXJhbCA9IGZ1bmN0aW9uKCkge1xuICByZXR1cm4gJ1VOREVGSU5FRCc7XG59O1xuXG5QcmludFZpc2l0b3IucHJvdG90eXBlLk51bGxMaXRlcmFsID0gZnVuY3Rpb24oKSB7XG4gIHJldHVybiAnTlVMTCc7XG59O1xuXG5QcmludFZpc2l0b3IucHJvdG90eXBlLkhhc2ggPSBmdW5jdGlvbihoYXNoKSB7XG4gIGxldCBwYWlycyA9IGhhc2gucGFpcnMsXG4gICAgICBqb2luZWRQYWlycyA9IFtdO1xuXG4gIGZvciAobGV0IGkgPSAwLCBsID0gcGFpcnMubGVuZ3RoOyBpIDwgbDsgaSsrKSB7XG4gICAgam9pbmVkUGFpcnMucHVzaCh0aGlzLmFjY2VwdChwYWlyc1tpXSkpO1xuICB9XG5cbiAgcmV0dXJuICdIQVNIeycgKyBqb2luZWRQYWlycy5qb2luKCcsICcpICsgJ30nO1xufTtcblByaW50VmlzaXRvci5wcm90b3R5cGUuSGFzaFBhaXIgPSBmdW5jdGlvbihwYWlyKSB7XG4gIHJldHVybiBwYWlyLmtleSArICc9JyArIHRoaXMuYWNjZXB0KHBhaXIudmFsdWUpO1xufTtcbi8qIGVzbGludC1lbmFibGUgbmV3LWNhcCAqL1xuIl19
 
+
+/***/ },
+/* 40 */,
+/* 41 */
+/***/ function(module, exports) {
+
+	module.exports = "<!-- \n  <div class=\"school-books-item\">\n    <a href=\"{{url}}\" target=\"new\">\n      <img class=\"img-responsive book-image\" src=\"{{image}}\" alt=\"Responsive image\">\n    </a>\n       <div class=\"title\">{{title}}</div>\n      <div class=\"author\">{{author}}</div>\n  </div>\n -->\n\n\n<div id=\"image-container col-md-3\">\n  <div>\n    <a href=\"{{url}}\" target=\"new\">\n      <img class =\"img-responsive book-image\" src=\"{{image}}\" alt=\"Responsive image\">\n    </a>\n  </div>\n</div>";
+
+/***/ },
+/* 42 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<nav class=\"school-nav row\">\n   <h1>Go Beyond the Textbook.</h1>\n   <h6>Read fiction and nonfiction books related to what you're studying in school and fuel your love of learning!</h6>\n   <!-- <a href=\"#\">English Literature</a>\n   <a href=\"#\">History</a>\n   <a href=\"#\">Math</a>\n   <a href=\"#\">Political Science</a>\n   <a href=\"#\">Psychology</a>\n   <a href=\"#\">Science</a> -->\n</nav>\n\n\n";
+
+/***/ },
+/* 43 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _handlebars = __webpack_require__(10);
+	
+	var _handlebars2 = _interopRequireDefault(_handlebars);
+	
+	var _lscache = __webpack_require__(44);
+	
+	var _lscache2 = _interopRequireDefault(_lscache);
+	
+	var _lodash = __webpack_require__(45);
+	
+	var _lodash2 = _interopRequireDefault(_lodash);
+	
+	var _templatesObsItemHtml = __webpack_require__(47);
+	
+	var _templatesObsItemHtml2 = _interopRequireDefault(_templatesObsItemHtml);
+	
+	var _json2csv = __webpack_require__(48);
+	
+	var _json2csv2 = _interopRequireDefault(_json2csv);
+	
+	var _d3 = __webpack_require__(58);
+	
+	var _d32 = _interopRequireDefault(_d3);
+	
+	var _templatesDataTableHtml = __webpack_require__(59);
+	
+	var _templatesDataTableHtml2 = _interopRequireDefault(_templatesDataTableHtml);
+	
+	var obsItems = __webpack_require__(60);
+	var obsItemTemplate;
+	var currentIndex = 0;
+	var interval;
+	var timerRunning = false;
+	var splitCount = 0;
+	var cumCount = 0;
+	var points;
+	var index = 0;
+	var pointsArray = [];
+	var testData = [];
+	var itemData;
+	var result;
+	// var pointsTotal;
+	// var testScore = [];
+	
+	var model = {
+	  init: function init() {
+	    var savedData = _lscache2['default'].get('testData');
+	    if (savedData) {
+	      testData = savedData;
+	    } else {
+	      testData = [];
+	    }
+	  },
+	  save: function save() {
+	    var dataToSave = JSON.stringify(testData);
+	    _lscache2['default'].set('testData', dataToSave);
+	  },
+	  get: function get() {
+	    return testData;
+	  }
+	};
+	
+	// var view = $('script[type="text/x-template"]').html();
+	
+	var app = {
+	  init: function init() {
+	    model.init();
+	    app.compileTemplate();
+	    app.render();
+	  },
+	  render: function render() {
+	    app.bindClickEvents();
+	  },
+	  compileTemplate: function compileTemplate() {
+	    obsItemTemplate = _handlebars2['default'].compile(_templatesObsItemHtml2['default']);
+	  },
+	  startTimer: function startTimer() {
+	    var $startStop = (0, _jquery2['default'])('.start-stop-button');
+	    $startStop.on('click', function () {
+	      if ($startStop.html() === 'Start') {
+	        if (timerRunning === false) {
+	          timerRunning = true;
+	        }
+	        interval = setInterval(function () {
+	          splitCount++;
+	          if (splitCount < 10) {
+	            splitCount = '0' + splitCount;
+	          }
+	          (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + splitCount);
+	          cumCount++;
+	          if (cumCount < 10) {
+	            cumCount = '0' + cumCount;
+	          }
+	          (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + cumCount);
+	        }, 600);
+	        $startStop.html('Stop');
+	        $startStop.css({ 'background-color': '#192837' });
+	        app.showItem();
+	      } else {
+	        app.stopTimer();
+	        $startStop.html('Start');
+	        $startStop.css({ 'background-color': '#17B20A' });
+	      }
+	    });
+	  },
+	  stopTimer: function stopTimer() {
+	    interval = clearInterval(interval);
+	    if (timerRunning === true) {
+	      timerRunning = false;
+	    }
+	    app.displayTimes();
+	    itemData = {
+	      itemNumber: index,
+	      time: splitCount,
+	      points: points
+	    };
+	    testData.push(itemData);
+	    model.save();
+	    splitCount = 0;
+	  },
+	  studyPage: function studyPage() {
+	    var $study = (0, _jquery2['default'])('.misc-button');
+	    $study.on('click', function () {
+	      if (timerRunning === false) {
+	        timerRunning = true;
+	        interval = setInterval(function () {
+	          if (splitCount === 50) {
+	            interval = clearInterval(interval);
+	            splitCount = 0;
+	            cumCount = 0;
+	            $study.css({
+	              'background-color': '#089D9A'
+	            });
+	          } else {
+	            splitCount++;
+	            $study.css({
+	              'background-color': '#5D0A57'
+	            });
+	            if (splitCount < 10) {
+	              splitCount = '0' + splitCount;
+	            }
+	            (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + splitCount);
+	            cumCount++;
+	            if (cumCount < 10) {
+	              cumCount = '0' + cumCount;
+	            }
+	            (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + cumCount);
+	          }
+	        }, 600);
+	      }
+	    });
+	  },
+	  resetTimer: function resetTimer() {
+	    var $reset = (0, _jquery2['default'])('.reset-button');
+	    $reset.on('click', function () {
+	      if (timerRunning === false) {
+	        app.clearEverything();
+	      }
+	    });
+	  },
+	  displayTimes: function displayTimes() {
+	    if (splitCount < 10) {
+	      points = 3;
+	    } else if (splitCount > 9 && splitCount < 20) {
+	      points = 2;
+	    } else if (splitCount > 19 && splitCount < 30) {
+	      points = 1;
+	    } else {
+	      points = 0;
+	    }
+	    index++;
+	    app.addPoints();
+	  },
+	  clearEverything: function clearEverything() {
+	    testData = [];
+	    pointsArray = [];
+	    splitCount = 0;
+	    cumCount = 0;
+	    index = 0;
+	    currentIndex = 0;
+	
+	    (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + '0' + splitCount);
+	    (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + '0' + cumCount);
+	    (0, _jquery2['default'])('.item-container').html('');
+	    (0, _jquery2['default'])('.score').html('Score =');
+	  },
+	
+	  addPoints: function addPoints() {
+	    pointsArray.push(points);
+	    var pointsTotal = _lodash2['default'].sum(pointsArray);
+	    (0, _jquery2['default'])('.score').html('Score = ' + pointsTotal);
+	  },
+	  showItem: function showItem() {
+	    (0, _jquery2['default'])('.item-container').html(obsItemTemplate(obsItems[currentIndex]));
+	    currentIndex++;
+	  },
+	  createTable: function createTable() {
+	    (0, _jquery2['default'])('.stopwatch-container').html(_templatesDataTableHtml2['default']);
+	    _d32['default'].text(result, function (data) {
+	      var parsedCSV = _d32['default'].csv.parseRows(result);
+	      var container = _d32['default'].select('.datatable').append('table').selectAll('tr').data(parsedCSV).enter().append('tr').selectAll('td').data(function (d) {
+	        return d;
+	      }).enter().append('td').text(function (d) {
+	        return d;
+	      });
+	    });
+	    localStorage.clear();
+	  },
+	  createCSV: function createCSV() {
+	    (0, _jquery2['default'])('.create-csv').on('click', function () {
+	      var fields = ['itemNumber', 'time', 'points'];
+	      try {
+	        result = (0, _json2csv2['default'])({ data: testData, fields: fields });
+	        app.createTable();
+	      } catch (err) {
+	        console.log(err);
+	      }
+	    });
+	  },
+	  bindClickEvents: function bindClickEvents() {
+	    app.startTimer();
+	    app.studyPage();
+	    app.resetTimer();
+	    app.createCSV();
+	  }
+	};
+	
+	module.exports = app;
+	
+	// app.displayTimes();
+	// itemData = {
+	//   itemNumber: index - 1,
+	//   time: splitCount,
+	//   points: points
+	// };
+	// // app.addPoints();
+	// testData.push(itemData);
+	// model.save();
 
 /***/ },
 /* 44 */
@@ -44719,7 +43167,7 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _handlebars = __webpack_require__(14);
+	var _handlebars = __webpack_require__(10);
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
@@ -45076,7 +43524,7 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _handlebars = __webpack_require__(14);
+	var _handlebars = __webpack_require__(10);
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
@@ -45152,7 +43600,6 @@
 	        if (timerRunning === false) {
 	          timerRunning = true;
 	        }
-	        // startTime = new Date();
 	        interval = setInterval(function () {
 	          splitCount++;
 	          if (splitCount < 10) {
@@ -45180,7 +43627,6 @@
 	    if (timerRunning === true) {
 	      timerRunning = false;
 	    }
-	    // app.addPoints(); 
 	    app.displayTimes();
 	    itemData = {
 	      row: currentIndex,
@@ -45190,16 +43636,13 @@
 	      points: points,
 	      droppedPin: pinDropped
 	    };
-	
 	    testData.push(itemData);
-	
 	    model.save();
 	    splitCount = 0;
 	  },
 	  splitTimer: function splitTimer() {
 	    var $split = (0, _jquery2['default'])('.misc-button');
 	    $split.on('click', function () {
-	      // app.addPoints();
 	      app.displayTimes();
 	      itemData = {
 	        row: currentIndex,
@@ -45221,15 +43664,14 @@
 	    app.droppedPin();
 	    app.pickedUp();
 	  },
-	  // resetTimer: function(){
-	  //   var $reset = $('.reset-button');
-	  //   $reset.on('click', function(){
-	  //     // interval = clearInterval(interval);
-	  //     if (timerRunning === false) {
-	  //       app.clearEverything();
-	  //     }
-	  //   });  
-	  // },
+	  resetTimer: function resetTimer() {
+	    var $reset = (0, _jquery2['default'])('.reset-button');
+	    $reset.on('click', function () {
+	      if (timerRunning === false) {
+	        app.clearEverything();
+	      }
+	    });
+	  },
 	  displayTimes: function displayTimes() {
 	    if (extraTime > 0) {
 	      rowTime = splitCount + extraTime;
@@ -45278,7 +43720,6 @@
 	    (0, _jquery2['default'])('.stopwatch-container').html(_templatesDataTableHtml2['default']);
 	    _d32['default'].text(result, function (data) {
 	      var parsedCSV = _d32['default'].csv.parseRows(result);
-	
 	      var container = _d32['default'].select('.datatable').append('table').selectAll('tr').data(parsedCSV).enter().append('tr').selectAll('td').data(function (d) {
 	        return d;
 	      }).enter().append('td').text(function (d) {
@@ -45298,31 +43739,19 @@
 	      }
 	    });
 	  },
-	  // displayTimes: function(){
-	  //   $('.time-col').append('Item ' + '' + (index + 1) + ': ' + ' ' + splitTimes[index] + '<br />');
-	  //   if (splitTimes[index] < 10) {
-	  //     points = 3;
-	  //   } else if (splitTimes[index] > 9 && splitTimes[index] < 20) {
-	  //     points = 2;
-	  //   } else if (splitTimes[index] > 19 && splitTimes[index] < 30){
-	  //     points = 1;
-	  //   } else {
-	  //     points = 0;
-	  //   }
-	  //   $('.points-col').append(points + '<br />');
-	  //   index++;
-	  // },
 	  clearEverything: function clearEverything() {
 	    testData = [];
 	    pointsArray = [];
 	    splitCount = 0;
 	    cumCount = 0;
 	    currentIndex = 0;
-	    (0, _jquery2['default'])('.time-col').html('<h1>Times</h1');
-	    (0, _jquery2['default'])('.points-col').html('<h1>Points</h1>');
+	    extraTime = 0;
+	    pinDropped = 0;
+	
+	    (0, _jquery2['default'])('.item-container').html('');
 	    (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + '0' + splitCount);
 	    (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + '0' + cumCount);
-	    (0, _jquery2['default'])('.score').html('');
+	    (0, _jquery2['default'])('.score').html('Score = ');
 	  },
 	  addPoints: function addPoints() {
 	    pointsArray.push(points);
@@ -45332,6 +43761,7 @@
 	  bindClickEvents: function bindClickEvents() {
 	    app.startTimer();
 	    app.splitTimer();
+	    app.resetTimer();
 	    app.createCSV();
 	  }
 	};
@@ -45389,7 +43819,6 @@
 	var cumCount = 0;
 	var timerRunning = false;
 	var splitTimes = [];
-	var index = 0;
 	var points;
 	var pointsArray = [];
 	
@@ -45407,7 +43836,6 @@
 	        if (timerRunning === false) {
 	          timerRunning = true;
 	        }
-	        // startTime = new Date();
 	        interval = setInterval(function () {
 	          splitCount++;
 	          if (splitCount < 10) {
@@ -45435,7 +43863,6 @@
 	      timerRunning = false;
 	    }
 	    splitTimes.push(splitCount);
-	    // app.displayTimes();
 	    app.addPoints();
 	    splitCount = 0;
 	  },
@@ -45443,7 +43870,6 @@
 	    var $split = (0, _jquery2['default'])('.misc-button');
 	    $split.on('click', function () {
 	      splitTimes.push(splitCount);
-	      // app.displayTimes();
 	      app.addPoints();
 	      splitCount = 0;
 	    });
@@ -45451,32 +43877,17 @@
 	  resetTimer: function resetTimer() {
 	    var $reset = (0, _jquery2['default'])('.reset-button');
 	    $reset.on('click', function () {
-	      // interval = clearInterval(interval);
 	      if (timerRunning === false) {
 	        app.clearEverything();
 	      }
 	    });
 	  },
-	  // displayTimes: function(){
-	  //   $('.time-col').append('Item ' + '' + (index + 1) + ': ' + ' ' + splitTimes[index] + '<br />');
-	  //   if (splitTimes[index] < 10) {
-	  //     points = 3;
-	  //   } else if (splitTimes[index] > 9 && splitTimes[index] < 20) {
-	  //     points = 2;
-	  //   } else if (splitTimes[index] > 19 && splitTimes[index] < 30){
-	  //     points = 1;
-	  //   } else {
-	  //     points = 0;
-	  //   }
-	  //   $('.points-col').append(points + '<br />');
-	  //   index++;
-	  // },
 	  clearEverything: function clearEverything() {
 	    splitTimes = [];
 	    pointsArray = [];
 	    splitCount = 0;
 	    cumCount = 0;
-	    index = 0;
+	
 	    (0, _jquery2['default'])('.time-col').html('<h1>Times</h1');
 	    (0, _jquery2['default'])('.points-col').html('<h1>Points</h1>');
 	    (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + '0' + splitCount);
@@ -45494,7 +43905,6 @@
 	    app.resetTimer();
 	  }
 	};
-	
 	module.exports = app;
 	
 	// var startTime;
@@ -45560,6 +43970,12 @@
 	// };
 
 	// module.exports = app;
+
+/***/ },
+/* 68 */
+/***/ function(module, exports) {
+
+	"use strict";
 
 /***/ }
 /******/ ]);

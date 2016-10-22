@@ -57,7 +57,6 @@ var app = {
         if (timerRunning === false) {
           timerRunning = true;
         }
-        // startTime = new Date();
         interval = setInterval(function(){
           splitCount++;
           if (splitCount < 10) {
@@ -84,8 +83,7 @@ var app = {
     interval = clearInterval(interval);
     if (timerRunning === true) {
       timerRunning = false;
-    }
-    // app.addPoints();  
+    } 
     app.displayTimes();
     itemData = {
       row: currentIndex,
@@ -95,16 +93,13 @@ var app = {
       points: points,
       droppedPin: pinDropped
     };
-
-    testData.push(itemData);
-    
+    testData.push(itemData);    
     model.save();
     splitCount = 0;
   },
   splitTimer: function(){  
     var $split = $('.misc-button');
     $split.on('click', function(){
-      // app.addPoints();
       app.displayTimes();
       itemData = {
         row: currentIndex,
@@ -126,15 +121,14 @@ var app = {
     app.droppedPin();
     app.pickedUp();
   },
-  // resetTimer: function(){
-  //   var $reset = $('.reset-button');
-  //   $reset.on('click', function(){
-  //     // interval = clearInterval(interval);
-  //     if (timerRunning === false) {
-  //       app.clearEverything(); 
-  //     } 
-  //   });   
-  // },
+  resetTimer: function(){
+    var $reset = $('.reset-button');
+    $reset.on('click', function(){
+      if (timerRunning === false) {
+        app.clearEverything(); 
+      } 
+    });   
+  },
   displayTimes: function(){
     if (extraTime > 0) {
       rowTime = splitCount + extraTime;
@@ -142,7 +136,7 @@ var app = {
       rowTime = splitCount;
     }
     if (rowTime < 32) {
-    points = 8;
+      points = 8;
     } else if (rowTime === 33 || rowTime === 34) {
       points = 7;
     } else if (rowTime === 35 || rowTime === 36) {
@@ -170,7 +164,7 @@ var app = {
       pinDropped++;
       extraTime += 5;
     });  
-    pinDropped = 0
+    pinDropped = 0;
     extraTime = 0;
   },
   pickedUp: function(){
@@ -183,14 +177,11 @@ var app = {
     $('.stopwatch-container').html(dataTable);
     d3.text(result, function(data) {
       var parsedCSV = d3.csv.parseRows(result);
-
       var container = d3.select('.datatable')
         .append('table')
-
         .selectAll('tr')
           .data(parsedCSV).enter()
           .append('tr')
-
         .selectAll('td')
           .data(function(d) { return d; }).enter()
           .append('td')
@@ -209,31 +200,19 @@ var app = {
       }
     }); 
   },
-  // displayTimes: function(){
-  //   $('.time-col').append('Item ' + '' + (index + 1) + ': ' + ' ' + splitTimes[index] + '<br />'); 
-  //   if (splitTimes[index] < 10) {
-  //     points = 3;
-  //   } else if (splitTimes[index] > 9 && splitTimes[index] < 20) {
-  //     points = 2;
-  //   } else if (splitTimes[index] > 19 && splitTimes[index] < 30){
-  //     points = 1;
-  //   } else {
-  //     points = 0;
-  //   }
-  //   $('.points-col').append(points + '<br />');
-  //   index++;
-  // },
   clearEverything: function(){
     testData = [];
     pointsArray = [];
     splitCount = 0;
     cumCount = 0;
     currentIndex = 0;
-    $('.time-col').html('<h1>Times</h1');
-    $('.points-col').html('<h1>Points</h1>');
+    extraTime = 0;
+    pinDropped = 0;
+
+    $('.item-container').html('');
     $('.split-counter').html('Individual Time: ' + '0' + splitCount);
     $('.cum-counter').html('Cumulative Time: ' + '0' + cumCount);
-    $('.score').html('');
+    $('.score').html('Score = ');
   },
   addPoints: function(){
     pointsArray.push(points);
@@ -243,10 +222,9 @@ var app = {
   bindClickEvents: function(){
     app.startTimer();
     app.splitTimer();
+    app.resetTimer();
     app.createCSV();
   }
 };
 
 module.exports = app;
-
-
