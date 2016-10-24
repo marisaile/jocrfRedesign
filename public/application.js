@@ -62,19 +62,19 @@
 	
 	var _pagesSchoolBooks2 = _interopRequireDefault(_pagesSchoolBooks);
 	
-	var _pagesTimerObs = __webpack_require__(43);
+	var _pagesTimerObs = __webpack_require__(42);
 	
 	var _pagesTimerObs2 = _interopRequireDefault(_pagesTimerObs);
 	
-	var _pagesWordAssociation = __webpack_require__(61);
+	var _pagesWordAssociation = __webpack_require__(60);
 	
 	var _pagesWordAssociation2 = _interopRequireDefault(_pagesWordAssociation);
 	
-	var _pagesTweezerDexterity = __webpack_require__(64);
+	var _pagesTweezerDexterity = __webpack_require__(63);
 	
 	var _pagesTweezerDexterity2 = _interopRequireDefault(_pagesTweezerDexterity);
 	
-	var _pagesTimerGen = __webpack_require__(67);
+	var _pagesTimerGen = __webpack_require__(66);
 	
 	var _pagesTimerGen2 = _interopRequireDefault(_pagesTimerGen);
 	
@@ -88,7 +88,7 @@
 	// import bookController from 'pages/books/booksController';
 	// import vdt from 'pages/visualDesigns';
 	
-	var _pagesDalquest = __webpack_require__(68);
+	var _pagesDalquest = __webpack_require__(67);
 	
 	var _pagesDalquest2 = _interopRequireDefault(_pagesDalquest);
 	
@@ -10083,11 +10083,11 @@
 	
 	// import _ from 'underscore';
 	
-	var _templatesSchoolSchoolBookContainerHtml = __webpack_require__(41);
+	var _templatesSchoolSchoolBookContainerHtml = __webpack_require__(40);
 	
 	var _templatesSchoolSchoolBookContainerHtml2 = _interopRequireDefault(_templatesSchoolSchoolBookContainerHtml);
 	
-	var _templatesSchoolBookPageHeaderHtml = __webpack_require__(42);
+	var _templatesSchoolBookPageHeaderHtml = __webpack_require__(41);
 	
 	var _templatesSchoolBookPageHeaderHtml2 = _interopRequireDefault(_templatesSchoolBookPageHeaderHtml);
 	
@@ -14934,20 +14934,19 @@
 
 
 /***/ },
-/* 40 */,
-/* 41 */
+/* 40 */
 /***/ function(module, exports) {
 
 	module.exports = "<!-- \n  <div class=\"school-books-item\">\n    <a href=\"{{url}}\" target=\"new\">\n      <img class=\"img-responsive book-image\" src=\"{{image}}\" alt=\"Responsive image\">\n    </a>\n       <div class=\"title\">{{title}}</div>\n      <div class=\"author\">{{author}}</div>\n  </div>\n -->\n\n\n<div id=\"image-container col-md-3\">\n  <div>\n    <a href=\"{{url}}\" target=\"new\">\n      <img class =\"img-responsive book-image\" src=\"{{image}}\" alt=\"Responsive image\">\n    </a>\n  </div>\n</div>";
 
 /***/ },
-/* 42 */
+/* 41 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<nav class=\"school-nav row\">\n   <h1>Go Beyond the Textbook.</h1>\n   <h6>Read fiction and nonfiction books related to what you're studying in school and fuel your love of learning!</h6>\n   <!-- <a href=\"#\">English Literature</a>\n   <a href=\"#\">History</a>\n   <a href=\"#\">Math</a>\n   <a href=\"#\">Political Science</a>\n   <a href=\"#\">Psychology</a>\n   <a href=\"#\">Science</a> -->\n</nav>\n\n\n";
 
 /***/ },
-/* 43 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14962,31 +14961,31 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _lscache = __webpack_require__(44);
+	var _lscache = __webpack_require__(43);
 	
 	var _lscache2 = _interopRequireDefault(_lscache);
 	
-	var _lodash = __webpack_require__(45);
+	var _lodash = __webpack_require__(44);
 	
 	var _lodash2 = _interopRequireDefault(_lodash);
 	
-	var _templatesObsItemHtml = __webpack_require__(47);
+	var _templatesObsItemHtml = __webpack_require__(46);
 	
 	var _templatesObsItemHtml2 = _interopRequireDefault(_templatesObsItemHtml);
 	
-	var _json2csv = __webpack_require__(48);
+	var _json2csv = __webpack_require__(47);
 	
 	var _json2csv2 = _interopRequireDefault(_json2csv);
 	
-	var _d3 = __webpack_require__(58);
+	var _d3 = __webpack_require__(57);
 	
 	var _d32 = _interopRequireDefault(_d3);
 	
-	var _templatesDataTableHtml = __webpack_require__(59);
+	var _templatesDataTableHtml = __webpack_require__(58);
 	
 	var _templatesDataTableHtml2 = _interopRequireDefault(_templatesDataTableHtml);
 	
-	var obsItems = __webpack_require__(60);
+	var obsItems = __webpack_require__(59);
 	var obsItemTemplate;
 	var currentIndex = 0;
 	var interval;
@@ -15043,18 +15042,28 @@
 	        }
 	        interval = setInterval(function () {
 	          splitCount++;
-	          if (splitCount < 10) {
-	            splitCount = '0' + splitCount;
+	          var splitCountText = splitCount.toString();
+	          if (splitCountText.length < 2) {
+	            splitCountText = '.0' + splitCount;
+	          } else if (splitCountText.length > 2) {
+	            splitCountText = splitCountText.slice(0, 1) + '.' + splitCountText.slice(1, 3);
+	          } else {
+	            splitCountText = '.' + splitCount;
 	          }
-	          (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + splitCount);
+	          (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + splitCountText);
 	          cumCount++;
-	          if (cumCount < 10) {
-	            cumCount = '0' + cumCount;
+	          var cumText = cumCount.toString();
+	          if (cumText.length < 2) {
+	            cumText = '.0' + cumText;
+	          } else if (cumText.length > 2) {
+	            cumText = cumText.slice(0, 1) + '.' + cumText.slice(1, 3);
+	          } else {
+	            cumText = '.' + cumText;
 	          }
-	          (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + cumCount);
+	          (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + cumText);
 	        }, 600);
 	        $startStop.html('Stop');
-	        $startStop.css({ 'background-color': '#192837' });
+	        $startStop.css({ 'background-color': '#19284B' });
 	        app.showItem();
 	      } else {
 	        app.stopTimer();
@@ -15093,20 +15102,30 @@
 	            });
 	          } else {
 	            splitCount++;
-	            $study.css({
-	              'background-color': '#5D0A57'
-	            });
-	            if (splitCount < 10) {
-	              splitCount = '0' + splitCount;
+	            var splitCountText = splitCount.toString();
+	            if (splitCountText.length < 2) {
+	              splitCountText = '.0' + splitCount;
+	            } else if (splitCountText.length > 2) {
+	              splitCountText = splitCountText.slice(0, 1) + '.' + splitCountText.slice(1, 3);
+	            } else {
+	              splitCountText = '.' + splitCount;
 	            }
-	            (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + splitCount);
+	            (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + splitCountText);
 	            cumCount++;
-	            if (cumCount < 10) {
-	              cumCount = '0' + cumCount;
+	            var cumText = cumCount.toString();
+	            if (cumText.length < 2) {
+	              cumText = '.0' + cumText;
+	            } else if (cumText.length > 2) {
+	              cumText = cumText.slice(0, 1) + '.' + cumText.slice(1, 3);
+	            } else {
+	              cumText = '.' + cumText;
 	            }
-	            (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + cumCount);
+	            (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + cumText);
 	          }
 	        }, 600);
+	        $study.css({
+	          'background-color': '#5D0A57'
+	        });
 	      }
 	    });
 	  },
@@ -15139,12 +15158,11 @@
 	    index = 0;
 	    currentIndex = 0;
 	
-	    (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + '0' + splitCount);
-	    (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + '0' + cumCount);
+	    (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + '.0' + splitCount);
+	    (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + '.0' + cumCount);
 	    (0, _jquery2['default'])('.item-container').html('');
 	    (0, _jquery2['default'])('.score').html('Score =');
 	  },
-	
 	  addPoints: function addPoints() {
 	    pointsArray.push(points);
 	    var pointsTotal = _lodash2['default'].sum(pointsArray);
@@ -15198,7 +15216,7 @@
 	// model.save();
 
 /***/ },
-/* 44 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -15554,7 +15572,7 @@
 
 
 /***/ },
-/* 45 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/**
@@ -27909,10 +27927,10 @@
 	  }
 	}.call(this));
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(46)(module), (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(45)(module), (function() { return this; }())))
 
 /***/ },
-/* 46 */
+/* 45 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -27928,25 +27946,25 @@
 
 
 /***/ },
-/* 47 */
+/* 46 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"obs-item\">\n  <h2>{{id}}</h2>\n  <h4>{{change}}</h4>\n</div>";
 
 /***/ },
-/* 48 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
 	 * Module dependencies.
 	 */
-	var os = __webpack_require__(50);
-	var lodashGet = __webpack_require__(51);
-	var lodashFlatten = __webpack_require__(52);
-	var lodashUniq = __webpack_require__(53);
-	var lodashSet = __webpack_require__(54);
-	var lodashCloneDeep = __webpack_require__(55);
-	var flatten = __webpack_require__(56);
+	var os = __webpack_require__(49);
+	var lodashGet = __webpack_require__(50);
+	var lodashFlatten = __webpack_require__(51);
+	var lodashUniq = __webpack_require__(52);
+	var lodashSet = __webpack_require__(53);
+	var lodashCloneDeep = __webpack_require__(54);
+	var flatten = __webpack_require__(55);
 	
 	/**
 	 * @name Json2CsvParams
@@ -28229,10 +28247,10 @@
 	  }
 	  return dataRows;
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(49)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(48)))
 
 /***/ },
-/* 49 */
+/* 48 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -28329,7 +28347,7 @@
 
 
 /***/ },
-/* 50 */
+/* 49 */
 /***/ function(module, exports) {
 
 	exports.endianness = function () { return 'LE' };
@@ -28380,7 +28398,7 @@
 
 
 /***/ },
-/* 51 */
+/* 50 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -29318,7 +29336,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 52 */
+/* 51 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -29674,7 +29692,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 53 */
+/* 52 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -30577,7 +30595,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 54 */
+/* 53 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -31574,7 +31592,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 55 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -33326,13 +33344,13 @@
 	
 	module.exports = cloneDeep;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(46)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(45)(module)))
 
 /***/ },
-/* 56 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isBuffer = __webpack_require__(57)
+	var isBuffer = __webpack_require__(56)
 	
 	var flat = module.exports = flatten
 	flatten.flatten = flatten
@@ -33440,7 +33458,7 @@
 
 
 /***/ },
-/* 57 */
+/* 56 */
 /***/ function(module, exports) {
 
 	/**
@@ -33463,7 +33481,7 @@
 
 
 /***/ },
-/* 58 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;!function() {
@@ -43022,13 +43040,13 @@
 	}();
 
 /***/ },
-/* 59 */
+/* 58 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"datatable\">\n\n</div>";
 
 /***/ },
-/* 60 */
+/* 59 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -43137,7 +43155,7 @@
 	  change: 'pushpins gone'
 	}, {
 	  id: 'Item 35',
-	  change: 'brush gone'
+	  change: 'fork larger'
 	}, {
 	  id: 'Item 36',
 	  change: 'bucket gone'
@@ -43156,7 +43174,7 @@
 	}];
 
 /***/ },
-/* 61 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43171,11 +43189,11 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _templatesWordHtml = __webpack_require__(62);
+	var _templatesWordHtml = __webpack_require__(61);
 	
 	var _templatesWordHtml2 = _interopRequireDefault(_templatesWordHtml);
 	
-	var WordAssociationList = __webpack_require__(63);
+	var WordAssociationList = __webpack_require__(62);
 	var wordTemplate;
 	var currentIndex = 0;
 	var significantResponse = 0;
@@ -43220,13 +43238,13 @@
 	module.exports = app;
 
 /***/ },
-/* 62 */
+/* 61 */
 /***/ function(module, exports) {
 
 	module.exports = "\n  <div class=\"word\">{{word}}</div>\n  <div class=\"response\">(Sig.: {{response}})</div>\n  \n\n";
 
 /***/ },
-/* 63 */
+/* 62 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -43513,7 +43531,7 @@
 	}];
 
 /***/ },
-/* 64 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43528,31 +43546,31 @@
 	
 	var _handlebars2 = _interopRequireDefault(_handlebars);
 	
-	var _lscache = __webpack_require__(44);
+	var _lscache = __webpack_require__(43);
 	
 	var _lscache2 = _interopRequireDefault(_lscache);
 	
-	var _lodash = __webpack_require__(45);
+	var _lodash = __webpack_require__(44);
 	
 	var _lodash2 = _interopRequireDefault(_lodash);
 	
-	var _templatesTweezerTemplateHtml = __webpack_require__(65);
+	var _templatesTweezerTemplateHtml = __webpack_require__(64);
 	
 	var _templatesTweezerTemplateHtml2 = _interopRequireDefault(_templatesTweezerTemplateHtml);
 	
-	var _json2csv = __webpack_require__(48);
+	var _json2csv = __webpack_require__(47);
 	
 	var _json2csv2 = _interopRequireDefault(_json2csv);
 	
-	var _d3 = __webpack_require__(58);
+	var _d3 = __webpack_require__(57);
 	
 	var _d32 = _interopRequireDefault(_d3);
 	
-	var _templatesDataTableHtml = __webpack_require__(59);
+	var _templatesDataTableHtml = __webpack_require__(58);
 	
 	var _templatesDataTableHtml2 = _interopRequireDefault(_templatesDataTableHtml);
 	
-	var twzRows = __webpack_require__(66);
+	var twzRows = __webpack_require__(65);
 	var tweezerTemplate;
 	var currentIndex = 0;
 	var interval;
@@ -43602,19 +43620,29 @@
 	        }
 	        interval = setInterval(function () {
 	          splitCount++;
-	          if (splitCount < 10) {
-	            splitCount = '0' + splitCount;
+	          var splitCountText = splitCount.toString();
+	          if (splitCountText.length < 2) {
+	            splitCountText = '.0' + splitCount;
+	          } else if (splitCountText.length > 2) {
+	            splitCountText = splitCountText.slice(0, 1) + '.' + splitCountText.slice(1, 3);
+	          } else {
+	            splitCountText = '.' + splitCount;
 	          }
-	          (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + splitCount);
+	          (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + splitCountText);
 	          cumCount++;
-	          if (cumCount < 10) {
-	            cumCount = '0' + cumCount;
+	          var cumText = cumCount.toString();
+	          if (cumText.length < 2) {
+	            cumText = '.0' + cumText;
+	          } else if (cumText.length > 2) {
+	            cumText = cumText.slice(0, 1) + '.' + cumText.slice(1, 3);
+	          } else {
+	            cumText = '.' + cumText;
 	          }
-	          (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + cumCount);
+	          (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + cumText);
 	        }, 600);
 	        app.showRow();
 	        $startStop.html('Stop');
-	        $startStop.css({ 'background-color': '#192837' });
+	        $startStop.css({ 'background-color': '#19284B' });
 	      } else {
 	        app.stopTimer();
 	        $startStop.html('Start');
@@ -43678,7 +43706,7 @@
 	    } else {
 	      rowTime = splitCount;
 	    }
-	    if (rowTime < 32) {
+	    if (rowTime < 32 || rowTime === 32) {
 	      points = 8;
 	    } else if (rowTime === 33 || rowTime === 34) {
 	      points = 7;
@@ -43749,8 +43777,8 @@
 	    pinDropped = 0;
 	
 	    (0, _jquery2['default'])('.item-container').html('');
-	    (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + '0' + splitCount);
-	    (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + '0' + cumCount);
+	    (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + '.0' + splitCount);
+	    (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + '.0' + cumCount);
 	    (0, _jquery2['default'])('.score').html('Score = ');
 	  },
 	  addPoints: function addPoints() {
@@ -43769,13 +43797,13 @@
 	module.exports = app;
 
 /***/ },
-/* 65 */
+/* 64 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"tweezer-row\">{{id}}</div>\n<button class=\"btn btn-default dropped-pin\">Dropped</button>\n<button class=\"btn btn-default picked-up\">Picked Up</button>";
 
 /***/ },
-/* 66 */
+/* 65 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -43799,7 +43827,7 @@
 	}];
 
 /***/ },
-/* 67 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43810,7 +43838,7 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _lodash = __webpack_require__(45);
+	var _lodash = __webpack_require__(44);
 	
 	var _lodash2 = _interopRequireDefault(_lodash);
 	
@@ -43838,22 +43866,32 @@
 	        }
 	        interval = setInterval(function () {
 	          splitCount++;
-	          if (splitCount < 10) {
-	            splitCount = '0' + splitCount;
+	          var splitCountText = splitCount.toString();
+	          if (splitCountText.length < 2) {
+	            splitCountText = '.0' + splitCount;
+	          } else if (splitCountText.length > 2) {
+	            splitCountText = splitCountText.slice(0, 1) + '.' + splitCountText.slice(1, 3);
+	          } else {
+	            splitCountText = '.' + splitCount;
 	          }
-	          (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + splitCount);
+	          (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + splitCountText);
 	          cumCount++;
-	          if (cumCount < 10) {
-	            cumCount = '0' + cumCount;
+	          var cumText = cumCount.toString();
+	          if (cumText.length < 2) {
+	            cumText = '.0' + cumText;
+	          } else if (cumText.length > 2) {
+	            cumText = cumText.slice(0, 1) + '.' + cumText.slice(1, 3);
+	          } else {
+	            cumText = '.' + cumText;
 	          }
-	          (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + cumCount);
+	          (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + cumText);
 	        }, 600);
 	        $startStop.html('Stop');
-	        $startStop.css({ 'background-color': '#FF2603' });
+	        $startStop.css({ 'background-color': '#19284B' });
 	      } else {
 	        app.stopTimer();
 	        $startStop.html('Start');
-	        $startStop.css({ 'background-color': '#01C700' });
+	        $startStop.css({ 'background-color': '#17B20A' });
 	      }
 	    });
 	  },
@@ -43890,8 +43928,8 @@
 	
 	    (0, _jquery2['default'])('.time-col').html('<h1>Times</h1');
 	    (0, _jquery2['default'])('.points-col').html('<h1>Points</h1>');
-	    (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + '0' + splitCount);
-	    (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + '0' + cumCount);
+	    (0, _jquery2['default'])('.split-counter').html('Individual Time: ' + '.0' + splitCount);
+	    (0, _jquery2['default'])('.cum-counter').html('Cumulative Time: ' + '.0' + cumCount);
 	    (0, _jquery2['default'])('.score').html('');
 	  },
 	  addPoints: function addPoints() {
@@ -43972,7 +44010,7 @@
 	// module.exports = app;
 
 /***/ },
-/* 68 */
+/* 67 */
 /***/ function(module, exports) {
 
 	"use strict";

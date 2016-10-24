@@ -66,18 +66,28 @@ var app = {
         }
         interval = setInterval(function(){
           splitCount++;
-          if (splitCount < 10) {
-            splitCount = '0' + splitCount;
+          var splitCountText = splitCount.toString();
+          if (splitCountText.length < 2) {
+            splitCountText = '.0' + splitCount;
+          } else if (splitCountText.length > 2) {
+            splitCountText = splitCountText.slice(0,1) + '.' + splitCountText.slice(1,3);
+          } else {
+            splitCountText = '.' + splitCount;
           }
-          $('.split-counter').html('Individual Time: ' + splitCount);
+          $('.split-counter').html('Individual Time: ' + splitCountText);
           cumCount++;
-          if (cumCount < 10) {
-            cumCount = '0' + cumCount;
+          var cumText = cumCount.toString();
+          if (cumText.length < 2) {
+            cumText = '.0' + cumText;
+          } else if (cumText.length > 2) {
+            cumText = cumText.slice(0,1) + '.' + cumText.slice(1,3);
+          } else {
+            cumText = '.' + cumText;
           }
-          $('.cum-counter').html('Cumulative Time: ' + cumCount);
+          $('.cum-counter').html('Cumulative Time: ' + cumText);
         }, 600);
         $startStop.html('Stop');
-        $startStop.css({'background-color': '#192837'});
+        $startStop.css({'background-color': '#19284B'});
         app.showItem();
       } else {
         app.stopTimer();
@@ -116,20 +126,30 @@ var app = {
             });
           } else {
             splitCount++;
-            $study.css({
-              'background-color': '#5D0A57'
-            });
-            if (splitCount < 10) {
-              splitCount = '0' + splitCount;
+            var splitCountText = splitCount.toString();
+            if (splitCountText.length < 2) {
+              splitCountText = '.0' + splitCount;
+            } else if (splitCountText.length > 2) {
+              splitCountText = splitCountText.slice(0,1) + '.' + splitCountText.slice(1,3);
+            } else {
+              splitCountText = '.' + splitCount;
             }
-            $('.split-counter').html('Individual Time: ' + splitCount);
+            $('.split-counter').html('Individual Time: ' + splitCountText);
             cumCount++;
-            if (cumCount < 10) {
-              cumCount = '0' + cumCount;
+            var cumText = cumCount.toString();
+            if (cumText.length < 2) {
+              cumText = '.0' + cumText;
+            } else if (cumText.length > 2) {
+              cumText = cumText.slice(0,1) + '.' + cumText.slice(1,3);
+            } else {
+              cumText = '.' + cumText;
             }
-            $('.cum-counter').html('Cumulative Time: ' + cumCount);
+            $('.cum-counter').html('Cumulative Time: ' + cumText);
           }
         }, 600);
+        $study.css({
+          'background-color': '#5D0A57'
+        });
       }
     });          
   },
@@ -162,13 +182,11 @@ var app = {
     index = 0;
     currentIndex = 0;
 
-    
-    $('.split-counter').html('Individual Time: ' + '0' + splitCount);
-    $('.cum-counter').html('Cumulative Time: ' + '0' + cumCount);
+    $('.split-counter').html('Individual Time: ' + '.0' + splitCount);
+    $('.cum-counter').html('Cumulative Time: ' + '.0' + cumCount);
     $('.item-container').html('');
     $('.score').html('Score =');
   },
-
   addPoints: function(){
     pointsArray.push(points);
     var pointsTotal = _.sum(pointsArray);

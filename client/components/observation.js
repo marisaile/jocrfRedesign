@@ -137,7 +137,7 @@ module.exports = [
   },
   {
     id: 'Item 35',
-    change: 'brush gone'
+    change: 'fork larger'
   },
   {
     id: 'Item 36',

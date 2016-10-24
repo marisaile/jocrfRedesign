@@ -118,8 +118,8 @@ body.override-bootstrap {
   display: inline-block;
   /* top: -5.5vh;*/
   margin-right: 8vw;
-  font-family: 'Taviraj', serif;
-  font-size: 2.3vmin;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.5vmin;
   line-height: 11vmin;
   color: #FFFEFF;
 }
@@ -1242,7 +1242,7 @@ input.search-photo {
       }
     }*/
 .timer-main {
-  background-color: #555;
+  background-color: #333;
 }
 
 .timer-main .stopwatch-container {
@@ -1276,13 +1276,13 @@ input.search-photo {
 }
 
 .timer-main .stopwatch-container .test-name {
-  font-family: 'Marcellus', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 50px;
   text-align: center;
 }
 
 .timer-main .stopwatch-container .form-number {
-  font-family: 'Marcellus', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 25px;
   text-align: center;
 }
@@ -1290,16 +1290,16 @@ input.search-photo {
 .timer-main .stopwatch-container .reset-button {
   position: relative;
   display: block;
-  left: 20px;
-  top: 60px;
-  font-family: 'Marcellus', sans-serif;
-  font-size: 15px;
+  left: 640px;
+  top: -130px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
   background-color: #F2F3F5;
 }
 
 .timer-main .stopwatch-container .cum-counter {
   position: relative;
-  font-family: 'Marcellus', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
   top: 75px;
   left: 20px;
@@ -1307,7 +1307,7 @@ input.search-photo {
 
 .timer-main .stopwatch-container .split-counter {
   position: relative;
-  font-family: 'Marcellus', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 35px;
   top: 75px;
   left: 20px;
@@ -1322,7 +1322,7 @@ input.search-photo {
   margin: 20px;
   top: 100px;
   left: 100px;
-  font-family: 'Marcellus', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 30px;
   text-align: center;
   background-color: #17B20A;
@@ -1342,7 +1342,7 @@ input.search-photo {
   margin: 20px;
   top: 100px;
   left: 200px;
-  font-family: 'Marcellus', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 30px;
   text-align: center;
   background-color: #089D9A;
@@ -1358,7 +1358,7 @@ input.search-photo {
   display: block;
   top: 500px;
   left: 550px;
-  font-family: 'Marcellus', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 25px;
 }
 
@@ -1368,8 +1368,8 @@ input.search-photo {
   display: block;
   top: 110px;
   left: 550px;
-  font-family: 'Marcellus', sans-serif;
-  font-size: 25px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
 }
 
 .timer-main .stopwatch-container .create-csv:focus {
@@ -1384,12 +1384,12 @@ input.search-photo {
   height: 400px;
   width: 400px;
   border: 1px solid black;
-  font-family: 'Marcellus', serif;
+  font-family: 'Ubuntu', serif;
 }
 
 .timer-main .stopwatch-container .item-container h2 {
   position: relative;
-  font-family: 'Marcellus', serif;
+  font-family: 'Ubuntu', serif;
   font-size: 30px;
   text-align: center;
   top: 100px;
@@ -1397,7 +1397,7 @@ input.search-photo {
 
 .timer-main .stopwatch-container .item-container h4 {
   position: relative;
-  font-family: 'Marcellus', serif;
+  font-family: 'Ubuntu', serif;
   font-size: 50px;
   text-align: center;
   top: 145px;
@@ -1428,6 +1428,10 @@ input.search-photo {
   outline: none;
 }
 
+.timer-main .stopwatch-container .item-container .dropped-pin:active {
+  background-color: #000;
+}
+
 .timer-main .stopwatch-container .item-container .picked-up {
   position: relative;
   display: inline-block;
@@ -1444,6 +1448,10 @@ input.search-photo {
 
 .timer-main .stopwatch-container .item-container .picked-up:focus {
   outline: none;
+}
+
+.timer-main .stopwatch-container .item-container .picked-up:active {
+  background-color: #dfdfdf;
 }
 
 table {
