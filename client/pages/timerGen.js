@@ -29,7 +29,7 @@ var app = {
           if (splitCountText.length < 2) {
             splitCountText = '.0' + splitCount;
           } else if (splitCountText.length > 2) {
-            splitCountText = splitCountText.slice(0,1) + '.' + splitCountText.slice(1,3);
+            splitCountText = splitCountText.slice(0, 1) + '.' + splitCountText.slice(1, 3);
           } else {
             splitCountText = '.' + splitCount;
           }
@@ -39,7 +39,7 @@ var app = {
           if (cumText.length < 2) {
             cumText = '.0' + cumText;
           } else if (cumText.length > 2) {
-            cumText = cumText.slice(0,1) + '.' + cumText.slice(1,3);
+            cumText = cumText.slice(0, 1) + '.' + cumText.slice(1, 3);
           } else {
             cumText = '.' + cumText;
           }

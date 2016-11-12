@@ -12,8 +12,7 @@ var app = {
     app.render();
   },
   render: function(){
-    $('.school-main').html(landing);
-    
+    $('.school-body').html(landing);   
   }
 };
 

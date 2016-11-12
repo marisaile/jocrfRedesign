@@ -358,40 +358,40 @@
   },
   { 
     "subject": "religion",
-    "url": "",
-    "image": "",
+    "url": "https://books.google.com/books?id=VRmSGOjiE2oC&dq=no+god+but+god&source=gbs_navlinks_s",
+    "image": "/images/books/reza-islam.png",
     "title" : "No God but God",
     "author" : "Reza Aslan",
     "synopsis" : "" 
   },
   { 
     "subject": "religion",
-    "url": "",
-    "image": "",
+    "url": "https://books.google.com/books?id=hU04O7bBC-MC&dq=mere+christianity&hl=en&sa=X&ved=0ahUKEwiaj-qhwJ3QAhVM6mMKHWF-DLgQ6AEILDAB",
+    "image": "/images/books/cslewis.png",
     "title" : "Mere Christianity",
     "author" : "CS Lewis",
     "synopsis" : "" 
   },
   { 
     "subject": "religion",
-    "url": "",
-    "image": "",
+    "url": "https://books.google.com/books?id=kx9ZCo6F1hkC&dq=confessions&hl=en&sa=X&ved=0ahUKEwiqwK7JwJ3QAhUWS2MKHSlhCuIQ6AEIKjAC",
+    "image": "/images/books/confessions.png",
     "title" : "Confessions",
     "author" : "St. Augustine of Hippo",
     "synopsis" : "" 
   },
   { 
     "subject": "religion",
-    "url": "",
-    "image": "",
+    "url": "https://books.google.com/books?id=pGHDWpCewHAC&q=living+buddha+living+christ&dq=living+buddha+living+christ&hl=en&sa=X&ved=0ahUKEwiu69npwJ3QAhXCKGMKHbSOBkwQ6AEIHTAA",
+    "image": "/images/books/buddha.png",
     "title" : "Living Buddha, Living Christ",
     "author" : "Thich Nhat Hanh",
     "synopsis" : "" 
   },
   { 
     "subject": "religion",
-    "url": "",
-    "image": "",
+    "url": "https://books.google.com/books?id=FrK5K4DeDbwC&dq=zealot&source=gbs_navlinks_s",
+    "image": "/images/books/zealot.png",
     "title" : "Zealot: The Life and Times of Jesus of Nazareth",
     "author" : "Reza Aslan",
     "synopsis" : "" 

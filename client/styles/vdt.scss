@@ -3,62 +3,26 @@
 .no-bootstrap {
   background-color: #888;
 
-  .vdt-container {
+  .table-container {
     position: relative;
-    display: block;
-    margin: 100px auto;
-    padding: 20px;
-    height: 668px;
-    width: 1024px;
-    background-color: #fff;
-    border-radius: 6px;
-    box-shadow: 2px 2px 2px;
-
-    h1 {
-      font-family: 'Taviraj', serif;
-      font-size: 50px;
-      text-align: center;
-    }
-    h2 {
-      position: relative;
-      top: 50px;
-      font-family: 'Taviraj', serif;
-      font-size: 30px;
-      text-align: center;
-    }
-    .btn-start {
-      position: relative;
-      top: 150px;
-      left: 450px;
-      width: 100px;
-      font-family: 'Taviraj', serif;
-      font-size: 20px;
-    }
+    margin: 20px auto;
+    height: 400px;
+    width: 400px;
+    border: 2px solid black;
   }
-}
-.vdt-image-container {
-  position: relative;
-  display: block;
-  margin: 150px auto;
-  padding: 20px;
-  height: 668px;
-  width: 1024px;
-  background-color: #fff;
-  border-radius: 6px;
-  box-shadow: 2px 2px 2px;
-
-  h1 {
-    font-family: 'Taviraj', serif;
-    font-size: 30px;
-    line-height: 150px;
+  /* .pf-table {
+    height: 100%;
+    width: 100%;
+  } */
+  .row {
+    height: 25%;
+    width: 100%;
   }
-
-  .vdt-image {
-    position: relative;
-    display: inline-block;
-    margin: 25px;
-    height: 275px;
-    width: 450px;
-    box-shadow: 2px 2px 2px;
+  .circle {
+    margin: auto;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    border: 2px solid black;
   }
 }

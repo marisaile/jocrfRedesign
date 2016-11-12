@@ -22,7 +22,7 @@ var pointsArray = [];
 var testData = [];
 var itemData;
 var result;
-// var pointsTotal;
+var pointsTotal;
 // var testScore = [];
 
 var model = {
@@ -70,7 +70,7 @@ var app = {
           if (splitCountText.length < 2) {
             splitCountText = '.0' + splitCount;
           } else if (splitCountText.length > 2) {
-            splitCountText = splitCountText.slice(0,1) + '.' + splitCountText.slice(1,3);
+            splitCountText = splitCountText.slice(0, 1) + '.' + splitCountText.slice(1, 3);
           } else {
             splitCountText = '.' + splitCount;
           }
@@ -80,7 +80,7 @@ var app = {
           if (cumText.length < 2) {
             cumText = '.0' + cumText;
           } else if (cumText.length > 2) {
-            cumText = cumText.slice(0,1) + '.' + cumText.slice(1,3);
+            cumText = cumText.slice(0, 1) + '.' + cumText.slice(1, 3);
           } else {
             cumText = '.' + cumText;
           }
@@ -102,10 +102,12 @@ var app = {
       timerRunning = false;
     }
     app.displayTimes();
+    app.addPoints();
     itemData = {
       itemNumber: index,
       time: splitCount,
-      points: points
+      points: points,
+      totalPoints: pointsTotal
     };
     testData.push(itemData);
     model.save();
@@ -130,7 +132,7 @@ var app = {
             if (splitCountText.length < 2) {
               splitCountText = '.0' + splitCount;
             } else if (splitCountText.length > 2) {
-              splitCountText = splitCountText.slice(0,1) + '.' + splitCountText.slice(1,3);
+              splitCountText = splitCountText.slice(0, 1) + '.' + splitCountText.slice(1, 3);
             } else {
               splitCountText = '.' + splitCount;
             }
@@ -140,7 +142,7 @@ var app = {
             if (cumText.length < 2) {
               cumText = '.0' + cumText;
             } else if (cumText.length > 2) {
-              cumText = cumText.slice(0,1) + '.' + cumText.slice(1,3);
+              cumText = cumText.slice(0, 1) + '.' + cumText.slice(1, 3);
             } else {
               cumText = '.' + cumText;
             }
@@ -172,7 +174,6 @@ var app = {
       points = 0;
     }
     index++;
-    app.addPoints();
   },
   clearEverything: function(){
     testData = [];
@@ -189,7 +190,7 @@ var app = {
   },
   addPoints: function(){
     pointsArray.push(points);
-    var pointsTotal = _.sum(pointsArray);
+    pointsTotal = _.sum(pointsArray);
     $('.score').html('Score = ' + pointsTotal);
   },
   showItem: function(){

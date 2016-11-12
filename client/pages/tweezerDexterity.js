@@ -24,6 +24,8 @@ var result;
 var extraTime = 0;
 var pinDropped = 0;
 var rowTime;
+var pickedUp = 0;
+var pointsTotal;
 
 var model = {
   init: function(){
@@ -63,7 +65,7 @@ var app = {
           if (splitCountText.length < 2) {
             splitCountText = '.0' + splitCount;
           } else if (splitCountText.length > 2) {
-            splitCountText = splitCountText.slice(0,1) + '.' + splitCountText.slice(1,3);
+            splitCountText = splitCountText.slice(0, 1) + '.' + splitCountText.slice(1, 3);
           } else {
             splitCountText = '.' + splitCount;
           }
@@ -73,7 +75,7 @@ var app = {
           if (cumText.length < 2) {
             cumText = '.0' + cumText;
           } else if (cumText.length > 2) {
-            cumText = cumText.slice(0,1) + '.' + cumText.slice(1,3);
+            cumText = cumText.slice(0, 1) + '.' + cumText.slice(1, 3);
           } else {
             cumText = '.' + cumText;
           }
@@ -95,13 +97,16 @@ var app = {
       timerRunning = false;
     } 
     app.displayTimes();
+    app.addPoints();
     itemData = {
       row: currentIndex,
       time: splitCount,
+      droppedPin: pinDropped,
+      pickedUp: pickedUp,
       penalty: extraTime,
       rowTime: rowTime,
       points: points,
-      droppedPin: pinDropped
+      totalPoints: pointsTotal
     };
     testData.push(itemData);    
     model.save();
@@ -111,13 +116,16 @@ var app = {
     var $split = $('.misc-button');
     $split.on('click', function(){
       app.displayTimes();
+      app.addPoints();
       itemData = {
         row: currentIndex,
         time: splitCount,
         droppedPin: pinDropped,
+        pickedUp: pickedUp,
         penalty: extraTime,
         rowTime: rowTime,
-        points: points
+        points: points,
+        totalPoints: pointsTotal
       };
       app.showRow();
       testData.push(itemData);  
@@ -162,11 +170,10 @@ var app = {
     } else if (rowTime > 47) {
       points = 1;
     }
-    app.addPoints();
   }, 
   addPoints: function(){
     pointsArray.push(points);
-    var pointsTotal = _.sum(pointsArray);
+    pointsTotal = _.sum(pointsArray);
     $('.score').html('Score = ' + pointsTotal);
   },
   droppedPin: function(){
@@ -179,9 +186,11 @@ var app = {
   },
   pickedUp: function(){
     $('.picked-up').click(function(){
-      pinDropped--;
+      pickedUp++;
       extraTime -= 5;
     });
+    pickedUp = 0;
+    extraTime = 0;
   },
   createTable: function(){
     $('.stopwatch-container').html(dataTable);
@@ -201,7 +210,7 @@ var app = {
   },
   createCSV: function(){
     $('.create-csv').on('click', function(){
-      var fields = ['row', 'time', 'droppedPin', 'penalty', 'rowTime', 'points'];
+      var fields = ['row', 'time', 'droppedPin', 'pickedUp', 'penalty', 'rowTime', 'points', 'totalPoints'];
       try {
         result = json2csv({ data: testData, fields: fields });
         app.createTable();
@@ -218,16 +227,12 @@ var app = {
     currentIndex = 0;
     extraTime = 0;
     pinDropped = 0;
+    pickedUp = 0;
 
     $('.item-container').html('');
     $('.split-counter').html('Individual Time: ' + '.0' + splitCount);
     $('.cum-counter').html('Cumulative Time: ' + '.0' + cumCount);
     $('.score').html('Score = ');
-  },
-  addPoints: function(){
-    pointsArray.push(points);
-    var pointsTotal = _.sum(pointsArray);
-    $('.score').html('Score = ' + pointsTotal);
   },
   bindClickEvents: function(){
     app.startTimer();

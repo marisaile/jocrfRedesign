@@ -8,16 +8,16 @@ import timerObs from 'pages/timerObs';
 import wordAss from 'pages/wordAssociation';
 import tweezer from 'pages/tweezerDexterity';
 import timerGen from 'pages/timerGen';
-// import joc2012 from 'pages/joc2012';
-// import landingPage from 'pages/landingPage';
-// import TodoListView from 'pages/todoReact/todoListView';
-// import funnySquares from 'pages/funnySquares';
-// import photoSearch from 'pages/photoSearch';
-// import d3 from 'pages/d3';
-// import three from 'pages/three';
-// import bookController from 'pages/books/booksController';
+import joc2012 from 'pages/joc2012';
+import landingPage from 'pages/landingPage';
+import TodoListView from 'pages/todoReact/todoListView';
+import funnySquares from 'pages/funnySquares';
+import photoSearch from 'pages/photoSearch';
+import d3 from 'pages/d3';
+import three from 'pages/three';
+import bookController from 'pages/books/booksController';
 // import vdt from 'pages/visualDesigns';
-import Conclave from 'pages/dalquest';
+import dalquest from 'pages/dalquest';
 
 $(function() {
 
@@ -45,32 +45,32 @@ $(function() {
     // case '/pages/laterality.html':
     //   laterality.init();
     // break;
-    // case '/pages/joc2012.html':
-    //   joc2012.init();
-    // break;
-    // case '/pages/todo.html':
-    //   var todoListView = new TodoListView(); 
-    // break;
-    // case '/pages/funnySquares.html':
-    //   funnySquares.init();
-    // break;
-    // case '/pages/d3.html':
-    //   d3.init();
-    // break;
-    // case '/pages/three.html':
-    //   three.init();
-    // break;
-    // case '/pages/photoSearch.html':
-    //   photoSearch.init(); 
-    // break;
-    // case '/pages/books.html':
-    //   bookController.render();
-    // break;
+    case '/pages/joc2012.html':
+      joc2012.init();
+    break;
+    case '/pages/todo.html':
+      var todoListView = new TodoListView(); 
+    break;
+    case '/pages/funnySquares.html':
+      funnySquares.init();
+    break;
+    case '/pages/d3.html':
+      d3.init();
+    break;
+    case '/pages/three.html':
+      three.init();
+    break;
+    case '/pages/photoSearch.html':
+      photoSearch.init(); 
+    break;
+    case '/pages/books.html':
+      bookController.render();
+    break;
     // case '/pages/visualDesigns.html':
     //   vdt.init();
     // break;
     case '/pages/dalquest.html':
-      Conclave.init();
+      dalquest.init();
     break;
     default: break;
   }

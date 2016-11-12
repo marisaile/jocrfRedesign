@@ -43,8 +43,9 @@ router.get('/api/books', function(req, res){
     });
 });
 
-router.post('/api/books', function(req, res){
-  if(!req.body.hasOwnProperty('subject') || 
+router.post('/api/suggestions', function(req, res){
+  if(
+    // !req.body.hasOwnProperty('subject') || 
      !req.body.hasOwnProperty('title') || 
      !req.body.hasOwnProperty('author')) {
     res.statusCode = 400;
@@ -52,11 +53,11 @@ router.post('/api/books', function(req, res){
   }
 
   var newBook = {
-    subject: req.body.subject,
+    // subject: req.body.subject,
     title: req.body.title,
     author: req.body.author
   }
-  fs.writeFile(bookDatabasePath, books, function(err){
+  fs.writeFile(__dirname + '/booksSuggestions.json', function(err){
     if (err) { console.log(err); }
     // respond to the client
     res.writeHead(200, {'Content-Type': 'text/json'});

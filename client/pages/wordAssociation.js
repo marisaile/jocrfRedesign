@@ -25,7 +25,7 @@ var app = {
     wordTemplate = Handlebars.compile(template);
   },
   countSignificantResponses: function(){
-    var $response = $('.sig-yes');
+    var $response = $('.submit');
     $response.on('click', function(){
       significantResponse++;
       $('.sig-response').html('Significant Responses: ' + significantResponse);
