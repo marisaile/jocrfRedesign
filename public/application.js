@@ -10032,7 +10032,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-body":"school-body","header":"header","header-title":"header-title","header-subtitle":"header-subtitle","modal-suggest":"modal-suggest","error-message":"error-message","modal-body":"modal-body","form-suggest":"form-suggest","btn-submit-book":"btn-submit-book","thank-you":"thank-you","school-main":"school-main","gallery":"gallery","image-container":"image-container","book-image":"book-image","school-footer":"school-footer","subject":"subject","add-collection":"add-collection","btn-suggest":"btn-suggest","timer-main":"timer-main","stopwatch-container":"stopwatch-container","test-name":"test-name","form-number":"form-number","reset-button":"reset-button","cum-counter":"cum-counter","split-counter":"split-counter","start-stop-button":"start-stop-button","misc-button":"misc-button","score":"score","create-csv":"create-csv","item-container":"item-container","tweezer-row":"tweezer-row","dropped-pin":"dropped-pin","picked-up":"picked-up","no-bootstrap":"no-bootstrap","table-container":"table-container","row":"row","circle":"circle","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","sig-yes":"sig-yes","sig-no":"sig-no","sig-response":"sig-response","joc2012":"joc2012","joc2012-header":"joc2012-header","slideshow":"slideshow"};
+	module.exports = {"override-bootstrap":"override-bootstrap","main-header":"main-header","container-fluid":"container-fluid","nav-stay":"nav-stay","marisaile":"marisaile","main-todo":"main-todo","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","todo-title":"todo-title","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","three-container":"three-container","three-a":"three-a","d3-container":"d3-container","axis":"axis","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book","school-body":"school-body","header":"header","header-title":"header-title","header-subtitle":"header-subtitle","modal-suggest":"modal-suggest","error-message":"error-message","modal-body":"modal-body","form-suggest":"form-suggest","btn-submit-book":"btn-submit-book","thank-you":"thank-you","school-main":"school-main","gallery":"gallery","image-container":"image-container","book-image":"book-image","school-footer":"school-footer","subject":"subject","add-collection":"add-collection","btn-suggest":"btn-suggest","timer-main":"timer-main","stopwatch-container":"stopwatch-container","test-name":"test-name","form-number":"form-number","reset-button":"reset-button","cum-counter":"cum-counter","split-counter":"split-counter","start-stop-button":"start-stop-button","misc-button":"misc-button","score":"score","create-csv":"create-csv","item-container":"item-container","tweezer-row":"tweezer-row","dropped-pin":"dropped-pin","picked-up":"picked-up","no-bootstrap":"no-bootstrap","table-container":"table-container","row":"row","circle":"circle","dalquest-body":"dalquest-body","dalquest-menu":"dalquest-menu","dalquest-main":"dalquest-main","dalquest-landing":"dalquest-landing","ddrs-landscape":"ddrs-landscape","dalquest-about":"dalquest-about","about-landing":"about-landing","dalquest-mission":"dalquest-mission","ddrs-mission-statement":"ddrs-mission-statement","ddrs-purchase":"ddrs-purchase","ddrs-naturalist":"ddrs-naturalist","about-sections":"about-sections","word-association":"word-association","wa-container":"wa-container","word-container":"word-container","word":"word","response":"response","sig-yes":"sig-yes","sig-no":"sig-no","sig-response":"sig-response","joc2012":"joc2012","joc2012-header":"joc2012-header","slideshow":"slideshow"};
 
 /***/ },
 /* 3 */,
@@ -112435,18 +112435,56 @@
 
 /***/ },
 /* 264 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _templatesDdrsAboutHtml = __webpack_require__(265);
+	
+	var _templatesDdrsAboutHtml2 = _interopRequireDefault(_templatesDdrsAboutHtml);
 	
 	var app = {
-		init: function init() {
-			app.render();
-		},
-		render: function render() {}
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {
+	    (0, _jquery2['default'])('.dalquest-about').html(_templatesDdrsAboutHtml2['default']);
+	    app.bindClickEvents();
+	  },
+	  scrollAbout: function scrollAbout() {
+	    (0, _jquery2['default'])('#about').click(function () {
+	      (0, _jquery2['default'])('html, body').animate({
+	        scrollTop: (0, _jquery2['default'])('.dalquest-about').offset().top
+	      }, 500);
+	    });
+	  },
+	  activeLink: function activeLink() {
+	    (0, _jquery2['default'])('a').on('click', function () {
+	      var currentSection = (0, _jquery2['default'])('a').attr('id');
+	      if (currentSection === (0, _jquery2['default'])('section').attr('name')) {
+	        (0, _jquery2['default'])('a').addClass('active');
+	      }
+	    });
+	  },
+	  bindClickEvents: function bindClickEvents() {
+	    app.scrollAbout();
+	    app.activeLink();
+	  }
 	};
 	
 	module.exports = app;
+
+/***/ },
+/* 265 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"about-landing\">\n\t<h2 class=\"dalquest-mission\">Mission Statement</h2>\n\t<p class=\"ddrs-mission-statement\">\n\t\tIt is the desire of MSU that the property be used by scientists, naturalists, and educators for generations to come.\n\t</p>\n\t<div class=\"ddrs-purchase\">\n\t\tThe Dalquest Desert Research Station (DDRS) is located in west Texas (see map) on the Presidio/Brewster County line, north of and adjoining the Big Bend Ranch State Park. The site contains 1,200 hectares (3,000 acres) and was a gift from the late Dr. Walter W. Dalquest and his wife, Rose. Walt came to Midwestern State University in 1952 and retired from full time service in 1984. Dr. Dalquest was one of the most productive scholars in the history of Midwestern. He produced 180 scientific publications, and he continued to work part-time until his death in 2000.\n\t</div>\n\t<div class=\"ddrs-naturalist\">\n\t\tTo a naturalist the DDRS experience is a dream come true. The majority of the site has had little human influence; in fact, the property owner prior to Dr. Dalquest fenced the canyon lands to keep cattle from getting into the area. The site is one of the few areas within the Chihuahuan Desert that has not been overgrazed. \n\t</div>\n\t<h4 class=\"about-sections\">Sections</h4>\n\t<a href=\"\" role=\"menuitem\" class=\"about-history\">History</a>\n\t<a href=\"\" role=\"menuitem\" class=\"about-bio\">Biological Signifiance</a>\n\t<a href=\"\" role=\"menuitem\" class=\"about-geo\">Geological Significance</a>\n</div>\n<div class=\"dalquest-history\">\n\t<!-- <img src=\"/images/ddrs/27.jpg\" class=\"img-responsive about-image\" alt=\"Responsive image\"> -->\t\n</div>\n<div class=\"dalquest-bio\">\n\t\n</div>\n<div class=\"dalquest-geo\">\n\t\n</div>";
 
 /***/ }
 /******/ ]);

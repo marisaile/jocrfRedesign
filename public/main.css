@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Rock+Salt);@import url(https://fonts.googleapis.com/css?family=Over+the+Rainbow);@import url(https://fonts.googleapis.com/css?family=Yatra+One);@import url(https://fonts.googleapis.com/css?family=Acme);@import url(https://fonts.googleapis.com/css?family=Satisfy);@import url(https://fonts.googleapis.com/css?family=Philosopher);@import url(https://fonts.googleapis.com/css?family=Arima+Madurai);@import url(https://fonts.googleapis.com/css?family=Cookie);@import url(https://fonts.googleapis.com/css?family=Sacramento);@import url(https://fonts.googleapis.com/css?family=Cherry+Cream+Soda);@import url(https://fonts.googleapis.com/css?family=Jomhuria);@import url(https://fonts.googleapis.com/css?family=Monda);@import url(https://fonts.googleapis.com/css?family=Ubuntu);@import url(https://fonts.googleapis.com/css?family=Marcellus);@import url(https://fonts.googleapis.com/css?family=Cagliostro);@import url(https://fonts.googleapis.com/css?family=Reem+Kufi);@import url(https://fonts.googleapis.com/css?family=Sarpanch);@import url(https://fonts.googleapis.com/css?family=Jura:600);/*  body.landing-page {
+@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Rock+Salt);@import url(https://fonts.googleapis.com/css?family=Over+the+Rainbow);@import url(https://fonts.googleapis.com/css?family=Yatra+One);@import url(https://fonts.googleapis.com/css?family=Acme);@import url(https://fonts.googleapis.com/css?family=Satisfy);@import url(https://fonts.googleapis.com/css?family=Philosopher);@import url(https://fonts.googleapis.com/css?family=Arima+Madurai);@import url(https://fonts.googleapis.com/css?family=Cookie);@import url(https://fonts.googleapis.com/css?family=Sacramento);@import url(https://fonts.googleapis.com/css?family=Cherry+Cream+Soda);@import url(https://fonts.googleapis.com/css?family=Jomhuria);@import url(https://fonts.googleapis.com/css?family=Monda);@import url(https://fonts.googleapis.com/css?family=Ubuntu);@import url(https://fonts.googleapis.com/css?family=Marcellus);@import url(https://fonts.googleapis.com/css?family=Cagliostro);@import url(https://fonts.googleapis.com/css?family=Reem+Kufi);@import url(https://fonts.googleapis.com/css?family=Sarpanch);@import url(https://fonts.googleapis.com/css?family=Jura:600);@import url(https://fonts.googleapis.com/css?family=Cardo);@import url(https://fonts.googleapis.com/css?family=Dancing+Script);/*  body.landing-page {
     margin: 0;
     background-color: #720EFF;
 
@@ -875,6 +875,167 @@ table td {
   width: 50px;
   border-radius: 100%;
   border: 2px solid black;
+}
+
+.dalquest-body {
+  margin: 0;
+  background-color: #022A40;
+  /* #094157*/
+}
+
+.dalquest-body sidebar.dalquest-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100%;
+  background-color: #BAB8B3;
+  box-shadow: 1px 2px 15px 5px rgba(0, 25, 35, 0.4);
+  z-index: 1;
+}
+
+.dalquest-body sidebar.dalquest-menu a {
+  position: relative;
+  display: block;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  top: 35%;
+  left: 25px;
+  margin-bottom: 25px;
+  transition: transform .5s;
+}
+
+.dalquest-body sidebar.dalquest-menu a:hover {
+  transform: translateX(20px);
+  transition: transform .5s;
+  text-decoration: none;
+}
+
+.dalquest-body sidebar.dalquest-menu a:active {
+  transform: translateX(20px);
+}
+
+.dalquest-body main.dalquest-main {
+  position: relative;
+  top: 0;
+  left: 10%;
+  width: 98%;
+}
+
+.dalquest-body main.dalquest-main section.dalquest-landing {
+  position: relative;
+  display: block;
+}
+
+.dalquest-body main.dalquest-main section.dalquest-landing h1 {
+  position: relative;
+  top: 50px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+  color: #BAB8B3;
+}
+
+.dalquest-body main.dalquest-main section.dalquest-landing img.ddrs-landscape {
+  position: relative;
+  display: block;
+  margin: 100px auto;
+  width: 1000px;
+  height: 550px;
+  opacity: 1;
+  box-shadow: 1px 2px 15px 5px rgba(0, 25, 35, 0.8);
+  z-index: -1;
+}
+
+.dalquest-body main.dalquest-main section.dalquest-about {
+  position: relative;
+  display: block;
+  height: 100%;
+  padding: 20px;
+}
+
+.dalquest-body main.dalquest-main section.dalquest-about .about-landing {
+  position: relative;
+  top: 100px;
+  background-color: #BAB8B3;
+  width: 95%;
+}
+
+.dalquest-body main.dalquest-main section.dalquest-about .about-landing h2.dalquest-mission {
+  position: relative;
+  display: block;
+  top: 50px;
+  left: 5%;
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  color: #011a27;
+}
+
+.dalquest-body main.dalquest-main section.dalquest-about .about-landing p.ddrs-mission-statement {
+  position: relative;
+  display: block;
+  top: 40px;
+  left: 5%;
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
+  color: #011a27;
+}
+
+.dalquest-body main.dalquest-main section.dalquest-about .about-landing .ddrs-purchase {
+  position: relative;
+  display: inline-block;
+  top: 75px;
+  left: 5%;
+  width: 35%;
+  height: 100%;
+  margin-right: 10%;
+  margin-bottom: 100px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  color: #011a27;
+}
+
+.dalquest-body main.dalquest-main section.dalquest-about .about-landing .ddrs-naturalist {
+  position: relative;
+  display: inline-block;
+  left: 5%;
+  width: 35%;
+  height: 100%;
+  margin-left: 10%;
+  margin-bottom: 100px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  color: #011a27;
+}
+
+.dalquest-body main.dalquest-main section.dalquest-about .about-landing h4.about-sections {
+  position: relative;
+  display: inline-block;
+  left: 20%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  color: #fff;
+  margin-right: 100px;
+  margin-bottom: 25px;
+}
+
+.dalquest-body main.dalquest-main section.dalquest-about .about-landing a {
+  position: relative;
+  display: inline-block;
+  left: 30%;
+  margin-right: 50px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  border-top: 2px solid #fff;
+  padding-top: 2px;
+  margin-bottom: 25px;
+}
+
+.dalquest-body main.dalquest-main section.dalquest-about .about-landing a:hover {
+  text-decoration: none;
 }
 
 body.word-association {
