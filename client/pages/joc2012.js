@@ -1,10 +1,11 @@
 import $ from 'jquery';
-
+import header from 'templates/workPage.html';
 var app = {
   init: function(){
     app.render();
   },
   render: function(){
+    $('.sections-work').html(header);
     $('#slideshow > div:gt(0)').hide();
     setInterval(function() { 
       $('#slideshow > div:first')

@@ -1,12 +1,17 @@
+import $ from 'jquery';
 
-import mainHeader from 'components/mainHeader';
+import landing from 'templates/landingPage.html';
+import work from 'templates/workPage.html';
 
 var app = {
   init: function() {  
     app.render();
   },
   render: function() {
-    mainHeader.init();
+  	$('.landing-override-bootstrap').html(landing);
+  	$('.work').on('click', function(){
+  		$('.landing-override-bootstrap').html(work);
+  	});
   }
 };
 

@@ -1,45 +1,146 @@
 @import url(https://fonts.googleapis.com/css?family=Montez);
 @import url(https://fonts.googleapis.com/css?family=Taviraj);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
 
+body.landing-override-bootstrap {
+  margin: 0;
+  background-color: #fffeff;
+
+  .portfolio-landing {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #720eff;
+
+    .header-logo {
+      position: relative;
+      display: block;
+
+      a.marisaile {
+        position: relative;
+        display: block;
+        top: 40vh;
+        left: 21vw;
+        font-family: 'Montez', cursive;
+        font-size: 8vmin;
+        color: #fffeff;
+
+        /*span {
+          position: relative;
+          display: block;
+          top: -22px;
+          left: 60px;
+          font-family: 'Josefin Sans', sans-serif;
+          font-size: 15px;
+        }*/
+      }
+      a.marisaile:hover {
+        text-decoration: none;
+      }
+    }
+    .horizontal-line {
+      position: relative;
+      display: block;
+      width: 57vw;
+      left: 20vw;
+      top: 35vh;
+      border-top: 2px solid #fffeff;
+    }
+    .sections {
+      position: relative;
+      display: inline-block;
+      top: 33vh;
+      left: 55%;
+
+      a.nav-sections {
+        font-family: 'Raleway', sans-serif;
+        font-size: 2.5vmin;
+        color: #fffeff;
+        margin: 2vw;
+      }
+      a.nav-sections:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .sections-work {
+    position: relative;
+    display: block;
+    height: 9vh;
+    width: 100%;
+    background-color: #720eff;
+    box-shadow: 1px 1px 10px 5px rgba(16, 2, 36, 0.2);
+    
+    a.marisaile {
+      position: relative;
+      display: block;
+      left: 5%;
+      font-family: 'Montez', cursive;
+      font-size: 8vmin;
+      color: #fffeff;
+    }
+    a.marisaile:hover {
+      text-decoration: none;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      top: -5.2vh;
+      left: 35vw;
+      font-family: 'Raleway', sans-serif;
+
+      a.nav-work-sections {
+        font-family: 'Raleway', sans-serif;
+        font-size: 2.2vmin;
+        color: #fffeff;
+        margin-right: 7vw;
+      }
+      a.nav-work-sections:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
 body.override-bootstrap {
   margin: 0;
-  background-color: #F5F4F5;
-}
-.main-header.container-fluid {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 7vh;
-  top: 0;
-  left: 0;
-  background-color: #720EFF;
-  box-shadow: 1px 1px 10px 1px #8A8C8C;
+  background-color: #fffeff;
 
-  a.nav-stay {
+  .sections-work {
     position: relative;
-    display: inline-block;
-   /* top: -5.5vh;*/
-    margin-right: 8vw;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 2.5vmin;
-    line-height: 11vmin;
-    color: #FFFEFF;
-  }
-  a.nav-stay:hover {
-    text-decoration: none;
-    color: #323333;
-  }
-  a.marisaile {
-    font-family: 'Montez', cursive;
-    font-size: 6vmin;
-    color: #FFFEFF;
-    /*line-height: 50px;*/
-    margin-right: 10vw;
-    margin-left: 4vw;
-  }
-  a.marisaile:hover {
-    text-decoration: none;
-    color: #323333;
+    display: block;
+    height: 9vh;
+    width: 100%;
+    background-color: #720eff;
+    box-shadow: 1px 1px 10px 5px rgba(16, 2, 36, 0.2);
+    
+    a.marisaile {
+      position: relative;
+      display: block;
+      left: 5%;
+      font-family: 'Montez', cursive;
+      font-size: 8vmin;
+      color: #fffeff;
+    }
+    a.marisaile:hover {
+      text-decoration: none;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      top: -5.2vh;
+      left: 35vw;
+      font-family: 'Raleway', sans-serif;
+
+      a.nav-work-sections {
+        font-family: 'Raleway', sans-serif;
+        font-size: 2.2vmin;
+        color: #fffeff;
+        margin-right: 7vw;
+      }
+      a.nav-work-sections:hover {
+        text-decoration: none;
+      }
+    }
   }
 }
 

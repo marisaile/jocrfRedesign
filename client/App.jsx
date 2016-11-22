@@ -16,7 +16,7 @@ import photoSearch from 'pages/photoSearch';
 import d3 from 'pages/d3';
 import three from 'pages/three';
 import bookController from 'pages/books/booksController';
-// import vdt from 'pages/visualDesigns';
+import game from 'pages/breakout';
 import dalquest from 'pages/dalquest';
 
 $(function() {
@@ -42,9 +42,9 @@ $(function() {
     case '/pages/timerTD.html':
       tweezer.init();
     break;
-    // case '/pages/laterality.html':
-    //   laterality.init();
-    // break;
+    case '/pages/breakout.html':
+      game.init();
+    break;
     case '/pages/joc2012.html':
       joc2012.init();
     break;
