@@ -1,3 +1,7 @@
+
+
+
+
 import $ from 'jquery';
 import _ from 'lodash';
 
@@ -60,14 +64,12 @@ var app = {
       timerRunning = false;
     }
     splitTimes.push(splitCount);
-    app.addPoints();
     splitCount = 0;
   },
   splitTimer: function(){  
     var $split = $('.misc-button');
     $split.on('click', function(){
       splitTimes.push(splitCount);
-      app.addPoints(); 
       splitCount = 0;
     });     
   },
@@ -90,11 +92,6 @@ var app = {
     $('.split-counter').html('Individual Time: ' + '.0' + splitCount);
     $('.cum-counter').html('Cumulative Time: ' + '.0' + cumCount);
     $('.score').html('');
-  },
-  addPoints: function(){
-    pointsArray.push(points);
-    var pointsTotal = _.sum(pointsArray);
-    $('.score').html('Score = ' + pointsTotal);
   },
   bindClickEvents: function(){
     app.startTimer();

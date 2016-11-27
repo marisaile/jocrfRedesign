@@ -1,36 +1,28 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
-@import url(https://fonts.googleapis.com/css?family=Rock+Salt);
-@import url(https://fonts.googleapis.com/css?family=Over+the+Rainbow);
-@import url(https://fonts.googleapis.com/css?family=Yatra+One);
-@import url(https://fonts.googleapis.com/css?family=Acme);
-@import url(https://fonts.googleapis.com/css?family=Satisfy);
-@import url(https://fonts.googleapis.com/css?family=Philosopher);
-@import url(https://fonts.googleapis.com/css?family=Arima+Madurai);
-@import url(https://fonts.googleapis.com/css?family=Cookie);
-@import url(https://fonts.googleapis.com/css?family=Sacramento);
-@import url(https://fonts.googleapis.com/css?family=Cherry+Cream+Soda);
-@import url(https://fonts.googleapis.com/css?family=Jomhuria);
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
-
-.school-body {
+.school-app {
+  position: relative;
+  display: block;
   background-color: #F7F7F2;
-  margin: 0;
+  height: 60%;
+  width: 75%;
+  margin: 2% auto;
+  box-shadow: 1px 1px 10px 1px rgba(83, 83, 83, 0.6);
 
   .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 12%;
     width: 100%;
-    background-color: #333333;
-    box-shadow: 1px 2px 15px 5px rgba(83, 83, 83, 0.6);
+    height: 100px;
+    padding: 5px;
+    background-color: #1A033A;
     z-index: 1;
 
     .header-title {
       position: relative;
       display: block;
       left: 10px;
-      font-family: 'Arima Madurai', serif;
+      font-family: 'Josefin Slab', serif;
       font-size: 50px;
       color: #F7F7F2;
     }
@@ -40,14 +32,14 @@
       left: 10px;
       top: -23px;
       width: 95%;
-      font-family: 'Arima Madurai';
+      font-family: 'Josefin Slab', serif;
       font-size: 20px;
       color: #F7F7F2;
     }
   }
   #modal-suggest {
     top: 10%;
-    font-family: 'Josefin Sans', serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 2vmin;
     color: #535353;
 
@@ -81,107 +73,83 @@
   .school-main {
     position: relative;
     display: block;
-    min-height: 100%;
-    
-    .gallery {
+    height: 60%;
+    width: 100%;
+    overflow: scroll;
+
+/*    #Container .mix {
+      display: none;
+    }*/
+/*    .gallery {
       position: relative;
       display: block;
-      top: 125px;  
-      background-color: #F7F7F2;
-      perspective: 500px;
+      height: 60%;
+      background-color: #fff;
+      perspective: 500px;*/
+    #image-container {
+      position: relative;
+      display: block;
+      height: 30%;
 
-      #image-container {
+      .book-image {
         position: relative;
-        display: block;
-        top: 30%;
-        height: 30%;
-
-        /*.title {
-          position: relative;
-          font-family: 'Josefin Sans', sans-serif;
-          top: -25px;
-          font-size: 15px;
-          left: 30px;
-          color: #535353;
-          z-index: 1;
-        }
-        .author {
-          position: relative;
-          font-family: 'Josefin Sans', sans-serif;
-          top: -25px;
-          font-size: 12px;
-          left: 30px;
-          color: #535353;*/
-        /*}*/
-        .book-image {
-          position: relative;
-          display: inline-block;
-          margin: 20%;
-          width: 125px;
-          height: 175px;
-          box-shadow: 1px 2px 15px 5px rgba(83, 83, 83, 0.2);
-          transition: transform .5s;
-        } 
-        .book-image:hover {
-          transform: translate3d(5px 2px 10px);
-          transition: transform .5s;
-        }
+        display: inline-block;
+        margin: 20%;
+        width: 125px;
+        height: 175px;
+        box-shadow: 1px 2px 10px 2px rgba(83, 83, 83, 0.2);
+        transition: transform .5s;
+      } 
+      .grow:hover {
+        transform: scale(1.3);
       }
     }
   }
   .school-footer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
+/*    position: relative;*/
     padding-top: 10px;
-    padding-bottom: 10px;
     height: 75px;
-    background-color: #3A5E18;
+    background-color: #9D49A0;
 
     .subject {
       position: relative;
       display: block;
-      left: 1.75%;
+      left: 1%;
       font-family: 'Josefin Sans', sans-serif;
       font-size: 20px;
-      line-height: 15px;
-      color: #DEDCD9;
+      color: #F7F7F2;
     }
     a {
       position: relative;
       display: inline-block;
-      margin: 25px;
+      left: 1%;
+      margin-right: 20px;
       font-family: 'Josefin Sans', sans-serif;
       font-size: 17px;
-      color: #DEDCD9;
+      color: #F7F7F2;
     }
     .add-collection {
       position: relative;
       display: inline-block;
-      top: -40px;
-      left: 16%;
+      top: -30px;
+      left: 11%;
       font-family: 'Josefin Sans', sans-serif;
       font-size: 20px;
-      color: #DEDCD9;
+      color: #F7F7F2;
     }
     .btn-suggest {
       position: relative;
-      background-color: #DEDCD9;
-      margin-bottom: 20px;
+      background-color: #F7F7F2;
       text-align: center;
       font-family: 'Josefin Sans', sans-serif;
       font-size: 15px;
-      color: #333;
+      color: #1A033A;
     }
     .btn-suggest:focus {
       outline: none;
     }
   }
-  /*#image-container:hover {
-    background-color: #f1f1f1;
-    box-shadow: 1px 2px 15px 5px rgba(83, 83, 83, 0.4);
-    transform: translate3d(2px 5px 1px);
-    transition: transform .5s;
-  /*}*/
 }
+
+
+

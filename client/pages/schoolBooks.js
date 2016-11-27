@@ -6,25 +6,20 @@ require('bootstrap');
 import Handlebars from 'handlebars';
 import _ from 'underscore';
 import template from 'templates/school/schoolBookContainer.html';
-import header from 'templates/school/bookPageHeader.html';
 import suggest from 'templates/school/suggestBook.html';
 import thank from 'templates/school/thankYou.html';
-import footer from 'templates/school/schoolFooter.html';
-// import header from 'templates/school/schoolBooksLanding.html';
-// import bookSuggestion from 'templates/school/suggestBook.html';
-// import Conclave from 'components/schoolbooks/carousel';
+import header from 'templates/workPage.html';
 
 var compiledTemplate = Handlebars.compile(template);
 var books = [];
 
 var app = {
   init: function(){
+    $('.sections-work').html(header);
     app.fetchBooks();
     app.render();
   },
   render: function(){
-    $('.school-header').html(header);
-    $('.school-footer').html(footer);
     app.bindEvents();
     
     // $('.btn-suggestion').click(function(){
@@ -47,22 +42,19 @@ var app = {
     var booksHtml = books.map(function(book){
       return compiledTemplate(book);
     });
-    // $('.school-header').html(header);
-    $('.gallery').html(booksHtml);            
+    $('.school-main').html(booksHtml);            
     app.render();
   },
   pickSubject: function(){
-    $('a').on('click', function(event){
+   $('a').on('click', function(event){
       var currentSubject = event.target.id;
-      // $('option').html(currentSubject);
       var filteredBooks = _.filter(books, function(book){
         return (book.subject === currentSubject);
       });
       var filteredBooksHtml = filteredBooks.map(function(book) {
         return compiledTemplate(book);
       });
-      $('.school-header').html(header);
-      $('.gallery').html(filteredBooksHtml);
+      $('.school-main').html(filteredBooksHtml);
       app.render();
     });
   },

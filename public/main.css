@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Raleway);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Rock+Salt);@import url(https://fonts.googleapis.com/css?family=Over+the+Rainbow);@import url(https://fonts.googleapis.com/css?family=Yatra+One);@import url(https://fonts.googleapis.com/css?family=Acme);@import url(https://fonts.googleapis.com/css?family=Satisfy);@import url(https://fonts.googleapis.com/css?family=Philosopher);@import url(https://fonts.googleapis.com/css?family=Arima+Madurai);@import url(https://fonts.googleapis.com/css?family=Cookie);@import url(https://fonts.googleapis.com/css?family=Sacramento);@import url(https://fonts.googleapis.com/css?family=Cherry+Cream+Soda);@import url(https://fonts.googleapis.com/css?family=Jomhuria);@import url(https://fonts.googleapis.com/css?family=Monda);@import url(https://fonts.googleapis.com/css?family=Ubuntu);@import url(https://fonts.googleapis.com/css?family=Marcellus);@import url(https://fonts.googleapis.com/css?family=Cagliostro);@import url(https://fonts.googleapis.com/css?family=Reem+Kufi);@import url(https://fonts.googleapis.com/css?family=Sarpanch);@import url(https://fonts.googleapis.com/css?family=Jura:600);@import url(https://fonts.googleapis.com/css?family=Cardo);@import url(https://fonts.googleapis.com/css?family=Dancing+Script);@import url(https://fonts.googleapis.com/css?family=Mr+Bedfort);/*  body.landing-page {
+@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Raleway);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);@import url(https://fonts.googleapis.com/css?family=Lato);@import url(https://fonts.googleapis.com/css?family=Cardo);@import url(https://fonts.googleapis.com/css?family=Dancing+Script);@import url(https://fonts.googleapis.com/css?family=Mr+Bedfort);@import url(https://fonts.googleapis.com/css?family=Marcellus);@import url(https://fonts.googleapis.com/css?family=Righteous);@import url(https://fonts.googleapis.com/css?family=Syncopate);@import url(https://fonts.googleapis.com/css?family=Federo);/*  body.landing-page {
     margin: 0;
     background-color: #720EFF;
 
@@ -99,14 +99,14 @@
 */
 body.landing-override-bootstrap {
   margin: 0;
-  background-color: #fffeff;
+  background-color: #F0F1F3;
 }
 
 body.landing-override-bootstrap .portfolio-landing {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #720eff;
+  background-color: #530ABA;
 }
 
 body.landing-override-bootstrap .portfolio-landing .header-logo {
@@ -121,15 +121,7 @@ body.landing-override-bootstrap .portfolio-landing .header-logo a.marisaile {
   left: 21vw;
   font-family: 'Montez', cursive;
   font-size: 8vmin;
-  color: #fffeff;
-  /*span {
-          position: relative;
-          display: block;
-          top: -22px;
-          left: 60px;
-          font-family: 'Josefin Sans', sans-serif;
-          font-size: 15px;
-        }*/
+  color: #F0F1F3;
 }
 
 body.landing-override-bootstrap .portfolio-landing .header-logo a.marisaile:hover {
@@ -140,9 +132,9 @@ body.landing-override-bootstrap .portfolio-landing .horizontal-line {
   position: relative;
   display: block;
   width: 57vw;
-  left: 20vw;
+  left: -1vw;
   top: 35vh;
-  border-top: 2px solid #fffeff;
+  border-top: 2px solid #F0F1F3;
 }
 
 body.landing-override-bootstrap .portfolio-landing .sections {
@@ -155,7 +147,7 @@ body.landing-override-bootstrap .portfolio-landing .sections {
 body.landing-override-bootstrap .portfolio-landing .sections a.nav-sections {
   font-family: 'Raleway', sans-serif;
   font-size: 2.5vmin;
-  color: #fffeff;
+  color: #F0F1F3;
   margin: 2vw;
 }
 
@@ -168,8 +160,8 @@ body.landing-override-bootstrap .sections-work {
   display: block;
   height: 9vh;
   width: 100%;
-  background-color: #720eff;
-  box-shadow: 1px 1px 10px 5px rgba(16, 2, 36, 0.2);
+  background-color: #530ABA;
+  box-shadow: 1px 1px 10px 5px rgba(16, 2, 36, 0.4);
 }
 
 body.landing-override-bootstrap .sections-work a.marisaile {
@@ -178,7 +170,7 @@ body.landing-override-bootstrap .sections-work a.marisaile {
   left: 5%;
   font-family: 'Montez', cursive;
   font-size: 8vmin;
-  color: #fffeff;
+  color: #F0F1F3;
 }
 
 body.landing-override-bootstrap .sections-work a.marisaile:hover {
@@ -189,15 +181,15 @@ body.landing-override-bootstrap .sections-work .dropdown {
   position: relative;
   display: inline-block;
   top: -5.2vh;
-  left: 35vw;
+  left: 36vw;
   font-family: 'Raleway', sans-serif;
 }
 
 body.landing-override-bootstrap .sections-work .dropdown a.nav-work-sections {
   font-family: 'Raleway', sans-serif;
   font-size: 2.2vmin;
-  color: #fffeff;
-  margin-right: 7vw;
+  color: #F0F1F3;
+  margin-right: 9vw;
 }
 
 body.landing-override-bootstrap .sections-work .dropdown a.nav-work-sections:hover {
@@ -206,7 +198,7 @@ body.landing-override-bootstrap .sections-work .dropdown a.nav-work-sections:hov
 
 body.override-bootstrap {
   margin: 0;
-  background-color: #fffeff;
+  background-color: #F0F1F3;
 }
 
 body.override-bootstrap .sections-work {
@@ -214,7 +206,7 @@ body.override-bootstrap .sections-work {
   display: block;
   height: 9vh;
   width: 100%;
-  background-color: #720eff;
+  background-color: #530ABA;
   box-shadow: 1px 1px 10px 5px rgba(16, 2, 36, 0.2);
 }
 
@@ -224,7 +216,7 @@ body.override-bootstrap .sections-work a.marisaile {
   left: 5%;
   font-family: 'Montez', cursive;
   font-size: 8vmin;
-  color: #fffeff;
+  color: #F0F1F3;
 }
 
 body.override-bootstrap .sections-work a.marisaile:hover {
@@ -242,7 +234,7 @@ body.override-bootstrap .sections-work .dropdown {
 body.override-bootstrap .sections-work .dropdown a.nav-work-sections {
   font-family: 'Raleway', sans-serif;
   font-size: 2.2vmin;
-  color: #fffeff;
+  color: #F0F1F3;
   margin-right: 7vw;
 }
 
@@ -301,7 +293,7 @@ body.override-bootstrap .sections-work .dropdown a.nav-work-sections:hover {
 }
 
 #todo-title {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 30px;
   color: #323333;
   font-weight: 700;
@@ -313,7 +305,7 @@ body.override-bootstrap .sections-work .dropdown a.nav-work-sections:hover {
 
 .add-todo-container .col-md-10 {
   padding-left: 0;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
   color: #323333;
 }
@@ -349,13 +341,13 @@ body.override-bootstrap .sections-work .dropdown a.nav-work-sections:hover {
   transform: none;
   transition: transform .5s;
   color: #FFFEFF;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .shadow-container {
   position: relative;
   display: inline-block;
-  top: 140px;
+  top: 150px;
   left: 245px;
   perspective: 250px;
 }
@@ -445,9 +437,9 @@ body.override-bootstrap .sections-work .dropdown a.nav-work-sections:hover {
   position: relative;
   top: 105px;
   left: 125px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 20px;
-  color: #323333;
+  color: #190338;
 }
 
 input.search-photo {
@@ -466,9 +458,9 @@ input.search-photo {
   top: 110px;
   left: 150px;
   background-color: #F501FF;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
-  color: #FFFEFF;
+  color: #F0F1F3;
 }
 
 .search-results {
@@ -488,6 +480,7 @@ input.search-photo {
 
 .search-results .photo img {
   width: 100%;
+  height: inherit;
 }
 
 .new-book-container {
@@ -537,63 +530,59 @@ input.search-photo {
   color: #eee;
 }
 
-.school-body {
+.school-app {
+  position: relative;
+  display: block;
   background-color: #F7F7F2;
-  margin: 0;
-  /*#image-container:hover {
-    background-color: #f1f1f1;
-    box-shadow: 1px 2px 15px 5px rgba(83, 83, 83, 0.4);
-    transform: translate3d(2px 5px 1px);
-    transition: transform .5s;
-  /*}*/
+  height: 60%;
+  width: 75%;
+  margin: 2% auto;
+  box-shadow: 1px 1px 10px 1px rgba(83, 83, 83, 0.6);
 }
 
-.school-body .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 12%;
+.school-app .header {
   width: 100%;
-  background-color: #333333;
-  box-shadow: 1px 2px 15px 5px rgba(83, 83, 83, 0.6);
+  height: 100px;
+  padding: 5px;
+  background-color: #1A033A;
   z-index: 1;
 }
 
-.school-body .header .header-title {
+.school-app .header .header-title {
   position: relative;
   display: block;
   left: 10px;
-  font-family: 'Arima Madurai', serif;
+  font-family: 'Josefin Slab', serif;
   font-size: 50px;
   color: #F7F7F2;
 }
 
-.school-body .header .header-subtitle {
+.school-app .header .header-subtitle {
   position: relative;
   display: block;
   left: 10px;
   top: -23px;
   width: 95%;
-  font-family: 'Arima Madurai';
+  font-family: 'Josefin Slab', serif;
   font-size: 20px;
   color: #F7F7F2;
 }
 
-.school-body #modal-suggest {
+.school-app #modal-suggest {
   top: 10%;
-  font-family: 'Josefin Sans', serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 2vmin;
   color: #535353;
 }
 
-.school-body #modal-suggest p.error-message {
+.school-app #modal-suggest p.error-message {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2vmin;
   line-height: 1.5vmin;
   color: #FF2E11;
 }
 
-.school-body #modal-suggest .modal-body #form-suggest {
+.school-app #modal-suggest .modal-body #form-suggest {
   width: 85%;
   background-color: #e1e1e1;
   font-family: 'Josefin Sans', serif;
@@ -601,7 +590,7 @@ input.search-photo {
   color: #535353;
 }
 
-.school-body #modal-suggest .modal-body #form-suggest button.btn.btn-default.btn-submit-book {
+.school-app #modal-suggest .modal-body #form-suggest button.btn.btn-default.btn-submit-book {
   background-color: #535353;
   float: right;
   font-family: 'Josefin Sans', sans-serif;
@@ -609,266 +598,233 @@ input.search-photo {
   color: #e1e1e1;
 }
 
-.school-body #modal-suggest .modal-body .thank-you {
+.school-app #modal-suggest .modal-body .thank-you {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 3vmin;
   color: #535353;
 }
 
-.school-body .school-main {
+.school-app .school-main {
   position: relative;
   display: block;
-  min-height: 100%;
+  height: 60%;
+  width: 100%;
+  overflow: scroll;
+  /*    #Container .mix {
+      display: none;
+    }*/
+  /*    .gallery {
+      position: relative;
+      display: block;
+      height: 60%;
+      background-color: #fff;
+      perspective: 500px;*/
 }
 
-.school-body .school-main .gallery {
+.school-app .school-main #image-container {
   position: relative;
   display: block;
-  top: 125px;
-  background-color: #F7F7F2;
-  perspective: 500px;
-}
-
-.school-body .school-main .gallery #image-container {
-  position: relative;
-  display: block;
-  top: 30%;
   height: 30%;
-  /*.title {
-          position: relative;
-          font-family: 'Josefin Sans', sans-serif;
-          top: -25px;
-          font-size: 15px;
-          left: 30px;
-          color: #535353;
-          z-index: 1;
-        }
-        .author {
-          position: relative;
-          font-family: 'Josefin Sans', sans-serif;
-          top: -25px;
-          font-size: 12px;
-          left: 30px;
-          color: #535353;*/
-  /*}*/
 }
 
-.school-body .school-main .gallery #image-container .book-image {
+.school-app .school-main #image-container .book-image {
   position: relative;
   display: inline-block;
   margin: 20%;
   width: 125px;
   height: 175px;
-  box-shadow: 1px 2px 15px 5px rgba(83, 83, 83, 0.2);
+  box-shadow: 1px 2px 10px 2px rgba(83, 83, 83, 0.2);
   transition: transform .5s;
 }
 
-.school-body .school-main .gallery #image-container .book-image:hover {
-  transform: translate3d(5px 2px 10px);
-  transition: transform .5s;
+.school-app .school-main #image-container .grow:hover {
+  transform: scale(1.3);
 }
 
-.school-body .school-footer {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.school-app .school-footer {
+  /*    position: relative;*/
   padding-top: 10px;
-  padding-bottom: 10px;
   height: 75px;
-  background-color: #3A5E18;
+  background-color: #9D49A0;
 }
 
-.school-body .school-footer .subject {
+.school-app .school-footer .subject {
   position: relative;
   display: block;
-  left: 1.75%;
+  left: 1%;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 20px;
-  line-height: 15px;
-  color: #DEDCD9;
+  color: #F7F7F2;
 }
 
-.school-body .school-footer a {
+.school-app .school-footer a {
   position: relative;
   display: inline-block;
-  margin: 25px;
+  left: 1%;
+  margin-right: 20px;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 17px;
-  color: #DEDCD9;
+  color: #F7F7F2;
 }
 
-.school-body .school-footer .add-collection {
+.school-app .school-footer .add-collection {
   position: relative;
   display: inline-block;
-  top: -40px;
-  left: 16%;
+  top: -30px;
+  left: 11%;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 20px;
-  color: #DEDCD9;
+  color: #F7F7F2;
 }
 
-.school-body .school-footer .btn-suggest {
+.school-app .school-footer .btn-suggest {
   position: relative;
-  background-color: #DEDCD9;
-  margin-bottom: 20px;
+  background-color: #F7F7F2;
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 15px;
-  color: #333;
+  color: #1A033A;
 }
 
-.school-body .school-footer .btn-suggest:focus {
+.school-app .school-footer .btn-suggest:focus {
   outline: none;
 }
 
-.timer-main {
-  background-color: #333;
-}
-
-.timer-main .stopwatch-container {
+h1.jocTimer {
   position: relative;
   display: block;
-  margin: 100px auto;
+  top: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 35px;
+  color: #190338;
+  text-align: center;
+}
+
+.stopwatch-container {
+  position: relative;
+  display: block;
+  margin: 20px auto;
   padding: 30px;
-  height: 1024px;
-  width: 768px;
+  height: 480px;
+  width: 320px;
   background-color: #F0F1F3;
   border-radius: 6px;
-  box-shadow: 2px 2px 2px;
-  /*.container.times {
-      position: relative;
-      display: block;
-      top: 100px;
-      height: 70%;
-      width: 95%;
-  
-      .col-md-8.time-col {
-        font-family: 'Inconsolata', monospace;
-        font-size: 25px;
-        line-height: 30px;
-      }
-      .col-md-4.points-col {
-        font-family: 'Inconsolata', monospace;
-        font-size: 25px;
-        line-height: 30px;
-      }
-    }*/
+  box-shadow: 2px 2px 10px 2px rgba(83, 83, 83, 0.6);
 }
 
-.timer-main .stopwatch-container .test-name {
+.stopwatch-container .test-name {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
 }
 
-.timer-main .stopwatch-container .form-number {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 25px;
-  text-align: center;
-}
-
-.timer-main .stopwatch-container .reset-button {
-  position: relative;
-  display: block;
-  left: 640px;
-  top: -130px;
+.stopwatch-container .form-number {
   font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
+  text-align: center;
+}
+
+.stopwatch-container .reset-button {
+  position: relative;
+  display: block;
+  left: 90%;
+  top: -120px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
   background-color: #F2F3F5;
 }
 
-.timer-main .stopwatch-container .cum-counter {
+.stopwatch-container .cum-counter {
   position: relative;
   font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
-  top: 75px;
-  left: 20px;
+  top: 20px;
+  left: 10px;
 }
 
-.timer-main .stopwatch-container .split-counter {
+.stopwatch-container .split-counter {
   position: relative;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 35px;
-  top: 75px;
-  left: 20px;
+  font-size: 30px;
+  top: 20px;
+  left: 10px;
 }
 
-.timer-main .stopwatch-container .btn.start-stop-button {
+.stopwatch-container .btn.start-stop-button {
   position: relative;
   display: inline-block;
   padding: 0;
-  height: 110px;
-  width: 150px;
+  height: 80px;
+  width: 125px;
   margin: 20px;
-  top: 100px;
-  left: 100px;
+  top: 25px;
+  left: 40px;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   background-color: #17B20A;
   color: #fff;
 }
 
-.timer-main .stopwatch-container .btn.start-stop-button:focus {
+.stopwatch-container .btn.start-stop-button:focus {
   outline: none;
 }
 
-.timer-main .stopwatch-container .btn.misc-button {
+.stopwatch-container .btn.misc-button {
   position: relative;
   display: inline-block;
   padding: 0;
-  height: 110px;
-  width: 150px;
+  height: 80px;
+  width: 125px;
   margin: 20px;
-  top: 100px;
-  left: 200px;
+  top: 25px;
+  left: 125px;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   background-color: #089D9A;
   color: #fff;
 }
 
-.timer-main .stopwatch-container .btn.misc-button:focus {
+.stopwatch-container .btn.misc-button:focus {
   outline: none;
 }
 
-.timer-main .stopwatch-container .score {
+.stopwatch-container .score {
   position: relative;
   display: block;
-  top: 500px;
-  left: 550px;
+  top: 320px;
+  left: 400px;
   font-family: 'Ubuntu', sans-serif;
   font-size: 25px;
 }
 
-.timer-main .stopwatch-container .create-csv {
+.stopwatch-container .create-csv {
   background-color: #F0F1F3;
   position: relative;
   display: block;
-  top: 110px;
-  left: 550px;
+  top: -15px;
+  left: 400px;
   font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
 }
 
-.timer-main .stopwatch-container .create-csv:focus {
+.stopwatch-container .create-csv:focus {
   outline: none;
 }
 
-.timer-main .stopwatch-container .item-container {
+.stopwatch-container .item-container {
   position: relative;
   display: block;
-  left: 25px;
-  top: 150px;
-  height: 400px;
-  width: 400px;
+  left: 10px;
+  top: 25px;
+  height: 350px;
+  width: 350px;
   border: 1px solid black;
   font-family: 'Ubuntu', serif;
 }
 
-.timer-main .stopwatch-container .item-container h2 {
+.stopwatch-container .item-container h2 {
   position: relative;
   font-family: 'Ubuntu', serif;
   font-size: 30px;
@@ -876,7 +832,7 @@ input.search-photo {
   top: 100px;
 }
 
-.timer-main .stopwatch-container .item-container h4 {
+.stopwatch-container .item-container h4 {
   position: relative;
   font-family: 'Ubuntu', serif;
   font-size: 50px;
@@ -884,7 +840,7 @@ input.search-photo {
   top: 145px;
 }
 
-.timer-main .stopwatch-container .item-container .tweezer-row {
+.stopwatch-container .item-container .tweezer-row {
   position: relative;
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
@@ -892,7 +848,7 @@ input.search-photo {
   top: 100px;
 }
 
-.timer-main .stopwatch-container .item-container .dropped-pin {
+.stopwatch-container .item-container .dropped-pin {
   position: relative;
   display: inline-block;
   top: 150px;
@@ -907,15 +863,15 @@ input.search-photo {
   color: #fff;
 }
 
-.timer-main .stopwatch-container .item-container .dropped-pin:focus {
+.stopwatch-container .item-container .dropped-pin:focus {
   outline: none;
 }
 
-.timer-main .stopwatch-container .item-container .dropped-pin:active {
+.stopwatch-container .item-container .dropped-pin:active {
   background-color: #000;
 }
 
-.timer-main .stopwatch-container .item-container .picked-up {
+.stopwatch-container .item-container .picked-up {
   position: relative;
   display: inline-block;
   top: 150px;
@@ -930,11 +886,11 @@ input.search-photo {
   color: #555;
 }
 
-.timer-main .stopwatch-container .item-container .picked-up:focus {
+.stopwatch-container .item-container .picked-up:focus {
   outline: none;
 }
 
-.timer-main .stopwatch-container .item-container .picked-up:active {
+.stopwatch-container .item-container .picked-up:active {
   background-color: #dfdfdf;
 }
 
@@ -1040,7 +996,7 @@ table td {
   position: relative;
   top: 50px;
   text-align: center;
-  font-family: 'Mr Bedfort', cursive;
+  font-family: 'Cardo', cursive;
   font-size: 50px;
   color: #BAB8B3;
 }
@@ -1075,7 +1031,7 @@ table td {
   display: block;
   top: 50px;
   left: 6%;
-  font-family: 'Mr Bedfort', cursive;
+  font-family: 'Cardo', cursive;
   font-size: 40px;
   color: #011a27;
 }
@@ -1085,7 +1041,7 @@ table td {
   display: block;
   top: 40px;
   left: 6%;
-  font-family: 'Mr Bedfort', cursive;
+  font-family: 'Cardo', cursive;
   font-size: 25px;
   color: #011a27;
 }
@@ -1259,17 +1215,17 @@ body.joc2012 {
 
 h1.joc2012-header {
   font-family: 'Raleway', sans-serif;
-  font-size: 35px;
+  font-size: 25px;
   line-height: 125px;
   text-align: center;
-  color: #5C5C5C;
+  color: #190338;
 }
 
 #slideshow {
   margin: -40px auto;
   position: relative;
-  width: 900px;
-  height: 650px;
+  width: 600px;
+  height: 450px;
   padding: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
@@ -1283,19 +1239,265 @@ h1.joc2012-header {
 }
 
 img {
-  width: 880px;
-  height: 630px;
+  width: 580px;
+  height: 435px;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-}
-
-canvas {
-  background: #eee;
+h1.jocTimer {
+  position: relative;
   display: block;
-  margin: 0 auto;
+  top: 80px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  color: #190338;
+  text-align: center;
+}
+
+.stopwatch-container {
+  position: relative;
+  display: block;
+  margin: 100px auto;
+  padding: 10px;
+  height: 480px;
+  width: 320px;
+  background-color: #Fefefe;
+  border-radius: 6px;
+  box-shadow: 2px 2px 10px 2px rgba(83, 83, 83, 0.6);
+}
+
+.stopwatch-container .test-name {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.stopwatch-container .form-number {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.stopwatch-container .reset-button {
+  position: relative;
+  display: block;
+  left: 80%;
+  top: -75px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 10px;
+  background-color: #fefefe;
+}
+
+.stopwatch-container .cum-counter {
+  position: relative;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+  top: -20px;
+}
+
+.stopwatch-container .split-counter {
+  position: relative;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 25px;
+  top: -20px;
+}
+
+.stopwatch-container .btn.start-stop-button {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  height: 50px;
+  width: 70px;
+  margin: 20px;
+  left: 25px;
+  top: -30px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  background-color: #17B20A;
+  color: #fff;
+}
+
+.stopwatch-container .btn.start-stop-button:focus {
+  outline: none;
+}
+
+.stopwatch-container .btn.misc-button {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  height: 50px;
+  width: 70px;
+  margin: 20px;
+  left: 50px;
+  top: -30px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  background-color: #089D9A;
+  color: #fff;
+}
+
+.stopwatch-container .btn.misc-button:focus {
+  outline: none;
+}
+
+.stopwatch-container .item-container {
+  position: relative;
+  display: block;
+  top: -30px;
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  font-family: 'Ubuntu', serif;
+}
+
+.stopwatch-container .item-container h2 {
+  position: relative;
+  top: -30px;
+  font-family: 'Ubuntu', serif;
+  font-size: 15px;
+  text-align: center;
+}
+
+.stopwatch-container .item-container h4 {
+  position: relative;
+  top: -30px;
+  font-family: 'Ubuntu', serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.stopwatch-container .item-container .tweezer-row {
+  position: relative;
+  text-align: center;
+  top: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+}
+
+.stopwatch-container .item-container .dropped-pin {
+  position: relative;
+  display: inline-block;
+  top: 60px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 10px;
+  background-color: #555;
+  color: #fff;
+}
+
+.stopwatch-container .item-container .dropped-pin:focus {
+  outline: none;
+}
+
+.stopwatch-container .item-container .dropped-pin:active {
+  background-color: #000;
+}
+
+.stopwatch-container .item-container .picked-up {
+  position: relative;
+  display: inline-block;
+  top: 60px;
+  left: 60px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 10px;
+  background-color: #fff;
+  color: #555;
+}
+
+.stopwatch-container .item-container .picked-up:focus {
+  outline: none;
+}
+
+.stopwatch-container .item-container .picked-up:active {
+  background-color: #dfdfdf;
+}
+
+.stopwatch-container .score {
+  position: relative;
+  display: block;
+  left: 225px;
+  top: -100px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+}
+
+.stopwatch-container .create-csv {
+  position: relative;
+  display: block;
+  left: 225px;
+  top: -90px;
+  background-color: #fefefe;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12px;
+}
+
+.stopwatch-container .create-csv:focus {
+  outline: none;
+}
+
+a.timer {
+  position: relative;
+  display: inline-block;
+  top: -90px;
+  left: 46%;
+  margin-right: 20px;
+}
+
+table {
+  position: relative;
+  margin: 20px auto;
+  font-family: 'Ubuntu', monospace;
+  font-size: 10px;
+}
+
+table tr {
+  height: 20px;
+  width: 25px;
+}
+
+table td {
+  border: 1px black solid;
+}
+
+h1.breakout-header {
+  position: relative;
+  display: block;
+  width: 480px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: 'Federo', sans-serif;
+  font-size: 50px;
+  color: #594544;
+}
+
+canvas#myCanvas {
+  background: #fff;
+  position: relative;
+  display: block;
+  margin: -20px auto;
+}
+
+button.start-game {
+  position: relative;
+  display: block;
+  background-color: #01B2A0;
+  width: 480px;
+  height: 80px;
+  margin: 40px auto;
+  font-family: 'Federo', sans-serif;
+  font-size: 20px;
+  color: #fff;
+}
+
+button.start-game:focus {
+  outline: none;
 }
 
 /*# sourceMappingURL=main.css.map*/

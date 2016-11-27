@@ -1,9 +1,36 @@
-* { 
-	padding: 0; 
-	margin: 0; 
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Syncopate');
+@import url('https://fonts.googleapis.com/css?family=Federo');
+
+
+h1.breakout-header {
+  position: relative;
+  display: block;
+  width: 480px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: 'Federo', sans-serif;
+  font-size: 50px;
+  color: #594544;
 }
-canvas { 
-	background: #eee; 
-	display: block; 
-	margin: 0 auto; 
+canvas#myCanvas { 
+  background: #fff; 
+  position: relative;
+  display: block; 
+  margin: -20px auto; 
 }
+button.start-game {
+  position: relative;
+  display: block;
+  background-color: #01B2A0;
+  width: 480px;
+  height: 80px;
+  margin: 40px auto;
+  font-family: 'Federo', sans-serif;
+  font-size: 20px;
+  color: #fff;
+}
+button.start-game:focus {
+  outline: none;
+}
+

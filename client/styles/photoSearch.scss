@@ -1,12 +1,11 @@
 
-
 .photo-search {
   position: relative;
   top: 105px;
   left: 125px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 20px;
-  color: #323333;
+  color: #190338;
 }
 input.search-photo {
   position: relative;
@@ -23,9 +22,9 @@ input.search-photo {
   top: 110px;
   left: 150px;
   background-color: #F501FF;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
-  color: #FFFEFF;
+  color: #F0F1F3;
 }
 
 .search-results {
@@ -41,6 +40,7 @@ input.search-photo {
     display: inline-block;
     img {
       width: 100%;
+      height: inherit;
     }
   }
 }

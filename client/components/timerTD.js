@@ -101,12 +101,11 @@ var app = {
     itemData = {
       row: currentIndex,
       time: splitCount,
-      droppedPin: pinDropped,
-      pickedUp: pickedUp,
+      drop: pinDropped,
+      pU: pickedUp,
       penalty: extraTime,
       rowTime: rowTime,
-      points: points,
-      totalPoints: pointsTotal
+      points: points
     };
     testData.push(itemData);    
     model.save();
@@ -120,12 +119,11 @@ var app = {
       itemData = {
         row: currentIndex,
         time: splitCount,
-        droppedPin: pinDropped,
-        pickedUp: pickedUp,
+        drop: pinDropped,
+        pU: pickedUp,
         penalty: extraTime,
         rowTime: rowTime,
-        points: points,
-        totalPoints: pointsTotal
+        points: points
       };
       app.showRow();
       testData.push(itemData);  
@@ -210,7 +208,7 @@ var app = {
   },
   createCSV: function(){
     $('.create-csv').on('click', function(){
-      var fields = ['row', 'time', 'droppedPin', 'pickedUp', 'penalty', 'rowTime', 'points', 'totalPoints'];
+      var fields = ['row', 'time', 'drop', 'pU', 'penalty', 'rowTime', 'points'];
       try {
         result = json2csv({ data: testData, fields: fields });
         app.createTable();

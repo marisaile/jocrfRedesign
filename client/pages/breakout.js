@@ -1,9 +1,11 @@
- 
+import header from 'templates/workPage.html';
+
 var app = {
   init: function(){
     app.render();
   },
   render: function(){
+    $('.sections-work').html(header);
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext('2d');
     var ballRadius = 10;
@@ -61,14 +63,14 @@ var app = {
     var drawBall = function(){
       ctx.beginPath();
       ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-      ctx.fillStyle = '#0095DD';
+      ctx.fillStyle = '#594544';
       ctx.fill();
       ctx.closePath();
     };
     var drawPaddle = function(){
       ctx.beginPath();
       ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
-      ctx.fillStyle = '#0095DD';
+      ctx.fillStyle = '#594544';
       ctx.fill();
       ctx.closePath();
     };
@@ -82,7 +84,7 @@ var app = {
             bricks[c][r].y = brickY;
             ctx.beginPath();
             ctx.rect(brickX, brickY, brickWidth, brickHeight);
-            ctx.fillStyle = '#0095DD';
+            ctx.fillStyle = '#E5F21F';
             ctx.fill();
             ctx.closePath();
           }
@@ -108,13 +110,13 @@ var app = {
       }
     };
     var drawScore = function(){
-      ctx.font = '16px Arial';
-      ctx.fillStyle = '#0095DD';
+      ctx.font = '16px Helvetica';
+      ctx.fillStyle = '#594544';
       ctx.fillText('Score: ' + score, 8, 20);
     }; 
     var drawLives = function() {
-      ctx.font = '16px Arial';
-      ctx.fillStyle = '#0095DD';
+      ctx.font = '16px Helvetica';
+      ctx.fillStyle = '#594544';
       ctx.fillText('Lives: ' + lives, canvas.width - 65, 20);
     };
     var draw = function(){
@@ -163,7 +165,6 @@ var app = {
     document.addEventListener('keyup', keyUpHandler, false);
     document.addEventListener('mousemove', mouseMoveHandler, false);
     draw();
-
   }
 };
 

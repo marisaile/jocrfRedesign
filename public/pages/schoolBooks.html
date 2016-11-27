@@ -7,19 +7,51 @@
     <link rel="shortcut icon" type="image/x-icon" href="/images/cloud.ico" />
     <link rel="stylesheet" type="text/css" href="/main.css">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/coverflow.css">
     <script type="text/javascript" async="async" defer="defer" src="/application.js"></script>
-    <!-- <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script> -->
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js">
+      $(function(){
+        ('#Container').mixItUp();
+      });
+    </script>
+
   </head>
-  <body class="school-body container-fluid">
-    <header class="school-header">
-     
-    </header>
-    <main class="school-main">
-      <div class="col-md-1"></div>
-      <div class="gallery col-md-10"></div>
-      <div class="col-md-1"></div>
+  <body class="override-bootstrap schoolbooks">
+    <div class="sections-work"></div>
+    <main class="school-app">
+      <section class="school-header">
+        <div class="header">
+          <h1 class="header-title">Go Beyond the Textbook</h1>
+          <h2 class="header-subtitle">Find related fiction and nonfiction books to supplement your schoolwork and fuel your love of learning!</h2>
+        </div>
+        <div class="modal fade" id="modal-suggest" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div>
+              <div class="modal-body">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="school-footer">
+        <div class="subject">Filter by Subject</div>
+          <a href="#" role="menuitem" id="english literature" class="filter" data-filter="english literature">English Literature</a>
+          <a href="#" role="menuitem" id="history" class="filter" data-filter=".history">History</a>
+          <a href="#" role="menuitem" id="math" class="filter" data-filter=".math">Math/Statistics</a>
+          <a href="#" role="menuitem" id="polisci" class="filter" data-filter=".polisci">Political Science</a>
+          <a href="#" role="menuitem" id="psych" class="filter" data-filter=".psych">Psychology</a>
+          <a href="#" role="menuitem" id="religion" class="filter" data-filter=".religion">Religion</a>
+          <a href="#" role="menuitem" id="science" class="filter" data-filter=".science">Science</a>
+        <div class="add-collection">Help us add to our collection:</div>
+        <button class="btn btn-default btn-suggest">Suggest a book!</button>
+      </section>
+      <section class="school-main">
+        <!-- <div id="Container" class="container"></div> -->
+      </section>
+      
     </main>
-    <footer class="school-footer"></footer>
   </body>
 </html>

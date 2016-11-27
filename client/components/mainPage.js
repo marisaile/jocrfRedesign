@@ -8,10 +8,10 @@ var app = {
     app.render();
   },
   render: function() {
-  	$('.landing-override-bootstrap').html(landing);
-  	$('.work').on('click', function(){
-  		$('.landing-override-bootstrap').html(work);
-  	});
+    $('.landing-override-bootstrap').html(landing);
+    $('.work').on('click', function(){
+        $('.landing-override-bootstrap').html(work);
+    });
   }
 };
 
