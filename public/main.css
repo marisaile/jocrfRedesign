@@ -1,281 +1,152 @@
-@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Raleway);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);@import url(https://fonts.googleapis.com/css?family=Lato);@import url(https://fonts.googleapis.com/css?family=Cardo);@import url(https://fonts.googleapis.com/css?family=Dancing+Script);@import url(https://fonts.googleapis.com/css?family=Mr+Bedfort);@import url(https://fonts.googleapis.com/css?family=Marcellus);@import url(https://fonts.googleapis.com/css?family=Righteous);@import url(https://fonts.googleapis.com/css?family=Syncopate);@import url(https://fonts.googleapis.com/css?family=Federo);/*  body.landing-page {
-    margin: 0;
-    background-color: #720EFF;
-
-    .nav-items {
-      position: relative;
-      display: block;
-      width: 85vw;
-      height: 85vh;
-      margin: 5vh auto;
-      text-align: center;
-    
-      a.landing-nav {
-        display: inline-block;
-        font-family: 'Josefin Sans', sans-serif;
-        font-size: 30px;
-        color: #FFFEFF;
-        margin: 5vw; 
-      }
-      a.landing-nav:hover {
-        text-decoration: none;
-        color: #323333;
-      }
-    }
-  }
-  .cloud {
-    width: 350px; height: 120px;
-    
-    background: #f2f9fe;
-    background: linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
-    background: -webkit-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
-    background: -moz-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
-    background: -ms-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
-    background: -o-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
-    
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    
-    position: relative;
-    margin: 120px auto 20px;
-
-    a.marisaile {
-      display: block;
-      font-family: 'Montez', cursive;
-      font-size: 6vmin;
-      color: #FFFEFF;
-      /*line-height: 50px;*/
-/*margin-right: 6vw;
-      margin-left: 4vw;
-
-      span {
-        font-family: 'Josefin Sans', sans-serif;
-        font-size: 1vmin;
-        color: #FFFEFF;
-      }
-      span:hover {
-        text-decoration: none;
-        color: #323333;
-      }
-    }
-    a.marisaile:hover {
-      text-decoration: none;
-      color: #323333;
-    }
-  }
-
-  .cloud:after, .cloud:before {
-    content: '';
-    position: absolute;
-    background: #f2f9fe;
-    z-index: -1
-  }
-
-  .cloud:after {
-    width: 100px; height: 100px;
-    top: -50px; left: 50px;
-    
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-  }
-
-  .cloud:before {
-    width: 180px; height: 180px;
-    top: -90px; right: 50px;
-    
-    border-radius: 200px;
-    -webkit-border-radius: 200px;
-    -moz-border-radius: 200px;
-  }
-    
-
-      
-
-
-
-
-*/
-body.landing-override-bootstrap {
+@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Raleway);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);@import url(https://fonts.googleapis.com/css?family=Lato);@import url(https://fonts.googleapis.com/css?family=Cardo);@import url(https://fonts.googleapis.com/css?family=Dancing+Script);@import url(https://fonts.googleapis.com/css?family=Mr+Bedfort);@import url(https://fonts.googleapis.com/css?family=Monda);@import url(https://fonts.googleapis.com/css?family=Ubuntu);@import url(https://fonts.googleapis.com/css?family=Righteous);@import url(https://fonts.googleapis.com/css?family=Syncopate);@import url(https://fonts.googleapis.com/css?family=Federo);body.landing-override-bootstrap {
   margin: 0;
-  background-color: #F0F1F3;
+  background-color: #fff;
 }
 
-body.landing-override-bootstrap .portfolio-landing {
-  position: absolute;
+body.landing-override-bootstrap section.portfolio-landing {
+  position: relative;
   width: 100%;
-  height: 100%;
-  background-color: #530ABA;
+  height: 100vh;
+  background-color: #262c3a;
 }
 
-body.landing-override-bootstrap .portfolio-landing .header-logo {
+body.landing-override-bootstrap section.portfolio-landing .header-logo {
   position: relative;
   display: block;
 }
 
-body.landing-override-bootstrap .portfolio-landing .header-logo a.marisaile {
+body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile {
   position: relative;
   display: block;
   top: 40vh;
   left: 21vw;
   font-family: 'Montez', cursive;
   font-size: 8vmin;
-  color: #F0F1F3;
+  color: #fff;
 }
 
-body.landing-override-bootstrap .portfolio-landing .header-logo a.marisaile:hover {
+body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:hover {
   text-decoration: none;
 }
 
-body.landing-override-bootstrap .portfolio-landing .horizontal-line {
+body.landing-override-bootstrap section.portfolio-landing .horizontal-line {
   position: relative;
   display: block;
-  width: 57vw;
-  left: -1vw;
+  width: 57.5vw;
+  left: -0.5vw;
   top: 35vh;
-  border-top: 2px solid #F0F1F3;
+  border-top: 2px solid #fff;
 }
 
-body.landing-override-bootstrap .portfolio-landing .sections {
+body.landing-override-bootstrap section.portfolio-landing .sections {
   position: relative;
   display: inline-block;
   top: 33vh;
   left: 55%;
 }
 
-body.landing-override-bootstrap .portfolio-landing .sections a.nav-sections {
+body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections {
   font-family: 'Raleway', sans-serif;
   font-size: 2.5vmin;
-  color: #F0F1F3;
+  color: #fff;
   margin: 2vw;
 }
 
-body.landing-override-bootstrap .portfolio-landing .sections a.nav-sections:hover {
+body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:hover {
   text-decoration: none;
 }
 
-body.landing-override-bootstrap .sections-work {
+body.landing-override-bootstrap section.portfolio-bio {
   position: relative;
   display: block;
-  height: 9vh;
   width: 100%;
-  background-color: #530ABA;
-  box-shadow: 1px 1px 10px 5px rgba(16, 2, 36, 0.4);
+  height: 75vh;
+  background-color: #fff;
 }
 
-body.landing-override-bootstrap .sections-work a.marisaile {
+body.landing-override-bootstrap section.portfolio-bio h1.bio-about {
   position: relative;
   display: block;
-  left: 5%;
+  top: 5vh;
+  text-align: center;
   font-family: 'Montez', cursive;
-  font-size: 8vmin;
-  color: #F0F1F3;
+  font-size: 50px;
+  color: #ff606e;
 }
 
-body.landing-override-bootstrap .sections-work a.marisaile:hover {
-  text-decoration: none;
+body.landing-override-bootstrap section.contact-info {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 15vh;
+  background-color: #ADC4C1;
 }
 
-body.landing-override-bootstrap .sections-work .dropdown {
+body.landing-override-bootstrap section.contact-info a {
   position: relative;
   display: inline-block;
-  top: -5.2vh;
-  left: 36vw;
+  top: 5vh;
+  left: 27.5%;
+  margin-right: 15vw;
   font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  color: #fff;
 }
 
-body.landing-override-bootstrap .sections-work .dropdown a.nav-work-sections {
-  font-family: 'Raleway', sans-serif;
-  font-size: 2.2vmin;
-  color: #F0F1F3;
-  margin-right: 9vw;
-}
-
-body.landing-override-bootstrap .sections-work .dropdown a.nav-work-sections:hover {
-  text-decoration: none;
-}
-
-body.override-bootstrap {
-  margin: 0;
-  background-color: #F0F1F3;
-}
-
-body.override-bootstrap .sections-work {
+body.landing-override-bootstrap section.portfolio-resume {
   position: relative;
   display: block;
-  height: 9vh;
   width: 100%;
-  background-color: #530ABA;
-  box-shadow: 1px 1px 10px 5px rgba(16, 2, 36, 0.2);
+  height: 100%;
+  background-color: #262c3a;
 }
 
-body.override-bootstrap .sections-work a.marisaile {
+body.landing-override-bootstrap section.portfolio-resume img.resume-image {
+  position: relative;
+  margin: auto;
+}
+
+body.landing-override-bootstrap section.sections-work {
   position: relative;
   display: block;
-  left: 5%;
-  font-family: 'Montez', cursive;
-  font-size: 8vmin;
-  color: #F0F1F3;
+  width: 100%;
+  height: 20vh;
+  background-color: #262c3a;
 }
 
-body.override-bootstrap .sections-work a.marisaile:hover {
+body.landing-override-bootstrap section.sections-work a.marisaile {
+  position: relative;
+  display: block;
+  top: 12vh;
+  left: 2%;
+  font-family: 'Montez', cursive;
+  font-size: 6vmin;
+  color: #fff;
+}
+
+body.landing-override-bootstrap section.sections-work a.marisaile:hover {
   text-decoration: none;
 }
 
-body.override-bootstrap .sections-work .dropdown {
+body.landing-override-bootstrap section.sections-work .dropdown {
   position: relative;
   display: inline-block;
-  top: -5.2vh;
-  left: 35vw;
+  left: 47%;
+  top: 8vh;
   font-family: 'Raleway', sans-serif;
 }
 
-body.override-bootstrap .sections-work .dropdown a.nav-work-sections {
+body.landing-override-bootstrap section.sections-work .dropdown a.nav-work-sections {
   font-family: 'Raleway', sans-serif;
   font-size: 2.2vmin;
-  color: #F0F1F3;
-  margin-right: 7vw;
+  color: #fff;
+  margin-right: 8vw;
 }
 
-body.override-bootstrap .sections-work .dropdown a.nav-work-sections:hover {
+body.landing-override-bootstrap section.sections-work .dropdown a.nav-work-sections:hover {
   text-decoration: none;
 }
 
-/*  #cloud {
-    width: 260px; height: 90px;
-    background: #fefefe;
-    transition: rotateY(-30deg);
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    z-index: 1;
-  }
-  #cloud:after, #cloud:before {
-    content: '';
-    position: absolute;
-    background: #fefefe;
-    z-index: -1;
-    transition: rotateY(-30deg);
-  }
-  #cloud:after {
-    width: 75px; height: 75px;
-    top: -35px; left: 25px;
-    transition: rotateY(-30deg);
-    
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-  }
-  #cloud:before {
-    width: 135px; height: 135px;
-    top: -65px; right: 50px;
-    transition: rotateY(-30deg);
-    border-radius: 200px;
-    -webkit-border-radius: 200px;
-    -moz-border-radius: 200px;
-  }
-*/
 .main-todo {
   margin: 5px auto;
   width: 500px;
@@ -316,14 +187,23 @@ body.override-bootstrap .sections-work .dropdown a.nav-work-sections:hover {
 }
 
 .add-todo-container .col-md-2 .btn.btn-add-todo {
-  background-color: #F501FF;
+  background-color: #00ddd8;
   color: #FFFEFF;
+}
+
+h1.funny-squares {
+  position: relative;
+  left: 225px;
+  top: 25px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  color: #242540;
 }
 
 .square-container {
   position: relative;
   display: inline-block;
-  top: 150px;
+  top: 125px;
   left: 330px;
   perspective: 500px;
 }
@@ -332,7 +212,7 @@ body.override-bootstrap .sections-work .dropdown a.nav-work-sections:hover {
   height: 100px;
   width: 100px;
   margin-right: 30px;
-  background-color: #F501FF;
+  background-color: #ff606e;
   text-align: center;
   vertical-align: middle;
   font-family: arial;
@@ -398,54 +278,28 @@ body.override-bootstrap .sections-work .dropdown a.nav-work-sections:hover {
   transition: transform .5s;
 }
 
-.three-container {
-  background-color: #383838;
-  margin: 0px;
-  overflow: hidden;
-}
-
-.three-a {
-  color: #eeeeee;
-}
-
-.d3-container {
+.photo-search-title {
   position: relative;
-  display: block;
-  width: 100%;
-  margin: 100px auto;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.d3-container text {
-  font: 10px sans-serif;
-}
-
-.d3-container .axis path,
-.d3-container .axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.d3-container form {
-  position: absolute;
-  right: 10px;
-  top: 10px;
+  left: 125px;
+  top: 25px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  color: #212413;
 }
 
 .photo-search {
   position: relative;
-  top: 105px;
+  top: 50px;
   left: 125px;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
-  color: #190338;
+  color: #212413;
 }
 
 input.search-photo {
   position: relative;
   display: inline-block;
-  top: 110px;
+  top: 60px;
   left: 125px;
   width: 350px;
   background-color: #fff;
@@ -455,19 +309,19 @@ input.search-photo {
   position: relative;
   display: inline-block;
   width: 100px;
-  top: 110px;
+  top: 60px;
   left: 150px;
-  background-color: #F501FF;
+  background-color: #ff606e;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
-  color: #F0F1F3;
+  color: #fff;
 }
 
 .search-results {
   position: relative;
   display: block;
-  margin: 150px auto;
-  width: 90%;
+  top: 80px;
+  left: 150px;
 }
 
 .search-results .photo {
@@ -483,125 +337,69 @@ input.search-photo {
   height: inherit;
 }
 
-.new-book-container {
+.school-header {
   position: relative;
-  display: block;
-  margin: 200px auto;
-  width: 500px;
-}
-
-.new-book-container .form-label {
-  font-family: 'Lato', sans-serif;
-  font-size: 16px;
-  color: #383838;
-}
-
-/*.btn-add {
-  position: relative;
-  left: -5px;
-  top: 10px;
-  background-color: #383838;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  width: 100px;
-}*/
-.book-list-container {
-  position: relative;
-  display: block;
-  margin: 200px auto;
-  width: 75%;
-  font-family: 'Lato', sans-serif;
-  font-size: 16px;
-  color: #383838;
-}
-
-.btn-default.btn-add-book {
-  position: relative;
-  left: 5px;
-  top: 10px;
-  background-color: #D12BC4;
-  color: #eee;
-}
-
-.btn-default.btn-add-book:hover {
-  background-color: #383838;
-  color: #eee;
-}
-
-.school-app {
-  position: relative;
-  display: block;
-  background-color: #F7F7F2;
-  height: 60%;
-  width: 75%;
-  margin: 2% auto;
-  box-shadow: 1px 1px 10px 1px rgba(83, 83, 83, 0.6);
-}
-
-.school-app .header {
-  width: 100%;
-  height: 100px;
+  width: 90%;
+  height: 100%;
   padding: 5px;
-  background-color: #1A033A;
-  z-index: 1;
 }
 
-.school-app .header .header-title {
+.school-header .class-project {
   position: relative;
   display: block;
-  left: 10px;
-  font-family: 'Josefin Slab', serif;
-  font-size: 50px;
-  color: #F7F7F2;
-}
-
-.school-app .header .header-subtitle {
-  position: relative;
-  display: block;
-  left: 10px;
-  top: -23px;
-  width: 95%;
+  width: 100%;
+  left: 3%;
+  top: 3vh;
+  text-align: center;
   font-family: 'Josefin Slab', serif;
   font-size: 20px;
-  color: #F7F7F2;
+  color: #262c3a;
 }
 
-.school-app #modal-suggest {
+#modal-suggest {
   top: 10%;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2vmin;
-  color: #535353;
+  color: #242540;
 }
 
-.school-app #modal-suggest p.error-message {
+#modal-suggest p.error-message {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2vmin;
   line-height: 1.5vmin;
-  color: #FF2E11;
+  color: #f04c40;
 }
 
-.school-app #modal-suggest .modal-body #form-suggest {
+#modal-suggest .modal-body #form-suggest {
   width: 85%;
   background-color: #e1e1e1;
   font-family: 'Josefin Sans', serif;
   font-size: 2vmin;
-  color: #535353;
+  color: #242540;
 }
 
-.school-app #modal-suggest .modal-body #form-suggest button.btn.btn-default.btn-submit-book {
-  background-color: #535353;
+#modal-suggest .modal-body #form-suggest button.btn.btn-default.btn-submit-book {
+  background-color: #242540;
   float: right;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2.5vmin;
   color: #e1e1e1;
 }
 
-.school-app #modal-suggest .modal-body .thank-you {
+#modal-suggest .modal-body .thank-you {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 3vmin;
-  color: #535353;
+  color: #242540;
+}
+
+.school-app {
+  position: relative;
+  display: block;
+  background-color: #fff;
+  height: 100%;
+  width: 90%;
+  margin: 3% auto;
+  box-shadow: 1px 1px 10px 2px rgba(34, 38, 38, 0.6);
 }
 
 .school-app .school-main {
@@ -633,7 +431,7 @@ input.search-photo {
   margin: 20%;
   width: 125px;
   height: 175px;
-  box-shadow: 1px 2px 10px 2px rgba(83, 83, 83, 0.2);
+  box-shadow: 1px 2px 10px 1px rgba(34, 38, 38, 0.2);
   transition: transform .5s;
 }
 
@@ -643,9 +441,10 @@ input.search-photo {
 
 .school-app .school-footer {
   /*    position: relative;*/
+  top: 5%;
   padding-top: 10px;
   height: 75px;
-  background-color: #9D49A0;
+  background-color: #ADC4C1;
 }
 
 .school-app .school-footer .subject {
@@ -654,7 +453,7 @@ input.search-photo {
   left: 1%;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 20px;
-  color: #F7F7F2;
+  color: #fff;
 }
 
 .school-app .school-footer a {
@@ -664,280 +463,31 @@ input.search-photo {
   margin-right: 20px;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 17px;
-  color: #F7F7F2;
+  color: #fff;
 }
 
 .school-app .school-footer .add-collection {
   position: relative;
   display: inline-block;
   top: -30px;
-  left: 11%;
+  left: 25%;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 20px;
-  color: #F7F7F2;
+  color: #fff;
 }
 
 .school-app .school-footer .btn-suggest {
   position: relative;
-  background-color: #F7F7F2;
+  left: 15%;
+  background-color: #fff;
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 15px;
-  color: #1A033A;
+  color: #242540;
 }
 
 .school-app .school-footer .btn-suggest:focus {
   outline: none;
-}
-
-h1.jocTimer {
-  position: relative;
-  display: block;
-  top: 10px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 35px;
-  color: #190338;
-  text-align: center;
-}
-
-.stopwatch-container {
-  position: relative;
-  display: block;
-  margin: 20px auto;
-  padding: 30px;
-  height: 480px;
-  width: 320px;
-  background-color: #F0F1F3;
-  border-radius: 6px;
-  box-shadow: 2px 2px 10px 2px rgba(83, 83, 83, 0.6);
-}
-
-.stopwatch-container .test-name {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 40px;
-  text-align: center;
-}
-
-.stopwatch-container .form-number {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 20px;
-  text-align: center;
-}
-
-.stopwatch-container .reset-button {
-  position: relative;
-  display: block;
-  left: 90%;
-  top: -120px;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 15px;
-  background-color: #F2F3F5;
-}
-
-.stopwatch-container .cum-counter {
-  position: relative;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 20px;
-  top: 20px;
-  left: 10px;
-}
-
-.stopwatch-container .split-counter {
-  position: relative;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 30px;
-  top: 20px;
-  left: 10px;
-}
-
-.stopwatch-container .btn.start-stop-button {
-  position: relative;
-  display: inline-block;
-  padding: 0;
-  height: 80px;
-  width: 125px;
-  margin: 20px;
-  top: 25px;
-  left: 40px;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 25px;
-  text-align: center;
-  background-color: #17B20A;
-  color: #fff;
-}
-
-.stopwatch-container .btn.start-stop-button:focus {
-  outline: none;
-}
-
-.stopwatch-container .btn.misc-button {
-  position: relative;
-  display: inline-block;
-  padding: 0;
-  height: 80px;
-  width: 125px;
-  margin: 20px;
-  top: 25px;
-  left: 125px;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 25px;
-  text-align: center;
-  background-color: #089D9A;
-  color: #fff;
-}
-
-.stopwatch-container .btn.misc-button:focus {
-  outline: none;
-}
-
-.stopwatch-container .score {
-  position: relative;
-  display: block;
-  top: 320px;
-  left: 400px;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 25px;
-}
-
-.stopwatch-container .create-csv {
-  background-color: #F0F1F3;
-  position: relative;
-  display: block;
-  top: -15px;
-  left: 400px;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 20px;
-}
-
-.stopwatch-container .create-csv:focus {
-  outline: none;
-}
-
-.stopwatch-container .item-container {
-  position: relative;
-  display: block;
-  left: 10px;
-  top: 25px;
-  height: 350px;
-  width: 350px;
-  border: 1px solid black;
-  font-family: 'Ubuntu', serif;
-}
-
-.stopwatch-container .item-container h2 {
-  position: relative;
-  font-family: 'Ubuntu', serif;
-  font-size: 30px;
-  text-align: center;
-  top: 100px;
-}
-
-.stopwatch-container .item-container h4 {
-  position: relative;
-  font-family: 'Ubuntu', serif;
-  font-size: 50px;
-  text-align: center;
-  top: 145px;
-}
-
-.stopwatch-container .item-container .tweezer-row {
-  position: relative;
-  text-align: center;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 50px;
-  top: 100px;
-}
-
-.stopwatch-container .item-container .dropped-pin {
-  position: relative;
-  display: inline-block;
-  top: 150px;
-  left: 50px;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 18px;
-  text-align: center;
-  background-color: #555;
-  color: #fff;
-}
-
-.stopwatch-container .item-container .dropped-pin:focus {
-  outline: none;
-}
-
-.stopwatch-container .item-container .dropped-pin:active {
-  background-color: #000;
-}
-
-.stopwatch-container .item-container .picked-up {
-  position: relative;
-  display: inline-block;
-  top: 150px;
-  left: 150px;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 18px;
-  text-align: center;
-  background-color: #fff;
-  color: #555;
-}
-
-.stopwatch-container .item-container .picked-up:focus {
-  outline: none;
-}
-
-.stopwatch-container .item-container .picked-up:active {
-  background-color: #dfdfdf;
-}
-
-table {
-  position: relative;
-  margin: 50px auto;
-  font-family: 'Ubuntu', monospace;
-  font-size: 20px;
-}
-
-table tr {
-  height: 20px;
-  width: 100px;
-}
-
-table td {
-  border: 1px black solid;
-  padding: 5px;
-}
-
-.no-bootstrap {
-  background-color: #888;
-  /* .pf-table {
-    height: 100%;
-    width: 100%;
-  } */
-}
-
-.no-bootstrap .table-container {
-  position: relative;
-  margin: 20px auto;
-  height: 400px;
-  width: 400px;
-  border: 2px solid black;
-}
-
-.no-bootstrap .row {
-  height: 25%;
-  width: 100%;
-}
-
-.no-bootstrap .circle {
-  margin: auto;
-  height: 50px;
-  width: 50px;
-  border-radius: 100%;
-  border: 2px solid black;
 }
 
 .dalquest-body {
@@ -1101,129 +651,24 @@ table td {
   text-decoration: none;
 }
 
-body.word-association {
-  margin: 0;
-  background-color: #555;
-}
-
-.wa-container {
-  position: relative;
-  display: block;
-  margin: 100px auto;
-  height: 1024px;
-  width: 768px;
-  background-color: #F0F1F3;
-  border-radius: 6px;
-  box-shadow: 2px 2px 2px;
-}
-
-.wa-container h1 {
-  position: relative;
-  display: block;
-  top: 50px;
-  text-align: center;
-  font-family: 'Marcellus', sans-serif;
-  font-size: 50px;
-}
-
-.wa-container .word-container {
-  position: relative;
-  display: block;
-  margin: auto;
-  height: 400px;
-  width: 500px;
-}
-
-.wa-container .word-container .word {
-  position: relative;
-  display: block;
-  top: 200px;
-  height: 100px;
-  font-family: 'Marcellus', serif;
-  font-size: 45px;
-  color: #222;
-  text-align: center;
-}
-
-.wa-container .word-container .response {
-  position: relative;
-  display: block;
-  top: 150px;
-  height: 75px;
-  font-family: 'Marcellus', sans-serif;
-  font-size: 30px;
-  color: #222;
-  text-align: center;
-  line-height: 50px;
-}
-
-.wa-container .sig-yes {
-  position: relative;
-  display: inline-block;
-  left: 75px;
-  width: 225px;
-  height: 75px;
-  color: #fff;
-  font-family: 'Marcellus', sans-serif;
-  font-size: 25px;
-  background-color: #17B20A;
-}
-
-.wa-container .sig-yes:hover {
-  background-color: #17B20A;
-}
-
-.wa-container .sig-yes:focus {
-  outline: none;
-  background-color: #17B20A;
-}
-
-.wa-container .sig-no {
-  position: relative;
-  display: inline-block;
-  left: 225px;
-  width: 225px;
-  height: 75px;
-  color: #fff;
-  font-family: 'Marcellus', sans-serif;
-  font-size: 25px;
-  background-color: #089D9A;
-}
-
-.wa-container .sig-no:hover {
-  background-color: #089D9A;
-}
-
-.wa-container .sig-no:focus {
-  outline: none;
-  background-color: #089D9A;
-}
-
-.wa-container .sig-response {
-  position: relative;
-  display: block;
-  top: 500px;
-  left: 65px;
-  font-family: 'Marcellus', serif;
-  font-size: 25px;
-  color: #222;
-}
-
-body.joc2012 {
-  background-color: #F2F2F2;
-}
-
 h1.joc2012-header {
   font-family: 'Raleway', sans-serif;
   font-size: 25px;
-  line-height: 125px;
   text-align: center;
   color: #190338;
 }
 
-#slideshow {
-  margin: -40px auto;
+h2.joc2012-subheader {
   position: relative;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  width: 40%;
+  left: 2%;
+}
+
+#slideshow {
+  position: relative;
+  left: 2%;
   width: 600px;
   height: 450px;
   padding: 10px;
@@ -1246,18 +691,28 @@ img {
 h1.jocTimer {
   position: relative;
   display: block;
-  top: 80px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 25px;
+  font-family: 'Josefin Slab', serif;
+  font-size: 30px;
   color: #190338;
   text-align: center;
 }
 
-.stopwatch-container {
+h2.jocTimer-explanation {
   position: relative;
   display: block;
-  margin: 100px auto;
+  width: 80%;
+  font-family: 'Josefin Slab', serif;
+  font-size: 20px;
+  left: 10%;
+}
+
+.stopwatch-container-generic {
+  position: relative;
+  display: inline-block;
+  top: 5vh;
+  left: 10%;
   padding: 10px;
+  margin: 20px;
   height: 480px;
   width: 320px;
   background-color: #Fefefe;
@@ -1265,19 +720,19 @@ h1.jocTimer {
   box-shadow: 2px 2px 10px 2px rgba(83, 83, 83, 0.6);
 }
 
-.stopwatch-container .test-name {
+.stopwatch-container-generic .test-name {
   font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
   text-align: center;
 }
 
-.stopwatch-container .form-number {
+.stopwatch-container-generic .form-number {
   font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
   text-align: center;
 }
 
-.stopwatch-container .reset-button {
+.stopwatch-container-generic .reset-button {
   position: relative;
   display: block;
   left: 80%;
@@ -1287,21 +742,21 @@ h1.jocTimer {
   background-color: #fefefe;
 }
 
-.stopwatch-container .cum-counter {
+.stopwatch-container-generic .cum-counter {
   position: relative;
   font-family: 'Ubuntu', sans-serif;
   font-size: 15px;
   top: -20px;
 }
 
-.stopwatch-container .split-counter {
+.stopwatch-container-generic .split-counter {
   position: relative;
   font-family: 'Ubuntu', sans-serif;
   font-size: 25px;
   top: -20px;
 }
 
-.stopwatch-container .btn.start-stop-button {
+.stopwatch-container-generic .btn.start-stop-button {
   position: relative;
   display: inline-block;
   padding: 0;
@@ -1317,11 +772,11 @@ h1.jocTimer {
   color: #fff;
 }
 
-.stopwatch-container .btn.start-stop-button:focus {
+.stopwatch-container-generic .btn.start-stop-button:focus {
   outline: none;
 }
 
-.stopwatch-container .btn.misc-button {
+.stopwatch-container-generic .btn.misc-button {
   position: relative;
   display: inline-block;
   padding: 0;
@@ -1337,135 +792,510 @@ h1.jocTimer {
   color: #fff;
 }
 
-.stopwatch-container .btn.misc-button:focus {
+.stopwatch-container-generic .btn.misc-button:focus {
   outline: none;
 }
 
-.stopwatch-container .item-container {
-  position: relative;
-  display: block;
-  top: -30px;
-  height: 200px;
-  width: 200px;
-  border: 1px solid black;
-  font-family: 'Ubuntu', serif;
-}
-
-.stopwatch-container .item-container h2 {
-  position: relative;
-  top: -30px;
-  font-family: 'Ubuntu', serif;
-  font-size: 15px;
-  text-align: center;
-}
-
-.stopwatch-container .item-container h4 {
-  position: relative;
-  top: -30px;
-  font-family: 'Ubuntu', serif;
-  font-size: 20px;
-  text-align: center;
-}
-
-.stopwatch-container .item-container .tweezer-row {
-  position: relative;
-  text-align: center;
-  top: 20px;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 15px;
-}
-
-.stopwatch-container .item-container .dropped-pin {
+/*.stopwatch-container-tweezer {
   position: relative;
   display: inline-block;
-  top: 60px;
-  left: 30px;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 10px;
-  background-color: #555;
-  color: #fff;
-}
+  top: 5vh;
+  left: 10%;
+  padding: 10px;
+  margin: 20px;
+  height: 480px;
+  width: 320px;
+  background-color: #Fefefe;
+  border-radius: 6px;
+  box-shadow: 2px 2px 10px 2px rgba(83, 83, 83, 0.6);
 
-.stopwatch-container .item-container .dropped-pin:focus {
-  outline: none;
-}
+  .test-name {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    text-align: center;
+  }
+  .form-number {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    text-align: center;
+  }
+  .reset-button {
+    position: relative;
+    display: block;
+    left: 80%;
+    top: -75px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 10px;
+    background-color: #fefefe;
+  } 
+  .cum-counter {
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    top: -20px;
+  }
+  .split-counter {
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 25px;
+    top: -20px;
+  }
+  .btn.start-stop-button {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    height: 50px;
+    width: 70px;
+    margin: 20px;
+    left: 25px;
+    top: -30px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    background-color: #17B20A;
+    color: #fff;
+   }
+  .btn.start-stop-button:focus {
+    outline: none;
+  }
+  .btn.misc-button {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    height: 50px;
+    width: 70px;
+    margin: 20px;
+    left: 50px;
+    top: -30px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    background-color: #089D9A;
+    color: #fff;
+  }
+  .btn.misc-button:focus {
+    outline: none;
+  }
+  .item-container {
+    position: relative;
+    display: block;
+    top: -30px;
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    font-family: 'Ubuntu', serif;
 
-.stopwatch-container .item-container .dropped-pin:active {
-  background-color: #000;
+    h2 {
+      position: relative;
+      top: -30px;
+      font-family: 'Ubuntu', serif;
+      font-size: 15px;
+      text-align: center;
+    }
+    h4 {
+      position: relative;
+      top: -30px;
+      font-family: 'Ubuntu', serif;
+      font-size: 20px;
+      text-align: center;
+    }
+    .tweezer-row {
+      position: relative;
+      text-align: center;
+      top: 20px;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 15px;
+    }
+    .dropped-pin {
+      position: relative;
+      display: inline-block;
+      top: 60px;
+      left: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 10px;
+      background-color: #555;
+      color: #fff;
+    }
+    .dropped-pin:focus {
+      outline: none;
+    }
+    .dropped-pin:active {
+      background-color: #000;
+    }
+    .picked-up {
+      position: relative;
+      display: inline-block;
+      top: 60px;
+      left: 60px;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 10px;
+      background-color: #fff;
+      color: #555;
+    }
+    .picked-up:focus {
+      outline: none;
+    }
+    .picked-up:active {
+      background-color: #dfdfdf;
+    }
+  }
 }
-
-.stopwatch-container .item-container .picked-up {
+.stopwatch-container-observation {
   position: relative;
   display: inline-block;
-  top: 60px;
-  left: 60px;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 10px;
-  background-color: #fff;
-  color: #555;
-}
+  top: 5vh;
+  left: 10%;
+  padding: 10px;
+  margin: 20px;
+  height: 480px;
+  width: 320px;
+  background-color: #Fefefe;
+  border-radius: 6px;
+  box-shadow: 2px 2px 10px 2px rgba(83, 83, 83, 0.6);
 
-.stopwatch-container .item-container .picked-up:focus {
-  outline: none;
-}
+  .test-name {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    text-align: center;
+  }
+  .form-number {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    text-align: center;
+  }
+  .reset-button {
+    position: relative;
+    display: block;
+    left: 80%;
+    top: -75px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 10px;
+    background-color: #fefefe;
+  } 
+  .cum-counter {
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    top: -20px;
+  }
+  .split-counter {
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 25px;
+    top: -20px;
+  }
+  .btn.start-stop-button {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    height: 50px;
+    width: 70px;
+    margin: 20px;
+    left: 25px;
+    top: -30px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    background-color: #17B20A;
+    color: #fff;
+   }
+  .btn.start-stop-button:focus {
+    outline: none;
+  }
+  .btn.misc-button {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    height: 50px;
+    width: 70px;
+    margin: 20px;
+    left: 50px;
+    top: -30px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    background-color: #089D9A;
+    color: #fff;
+  }
+  .btn.misc-button:focus {
+    outline: none;
+  }
+  .item-container {
+      position: relative;
+      display: block;
+      top: -30px;
+      height: 200px;
+      width: 200px;
+      border: 1px solid black;
+      font-family: 'Ubuntu', serif;
 
-.stopwatch-container .item-container .picked-up:active {
-  background-color: #dfdfdf;
+      h2 {
+        position: relative;
+        top: -30px;
+        font-family: 'Ubuntu', serif;
+        font-size: 15px;
+        text-align: center;
+      }
+      h4 {
+        position: relative;
+        top: -30px;
+        font-family: 'Ubuntu', serif;
+        font-size: 20px;
+        text-align: center;
+      }
+    .score {
+      position: relative;
+      display: block;
+      left: 300px;
+      top: -200px;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 15px;
+    }
+    .create-csv {
+      position: relative;
+      display: block;
+      left: 300px;
+      top: -180px;
+      background-color: #fefefe;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 12px;
+    }
+    .create-csv:focus {
+      outline: none;
+    }
+  }
 }
-
-.stopwatch-container .score {
-  position: relative;
-  display: block;
-  left: 225px;
-  top: -100px;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 15px;
-}
-
-.stopwatch-container .create-csv {
-  position: relative;
-  display: block;
-  left: 225px;
-  top: -90px;
-  background-color: #fefefe;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 12px;
-}
-
-.stopwatch-container .create-csv:focus {
-  outline: none;
-}
-
-a.timer {
-  position: relative;
-  display: inline-block;
-  top: -90px;
-  left: 46%;
-  margin-right: 20px;
-}
-
 table {
   position: relative;
   margin: 20px auto;
   font-family: 'Ubuntu', monospace;
   font-size: 10px;
+  tr {
+    height: 20px;
+    width: 25px;
+  }
+  td {
+    border: 1px black solid;
+  }
 }
+*/
+/*.timer-main {
+  background-color: #333;
 
-table tr {
-  height: 20px;
-  width: 25px;
-}
+  .stopwatch-container {
+    position: relative;
+    display: block;
+    margin: 100px auto;
+    padding: 30px;
+    height: 1024px;
+    width: 768px;
+    background-color: #F0F1F3;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px;
 
-table td {
-  border: 1px black solid;
-}
+    .test-name {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 50px;
+      text-align: center;
+    }
+    .form-number {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 25px;
+      text-align: center;
+    }
+    .reset-button {
+      position: relative;
+      display: block;
+      left: 640px;
+      top: -130px;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 20px;
+      background-color: #F2F3F5;
+    } 
+    .cum-counter {
+      position: relative;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 20px;
+      top: 75px;
+      left: 20px;
+    }
+    .split-counter {
+      position: relative;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 35px;
+      top: 75px;
+      left: 20px;
+    }
+    .btn.start-stop-button {
+      position: relative;
+      display: inline-block;
+      padding: 0;
+      height: 110px;
+      width: 150px;
+      margin: 20px;
+      top: 100px;
+      left: 100px;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 30px;
+      text-align: center;
+      background-color: #17B20A;
+      color: #fff;
+     }
+    .btn.start-stop-button:focus {
+      outline: none;
+    }
+    .btn.misc-button {
+      position: relative;
+      display: inline-block;
+      padding: 0;
+      height: 110px;
+      width: 150px;
+      margin: 20px;
+      top: 100px;
+      left: 200px;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 30px;
+      text-align: center;
+      background-color: #089D9A;
+      color: #fff;
+    }
+    .btn.misc-button:focus {
+      outline: none;
+    } 
+    .score {
+      position: relative;
+      display: block;
+      top: 500px;
+      left: 550px;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 25px;
+    }
+    .create-csv {
+      background-color: #F0F1F3;
+      position: relative;
+      display: block;
+      top: 110px;
+      left: 550px;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 20px;
+    }
+    .create-csv:focus {
+      outline: none;
+    }
+    .item-container {
+      position: relative;
+      display: block;
+      left: 25px;
+      top: 150px;
+      height: 400px;
+      width: 400px;
+      border: 1px solid black;
+      font-family: 'Ubuntu', serif;
 
+      h2 {
+        position: relative;
+        font-family: 'Ubuntu', serif;
+        font-size: 30px;
+        text-align: center;
+        top: 100px;
+      }
+      h4 {
+        position: relative;
+        font-family: 'Ubuntu', serif;
+        font-size: 50px;
+        text-align: center;
+        top: 145px;
+      }
+      .tweezer-row {
+        position: relative;
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 50px;
+        top: 100px;
+      }
+      .dropped-pin {
+        position: relative;
+        display: inline-block;
+        top: 150px;
+        left: 50px;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 18px;
+        text-align: center;
+        background-color: #555;
+        color: #fff;
+      }
+      .dropped-pin:focus {
+        outline: none;
+      }
+      .dropped-pin:active {
+        background-color: #000;
+      }
+      .picked-up {
+        position: relative;
+        display: inline-block;
+        top: 150px;
+        left: 150px;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 18px;
+        text-align: center;
+        background-color: #fff;
+        color: #555;
+      }
+      .picked-up:focus {
+        outline: none;
+      }
+      .picked-up:active {
+        background-color: #dfdfdf;
+      }
+    }*/
+/*.container.times {
+      position: relative;
+      display: block;
+      top: 100px;
+      height: 70%;
+      width: 95%;
+  
+      .col-md-8.time-col {
+        font-family: 'Inconsolata', monospace;
+        font-size: 25px;
+        line-height: 30px;
+      }
+      .col-md-4.points-col {
+        font-family: 'Inconsolata', monospace;
+        font-size: 25px;
+        line-height: 30px;
+      }
+    }*/
+/*  }
+}*/
+/*table {
+  position: relative;
+  margin: 50px auto;
+  font-family: 'Ubuntu', monospace;
+  font-size: 20px;
+
+  tr {
+    height: 20px;
+    width: 100px;
+  }
+
+  td {
+    border: 1px black solid;
+    padding: 5px;
+  }
+}*/
 h1.breakout-header {
   position: relative;
   display: block;
@@ -1474,7 +1304,7 @@ h1.breakout-header {
   text-align: center;
   font-family: 'Federo', sans-serif;
   font-size: 50px;
-  color: #594544;
+  color: #212413;
 }
 
 canvas#myCanvas {
@@ -1487,7 +1317,7 @@ canvas#myCanvas {
 button.start-game {
   position: relative;
   display: block;
-  background-color: #01B2A0;
+  background-color: #ADC4C1;
   width: 480px;
   height: 80px;
   margin: 40px auto;
@@ -1499,5 +1329,7 @@ button.start-game {
 button.start-game:focus {
   outline: none;
 }
+
+/*01B2A0*/
 
 /*# sourceMappingURL=main.css.map*/

@@ -1,5 +1,5 @@
 import header from 'templates/workPage.html';
-
+import $ from 'jquery';
 var app = {
   init: function(){
     app.render();
@@ -63,14 +63,14 @@ var app = {
     var drawBall = function(){
       ctx.beginPath();
       ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-      ctx.fillStyle = '#594544';
+      ctx.fillStyle = '#212413';
       ctx.fill();
       ctx.closePath();
     };
     var drawPaddle = function(){
       ctx.beginPath();
       ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
-      ctx.fillStyle = '#594544';
+      ctx.fillStyle = '#212413';
       ctx.fill();
       ctx.closePath();
     };
@@ -84,7 +84,7 @@ var app = {
             bricks[c][r].y = brickY;
             ctx.beginPath();
             ctx.rect(brickX, brickY, brickWidth, brickHeight);
-            ctx.fillStyle = '#E5F21F';
+            ctx.fillStyle = '#ff606e';
             ctx.fill();
             ctx.closePath();
           }
@@ -111,12 +111,12 @@ var app = {
     };
     var drawScore = function(){
       ctx.font = '16px Helvetica';
-      ctx.fillStyle = '#594544';
+      ctx.fillStyle = '#212413';
       ctx.fillText('Score: ' + score, 8, 20);
     }; 
     var drawLives = function() {
       ctx.font = '16px Helvetica';
-      ctx.fillStyle = '#594544';
+      ctx.fillStyle = '#212413';
       ctx.fillText('Lives: ' + lives, canvas.width - 65, 20);
     };
     var draw = function(){

@@ -10,10 +10,10 @@ var app = {
     app.bindClickEvents();
   },
   scrollAbout: function(){
-    $('#about').click(function (){
-        $('html, body').animate({
-          scrollTop: $('.dalquest-about').offset().top
-        }, 500);
+    $('#about').click(function(){
+      $('html, body').animate({
+        scrollTop: $('.dalquest-about').offset().top
+      }, 500);
     });
   },
   activeLink: function(){

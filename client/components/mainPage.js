@@ -1,16 +1,32 @@
 import $ from 'jquery';
 
-import landing from 'templates/landingPage.html';
-import work from 'templates/workPage.html';
+import workSection from 'templates/workPage.html';
+import resume from 'templates/resume.html';
 
 var app = {
-  init: function() {  
+  init: function(){  
     app.render();
   },
-  render: function() {
-    $('.landing-override-bootstrap').html(landing);
-    $('.work').on('click', function(){
-        $('.landing-override-bootstrap').html(work);
+  render: function(){
+    app.scrollBio();
+    app.scrollWork();
+    app.scrollResume();
+  },
+  scrollBio: function(){
+    $('.bio').click(function(){
+      $('html, body').animate({
+          scrollTop: $('.bio-about').offset().top
+        }, 600);
+    });
+  },
+  scrollWork: function(){
+    $('.projects').click(function(){
+      $('body').html(workSection);
+    });
+  }, 
+  scrollResume: function(){
+    $('.resume').click(function(){
+      $('body').html(resume);
     });
   }
 };

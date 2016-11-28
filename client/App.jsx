@@ -6,7 +6,7 @@ import mainPage from 'components/mainPage';
 import schoolBooks from 'pages/schoolBooks';
 // import timerObs from 'pages/timerObs';
 // import wordAss from 'pages/wordAssociation';
-// import jocTimer from 'pages/jocTimer';
+import jocTimer from 'pages/jocTimer';
 // import timerGen from 'pages/timerGen';
 import joc2012 from 'pages/joc2012';
 import landingPage from 'pages/landingPage';
@@ -39,9 +39,9 @@ $(function() {
     // case '/pages/wordAssociation.html':
     //   wordAss.init();
     // break;
-    // case '/pages/jocTimer.html':
-    //   jocTimer.init();
-    // break;
+    case '/pages/jocTimer.html':
+      jocTimer.init();
+    break;
     case '/pages/breakout.html':
       game.init();
     break;
@@ -74,9 +74,4 @@ $(function() {
     break;
     default: break;
   }
-
-  // Fancy Console Message for Developers
-  console.log('==============================================');
-  console.log('===========I am looking for a job!============');
-  console.log('==============================================');
 });

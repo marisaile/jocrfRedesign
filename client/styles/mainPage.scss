@@ -4,13 +4,13 @@
 
 body.landing-override-bootstrap {
   margin: 0;
-  background-color: #F0F1F3;
+  background-color: #fff;
 
-  .portfolio-landing {
-    position: absolute;
+  section.portfolio-landing {
+    position: relative;
     width: 100%;
-    height: 100%;
-    background-color: #530ABA;
+    height: 100vh;
+    background-color: #262c3a;
 
     .header-logo {
       position: relative;
@@ -23,7 +23,7 @@ body.landing-override-bootstrap {
         left: 21vw;
         font-family: 'Montez', cursive;
         font-size: 8vmin;
-        color: #F0F1F3;
+        color: #fff ;
       }
       a.marisaile:hover {
         text-decoration: none;
@@ -32,10 +32,10 @@ body.landing-override-bootstrap {
     .horizontal-line {
       position: relative;
       display: block;
-      width: 57vw;
-      left: -1vw;
+      width: 57.5vw;
+      left: -0.5vw;
       top: 35vh;
-      border-top: 2px solid #F0F1F3;
+      border-top: 2px solid #fff;
     }
     .sections {
       position: relative;
@@ -46,7 +46,7 @@ body.landing-override-bootstrap {
       a.nav-sections {
         font-family: 'Raleway', sans-serif;
         font-size: 2.5vmin;
-        color: #F0F1F3;
+        color: #fff;
         margin: 2vw;
       }
       a.nav-sections:hover {
@@ -54,21 +54,68 @@ body.landing-override-bootstrap {
       }
     }
   }
-  .sections-work {
+  section.portfolio-bio {
     position: relative;
     display: block;
-    height: 9vh;
     width: 100%;
-    background-color: #530ABA;
-    box-shadow: 1px 1px 10px 5px rgba(16, 2, 36, 0.4);
-    
+    height: 75vh;
+    background-color: #fff;
+
+    h1.bio-about {
+      position: relative;
+      display: block;
+      top: 5vh;
+      text-align: center;
+      font-family: 'Montez', cursive;
+      font-size: 50px;
+      color: #ff606e;
+    }
+  }
+  section.contact-info {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 15vh;
+    background-color: #ADC4C1;
+
+    a {
+      position: relative;
+      display: inline-block;
+      top: 5vh;
+      left: 27.5%;
+      margin-right: 15vw;
+      font-family: 'Raleway', sans-serif;
+      font-size: 20px;
+      color: #fff;
+    }
+  }
+  section.portfolio-resume {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #262c3a;
+
+    img.resume-image {
+      position: relative;
+      margin: auto;
+    }
+  }
+  section.sections-work {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 20vh;
+    background-color: #262c3a;
+
     a.marisaile {
       position: relative;
       display: block;
-      left: 5%;
+      top: 12vh;
+      left: 2%;
       font-family: 'Montez', cursive;
-      font-size: 8vmin;
-      color: #F0F1F3;
+      font-size: 6vmin;
+      color: #fff;
     }
     a.marisaile:hover {
       text-decoration: none;
@@ -76,15 +123,15 @@ body.landing-override-bootstrap {
     .dropdown {
       position: relative;
       display: inline-block;
-      top: -5.2vh;
-      left: 36vw;
+      left: 47%;
+      top: 8vh;
       font-family: 'Raleway', sans-serif;
 
       a.nav-work-sections {
         font-family: 'Raleway', sans-serif;
         font-size: 2.2vmin;
-        color: #F0F1F3;
-        margin-right: 9vw;
+        color: #fff;
+        margin-right: 8vw;
       }
       a.nav-work-sections:hover {
         text-decoration: none;
@@ -92,83 +139,6 @@ body.landing-override-bootstrap {
     }
   }
 }
-body.override-bootstrap {
-  margin: 0;
-  background-color: #F0F1F3;
-
-  .sections-work {
-    position: relative;
-    display: block;
-    height: 9vh;
-    width: 100%;
-    background-color: #530ABA;
-    box-shadow: 1px 1px 10px 5px rgba(16, 2, 36, 0.2);
-    
-    a.marisaile {
-      position: relative;
-      display: block;
-      left: 5%;
-      font-family: 'Montez', cursive;
-      font-size: 8vmin;
-      color: #F0F1F3;
-    }
-    a.marisaile:hover {
-      text-decoration: none;
-    }
-    .dropdown {
-      position: relative;
-      display: inline-block;
-      top: -5.2vh;
-      left: 35vw;
-      font-family: 'Raleway', sans-serif;
-
-      a.nav-work-sections {
-        font-family: 'Raleway', sans-serif;
-        font-size: 2.2vmin;
-        color: #F0F1F3;
-        margin-right: 7vw;
-      }
-      a.nav-work-sections:hover {
-        text-decoration: none;
-      }
-    }
-  }
-}
-
-/*  #cloud {
-    width: 260px; height: 90px;
-    background: #fefefe;
-    transition: rotateY(-30deg);
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    z-index: 1;
-  }
-  #cloud:after, #cloud:before {
-    content: '';
-    position: absolute;
-    background: #fefefe;
-    z-index: -1;
-    transition: rotateY(-30deg);
-  }
-  #cloud:after {
-    width: 75px; height: 75px;
-    top: -35px; left: 25px;
-    transition: rotateY(-30deg);
-    
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-  }
-  #cloud:before {
-    width: 135px; height: 135px;
-    top: -65px; right: 50px;
-    transition: rotateY(-30deg);
-    border-radius: 200px;
-    -webkit-border-radius: 200px;
-    -moz-border-radius: 200px;
-  }
-*/
 
 
 

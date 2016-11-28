@@ -34,19 +34,19 @@ var app = {
         var dataString = response.responseText;
         var data = JSON.parse(dataString);
         books = data;  
-        app.displayBooks();
+        // app.displayBooks();
       }  
     }); 
   },
-  displayBooks: function() { 
-    var booksHtml = books.map(function(book){
-      return compiledTemplate(book);
-    });
-    $('.school-main').html(booksHtml);            
-    app.render();
-  },
+  // displayBooks: function() { 
+  //   var booksHtml = books.map(function(book){
+  //     return compiledTemplate(book);
+  //   });
+  //   $('.school-main').html(booksHtml);            
+  //   app.render();
+  // },
   pickSubject: function(){
-   $('a').on('click', function(event){
+    $('a').on('click', function(event){
       var currentSubject = event.target.id;
       var filteredBooks = _.filter(books, function(book){
         return (book.subject === currentSubject);
@@ -78,8 +78,8 @@ var app = {
         && titleText.length > 0 
         && authorText.length > 2 
         && nameText.length > 0
-        && emailText.indexOf("@") !== -1
-        && emailText.indexOf(".") !== -1
+        && emailText.indexOf('@') !== -1
+        && emailText.indexOf('.') !== -1
       ) {
         $('.modal-body').html(thank);
       } else {
@@ -99,17 +99,17 @@ var app = {
       }
     });
   },
-  subscribe: function(){
-    $.ajax({
-      url: 'api/subscribe',
-      method: 'POST',
-      complete: function(response){
-        var dataString = response.responseText;
-        var data = JSON.parse(dataString);
-        subscriber = data;
-      }
-    });
-  },
+  // subscribe: function(){
+  //   $.ajax({
+  //     url: 'api/subscribe',
+  //     method: 'POST',
+  //     complete: function(response){
+  //       var dataString = response.responseText;
+  //       var data = JSON.parse(dataString);
+  //       subscriber = data;
+  //     }
+  //   });
+  // },
   bindEvents: function(){
     app.pickSubject();
     app.addBook(); 
