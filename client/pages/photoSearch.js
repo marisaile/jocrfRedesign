@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import Handlebars from 'handlebars'; 
 import photoTemplate from 'templates/flickrImage.html';
-import header from 'templates/workPage.html';
 
 var compiledTemplate = Handlebars.compile(photoTemplate);
 var app = {
@@ -9,7 +8,6 @@ var app = {
     app.render();
   },
   render: function(){
-    $('.sections-work').html(header);
     app.$input = $('.search-container input');
     app.bindEvents();
   },
@@ -71,3 +69,4 @@ var app = {
 };
 
 module.exports = app;
+ 

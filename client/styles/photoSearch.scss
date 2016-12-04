@@ -4,7 +4,7 @@
   top: 25px;
   font-family: 'Raleway', sans-serif;
   font-size: 25px;
-  color: #212413;
+  color: #0A1A26;
 }
 .photo-search {
   position: relative;
@@ -12,7 +12,7 @@
   left: 125px;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
-  color: #212413;
+  color: #0A1A26;
 }
 input.search-photo {
   position: relative;
@@ -33,6 +33,9 @@ input.search-photo {
   font-size: 16px;
   color: #fff;
 }
+.btn.search-photos:focus {
+  outline: none;
+}
 
 .search-results {
   position: relative;
@@ -40,11 +43,13 @@ input.search-photo {
   top: 80px;
   left: 150px;
   .photo {
-    width: 200px;
-    height: 200px;
-    margin: 10px;
+    position: relative;
+    width: 60%;
+    height: 60%;
+    margin: auto;
+/*    margin: 10px;
     overflow: hidden;
-    display: inline-block;
+    display: inline-block;*/
     img {
       width: 100%;
       height: inherit;

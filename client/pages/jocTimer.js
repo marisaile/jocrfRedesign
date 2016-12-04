@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-import header from 'templates/workPage.html';
+
 
 
 import timerGen from 'templates/genericTimer.html';
@@ -17,7 +17,8 @@ var app = {
       app.render();
   },
   render: function(){
-    $('.sections-work').html(header);
+    $('.stopwatch-container').html(timerObs);
+    observation.init();
   }
 };
 

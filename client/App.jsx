@@ -2,14 +2,13 @@
 import $ from 'jquery';
 import 'styles/main.scss';
 
-import mainPage from 'components/mainPage';
-import schoolBooks from 'pages/schoolBooks';
+import mainPage from 'pages/mainPage';
+import writingPrompts from 'pages/writingPrompts';
 // import timerObs from 'pages/timerObs';
 // import wordAss from 'pages/wordAssociation';
-import jocTimer from 'pages/jocTimer';
+// import jocTimer from 'pages/jocTimer';
 // import timerGen from 'pages/timerGen';
 import joc2012 from 'pages/joc2012';
-import landingPage from 'pages/landingPage';
 import TodoListView from 'pages/todoReact/todoListView';
 import funnySquares from 'pages/funnySquares';
 import photoSearch from 'pages/photoSearch';
@@ -17,7 +16,7 @@ import photoSearch from 'pages/photoSearch';
 // import three from 'pages/three';
 // import bookController from 'pages/books/booksController';
 import game from 'pages/breakout';
-import dalquest from 'pages/dalquest';
+// import dalquest from 'pages/dalquest';
 
 $(function() {
 
@@ -27,8 +26,8 @@ $(function() {
 
   switch (url) {
     
-    case '/pages/schoolBooks.html':
-      schoolBooks.init();
+    case '/pages/writingPrompts.html':
+      writingPrompts.init();
     break; 
     // case '/pages/timerObs.html':
     //   timerObs.init();
@@ -39,9 +38,9 @@ $(function() {
     // case '/pages/wordAssociation.html':
     //   wordAss.init();
     // break;
-    case '/pages/jocTimer.html':
-      jocTimer.init();
-    break;
+    // case '/pages/jocTimer.html':
+    //   jocTimer.init();
+    // break;
     case '/pages/breakout.html':
       game.init();
     break;
@@ -69,9 +68,9 @@ $(function() {
     // case '/pages/visualDesigns.html':
     //   vdt.init();
     // break;
-    case '/pages/dalquest.html':
-      dalquest.init();
-    break;
+    // case '/pages/dalquest.html':
+    //   dalquest.init();
+    // break;
     default: break;
   }
 });

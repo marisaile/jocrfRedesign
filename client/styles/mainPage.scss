@@ -4,137 +4,212 @@
 
 body.landing-override-bootstrap {
   margin: 0;
-  background-color: #fff;
+  background-color: #EFEFEF;
 
-  section.portfolio-landing {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-color: #262c3a;
-
-    .header-logo {
+  @media (min-width: 768px) {    
+    section.portfolio-landing {
       position: relative;
-      display: block;
+      width: 100%;
+      height: 100vh;
+      background-color: #20212B;
 
-      a.marisaile {
+      .header-logo {
         position: relative;
         display: block;
-        top: 40vh;
-        left: 21vw;
-        font-family: 'Montez', cursive;
-        font-size: 8vmin;
-        color: #fff ;
-      }
-      a.marisaile:hover {
-        text-decoration: none;
-      }
-    }
-    .horizontal-line {
-      position: relative;
-      display: block;
-      width: 57.5vw;
-      left: -0.5vw;
-      top: 35vh;
-      border-top: 2px solid #fff;
-    }
-    .sections {
-      position: relative;
-      display: inline-block;
-      top: 33vh;
-      left: 55%;
 
-      a.nav-sections {
-        font-family: 'Raleway', sans-serif;
-        font-size: 2.5vmin;
-        color: #fff;
-        margin: 2vw;
+        a.marisaile {
+          position: relative;
+          display: block;
+          top: 40vh;
+          left: 21vw;
+          font-family: 'Montez', cursive;
+          font-size: 8vmin;
+          color: #EFEFEF;
+        }
+        a.marisaile:hover {
+          text-decoration: none;
+        }
+        a.marisaile:active {
+          text-decoration: none;
+        }
       }
-      a.nav-sections:hover {
-        text-decoration: none;
+      .horizontal-line {
+        position: relative;
+        display: block;
+        width: 825px;
+        left: -0.7vw;
+        top: 35vh;
+        border-top: 2px solid #EFEFEF;
       }
-    }
+      .sections {
+        position: relative;
+        display: inline-block;
+        top: 33vh;
+        left: 55%;
+
+        a.nav-sections {
+          font-family: 'Raleway', sans-serif;
+          font-size: 2.5vmin;
+          color: #EFEFEF;
+          margin: 2vw;
+        }
+        a.nav-sections:hover {
+          text-decoration: none;
+        }
+        a.nav-sections:active {
+          text-decoration: none;   
+        }    
+      }
+    }  
+  }
+  @media (max-width: 768px) {
+    section.portfolio-landing {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background-color: #20212B;
+      /*262c3a*/
+      .header-logo {
+        position: relative;
+        display: block;
+
+        a.marisaile {
+          position: relative;
+          display: block;
+          top: 20vh;
+          text-align: center;
+          font-family: 'Montez', cursive;
+          font-size: 8vmin;
+          color: #E4DFDA;
+        }
+        a.marisaile:hover {
+          text-decoration: none;
+        }
+        a.marisaile:active {
+          text-decoration: none;
+        }
+      }
+      .horizontal-line {
+        display: none;
+      }
+      .sections {
+        position: relative;
+        display: block;
+        top: 35vh;
+      
+        a.nav-sections {
+          display: block;
+          font-family: 'Raleway', sans-serif;
+          font-size: 3vmin;
+          color: #E4DFDA;
+          margin: 5vh;
+          text-align: center;
+        }
+        a.nav-sections:hover {
+          text-decoration: none;
+          /*color: #FFBA49;*/
+        }
+        a.nav-sections:active {
+          text-decoration: none;       
+        }
+      }
+    } 
   }
   section.portfolio-bio {
     position: relative;
     display: block;
-    width: 100%;
-    height: 75vh;
-    background-color: #fff;
+    width: 90%;
+    height: 85vh;
+    margin: auto;
+    background-color: #EFEFEF;
 
     h1.bio-about {
       position: relative;
       display: block;
       top: 5vh;
-      text-align: center;
+      left: 6%;
       font-family: 'Montez', cursive;
       font-size: 50px;
-      color: #ff606e;
+      color: #FE3F30;
+    }
+    p.bio-content {
+      position: relative;
+      display: block;
+      width: 88%;
+      margin: 50px auto;
+     /* top: 50px;*/
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 20px;
+      color: #262c3a;
     }
   }
-  section.contact-info {
+  section.portfolio-contact {
     position: relative;
     display: block;
     width: 100%;
     height: 15vh;
-    background-color: #ADC4C1;
-
-    a {
+    background-color: #AFDFE4;
+    /*85BDBF*/
+    /*A0BAB5*/
+    .contact-links {
       position: relative;
-      display: inline-block;
-      top: 5vh;
-      left: 27.5%;
-      margin-right: 15vw;
-      font-family: 'Raleway', sans-serif;
-      font-size: 20px;
-      color: #fff;
-    }
-  }
-  section.portfolio-resume {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: #262c3a;
-
-    img.resume-image {
-      position: relative;
+      width: 90%;
       margin: auto;
+
+      a {
+        position: relative;
+        display: inline-block;
+        top: 6vh;
+        margin-right: 12.5vw;
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px;
+        color: #EFEFEF;
+      }
+      a:hover {
+        text-decoration: none;
+        color: #52565C;
+      }
     }
   }
-  section.sections-work {
+  section.portfolio-work {
     position: relative;
     display: block;
-    width: 100%;
-    height: 20vh;
-    background-color: #262c3a;
+    height: 100vh;
+    width: 20%;
+    background-color: #FE3F30;
+    box-shadow: 1px 1px 5px 1px rgba(38, 44, 58, 0.3);
 
     a.marisaile {
       position: relative;
       display: block;
-      top: 12vh;
-      left: 2%;
+      left: 5%;
+      top: 30vh;
       font-family: 'Montez', cursive;
-      font-size: 6vmin;
-      color: #fff;
+      font-size: 7vmin;
+      color: #EFEFEF;
     }
     a.marisaile:hover {
       text-decoration: none;
     }
-    .dropdown {
+    a.marisaile:active {
+      text-decoration: none;
+    }
+    .sections {
       position: relative;
-      display: inline-block;
-      left: 47%;
-      top: 8vh;
-      font-family: 'Raleway', sans-serif;
-
-      a.nav-work-sections {
+      display: block;
+      top: 35vh;
+      left: 5vh;
+      
+      a.nav-sections {
+        display: block;
         font-family: 'Raleway', sans-serif;
-        font-size: 2.2vmin;
-        color: #fff;
-        margin-right: 8vw;
+        font-size: 3vmin;
+        color: #EFEFEF;
+        margin-bottom: 10%;
       }
-      a.nav-work-sections:hover {
+      a.nav-sections:hover {
         text-decoration: none;
+        /*color: #FFBA49;*/
       }
     }
   }

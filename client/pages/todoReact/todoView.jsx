@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import $ from 'jquery';
 import dispatcher from 'pages/todoReact/todoDispatcher';
-import header from 'templates/workPage.html';
 
 var TodoItem = React.createClass({
   propTypes: {
@@ -13,7 +12,6 @@ var TodoItem = React.createClass({
     controller: PropTypes.object
   },
   render: function(){
-    $('.sections-work').html(header);
     var todo = this.props.data;
     var title = <div className="col-md-10" onClick={this.titleClick}>{todo.title}</div>;
     if (todo.isEditing) {

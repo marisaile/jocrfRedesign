@@ -65,7 +65,11 @@ var commonConfiguration = {
     extensions: ['', '.react.js', '.js', '.jsx', '.scss'],
     modulesDirectories: [
       "client", "node_modules"
-    ]
+    ],
+    alias: {
+      'masonry': 'masonry-layout',
+      'isotope': 'isotope-layout'
+    }
   }      
 };
 

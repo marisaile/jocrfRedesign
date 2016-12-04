@@ -101,8 +101,8 @@ var app = {
     itemData = {
       row: currentIndex,
       time: splitCount,
-      drop: pinDropped,
-      pU: pickedUp,
+      dropped: pinDropped,
+      pickedUp: pickedUp,
       penalty: extraTime,
       rowTime: rowTime,
       points: points
@@ -119,8 +119,8 @@ var app = {
       itemData = {
         row: currentIndex,
         time: splitCount,
-        drop: pinDropped,
-        pU: pickedUp,
+        dropped: pinDropped,
+        pickedUp: pickedUp,
         penalty: extraTime,
         rowTime: rowTime,
         points: points
@@ -208,7 +208,7 @@ var app = {
   },
   createCSV: function(){
     $('.create-csv').on('click', function(){
-      var fields = ['row', 'time', 'drop', 'pU', 'penalty', 'rowTime', 'points'];
+      var fields = ['row', 'time', 'dropped', 'pickedUp', 'penalty', 'rowTime', 'points'];
       try {
         result = json2csv({ data: testData, fields: fields });
         app.createTable();

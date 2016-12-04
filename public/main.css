@@ -1,150 +1,220 @@
-@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Raleway);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);@import url(https://fonts.googleapis.com/css?family=Lato);@import url(https://fonts.googleapis.com/css?family=Cardo);@import url(https://fonts.googleapis.com/css?family=Dancing+Script);@import url(https://fonts.googleapis.com/css?family=Mr+Bedfort);@import url(https://fonts.googleapis.com/css?family=Monda);@import url(https://fonts.googleapis.com/css?family=Ubuntu);@import url(https://fonts.googleapis.com/css?family=Righteous);@import url(https://fonts.googleapis.com/css?family=Syncopate);@import url(https://fonts.googleapis.com/css?family=Federo);body.landing-override-bootstrap {
+@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Raleway);@import url(https://fonts.googleapis.com/css?family=Ubuntu);@import url(https://fonts.googleapis.com/css?family=Righteous);@import url(https://fonts.googleapis.com/css?family=Syncopate);@import url(https://fonts.googleapis.com/css?family=Federo);body.landing-override-bootstrap {
   margin: 0;
-  background-color: #fff;
+  background-color: #EFEFEF;
 }
 
-body.landing-override-bootstrap section.portfolio-landing {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-color: #262c3a;
+@media (min-width: 768px) {
+  body.landing-override-bootstrap section.portfolio-landing {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #20212B;
+  }
+  body.landing-override-bootstrap section.portfolio-landing .header-logo {
+    position: relative;
+    display: block;
+  }
+  body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile {
+    position: relative;
+    display: block;
+    top: 40vh;
+    left: 21vw;
+    font-family: 'Montez', cursive;
+    font-size: 8vmin;
+    color: #EFEFEF;
+  }
+  body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:hover {
+    text-decoration: none;
+  }
+  body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:active {
+    text-decoration: none;
+  }
+  body.landing-override-bootstrap section.portfolio-landing .horizontal-line {
+    position: relative;
+    display: block;
+    width: 825px;
+    left: -0.7vw;
+    top: 35vh;
+    border-top: 2px solid #EFEFEF;
+  }
+  body.landing-override-bootstrap section.portfolio-landing .sections {
+    position: relative;
+    display: inline-block;
+    top: 33vh;
+    left: 55%;
+  }
+  body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5vmin;
+    color: #EFEFEF;
+    margin: 2vw;
+  }
+  body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:hover {
+    text-decoration: none;
+  }
+  body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:active {
+    text-decoration: none;
+  }
 }
 
-body.landing-override-bootstrap section.portfolio-landing .header-logo {
-  position: relative;
-  display: block;
-}
-
-body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile {
-  position: relative;
-  display: block;
-  top: 40vh;
-  left: 21vw;
-  font-family: 'Montez', cursive;
-  font-size: 8vmin;
-  color: #fff;
-}
-
-body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:hover {
-  text-decoration: none;
-}
-
-body.landing-override-bootstrap section.portfolio-landing .horizontal-line {
-  position: relative;
-  display: block;
-  width: 57.5vw;
-  left: -0.5vw;
-  top: 35vh;
-  border-top: 2px solid #fff;
-}
-
-body.landing-override-bootstrap section.portfolio-landing .sections {
-  position: relative;
-  display: inline-block;
-  top: 33vh;
-  left: 55%;
-}
-
-body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections {
-  font-family: 'Raleway', sans-serif;
-  font-size: 2.5vmin;
-  color: #fff;
-  margin: 2vw;
-}
-
-body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:hover {
-  text-decoration: none;
+@media (max-width: 768px) {
+  body.landing-override-bootstrap section.portfolio-landing {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #20212B;
+    /*262c3a*/
+  }
+  body.landing-override-bootstrap section.portfolio-landing .header-logo {
+    position: relative;
+    display: block;
+  }
+  body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile {
+    position: relative;
+    display: block;
+    top: 20vh;
+    text-align: center;
+    font-family: 'Montez', cursive;
+    font-size: 8vmin;
+    color: #E4DFDA;
+  }
+  body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:hover {
+    text-decoration: none;
+  }
+  body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:active {
+    text-decoration: none;
+  }
+  body.landing-override-bootstrap section.portfolio-landing .horizontal-line {
+    display: none;
+  }
+  body.landing-override-bootstrap section.portfolio-landing .sections {
+    position: relative;
+    display: block;
+    top: 35vh;
+  }
+  body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections {
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3vmin;
+    color: #E4DFDA;
+    margin: 5vh;
+    text-align: center;
+  }
+  body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:hover {
+    text-decoration: none;
+    /*color: #FFBA49;*/
+  }
+  body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:active {
+    text-decoration: none;
+  }
 }
 
 body.landing-override-bootstrap section.portfolio-bio {
   position: relative;
   display: block;
-  width: 100%;
-  height: 75vh;
-  background-color: #fff;
+  width: 90%;
+  height: 85vh;
+  margin: auto;
+  background-color: #EFEFEF;
 }
 
 body.landing-override-bootstrap section.portfolio-bio h1.bio-about {
   position: relative;
   display: block;
   top: 5vh;
-  text-align: center;
+  left: 6%;
   font-family: 'Montez', cursive;
   font-size: 50px;
-  color: #ff606e;
+  color: #FE3F30;
 }
 
-body.landing-override-bootstrap section.contact-info {
+body.landing-override-bootstrap section.portfolio-bio p.bio-content {
+  position: relative;
+  display: block;
+  width: 88%;
+  margin: 50px auto;
+  /* top: 50px;*/
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  color: #262c3a;
+}
+
+body.landing-override-bootstrap section.portfolio-contact {
   position: relative;
   display: block;
   width: 100%;
   height: 15vh;
-  background-color: #ADC4C1;
+  background-color: #AFDFE4;
+  /*85BDBF*/
+  /*A0BAB5*/
 }
 
-body.landing-override-bootstrap section.contact-info a {
+body.landing-override-bootstrap section.portfolio-contact .contact-links {
   position: relative;
-  display: inline-block;
-  top: 5vh;
-  left: 27.5%;
-  margin-right: 15vw;
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  color: #fff;
-}
-
-body.landing-override-bootstrap section.portfolio-resume {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: #262c3a;
-}
-
-body.landing-override-bootstrap section.portfolio-resume img.resume-image {
-  position: relative;
+  width: 90%;
   margin: auto;
 }
 
-body.landing-override-bootstrap section.sections-work {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 20vh;
-  background-color: #262c3a;
-}
-
-body.landing-override-bootstrap section.sections-work a.marisaile {
-  position: relative;
-  display: block;
-  top: 12vh;
-  left: 2%;
-  font-family: 'Montez', cursive;
-  font-size: 6vmin;
-  color: #fff;
-}
-
-body.landing-override-bootstrap section.sections-work a.marisaile:hover {
-  text-decoration: none;
-}
-
-body.landing-override-bootstrap section.sections-work .dropdown {
+body.landing-override-bootstrap section.portfolio-contact .contact-links a {
   position: relative;
   display: inline-block;
-  left: 47%;
-  top: 8vh;
+  top: 6vh;
+  margin-right: 12.5vw;
   font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  color: #EFEFEF;
 }
 
-body.landing-override-bootstrap section.sections-work .dropdown a.nav-work-sections {
-  font-family: 'Raleway', sans-serif;
-  font-size: 2.2vmin;
-  color: #fff;
-  margin-right: 8vw;
-}
-
-body.landing-override-bootstrap section.sections-work .dropdown a.nav-work-sections:hover {
+body.landing-override-bootstrap section.portfolio-contact .contact-links a:hover {
   text-decoration: none;
+  color: #52565C;
+}
+
+body.landing-override-bootstrap section.portfolio-work {
+  position: relative;
+  display: block;
+  height: 100vh;
+  width: 20%;
+  background-color: #FE3F30;
+  box-shadow: 1px 1px 5px 1px rgba(38, 44, 58, 0.3);
+}
+
+body.landing-override-bootstrap section.portfolio-work a.marisaile {
+  position: relative;
+  display: block;
+  left: 5%;
+  top: 30vh;
+  font-family: 'Montez', cursive;
+  font-size: 7vmin;
+  color: #EFEFEF;
+}
+
+body.landing-override-bootstrap section.portfolio-work a.marisaile:hover {
+  text-decoration: none;
+}
+
+body.landing-override-bootstrap section.portfolio-work a.marisaile:active {
+  text-decoration: none;
+}
+
+body.landing-override-bootstrap section.portfolio-work .sections {
+  position: relative;
+  display: block;
+  top: 35vh;
+  left: 5vh;
+}
+
+body.landing-override-bootstrap section.portfolio-work .sections a.nav-sections {
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 3vmin;
+  color: #EFEFEF;
+  margin-bottom: 10%;
+}
+
+body.landing-override-bootstrap section.portfolio-work .sections a.nav-sections:hover {
+  text-decoration: none;
+  /*color: #FFBA49;*/
 }
 
 .main-todo {
@@ -284,7 +354,7 @@ h1.funny-squares {
   top: 25px;
   font-family: 'Raleway', sans-serif;
   font-size: 25px;
-  color: #212413;
+  color: #0A1A26;
 }
 
 .photo-search {
@@ -293,7 +363,7 @@ h1.funny-squares {
   left: 125px;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
-  color: #212413;
+  color: #0A1A26;
 }
 
 input.search-photo {
@@ -317,6 +387,10 @@ input.search-photo {
   color: #fff;
 }
 
+.btn.search-photos:focus {
+  outline: none;
+}
+
 .search-results {
   position: relative;
   display: block;
@@ -325,11 +399,13 @@ input.search-photo {
 }
 
 .search-results .photo {
-  width: 200px;
-  height: 200px;
-  margin: 10px;
-  overflow: hidden;
-  display: inline-block;
+  position: relative;
+  width: 60%;
+  height: 60%;
+  margin: auto;
+  /*    margin: 10px;
+    overflow: hidden;
+    display: inline-block;*/
 }
 
 .search-results .photo img {
@@ -337,162 +413,24 @@ input.search-photo {
   height: inherit;
 }
 
-.school-header {
-  position: relative;
-  width: 90%;
-  height: 100%;
-  padding: 5px;
-}
-
-.school-header .class-project {
+.writing-prompts {
   position: relative;
   display: block;
-  width: 100%;
-  left: 3%;
-  top: 3vh;
-  text-align: center;
-  font-family: 'Josefin Slab', serif;
-  font-size: 20px;
-  color: #262c3a;
+  left: 19%;
+  z-index: 0;
 }
 
-#modal-suggest {
-  top: 10%;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 2vmin;
-  color: #242540;
-}
-
-#modal-suggest p.error-message {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 2vmin;
-  line-height: 1.5vmin;
-  color: #f04c40;
-}
-
-#modal-suggest .modal-body #form-suggest {
-  width: 85%;
-  background-color: #e1e1e1;
-  font-family: 'Josefin Sans', serif;
-  font-size: 2vmin;
-  color: #242540;
-}
-
-#modal-suggest .modal-body #form-suggest button.btn.btn-default.btn-submit-book {
-  background-color: #242540;
-  float: right;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 2.5vmin;
-  color: #e1e1e1;
-}
-
-#modal-suggest .modal-body .thank-you {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 3vmin;
-  color: #242540;
-}
-
-.school-app {
+.writing-prompts h1.get-started {
   position: relative;
-  display: block;
-  background-color: #fff;
-  height: 100%;
-  width: 90%;
-  margin: 3% auto;
-  box-shadow: 1px 1px 10px 2px rgba(34, 38, 38, 0.6);
-}
-
-.school-app .school-main {
-  position: relative;
-  display: block;
-  height: 60%;
-  width: 100%;
-  overflow: scroll;
-  /*    #Container .mix {
-      display: none;
-    }*/
-  /*    .gallery {
-      position: relative;
-      display: block;
-      height: 60%;
-      background-color: #fff;
-      perspective: 500px;*/
-}
-
-.school-app .school-main #image-container {
-  position: relative;
-  display: block;
-  height: 30%;
-}
-
-.school-app .school-main #image-container .book-image {
-  position: relative;
-  display: inline-block;
-  margin: 20%;
-  width: 125px;
-  height: 175px;
-  box-shadow: 1px 2px 10px 1px rgba(34, 38, 38, 0.2);
-  transition: transform .5s;
-}
-
-.school-app .school-main #image-container .grow:hover {
-  transform: scale(1.3);
-}
-
-.school-app .school-footer {
-  /*    position: relative;*/
-  top: 5%;
-  padding-top: 10px;
-  height: 75px;
-  background-color: #ADC4C1;
-}
-
-.school-app .school-footer .subject {
-  position: relative;
-  display: block;
-  left: 1%;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
-  color: #fff;
-}
-
-.school-app .school-footer a {
-  position: relative;
-  display: inline-block;
-  left: 1%;
-  margin-right: 20px;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 17px;
-  color: #fff;
-}
-
-.school-app .school-footer .add-collection {
-  position: relative;
-  display: inline-block;
-  top: -30px;
-  left: 25%;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
-  color: #fff;
-}
-
-.school-app .school-footer .btn-suggest {
-  position: relative;
-  left: 15%;
-  background-color: #fff;
-  text-align: center;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 15px;
-  color: #242540;
-}
-
-.school-app .school-footer .btn-suggest:focus {
-  outline: none;
+  left: 40%;
+  top: 10vh;
+  font-family: 'Raleway', sans-serif;
+  font-size: 50px;
 }
 
 .dalquest-body {
   margin: 0;
-  background-color: #022A40;
+  background-color: #0d5b7a;
   /* #094157*/
 }
 
@@ -544,9 +482,9 @@ input.search-photo {
 
 .dalquest-body main.dalquest-main section.dalquest-landing h1 {
   position: relative;
-  top: 50px;
+  top: 20px;
   text-align: center;
-  font-family: 'Cardo', cursive;
+  font-family: 'Josefin Slab', serif;
   font-size: 50px;
   color: #BAB8B3;
 }
@@ -554,11 +492,9 @@ input.search-photo {
 .dalquest-body main.dalquest-main section.dalquest-landing img.ddrs-landscape {
   position: relative;
   display: block;
-  margin: 100px auto;
-  width: 1000px;
-  height: 550px;
-  opacity: 1;
-  box-shadow: 1px 2px 15px 5px rgba(0, 25, 35, 0.8);
+  margin: auto;
+  opacity: 1.2;
+  /*box-shadow: 1px 2px 15px 5px rgba(0, 25, 35, 0.8);*/
   z-index: -1;
 }
 
@@ -581,7 +517,7 @@ input.search-photo {
   display: block;
   top: 50px;
   left: 6%;
-  font-family: 'Cardo', cursive;
+  font-family: 'Josefin Slab', serif;
   font-size: 40px;
   color: #011a27;
 }
@@ -591,7 +527,7 @@ input.search-photo {
   display: block;
   top: 40px;
   left: 6%;
-  font-family: 'Cardo', cursive;
+  font-family: 'Josefin Slab', serif;
   font-size: 25px;
   color: #011a27;
 }
@@ -685,410 +621,26 @@ h2.joc2012-subheader {
 
 img {
   width: 580px;
-  height: 435px;
+  height: 430px;
 }
 
-h1.jocTimer {
+/*table {
   position: relative;
-  display: block;
-  font-family: 'Josefin Slab', serif;
-  font-size: 30px;
-  color: #190338;
-  text-align: center;
-}
-
-h2.jocTimer-explanation {
-  position: relative;
-  display: block;
-  width: 80%;
-  font-family: 'Josefin Slab', serif;
-  font-size: 20px;
-  left: 10%;
-}
-
-.stopwatch-container-generic {
-  position: relative;
-  display: inline-block;
-  top: 5vh;
-  left: 10%;
-  padding: 10px;
-  margin: 20px;
-  height: 480px;
-  width: 320px;
-  background-color: #Fefefe;
-  border-radius: 6px;
-  box-shadow: 2px 2px 10px 2px rgba(83, 83, 83, 0.6);
-}
-
-.stopwatch-container-generic .test-name {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 20px;
-  text-align: center;
-}
-
-.stopwatch-container-generic .form-number {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 20px;
-  text-align: center;
-}
-
-.stopwatch-container-generic .reset-button {
-  position: relative;
-  display: block;
-  left: 80%;
-  top: -75px;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 10px;
-  background-color: #fefefe;
-}
-
-.stopwatch-container-generic .cum-counter {
-  position: relative;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 15px;
-  top: -20px;
-}
-
-.stopwatch-container-generic .split-counter {
-  position: relative;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 25px;
-  top: -20px;
-}
-
-.stopwatch-container-generic .btn.start-stop-button {
-  position: relative;
-  display: inline-block;
-  padding: 0;
-  height: 50px;
-  width: 70px;
-  margin: 20px;
-  left: 25px;
-  top: -30px;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 15px;
-  text-align: center;
-  background-color: #17B20A;
-  color: #fff;
-}
-
-.stopwatch-container-generic .btn.start-stop-button:focus {
-  outline: none;
-}
-
-.stopwatch-container-generic .btn.misc-button {
-  position: relative;
-  display: inline-block;
-  padding: 0;
-  height: 50px;
-  width: 70px;
-  margin: 20px;
-  left: 50px;
-  top: -30px;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 15px;
-  text-align: center;
-  background-color: #089D9A;
-  color: #fff;
-}
-
-.stopwatch-container-generic .btn.misc-button:focus {
-  outline: none;
-}
-
-/*.stopwatch-container-tweezer {
-  position: relative;
-  display: inline-block;
-  top: 5vh;
-  left: 10%;
-  padding: 10px;
-  margin: 20px;
-  height: 480px;
-  width: 320px;
-  background-color: #Fefefe;
-  border-radius: 6px;
-  box-shadow: 2px 2px 10px 2px rgba(83, 83, 83, 0.6);
-
-  .test-name {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 20px;
-    text-align: center;
-  }
-  .form-number {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 20px;
-    text-align: center;
-  }
-  .reset-button {
-    position: relative;
-    display: block;
-    left: 80%;
-    top: -75px;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 10px;
-    background-color: #fefefe;
-  } 
-  .cum-counter {
-    position: relative;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 15px;
-    top: -20px;
-  }
-  .split-counter {
-    position: relative;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 25px;
-    top: -20px;
-  }
-  .btn.start-stop-button {
-    position: relative;
-    display: inline-block;
-    padding: 0;
-    height: 50px;
-    width: 70px;
-    margin: 20px;
-    left: 25px;
-    top: -30px;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 15px;
-    text-align: center;
-    background-color: #17B20A;
-    color: #fff;
-   }
-  .btn.start-stop-button:focus {
-    outline: none;
-  }
-  .btn.misc-button {
-    position: relative;
-    display: inline-block;
-    padding: 0;
-    height: 50px;
-    width: 70px;
-    margin: 20px;
-    left: 50px;
-    top: -30px;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 15px;
-    text-align: center;
-    background-color: #089D9A;
-    color: #fff;
-  }
-  .btn.misc-button:focus {
-    outline: none;
-  }
-  .item-container {
-    position: relative;
-    display: block;
-    top: -30px;
-    height: 200px;
-    width: 200px;
-    border: 1px solid black;
-    font-family: 'Ubuntu', serif;
-
-    h2 {
-      position: relative;
-      top: -30px;
-      font-family: 'Ubuntu', serif;
-      font-size: 15px;
-      text-align: center;
-    }
-    h4 {
-      position: relative;
-      top: -30px;
-      font-family: 'Ubuntu', serif;
-      font-size: 20px;
-      text-align: center;
-    }
-    .tweezer-row {
-      position: relative;
-      text-align: center;
-      top: 20px;
-      font-family: 'Ubuntu', sans-serif;
-      font-size: 15px;
-    }
-    .dropped-pin {
-      position: relative;
-      display: inline-block;
-      top: 60px;
-      left: 30px;
-      width: 50px;
-      height: 50px;
-      border-radius: 100%;
-      font-family: 'Ubuntu', sans-serif;
-      font-size: 10px;
-      background-color: #555;
-      color: #fff;
-    }
-    .dropped-pin:focus {
-      outline: none;
-    }
-    .dropped-pin:active {
-      background-color: #000;
-    }
-    .picked-up {
-      position: relative;
-      display: inline-block;
-      top: 60px;
-      left: 60px;
-      width: 50px;
-      height: 50px;
-      border-radius: 100%;
-      font-family: 'Ubuntu', sans-serif;
-      font-size: 10px;
-      background-color: #fff;
-      color: #555;
-    }
-    .picked-up:focus {
-      outline: none;
-    }
-    .picked-up:active {
-      background-color: #dfdfdf;
-    }
-  }
-}
-.stopwatch-container-observation {
-  position: relative;
-  display: inline-block;
-  top: 5vh;
-  left: 10%;
-  padding: 10px;
-  margin: 20px;
-  height: 480px;
-  width: 320px;
-  background-color: #Fefefe;
-  border-radius: 6px;
-  box-shadow: 2px 2px 10px 2px rgba(83, 83, 83, 0.6);
-
-  .test-name {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 20px;
-    text-align: center;
-  }
-  .form-number {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 20px;
-    text-align: center;
-  }
-  .reset-button {
-    position: relative;
-    display: block;
-    left: 80%;
-    top: -75px;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 10px;
-    background-color: #fefefe;
-  } 
-  .cum-counter {
-    position: relative;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 15px;
-    top: -20px;
-  }
-  .split-counter {
-    position: relative;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 25px;
-    top: -20px;
-  }
-  .btn.start-stop-button {
-    position: relative;
-    display: inline-block;
-    padding: 0;
-    height: 50px;
-    width: 70px;
-    margin: 20px;
-    left: 25px;
-    top: -30px;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 15px;
-    text-align: center;
-    background-color: #17B20A;
-    color: #fff;
-   }
-  .btn.start-stop-button:focus {
-    outline: none;
-  }
-  .btn.misc-button {
-    position: relative;
-    display: inline-block;
-    padding: 0;
-    height: 50px;
-    width: 70px;
-    margin: 20px;
-    left: 50px;
-    top: -30px;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 15px;
-    text-align: center;
-    background-color: #089D9A;
-    color: #fff;
-  }
-  .btn.misc-button:focus {
-    outline: none;
-  }
-  .item-container {
-      position: relative;
-      display: block;
-      top: -30px;
-      height: 200px;
-      width: 200px;
-      border: 1px solid black;
-      font-family: 'Ubuntu', serif;
-
-      h2 {
-        position: relative;
-        top: -30px;
-        font-family: 'Ubuntu', serif;
-        font-size: 15px;
-        text-align: center;
-      }
-      h4 {
-        position: relative;
-        top: -30px;
-        font-family: 'Ubuntu', serif;
-        font-size: 20px;
-        text-align: center;
-      }
-    .score {
-      position: relative;
-      display: block;
-      left: 300px;
-      top: -200px;
-      font-family: 'Ubuntu', sans-serif;
-      font-size: 15px;
-    }
-    .create-csv {
-      position: relative;
-      display: block;
-      left: 300px;
-      top: -180px;
-      background-color: #fefefe;
-      font-family: 'Ubuntu', sans-serif;
-      font-size: 12px;
-    }
-    .create-csv:focus {
-      outline: none;
-    }
-  }
-}
-table {
-  position: relative;
-  margin: 20px auto;
+  margin: 50px auto;
   font-family: 'Ubuntu', monospace;
-  font-size: 10px;
+  font-size: 20px;
+
   tr {
     height: 20px;
-    width: 25px;
+    width: 100px;
   }
+
   td {
     border: 1px black solid;
+    padding: 5px;
   }
-}
-*/
-/*.timer-main {
-  background-color: #333;
-
-  .stopwatch-container {
+}*/
+/*.stopwatch-container {
     position: relative;
     display: block;
     margin: 100px auto;
@@ -1100,9 +652,10 @@ table {
     box-shadow: 2px 2px 2px;
 
     .test-name {
+      position: relative;
+      left: 30%;
       font-family: 'Ubuntu', sans-serif;
-      font-size: 50px;
-      text-align: center;
+      font-size: 50px;      
     }
     .form-number {
       font-family: 'Ubuntu', sans-serif;
@@ -1122,15 +675,15 @@ table {
       position: relative;
       font-family: 'Ubuntu', sans-serif;
       font-size: 20px;
-      top: 75px;
-      left: 20px;
+      /*top: 20px;*/
+/*      left: 20px;
     }
     .split-counter {
       position: relative;
       font-family: 'Ubuntu', sans-serif;
       font-size: 35px;
-      top: 75px;
-      left: 20px;
+      /*top: 20px*/
+/*      left: 20px;
     }
     .btn.start-stop-button {
       position: relative;
@@ -1139,14 +692,14 @@ table {
       height: 110px;
       width: 150px;
       margin: 20px;
-      top: 100px;
+      top: 50px;
       left: 100px;
       font-family: 'Ubuntu', sans-serif;
       font-size: 30px;
       text-align: center;
       background-color: #17B20A;
       color: #fff;
-     }
+    }
     .btn.start-stop-button:focus {
       outline: none;
     }
@@ -1157,7 +710,7 @@ table {
       height: 110px;
       width: 150px;
       margin: 20px;
-      top: 100px;
+      top: 50px;
       left: 200px;
       font-family: 'Ubuntu', sans-serif;
       font-size: 30px;
@@ -1171,8 +724,8 @@ table {
     .score {
       position: relative;
       display: block;
-      top: 500px;
-      left: 550px;
+      top: 75px;
+      left: 500px;
       font-family: 'Ubuntu', sans-serif;
       font-size: 25px;
     }
@@ -1180,8 +733,8 @@ table {
       background-color: #F0F1F3;
       position: relative;
       display: block;
-      top: 110px;
-      left: 550px;
+      top: 75px;
+      left: 500px;
       font-family: 'Ubuntu', sans-serif;
       font-size: 20px;
     }
@@ -1259,77 +812,69 @@ table {
       .picked-up:active {
         background-color: #dfdfdf;
       }
-    }*/
-/*.container.times {
-      position: relative;
-      display: block;
-      top: 100px;
-      height: 70%;
-      width: 95%;
-  
-      .col-md-8.time-col {
-        font-family: 'Inconsolata', monospace;
-        font-size: 25px;
-        line-height: 30px;
-      }
-      .col-md-4.points-col {
-        font-family: 'Inconsolata', monospace;
-        font-size: 25px;
-        line-height: 30px;
-      }
-    }*/
-/*  }
-}*/
-/*table {
-  position: relative;
-  margin: 50px auto;
-  font-family: 'Ubuntu', monospace;
-  font-size: 20px;
-
-  tr {
-    height: 20px;
-    width: 100px;
-  }
-
-  td {
-    border: 1px black solid;
-    padding: 5px;
-  }
-}*/
+    }
+  }*/
 h1.breakout-header {
   position: relative;
   display: block;
-  width: 480px;
-  margin: 50px auto;
-  text-align: center;
+  margin: 50px;
   font-family: 'Federo', sans-serif;
   font-size: 50px;
-  color: #212413;
+  color: #0A1A26;
 }
 
 canvas#myCanvas {
-  background: #fff;
+  background: #001011;
   position: relative;
   display: block;
   margin: -20px auto;
 }
 
-button.start-game {
+button#start-game {
   position: relative;
   display: block;
-  background-color: #ADC4C1;
+  background-color: #68FF11;
   width: 480px;
   height: 80px;
   margin: 40px auto;
   font-family: 'Federo', sans-serif;
   font-size: 20px;
-  color: #fff;
+  color: #001011;
 }
 
-button.start-game:focus {
+button#start-game:focus {
   outline: none;
+  background-color: #68FF11;
+  color: #001011;
+}
+
+button#start-game:hover {
+  background-color: #68FF11;
+  color: #001011;
+}
+
+#win-message {
+  display: none;
+}
+
+.you-won {
+  position: relative;
+  display: block;
+  width: 480px;
+  height: 320px;
+  font-family: 'Federo', sans-serif;
+  font-size: 50px;
+  text-align: center;
 }
 
 /*01B2A0*/
+img.resume-page {
+  position: relative;
+  display: block;
+  width: 50%;
+  height: 60%;
+  margin: auto;
+  box-shadow: 1px 1px 5px 1px rgba(33, 33, 33, 0.6);
+}
 
 /*# sourceMappingURL=main.css.map*/
