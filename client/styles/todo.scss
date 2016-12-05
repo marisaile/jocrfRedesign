@@ -1,38 +1,47 @@
 
-.main-todo {
-  margin: 5px auto;
-  width: 500px;
-  height: 100%;
-}
-.todo-container {
-  margin: 5px auto;
-  margin-top: 125px;
-  width: 400px;
-}
-.form-control.inuput-name {
-  background-color: #eee;
-}
-#todo-title {
-  font-family: 'Raleway', sans-serif;
-  font-size: 30px;
-  color: #323333;
-  font-weight: 700;
-}
-.add-todo-container {
-  margin-bottom: 10px;
-}
-.add-todo-container .col-md-10 {
-  padding-left: 0;
-  font-family: 'Raleway', sans-serif;
-  font-size: 18px;
-  color: #323333;
-}
-.add-todo-container .col-md-2 {
-  padding-right: 0;
-  text-align: right;
+.body-todos {
+  margin: 0;
+  background-color: #ef3e36;
 
-  .btn.btn-add-todo {
-    background-color: #00ddd8;
-    color: #FFFEFF;
+  h1#todo-title {
+    position: relative;
+    top: 10vh;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    color: #fafafa;
+    font-weight: 700;
+    text-align: center;
+  }
+  .todo-container {
+    margin: 5px auto;
+    margin-top: 125px;
+    width: 500px;
+    box-shadow: 1px 1px 5px 1px rgba(40, 46, 42, 0.6);
+    padding: 30px;
+    background-color: #fafafa;
+
+    .form-control.inuput-name {
+      background-color: #2e282a;
+    }
+
+    .add-todo-container {
+      margin-bottom: 10px;
+
+      .col-md-10 {
+        padding-left: 0;
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+        color: #2e282a;
+      }
+      .col-md-2 {
+        padding-right: 0;
+        text-align: right;
+
+        .btn.btn-add-todo {
+          background-color: #17bebb;
+          color: #fafafa;
+        }
+      }
+    }
   }
 }

@@ -3,6 +3,30 @@
    "prompt": "Write a thank you note to a friend who gave you onion and garlic flavored chewing gum." 
   },
   {
-  	"prompt": "You wake up to find you can fly, just for the next 24 hours. Describe your day."
+  	"prompt": "Imagine you are someone's shadow for a day."
+  },
+  {
+    "prompt": "Start a story with this sentence: 'Things were not working out the way he'd planned.'"
+  }, 
+  {
+  	"prompt": "Write a story from the perspective of a Christmas tree."
+  }, 
+  {
+  	"prompt": "Write an angry letter to an inanimate object."
+  }, 
+  {
+    "prompt": "Write a letter to a friend in the voice of Jane Austen, Ernest Hemingway, or other author."
+  },
+  {
+    "prompt": "Start a story with this sentence: 'She couldn't believe her luck.'"
+  }, 
+  {
+    "prompt": "Write a how-to essay on the proper use of emoji in text messages."
+  },
+  {
+    "prompt": "Describe a pleasant scent to a person who can't smell."
+  },
+  {
+    "prompt": "Imagine you discover you can travel at the speed of light. Describe the experience."
   }
-];
+]

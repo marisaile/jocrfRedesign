@@ -1,21 +1,18 @@
 import $ from 'jquery';
 
-import photoSearchJs from 'components/photoSearch';
-import photoSearchHtml from 'templates/photoSearch.html';
+import breakoutGame from 'pages/breakout';
+import funnySquares from 'pages/funnySquares';
+import photoSearch from 'pages/photoSearch';
+
 
 var app = {
   init: function(){  
     app.render();
   },
   render: function(){
-    app.loadProjects();
-    app.initializeProjects();
-  },
-  loadProjects: function(){
-    $('.photo-search-container').html(photoSearchHtml);
-  },
-  initializeProjects: function(){
-    photoSearchJs.init();
+    breakoutGame.init();
+    funnySquares.init();
+    photoSearch.init();
   }
 };
 

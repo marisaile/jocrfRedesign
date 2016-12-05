@@ -1,30 +1,29 @@
 @import url(https://fonts.googleapis.com/css?family=Montez);
 @import url(https://fonts.googleapis.com/css?family=Taviraj);
-@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);
 
 body.landing-override-bootstrap {
   margin: 0;
-  background-color: #EFEFEF;
+  background-color: #FAFAFA;
 
   @media (min-width: 768px) {    
     section.portfolio-landing {
       position: relative;
       width: 100%;
       height: 100vh;
-      background-color: #20212B;
+      background-image: radial-gradient(#17bebb, #15ABA8);
+      /*background-color: #17bebb;*/
 
       .header-logo {
         position: relative;
-        display: block;
+        top: 41vh;
+        left: 21vw;
+        width: 50vw;
 
         a.marisaile {
-          position: relative;
-          display: block;
-          top: 40vh;
-          left: 21vw;
           font-family: 'Montez', cursive;
           font-size: 8vmin;
-          color: #EFEFEF;
+          color: #2e282a;
         }
         a.marisaile:hover {
           text-decoration: none;
@@ -36,10 +35,10 @@ body.landing-override-bootstrap {
       .horizontal-line {
         position: relative;
         display: block;
-        width: 825px;
-        left: -0.7vw;
+        width: 780px;
+        left: 16px;
         top: 35vh;
-        border-top: 2px solid #EFEFEF;
+        border-top: 2px solid #2e282a;
       }
       .sections {
         position: relative;
@@ -50,8 +49,9 @@ body.landing-override-bootstrap {
         a.nav-sections {
           font-family: 'Raleway', sans-serif;
           font-size: 2.5vmin;
-          color: #EFEFEF;
+          color: #2e282a;
           margin: 2vw;
+          font-weight: 500;
         }
         a.nav-sections:hover {
           text-decoration: none;
@@ -67,7 +67,7 @@ body.landing-override-bootstrap {
       position: relative;
       width: 100%;
       height: 100vh;
-      background-color: #20212B;
+      background-color: #2e282a;
       /*262c3a*/
       .header-logo {
         position: relative;
@@ -80,7 +80,7 @@ body.landing-override-bootstrap {
           text-align: center;
           font-family: 'Montez', cursive;
           font-size: 8vmin;
-          color: #E4DFDA;
+          color: #FAFAFA;
         }
         a.marisaile:hover {
           text-decoration: none;
@@ -101,7 +101,7 @@ body.landing-override-bootstrap {
           display: block;
           font-family: 'Raleway', sans-serif;
           font-size: 3vmin;
-          color: #E4DFDA;
+          color: #FAFAFA;
           margin: 5vh;
           text-align: center;
         }
@@ -121,7 +121,7 @@ body.landing-override-bootstrap {
     width: 90%;
     height: 85vh;
     margin: auto;
-    background-color: #EFEFEF;
+    background-color: #FAFAFA;
 
     h1.bio-about {
       position: relative;
@@ -130,7 +130,7 @@ body.landing-override-bootstrap {
       left: 6%;
       font-family: 'Montez', cursive;
       font-size: 50px;
-      color: #FE3F30;
+      color: #ef3e36;
     }
     p.bio-content {
       position: relative;
@@ -140,95 +140,101 @@ body.landing-override-bootstrap {
      /* top: 50px;*/
       font-family: 'Josefin Sans', sans-serif;
       font-size: 20px;
-      color: #262c3a;
+      color: #2e282a;
     }
   }
   section.portfolio-contact {
     position: relative;
     display: block;
-    width: 100%;
     height: 15vh;
-    background-color: #AFDFE4;
-    /*85BDBF*/
-    /*A0BAB5*/
+    background-color: #2e282a;
+
     .contact-links {
       position: relative;
-      width: 90%;
-      margin: auto;
+      display: block;
+      top: 7vh;
+      left: 70vw;
 
-      a {
+      a.contact {
         position: relative;
         display: inline-block;
-        top: 6vh;
-        margin-right: 12.5vw;
+        margin-right: 2.5vw;
         font-family: 'Raleway', sans-serif;
-        font-size: 20px;
-        color: #EFEFEF;
+        font-size: 2.5vmin;
+        color: #FAFAFA;
       }
-      a:hover {
+      a.contact:hover {
         text-decoration: none;
-        color: #52565C;
+        color: #17bebb;
       }
     }
   }
   section.portfolio-work {
     position: relative;
     display: block;
-    height: 100vh;
-    width: 20%;
-    background-color: #FE3F30;
-    box-shadow: 1px 1px 5px 1px rgba(38, 44, 58, 0.3);
+    width: 100%;
+    background-color: #FAFAFA;
 
-    a.marisaile {
+    .work-header {
       position: relative;
-      display: block;
-      left: 5%;
-      top: 30vh;
+      top: 0;
+      left: 0;
+      margin: 0;
+      width: 100%;
+      height: 20vh;
+      background-color: #2e282a;
+      box-shadow: 1px 1px 5px 2px rgba(46, 40, 42, 0.6);
+    }
+    a.header-marisaile {
+      position: relative;
+      display: inline-block;
+      top: 13vh;
+      left: 5vw;
       font-family: 'Montez', cursive;
-      font-size: 7vmin;
-      color: #EFEFEF;
+      font-size: 6vmin;
+      color: #FAFAFA;
     }
-    a.marisaile:hover {
+    a.header-marisaile:hover {
       text-decoration: none;
+      color: #17bebb;
     }
-    a.marisaile:active {
+    a.resume {
+      position: relative;
+      display: inline-block;
+      top: 13vh;
+      left: 75vw;
+      font-family: 'Raleway', sans-serif;
+      font-size: 2.5vmin;
+      color: #FAFAFA;
+    }
+    a.resume:hover {
       text-decoration: none;
+      color: #17bebb;
     }
-    .sections {
+    .work-main {
       position: relative;
       display: block;
-      top: 35vh;
-      left: 5vh;
+      height: 120vh;
       
-      a.nav-sections {
-        display: block;
-        font-family: 'Raleway', sans-serif;
-        font-size: 3vmin;
-        color: #EFEFEF;
-        margin-bottom: 10%;
+      h1.work-title {
+        position: relative;
+        top: 5vh;
+        text-align: center;
+        font-family: 'Montez', cursive;
+        font-size: 50px;
+        color: #ef3e36;
       }
-      a.nav-sections:hover {
-        text-decoration: none;
-        /*color: #FFBA49;*/
+      a {
+        position: relative;
+        display: block;
+        font-family: 'Raleway';
+        font-size: 3vmin;
+        color: #2e282a;
+        margin: 10vh auto;
+        text-align: center;
       }
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.grow { transition: all .5s ease-in-out; }
+.grow:hover { transform: scale(1.1); text-decoration: none; }

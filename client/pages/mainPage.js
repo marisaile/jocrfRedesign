@@ -18,17 +18,17 @@ var app = {
     $('.bio').click(function(){
       $('html, body').animate({
           scrollTop: $('.portfolio-bio').offset().top
-        }, 1000, 'easeInOutExpo' );
+        }, 1000, 'easeInOutExpo');
     });
   },
-  scrollWork: function(){
+  goToWork: function(){
     $('.projects').click(function(){
-      $('body').html(workSection);
+      $('.portfolio-main').html(workSection);
     });
   }, 
   bindClickEvents: function(){
     app.scrollBio();
-    app.scrollWork();
+    app.goToWork();
   }
 };
 

@@ -1,6 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Raleway);@import url(https://fonts.googleapis.com/css?family=Ubuntu);@import url(https://fonts.googleapis.com/css?family=Righteous);@import url(https://fonts.googleapis.com/css?family=Syncopate);@import url(https://fonts.googleapis.com/css?family=Federo);body.landing-override-bootstrap {
+@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);@import url(https://fonts.googleapis.com/css?family=Open+Sans);@import url(https://fonts.googleapis.com/css?family=Poiret+One);@import url(https://fonts.googleapis.com/css?family=Ubuntu);@import url(https://fonts.googleapis.com/css?family=Righteous);@import url(https://fonts.googleapis.com/css?family=Syncopate);@import url(https://fonts.googleapis.com/css?family=Federo);body.landing-override-bootstrap {
   margin: 0;
-  background-color: #EFEFEF;
+  background-color: #FAFAFA;
 }
 
 @media (min-width: 768px) {
@@ -8,20 +8,19 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: #20212B;
+    background-image: radial-gradient(#17bebb, #15ABA8);
+    /*background-color: #17bebb;*/
   }
   body.landing-override-bootstrap section.portfolio-landing .header-logo {
     position: relative;
-    display: block;
+    top: 41vh;
+    left: 21vw;
+    width: 50vw;
   }
   body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile {
-    position: relative;
-    display: block;
-    top: 40vh;
-    left: 21vw;
     font-family: 'Montez', cursive;
     font-size: 8vmin;
-    color: #EFEFEF;
+    color: #2e282a;
   }
   body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:hover {
     text-decoration: none;
@@ -32,10 +31,10 @@
   body.landing-override-bootstrap section.portfolio-landing .horizontal-line {
     position: relative;
     display: block;
-    width: 825px;
-    left: -0.7vw;
+    width: 780px;
+    left: 16px;
     top: 35vh;
-    border-top: 2px solid #EFEFEF;
+    border-top: 2px solid #2e282a;
   }
   body.landing-override-bootstrap section.portfolio-landing .sections {
     position: relative;
@@ -46,8 +45,9 @@
   body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections {
     font-family: 'Raleway', sans-serif;
     font-size: 2.5vmin;
-    color: #EFEFEF;
+    color: #2e282a;
     margin: 2vw;
+    font-weight: 500;
   }
   body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:hover {
     text-decoration: none;
@@ -62,7 +62,7 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: #20212B;
+    background-color: #2e282a;
     /*262c3a*/
   }
   body.landing-override-bootstrap section.portfolio-landing .header-logo {
@@ -76,7 +76,7 @@
     text-align: center;
     font-family: 'Montez', cursive;
     font-size: 8vmin;
-    color: #E4DFDA;
+    color: #FAFAFA;
   }
   body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:hover {
     text-decoration: none;
@@ -96,7 +96,7 @@
     display: block;
     font-family: 'Raleway', sans-serif;
     font-size: 3vmin;
-    color: #E4DFDA;
+    color: #FAFAFA;
     margin: 5vh;
     text-align: center;
   }
@@ -115,7 +115,7 @@ body.landing-override-bootstrap section.portfolio-bio {
   width: 90%;
   height: 85vh;
   margin: auto;
-  background-color: #EFEFEF;
+  background-color: #FAFAFA;
 }
 
 body.landing-override-bootstrap section.portfolio-bio h1.bio-about {
@@ -125,7 +125,7 @@ body.landing-override-bootstrap section.portfolio-bio h1.bio-about {
   left: 6%;
   font-family: 'Montez', cursive;
   font-size: 50px;
-  color: #FE3F30;
+  color: #ef3e36;
 }
 
 body.landing-override-bootstrap section.portfolio-bio p.bio-content {
@@ -136,129 +136,166 @@ body.landing-override-bootstrap section.portfolio-bio p.bio-content {
   /* top: 50px;*/
   font-family: 'Josefin Sans', sans-serif;
   font-size: 20px;
-  color: #262c3a;
+  color: #2e282a;
 }
 
 body.landing-override-bootstrap section.portfolio-contact {
   position: relative;
   display: block;
-  width: 100%;
   height: 15vh;
-  background-color: #AFDFE4;
-  /*85BDBF*/
-  /*A0BAB5*/
+  background-color: #2e282a;
 }
 
 body.landing-override-bootstrap section.portfolio-contact .contact-links {
   position: relative;
-  width: 90%;
-  margin: auto;
+  display: block;
+  top: 7vh;
+  left: 70vw;
 }
 
-body.landing-override-bootstrap section.portfolio-contact .contact-links a {
+body.landing-override-bootstrap section.portfolio-contact .contact-links a.contact {
   position: relative;
   display: inline-block;
-  top: 6vh;
-  margin-right: 12.5vw;
+  margin-right: 2.5vw;
   font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  color: #EFEFEF;
+  font-size: 2.5vmin;
+  color: #FAFAFA;
 }
 
-body.landing-override-bootstrap section.portfolio-contact .contact-links a:hover {
+body.landing-override-bootstrap section.portfolio-contact .contact-links a.contact:hover {
   text-decoration: none;
-  color: #52565C;
+  color: #17bebb;
 }
 
 body.landing-override-bootstrap section.portfolio-work {
   position: relative;
   display: block;
-  height: 100vh;
-  width: 20%;
-  background-color: #FE3F30;
-  box-shadow: 1px 1px 5px 1px rgba(38, 44, 58, 0.3);
+  width: 100%;
+  background-color: #FAFAFA;
 }
 
-body.landing-override-bootstrap section.portfolio-work a.marisaile {
+body.landing-override-bootstrap section.portfolio-work .work-header {
   position: relative;
-  display: block;
-  left: 5%;
-  top: 30vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 20vh;
+  background-color: #2e282a;
+  box-shadow: 1px 1px 5px 2px rgba(46, 40, 42, 0.6);
+}
+
+body.landing-override-bootstrap section.portfolio-work a.header-marisaile {
+  position: relative;
+  display: inline-block;
+  top: 13vh;
+  left: 5vw;
   font-family: 'Montez', cursive;
-  font-size: 7vmin;
-  color: #EFEFEF;
+  font-size: 6vmin;
+  color: #FAFAFA;
 }
 
-body.landing-override-bootstrap section.portfolio-work a.marisaile:hover {
+body.landing-override-bootstrap section.portfolio-work a.header-marisaile:hover {
   text-decoration: none;
+  color: #17bebb;
 }
 
-body.landing-override-bootstrap section.portfolio-work a.marisaile:active {
+body.landing-override-bootstrap section.portfolio-work a.resume {
+  position: relative;
+  display: inline-block;
+  top: 13vh;
+  left: 75vw;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5vmin;
+  color: #FAFAFA;
+}
+
+body.landing-override-bootstrap section.portfolio-work a.resume:hover {
   text-decoration: none;
+  color: #17bebb;
 }
 
-body.landing-override-bootstrap section.portfolio-work .sections {
+body.landing-override-bootstrap section.portfolio-work .work-main {
   position: relative;
   display: block;
-  top: 35vh;
-  left: 5vh;
+  height: 120vh;
 }
 
-body.landing-override-bootstrap section.portfolio-work .sections a.nav-sections {
+body.landing-override-bootstrap section.portfolio-work .work-main h1.work-title {
+  position: relative;
+  top: 5vh;
+  text-align: center;
+  font-family: 'Montez', cursive;
+  font-size: 50px;
+  color: #ef3e36;
+}
+
+body.landing-override-bootstrap section.portfolio-work .work-main a {
+  position: relative;
   display: block;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway';
   font-size: 3vmin;
-  color: #EFEFEF;
-  margin-bottom: 10%;
+  color: #2e282a;
+  margin: 10vh auto;
+  text-align: center;
 }
 
-body.landing-override-bootstrap section.portfolio-work .sections a.nav-sections:hover {
+.grow {
+  transition: all .5s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.1);
   text-decoration: none;
-  /*color: #FFBA49;*/
 }
 
-.main-todo {
-  margin: 5px auto;
-  width: 500px;
-  height: 100%;
+.body-todos {
+  margin: 0;
+  background-color: #ef3e36;
 }
 
-.todo-container {
-  margin: 5px auto;
-  margin-top: 125px;
-  width: 400px;
-}
-
-.form-control.inuput-name {
-  background-color: #eee;
-}
-
-#todo-title {
+.body-todos h1#todo-title {
+  position: relative;
+  top: 10vh;
   font-family: 'Raleway', sans-serif;
   font-size: 30px;
-  color: #323333;
+  color: #fafafa;
   font-weight: 700;
+  text-align: center;
 }
 
-.add-todo-container {
+.body-todos .todo-container {
+  margin: 5px auto;
+  margin-top: 125px;
+  width: 500px;
+  box-shadow: 1px 1px 5px 1px rgba(40, 46, 42, 0.6);
+  padding: 30px;
+  background-color: #fafafa;
+}
+
+.body-todos .todo-container .form-control.inuput-name {
+  background-color: #2e282a;
+}
+
+.body-todos .todo-container .add-todo-container {
   margin-bottom: 10px;
 }
 
-.add-todo-container .col-md-10 {
+.body-todos .todo-container .add-todo-container .col-md-10 {
   padding-left: 0;
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
-  color: #323333;
+  color: #2e282a;
 }
 
-.add-todo-container .col-md-2 {
+.body-todos .todo-container .add-todo-container .col-md-2 {
   padding-right: 0;
   text-align: right;
 }
 
-.add-todo-container .col-md-2 .btn.btn-add-todo {
-  background-color: #00ddd8;
-  color: #FFFEFF;
+.body-todos .todo-container .add-todo-container .col-md-2 .btn.btn-add-todo {
+  background-color: #17bebb;
+  color: #fafafa;
 }
 
 h1.funny-squares {
@@ -414,18 +451,50 @@ input.search-photo {
 }
 
 .writing-prompts {
-  position: relative;
-  display: block;
-  left: 19%;
-  z-index: 0;
+  margin: 0;
+  background-color: #720eff;
 }
 
-.writing-prompts h1.get-started {
+.writing-prompts h1.writing-prompts-heading {
   position: relative;
-  left: 40%;
-  top: 10vh;
-  font-family: 'Raleway', sans-serif;
+  display: block;
+  font-family: 'Open Sans', sans-serif;
   font-size: 50px;
+  font-weight: 800;
+  top: 18vh;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.writing-prompts .writing-prompts-button {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4em;
+  padding: 20px 40px;
+  text-decoration: none;
+  margin: 30vh auto;
+  width: 250px;
+  z-index: 1;
+}
+
+.writing-prompts .writing-prompt-container {
+  position: relative;
+  display: block;
+  width: 50vw;
+  margin: -20vh auto;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
 }
 
 .dalquest-body {

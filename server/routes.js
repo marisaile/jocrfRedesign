@@ -30,11 +30,11 @@ router.post('/api', function(req, res){
   });
 });
 
-var bookDatabasePath = __dirname + '/bookDatabase.json';
+var writingPromptsPath = __dirname + '/writingPrompts.json';
 
-router.get('/api/books', function(req, res){
+router.get('/api/writingPrompts', function(req, res){
   // read in the database
-    fs.readFile(bookDatabasePath, function(err, data){
+    fs.readFile(writingPromptsPath, function(err, data){
       if (err) { console.log(err); }
       // send a response
       res.writeHead(200, {'Content-Type': 'text/json'});
