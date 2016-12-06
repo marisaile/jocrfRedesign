@@ -8,8 +8,8 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: radial-gradient(#17bebb, #15ABA8);
-    /*background-color: #17bebb;*/
+    background-color: #17bebb;
+    perspective: 500px;
   }
   body.landing-override-bootstrap section.portfolio-landing .header-logo {
     position: relative;
@@ -17,42 +17,32 @@
     left: 21vw;
     width: 50vw;
   }
-  body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile {
+  body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile, body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:hover, body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:active, body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:visited {
     font-family: 'Montez', cursive;
     font-size: 8vmin;
-    color: #2e282a;
-  }
-  body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:hover {
-    text-decoration: none;
-  }
-  body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:active {
+    color: #fafafa;
     text-decoration: none;
   }
   body.landing-override-bootstrap section.portfolio-landing .horizontal-line {
     position: relative;
     display: block;
-    width: 780px;
-    left: 16px;
-    top: 35vh;
-    border-top: 2px solid #2e282a;
+    width: 810px;
+    top: 36vh;
+    border-top: 2px solid #fafafa;
   }
   body.landing-override-bootstrap section.portfolio-landing .sections {
     position: relative;
     display: inline-block;
-    top: 33vh;
+    top: 33.5vh;
     left: 55%;
   }
-  body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections {
+  body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections, body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:hover, body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:active, body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:visited {
+    position: relative;
     font-family: 'Raleway', sans-serif;
     font-size: 2.5vmin;
-    color: #2e282a;
+    color: #fafafa;
     margin: 2vw;
     font-weight: 500;
-  }
-  body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:hover {
-    text-decoration: none;
-  }
-  body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:active {
     text-decoration: none;
   }
 }
@@ -62,14 +52,14 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: #2e282a;
+    background-color: #17bebb;
     /*262c3a*/
   }
   body.landing-override-bootstrap section.portfolio-landing .header-logo {
     position: relative;
     display: block;
   }
-  body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile {
+  body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile, body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:hover, body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:active, body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:visited {
     position: relative;
     display: block;
     top: 20vh;
@@ -77,12 +67,6 @@
     font-family: 'Montez', cursive;
     font-size: 8vmin;
     color: #FAFAFA;
-  }
-  body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:hover {
-    text-decoration: none;
-  }
-  body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:active {
-    text-decoration: none;
   }
   body.landing-override-bootstrap section.portfolio-landing .horizontal-line {
     display: none;
@@ -92,19 +76,13 @@
     display: block;
     top: 35vh;
   }
-  body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections {
+  body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections, body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:hover, body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:active, body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:visited {
     display: block;
     font-family: 'Raleway', sans-serif;
     font-size: 3vmin;
     color: #FAFAFA;
     margin: 5vh;
     text-align: center;
-  }
-  body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:hover {
-    text-decoration: none;
-    /*color: #FFBA49;*/
-  }
-  body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:active {
     text-decoration: none;
   }
 }
@@ -167,77 +145,108 @@ body.landing-override-bootstrap section.portfolio-contact .contact-links a.conta
   color: #17bebb;
 }
 
+body.landing-override-bootstrap section.portfolio-contact .contact-links a.contact:active, body.landing-override-bootstrap section.portfolio-contact .contact-links a.contact:visited {
+  text-decoration: none;
+}
+
 body.landing-override-bootstrap section.portfolio-work {
   position: relative;
   display: block;
   width: 100%;
   background-color: #FAFAFA;
-}
-
-body.landing-override-bootstrap section.portfolio-work .work-header {
-  position: relative;
-  top: 0;
-  left: 0;
-  margin: 0;
-  width: 100%;
-  height: 20vh;
-  background-color: #2e282a;
-  box-shadow: 1px 1px 5px 2px rgba(46, 40, 42, 0.6);
-}
-
-body.landing-override-bootstrap section.portfolio-work a.header-marisaile {
-  position: relative;
-  display: inline-block;
-  top: 13vh;
-  left: 5vw;
-  font-family: 'Montez', cursive;
-  font-size: 6vmin;
-  color: #FAFAFA;
-}
-
-body.landing-override-bootstrap section.portfolio-work a.header-marisaile:hover {
-  text-decoration: none;
-  color: #17bebb;
-}
-
-body.landing-override-bootstrap section.portfolio-work a.resume {
-  position: relative;
-  display: inline-block;
-  top: 13vh;
-  left: 75vw;
-  font-family: 'Raleway', sans-serif;
-  font-size: 2.5vmin;
-  color: #FAFAFA;
-}
-
-body.landing-override-bootstrap section.portfolio-work a.resume:hover {
-  text-decoration: none;
-  color: #17bebb;
+  /*top: 100000px;*/
+  /*.work-header {
+      position: relative;
+      top: 0;
+      left: 0;
+      margin: 0;
+      width: 100%;
+      height: 20vh;
+      background-color: #17bebb;
+      box-shadow: 1px 1px 5px 2px rgba(46, 40, 42, 0.6);
+    }
+    a.header-marisaile {
+      position: relative;
+      display: inline-block;
+      top: 13vh;
+      left: 5vw;
+      font-family: 'Montez', cursive;
+      font-size: 6vmin;
+      color: #FAFAFA;
+    }
+    a.header-marisaile:hover {
+      text-decoration: none;
+    }
+    a.resume {
+      position: relative;
+      display: inline-block;
+      top: 13vh;
+      left: 75vw;
+      font-family: 'Raleway', sans-serif;
+      font-size: 2.5vmin;
+      color: #FAFAFA;
+    }
+    a.resume:hover {
+      text-decoration: none;
+    }
+    a.resume:active {
+      text-decoration: none;
+    }*/
 }
 
 body.landing-override-bootstrap section.portfolio-work .work-main {
   position: relative;
   display: block;
-  height: 120vh;
+  height: 100vh;
 }
 
 body.landing-override-bootstrap section.portfolio-work .work-main h1.work-title {
   position: relative;
-  top: 5vh;
+  top: 6vh;
   text-align: center;
   font-family: 'Montez', cursive;
   font-size: 50px;
   color: #ef3e36;
 }
 
-body.landing-override-bootstrap section.portfolio-work .work-main a {
+body.landing-override-bootstrap section.portfolio-work .work-main .work-pages-nav {
+  position: relative;
+  width: 40%;
+  margin: 3vh auto;
+}
+
+body.landing-override-bootstrap section.portfolio-work .work-main .work-pages-nav a.grow {
   position: relative;
   display: block;
   font-family: 'Raleway';
   font-size: 3vmin;
   color: #2e282a;
-  margin: 10vh auto;
+  margin: 12vh auto;
   text-align: center;
+}
+
+body.landing-override-bootstrap section.portfolio-work .work-main .back-to-top {
+  position: relative;
+  left: 80vw;
+  top: -10vh;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  color: #2e282a;
+}
+
+body.landing-override-bootstrap section.portfolio-work .work-main .back-to-top:hover, body.landing-override-bootstrap section.portfolio-work .work-main .back-to-top:active, body.landing-override-bootstrap section.portfolio-work .work-main .back-to-top:visited {
+  text-decoration: none;
+}
+
+body.landing-override-bootstrap section.portfolio-work .work-main .page-up {
+  position: relative;
+  display: block;
+  left: 1.5vw;
+  color: #2e282a;
+}
+
+body.landing-override-bootstrap section.portfolio-work .work-main .page-up:hover, body.landing-override-bootstrap section.portfolio-work .work-main .page-up:active, body.landing-override-bootstrap section.portfolio-work .work-main .page-up:visted {
+  text-decoration: none;
 }
 
 .grow {
@@ -245,13 +254,32 @@ body.landing-override-bootstrap section.portfolio-work .work-main a {
 }
 
 .grow:hover {
-  transform: scale(1.1);
   text-decoration: none;
+  transform: scale(1.1);
+}
+
+.grow:active, .grow:visited {
+  text-decoration: none;
+}
+
+.breadcrumb {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  top: -2.75vh;
+  float: right;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fafafa;
+  cursor: pointer;
+  opacity: .2;
+  color: #010101;
 }
 
 .body-todos {
   margin: 0;
-  background-color: #ef3e36;
+  background-color: #fafafa;
 }
 
 .body-todos h1#todo-title {
@@ -259,9 +287,10 @@ body.landing-override-bootstrap section.portfolio-work .work-main a {
   top: 10vh;
   font-family: 'Raleway', sans-serif;
   font-size: 30px;
-  color: #fafafa;
+  color: #ef3e36;
   font-weight: 700;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .body-todos .todo-container {
@@ -437,15 +466,15 @@ input.search-photo {
 
 .search-results .photo {
   position: relative;
-  width: 60%;
-  height: 60%;
+  width: 250px;
+  height: 250px;
   margin: auto;
-  /*    margin: 10px;
-    overflow: hidden;
-    display: inline-block;*/
+  margin: 10px;
+  overflow: hidden;
+  display: inline-block;
 }
 
-.search-results .photo img {
+.search-results .photo img.img-responsive {
   width: 100%;
   height: inherit;
 }
@@ -461,7 +490,7 @@ input.search-photo {
   font-family: 'Open Sans', sans-serif;
   font-size: 50px;
   font-weight: 800;
-  top: 18vh;
+  top: 15vh;
   color: #fff;
   text-align: center;
   text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.6);
@@ -474,22 +503,27 @@ input.search-photo {
   text-transform: uppercase;
   letter-spacing: 2px;
   background: transparent;
-  border: 2px solid #fff;
+  border: 2px double #fff;
   color: #fff;
   text-align: center;
   font-size: 1.4em;
   padding: 20px 40px;
   text-decoration: none;
-  margin: 30vh auto;
+  margin: 20vh auto;
   width: 250px;
   z-index: 1;
+}
+
+.writing-prompts .writing-prompts-button:active {
+  transform: scale(0.8, 0.8);
+  transition: transform .3s;
 }
 
 .writing-prompts .writing-prompt-container {
   position: relative;
   display: block;
   width: 50vw;
-  margin: -20vh auto;
+  margin: -10vh auto;
   font-family: 'Poiret One', sans-serif;
   font-size: 30px;
   color: #fff;

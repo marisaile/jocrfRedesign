@@ -4,7 +4,6 @@ window.$ = $;
 require('jquery.easing');
 
 import landingPage from 'templates/landingPage.html';
-import workSection from 'templates/workPage.html';
 
 var app = {
   init: function(){
@@ -17,18 +16,29 @@ var app = {
   scrollBio: function(){
     $('.bio').click(function(){
       $('html, body').animate({
-          scrollTop: $('.portfolio-bio').offset().top
-        }, 1000, 'easeInOutExpo');
+        scrollTop: $('.portfolio-bio').offset().top
+      }, 1000, 'easeInOutExpo');
     });
   },
   goToWork: function(){
     $('.projects').click(function(){
-      $('.portfolio-main').html(workSection);
+      $('html, body').animate({
+        scrollTop: $('.portfolio-contact').offset().top
+      }, 1000, 'easeInOutExpo');
     });
   }, 
+  scrollToTop: function(){
+    $('.back-to-top').click(function(e){
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $('.portfolio-landing').offset().top
+      }, 1000, 'easeInOutExpo');
+    });
+  },
   bindClickEvents: function(){
     app.scrollBio();
     app.goToWork();
+    app.scrollToTop();
   }
 };
 

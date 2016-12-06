@@ -28,5 +28,11 @@
   },
   {
     "prompt": "Imagine you discover you can travel at the speed of light. Describe the experience."
+  }, 
+  {
+    "prompt": "Start a story with this sentence: 'I had just ordered my coffee when the invaders came.'"
+  },
+  {
+    "prompt": "You meet your doppleganger from a parallel universe. Write a character study of your alternate."
   }
 ]

@@ -11,8 +11,8 @@ body.landing-override-bootstrap {
       position: relative;
       width: 100%;
       height: 100vh;
-      background-image: radial-gradient(#17bebb, #15ABA8);
-      /*background-color: #17bebb;*/
+      background-color: #17bebb;
+      perspective: 500px;
 
       .header-logo {
         position: relative;
@@ -20,43 +20,33 @@ body.landing-override-bootstrap {
         left: 21vw;
         width: 50vw;
 
-        a.marisaile {
+        a.marisaile, a.marisaile:hover, a.marisaile:active, a.marisaile:visited {
           font-family: 'Montez', cursive;
           font-size: 8vmin;
-          color: #2e282a;
-        }
-        a.marisaile:hover {
-          text-decoration: none;
-        }
-        a.marisaile:active {
+          color: #fafafa;
           text-decoration: none;
         }
       }
       .horizontal-line {
         position: relative;
         display: block;
-        width: 780px;
-        left: 16px;
-        top: 35vh;
-        border-top: 2px solid #2e282a;
+        width: 810px;
+        top: 36vh;
+        border-top: 2px solid #fafafa;
       }
       .sections {
         position: relative;
         display: inline-block;
-        top: 33vh;
+        top: 33.5vh;
         left: 55%;
 
-        a.nav-sections {
+        a.nav-sections, a.nav-sections:hover,  a.nav-sections:active, a.nav-sections:visited {
+          position: relative;
           font-family: 'Raleway', sans-serif;
           font-size: 2.5vmin;
-          color: #2e282a;
+          color: #fafafa;
           margin: 2vw;
           font-weight: 500;
-        }
-        a.nav-sections:hover {
-          text-decoration: none;
-        }
-        a.nav-sections:active {
           text-decoration: none;   
         }    
       }
@@ -67,13 +57,13 @@ body.landing-override-bootstrap {
       position: relative;
       width: 100%;
       height: 100vh;
-      background-color: #2e282a;
+      background-color: #17bebb;
       /*262c3a*/
       .header-logo {
         position: relative;
         display: block;
 
-        a.marisaile {
+        a.marisaile, a.marisaile:hover, a.marisaile:active, a.marisaile:visited {
           position: relative;
           display: block;
           top: 20vh;
@@ -81,12 +71,6 @@ body.landing-override-bootstrap {
           font-family: 'Montez', cursive;
           font-size: 8vmin;
           color: #FAFAFA;
-        }
-        a.marisaile:hover {
-          text-decoration: none;
-        }
-        a.marisaile:active {
-          text-decoration: none;
         }
       }
       .horizontal-line {
@@ -97,19 +81,13 @@ body.landing-override-bootstrap {
         display: block;
         top: 35vh;
       
-        a.nav-sections {
+        a.nav-sections, a.nav-sections:hover, a.nav-sections:active, a.nav-sections:visited {
           display: block;
           font-family: 'Raleway', sans-serif;
           font-size: 3vmin;
           color: #FAFAFA;
           margin: 5vh;
           text-align: center;
-        }
-        a.nav-sections:hover {
-          text-decoration: none;
-          /*color: #FFBA49;*/
-        }
-        a.nav-sections:active {
           text-decoration: none;       
         }
       }
@@ -167,6 +145,9 @@ body.landing-override-bootstrap {
         text-decoration: none;
         color: #17bebb;
       }
+      a.contact:active, a.contact:visited {
+        text-decoration: none;
+      }
     }
   }
   section.portfolio-work {
@@ -174,15 +155,16 @@ body.landing-override-bootstrap {
     display: block;
     width: 100%;
     background-color: #FAFAFA;
+    /*top: 100000px;*/
 
-    .work-header {
+    /*.work-header {
       position: relative;
       top: 0;
       left: 0;
       margin: 0;
       width: 100%;
       height: 20vh;
-      background-color: #2e282a;
+      background-color: #17bebb;
       box-shadow: 1px 1px 5px 2px rgba(46, 40, 42, 0.6);
     }
     a.header-marisaile {
@@ -196,7 +178,6 @@ body.landing-override-bootstrap {
     }
     a.header-marisaile:hover {
       text-decoration: none;
-      color: #17bebb;
     }
     a.resume {
       position: relative;
@@ -209,32 +190,99 @@ body.landing-override-bootstrap {
     }
     a.resume:hover {
       text-decoration: none;
-      color: #17bebb;
     }
+    a.resume:active {
+      text-decoration: none;
+    }*/
     .work-main {
       position: relative;
       display: block;
-      height: 120vh;
+      height: 100vh;
       
       h1.work-title {
         position: relative;
-        top: 5vh;
+        top: 6vh;
         text-align: center;
         font-family: 'Montez', cursive;
         font-size: 50px;
         color: #ef3e36;
       }
-      a {
+      .work-pages-nav {
+        position: relative;
+        width: 40%;
+        margin: 3vh auto;
+
+        a.grow {
+          position: relative;
+          display: block;
+          font-family: 'Raleway';
+          font-size: 3vmin;
+          color: #2e282a;
+          margin: 12vh auto;
+          text-align: center;
+        }
+      }
+      .back-to-top {
+        position: relative;
+        left: 80vw;
+        top: -10vh;
+        font-family: 'Raleway', sans-serif;
+        font-size: 12px;
+        color: #2e282a;
+      }
+      .back-to-top:hover, .back-to-top:active, .back-to-top:visited {
+        text-decoration: none;
+      }
+      .page-up {
         position: relative;
         display: block;
-        font-family: 'Raleway';
-        font-size: 3vmin;
+        left: 1.5vw;
         color: #2e282a;
-        margin: 10vh auto;
-        text-align: center;
+      }
+      .page-up:hover, .page-up:active, .page-up:visted {
+        text-decoration: none;
       }
     }
   }
 }
-.grow { transition: all .5s ease-in-out; }
-.grow:hover { transform: scale(1.1); text-decoration: none; }
+.grow { 
+  transition: all .5s ease-in-out; 
+}
+.grow:hover {
+  text-decoration: none;
+  transform: scale(1.1); 
+}
+.grow:active, .grow:visited {
+  text-decoration: none;
+}
+.breadcrumb {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  top: -2.75vh;
+  float: right;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fafafa;
+  cursor: pointer; 
+  opacity: .2;
+  color: #010101;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

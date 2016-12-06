@@ -1,16 +1,17 @@
 
 .body-todos {
   margin: 0;
-  background-color: #ef3e36;
+  background-color: #fafafa;
 
   h1#todo-title {
     position: relative;
     top: 10vh;
     font-family: 'Raleway', sans-serif;
     font-size: 30px;
-    color: #fafafa;
+    color: #ef3e36;
     font-weight: 700;
     text-align: center;
+    text-transform: uppercase;
   }
   .todo-container {
     margin: 5px auto;
