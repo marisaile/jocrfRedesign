@@ -16,7 +16,7 @@ import photoSearch from 'pages/photoSearch';
 // import three from 'pages/three';
 // import bookController from 'pages/books/booksController';
 import game from 'pages/breakout';
-// import dalquest from 'pages/dalquest';
+import dalquest from 'pages/dalquest';
 
 $(function() {
 
@@ -68,9 +68,9 @@ $(function() {
     // case '/pages/visualDesigns.html':
     //   vdt.init();
     // break;
-    // case '/pages/dalquest.html':
-    //   dalquest.init();
-    // break;
+    case '/pages/dalquest.html':
+      dalquest.init();
+    break;
     default: break;
   }
 });

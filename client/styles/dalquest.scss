@@ -1,150 +1,75 @@
-.dalquest-body {
+body, html {
+  height: 100%;
   margin: 0;
-  background-color: #0d5b7a;
-
- /* #094157*/
-
-  sidebar.dalquest-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 15%;
-    height: 100%;
-    background-color: #BAB8B3;
-    box-shadow: 1px 2px 15px 5px rgba(0, 25, 35, 0.4);
-    z-index: 1;
-
-    a {
-      position: relative;
-      display: block;
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 20px;
-      color: #fff;
-      text-decoration: none;
-      top: 35%;
-      left: 25px;
-      margin-bottom: 25px;
-      transition: transform .5s;
-    }
-    a:hover {
-      transform: translateX(20px);
-      transition: transform .5s;
-      text-decoration: none;
-    }
-    a:active {
-      transform: translateX(20px);
-    }
-  }
-  main.dalquest-main {
-    position: relative;
-    top: 0;
-    left: 10%;
-    width: 98%;
-
-    section.dalquest-landing {
-      position: relative;
-      display: block;
-
-      h1 {
-        position: relative;
-        top: 20px;
-        text-align: center;
-        font-family: 'Josefin Slab', serif;
-        font-size: 50px;
-        color: #BAB8B3;
-      }
-      img.ddrs-landscape {
-        position: relative;
-        display: block;
-        margin: auto;
-        opacity: 1.2;
-        /*box-shadow: 1px 2px 15px 5px rgba(0, 25, 35, 0.8);*/
-        z-index: -1;
-      }
-    }
-    section.dalquest-about {
-      position: relative;
-      display: block;
-      height: 100%;
-      padding: 20px;
-
-      .about-landing {
-        position: relative;
-        top: 100px;
-        background-color: #BAB8B3;
-        width: 95%;
-
-        h2.dalquest-mission {
-          position: relative;
-          display: block;
-          top: 50px;
-          left: 6%;
-          font-family: 'Josefin Slab', serif;
-          font-size: 40px;
-          color: #011a27;
-        }
-        p.ddrs-mission-statement {
-          position: relative;
-          display: block;
-          top: 40px;
-          left: 6%;
-          font-family: 'Josefin Slab', serif;
-          font-size: 25px;
-          color: #011a27;
-        }
-        .ddrs-purchase {
-          position: relative;
-          display: inline-block;
-          top: 75px;
-          left: 6%;
-          width: 37%;
-          height: 100%;
-          margin-right: 5%;
-          margin-bottom:100px;
-          font-family: 'Josefin Sans', sans-serif;
-          font-size: 20px;
-          color: #011a27;
-        }
-        .ddrs-naturalist {
-          position: relative;
-          display: inline-block;
-          left: 3%;
-          width: 35%;
-          height: 100%;
-          margin-left: 10%;
-          margin-bottom: 100px;
-          font-family: 'Josefin Sans', sans-serif;
-          font-size: 20px;
-          color: #011a27;
-        }
-        h4.about-sections {
-          position: relative;
-          display: inline-block;
-          left: 20%;
-          font-family: 'Josefin Sans', sans-serif;
-          font-size: 30px;
-          color: #fff;
-          margin-right: 100px;
-          margin-bottom: 25px;
-        }
-        a {
-          position: relative;
-          display: inline-block;
-          left: 30%;
-          margin-right: 50px;
-          font-family: 'Josefin Sans', sans-serif;
-          font-size: 20px;
-          color: #fff;
-          border-top: 2px solid #fff;
-          padding-top: 2px;
-          margin-bottom: 25px;
-        }
-        a:hover {
-          text-decoration: none;
-        }
-      }
-    }
-  }
+  font: 400 20px/1.8 "Lato", sans-serif;
+  color: #777;
 }
 
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  position: relative;
+  /*opacity: 0.95;*/
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
+}
+.bgimg-1 {
+  background-image: url("/images/frenzel_reunion/IMG_2186.jpg");
+  min-height: 110%;
+}
+
+.bgimg-2 {
+  background-image: url("/images/frenzel_reunion/siblings.jpg");
+  min-height: 90%;
+}
+
+.bgimg-3 {
+  background-image: url("/images/frenzel_reunion/cousins.jpg");
+  min-height: 90%;
+}
+.bgimg-4 {
+  background-image: url("/images/frenzel_reunion/grand_cousins.jpg");
+  min-height: 100%;
+}
+.caption {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+.caption span.border {
+  background-color: #ddd;
+  color: #282e34;
+  padding: 50px 80px;
+  font-size: 25px;
+  letter-spacing: 7px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #ddd;
+}
+p {
+  font-size: 25px;
+  margin-top: 10px;
+  letter-spacing: 3px;
+}
+.masonry {
+  position: relative;
+  display: block;
+  top: 50px;
+  column-count: 4;
+  column-gap: 2em;
+
+  .item {
+    background-color: #eee;
+    display: inline-block;
+    margin: 0 0 2em;
+    width: 100%;
+  }
+}

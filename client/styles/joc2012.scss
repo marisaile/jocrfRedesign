@@ -1,12 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Taviraj);
 @import url(https://fonts.googleapis.com/css?family=Lato);
-
 @import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
 
 
 body.joc-body {
   margin: 0;
-  background-image: gradient(#fafafa);
+  background-color: #3a5199;
   
   section.landing-container {
 
@@ -48,15 +47,6 @@ body.joc-body {
       a.scheduler-nav:hover, a.scheduler-nav:active, a.scheduler-nav:visited {
         text-decoration: none;
       }
-      .joc-quote {
-        position: relative;
-        display: block;
-        width: 90%;
-        margin: 30vh auto;
-        font-family: 'Kaushan Script', cursive;
-        font-size: 2.5vmin;
-        color: #fafafa;
-      }
       .mini-nav {
         position: relative;
         top: 65vh;
@@ -76,10 +66,10 @@ body.joc-body {
     
     .about-container.row {
       position: relative;
-      top: 15vh;
-      left: 15%;
+      top: 60vh;
+      left: 20%;
       font-family: 'Lato';
-      font-size: 3vmin;
+      font-size: 2.5vmin;
       color: #202020;
 
       .about2 {
@@ -89,14 +79,25 @@ body.joc-body {
     }
     .aptitudes-container.row {
       position: relative;
-      top: 30vh;
+      top: -10vh;
+      left: 22%;
       height: 30vh;
-      width: 100%;
-      font-family: 'Lato', sans-serif;
-      font-size: 2.5vmin;
+      width: 90%;
+      font-family: 'Kaushan Script', sans-serif;
+      font-size: 2.7vmin;
       color: #202020;
-      
-      .aptitudes-are.col-md-6 {
+      text-align: center;
+
+      /*.joc-quote {
+        position: relative;
+        display: block;
+        width: 90%;
+        margin: 30vh auto;
+        font-family: 'Kaushan Script', cursive;
+        font-size: 2.5vmin;
+        color: #fafafa;
+      }*/
+      /*.aptitudes-are.col-md-6 {
         position: relative;
         left: 15%;
       }
@@ -112,7 +113,7 @@ body.joc-body {
           text-decoration: none;
           color: #3a1599;
         }
-      }
+      }*/
     }
   }
   .grow { 

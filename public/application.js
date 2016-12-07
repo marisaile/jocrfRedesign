@@ -91,7 +91,9 @@
 	
 	var _pagesBreakout2 = _interopRequireDefault(_pagesBreakout);
 	
-	// import dalquest from 'pages/dalquest';
+	var _pagesDalquest = __webpack_require__(224);
+	
+	var _pagesDalquest2 = _interopRequireDefault(_pagesDalquest);
 	
 	(0, _jquery2['default'])(function () {
 	
@@ -143,9 +145,9 @@
 	    // case '/pages/visualDesigns.html':
 	    //   vdt.init();
 	    // break;
-	    // case '/pages/dalquest.html':
-	    //   dalquest.init();
-	    // break;
+	    case '/pages/dalquest.html':
+	      _pagesDalquest2['default'].init();
+	      break;
 	    default:
 	      break;
 	  }
@@ -10004,7 +10006,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"landing-override-bootstrap":"landing-override-bootstrap","portfolio-landing":"portfolio-landing","header-logo":"header-logo","marisaile":"marisaile","horizontal-line":"horizontal-line","sections":"sections","nav-sections":"nav-sections","portfolio-contact":"portfolio-contact","contact-links":"contact-links","contact":"contact","portfolio-bio":"portfolio-bio","bio-about":"bio-about","bio-content":"bio-content","portfolio-work":"portfolio-work","work-main":"work-main","work-title":"work-title","work-pages-nav":"work-pages-nav","grow":"grow","back-to-top":"back-to-top","page-up":"page-up","breadcrumb":"breadcrumb","body-todos":"body-todos","todo-title":"todo-title","todo-container":"todo-container","inuput-name":"inuput-name","title-edit-input":"title-edit-input","form-control":"form-control","add-todo-container":"add-todo-container","col-xs-10":"col-xs-10","col-xs-2":"col-xs-2","btn":"btn","btn-add-todo":"btn-add-todo","funny-squares":"funny-squares","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","photo-search-body":"photo-search-body","photo-search-title":"photo-search-title","search-container":"search-container","search-photo":"search-photo","no-border":"no-border","search-photos":"search-photos","search-results":"search-results","masonry":"masonry","photo":"photo","img-responsive":"img-responsive","writing-prompts":"writing-prompts","writing-prompts-heading":"writing-prompts-heading","writing-prompts-button":"writing-prompts-button","writing-prompt-container":"writing-prompt-container","dalquest-body":"dalquest-body","dalquest-menu":"dalquest-menu","dalquest-main":"dalquest-main","dalquest-landing":"dalquest-landing","ddrs-landscape":"ddrs-landscape","dalquest-about":"dalquest-about","about-landing":"about-landing","dalquest-mission":"dalquest-mission","ddrs-mission-statement":"ddrs-mission-statement","ddrs-purchase":"ddrs-purchase","ddrs-naturalist":"ddrs-naturalist","about-sections":"about-sections","joc-body":"joc-body","landing-container":"landing-container","sidebar":"sidebar","col-md-3":"col-md-3","joc-title":"joc-title","joc-tag":"joc-tag","scheduler-nav":"scheduler-nav","joc-quote":"joc-quote","mini-nav":"mini-nav","landing-content":"landing-content","col-md-9":"col-md-9","about-container":"about-container","row":"row","about2":"about2","aptitudes-container":"aptitudes-container","aptitudes-are":"aptitudes-are","col-md-6":"col-md-6","testing-is":"testing-is","sample-test-nav":"sample-test-nav","breakout-header":"breakout-header","myCanvas":"myCanvas","start-game":"start-game","win-message":"win-message","you-won":"you-won","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book"};
+	module.exports = {"landing-override-bootstrap":"landing-override-bootstrap","portfolio-landing":"portfolio-landing","header-logo":"header-logo","marisaile":"marisaile","horizontal-line":"horizontal-line","sections":"sections","nav-sections":"nav-sections","portfolio-contact":"portfolio-contact","contact-links":"contact-links","contact":"contact","portfolio-bio":"portfolio-bio","bio-about":"bio-about","bio-content":"bio-content","portfolio-work":"portfolio-work","work-main":"work-main","work-title":"work-title","work-pages-nav":"work-pages-nav","grow":"grow","back-to-top":"back-to-top","page-up":"page-up","breadcrumb":"breadcrumb","body-todos":"body-todos","todo-title":"todo-title","todo-container":"todo-container","inuput-name":"inuput-name","title-edit-input":"title-edit-input","form-control":"form-control","add-todo-container":"add-todo-container","col-xs-10":"col-xs-10","col-xs-2":"col-xs-2","btn":"btn","btn-add-todo":"btn-add-todo","funny-squares":"funny-squares","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","photo-search-body":"photo-search-body","photo-search-title":"photo-search-title","search-container":"search-container","search-photo":"search-photo","no-border":"no-border","search-photos":"search-photos","search-results":"search-results","masonry":"masonry","photo":"photo","writing-prompts":"writing-prompts","writing-prompts-heading":"writing-prompts-heading","writing-prompts-button":"writing-prompts-button","writing-prompt-container":"writing-prompt-container","bgimg-1":"bgimg-1","bgimg-2":"bgimg-2","bgimg-3":"bgimg-3","bgimg-4":"bgimg-4","caption":"caption","border":"border","item":"item","joc-body":"joc-body","landing-container":"landing-container","sidebar":"sidebar","col-md-3":"col-md-3","joc-title":"joc-title","joc-tag":"joc-tag","scheduler-nav":"scheduler-nav","mini-nav":"mini-nav","landing-content":"landing-content","col-md-9":"col-md-9","about-container":"about-container","row":"row","about2":"about2","aptitudes-container":"aptitudes-container","breakout-header":"breakout-header","myCanvas":"myCanvas","start-game":"start-game","win-message":"win-message","you-won":"you-won","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book"};
 
 /***/ },
 /* 3 */,
@@ -10069,7 +10071,7 @@
 /* 7 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<section class=\"portfolio-landing\">  \n  <div class=\"header-logo\">\n    <a href=\"\" class=\"marisaile\" role=\"menuitem\">Marisaile<!-- <span>Junior Frontend Developer</span> --></a>\n  </div>    \n  <hr class=\"horizontal-line\">\n  <div class=\"sections\">\n    <a href=\"#\" class=\"nav-sections bio\">Bio</a>\n    <a href=\"#\" class=\"nav-sections projects\">Projects</a>\n    <a href=\"/images/junior_dev_resume.pdf\" target=\"new\" class=\"nav-sections resume\">Resume</a>\n  </div>\n</section>\n<section class=\"portfolio-bio\">\n  <h1 class=\"bio-about\">About Me</h1>\n  <p class=\"bio-content\">\n    My name is Lisa Cook, and I recently completed a 12-week Javascript bootcamp at Davinci Coders in Westminster, CO. I've used the skills I acquired to build a specialized stopwatch application for my current company, help out with updating the NAMI Denver website, and pursue some of my own personal projects. \n</section>\n<section class=\"portfolio-contact\">\n  <div class=\"contact-links\">\n    <a href=\"https://github.com/marisaile\" target=\"new\" class=\"contact\">github</a>\n    <a href=\"http://codepen.io/marisaile/\" target=\"new\" class=\"contact\">codepen</a>\n    <a href=\"https://www.linkedin.com/in/lisa-cook-93ba2115?trk=hp-identity-name\" target=\"new\" class=\"contact\">linkedin</a>\n  </div>\n</section>\n<section class=\"portfolio-work\">\n  <div class=\"work-main\">\n    <h1 class=\"work-title\">Some things I've made...</h1>\n    <div class=\"work-pages-nav\">\n      <a href=\"/pages/photoSearch.html\" class=\"photo-search grow\">Photo Search</a>\n      <a href=\"/pages/writingPrompts.html\" class=\"writing grow\">Writing Prompts Generator</a>\n      <a href=\"/pages/todo.html\" class=\"todo grow\">Todo App</a>\n      <a href=\"/pages/joc2012.html\" class=\"joc grow\">Johnson O'Connor Work</a> \n    </div>\n    <a href=\"#\" class=\"back-to-top\">\n      <i class=\"fa fa-angle-up page-up\" style=\"font-size:24px\"></i> back to top\n    </a> \n  </div>\n</section>\n\n";
+	module.exports = "\n<section class=\"portfolio-landing\">  \n  <div class=\"header-logo\">\n    <a href=\"\" class=\"marisaile\" role=\"menuitem\">Marisaile<!-- <span>Junior Frontend Developer</span> --></a>\n  </div>    \n  <hr class=\"horizontal-line\">\n  <div class=\"sections\">\n    <a href=\"#\" class=\"nav-sections bio\">Bio</a>\n    <a href=\"#\" class=\"nav-sections projects\">Projects</a>\n    <a href=\"/images/lcook_resume.pdf\" target=\"new\" class=\"nav-sections resume\">Resume</a>\n  </div>\n</section>\n<section class=\"portfolio-bio\">\n  <h1 class=\"bio-about\">About Me</h1>\n  <p class=\"bio-content\">\n    My name is Lisa Cook, and I recently completed a 12-week Javascript bootcamp at Davinci Coders in Westminster, CO. I've used the skills I acquired to build a specialized stopwatch application for my current company, help out with updating the NAMI Denver website, and pursue some of my own personal projects. \n</section>\n<section class=\"portfolio-contact\">\n  <div class=\"contact-links\">\n    <a href=\"https://github.com/marisaile\" target=\"new\" class=\"contact\">github</a>\n    <a href=\"http://codepen.io/marisaile/\" target=\"new\" class=\"contact\">codepen</a>\n    <a href=\"https://www.linkedin.com/in/lisa-cook-93ba2115?trk=hp-identity-name\" target=\"new\" class=\"contact\">linkedin</a>\n  </div>\n</section>\n<section class=\"portfolio-work\">\n  <div class=\"work-main\">\n    <h1 class=\"work-title\">Some things I've made...</h1>\n    <div class=\"work-pages-nav\">\n      <a href=\"/pages/photoSearch.html\" class=\"photo-search grow\">Photo Search</a>\n      <a href=\"/pages/writingPrompts.html\" class=\"writing grow\">Writing Prompts Generator</a>\n      <a href=\"/pages/todo.html\" class=\"todo grow\">Todo App</a>\n      <a href=\"/pages/joc2012.html\" class=\"joc grow\">Johnson O'Connor Work</a> \n    </div>\n    <a href=\"#\" class=\"back-to-top\">\n      <i class=\"fa fa-angle-up page-up\" style=\"font-size:24px\"></i> back to top\n    </a> \n  </div>\n</section>\n\n";
 
 /***/ },
 /* 8 */
@@ -41388,6 +41390,59 @@
 	};
 	
 	module.exports = app;
+
+/***/ },
+/* 224 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _templatesDdrsAboutHtml = __webpack_require__(225);
+	
+	var _templatesDdrsAboutHtml2 = _interopRequireDefault(_templatesDdrsAboutHtml);
+	
+	var app = {
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {
+	    (0, _jquery2['default'])('.dalquest-about').html(_templatesDdrsAboutHtml2['default']);
+	    app.bindClickEvents();
+	  },
+	  scrollAbout: function scrollAbout() {
+	    (0, _jquery2['default'])('#about').click(function () {
+	      (0, _jquery2['default'])('html, body').animate({
+	        scrollTop: (0, _jquery2['default'])('.dalquest-about').offset().top
+	      }, 500);
+	    });
+	  },
+	  activeLink: function activeLink() {
+	    (0, _jquery2['default'])('a').on('click', function () {
+	      var currentSection = (0, _jquery2['default'])('a').attr('id');
+	      if (currentSection === (0, _jquery2['default'])('section').attr('name')) {
+	        (0, _jquery2['default'])('a').addClass('active');
+	      }
+	    });
+	  },
+	  bindClickEvents: function bindClickEvents() {
+	    app.scrollAbout();
+	    app.activeLink();
+	  }
+	};
+	
+	module.exports = app;
+
+/***/ },
+/* 225 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"about-landing\">\n\t<h2 class=\"dalquest-mission\">Mission Statement</h2>\n\t<p class=\"ddrs-mission-statement\">\n\t\tIt is the desire of MSU that the property be used by scientists, naturalists, and educators for generations to come.\n\t</p>\n\t<div class=\"ddrs-purchase\">\n\t\tThe Dalquest Desert Research Station (DDRS) is located in west Texas (see map) on the Presidio/Brewster County line, north of and adjoining the Big Bend Ranch State Park. The site contains 1,200 hectares (3,000 acres) and was a gift from the late Dr. Walter W. Dalquest and his wife, Rose. Walt came to Midwestern State University in 1952 and retired from full time service in 1984. Dr. Dalquest was one of the most productive scholars in the history of Midwestern. He produced 180 scientific publications, and he continued to work part-time until his death in 2000.\n\t</div>\n\t<div class=\"ddrs-naturalist\">\n\t\tTo a naturalist the DDRS experience is a dream come true. The majority of the site has had little human influence; in fact, the property owner prior to Dr. Dalquest fenced the canyon lands to keep cattle from getting into the area. The site is one of the few areas within the Chihuahuan Desert that has not been overgrazed. \n\t</div>\n\t<h4 class=\"about-sections\">Sections</h4>\n\t<a href=\"\" role=\"menuitem\" class=\"about-history\">History</a>\n\t<a href=\"\" role=\"menuitem\" class=\"about-bio\">Biological Signifiance</a>\n\t<a href=\"\" role=\"menuitem\" class=\"about-geo\">Geological Significance</a>\n</div>\n<div class=\"dalquest-history\">\n\t<!-- <img src=\"/images/ddrs/27.jpg\" class=\"img-responsive about-image\" alt=\"Responsive image\"> -->\t\n</div>\n<div class=\"dalquest-bio\">\n\t\n</div>\n<div class=\"dalquest-geo\">\n\t\n</div>";
 
 /***/ }
 /******/ ]);

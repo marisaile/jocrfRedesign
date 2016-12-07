@@ -474,10 +474,6 @@ body.photo-search-body .search-container .search-results.masonry .photo {
   width: 100%;
 }
 
-body.photo-search-body .search-container .search-results.masonry .photo img.img-responsive {
-  box-shadow: 1px 1px 5px 2px rgba(10, 10, 10, 0.8);
-}
-
 .writing-prompts {
   margin: 0;
   background-color: #720eff;
@@ -530,168 +526,89 @@ body.photo-search-body .search-container .search-results.masonry .photo img.img-
   z-index: 1;
 }
 
-.dalquest-body {
+body, html {
+  height: 100%;
   margin: 0;
-  background-color: #0d5b7a;
-  /* #094157*/
+  font: 400 20px/1.8 "Lato", sans-serif;
+  color: #777;
 }
 
-.dalquest-body sidebar.dalquest-menu {
-  position: fixed;
-  top: 0;
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  position: relative;
+  /*opacity: 0.95;*/
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-1 {
+  background-image: url("/images/frenzel_reunion/IMG_2186.jpg");
+  min-height: 110%;
+}
+
+.bgimg-2 {
+  background-image: url("/images/frenzel_reunion/siblings.jpg");
+  min-height: 90%;
+}
+
+.bgimg-3 {
+  background-image: url("/images/frenzel_reunion/cousins.jpg");
+  min-height: 90%;
+}
+
+.bgimg-4 {
+  background-image: url("/images/frenzel_reunion/grand_cousins.jpg");
+  min-height: 100%;
+}
+
+.caption {
+  position: absolute;
   left: 0;
-  width: 15%;
-  height: 100%;
-  background-color: #BAB8B3;
-  box-shadow: 1px 2px 15px 5px rgba(0, 25, 35, 0.4);
-  z-index: 1;
-}
-
-.dalquest-body sidebar.dalquest-menu a {
-  position: relative;
-  display: block;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
-  color: #fff;
-  text-decoration: none;
-  top: 35%;
-  left: 25px;
-  margin-bottom: 25px;
-  transition: transform .5s;
-}
-
-.dalquest-body sidebar.dalquest-menu a:hover {
-  transform: translateX(20px);
-  transition: transform .5s;
-  text-decoration: none;
-}
-
-.dalquest-body sidebar.dalquest-menu a:active {
-  transform: translateX(20px);
-}
-
-.dalquest-body main.dalquest-main {
-  position: relative;
-  top: 0;
-  left: 10%;
-  width: 98%;
-}
-
-.dalquest-body main.dalquest-main section.dalquest-landing {
-  position: relative;
-  display: block;
-}
-
-.dalquest-body main.dalquest-main section.dalquest-landing h1 {
-  position: relative;
-  top: 20px;
+  top: 10%;
+  width: 100%;
   text-align: center;
-  font-family: 'Josefin Slab', serif;
-  font-size: 50px;
-  color: #BAB8B3;
 }
 
-.dalquest-body main.dalquest-main section.dalquest-landing img.ddrs-landscape {
-  position: relative;
-  display: block;
-  margin: auto;
-  opacity: 1.2;
-  /*box-shadow: 1px 2px 15px 5px rgba(0, 25, 35, 0.8);*/
-  z-index: -1;
+.caption span.border {
+  background-color: #ddd;
+  color: #282e34;
+  padding: 50px 80px;
+  font-size: 25px;
+  letter-spacing: 7px;
 }
 
-.dalquest-body main.dalquest-main section.dalquest-about {
-  position: relative;
-  display: block;
-  height: 100%;
-  padding: 20px;
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #ddd;
 }
 
-.dalquest-body main.dalquest-main section.dalquest-about .about-landing {
-  position: relative;
-  top: 100px;
-  background-color: #BAB8B3;
-  width: 95%;
+p {
+  font-size: 25px;
+  margin-top: 10px;
+  letter-spacing: 3px;
 }
 
-.dalquest-body main.dalquest-main section.dalquest-about .about-landing h2.dalquest-mission {
+.masonry {
   position: relative;
   display: block;
   top: 50px;
-  left: 6%;
-  font-family: 'Josefin Slab', serif;
-  font-size: 40px;
-  color: #011a27;
+  column-count: 4;
+  column-gap: 2em;
 }
 
-.dalquest-body main.dalquest-main section.dalquest-about .about-landing p.ddrs-mission-statement {
-  position: relative;
-  display: block;
-  top: 40px;
-  left: 6%;
-  font-family: 'Josefin Slab', serif;
-  font-size: 25px;
-  color: #011a27;
-}
-
-.dalquest-body main.dalquest-main section.dalquest-about .about-landing .ddrs-purchase {
-  position: relative;
+.masonry .item {
+  background-color: #eee;
   display: inline-block;
-  top: 75px;
-  left: 6%;
-  width: 37%;
-  height: 100%;
-  margin-right: 5%;
-  margin-bottom: 100px;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
-  color: #011a27;
-}
-
-.dalquest-body main.dalquest-main section.dalquest-about .about-landing .ddrs-naturalist {
-  position: relative;
-  display: inline-block;
-  left: 3%;
-  width: 35%;
-  height: 100%;
-  margin-left: 10%;
-  margin-bottom: 100px;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
-  color: #011a27;
-}
-
-.dalquest-body main.dalquest-main section.dalquest-about .about-landing h4.about-sections {
-  position: relative;
-  display: inline-block;
-  left: 20%;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 30px;
-  color: #fff;
-  margin-right: 100px;
-  margin-bottom: 25px;
-}
-
-.dalquest-body main.dalquest-main section.dalquest-about .about-landing a {
-  position: relative;
-  display: inline-block;
-  left: 30%;
-  margin-right: 50px;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
-  color: #fff;
-  border-top: 2px solid #fff;
-  padding-top: 2px;
-  margin-bottom: 25px;
-}
-
-.dalquest-body main.dalquest-main section.dalquest-about .about-landing a:hover {
-  text-decoration: none;
+  margin: 0 0 2em;
+  width: 100%;
 }
 
 body.joc-body {
   margin: 0;
-  background-image: gradient(#fafafa);
+  background-color: #3a5199;
 }
 
 body.joc-body section.landing-container .sidebar.col-md-3 {
@@ -737,16 +654,6 @@ body.joc-body section.landing-container .sidebar.col-md-3 a.scheduler-nav:hover,
   text-decoration: none;
 }
 
-body.joc-body section.landing-container .sidebar.col-md-3 .joc-quote {
-  position: relative;
-  display: block;
-  width: 90%;
-  margin: 30vh auto;
-  font-family: 'Kaushan Script', cursive;
-  font-size: 2.5vmin;
-  color: #fafafa;
-}
-
 body.joc-body section.landing-container .sidebar.col-md-3 .mini-nav {
   position: relative;
   top: 65vh;
@@ -766,10 +673,10 @@ body.joc-body .landing-content.col-md-9 {
 
 body.joc-body .landing-content.col-md-9 .about-container.row {
   position: relative;
-  top: 15vh;
-  left: 15%;
+  top: 60vh;
+  left: 20%;
   font-family: 'Lato';
-  font-size: 3vmin;
+  font-size: 2.5vmin;
   color: #202020;
 }
 
@@ -780,32 +687,40 @@ body.joc-body .landing-content.col-md-9 .about-container.row .about2 {
 
 body.joc-body .landing-content.col-md-9 .aptitudes-container.row {
   position: relative;
-  top: 30vh;
+  top: -10vh;
+  left: 22%;
   height: 30vh;
-  width: 100%;
-  font-family: 'Lato', sans-serif;
-  font-size: 2.5vmin;
+  width: 90%;
+  font-family: 'Kaushan Script', sans-serif;
+  font-size: 2.7vmin;
   color: #202020;
-}
+  text-align: center;
+  /*.joc-quote {
+        position: relative;
+        display: block;
+        width: 90%;
+        margin: 30vh auto;
+        font-family: 'Kaushan Script', cursive;
+        font-size: 2.5vmin;
+        color: #fafafa;
+      }*/
+  /*.aptitudes-are.col-md-6 {
+        position: relative;
+        left: 15%;
+      }
+      .testing-is.col-md-6 {
+        position: relative;
+        left: 30%;
+        perspective: 100px;
 
-body.joc-body .landing-content.col-md-9 .aptitudes-container.row .aptitudes-are.col-md-6 {
-  position: relative;
-  left: 15%;
-}
-
-body.joc-body .landing-content.col-md-9 .aptitudes-container.row .testing-is.col-md-6 {
-  position: relative;
-  left: 30%;
-  perspective: 100px;
-}
-
-body.joc-body .landing-content.col-md-9 .aptitudes-container.row .testing-is.col-md-6 a.sample-test-nav {
-  color: #3a5199;
-}
-
-body.joc-body .landing-content.col-md-9 .aptitudes-container.row .testing-is.col-md-6 a.sample-test-nav:hover, body.joc-body .landing-content.col-md-9 .aptitudes-container.row .testing-is.col-md-6 a.sample-test-nav:active, body.joc-body .landing-content.col-md-9 .aptitudes-container.row .testing-is.col-md-6 a.sample-test-nav:visited {
-  text-decoration: none;
-  color: #3a1599;
+        a.sample-test-nav {
+          color: #3a5199;
+        }
+        a.sample-test-nav:hover, a.sample-test-nav:active, a.sample-test-nav:visited {
+          text-decoration: none;
+          color: #3a1599;
+        }
+      }*/
 }
 
 body.joc-body .grow {
