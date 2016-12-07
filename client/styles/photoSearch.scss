@@ -1,60 +1,63 @@
-.photo-search-title {
-  position: relative;
-  left: 125px;
-  top: 25px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 25px;
-  color: #0A1A26;
-}
-.photo-search {
-  position: relative;
-  top: 50px;
-  left: 125px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  color: #0A1A26;
-}
-input.search-photo {
-  position: relative;
-  display: inline-block;
-  top: 60px;
-  left: 125px;
-  width: 350px;
-  background-color: #fff;
-}
-.btn.search-photos {
-  position: relative;
-  display: inline-block;
-  width: 100px;
-  top: 60px;
-  left: 150px;
-  background-color: #ff606e;
-  font-family: 'Raleway', sans-serif;
-  font-size: 16px;
-  color: #fff;
-}
-.btn.search-photos:focus {
-  outline: none;
-}
+body.photo-search-body {
+  margin: 0;
+  background-color: #303030;
 
-.search-results {
-  position: relative;
-  display: block;
-  top: 80px;
-  left: 150px;
-  .photo {
+  h1.photo-search-title {
     position: relative;
-    width:250px;
-    height: 250px;
-    margin: auto;
-    margin: 10px;
-    overflow: hidden;
-    display: inline-block;
-    
-    img.img-responsive {
-      width: 100%;
-      height: inherit;
-    }
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 6vmin;
+    text-align: center;
+    color: #f5f5f5; 
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, .7);
   }
+  .search-container {
+    position: relative;
+    display: block;
+    width: 90%;
+    margin: auto;
+
+    input.search-photo {
+      position: relative;
+      display: inline-block;
+      margin: 5vh auto;
+      width: 30vw;
+      background-color: #f5f5f5;
+    }
+    .no-border {
+      border: 0;
+      box-shadow: none;
+    }
+    .btn.search-photos {
+      position: relative;
+      display: inline-block;
+      background-color: #17bebb;
+      font-family: 'Raleway', sans-serif;
+      font-size: 2vmin;
+      color: #f5f5f5;
+      text-shadow: 1px 2px 1px rgba(0, 0, 0, .6);
+    }
+    .btn.search-photos:focus {
+      outline-color: #303030;
+    }
+
+    .search-results.masonry {
+      position: relative;
+      display: block;
+      column-count: 4;
+      column-gap: 1em;
+
+      .photo {
+        background-color: #eee;
+        display: inline-block;
+        margin: 0 0 1em;
+        width: 100%;
+
+        img.img-responsive {
+          box-shadow: 1px 1px 5px 2px rgba(10, 10, 10, 0.8);
+        }
+      }
+    }
+  }  
 }
 

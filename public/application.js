@@ -10004,7 +10004,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"landing-override-bootstrap":"landing-override-bootstrap","portfolio-landing":"portfolio-landing","header-logo":"header-logo","marisaile":"marisaile","horizontal-line":"horizontal-line","sections":"sections","nav-sections":"nav-sections","portfolio-bio":"portfolio-bio","bio-about":"bio-about","bio-content":"bio-content","portfolio-contact":"portfolio-contact","contact-links":"contact-links","contact":"contact","portfolio-work":"portfolio-work","work-main":"work-main","work-title":"work-title","work-pages-nav":"work-pages-nav","grow":"grow","back-to-top":"back-to-top","page-up":"page-up","breadcrumb":"breadcrumb","body-todos":"body-todos","todo-title":"todo-title","todo-container":"todo-container","form-control":"form-control","inuput-name":"inuput-name","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","btn":"btn","btn-add-todo":"btn-add-todo","funny-squares":"funny-squares","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","photo-search-title":"photo-search-title","photo-search":"photo-search","search-photo":"search-photo","search-photos":"search-photos","search-results":"search-results","photo":"photo","img-responsive":"img-responsive","writing-prompts":"writing-prompts","writing-prompts-heading":"writing-prompts-heading","writing-prompts-button":"writing-prompts-button","writing-prompt-container":"writing-prompt-container","dalquest-body":"dalquest-body","dalquest-menu":"dalquest-menu","dalquest-main":"dalquest-main","dalquest-landing":"dalquest-landing","ddrs-landscape":"ddrs-landscape","dalquest-about":"dalquest-about","about-landing":"about-landing","dalquest-mission":"dalquest-mission","ddrs-mission-statement":"ddrs-mission-statement","ddrs-purchase":"ddrs-purchase","ddrs-naturalist":"ddrs-naturalist","about-sections":"about-sections","joc2012-header":"joc2012-header","joc2012-subheader":"joc2012-subheader","slideshow":"slideshow","breakout-header":"breakout-header","myCanvas":"myCanvas","start-game":"start-game","win-message":"win-message","you-won":"you-won","resume-page":"resume-page"};
+	module.exports = {"landing-override-bootstrap":"landing-override-bootstrap","portfolio-landing":"portfolio-landing","header-logo":"header-logo","marisaile":"marisaile","horizontal-line":"horizontal-line","sections":"sections","nav-sections":"nav-sections","portfolio-contact":"portfolio-contact","contact-links":"contact-links","contact":"contact","portfolio-bio":"portfolio-bio","bio-about":"bio-about","bio-content":"bio-content","portfolio-work":"portfolio-work","work-main":"work-main","work-title":"work-title","work-pages-nav":"work-pages-nav","grow":"grow","back-to-top":"back-to-top","page-up":"page-up","breadcrumb":"breadcrumb","body-todos":"body-todos","todo-title":"todo-title","todo-container":"todo-container","inuput-name":"inuput-name","title-edit-input":"title-edit-input","form-control":"form-control","add-todo-container":"add-todo-container","col-xs-10":"col-xs-10","col-xs-2":"col-xs-2","btn":"btn","btn-add-todo":"btn-add-todo","funny-squares":"funny-squares","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","photo-search-body":"photo-search-body","photo-search-title":"photo-search-title","search-container":"search-container","search-photo":"search-photo","no-border":"no-border","search-photos":"search-photos","search-results":"search-results","masonry":"masonry","photo":"photo","img-responsive":"img-responsive","writing-prompts":"writing-prompts","writing-prompts-heading":"writing-prompts-heading","writing-prompts-button":"writing-prompts-button","writing-prompt-container":"writing-prompt-container","dalquest-body":"dalquest-body","dalquest-menu":"dalquest-menu","dalquest-main":"dalquest-main","dalquest-landing":"dalquest-landing","ddrs-landscape":"ddrs-landscape","dalquest-about":"dalquest-about","about-landing":"about-landing","dalquest-mission":"dalquest-mission","ddrs-mission-statement":"ddrs-mission-statement","ddrs-purchase":"ddrs-purchase","ddrs-naturalist":"ddrs-naturalist","about-sections":"about-sections","joc-body":"joc-body","landing-container":"landing-container","sidebar":"sidebar","col-md-3":"col-md-3","joc-title":"joc-title","joc-tag":"joc-tag","scheduler-nav":"scheduler-nav","joc-quote":"joc-quote","mini-nav":"mini-nav","landing-content":"landing-content","col-md-9":"col-md-9","about-container":"about-container","row":"row","about2":"about2","aptitudes-container":"aptitudes-container","aptitudes-are":"aptitudes-are","col-md-6":"col-md-6","testing-is":"testing-is","sample-test-nav":"sample-test-nav","breakout-header":"breakout-header","myCanvas":"myCanvas","start-game":"start-game","win-message":"win-message","you-won":"you-won","new-book-container":"new-book-container","form-label":"form-label","book-list-container":"book-list-container","btn-default":"btn-default","btn-add-book":"btn-add-book"};
 
 /***/ },
 /* 3 */,
@@ -10069,7 +10069,7 @@
 /* 7 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<section class=\"portfolio-landing\">  \n  <div class=\"header-logo\">\n    <a href=\"\" class=\"marisaile\" role=\"menuitem\">Marisaile<!-- <span>Junior Frontend Developer</span> --></a>\n  </div>    \n  <hr class=\"horizontal-line\">\n  <div class=\"sections\">\n    <a href=\"#\" class=\"nav-sections bio\">Bio</a>\n    <a href=\"#\" class=\"nav-sections projects\">Projects</a>\n    <a href=\"/images/junior_dev_resume.pdf\" target=\"new\" class=\"nav-sections resume\">Resume</a>\n  </div>\n</section>\n<section class=\"portfolio-bio\">\n  <h1 class=\"bio-about\">About Me</h1>\n  <p class=\"bio-content\">\n    My name is Lisa Cook, and I recently completed a 12-week Javascript bootcamp at Davinci Coders in Westminster, CO. I've used the skills I acquired to build a specialized stopwatch application for my current company, help out with updating the NAMI Denver website, and pursue some of my own personal projects. \n</section>\n<section class=\"portfolio-contact\">\n  <div class=\"contact-links\">\n    <a href=\"https://github.com/marisaile\" target=\"new\" class=\"contact\">github</a>\n    <a href=\"http://codepen.io/marisaile/\" target=\"new\" class=\"contact\">codepen</a>\n    <a href=\"https://www.linkedin.com/in/lisa-cook-93ba2115?trk=hp-identity-name\" target=\"new\" class=\"contact\">linkedin</a>\n  </div>\n</section>\n<section class=\"portfolio-work\">\n  <!-- <div class=\"work-header\">\n    <a href=\"#\" class=\"header-marisaile\" role=\"menuitem\">Marisaile</a>\n    <a href=\"/images/junior_dev_resume.pdf\" target=\"new\" class=\"header-nav-sections resume\">Resume</a>\n  </div>   -->\n  <div class=\"work-main\">\n    <h1 class=\"work-title\">Some things I've made...</h1>\n    <div class=\"work-pages-nav\">\n      <a href=\"/pages/breakout.html\" class=\"breakout grow\">Simple 2D Breakout Game</a>\n      <a href=\"/pages/writingPrompts.html\" class=\"writing grow\">Writing Prompts Generator</a>\n      <a href=\"/pages/todo.html\" class=\"todo grow\">Todo App</a>\n      <a href=\"/pages/joc2012.html\" class=\"joc grow\">Johnson O'Connor Work</a> \n    </div>\n    <a href=\"#\" class=\"back-to-top\">\n      <i class=\"fa fa-angle-up page-up\" style=\"font-size:24px\"></i> back to top\n    </a> \n  </div>\n</section>\n\n\n\n     \n<!-- <section class=\"portfolio-work\">  \n  <div class=\"work-main\">\n    <h1 class=\"work-title\">My Work</h1>\n    <div class=\"item breakout\">Breakout Game</div>\n    <div class=\"item funny-squares\">Funny Squares</div>\n    <div class=\"item joc-2012\">Johnson O'Connor Website</div>\n    <div class=\"item joc-timer\">Johnson O'Connor Stopwatch App</div>\n    <div class=\"item todo\">Todo App</div>\n    <div class=\"item writing-prompts\">Writing Prompts Generator</div>\n  </div>\n</section> -->";
+	module.exports = "\n<section class=\"portfolio-landing\">  \n  <div class=\"header-logo\">\n    <a href=\"\" class=\"marisaile\" role=\"menuitem\">Marisaile<!-- <span>Junior Frontend Developer</span> --></a>\n  </div>    \n  <hr class=\"horizontal-line\">\n  <div class=\"sections\">\n    <a href=\"#\" class=\"nav-sections bio\">Bio</a>\n    <a href=\"#\" class=\"nav-sections projects\">Projects</a>\n    <a href=\"/images/junior_dev_resume.pdf\" target=\"new\" class=\"nav-sections resume\">Resume</a>\n  </div>\n</section>\n<section class=\"portfolio-bio\">\n  <h1 class=\"bio-about\">About Me</h1>\n  <p class=\"bio-content\">\n    My name is Lisa Cook, and I recently completed a 12-week Javascript bootcamp at Davinci Coders in Westminster, CO. I've used the skills I acquired to build a specialized stopwatch application for my current company, help out with updating the NAMI Denver website, and pursue some of my own personal projects. \n</section>\n<section class=\"portfolio-contact\">\n  <div class=\"contact-links\">\n    <a href=\"https://github.com/marisaile\" target=\"new\" class=\"contact\">github</a>\n    <a href=\"http://codepen.io/marisaile/\" target=\"new\" class=\"contact\">codepen</a>\n    <a href=\"https://www.linkedin.com/in/lisa-cook-93ba2115?trk=hp-identity-name\" target=\"new\" class=\"contact\">linkedin</a>\n  </div>\n</section>\n<section class=\"portfolio-work\">\n  <div class=\"work-main\">\n    <h1 class=\"work-title\">Some things I've made...</h1>\n    <div class=\"work-pages-nav\">\n      <a href=\"/pages/photoSearch.html\" class=\"photo-search grow\">Photo Search</a>\n      <a href=\"/pages/writingPrompts.html\" class=\"writing grow\">Writing Prompts Generator</a>\n      <a href=\"/pages/todo.html\" class=\"todo grow\">Todo App</a>\n      <a href=\"/pages/joc2012.html\" class=\"joc grow\">Johnson O'Connor Work</a> \n    </div>\n    <a href=\"#\" class=\"back-to-top\">\n      <i class=\"fa fa-angle-up page-up\" style=\"font-size:24px\"></i> back to top\n    </a> \n  </div>\n</section>\n\n";
 
 /***/ },
 /* 8 */
@@ -41125,6 +41125,7 @@
 	var _templatesFlickrImageHtml2 = _interopRequireDefault(_templatesFlickrImageHtml);
 	
 	var compiledTemplate = _handlebars2['default'].compile(_templatesFlickrImageHtml2['default']);
+	
 	var app = {
 	  init: function init() {
 	    app.render();
@@ -41158,7 +41159,7 @@
 	        method: 'flickr.photos.search',
 	        api_key: '731717db25329eb6aa65703cb6b71970',
 	        format: 'json',
-	        per_page: 10
+	        per_page: 15
 	      },
 	      complete: function complete(response) {
 	        var text = response.responseText;
@@ -41168,18 +41169,18 @@
 	      }
 	    });
 	  },
-	  imagePreloader: function imagePreloader() {
-	    (0, _jquery2['default'])('img').each(function ($oneImage) {
-	      var source = $oneImage.attr('data-src');
-	      var $newImage = (0, _jquery2['default'])('<img>');
-	      $newImage.on('load', function () {
-	        $newImage.css('opacity', 0);
-	        $oneImage.replaceWith($newImage);
-	        $newImage.fadeIn();
-	      });
-	      $newImage.attr('src', source);
-	    });
-	  },
+	  // imagePreloader: function(){
+	  //   $('img').each(function($oneImage){
+	  //     var source = $oneImage.attr('data-src');
+	  //     var $newImage = $('<img>');
+	  //     $newImage.on('load', function(){
+	  //       $newImage.css('opacity', 0);
+	  //       $oneImage.replaceWith($newImage);
+	  //       $newImage.fadeIn();
+	  //     });
+	  //     $newImage.attr('src', source);
+	  //   });
+	  // },
 	  renderResults: function renderResults(data) {
 	    var html = '';
 	    var dataArray = data.photos.photo;

@@ -1,9 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);@import url(https://fonts.googleapis.com/css?family=Open+Sans);@import url(https://fonts.googleapis.com/css?family=Poiret+One);@import url(https://fonts.googleapis.com/css?family=Ubuntu);@import url(https://fonts.googleapis.com/css?family=Righteous);@import url(https://fonts.googleapis.com/css?family=Syncopate);@import url(https://fonts.googleapis.com/css?family=Federo);body.landing-override-bootstrap {
+@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Open+Sans);@import url(https://fonts.googleapis.com/css?family=Poiret+One);@import url(https://fonts.googleapis.com/css?family=Lato);@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);@import url(https://fonts.googleapis.com/css?family=Ubuntu);@import url(https://fonts.googleapis.com/css?family=Righteous);@import url(https://fonts.googleapis.com/css?family=Syncopate);@import url(https://fonts.googleapis.com/css?family=Federo);body.landing-override-bootstrap {
   margin: 0;
-  background-color: #FAFAFA;
+  background-color: #F2F2F2;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 780px) {
   body.landing-override-bootstrap section.portfolio-landing {
     position: relative;
     width: 100%;
@@ -20,7 +20,7 @@
   body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile, body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:hover, body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:active, body.landing-override-bootstrap section.portfolio-landing .header-logo a.marisaile:visited {
     font-family: 'Montez', cursive;
     font-size: 8vmin;
-    color: #fafafa;
+    color: #F2F2F2;
     text-decoration: none;
   }
   body.landing-override-bootstrap section.portfolio-landing .horizontal-line {
@@ -28,7 +28,7 @@
     display: block;
     width: 810px;
     top: 36vh;
-    border-top: 2px solid #fafafa;
+    border-top: 2px solid #F2F2F2;
   }
   body.landing-override-bootstrap section.portfolio-landing .sections {
     position: relative;
@@ -40,14 +40,41 @@
     position: relative;
     font-family: 'Raleway', sans-serif;
     font-size: 2.5vmin;
-    color: #fafafa;
+    color: #F2F2F2;
     margin: 2vw;
     font-weight: 500;
     text-decoration: none;
   }
+  body.landing-override-bootstrap section.portfolio-contact {
+    position: relative;
+    display: block;
+    height: 15vh;
+    background-color: #2e282a;
+  }
+  body.landing-override-bootstrap section.portfolio-contact .contact-links {
+    position: relative;
+    display: block;
+    top: 7vh;
+    left: 70vw;
+  }
+  body.landing-override-bootstrap section.portfolio-contact .contact-links a.contact {
+    position: relative;
+    display: inline-block;
+    margin-right: 2.5vw;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5vmin;
+    color: #F2F2F2;
+  }
+  body.landing-override-bootstrap section.portfolio-contact .contact-links a.contact:hover {
+    text-decoration: none;
+    color: #17bebb;
+  }
+  body.landing-override-bootstrap section.portfolio-contact .contact-links a.contact:active, body.landing-override-bootstrap section.portfolio-contact .contact-links a.contact:visited {
+    text-decoration: none;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   body.landing-override-bootstrap section.portfolio-landing {
     position: relative;
     width: 100%;
@@ -65,8 +92,8 @@
     top: 20vh;
     text-align: center;
     font-family: 'Montez', cursive;
-    font-size: 8vmin;
-    color: #FAFAFA;
+    font-size: 9vmin;
+    color: #F2F2F2;
   }
   body.landing-override-bootstrap section.portfolio-landing .horizontal-line {
     display: none;
@@ -79,10 +106,37 @@
   body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections, body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:hover, body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:active, body.landing-override-bootstrap section.portfolio-landing .sections a.nav-sections:visited {
     display: block;
     font-family: 'Raleway', sans-serif;
-    font-size: 3vmin;
-    color: #FAFAFA;
+    font-size: 4vmin;
+    color: #F2F2F2;
     margin: 5vh;
     text-align: center;
+    text-decoration: none;
+  }
+  body.landing-override-bootstrap section.portfolio-contact {
+    position: relative;
+    display: block;
+    height: 15vh;
+    background-color: #2e282a;
+  }
+  body.landing-override-bootstrap section.portfolio-contact .contact-links {
+    position: relative;
+    display: block;
+    top: 7vh;
+    left: 60vw;
+  }
+  body.landing-override-bootstrap section.portfolio-contact .contact-links a.contact {
+    position: relative;
+    display: inline-block;
+    margin-right: 2.5vw;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5vmin;
+    color: #F2F2F2;
+  }
+  body.landing-override-bootstrap section.portfolio-contact .contact-links a.contact:hover {
+    text-decoration: none;
+    color: #17bebb;
+  }
+  body.landing-override-bootstrap section.portfolio-contact .contact-links a.contact:active, body.landing-override-bootstrap section.portfolio-contact .contact-links a.contact:visited {
     text-decoration: none;
   }
 }
@@ -93,7 +147,7 @@ body.landing-override-bootstrap section.portfolio-bio {
   width: 90%;
   height: 85vh;
   margin: auto;
-  background-color: #FAFAFA;
+  background-color: #F2F2F2;
 }
 
 body.landing-override-bootstrap section.portfolio-bio h1.bio-about {
@@ -117,81 +171,11 @@ body.landing-override-bootstrap section.portfolio-bio p.bio-content {
   color: #2e282a;
 }
 
-body.landing-override-bootstrap section.portfolio-contact {
-  position: relative;
-  display: block;
-  height: 15vh;
-  background-color: #2e282a;
-}
-
-body.landing-override-bootstrap section.portfolio-contact .contact-links {
-  position: relative;
-  display: block;
-  top: 7vh;
-  left: 70vw;
-}
-
-body.landing-override-bootstrap section.portfolio-contact .contact-links a.contact {
-  position: relative;
-  display: inline-block;
-  margin-right: 2.5vw;
-  font-family: 'Raleway', sans-serif;
-  font-size: 2.5vmin;
-  color: #FAFAFA;
-}
-
-body.landing-override-bootstrap section.portfolio-contact .contact-links a.contact:hover {
-  text-decoration: none;
-  color: #17bebb;
-}
-
-body.landing-override-bootstrap section.portfolio-contact .contact-links a.contact:active, body.landing-override-bootstrap section.portfolio-contact .contact-links a.contact:visited {
-  text-decoration: none;
-}
-
 body.landing-override-bootstrap section.portfolio-work {
   position: relative;
   display: block;
   width: 100%;
-  background-color: #FAFAFA;
-  /*top: 100000px;*/
-  /*.work-header {
-      position: relative;
-      top: 0;
-      left: 0;
-      margin: 0;
-      width: 100%;
-      height: 20vh;
-      background-color: #17bebb;
-      box-shadow: 1px 1px 5px 2px rgba(46, 40, 42, 0.6);
-    }
-    a.header-marisaile {
-      position: relative;
-      display: inline-block;
-      top: 13vh;
-      left: 5vw;
-      font-family: 'Montez', cursive;
-      font-size: 6vmin;
-      color: #FAFAFA;
-    }
-    a.header-marisaile:hover {
-      text-decoration: none;
-    }
-    a.resume {
-      position: relative;
-      display: inline-block;
-      top: 13vh;
-      left: 75vw;
-      font-family: 'Raleway', sans-serif;
-      font-size: 2.5vmin;
-      color: #FAFAFA;
-    }
-    a.resume:hover {
-      text-decoration: none;
-    }
-    a.resume:active {
-      text-decoration: none;
-    }*/
+  background-color: #F2F2F2;
 }
 
 body.landing-override-bootstrap section.portfolio-work .work-main {
@@ -271,7 +255,7 @@ body.landing-override-bootstrap section.portfolio-work .work-main .page-up:hover
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   font-size: 14px;
-  color: #fafafa;
+  color: #F2F2F2;
   cursor: pointer;
   opacity: .2;
   color: #010101;
@@ -279,52 +263,65 @@ body.landing-override-bootstrap section.portfolio-work .work-main .page-up:hover
 
 .body-todos {
   margin: 0;
-  background-color: #fafafa;
+  background-color: #CFCDC5;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .body-todos h1#todo-title {
   position: relative;
-  top: 10vh;
-  font-family: 'Raleway', sans-serif;
-  font-size: 30px;
+  top: 5vh;
+  font-size: 8vmin;
   color: #ef3e36;
-  font-weight: 700;
+  font-weight: bold;
   text-align: center;
-  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(28, 0, 2, 0.4);
 }
 
 .body-todos .todo-container {
-  margin: 5px auto;
-  margin-top: 125px;
-  width: 500px;
-  box-shadow: 1px 1px 5px 1px rgba(40, 46, 42, 0.6);
+  margin: 10vh auto;
+  width: 40%;
+  box-shadow: 1px 1px 2px 1px rgba(40, 46, 42, 0.5);
   padding: 30px;
-  background-color: #fafafa;
+  background-color: #F2F2F2;
+  font-size: 2.5vmin;
 }
 
-.body-todos .todo-container .form-control.inuput-name {
+.body-todos .todo-container .inuput-name {
   background-color: #2e282a;
+  border: #2e282a;
+}
+
+.body-todos .todo-container input.title-edit-input {
+  background-color: #F2F2F2;
+}
+
+.body-todos .todo-container .form-control {
+  border: 0;
+  box-shadow: none;
 }
 
 .body-todos .todo-container .add-todo-container {
   margin-bottom: 10px;
 }
 
-.body-todos .todo-container .add-todo-container .col-md-10 {
+.body-todos .todo-container .add-todo-container .col-xs-10 {
   padding-left: 0;
-  font-family: 'Raleway', sans-serif;
   font-size: 18px;
   color: #2e282a;
 }
 
-.body-todos .todo-container .add-todo-container .col-md-2 {
+.body-todos .todo-container .add-todo-container .col-xs-2 {
   padding-right: 0;
   text-align: right;
 }
 
-.body-todos .todo-container .add-todo-container .col-md-2 .btn.btn-add-todo {
+.body-todos .todo-container .add-todo-container .col-xs-2 .btn.btn-add-todo {
   background-color: #17bebb;
-  color: #fafafa;
+  color: #fff;
+}
+
+.body-todos .todo-container .add-todo-container .col-xs-2 .btn.btn-add-todo:focus {
+  outline: none;
 }
 
 h1.funny-squares {
@@ -414,69 +411,71 @@ h1.funny-squares {
   transition: transform .5s;
 }
 
-.photo-search-title {
-  position: relative;
-  left: 125px;
-  top: 25px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 25px;
-  color: #0A1A26;
+body.photo-search-body {
+  margin: 0;
+  background-color: #303030;
 }
 
-.photo-search {
-  position: relative;
-  top: 50px;
-  left: 125px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  color: #0A1A26;
-}
-
-input.search-photo {
-  position: relative;
-  display: inline-block;
-  top: 60px;
-  left: 125px;
-  width: 350px;
-  background-color: #fff;
-}
-
-.btn.search-photos {
-  position: relative;
-  display: inline-block;
-  width: 100px;
-  top: 60px;
-  left: 150px;
-  background-color: #ff606e;
-  font-family: 'Raleway', sans-serif;
-  font-size: 16px;
-  color: #fff;
-}
-
-.btn.search-photos:focus {
-  outline: none;
-}
-
-.search-results {
+body.photo-search-body h1.photo-search-title {
   position: relative;
   display: block;
-  top: 80px;
-  left: 150px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 6vmin;
+  text-align: center;
+  color: #f5f5f5;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.7);
 }
 
-.search-results .photo {
+body.photo-search-body .search-container {
   position: relative;
-  width: 250px;
-  height: 250px;
+  display: block;
+  width: 90%;
   margin: auto;
-  margin: 10px;
-  overflow: hidden;
-  display: inline-block;
 }
 
-.search-results .photo img.img-responsive {
+body.photo-search-body .search-container input.search-photo {
+  position: relative;
+  display: inline-block;
+  margin: 5vh auto;
+  width: 30vw;
+  background-color: #f5f5f5;
+}
+
+body.photo-search-body .search-container .no-border {
+  border: 0;
+  box-shadow: none;
+}
+
+body.photo-search-body .search-container .btn.search-photos {
+  position: relative;
+  display: inline-block;
+  background-color: #17bebb;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2vmin;
+  color: #f5f5f5;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.6);
+}
+
+body.photo-search-body .search-container .btn.search-photos:focus {
+  outline-color: #303030;
+}
+
+body.photo-search-body .search-container .search-results.masonry {
+  position: relative;
+  display: block;
+  column-count: 4;
+  column-gap: 1em;
+}
+
+body.photo-search-body .search-container .search-results.masonry .photo {
+  background-color: #eee;
+  display: inline-block;
+  margin: 0 0 1em;
   width: 100%;
-  height: inherit;
+}
+
+body.photo-search-body .search-container .search-results.masonry .photo img.img-responsive {
+  box-shadow: 1px 1px 5px 2px rgba(10, 10, 10, 0.8);
 }
 
 .writing-prompts {
@@ -488,7 +487,7 @@ input.search-photo {
   position: relative;
   display: block;
   font-family: 'Open Sans', sans-serif;
-  font-size: 50px;
+  font-size: 7vmin;
   font-weight: 800;
   top: 15vh;
   color: #fff;
@@ -525,7 +524,7 @@ input.search-photo {
   width: 50vw;
   margin: -10vh auto;
   font-family: 'Poiret One', sans-serif;
-  font-size: 30px;
+  font-size: 5vmin;
   color: #fff;
   text-align: center;
   z-index: 1;
@@ -690,43 +689,179 @@ input.search-photo {
   text-decoration: none;
 }
 
-h1.joc2012-header {
-  font-family: 'Raleway', sans-serif;
-  font-size: 25px;
+body.joc-body {
+  margin: 0;
+  background-image: gradient(#fafafa);
+}
+
+body.joc-body section.landing-container .sidebar.col-md-3 {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 2%;
+  background-color: #3a5199;
+  box-shadow: 1px 1px 4px rgba(30, 30, 30, 0.7);
+}
+
+body.joc-body section.landing-container .sidebar.col-md-3 h1.joc-title {
+  position: relative;
+  top: 25vh;
+  font-family: 'Taviraj', serif;
+  font-size: 6.5vmin;
+  color: #fafafa;
   text-align: center;
-  color: #190338;
+  font-weight: bold;
 }
 
-h2.joc2012-subheader {
+body.joc-body section.landing-container .sidebar.col-md-3 h2.joc-tag {
   position: relative;
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  width: 40%;
-  left: 2%;
+  top: 25vh;
+  font-family: 'Lato', sans-serif;
+  font-size: 2.2vmin;
+  text-align: center;
+  color: #fafafa;
 }
 
-#slideshow {
+body.joc-body section.landing-container .sidebar.col-md-3 a.scheduler-nav {
   position: relative;
-  left: 2%;
-  width: 600px;
-  height: 450px;
-  padding: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  top: -15vh;
+  left: -1vw;
+  font-family: 'Lato', sans-serif;
+  font-size: 2.2vmin;
+  color: #fafafa;
 }
 
-#slideshow > div {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
+body.joc-body section.landing-container .sidebar.col-md-3 a.scheduler-nav:hover, body.joc-body section.landing-container .sidebar.col-md-3 a.scheduler-nav:active, body.joc-body section.landing-container .sidebar.col-md-3 a.scheduler-nav:visited {
+  text-decoration: none;
 }
 
-img {
-  width: 580px;
-  height: 430px;
+body.joc-body section.landing-container .sidebar.col-md-3 .joc-quote {
+  position: relative;
+  display: block;
+  width: 90%;
+  margin: 30vh auto;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 2.5vmin;
+  color: #fafafa;
 }
 
+body.joc-body section.landing-container .sidebar.col-md-3 .mini-nav {
+  position: relative;
+  top: 65vh;
+}
+
+body.joc-body section.landing-container .sidebar.col-md-3 .mini-nav a {
+  position: relative;
+  display: inline-block;
+  color: #fafafa;
+  font-size: 2vmin;
+  margin: 1.5vw;
+}
+
+body.joc-body .landing-content.col-md-9 {
+  position: relative;
+}
+
+body.joc-body .landing-content.col-md-9 .about-container.row {
+  position: relative;
+  top: 15vh;
+  left: 15%;
+  font-family: 'Lato';
+  font-size: 3vmin;
+  color: #202020;
+}
+
+body.joc-body .landing-content.col-md-9 .about-container.row .about2 {
+  position: relative;
+  top: 2vh;
+}
+
+body.joc-body .landing-content.col-md-9 .aptitudes-container.row {
+  position: relative;
+  top: 30vh;
+  height: 30vh;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-size: 2.5vmin;
+  color: #202020;
+}
+
+body.joc-body .landing-content.col-md-9 .aptitudes-container.row .aptitudes-are.col-md-6 {
+  position: relative;
+  left: 15%;
+}
+
+body.joc-body .landing-content.col-md-9 .aptitudes-container.row .testing-is.col-md-6 {
+  position: relative;
+  left: 30%;
+  perspective: 100px;
+}
+
+body.joc-body .landing-content.col-md-9 .aptitudes-container.row .testing-is.col-md-6 a.sample-test-nav {
+  color: #3a5199;
+}
+
+body.joc-body .landing-content.col-md-9 .aptitudes-container.row .testing-is.col-md-6 a.sample-test-nav:hover, body.joc-body .landing-content.col-md-9 .aptitudes-container.row .testing-is.col-md-6 a.sample-test-nav:active, body.joc-body .landing-content.col-md-9 .aptitudes-container.row .testing-is.col-md-6 a.sample-test-nav:visited {
+  text-decoration: none;
+  color: #3a1599;
+}
+
+body.joc-body .grow {
+  transition: all .5s ease-in-out;
+}
+
+body.joc-body .grow:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+body.joc-body .grow:active, body.joc-body .grow:visited {
+  text-decoration: none;
+}
+
+/*body.joc-body {
+  margin: 0;
+  background-color: #F2F2F2;
+
+  h1.joc2012-header {
+    font-family: 'Raleway', sans-serif;
+    font-size: 5vmin;
+    text-align: center;
+    color: #2e282a;
+  }
+  h2.joc2012-subheader {
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    width: 40%;
+    left: 2%;
+    color: #2e282a;
+  }
+
+  #slideshow { 
+    position: relative; 
+    left: 2%;
+    width: 600px; 
+    height: 400px; 
+    padding: 10px; 
+    box-shadow: 0 0 5px rgba(0,0,0,0.4); 
+  }
+
+  #slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+  }
+  img {
+    width: 580px;
+    height: 380px;
+  }
+}
+*/
 /*table {
   position: relative;
   margin: 50px auto;
@@ -971,13 +1106,51 @@ button#start-game:hover {
 }
 
 /*01B2A0*/
-img.resume-page {
+.new-book-container {
   position: relative;
   display: block;
-  width: 50%;
-  height: 60%;
-  margin: auto;
-  box-shadow: 1px 1px 5px 1px rgba(33, 33, 33, 0.6);
+  margin: 200px auto;
+  width: 500px;
+}
+
+.new-book-container .form-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #383838;
+}
+
+/*.btn-add {
+  position: relative;
+  left: -5px;
+  top: 10px;
+  background-color: #383838;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+}*/
+.book-list-container {
+  position: relative;
+  display: block;
+  margin: 200px auto;
+  width: 75%;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #383838;
+}
+
+.btn-default.btn-add-book {
+  position: relative;
+  left: 5px;
+  top: 10px;
+  background-color: #D12BC4;
+  color: #eee;
+}
+
+.btn-default.btn-add-book:hover {
+  background-color: #383838;
+  color: #eee;
 }
 
 /*# sourceMappingURL=main.css.map*/

@@ -1,9 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 
- 
-  
-
 .writing-prompts {
   margin: 0;
   background-color: #720eff;
@@ -12,7 +9,7 @@
     position: relative;
     display: block;
     font-family: 'Open Sans', sans-serif;
-    font-size: 50px;
+    font-size: 7vmin;
     font-weight: 800;
     top: 15vh;
     color: #fff;
@@ -46,7 +43,7 @@
     width: 50vw;
     margin: -10vh auto;
     font-family: 'Poiret One', sans-serif;
-    font-size: 30px;
+    font-size: 5vmin;
     color: #fff;
     text-align: center;
     z-index: 1;

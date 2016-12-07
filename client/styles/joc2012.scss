@@ -1,35 +1,173 @@
+@import url(https://fonts.googleapis.com/css?family=Taviraj);
+@import url(https://fonts.googleapis.com/css?family=Lato);
 
-h1.joc2012-header {
-  font-family: 'Raleway', sans-serif;
-  font-size: 25px;
-  text-align: center;
-  color: #190338;
-}
-h2.joc2012-subheader {
-  position: relative;
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  width: 40%;
-  left: 2%;
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
+
+
+body.joc-body {
+  margin: 0;
+  background-image: gradient(#fafafa);
+  
+  section.landing-container {
+
+    .sidebar.col-md-3 {
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      padding: 2%;
+      background-color: #3a5199;
+      box-shadow: 1px 1px 4px rgba(30, 30, 30, 0.7);
+
+      h1.joc-title {
+        position: relative;
+        top: 25vh;
+        font-family: 'Taviraj', serif;
+        font-size: 6.5vmin;
+        color: #fafafa;
+        text-align: center;
+        font-weight: bold;
+      }
+      h2.joc-tag {
+        position: relative;
+        top: 25vh;
+        font-family: 'Lato', sans-serif;
+        font-size: 2.2vmin;
+        text-align: center;
+        color: #fafafa;
+      }
+      a.scheduler-nav {
+        position: relative;
+        top: -15vh;
+        left: -1vw;
+        font-family: 'Lato', sans-serif;
+        font-size: 2.2vmin;
+        color: #fafafa;
+      }
+      a.scheduler-nav:hover, a.scheduler-nav:active, a.scheduler-nav:visited {
+        text-decoration: none;
+      }
+      .joc-quote {
+        position: relative;
+        display: block;
+        width: 90%;
+        margin: 30vh auto;
+        font-family: 'Kaushan Script', cursive;
+        font-size: 2.5vmin;
+        color: #fafafa;
+      }
+      .mini-nav {
+        position: relative;
+        top: 65vh;
+
+        a {
+          position: relative;
+          display: inline-block;
+          color: #fafafa;
+          font-size: 2vmin;
+          margin: 1.5vw;
+        }
+      }
+    }
+  }
+  .landing-content.col-md-9 {
+    position: relative;
+    
+    .about-container.row {
+      position: relative;
+      top: 15vh;
+      left: 15%;
+      font-family: 'Lato';
+      font-size: 3vmin;
+      color: #202020;
+
+      .about2 {
+        position: relative;
+        top: 2vh;
+      }
+    }
+    .aptitudes-container.row {
+      position: relative;
+      top: 30vh;
+      height: 30vh;
+      width: 100%;
+      font-family: 'Lato', sans-serif;
+      font-size: 2.5vmin;
+      color: #202020;
+      
+      .aptitudes-are.col-md-6 {
+        position: relative;
+        left: 15%;
+      }
+      .testing-is.col-md-6 {
+        position: relative;
+        left: 30%;
+        perspective: 100px;
+
+        a.sample-test-nav {
+          color: #3a5199;
+        }
+        a.sample-test-nav:hover, a.sample-test-nav:active, a.sample-test-nav:visited {
+          text-decoration: none;
+          color: #3a1599;
+        }
+      }
+    }
+  }
+  .grow { 
+    transition: all .5s ease-in-out; 
+  }
+  .grow:hover {
+    text-decoration: none;
+    transform: scale(1.1); 
+  }
+  .grow:active, .grow:visited {
+    text-decoration: none;
+  }
 }
 
-#slideshow { 
-  position: relative; 
-  left: 2%;
-  width: 600px; 
-  height: 450px; 
-  padding: 10px; 
-  box-shadow: 0 0 20px rgba(0,0,0,0.4); 
-}
 
-#slideshow > div { 
-  position: absolute; 
-  top: 10px; 
-  left: 10px; 
-  right: 10px; 
-  bottom: 10px; 
+
+
+/*body.joc-body {
+  margin: 0;
+  background-color: #F2F2F2;
+
+  h1.joc2012-header {
+    font-family: 'Raleway', sans-serif;
+    font-size: 5vmin;
+    text-align: center;
+    color: #2e282a;
+  }
+  h2.joc2012-subheader {
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    width: 40%;
+    left: 2%;
+    color: #2e282a;
+  }
+
+  #slideshow { 
+    position: relative; 
+    left: 2%;
+    width: 600px; 
+    height: 400px; 
+    padding: 10px; 
+    box-shadow: 0 0 5px rgba(0,0,0,0.4); 
+  }
+
+  #slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+  }
+  img {
+    width: 580px;
+    height: 380px;
+  }
 }
-img {
-  width: 580px;
-  height: 430px;
-}
+*/

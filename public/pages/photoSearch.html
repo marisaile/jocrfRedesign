@@ -9,14 +9,14 @@
       <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
       <script type="text/javascript" src="/application.js"></script>
   </head>
-  <body class="landing-override-bootstrap">
-    <section class="sections-work"></section>
+  <body class="photo-search-body">
+    <a class="breadcrumb" onclick="history.go(-1);">back to portfolio</a>
     <h1 class="photo-search-title">Photo Search</h1>
-    <h2 class="photo-search">What would you like to see?</h2>
+   <!--  <h2 class="photo-search">What would you like to see?</h2> -->
     <div class="search-container">
-      <input type="text" class="form-control search-photo" placeholder="search">
-      <button class="btn search-photos">Search!</button>
-      <div class="search-results"></div>
+      <input type="text" class="form-control no-border search-photo" autofocus="autofocus" placeholder="what would you like to see?">
+      <button class="btn search-photos">Search</button>
+      <div class="search-results masonry"></div>
   </body>
 </html>
 
