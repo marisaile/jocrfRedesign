@@ -4,11 +4,8 @@ import 'styles/main.scss';
 
 import mainPage from 'pages/mainPage';
 import writingPrompts from 'pages/writingPrompts';
-// import timerObs from 'pages/timerObs';
-// import wordAss from 'pages/wordAssociation';
-// import jocTimer from 'pages/jocTimer';
-// import timerGen from 'pages/timerGen';
-import joc2012 from 'pages/joc2012';
+import jocSampleTests from 'pages/jocSampleTests';
+import jocPage from 'pages/jocPage';
 import TodoListView from 'pages/todoReact/todoListView';
 import funnySquares from 'pages/funnySquares';
 import photoSearch from 'pages/photoSearch';
@@ -29,23 +26,14 @@ $(function() {
     case '/pages/writingPrompts.html':
       writingPrompts.init();
     break; 
-    // case '/pages/timerObs.html':
-    //   timerObs.init();
-    // break;
-    // case '/pages/timerGen.html': 
-    //   timerGen.init();
-    // break;
-    // case '/pages/wordAssociation.html':
-    //   wordAss.init();
-    // break;
-    // case '/pages/jocTimer.html':
-    //   jocTimer.init();
-    // break;
+    case '/pages/jocSampleTests.html':
+      jocSampleTests.init();
+    break;
     case '/pages/breakout.html':
       game.init();
     break;
-    case '/pages/joc2012.html':
-      joc2012.init();
+    case '/pages/jocPage.html':
+      jocPage.init();
     break;
     case '/pages/todo.html':
       var todoListView = new TodoListView(); 

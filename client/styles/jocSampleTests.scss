@@ -1,0 +1,114 @@
+.sample-tests-body {
+  margin: 0;
+  background-color: #fafafa;
+  font-family: 'Lato', sans-serif;
+
+  .sample-tests {
+    position: relative;
+    display: block;
+    width: 70%;
+    height: 20vh;
+    margin: auto;
+
+    h1.st-heading {
+      position: relative;
+      top: 5vh;
+      font-size: 40px;
+      text-align: center;
+    }
+    a.show-silograms, a.show-number-series {
+      position: relative;
+      display: block;
+      top: 10vh;
+      font-size: 25px;
+      color: #202020;
+      margin: 50px;
+    }
+  }
+/*  .silograms-container.hidden {
+    display: none;
+  }*/
+  .silograms-container {
+    position: relative;
+    display: none;
+    top: 10vh;
+    left: 50%;
+    background-color: #fafafa;
+    padding: 10px;
+
+    .instructions-container {
+      position: relative;
+      display: block;
+      width: 400px;
+      /*margin: 50px auto;*/
+
+      h1.test-name {
+        font-size: 30px;
+      }
+      h2.instructions {
+        font-size: 20px;
+      }
+      .start-test {
+        position: relative;
+        display: block;
+        font-size: 20px;
+        top: 40px;
+      }
+    }
+    .hidden {
+      display: none;
+    }
+    .next-word {
+      position: relative;
+      display: block;
+      font-size: 30px;
+      text-align: center;
+    }
+    .answer-container {
+      position: relative;
+      display: block;
+      margin: auto;
+      font-size: 20px;
+
+      .submit-responses {
+        position: relative;
+        top: 25px;
+        left: 275px;
+        background-color: #333;
+        color: #eee;
+      }
+      .submit-responses:focus {
+        outline: none;
+      }
+      .form-control {
+        box-shadow: none;
+        width: 350px;
+      }
+    }
+    .answer-container.hidden {
+      display: none;
+    }
+  }
+  .number-series-container {
+    position: relative;
+    display: none;
+    padding: 50px;
+    width: 40%;
+    height: 70%;
+    margin: 100px auto;
+    background-color: #fafafa;
+    font-size: 20px;
+    line-height: 50px;
+
+    input {
+      position: relative;
+      display: inline;
+      width: 50px;
+      height: 50px;
+      top: -50px;
+      left: 80%;
+    }
+  }
+}
+
+

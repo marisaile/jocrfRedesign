@@ -608,7 +608,7 @@ p {
 
 body.joc-body {
   margin: 0;
-  background-color: #3a5199;
+  background-color: #fafafa;
 }
 
 body.joc-body section.landing-container .sidebar.col-md-3 {
@@ -673,9 +673,12 @@ body.joc-body .landing-content.col-md-9 {
 
 body.joc-body .landing-content.col-md-9 .about-container.row {
   position: relative;
-  top: 60vh;
+  top: 15vh;
   left: 20%;
   font-family: 'Lato';
+}
+
+body.joc-body .landing-content.col-md-9 .about-container.row p {
   font-size: 2.5vmin;
   color: #202020;
 }
@@ -687,14 +690,13 @@ body.joc-body .landing-content.col-md-9 .about-container.row .about2 {
 
 body.joc-body .landing-content.col-md-9 .aptitudes-container.row {
   position: relative;
-  top: -10vh;
-  left: 22%;
+  display: block;
+  top: 30vh;
   height: 30vh;
   width: 90%;
-  font-family: 'Kaushan Script', sans-serif;
-  font-size: 2.7vmin;
+  font-family: 'Lato', sans-serif;
+  font-size: 2.3vmin;
   color: #202020;
-  text-align: center;
   /*.joc-quote {
         position: relative;
         display: block;
@@ -704,79 +706,169 @@ body.joc-body .landing-content.col-md-9 .aptitudes-container.row {
         font-size: 2.5vmin;
         color: #fafafa;
       }*/
-  /*.aptitudes-are.col-md-6 {
-        position: relative;
-        left: 15%;
-      }
-      .testing-is.col-md-6 {
-        position: relative;
-        left: 30%;
-        perspective: 100px;
-
-        a.sample-test-nav {
-          color: #3a5199;
-        }
-        a.sample-test-nav:hover, a.sample-test-nav:active, a.sample-test-nav:visited {
-          text-decoration: none;
-          color: #3a1599;
-        }
-      }*/
 }
 
-body.joc-body .grow {
+body.joc-body .landing-content.col-md-9 .aptitudes-container.row h4 {
+  font-size: 2.5vmin;
+}
+
+body.joc-body .landing-content.col-md-9 .aptitudes-container.row .aptitudes-are.col-md-6 {
+  position: relative;
+  left: 20%;
+}
+
+body.joc-body .landing-content.col-md-9 .aptitudes-container.row .testing-is.col-md-6 {
+  position: relative;
+  left: 35%;
+  perspective: 100px;
+}
+
+body.joc-body .landing-content.col-md-9 .aptitudes-container.row .testing-is.col-md-6 a.sample-test-nav {
+  color: #3a5199;
+}
+
+body.joc-body .landing-content.col-md-9 .aptitudes-container.row .testing-is.col-md-6 a.sample-test-nav:hover, body.joc-body .landing-content.col-md-9 .aptitudes-container.row .testing-is.col-md-6 a.sample-test-nav:active, body.joc-body .landing-content.col-md-9 .aptitudes-container.row .testing-is.col-md-6 a.sample-test-nav:visited {
+  text-decoration: none;
+  color: #3a1599;
+}
+
+.grow {
   transition: all .5s ease-in-out;
 }
 
-body.joc-body .grow:hover {
+.grow:hover {
   text-decoration: none;
   transform: scale(1.1);
 }
 
-body.joc-body .grow:active, body.joc-body .grow:visited {
+.grow:active, .grow:visited {
   text-decoration: none;
 }
 
-/*body.joc-body {
+.sample-tests-body {
   margin: 0;
-  background-color: #F2F2F2;
-
-  h1.joc2012-header {
-    font-family: 'Raleway', sans-serif;
-    font-size: 5vmin;
-    text-align: center;
-    color: #2e282a;
-  }
-  h2.joc2012-subheader {
-    position: relative;
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    width: 40%;
-    left: 2%;
-    color: #2e282a;
-  }
-
-  #slideshow { 
-    position: relative; 
-    left: 2%;
-    width: 600px; 
-    height: 400px; 
-    padding: 10px; 
-    box-shadow: 0 0 5px rgba(0,0,0,0.4); 
-  }
-
-  #slideshow > div { 
-    position: absolute; 
-    top: 10px; 
-    left: 10px; 
-    right: 10px; 
-    bottom: 10px; 
-  }
-  img {
-    width: 580px;
-    height: 380px;
-  }
+  background-color: #fafafa;
+  font-family: 'Lato', sans-serif;
+  /*  .silograms-container.hidden {
+    display: none;
+  }*/
 }
-*/
+
+.sample-tests-body .sample-tests {
+  position: relative;
+  display: block;
+  width: 70%;
+  height: 20vh;
+  margin: auto;
+}
+
+.sample-tests-body .sample-tests h1.st-heading {
+  position: relative;
+  top: 5vh;
+  font-size: 40px;
+  text-align: center;
+}
+
+.sample-tests-body .sample-tests a.show-silograms, .sample-tests-body .sample-tests a.show-number-series {
+  position: relative;
+  display: block;
+  top: 10vh;
+  font-size: 25px;
+  color: #202020;
+  margin: 50px;
+}
+
+.sample-tests-body .silograms-container {
+  position: relative;
+  display: none;
+  top: 10vh;
+  left: 50%;
+  background-color: #fafafa;
+  padding: 10px;
+}
+
+.sample-tests-body .silograms-container .instructions-container {
+  position: relative;
+  display: block;
+  width: 400px;
+  /*margin: 50px auto;*/
+}
+
+.sample-tests-body .silograms-container .instructions-container h1.test-name {
+  font-size: 30px;
+}
+
+.sample-tests-body .silograms-container .instructions-container h2.instructions {
+  font-size: 20px;
+}
+
+.sample-tests-body .silograms-container .instructions-container .start-test {
+  position: relative;
+  display: block;
+  font-size: 20px;
+  top: 40px;
+}
+
+.sample-tests-body .silograms-container .hidden {
+  display: none;
+}
+
+.sample-tests-body .silograms-container .next-word {
+  position: relative;
+  display: block;
+  font-size: 30px;
+  text-align: center;
+}
+
+.sample-tests-body .silograms-container .answer-container {
+  position: relative;
+  display: block;
+  margin: auto;
+  font-size: 20px;
+}
+
+.sample-tests-body .silograms-container .answer-container .submit-responses {
+  position: relative;
+  top: 25px;
+  left: 275px;
+  background-color: #333;
+  color: #eee;
+}
+
+.sample-tests-body .silograms-container .answer-container .submit-responses:focus {
+  outline: none;
+}
+
+.sample-tests-body .silograms-container .answer-container .form-control {
+  box-shadow: none;
+  width: 350px;
+}
+
+.sample-tests-body .silograms-container .answer-container.hidden {
+  display: none;
+}
+
+.sample-tests-body .number-series-container {
+  position: relative;
+  display: none;
+  padding: 50px;
+  width: 40%;
+  height: 70%;
+  margin: 100px auto;
+  background-color: #fafafa;
+  font-size: 20px;
+  line-height: 50px;
+}
+
+.sample-tests-body .number-series-container input {
+  position: relative;
+  display: inline;
+  width: 50px;
+  height: 50px;
+  top: -50px;
+  left: 80%;
+}
+
 /*table {
   position: relative;
   margin: 50px auto;
