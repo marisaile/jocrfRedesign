@@ -3,135 +3,45 @@
 @import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
 
 
-body.joc-body {
+ .joc-body {
   margin: 0;
-  background-color: #fafafa;
+  background-color: #f7f7f7;
 
-  section.landing-container {
-
-    .sidebar.col-md-3 {
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      padding: 2%;
-      background-color: #3a5199;
-      box-shadow: 1px 1px 4px rgba(30, 30, 30, 0.7);
-
-      h1.joc-title {
-        position: relative;
-        top: 25vh;
-        font-family: 'Taviraj', serif;
-        font-size: 6.5vmin;
-        color: #fafafa;
-        text-align: center;
-        font-weight: bold;
-      }
-      h2.joc-tag {
-        position: relative;
-        top: 25vh;
-        font-family: 'Lato', sans-serif;
-        font-size: 2.2vmin;
-        text-align: center;
-        color: #fafafa;
-      }
-      a.scheduler-nav {
-        position: relative;
-        top: -15vh;
-        left: -1vw;
-        font-family: 'Lato', sans-serif;
-        font-size: 2.2vmin;
-        color: #fafafa;
-      }
-      a.scheduler-nav:hover, a.scheduler-nav:active, a.scheduler-nav:visited {
-        text-decoration: none;
-      }
-      .mini-nav {
-        position: relative;
-        top: 65vh;
-
-        a {
-          position: relative;
-          display: inline-block;
-          color: #fafafa;
-          font-size: 2vmin;
-          margin: 1.5vw;
-        }
-      }
-    }
-  }
-  .landing-content.col-md-9 {
+  .joc-header {
     position: relative;
-    
-    .about-container.row {
-      position: relative;
-      top: 15vh;
-      left: 20%;
-      font-family: 'Lato';
+    display: block;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 20vh;
+    background-color: #3a5199;
 
-      p {
-        font-size: 2.5vmin;
-        color: #202020;
-      }
-      .about2 {
-        position: relative;
-        top: 2vh;
-      }
-    }
-    .aptitudes-container.row {
+    h1.joc-work {
       position: relative;
       display: block;
-      top: 30vh;
-      height: 30vh;
-      width: 90%;
+      font-family: 'Lato', serif;
+      font-size: 30px;
+      left: 8vw;
+      top: 3vh;
+      color: #f7f7f7;
+    }
+    h2.joc-stopwatch {
+      position: relative;
       font-family: 'Lato', sans-serif;
-      font-size: 2.3vmin;
-      color: #202020;
-
-      h4 {
-        font-size: 2.5vmin;
-      }
-      /*.joc-quote {
-        position: relative;
-        display: block;
-        width: 90%;
-        margin: 30vh auto;
-        font-family: 'Kaushan Script', cursive;
-        font-size: 2.5vmin;
-        color: #fafafa;
-      }*/
-      .aptitudes-are.col-md-6 {
-        position: relative;
-        left: 20%;
-      }
-      .testing-is.col-md-6 {
-        position: relative;
-        left: 35%;
-        perspective: 100px;
-
-        a.sample-test-nav {
-          color: #3a5199;
-        }
-        a.sample-test-nav:hover, a.sample-test-nav:active, a.sample-test-nav:visited {
-          text-decoration: none;
-          color: #3a1599;
-        }
-      }
+      font-size: 20px;
+      left: 8vw;
+      color: #f7f7f7;
     }
   }
+  img.timerGen, .timerTD, .timerScore {
+    position: relative;
+    display: inline-block;
+    box-shadow: 1px 1px 10px 2px rgba(51, 51, 51, 0.3);
+    margin: 75px;
+    border-radius: 10px;
+    height: 320px;
+    width: 240px;
+  }
 }
-
-.grow { 
-  transition: all .5s ease-in-out; 
-}
-.grow:hover {
-  text-decoration: none;
-  transform: scale(1.1); 
-}
-.grow:active, .grow:visited {
-  text-decoration: none;
-}
-
-
-
+  

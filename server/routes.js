@@ -43,53 +43,15 @@ router.get('/api/writingPrompts', function(req, res){
     });
 });
 
-router.post('/api/suggestions', function(req, res){
-  if(
-    // !req.body.hasOwnProperty('subject') || 
-     !req.body.hasOwnProperty('title') || 
-     !req.body.hasOwnProperty('author')) {
-    res.statusCode = 400;
-    return res.send('Error 400: Post syntax incorrect.');
-  }
-
-  var newBook = {
-    // subject: req.body.subject,
-    title: req.body.title,
-    author: req.body.author
-  }
-  fs.writeFile(__dirname + '/booksSuggestions.json', function(err){
+router.post('/api/addPrompt', function(req, res){
+  // var newPrompt = req.body.prompt;
+  fs.readFile(writingPromptsPath, function(err, data){
     if (err) { console.log(err); }
-    // respond to the client
-    res.writeHead(200, {'Content-Type': 'text/json'});
-    res.write(newBook);
-    res.end();
+    data = JSON.parse(data);
+    console.log(data);
+    res.end(JSON.stringify(data));
   });
 });
-
-// var stopwatchDatabasePath = __dirname + '/stopwatchDatabase.json';
-
-
-// router.get('/api/stopwatch', function(req, res){
-//   // read in the database
-//     fs.readFile(stopwatchDatabasePath, function(err, data){
-//       if (err) { console.log(err); }
-//       // send a response
-//       res.writeHead(200, {'Content-Type': 'text/json'});
-//       res.write(data);
-//       res.end();    
-//     });
-// });
-
-// router.post('/api/stopwatch', function(req, res){
-//   var times = req.body.times;
-//   fs.writeFile(stopwatchDatabasePath, times, function(err){
-//     if (err) { console.log(err); }
-//     // respond to the client
-//     res.writeHead(200, {'Content-Type': 'text/json'});
-//     res.write(times.toString());
-//     res.end();
-//   });
-// });
 
 
 

@@ -11,7 +11,7 @@ var compiledTemplate;
 var backgroundColors = ['#0ac2d2', '#030027', '#EE4B6A', '#ff9505', '#a81e9c', '#0B3954', '#29002F', '#2bc016', '#ff4365', '#31cb00', '#3bceac', '#c04cfd', '#A833B9', '#f42b03', '#720eff', '#246EB9'];
 var prompts = [];
 var promptHtml = [];
-
+var index = 0;
 
 var app = {
   init: function(){
@@ -20,6 +20,8 @@ var app = {
   },
   render: function(){
     app.fetchPrompts();
+    app.shuffleArray(backgroundColors);
+    app.saveNewPrompt();
   },
   compileTemplate: function(){
     compiledTemplate = Handlebars.compile(template);
@@ -36,20 +38,33 @@ var app = {
       }  
     }); 
   },
+  saveNewPrompt: function(){
+    $('.send-prompt').click(function(){
+      $.ajax({
+        url: 'api/writingPrompts', 
+        method: 'POST',
+        dataType: 'text',
+        data: 'prompt', 
+        complete: function(){
+          console.log('data');
+        }
+      });
+    });
+  },
   displayPrompt: function(){ 
     $(document).on('click', '.writing-prompts-button', function(e){
       e.preventDefault();
       promptHtml = _.map(prompts, function(prompt){
         return compiledTemplate(prompt);
       });
-      app.shuffleArray(promptHtml);
-      app.shuffleArray(backgroundColors);
-      var randomPrompt = promptHtml.slice(0, 1);
-      $('.writing-prompt-container').html(randomPrompt);
-      var randomColor = backgroundColors.slice(0, 1);
+      // app.shuffleArray(backgroundColors);
+      // var randomPrompt = promptHtml.slice(0, 1);
+      $('.writing-prompt-container').html(promptHtml[++index % promptHtml.length]);
+      // var randomColor = backgroundColors.slice(0, 1);
       $('.writing-prompts').css({
-        'background-color': randomColor
+        'background-color': backgroundColors[++index % backgroundColors.length]
       });  
+      // index++;
     });
   }, 
   shuffleArray: function(array){

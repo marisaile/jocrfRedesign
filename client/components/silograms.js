@@ -28,12 +28,12 @@ var app = {
         $('.answer-container').removeClass('hidden');
       }
     }
-    $('.start-test').click(function(e){
+    $('.start-silo').click(function(e){
       e.preventDefault();
-      $('.instructions-container').html('');
+      $('.instructions-container-silo').html('');
       setInterval(showWords, 2000);
     });
-    $('.submit-responses').click(function(e){
+    $('.submit-responses-silo').click(function(e){
       e.preventDefault();
       if ($('.foo').val() === 'girl') {
         points++;

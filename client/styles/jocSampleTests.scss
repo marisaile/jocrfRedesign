@@ -1,6 +1,6 @@
 .sample-tests-body {
   margin: 0;
-  background-color: #fafafa;
+  background-color: #fff;
   font-family: 'Lato', sans-serif;
 
   .sample-tests {
@@ -13,69 +13,69 @@
     h1.st-heading {
       position: relative;
       top: 5vh;
-      font-size: 40px;
+      font-size: 35px;
       text-align: center;
     }
-    a.show-silograms, a.show-number-series {
+    a.show-silograms, a.show-silograms:hover, a.show-silograms:active, a.show-silograms:visited, 
+    a.show-number-series, a.show-number-seris:hover, a.show-number-series:active, a.show-number-series:visited {
       position: relative;
       display: block;
       top: 10vh;
       font-size: 25px;
       color: #202020;
       margin: 50px;
+      text-align: center;
+      text-decoration: none;
     }
   }
-/*  .silograms-container.hidden {
-    display: none;
-  }*/
   .silograms-container {
     position: relative;
     display: none;
-    top: 10vh;
-    left: 50%;
-    background-color: #fafafa;
     padding: 10px;
+    height: 70vh;
+    width: 50%;
+    margin: 15vh auto;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 2px rgba(51, 51, 51, 0.6);
 
-    .instructions-container {
+    .instructions-container-silo {
       position: relative;
       display: block;
       width: 400px;
-      /*margin: 50px auto;*/
+      margin: 50px auto;
 
-      h1.test-name {
-        font-size: 30px;
-      }
-      h2.instructions {
+      h2.instructions-silo {
         font-size: 20px;
+        color: #202020;
       }
-      .start-test {
+      .start-silo {
         position: relative;
         display: block;
+        left: 300px;
         font-size: 20px;
-        top: 40px;
+        top: 150px;
       }
-    }
-    .hidden {
-      display: none;
     }
     .next-word {
       position: relative;
       display: block;
       font-size: 30px;
+      top: 10vh;
       text-align: center;
+      color: #202020;
     }
     .answer-container {
       position: relative;
       display: block;
-      margin: auto;
       font-size: 20px;
+      color: #202020;
+      top: 10%;
 
-      .submit-responses {
+      .submit-responses-silo {
         position: relative;
         top: 25px;
         left: 275px;
-        background-color: #333;
-        color: #eee;
       }
       .submit-responses:focus {
         outline: none;
@@ -85,29 +85,57 @@
         width: 350px;
       }
     }
-    .answer-container.hidden {
-      display: none;
-    }
   }
   .number-series-container {
     position: relative;
     display: none;
-    padding: 50px;
-    width: 40%;
-    height: 70%;
+    padding: 5px 40px;
+    width: 50%;
+    height: 70vh;
     margin: 100px auto;
-    background-color: #fafafa;
+    background-color: #f7f7f7;
     font-size: 20px;
-    line-height: 50px;
+    line-height: 40px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 2px rgba(51, 51, 51, 0.6);
 
-    input {
+    .instructions-container-ns {
       position: relative;
-      display: inline;
-      width: 50px;
-      height: 50px;
-      top: -50px;
-      left: 80%;
+      display: block;
+      width: 400px;
+      margin: 50px auto;
+
+      h2.instructions-ns {
+        font-size: 20px;
+        color: #202020;
+      }
+      .start-ns {
+        position: relative;
+        display: block;
+        left: 300px;
+        font-size: 20px;
+        top: 150px;
+      }
     }
+    .ns-items {
+      position: relative;
+      display: block;
+
+      input {
+        position: relative;
+        display: inline;
+        width: 40px;
+        height: 40px;
+        top: -40px;
+        left: 85%;
+      }
+      .submit-responses-ns {
+        position: relative;
+        display: block;
+        left: 80%;
+        top: 5vh;
+      }
+    } 
   }
 }
 
