@@ -43,15 +43,16 @@ router.get('/api/writingPrompts', function(req, res){
     });
 });
 
-router.post('/api/addPrompt', function(req, res){
-  // var newPrompt = req.body.prompt;
-  fs.readFile(writingPromptsPath, function(err, data){
-    if (err) { console.log(err); }
-    data = JSON.parse(data);
-    console.log(data);
-    res.end(JSON.stringify(data));
-  });
-});
+
+// router.post('/api/addPrompt', function(req, res){  
+//   var newPrompt = req.body.prompt;
+//   fs.write(writingPromptsPath, newPrompt, function(err, data){
+//     if (err) { console.log (err); }
+//     res.writeHead(200, {'Content-Type': 'text/json'});
+//     res.write(newPrompt);
+//     res.end();
+//   });
+// });
 
 
 

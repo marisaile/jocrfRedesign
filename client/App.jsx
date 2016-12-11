@@ -10,6 +10,8 @@ import funnySquares from 'pages/funnySquares';
 import photoSearch from 'pages/photoSearch';
 import game from 'pages/breakout';
 import frenzelReunion from 'pages/frenzelReunion';
+import scattergories from 'pages/scattergoriesGame';
+// import sampleTests from 'pages/jocSampleTests';
 
 $(function() {
 
@@ -39,6 +41,9 @@ $(function() {
     break;
     case '/pages/frenzelReunion.html':
       frenzelReunion.init();
+    break;
+    case '/pages/scattergoriesGame.html':
+      scattergories.init();
     break;
     default: break;
   }

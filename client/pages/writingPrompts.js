@@ -39,15 +39,13 @@ var app = {
     }); 
   },
   saveNewPrompt: function(){
-    $('.send-prompt').click(function(){
+    $('.send-prompt').click(function(e){
+      e.preventDefault();
+      var prompt = $('#prompt-suggestion').val();
       $.ajax({
-        url: 'api/writingPrompts', 
+        url: '/api/addPrompt', 
         method: 'POST',
-        dataType: 'text',
-        data: 'prompt', 
-        complete: function(){
-          console.log('data');
-        }
+        data: {prompt: JSON.stringify(prompt)}
       });
     });
   },

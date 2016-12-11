@@ -86,6 +86,12 @@
 	
 	var _pagesFrenzelReunion2 = _interopRequireDefault(_pagesFrenzelReunion);
 	
+	var _pagesScattergoriesGame = __webpack_require__(226);
+	
+	var _pagesScattergoriesGame2 = _interopRequireDefault(_pagesScattergoriesGame);
+	
+	// import sampleTests from 'pages/jocSampleTests';
+	
 	(0, _jquery2['default'])(function () {
 	
 	  _pagesMainPage2['default'].init();
@@ -114,6 +120,9 @@
 	      break;
 	    case '/pages/frenzelReunion.html':
 	      _pagesFrenzelReunion2['default'].init();
+	      break;
+	    case '/pages/scattergoriesGame.html':
+	      _pagesScattergoriesGame2['default'].init();
 	      break;
 	    default:
 	      break;
@@ -9973,7 +9982,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"landing-override-bootstrap":"landing-override-bootstrap","portfolio-landing":"portfolio-landing","header-logo":"header-logo","marisaile":"marisaile","horizontal-line":"horizontal-line","sections":"sections","nav-sections":"nav-sections","portfolio-contact":"portfolio-contact","contact-links":"contact-links","contact":"contact","portfolio-bio":"portfolio-bio","bio-about":"bio-about","bio-content":"bio-content","portfolio-work":"portfolio-work","work-main":"work-main","work-title":"work-title","work-pages-nav":"work-pages-nav","grow":"grow","back-to-top":"back-to-top","page-up":"page-up","breadcrumb":"breadcrumb","body-todos":"body-todos","todo-title":"todo-title","todo-container":"todo-container","inuput-name":"inuput-name","title-edit-input":"title-edit-input","form-control":"form-control","add-todo-container":"add-todo-container","col-xs-10":"col-xs-10","col-xs-2":"col-xs-2","btn":"btn","btn-add-todo":"btn-add-todo","funny-squares-body":"funny-squares-body","funny-squares":"funny-squares","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","photo-search-body":"photo-search-body","photo-search-title":"photo-search-title","search-container":"search-container","search-photo":"search-photo","no-border":"no-border","search-photos":"search-photos","search-results":"search-results","masonry":"masonry","photo":"photo","writing-prompts":"writing-prompts","writing-prompts-heading":"writing-prompts-heading","writing-prompts-button":"writing-prompts-button","writing-prompt-container":"writing-prompt-container","submit-prompt":"submit-prompt","prompt-modal":"prompt-modal","new-prompt":"new-prompt","prompt-suggestion":"prompt-suggestion","send-prompt":"send-prompt","bgimg-1":"bgimg-1","bgimg-2":"bgimg-2","bgimg-3":"bgimg-3","bgimg-4":"bgimg-4","caption":"caption","border":"border","item":"item","joc-body":"joc-body","joc-header":"joc-header","joc-work":"joc-work","joc-stopwatch":"joc-stopwatch","timerGen":"timerGen","timerTD":"timerTD","timerScore":"timerScore","sample-tests-body":"sample-tests-body","sample-tests":"sample-tests","st-heading":"st-heading","show-silograms":"show-silograms","show-number-series":"show-number-series","show-number-seris":"show-number-seris","silograms-container":"silograms-container","instructions-container-silo":"instructions-container-silo","instructions-silo":"instructions-silo","start-silo":"start-silo","next-word":"next-word","answer-container":"answer-container","submit-responses-silo":"submit-responses-silo","submit-responses":"submit-responses","number-series-container":"number-series-container","instructions-container-ns":"instructions-container-ns","instructions-ns":"instructions-ns","start-ns":"start-ns","ns-items":"ns-items","submit-responses-ns":"submit-responses-ns","breakout-header":"breakout-header","myCanvas":"myCanvas","start-game":"start-game","win-message":"win-message","you-won":"you-won"};
+	module.exports = {"landing-override-bootstrap":"landing-override-bootstrap","portfolio-landing":"portfolio-landing","header-logo":"header-logo","marisaile":"marisaile","horizontal-line":"horizontal-line","sections":"sections","nav-sections":"nav-sections","portfolio-contact":"portfolio-contact","contact-links":"contact-links","contact":"contact","portfolio-bio":"portfolio-bio","bio-about":"bio-about","bio-content":"bio-content","portfolio-work":"portfolio-work","work-main":"work-main","work-title":"work-title","work-pages-nav":"work-pages-nav","grow":"grow","back-to-top":"back-to-top","page-up":"page-up","breadcrumb":"breadcrumb","body-todos":"body-todos","todo-title":"todo-title","todo-container":"todo-container","inuput-name":"inuput-name","title-edit-input":"title-edit-input","form-control":"form-control","add-todo-container":"add-todo-container","col-xs-10":"col-xs-10","col-xs-2":"col-xs-2","btn":"btn","btn-add-todo":"btn-add-todo","funny-squares-body":"funny-squares-body","funny-squares":"funny-squares","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","photo-search-body":"photo-search-body","photo-search-title":"photo-search-title","search-container":"search-container","search-photo":"search-photo","no-border":"no-border","search-photos":"search-photos","search-results":"search-results","masonry":"masonry","photo":"photo","writing-prompts":"writing-prompts","writing-prompts-heading":"writing-prompts-heading","writing-prompts-button":"writing-prompts-button","writing-prompt-container":"writing-prompt-container","submit-prompt":"submit-prompt","prompt-modal":"prompt-modal","new-prompt":"new-prompt","prompt-suggestion":"prompt-suggestion","send-prompt":"send-prompt","bgimg-1":"bgimg-1","bgimg-2":"bgimg-2","bgimg-3":"bgimg-3","bgimg-4":"bgimg-4","caption":"caption","border":"border","item":"item","joc-body":"joc-body","joc-header":"joc-header","joc-work":"joc-work","joc-stopwatch":"joc-stopwatch","timerGen":"timerGen","timerTD":"timerTD","timerScore":"timerScore","sample-tests-body":"sample-tests-body","sample-tests":"sample-tests","st-heading":"st-heading","show-silograms":"show-silograms","show-number-series":"show-number-series","show-number-seris":"show-number-seris","silograms-container":"silograms-container","instructions-container-silo":"instructions-container-silo","instructions-silo":"instructions-silo","start-silo":"start-silo","next-word":"next-word","answer-container":"answer-container","submit-responses-silo":"submit-responses-silo","submit-responses":"submit-responses","number-series-container":"number-series-container","instructions-container-ns":"instructions-container-ns","instructions-ns":"instructions-ns","start-ns":"start-ns","ns-items":"ns-items","submit-responses-ns":"submit-responses-ns","scattergories-body":"scattergories-body","scattergories-container":"scattergories-container","letter-is":"letter-is","category-list-container":"category-list-container","categories":"categories","breakout-header":"breakout-header","myCanvas":"myCanvas","start-game":"start-game","win-message":"win-message","you-won":"you-won"};
 
 /***/ },
 /* 3 */,
@@ -10038,7 +10047,7 @@
 /* 7 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<section class=\"portfolio-landing\">  \n  <div class=\"header-logo\">\n    <a href=\"\" class=\"marisaile\" role=\"menuitem\">Marisaile<!-- <span>Junior Frontend Developer</span> --></a>\n  </div>    \n  <hr class=\"horizontal-line\">\n  <div class=\"sections\">\n    <a href=\"#\" class=\"nav-sections bio\">Bio</a>\n    <a href=\"#\" class=\"nav-sections projects\">Projects</a>\n    <a href=\"/images/lcook_resume.pdf\" target=\"new\" class=\"nav-sections resume\">Resume</a>\n  </div>\n</section>\n<section class=\"portfolio-bio\">\n  <h1 class=\"bio-about\">About Me</h1>\n  <p class=\"bio-content\">\n    My name is Lisa Cook, and I recently completed a 12-week Javascript bootcamp at Davinci Coders in Westminster, CO. I've used the skills I acquired to build a specialized stopwatch application for my current company, help out with updating the NAMI Denver website, and pursue some of my own personal projects. \n</section>\n<section class=\"portfolio-contact\">\n  <div class=\"contact-links\">\n    <a href=\"https://github.com/marisaile\" target=\"new\" class=\"contact\">github</a>\n    <a href=\"http://codepen.io/marisaile/\" target=\"new\" class=\"contact\">codepen</a>\n    <a href=\"https://www.linkedin.com/in/lisa-cook-93ba2115?trk=hp-identity-name\" target=\"new\" class=\"contact\">linkedin</a>\n  </div>\n</section>\n<section class=\"portfolio-work\">\n  <div class=\"work-main\">\n    <h1 class=\"work-title\">Some things I've made</h1>\n    <div class=\"work-pages-nav\">\n      <a href=\"/pages/photoSearch.html\" class=\"photo-search grow\">Photo Search</a>\n      <a href=\"/pages/writingPrompts.html\" class=\"writing grow\">Writing Prompts Generator</a>\n      <a href=\"/pages/funnySquares.html\" class=\"funny-squares grow\">Funny Squares</a>\n      <a href=\"/pages/frenzelReunion.html\" class=\"frenzels grow\">Frenzel Family Reunion 2013</a>\n      <a href=\"/pages/todo.html\" class=\"todo grow\">Todo App</a>\n      <!-- <a href=\"/pages/jocPage.html\" class=\"joc grow\">Johnson O'Connor Work</a>  -->\n    </div>\n    <a href=\"#\" class=\"back-to-top\">\n      <i class=\"fa fa-angle-up page-up\" style=\"font-size:24px\"></i> back to top\n    </a> \n  </div>\n</section>\n\n";
+	module.exports = "\n<section class=\"portfolio-landing\">  \n  <div class=\"header-logo\">\n    <a href=\"\" class=\"marisaile\" role=\"menuitem\">Marisaile<!-- <span>Junior Frontend Developer</span> --></a>\n  </div>    \n  <hr class=\"horizontal-line\">\n  <div class=\"sections\">\n    <a href=\"#\" class=\"nav-sections bio\">Bio</a>\n    <a href=\"#\" class=\"nav-sections projects\">Projects</a>\n    <a href=\"/images/lcook_resume.pdf\" target=\"new\" class=\"nav-sections resume\">Resume</a>\n  </div>\n</section>\n<section class=\"portfolio-bio\">\n  <h1 class=\"bio-about\">About Me</h1>\n  <p class=\"bio-content\">\n    My name is Lisa Cook, and I recently completed a 12-week Javascript bootcamp at Davinci Coders in Westminster, CO. I've used the skills I acquired to build a specialized stopwatch application for my current company, help out with updating the NAMI Denver website, and pursue some of my own personal projects. \n</section>\n<section class=\"portfolio-contact\">\n  <div class=\"contact-links\">\n    <a href=\"https://github.com/marisaile\" target=\"new\" class=\"contact\">github</a>\n    <a href=\"http://codepen.io/marisaile/\" target=\"new\" class=\"contact\">codepen</a>\n    <a href=\"https://www.linkedin.com/in/lisa-cook-93ba2115?trk=hp-identity-name\" target=\"new\" class=\"contact\">linkedin</a>\n  </div>\n</section>\n<section class=\"portfolio-work\">\n  <div class=\"work-main\">\n    <h1 class=\"work-title\">Some things I've made</h1>\n    <div class=\"work-pages-nav\">\n      <a href=\"/pages/photoSearch.html\" class=\"photo-search grow\">Photo Search</a>\n      <a href=\"/pages/writingPrompts.html\" class=\"writing grow\">Writing Prompts Generator</a>\n      <a href=\"/pages/funnySquares.html\" class=\"funny-squares grow\">Funny Squares</a>\n      <!-- <a href=\"/pages/frenzelReunion.html\" class=\"frenzels grow\">Frenzel Family Reunion 2013</a> -->\n      <a href=\"/pages/todo.html\" class=\"todo grow\">Todo App</a>\n      <a href=\"/pages/jocPage.html\" class=\"joc grow\">Johnson O'Connor Work</a> \n    </div>\n    <a href=\"#\" class=\"back-to-top\">\n      <i class=\"fa fa-angle-up page-up\" style=\"font-size:24px\"></i> back to top\n    </a> \n  </div>\n</section>\n\n";
 
 /***/ },
 /* 8 */
@@ -10269,15 +10278,13 @@
 	    });
 	  },
 	  saveNewPrompt: function saveNewPrompt() {
-	    $('.send-prompt').click(function () {
+	    $('.send-prompt').click(function (e) {
+	      e.preventDefault();
+	      var prompt = $('#prompt-suggestion').val();
 	      $.ajax({
-	        url: 'api/writingPrompts',
+	        url: '/api/addPrompt',
 	        method: 'POST',
-	        dataType: 'text',
-	        data: 'prompt',
-	        complete: function complete() {
-	          console.log('data');
-	        }
+	        data: { prompt: JSON.stringify(prompt) }
 	      });
 	    });
 	  },
@@ -41432,6 +41439,50 @@
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"about-landing\">\n\t<h2 class=\"dalquest-mission\">Mission Statement</h2>\n\t<p class=\"ddrs-mission-statement\">\n\t\tIt is the desire of MSU that the property be used by scientists, naturalists, and educators for generations to come.\n\t</p>\n\t<div class=\"ddrs-purchase\">\n\t\tThe Dalquest Desert Research Station (DDRS) is located in west Texas (see map) on the Presidio/Brewster County line, north of and adjoining the Big Bend Ranch State Park. The site contains 1,200 hectares (3,000 acres) and was a gift from the late Dr. Walter W. Dalquest and his wife, Rose. Walt came to Midwestern State University in 1952 and retired from full time service in 1984. Dr. Dalquest was one of the most productive scholars in the history of Midwestern. He produced 180 scientific publications, and he continued to work part-time until his death in 2000.\n\t</div>\n\t<div class=\"ddrs-naturalist\">\n\t\tTo a naturalist the DDRS experience is a dream come true. The majority of the site has had little human influence; in fact, the property owner prior to Dr. Dalquest fenced the canyon lands to keep cattle from getting into the area. The site is one of the few areas within the Chihuahuan Desert that has not been overgrazed. \n\t</div>\n\t<h4 class=\"about-sections\">Sections</h4>\n\t<a href=\"\" role=\"menuitem\" class=\"about-history\">History</a>\n\t<a href=\"\" role=\"menuitem\" class=\"about-bio\">Biological Signifiance</a>\n\t<a href=\"\" role=\"menuitem\" class=\"about-geo\">Geological Significance</a>\n</div>\n<div class=\"dalquest-history\">\n\t<!-- <img src=\"/images/ddrs/27.jpg\" class=\"img-responsive about-image\" alt=\"Responsive image\"> -->\t\n</div>\n<div class=\"dalquest-bio\">\n\t\n</div>\n<div class=\"dalquest-geo\">\n\t\n</div>";
+
+/***/ },
+/* 226 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var $ = __webpack_require__(1);
+	
+	// legacy loading for bootstrap
+	window.jQuery = window.$ = $;
+	__webpack_require__(42);
+	
+	var letters = 'ABCDEFGHIJKLMNOPRSTVY';
+	var startsWith = letters[Math.floor(Math.random() * letters.length)];
+	var points = 0;
+	
+	var app = {
+	  init: function init() {
+	    $('#gameInstructions').modal();
+	    app.render();
+	  },
+	  render: function render() {
+	    $('.roll-die').click(function () {
+	      $('.letter-is').html('Your letter is' + '&nbsp &nbsp' + startsWith);
+	      setTimeout(function () {
+	        $('.letter-is').html('Time\'s Up!');
+	        app.scoreGame();
+	      }, 50000);
+	    });
+	  },
+	  scoreGame: function scoreGame() {
+	    $('input[class=answer').each(function () {
+	      var $answer = $(this).val();
+	      if ($answer = /^startsWith\w+ \s^startsWith\w+/) {
+	        points++;
+	      }
+	    });
+	
+	    console.log(points);
+	  }
+	};
+	
+	module.exports = app;
 
 /***/ }
 /******/ ]);

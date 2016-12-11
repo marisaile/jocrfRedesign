@@ -10,21 +10,87 @@
     <script type="text/javascript" async="async" defer="defer" src="/application.js"></script>
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
   </head>
-  <body class="landing-override-bootstrap">
+  <body class="scattergories-body">
     <a class="breadcrumb" onclick="history.go(-1);">back to portfolio</a> 
-    <div class="category-list-container">
-      <ol class="category list">
-        <li class="category presidents">US Presidents</li>
-        <li class="category fairy-tales">Fairy Tale Characters</li>
-        <li class="category musicals">Musicals</li>
-        <li class="category beach">Things at the Beach</li>
-        <li class="category capitals">US Capitals</li>
-        <li class="category vegetable">Vegetables</li>
-        <li class="category dogs">Dog Breeds</li>
-        <li class="category periodic-element">Periodic Table Element</li>
-        <li class="category austen">Jane Austen Character</li>
-        <li class="category farm">Things on a Farm</li>
-      </ol>
+    <div class="modal fade" id="gameInstructions" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">How to Play</h4>
+          </div>
+          <div class="modal-body">
+            If you've ever played the board game Scattegories, you'll basically know how to play this game. Click "Roll the die" to get your letter. The clock will start and you'll have one minute to write an answer that begins with the letter shown for each category on the list below. You'll get one point for every valid word in your answer starting with that letter. For example, if the letter was "D", and the category was "Disney characters", you'd get 2 points for "Donald Duck". You can have more than one answer for each category. For example, in the same scenario, you'd get 1 more point if you also answered "Dumbo".
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <!-- <div class="checkbox">
+              <label>
+                <input type="checkbox dont-show">Don't show again
+              </label>
+            </div> -->
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="scattergories-container">
+      <h1>Scattergories Game</h1>
+      <button class="btn btn-default roll-die">Roll the die!</button>
+      <div class="letter-is"></div>
+      <div class="category-list-container">
+        <ol class="list-group categories">
+          <li class="category presidents list-group-item row">
+            <div class="col-sm-5">US Presidents</div>
+            <div class="col-sm-7"><input type="text" class="answer"></div>
+          </li>
+          <li class="category fairy-tales list-group-item row">
+            <div class="col-sm-5">Fairy Tale Characters</div>
+            <div class="col-sm-7"><input type="text" class="answer"></div>
+          </li>
+          <li class="category musicals list-group-item row">
+            <div class="col-sm-5">Musicals</div>
+            <div class="col-sm-7"><input type="text" class="answer"></div>
+          </li>
+          <li class="category object list-group-item row">
+            <div class="col-sm-5">Household Object</div>
+            <div class="col-sm-7"><input type="text" class="answer"></div>
+          </li>
+          <li class="category beach list-group-item row">
+            <div class="col-sm-5">Things at the Beach</div>
+            <div class="col-sm-7"><input type="text" class="answer"></div>
+          </li>
+          <li class="category capitals list-group-item row">
+            <div class="col-sm-5">US Capitals</div>
+            <div class="col-sm-7"><input type="text" class="answer"></div>
+          </li>
+          <li class="category vegetable list-group-item row">
+            <div class="col-sm-5">Vegetables</div>
+            <div class="col-sm-7"><input type="text" class="answer"></div>
+          </li>
+          <li class="category dogs list-group-item row">
+            <div class="col-sm-5">Dog Breeds</div>
+            <div class="col-sm-7"><input type="text" class="answer"></div>
+          </li>
+          <li class="category beach list-group-item row">
+            <div class="col-sm-5">Beach</div>
+            <div class="col-sm-7"><input type="text" class="answer"></div>
+          </li>
+          <li class="category periodic-element list-group-item row">
+            <div class="col-sm-5">Periodic Table Element</div>
+            <div class="col-sm-7"><input type="text" class="answer"></div>
+          </li>
+          <li class="category austen list-group-item row">
+            <div class="col-sm-5">Jane Austen Character</div>
+            <div class="col-sm-7"><input type="text" class="answer"></div>
+          </li>
+          <li class="category farm list-group-item row">
+            <div class="col-sm-5">Things on a Farm</div>
+            <div class="col-sm-7"><input type="text" class="answer"></div>
+          </li>
+        </ol>
+      </div>
+
+    </div>
+    
   </body>
 </html>

@@ -34,5 +34,17 @@
   },
   {
     "prompt": "You meet your doppleganger from a parallel universe. Write a character study of your alternate."
+  }, 
+  {
+    "prompt": "You visit your old neighborhood after 35 years to find that no one has aged."
+  }, 
+  {
+    "prompt": "Describe the life of a snowflake, compared to the life of a raindrop."
+  },
+  {
+    "prompt": "Write 50 lines of dialogue in BuffySpeak."
+  },
+  {
+    "prompt": "Start a short story with the last text you sent."
   }
 ]
