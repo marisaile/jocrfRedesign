@@ -3,10 +3,14 @@ var $ = require('jquery');
 // legacy loading for bootstrap
 window.jQuery = window.$ = $;
 require('bootstrap');
+import moment from 'moment';
 
-var letters = 'ABCDEFGHIJKLMNOPRSTVY';
+var letters = 'ABCDEFGHIJKLMNOPRSTW';
 var startsWith = letters[Math.floor(Math.random() * letters.length)];
-var points = 0;
+var contains = /^startsWith\w+ \sstartsWith\w+/;
+var points = 0
+var secondsRemaining = 90;
+// import CountdownTimer from 'components/scattergoriesCountdown';
 
 var app = {
   init: function(){
@@ -14,22 +18,27 @@ var app = {
     app.render();
   },
   render: function(){
+    $('#scattergoriesTimer').html(secondsRemaining);
     $('.roll-die').click(function(){
       $('.letter-is').html('Your letter is' + '&nbsp &nbsp' + startsWith);
-      setTimeout(function(){
-        $('.letter-is').html('Time\'s Up!');
-          app.scoreGame();
-      }, 50000);
+      setInterval(function(){
+        secondsRemaining--;
+        var secondsRemainingText = secondsRemaining.toString();
+        if (secondsRemaining >= 0) {
+          $('#scattergoriesTimer').html('Time Remaining' + secondsRemainingText);
+        } else {
+          $('#scattergoriesTimer').html('Time\'s Up!');
+        }
+      }, 1000);
     });
   },
   scoreGame: function(){
     $('input[class=answer').each(function(){
       var $answer = $(this).val();
-      if ($answer = /^startsWith\w+ \s^startsWith\w+/) {
-        points++
+      if ($answer === contains) {
+        points++;
       }
     });
-    
     console.log(points);
   }
 };

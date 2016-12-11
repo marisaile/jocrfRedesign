@@ -22,14 +22,6 @@
           <div class="modal-body">
             If you've ever played the board game Scattegories, you'll basically know how to play this game. Click "Roll the die" to get your letter. The clock will start and you'll have one minute to write an answer that begins with the letter shown for each category on the list below. You'll get one point for every valid word in your answer starting with that letter. For example, if the letter was "D", and the category was "Disney characters", you'd get 2 points for "Donald Duck". You can have more than one answer for each category. For example, in the same scenario, you'd get 1 more point if you also answered "Dumbo".
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <!-- <div class="checkbox">
-              <label>
-                <input type="checkbox dont-show">Don't show again
-              </label>
-            </div> -->
-          </div>
         </div>
       </div>
     </div>
@@ -37,6 +29,7 @@
       <h1>Scattergories Game</h1>
       <button class="btn btn-default roll-die">Roll the die!</button>
       <div class="letter-is"></div>
+      <div id="scattergoriesTimer"></div>
       <div class="category-list-container">
         <ol class="list-group categories">
           <li class="category presidents list-group-item row">

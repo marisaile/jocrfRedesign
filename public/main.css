@@ -274,7 +274,6 @@ body.landing-override-bootstrap section.portfolio-work .work-main .page-up:hover
   color: #ef3e36;
   font-weight: bold;
   text-align: center;
-  text-shadow: 1px 1px 2px rgba(28, 0, 2, 0.4);
 }
 
 .body-todos .todo-container {
@@ -1053,6 +1052,14 @@ body.scattergories-body .scattergories-container {
 body.scattergories-body .scattergories-container .letter-is {
   position: relative;
   display: block;
+  margin-top: 10px;
+  font-size: 20px;
+  height: 40px;
+}
+
+body.scattergories-body .scattergories-container #scattergoriesTimer {
+  position: relative;
+  display: block;
   width: 30%;
   margin: auto;
   background-color: #fefefe;
@@ -1067,7 +1074,7 @@ body.scattergories-body .scattergories-container .category-list-container {
   display: block;
   width: 55%;
   height: 80vh;
-  margin: 10vh auto;
+  margin: 5vh auto;
   padding: 20px 0;
   background-color: #333;
   border-radius: 8px;
