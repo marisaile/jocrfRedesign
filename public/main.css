@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Open+Sans);@import url(https://fonts.googleapis.com/css?family=Poiret+One);@import url(https://fonts.googleapis.com/css?family=Lato);@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);@import url(https://fonts.googleapis.com/css?family=Ubuntu);@import url(https://fonts.googleapis.com/css?family=Righteous);@import url(https://fonts.googleapis.com/css?family=Syncopate);@import url(https://fonts.googleapis.com/css?family=Federo);body.landing-override-bootstrap {
+@import url(https://fonts.googleapis.com/css?family=Montez);@import url(https://fonts.googleapis.com/css?family=Taviraj);@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);@import url(https://fonts.googleapis.com/css?family=Open+Sans);@import url(https://fonts.googleapis.com/css?family=Poiret+One);@import url(https://fonts.googleapis.com/css?family=Ubuntu);@import url(https://fonts.googleapis.com/css?family=Righteous);@import url(https://fonts.googleapis.com/css?family=Syncopate);@import url(https://fonts.googleapis.com/css?family=Federo);body.landing-override-bootstrap {
   margin: 0;
   background-color: #F2F2F2;
 }
@@ -26,8 +26,9 @@
   body.landing-override-bootstrap section.portfolio-landing .horizontal-line {
     position: relative;
     display: block;
-    width: 810px;
+    width: 820px;
     top: 36vh;
+    left: -0.5vw;
     border-top: 2px solid #F2F2F2;
   }
   body.landing-override-bootstrap section.portfolio-landing .sections {
@@ -212,7 +213,7 @@ body.landing-override-bootstrap section.portfolio-work .work-main .work-pages-na
 body.landing-override-bootstrap section.portfolio-work .work-main .back-to-top {
   position: relative;
   left: 85vw;
-  top: -4vh;
+  top: -12vh;
   font-family: 'Raleway', sans-serif;
   font-size: 12px;
   color: #2e282a;
@@ -263,8 +264,8 @@ body.landing-override-bootstrap section.portfolio-work .work-main .page-up:hover
 
 .body-todos {
   margin: 0;
-  background-color: #CFCDC5;
-  font-family: 'Josefin Sans', sans-serif;
+  background-color: #e2e2e2;
+  font-family: 'Raleway', sans-serif;
 }
 
 .body-todos h1#todo-title {
@@ -272,7 +273,6 @@ body.landing-override-bootstrap section.portfolio-work .work-main .page-up:hover
   top: 5vh;
   font-size: 8vmin;
   color: #ef3e36;
-  font-weight: bold;
   text-align: center;
 }
 
@@ -340,7 +340,7 @@ body.funny-squares-body h1.funny-squares {
 body.funny-squares-body .square-container {
   position: relative;
   display: inline-block;
-  top: 225px;
+  top: 175px;
   left: 330px;
   perspective: 500px;
 }
@@ -364,7 +364,7 @@ body.funny-squares-body .square {
 body.funny-squares-body .shadow-container {
   position: relative;
   display: inline-block;
-  top: 240px;
+  top: 200px;
   left: 260px;
   perspective: 250px;
 }
@@ -573,7 +573,7 @@ form.new-prompt button.send-prompt {
 body, html {
   height: 100%;
   margin: 0;
-  font: 400 20px/1.8 "Lato", sans-serif;
+  font: 400 20px/1.8 "Raleway", sans-serif;
   color: #777;
 }
 
@@ -625,7 +625,7 @@ body, html {
 h3 {
   letter-spacing: 5px;
   text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
+  font: 20px "Raleway", sans-serif;
   color: #ddd;
 }
 
@@ -650,78 +650,114 @@ p {
   width: 100%;
 }
 
-.joc-body {
+body, html {
+  height: 100%;
   margin: 0;
-  background-color: #f7f7f7;
 }
 
-.joc-body .joc-header {
+.bgimg-1, .bgimg-2, .bgimg-3 {
   position: relative;
-  display: block;
-  top: 0;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #F7F9F8;
+}
+
+.bgimg-1 {
+  background-image: url("/images/HEL.jpg");
+  background-size: contain;
+  min-height: 100vh;
+}
+
+.bgimg-2 {
+  background-image: url("/images/IMG_3551.jpg");
+  background-size: cover;
+  min-height: 800px;
+}
+
+.bgimg-3 {
+  background-image: url("/images/mandi-tweezer.jpg");
+  background-size: cover;
+  min-height: 800px;
+}
+
+.caption {
+  position: absolute;
+  background-color: #F7F9F8;
   left: 0;
-  margin: 0;
+  top: 0;
+  padding: 25px 5px;
   width: 100%;
-  height: 20vh;
-  background-color: #3a5199;
+  text-align: justify;
 }
 
-.joc-body .joc-header h1.joc-work {
-  position: relative;
-  display: block;
-  font-family: 'Lato', serif;
-  font-size: 30px;
-  left: 8vw;
-  top: 3vh;
-  color: #f7f7f7;
+.caption span.border {
+  background: transparent;
+  text-transform: uppercase;
+  padding: 18px;
+  font-size: 15px;
+  letter-spacing: 5px;
 }
 
-.joc-body .joc-header h2.joc-stopwatch {
-  position: relative;
-  font-family: 'Lato', sans-serif;
-  font-size: 20px;
-  left: 8vw;
-  color: #f7f7f7;
-}
-
-.joc-body img.timerGen, .joc-body .timerTD, .joc-body .timerScore {
+.caption span.border a.nav {
   position: relative;
   display: inline-block;
-  box-shadow: 1px 1px 10px 2px rgba(51, 51, 51, 0.3);
-  margin: 75px;
-  border-radius: 10px;
-  height: 320px;
-  width: 240px;
+  color: #211F1E;
+  margin-left: 100px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+}
+
+.caption span.border a.joc {
+  margin-left: 50px;
+  margin-right: 200px;
+  font-size: 20px;
+}
+
+p.joc-about {
+  position: relative;
+  display: block;
+  margin-top: 50px;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  color: #211F1E;
+}
+
+p.what-are {
+  position: relative;
+  display: block;
+  top: 50px;
+  text-align: left;
+  font-size: 25px;
+  font-family: 'Raleway', sans-serif;
+  color: #211F1E;
 }
 
 .sample-tests-body {
   margin: 0;
-  background-color: #fff;
-  font-family: 'Lato', sans-serif;
+  background-color: #F7F9F8;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  color: #211F1E;
 }
 
 .sample-tests-body .sample-tests {
   position: relative;
   display: block;
-  width: 70%;
-  height: 20vh;
-  margin: auto;
-}
-
-.sample-tests-body .sample-tests h1.st-heading {
-  position: relative;
-  top: 5vh;
-  font-size: 35px;
+  width: 100%;
+  top: 15vh;
   text-align: center;
+  font-size: 25px;
 }
 
-.sample-tests-body .sample-tests a.show-silograms, .sample-tests-body .sample-tests a.show-silograms:hover, .sample-tests-body .sample-tests a.show-silograms:active, .sample-tests-body .sample-tests a.show-silograms:visited,
-.sample-tests-body .sample-tests a.show-number-series, .sample-tests-body .sample-tests a.show-number-seris:hover, .sample-tests-body .sample-tests a.show-number-series:active, .sample-tests-body .sample-tests a.show-number-series:visited {
+.sample-tests-body a.show-silograms, .sample-tests-body a.show-silograms:hover, .sample-tests-body a.show-silograms:active, .sample-tests-body a.show-silograms:visited,
+.sample-tests-body a.show-number-series, .sample-tests-body a.show-number-seris:hover, .sample-tests-body a.show-number-series:active, .sample-tests-body a.show-number-series:visited {
   position: relative;
   display: block;
-  top: 10vh;
-  font-size: 25px;
-  color: #202020;
+  top: 20vh;
+  font-size: 20px;
+  color: #211F1E;
   margin: 50px;
   text-align: center;
   text-decoration: none;
@@ -731,98 +767,83 @@ p {
   position: relative;
   display: none;
   padding: 10px;
-  height: 70vh;
-  width: 50%;
-  margin: 15vh auto;
-  background-color: #f7f7f7;
-  border-radius: 5px;
-  box-shadow: 1px 1px 5px 2px rgba(51, 51, 51, 0.6);
+  height: 75vh;
+  width: 100%;
+  margin: 25vh auto;
+  background-color: #fff;
 }
 
 .sample-tests-body .silograms-container .instructions-container-silo {
   position: relative;
   display: block;
-  width: 400px;
+  width: 50%;
   margin: 50px auto;
-}
-
-.sample-tests-body .silograms-container .instructions-container-silo h2.instructions-silo {
-  font-size: 20px;
-  color: #202020;
 }
 
 .sample-tests-body .silograms-container .instructions-container-silo .start-silo {
   position: relative;
   display: block;
-  left: 300px;
+  left: 90%;
   font-size: 20px;
-  top: 150px;
+  top: 50px;
 }
 
 .sample-tests-body .silograms-container .next-word {
   position: relative;
   display: block;
   font-size: 30px;
-  top: 10vh;
+  top: 6vh;
   text-align: center;
-  color: #202020;
+  color: #211F1E;
 }
 
-.sample-tests-body .silograms-container .answer-container {
+.sample-tests-body .silograms-container form.answer-container {
   position: relative;
   display: block;
-  font-size: 20px;
-  color: #202020;
-  top: 10%;
+  font-size: 15px;
+  width: 40%;
+  margin: -5vh auto;
 }
 
-.sample-tests-body .silograms-container .answer-container .submit-responses-silo {
+.sample-tests-body .silograms-container form.answer-container .submit-responses-silo {
   position: relative;
   top: 25px;
-  left: 275px;
+  left: 90%;
 }
 
-.sample-tests-body .silograms-container .answer-container .submit-responses:focus {
+.sample-tests-body .silograms-container form.answer-container .submit-responses:focus {
   outline: none;
 }
 
-.sample-tests-body .silograms-container .answer-container .form-control {
+.sample-tests-body .silograms-container form.answer-container .form-control {
   box-shadow: none;
-  width: 350px;
 }
 
 .sample-tests-body .number-series-container {
   position: relative;
   display: none;
   padding: 5px 40px;
-  width: 50%;
-  height: 70vh;
-  margin: 100px auto;
-  background-color: #f7f7f7;
+  width: 100%;
+  height: 65vh;
+  margin: 25vh auto;
   font-size: 20px;
   line-height: 40px;
-  border-radius: 5px;
-  box-shadow: 1px 1px 5px 2px rgba(51, 51, 51, 0.6);
+  background-color: #fff;
 }
 
 .sample-tests-body .number-series-container .instructions-container-ns {
   position: relative;
   display: block;
-  width: 400px;
+  width: 50%;
   margin: 50px auto;
-}
-
-.sample-tests-body .number-series-container .instructions-container-ns h2.instructions-ns {
-  font-size: 20px;
-  color: #202020;
 }
 
 .sample-tests-body .number-series-container .instructions-container-ns .start-ns {
   position: relative;
   display: block;
-  left: 300px;
+  left: 90%;
   font-size: 20px;
-  top: 150px;
+  top: 50px;
 }
 
 .sample-tests-body .number-series-container .ns-items {
@@ -1146,5 +1167,23 @@ button#start-game:hover {
 }
 
 /*01B2A0*/
+.bar {
+  fill: #720EFF;
+}
+
+.axis text {
+  font: 12px 'Raleway', sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
 
 /*# sourceMappingURL=main.css.map*/

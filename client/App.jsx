@@ -9,9 +9,9 @@ import TodoListView from 'pages/todoReact/todoListView';
 import funnySquares from 'pages/funnySquares';
 import photoSearch from 'pages/photoSearch';
 import game from 'pages/breakout';
-import frenzelReunion from 'pages/frenzelReunion';
 import scattergories from 'pages/scattergoriesGame';
-// import sampleTests from 'pages/jocSampleTests';
+import d3aptitude from 'pages/D3aptitudeResult';
+import sampleTests from 'pages/jocSampleTests';
 
 $(function() {
 
@@ -39,11 +39,14 @@ $(function() {
     case '/pages/photoSearch.html':
       photoSearch.init(); 
     break;
-    case '/pages/frenzelReunion.html':
-      frenzelReunion.init();
+    case '/pages/jocSampleTests.html':
+      sampleTests.init();
     break;
     case '/pages/scattergoriesGame.html':
       scattergories.init();
+    break;
+    case '/pages/d3aptitudeResult.html':
+      d3aptitude.init();
     break;
     default: break;
   }

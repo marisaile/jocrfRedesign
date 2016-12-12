@@ -1,0 +1,18 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);
+
+.bar {
+	fill: #720EFF;
+}
+.axis text {
+  font: 12px 'Raleway', sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.x.axis path {
+	display: none;
+}

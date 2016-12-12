@@ -1,16 +1,15 @@
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);
 
 .body-todos {
   margin: 0;
-  background-color: #CFCDC5;
-  font-family: 'Josefin Sans', sans-serif;
+  background-color: #e2e2e2;
+  font-family: 'Raleway', sans-serif;
 
   h1#todo-title {
     position: relative;
     top: 5vh;
     font-size: 8vmin;
     color: #ef3e36;
-    font-weight: bold;
     text-align: center;
   }
   .todo-container {

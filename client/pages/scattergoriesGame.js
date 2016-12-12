@@ -7,9 +7,8 @@ import moment from 'moment';
 
 var letters = 'ABCDEFGHIJKLMNOPRSTW';
 var startsWith = letters[Math.floor(Math.random() * letters.length)];
-var contains = /^startsWith\w+ \sstartsWith\w+/;
 var points = 0
-var secondsRemaining = 90;
+var secondsRemaining = 60;
 // import CountdownTimer from 'components/scattergoriesCountdown';
 
 var app = {
@@ -21,13 +20,15 @@ var app = {
     $('#scattergoriesTimer').html(secondsRemaining);
     $('.roll-die').click(function(){
       $('.letter-is').html('Your letter is' + '&nbsp &nbsp' + startsWith);
-      setInterval(function(){
+      var countdown = setInterval(function(){
         secondsRemaining--;
         var secondsRemainingText = secondsRemaining.toString();
         if (secondsRemaining >= 0) {
-          $('#scattergoriesTimer').html('Time Remaining' + secondsRemainingText);
+          $('#scattergoriesTimer').html('Time Remaining' + ' ' + secondsRemainingText);
         } else {
+          clearInterval(countdown);
           $('#scattergoriesTimer').html('Time\'s Up!');
+          app.scoreGame();
         }
       }, 1000);
     });
@@ -35,11 +36,8 @@ var app = {
   scoreGame: function(){
     $('input[class=answer').each(function(){
       var $answer = $(this).val();
-      if ($answer === contains) {
-        points++;
-      }
+      console.log($answer);
     });
-    console.log(points);
   }
 };
 
