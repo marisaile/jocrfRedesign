@@ -9987,7 +9987,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"landing-override-bootstrap":"landing-override-bootstrap","portfolio-landing":"portfolio-landing","header-logo":"header-logo","marisaile":"marisaile","horizontal-line":"horizontal-line","sections":"sections","nav-sections":"nav-sections","portfolio-contact":"portfolio-contact","contact-links":"contact-links","contact":"contact","portfolio-bio":"portfolio-bio","bio-about":"bio-about","bio-content":"bio-content","portfolio-work":"portfolio-work","work-main":"work-main","work-title":"work-title","work-pages-nav":"work-pages-nav","grow":"grow","back-to-top":"back-to-top","page-up":"page-up","breadcrumb":"breadcrumb","body-todos":"body-todos","todo-title":"todo-title","todo-container":"todo-container","inuput-name":"inuput-name","title-edit-input":"title-edit-input","form-control":"form-control","add-todo-container":"add-todo-container","col-xs-10":"col-xs-10","col-xs-2":"col-xs-2","btn":"btn","btn-add-todo":"btn-add-todo","funny-squares-body":"funny-squares-body","funny-squares":"funny-squares","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","photo-search-body":"photo-search-body","photo-search-title":"photo-search-title","search-container":"search-container","search-photo":"search-photo","no-border":"no-border","search-photos":"search-photos","search-results":"search-results","masonry":"masonry","photo":"photo","writing-prompts":"writing-prompts","writing-prompts-heading":"writing-prompts-heading","writing-prompts-button":"writing-prompts-button","writing-prompt-container":"writing-prompt-container","submit-prompt":"submit-prompt","prompt-modal":"prompt-modal","new-prompt":"new-prompt","prompt-suggestion":"prompt-suggestion","send-prompt":"send-prompt","bgimg-1":"bgimg-1","bgimg-2":"bgimg-2","bgimg-3":"bgimg-3","bgimg-4":"bgimg-4","caption":"caption","border":"border","item":"item","nav":"nav","joc":"joc","joc-about":"joc-about","what-are":"what-are","sample-tests-body":"sample-tests-body","sample-tests":"sample-tests","show-silograms":"show-silograms","show-number-series":"show-number-series","show-number-seris":"show-number-seris","silograms-container":"silograms-container","instructions-container-silo":"instructions-container-silo","start-silo":"start-silo","next-word":"next-word","answer-container":"answer-container","submit-responses-silo":"submit-responses-silo","submit-responses":"submit-responses","number-series-container":"number-series-container","instructions-container-ns":"instructions-container-ns","start-ns":"start-ns","ns-items":"ns-items","submit-responses-ns":"submit-responses-ns","scattergories-body":"scattergories-body","scattergories-container":"scattergories-container","letter-is":"letter-is","scattergoriesTimer":"scattergoriesTimer","category-list-container":"category-list-container","categories":"categories","breakout-header":"breakout-header","myCanvas":"myCanvas","start-game":"start-game","win-message":"win-message","you-won":"you-won","bar":"bar","axis":"axis","x":"x"};
+	module.exports = {"landing-override-bootstrap":"landing-override-bootstrap","portfolio-landing":"portfolio-landing","header-logo":"header-logo","marisaile":"marisaile","horizontal-line":"horizontal-line","sections":"sections","nav-sections":"nav-sections","portfolio-contact":"portfolio-contact","contact-links":"contact-links","contact":"contact","portfolio-bio":"portfolio-bio","bio-about":"bio-about","bio-content":"bio-content","portfolio-work":"portfolio-work","work-main":"work-main","work-title":"work-title","work-pages-nav":"work-pages-nav","grow":"grow","back-to-top":"back-to-top","page-up":"page-up","breadcrumb":"breadcrumb","body-todos":"body-todos","todo-title":"todo-title","todo-container":"todo-container","inuput-name":"inuput-name","title-edit-input":"title-edit-input","form-control":"form-control","add-todo-container":"add-todo-container","col-xs-10":"col-xs-10","col-xs-2":"col-xs-2","btn":"btn","btn-add-todo":"btn-add-todo","funny-squares-body":"funny-squares-body","funny-squares":"funny-squares","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","photo-search-body":"photo-search-body","photo-search-title":"photo-search-title","search-container":"search-container","search-photo":"search-photo","no-border":"no-border","search-photos":"search-photos","search-results":"search-results","masonry":"masonry","photo":"photo","writing-prompts":"writing-prompts","writing-prompts-heading":"writing-prompts-heading","writing-prompts-button":"writing-prompts-button","writing-prompt-container":"writing-prompt-container","submit-prompt":"submit-prompt","prompt-modal":"prompt-modal","new-prompt":"new-prompt","prompt-suggestion":"prompt-suggestion","send-prompt":"send-prompt","bgimg-1":"bgimg-1","bgimg-2":"bgimg-2","bgimg-3":"bgimg-3","bgimg-4":"bgimg-4","caption":"caption","border":"border","item":"item","nav":"nav","joc":"joc","joc-about":"joc-about","what-are":"what-are","sample-nav":"sample-nav","sample-tests-body":"sample-tests-body","sample-tests":"sample-tests","show-silograms":"show-silograms","show-number-series":"show-number-series","show-number-seris":"show-number-seris","silograms-container":"silograms-container","instructions-container-silo":"instructions-container-silo","start-silo":"start-silo","next-word":"next-word","answer-container":"answer-container","submit-responses-silo":"submit-responses-silo","submit-responses":"submit-responses","number-series-container":"number-series-container","instructions-container-ns":"instructions-container-ns","start-ns":"start-ns","ns-items":"ns-items","submit-responses-ns":"submit-responses-ns","scattergories-body":"scattergories-body","scattergories-container":"scattergories-container","letter-is":"letter-is","scattergoriesTimer":"scattergoriesTimer","category-list-container":"category-list-container","categories":"categories","breakout-header":"breakout-header","myCanvas":"myCanvas","start-game":"start-game","win-message":"win-message","you-won":"you-won","bar":"bar","axis":"axis","x":"x"};
 
 /***/ },
 /* 3 */,
@@ -65911,7 +65911,7 @@
 	      e.preventDefault();
 	      if ((0, _jquery2['default'])('.number-series-container').is(':hidden')) {
 	        (0, _jquery2['default'])('.number-series-container').slideDown('slow');
-	        _componentsSilograms2['default'].init();
+	        _componentsNumberSeries2['default'].init();
 	      } else {
 	        (0, _jquery2['default'])('.number-series-container').slideUp('slow');
 	      }
@@ -66049,12 +66049,7 @@
 	    app.render();
 	  },
 	  render: function render() {
-	    (0, _jquery2['default'])('.start-ns').click(function (e) {
-	      e.preventDefault();
-	      (0, _jquery2['default'])('.instructions-container-ns').html('');
-	      (0, _jquery2['default'])('.ns-items').removeClass('hidden');
-	    });
-	    (0, _jquery2['default'])('.submit-responses-ns').click(function (e) {
+	    (0, _jquery2['default'])('.submit-responses-ns').on('click', function (e) {
 	      e.preventDefault();
 	      if ((0, _jquery2['default'])('.one').val() === '17') {
 	        points++;
@@ -66067,7 +66062,7 @@
 	      }if ((0, _jquery2['default'])('.five').val() === '21') {
 	        points++;
 	      }
-	      (0, _jquery2['default'])('.number-series-container').html('You got' + ' ' + points + ' ' + 'correct!');
+	      (0, _jquery2['default'])('.ns-items').html('You got' + ' ' + points + ' ' + 'correct!');
 	    });
 	  }
 	};

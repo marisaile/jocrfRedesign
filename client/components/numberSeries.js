@@ -6,12 +6,7 @@ var app = {
     app.render();
   },
   render: function(){
-    $('.start-ns').click(function(e){
-      e.preventDefault();
-      $('.instructions-container-ns').html('');
-      $('.ns-items').removeClass('hidden');    
-    });
-    $('.submit-responses-ns').click(function(e){
+    $('.submit-responses-ns').on('click', function(e){
       e.preventDefault();
       if ($('.one').val() === '17') {
         points++;
@@ -24,7 +19,7 @@ var app = {
       } if ($('.five').val() === '21') {
         points++;
       }
-      $('.number-series-container').html('You got' + ' ' + points + ' ' + 'correct!');
+      $('.ns-items').html('You got' + ' ' + points + ' ' + 'correct!');
     });
   }
 };  

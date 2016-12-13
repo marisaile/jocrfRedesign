@@ -15,21 +15,16 @@ body, html {
 
 }
 .bgimg-1 {
-  background-image: url("/images/HEL.jpg");
-  background-size: contain;
-  min-height: 100vh;
-}
-
-.bgimg-2 {
-  background-image: url("/images/IMG_3551.jpg");
+  background-image: url("/images/HEL_mod.jpg");
   background-size: cover;
-  min-height: 800px;
+  min-height: 77vh;
 }
 
 .bgimg-3 {
-  background-image: url("/images/mandi-tweezer.jpg");
+  background-image: url("/images/IMG_3551.jpg");
   background-size: cover;
-  min-height: 800px;
+  min-height: 75vh;
+  opacity: 0.75;
 }
 .caption {
   position: absolute;
@@ -58,14 +53,15 @@ body, html {
   }
   a.joc {
     margin-left: 50px;
-    margin-right: 200px;
-    font-size: 20px;
+    margin-right: 30%;
+    font-size: 25px;
+    color: #211F1E;
   }
 }
 p.joc-about {
   position: relative;
   display: block;
-  margin-top: 50px;
+  margin-top: 40px;
   font-size: 20px;
   font-family: 'Raleway', sans-serif; 
   color: #211F1E;
@@ -73,14 +69,21 @@ p.joc-about {
 p.what-are {
   position: relative;
   display: block;
-  top: 50px;
+  top: 40px;
   text-align: left;
   font-size: 25px;
   font-family: 'Raleway', sans-serif; 
   color: #211F1E;
 }
-
-
+a.sample-nav {
+  position: relative;
+  display: block;
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-family: 'Raleway', sans-serif;
+  color: #211F1E;
+  text-transform: uppercase;
+}
 
 
 

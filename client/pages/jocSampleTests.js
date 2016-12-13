@@ -20,7 +20,7 @@ var app = {
       e.preventDefault();
       if ($('.number-series-container').is(':hidden')) {
         $('.number-series-container').slideDown('slow');
-        silograms.init();
+        numberSeries.init();
       } else {
         $('.number-series-container').slideUp('slow');
       }
