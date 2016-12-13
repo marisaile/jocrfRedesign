@@ -1,0 +1,104 @@
+{
+	"name": "bubble", "children": [
+		{
+			"name": "Divergent Thinking", "description": "Thought process or method used to generate creative ideas by exploring many possible solutions", "children": [
+				{
+					"name": "Ideaphoria"
+				},
+				{
+					"name": "Foresight"
+				}
+			]
+		},
+		{
+			"name": "Convergent Thinking", "description": "Problem solving technique involving the bringing together of different ideas to determine a single best solution to a lucidly defined problem.", "children": [
+				{
+					"name": "Inductive Reasoning"
+				},
+				{
+					"name": "Analytical Reasoning"
+				},
+				{
+					"name": "Number Series"
+				}
+			]
+		},
+		{
+			"name": "Spatial Reasoning", "description": "The ability to understand and remember the spatial relations among objects",  "children": [
+				{
+					"name": "Paper Folding"
+				},
+				{
+					"name": "Wiggly Block"
+				},
+				{
+					"name": "Composite Score"
+				},
+				{
+					"name": "Memory for Design"
+				}
+			]
+		}, 
+		{
+			"name": "Numbers", "description": "The ability to use numbers effectively", "children": [
+				{
+					"name": "Number Series"
+				},
+				{
+					"name": "Number Facility"
+				},
+				{
+					"name": "Graphoria"
+				},
+				{
+					"name": "Number Memory"
+				}
+			]
+		},
+		{
+			"name": "Auditory", "description": "The ability to distinguish and remember tones and melodies",  "children": [
+				{
+					"name": "Tonal Memory"
+				},
+				{
+					"name": "Pitch Discrimination"
+				},
+				{
+					"name": "Rhythm Memory"
+				}
+			]
+		},
+		{
+			"name": "Memory", "description": "Short-term retention of numbers, words, patterns and objects", "children": [
+				{
+					"name": "Memory for Design"
+				},
+				{
+					"name": "Silograms"
+				},
+				{
+					"name": "Observation"
+				}, 
+				{
+					"name": "Number Memory"
+				}
+			]
+		}
+	]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

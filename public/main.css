@@ -711,6 +711,27 @@ body, html {
   color: #211F1E;
 }
 
+.caption span.border a.nav:after, .caption span.border a.joc:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 0.07em;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.caption span.border a.nav:hover:after, .caption span.border a.joc:hover:after {
+  width: 100%;
+  background: #211F1E;
+}
+
+.caption span.border a.nav:hover, .caption span.border a.nav:active, .caption span.border a.nav:visited,
+.caption span.border a.joc:hover, .caption span.border a.joc:active, .caption span.border a.joc:visited {
+  text-decoration: none;
+  color: #211F1E;
+}
+
 p.joc-about {
   position: relative;
   display: block;
@@ -735,9 +756,30 @@ a.sample-nav {
   display: block;
   font-size: 15px;
   letter-spacing: 3px;
+  width: 210px;
   font-family: 'Raleway', sans-serif;
   color: #211F1E;
   text-transform: uppercase;
+}
+
+a.sample-nav:hover, a.sample-nav:active, a.sample-nav:visited {
+  text-decoration: none;
+  color: #211F1E;
+}
+
+a.sample-nav:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 0.07em;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+a.sample-nav:hover:after {
+  width: 100%;
+  background: #211F1E;
 }
 
 .sample-tests-body {
@@ -778,6 +820,7 @@ a.sample-nav {
   height: 75vh;
   width: 100%;
   margin: 25vh auto;
+  background-color: #fff;
 }
 
 .sample-tests-body .silograms-container .instructions-container-silo {
@@ -835,6 +878,7 @@ a.sample-nav {
   height: 75vh;
   margin: 25vh auto;
   font-size: 20px;
+  background-color: #fff;
 }
 
 .sample-tests-body .number-series-container .instructions-container-ns {
@@ -1179,23 +1223,113 @@ button#start-game:hover {
 }
 
 /*01B2A0*/
-.bar {
-  fill: #720EFF;
+#mainBubble {
+  background: #fff;
+  border: solid 1px #ddd;
+  box-shadow: 0 0 4px transparent;
+  font: 10px 'Raleway', sans-serif;
+  height: 90vh !important;
+  position: relative;
+  width: 90%;
+  margin: 50px auto;
+  padding: 20px;
 }
 
-.axis text {
-  font: 12px 'Raleway', sans-serif;
+#mainBubble svg {
+  left: 0;
+  position: absolute;
+  top: 0;
 }
 
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
+#mainBubble circle.topBubble {
+  fill: #aaa;
+  stroke: #666;
+  stroke-width: 1.5px;
 }
 
-.x.axis path {
-  display: none;
+body.override-bootstrap {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+
+body.override-bootstrap h1 {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+#mainBubble {
+  background: #fff;
+  border: solid 1px #ddd;
+  box-shadow: 0 0 4px transparent;
+  font: 10px 'Raleway', sans-serif;
+  height: 90vh !important;
+  position: relative;
+  width: 90%;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+#mainBubble svg {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+#mainBubble circle.topBubble {
+  fill: #aaa;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /*# sourceMappingURL=main.css.map*/

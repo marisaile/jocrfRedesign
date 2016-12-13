@@ -8,7 +8,7 @@ import Handlebars from 'handlebars';
 import _ from 'underscore';
 
 var compiledTemplate;
-var backgroundColors = ['#0ac2d2', '#030027', '#EE4B6A', '#ff9505', '#a81e9c', '#0B3954', '#29002F', '#2bc016', '#ff4365', '#31cb00', '#3bceac', '#c04cfd', '#A833B9', '#f42b03', '#720eff', '#246EB9'];
+var backgroundColors = ['#0ac2d2', '#030027', '#EE4B6A', '#ff9505', '#a81e9c', '#0B3954', '#EA3788', '#29002F', '#2bc016', '#ff4365', '#31cb00', '#3bceac', '#c04cfd', '#A833B9', '#f42b03', '#720eff', '#246EB9'];
 var prompts = [];
 var promptHtml = [];
 var index = 0;

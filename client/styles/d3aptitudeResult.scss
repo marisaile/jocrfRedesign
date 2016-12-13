@@ -1,18 +1,25 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);
 
-.bar {
-	fill: #720EFF;
+#mainBubble {
+  background: #fff;
+  border: solid 1px #ddd;
+  box-shadow: 0 0 4px rgba(0,0,0,0);
+  font: 10px 'Raleway', sans-serif;
+  height: 90vh !important;
+  position: relative;
+  width: 90%;
+  margin: 50px auto;
+  padding: 20px;
 }
-.axis text {
-  font: 12px 'Raleway', sans-serif;
+         
+#mainBubble svg {
+  left: 0;
+  position: absolute;
+  top: 0;
 }
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-.x.axis path {
-	display: none;
+                     
+#mainBubble circle.topBubble {
+  fill: #aaa;
+  stroke: #666;
+  stroke-width: 1.5px;
 }

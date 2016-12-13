@@ -1,0 +1,73 @@
+{
+	"name": "bubble", "children": [
+		{
+			"name": "High", "description": "", "children": [
+				{
+					"name": "Graphoria"
+				},
+				{
+					"name": "Number Memory"
+				},
+				{
+					"name": "Number Series"
+				},
+				{
+					"name": "Tonal Memory"
+				},
+				{
+					"name": "Rhythm Memory"
+				},
+				{
+					"name": "Silograms"
+				},
+				{
+					"name": "Observation"
+				},
+				{
+					"name": "Tweezer Dexterity"
+				},
+				{
+					"name": "English Vocabulary"
+				}
+			]
+		},
+		{
+			"name": "Low", "description": "", "children": [
+				{
+					"name": "Foresight"
+				},
+				{
+					"name": "Grip"
+				},
+				{
+					"name": "Finger Dexterity"
+				}
+			]
+		},
+		{
+			"name": "Average", "description": "",  "children": [
+				{
+					"name": "Structural Visualization"
+				},
+				{
+					"name": "Ideaphoria"
+				},
+				{
+					"name": "Inductive Reasoning"
+				},
+				{
+					"name": "Analytical Reasoning"
+				},
+				{
+					"name": "Memory for Design"
+				},
+				{
+					"name": "Pitch Discrimination"
+				},
+				{
+					"name": "Number Facility"
+				}
+			]
+		}
+	]
+}

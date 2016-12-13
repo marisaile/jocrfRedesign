@@ -12,6 +12,7 @@ import game from 'pages/breakout';
 import scattergories from 'pages/scattergoriesGame';
 import d3aptitude from 'pages/D3aptitudeResult';
 import sampleTests from 'pages/jocSampleTests';
+import d3 from 'pages/d3';
 
 $(function() {
 
@@ -47,6 +48,9 @@ $(function() {
     break;
     case '/pages/d3aptitudeResult.html':
       d3aptitude.init();
+    break;
+    case '/pages/d3.html': 
+      d3.init();
     break;
     default: break;
   }

@@ -57,6 +57,24 @@ body, html {
     font-size: 25px;
     color: #211F1E;
   }
+  a.nav:after, a.joc:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 0.07em;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+  }
+  a.nav:hover:after, a.joc:hover:after {
+    width: 100%;
+    background: #211F1E;
+  }
+  a.nav:hover, a.nav:active, a.nav:visited,
+  a.joc:hover, a.joc:active, a.joc:visited {
+    text-decoration: none;
+    color: #211F1E;
+  }
 }
 p.joc-about {
   position: relative;
@@ -80,13 +98,28 @@ a.sample-nav {
   display: block;
   font-size: 15px;
   letter-spacing: 3px;
+  width: 210px;
   font-family: 'Raleway', sans-serif;
   color: #211F1E;
   text-transform: uppercase;
 }
-
-
-
+a.sample-nav:hover, a.sample-nav:active, a.sample-nav:visited {
+  text-decoration: none;
+  color: #211F1E;
+}
+a.sample-nav:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 0.07em;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+a.sample-nav:hover:after {
+  width: 100%;
+  background: #211F1E;
+}
 
 
 
