@@ -1094,10 +1094,11 @@ body.scattergories-body .scattergories-container #scattergoriesTimer {
   position: relative;
   display: block;
   width: 30%;
-  margin: auto;
+  margin: -25px auto;
   background-color: #fefefe;
   font-size: 25px;
-  padding: 30px;
+  height: 85px;
+  line-height: 85px;
   border-radius: 8px;
   text-align: center;
 }
@@ -1106,7 +1107,7 @@ body.scattergories-body .scattergories-container .category-list-container {
   position: relative;
   display: block;
   width: 55%;
-  height: 80vh;
+  height: 60vh;
   margin: 5vh auto;
   padding: 20px 0;
   background-color: #333;
@@ -1116,7 +1117,6 @@ body.scattergories-body .scattergories-container .category-list-container {
 body.scattergories-body .scattergories-container .category-list-container .categories {
   position: relative;
   width: 90%;
-  height: 90%;
   margin: auto;
   background-color: #fefefe;
 }

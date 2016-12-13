@@ -7,9 +7,10 @@ import moment from 'moment';
 
 var letters = 'ABCDEFGHIJKLMNOPRSTW';
 var startsWith = letters[Math.floor(Math.random() * letters.length)];
-var points = 0
+var points = 0;
 var secondsRemaining = 60;
-// import CountdownTimer from 'components/scattergoriesCountdown';
+var letter = startsWith.toString()
+var regex = new RegExp("\\b(" + letter + ")\\w+", "gi");
 
 var app = {
   init: function(){
@@ -36,8 +37,11 @@ var app = {
   scoreGame: function(){
     $('input[class=answer').each(function(){
       var $answer = $(this).val();
-      console.log($answer);
+      if ($answer.match(regex)) {
+        points++;
+      }
     });
+    $('#scattergoriesTimer').html('You got' + ' ' + points + ' ' + 'points!');
   }
 };
 

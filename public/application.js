@@ -10052,7 +10052,7 @@
 /* 7 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<section class=\"portfolio-landing\">  \n  <div class=\"header-logo\">\n    <a href=\"\" class=\"marisaile\" role=\"menuitem\">Marisaile<!-- <span>Junior Frontend Developer</span> --></a>\n  </div>    \n  <hr class=\"horizontal-line\">\n  <div class=\"sections\">\n    <a href=\"#\" class=\"nav-sections bio\">Bio</a>\n    <a href=\"#\" class=\"nav-sections projects\">Projects</a>\n    <a href=\"/images/lcook_resume.pdf\" target=\"new\" class=\"nav-sections resume\">Resume</a>\n  </div>\n</section>\n<section class=\"portfolio-bio\">\n  <h1 class=\"bio-about\">About Me</h1>\n  <p class=\"bio-content\">\n    Hi! I'm Lisa, and I recently finished a 12-week Javascript bootcamp at Davinci Coders in Westminster, CO. Since completing the course I've worked on a few projects for my current organization, the Johnson O'Connor Research Foundation, pursued a few projects of my own just for fun, and am currently volunteering with NAMI Denver to help out with updating their website. I've also been known to dabble a bit in Swift and Python.\n  </p>\n</section> \n<section class=\"portfolio-contact\">\n  <div class=\"contact-links\">\n    <a href=\"https://github.com/marisaile\" target=\"new\" class=\"contact\">github</a>\n    <a href=\"http://codepen.io/marisaile/\" target=\"new\" class=\"contact\">codepen</a>\n    <a href=\"https://www.linkedin.com/in/lisa-cook-93ba2115?trk=hp-identity-name\" target=\"new\" class=\"contact\">linkedin</a>\n  </div>\n</section>\n<section class=\"portfolio-work\">\n  <div class=\"work-main\">\n    <h1 class=\"work-title\">Some things I've made</h1>\n    <div class=\"work-pages-nav\">\n      <a href=\"/pages/photoSearch.html\" class=\"photo-search grow\">Photo Search</a>\n      <a href=\"/pages/writingPrompts.html\" class=\"writing grow\">Writing Prompts Generator</a>\n      <a href=\"/pages/funnySquares.html\" class=\"funny-squares grow\">Funny Squares</a>\n      <a href=\"/pages/jocPage.html\" class=\"joc grow\">JOCRF Unsolicited Redesign</a>\n      <a href=\"/pages/todo.html\" class=\"todo grow\">Todo App</a>\n      <a href=\"/pages/scattergoriesGame.html\" class=\"joc grow\">Scattergories Game</a> \n    </div>\n    <a href=\"#\" class=\"back-to-top\">\n      <i class=\"fa fa-angle-up page-up\" style=\"font-size:24px\"></i> back to top\n    </a> \n  </div>\n</section>\n\n";
+	module.exports = "\n<section class=\"portfolio-landing\">  \n  <div class=\"header-logo\">\n    <a href=\"\" class=\"marisaile\" role=\"menuitem\">Marisaile<!-- <span>Junior Frontend Developer</span> --></a>\n  </div>    \n  <hr class=\"horizontal-line\">\n  <div class=\"sections\">\n    <a href=\"#\" class=\"nav-sections bio\">Bio</a>\n    <a href=\"#\" class=\"nav-sections projects\">Projects</a>\n    <a href=\"/images/lcook_resume.pdf\" target=\"new\" class=\"nav-sections resume\">Resume</a>\n  </div>\n</section>\n<section class=\"portfolio-bio\">\n  <h1 class=\"bio-about\">About Me</h1>\n  <p class=\"bio-content\">\n    Hi! I'm Lisa, and I recently finished a 12-week Javascript bootcamp at Davinci Coders in Westminster, CO. Since completing the course I've worked on a few projects for my current organization, the Johnson O'Connor Research Foundation, pursued a few projects of my own just for fun, and am currently volunteering with NAMI Denver to help out with updating their website. I've also been known to dabble a bit in Swift and Python.\n  </p>\n</section> \n<section class=\"portfolio-contact\">\n  <div class=\"contact-links\">\n    <a href=\"https://github.com/marisaile\" target=\"new\" class=\"contact\">github</a>\n    <a href=\"http://codepen.io/marisaile/\" target=\"new\" class=\"contact\">codepen</a>\n    <a href=\"https://www.linkedin.com/in/lisa-cook-93ba2115?trk=hp-identity-name\" target=\"new\" class=\"contact\">linkedin</a>\n  </div>\n</section>\n<section class=\"portfolio-work\">\n  <div class=\"work-main\">\n    <h1 class=\"work-title\">Some things I've made</h1>\n    <div class=\"work-pages-nav\">\n      <a href=\"/pages/photoSearch.html\" class=\"photo-search grow\">Photo Search</a>\n      <a href=\"/pages/writingPrompts.html\" class=\"writing grow\">Writing Prompts Generator</a>\n      <a href=\"/pages/funnySquares.html\" class=\"funny-squares grow\">Funny Squares</a>\n      <a href=\"/pages/jocPage.html\" target=\"new\" class=\"joc grow\">JOCRF Unsolicited Redesign</a>\n      <a href=\"/pages/todo.html\" class=\"todo grow\">Todo App</a>\n      <a href=\"/pages/scattergoriesGame.html\" class=\"joc grow\">Scattergories Game</a> \n    </div>\n    <a href=\"#\" class=\"back-to-top\">\n      <i class=\"fa fa-angle-up page-up\" style=\"font-size:24px\"></i> back to top\n    </a> \n  </div>\n</section>\n\n";
 
 /***/ },
 /* 8 */
@@ -41337,7 +41337,8 @@
 	var startsWith = letters[Math.floor(Math.random() * letters.length)];
 	var points = 0;
 	var secondsRemaining = 60;
-	// import CountdownTimer from 'components/scattergoriesCountdown';
+	var letter = startsWith.toString();
+	var regex = new RegExp("\\b(" + letter + ")\\w+", "gi");
 	
 	var app = {
 	  init: function init() {
@@ -41364,8 +41365,11 @@
 	  scoreGame: function scoreGame() {
 	    $('input[class=answer').each(function () {
 	      var $answer = $(this).val();
-	      console.log($answer);
+	      if ($answer.match(regex)) {
+	        points++;
+	      }
 	    });
+	    $('#scattergoriesTimer').html('You got' + ' ' + points + ' ' + 'points!');
 	  }
 	};
 	
