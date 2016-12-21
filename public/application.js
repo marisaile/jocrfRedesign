@@ -9994,7 +9994,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"landing-override-bootstrap":"landing-override-bootstrap","portfolio-landing":"portfolio-landing","header-logo":"header-logo","marisaile":"marisaile","horizontal-line":"horizontal-line","sections":"sections","nav-sections":"nav-sections","portfolio-contact":"portfolio-contact","contact-links":"contact-links","contact":"contact","portfolio-bio":"portfolio-bio","bio-about":"bio-about","bio-content":"bio-content","portfolio-work":"portfolio-work","work-main":"work-main","work-title":"work-title","work-pages-nav":"work-pages-nav","grow":"grow","back-to-top":"back-to-top","page-up":"page-up","breadcrumb":"breadcrumb","body-todos":"body-todos","todo-title":"todo-title","todo-container":"todo-container","inuput-name":"inuput-name","title-edit-input":"title-edit-input","form-control":"form-control","add-todo-container":"add-todo-container","col-xs-10":"col-xs-10","col-xs-2":"col-xs-2","btn":"btn","btn-add-todo":"btn-add-todo","funny-squares-body":"funny-squares-body","funny-squares":"funny-squares","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","photo-search-body":"photo-search-body","photo-search-title":"photo-search-title","search-container":"search-container","search-photo":"search-photo","no-border":"no-border","search-photos":"search-photos","search-results":"search-results","masonry":"masonry","photo":"photo","writing-prompts":"writing-prompts","writing-prompts-heading":"writing-prompts-heading","writing-prompts-button":"writing-prompts-button","writing-prompt-container":"writing-prompt-container","submit-prompt":"submit-prompt","prompt-modal":"prompt-modal","new-prompt":"new-prompt","prompt-suggestion":"prompt-suggestion","send-prompt":"send-prompt","bgimg-1":"bgimg-1","bgimg-2":"bgimg-2","bgimg-3":"bgimg-3","bgimg-4":"bgimg-4","caption":"caption","border":"border","item":"item","nav":"nav","joc":"joc","joc-about":"joc-about","what-are":"what-are","sample-nav":"sample-nav","sample-tests-body":"sample-tests-body","sample-tests":"sample-tests","show-silograms":"show-silograms","show-number-series":"show-number-series","show-number-seris":"show-number-seris","silograms-container":"silograms-container","instructions-container-silo":"instructions-container-silo","start-silo":"start-silo","next-word":"next-word","answer-container":"answer-container","submit-responses-silo":"submit-responses-silo","submit-responses":"submit-responses","number-series-container":"number-series-container","instructions-container-ns":"instructions-container-ns","start-ns":"start-ns","ns-items":"ns-items","submit-responses-ns":"submit-responses-ns","scattergories-body":"scattergories-body","scattergories-container":"scattergories-container","letter-is":"letter-is","scattergoriesTimer":"scattergoriesTimer","category-list-container":"category-list-container","categories":"categories","breakout-header":"breakout-header","myCanvas":"myCanvas","start-game":"start-game","win-message":"win-message","you-won":"you-won","mainBubble":"mainBubble","topBubble":"topBubble","override-bootstrap":"override-bootstrap"};
+	module.exports = {"landing-override-bootstrap":"landing-override-bootstrap","portfolio-landing":"portfolio-landing","header-logo":"header-logo","marisaile":"marisaile","horizontal-line":"horizontal-line","sections":"sections","nav-sections":"nav-sections","portfolio-contact":"portfolio-contact","contact-links":"contact-links","contact":"contact","portfolio-bio":"portfolio-bio","bio-about":"bio-about","bio-content":"bio-content","portfolio-work":"portfolio-work","work-main":"work-main","work-title":"work-title","work-pages-nav":"work-pages-nav","grow":"grow","back-to-top":"back-to-top","page-up":"page-up","breadcrumb":"breadcrumb","body-todos":"body-todos","todo-title":"todo-title","todo-container":"todo-container","inuput-name":"inuput-name","title-edit-input":"title-edit-input","form-control":"form-control","add-todo-container":"add-todo-container","col-lg-10":"col-lg-10","col-lg-2":"col-lg-2","btn":"btn","btn-add-todo":"btn-add-todo","funny-squares-body":"funny-squares-body","funny-squares":"funny-squares","square-container":"square-container","square":"square","shadow-container":"shadow-container","shadow":"shadow","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","photo-search-body":"photo-search-body","photo-search-title":"photo-search-title","search-container":"search-container","search-photo":"search-photo","no-border":"no-border","search-photos":"search-photos","search-results":"search-results","masonry":"masonry","photo":"photo","writing-prompts":"writing-prompts","writing-prompts-heading":"writing-prompts-heading","writing-prompts-button":"writing-prompts-button","writing-prompt-container":"writing-prompt-container","submit-prompt":"submit-prompt","prompt-modal":"prompt-modal","new-prompt":"new-prompt","prompt-suggestion":"prompt-suggestion","send-prompt":"send-prompt","bgimg-1":"bgimg-1","bgimg-2":"bgimg-2","bgimg-3":"bgimg-3","bgimg-4":"bgimg-4","caption":"caption","border":"border","item":"item","nav":"nav","joc":"joc","joc-about":"joc-about","what-are":"what-are","sample-nav":"sample-nav","sample-tests-body":"sample-tests-body","sample-tests":"sample-tests","show-silograms":"show-silograms","show-number-series":"show-number-series","show-number-seris":"show-number-seris","silograms-container":"silograms-container","instructions-container-silo":"instructions-container-silo","start-silo":"start-silo","next-word":"next-word","answer-container":"answer-container","submit-responses-silo":"submit-responses-silo","submit-responses":"submit-responses","number-series-container":"number-series-container","instructions-container-ns":"instructions-container-ns","start-ns":"start-ns","ns-items":"ns-items","submit-responses-ns":"submit-responses-ns","scattergories-body":"scattergories-body","scattergories-container":"scattergories-container","letter-is":"letter-is","scattergoriesTimer":"scattergoriesTimer","category-list-container":"category-list-container","categories":"categories","breakout-header":"breakout-header","myCanvas":"myCanvas","start-game":"start-game","win-message":"win-message","you-won":"you-won","mainBubble":"mainBubble","topBubble":"topBubble","override-bootstrap":"override-bootstrap"};
 
 /***/ },
 /* 3 */,
@@ -10285,6 +10285,7 @@
 	        var dataString = response.responseText;
 	        var data = JSON.parse(dataString);
 	        prompts = data;
+	        app.shuffleArray(prompts);
 	        app.displayPrompt();
 	      }
 	    });
@@ -10306,14 +10307,10 @@
 	      promptHtml = _underscore2['default'].map(prompts, function (prompt) {
 	        return compiledTemplate(prompt);
 	      });
-	      // app.shuffleArray(backgroundColors);
-	      // var randomPrompt = promptHtml.slice(0, 1);
 	      $('.writing-prompt-container').html(promptHtml[++index % promptHtml.length]);
-	      // var randomColor = backgroundColors.slice(0, 1);
 	      $('.writing-prompts').css({
 	        'background-color': backgroundColors[++index % backgroundColors.length]
 	      });
-	      // index++;
 	    });
 	  },
 	  shuffleArray: function shuffleArray(array) {
@@ -66277,15 +66274,17 @@
 	  render: function render() {
 	    (0, _jquery2['default'])('.submit-responses-ns').on('click', function (e) {
 	      e.preventDefault();
-	      if ((0, _jquery2['default'])('.one').val() === '17') {
+	      if ((0, _jquery2['default'])('.one').val() === '4') {
 	        points++;
-	      }if ((0, _jquery2['default'])('.two').val() === '5') {
+	      }if ((0, _jquery2['default'])('.two').val() === '8') {
 	        points++;
-	      }if ((0, _jquery2['default'])('.three').val() === '42') {
+	      }if ((0, _jquery2['default'])('.three').val() === '15') {
 	        points++;
-	      }if ((0, _jquery2['default'])('.four').val() === '11') {
+	      }if ((0, _jquery2['default'])('.four').val() === '16') {
 	        points++;
-	      }if ((0, _jquery2['default'])('.five').val() === '21') {
+	      }if ((0, _jquery2['default'])('.five').val() === '23') {
+	        points++;
+	      }if ((0, _jquery2['default'])('.six').val() === '42') {
 	        points++;
 	      }
 	      (0, _jquery2['default'])('.ns-items').html('You got' + ' ' + points + ' ' + 'correct!');

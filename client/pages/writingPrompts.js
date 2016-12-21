@@ -34,6 +34,7 @@ var app = {
         var dataString = response.responseText;
         var data = JSON.parse(dataString); 
         prompts = data;
+        app.shuffleArray(prompts);
         app.displayPrompt();
       }  
     }); 
@@ -55,14 +56,10 @@ var app = {
       promptHtml = _.map(prompts, function(prompt){
         return compiledTemplate(prompt);
       });
-      // app.shuffleArray(backgroundColors);
-      // var randomPrompt = promptHtml.slice(0, 1);
       $('.writing-prompt-container').html(promptHtml[++index % promptHtml.length]);
-      // var randomColor = backgroundColors.slice(0, 1);
       $('.writing-prompts').css({
         'background-color': backgroundColors[++index % backgroundColors.length]
       });  
-      // index++;
     });
   }, 
   shuffleArray: function(array){

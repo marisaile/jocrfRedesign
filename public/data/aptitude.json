@@ -3,84 +3,94 @@
 		{
 			"name": "Divergent Thinking", "description": "Thought process or method used to generate creative ideas by exploring many possible solutions", "children": [
 				{
-					"name": "Ideaphoria"
+					"name": "Ideaphoria", "address": "", "note": "Flow of ideas"
 				},
 				{
-					"name": "Foresight"
+					"name": "Foresight", "address": "", "note": "Seeing possibilities"
 				}
 			]
 		},
 		{
 			"name": "Convergent Thinking", "description": "Problem solving technique involving the bringing together of different ideas to determine a single best solution to a lucidly defined problem.", "children": [
 				{
-					"name": "Inductive Reasoning"
+					"name": "Inductive Reasoning", "address": "", "note": "Reasoning from specific to general"
 				},
 				{
-					"name": "Analytical Reasoning"
+					"name": "Analytical Reasoning", "address": " ", "note": "Organizing and sequencing of information"
 				},
 				{
-					"name": "Number Series"
+					"name": "Number Series", "address": "", "note": "Identifying patterns in numbers"
 				}
 			]
 		},
 		{
 			"name": "Spatial Reasoning", "description": "The ability to understand and remember the spatial relations among objects",  "children": [
 				{
-					"name": "Paper Folding"
+					"name": "Paper Folding", "address": "", "note": "Visualizing in three dimensions"
 				},
 				{
-					"name": "Wiggly Block"
+					"name": "Wiggly Block", "address": "", "note": "Working with three dimensional objects"
 				},
 				{
-					"name": "Composite Score"
-				},
-				{
-					"name": "Memory for Design"
+					"name": "Memory for Design", "address": "", "note": "Two-dimensional spatial memory"
 				}
 			]
 		}, 
 		{
 			"name": "Numbers", "description": "The ability to use numbers effectively", "children": [
 				{
-					"name": "Number Series"
+					"name": "Number Series", "address": "", "note": "Identifying patterns in numbers"
 				},
 				{
-					"name": "Number Facility"
+					"name": "Number Facility", "address": "", "note": "Ease with numbers"
 				},
 				{
-					"name": "Graphoria"
+					"name": "Graphoria", "address": "", "note": "Visual scanning speed"
 				},
 				{
-					"name": "Number Memory"
+					"name": "Number Memory", "address": "", "note": "Memorizing numerical information"
 				}
 			]
 		},
 		{
 			"name": "Auditory", "description": "The ability to distinguish and remember tones and melodies",  "children": [
 				{
-					"name": "Tonal Memory"
+					"name": "Tonal Memory", "address": "", "note": "Identifying and remembering melodies"
 				},
 				{
-					"name": "Pitch Discrimination"
+					"name": "Pitch Discrimination", "address": "", "note": "Identifying small differences in tones"
 				},
 				{
-					"name": "Rhythm Memory"
+					"name": "Rhythm Memory", "address": "", "note": "Remembering rhythms"
 				}
 			]
 		},
 		{
 			"name": "Memory", "description": "Short-term retention of numbers, words, patterns and objects", "children": [
 				{
-					"name": "Memory for Design"
+					"name": "Memory for Design", "address": "", "note": "Two-dimensional spatial memory"
 				},
 				{
-					"name": "Silograms"
+					"name": "Silograms", "address": "", "note": "Word learning"
 				},
 				{
-					"name": "Observation"
+					"name": "Observation", "address": "", "note": "Seeing and remembering subtle changes"
 				}, 
 				{
-					"name": "Number Memory"
+					"name": "Number Memory", "address": "", "note": "Memorizing numerical information"
+				}
+			]
+		},
+		{
+			"name": "Motor", "description": "The ability to perform fine tune, precision tasks or harness physical energy", "children": [
+				{
+					"name": "Grip", "address": "", "note": "Internal energy"
+				}, 
+				{
+					"name": "Tweezer Dexterity", "address": "", "note": "Working with a small tool or instrument"
+				},
+				{
+					"name": "Finger Dexterity", "address": "", "note": "Fine dexterity with the tips of ones fingers"
 				}
 			]
 		}

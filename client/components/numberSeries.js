@@ -8,15 +8,17 @@ var app = {
   render: function(){
     $('.submit-responses-ns').on('click', function(e){
       e.preventDefault();
-      if ($('.one').val() === '17') {
+      if ($('.one').val() === '4') {
         points++;
-      } if ($('.two').val() === '5') {
+      } if ($('.two').val() === '8') {
         points++;
-      } if ($('.three').val() === '42') {
+      } if ($('.three').val() === '15') {
         points++;
-      } if ($('.four').val() === '11') {
+      } if ($('.four').val() === '16') {
         points++;
-      } if ($('.five').val() === '21') {
+      } if ($('.five').val() === '23') {
+        points++;
+      } if ($('.six').val() === '42') {
         points++;
       }
       $('.ns-items').html('You got' + ' ' + points + ' ' + 'correct!');

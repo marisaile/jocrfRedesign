@@ -157,7 +157,7 @@ body.landing-override-bootstrap section.portfolio-bio h1.bio-about {
   top: 5vh;
   left: 6%;
   font-family: 'Montez', cursive;
-  font-size: 50px;
+  font-size: 6vmin;
   color: #ef3e36;
 }
 
@@ -168,7 +168,7 @@ body.landing-override-bootstrap section.portfolio-bio p.bio-content {
   margin: 50px auto;
   /* top: 50px;*/
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
+  font-size: 3vmin;
   color: #2e282a;
 }
 
@@ -303,23 +303,23 @@ body.landing-override-bootstrap section.portfolio-work .work-main .page-up:hover
   margin-bottom: 10px;
 }
 
-.body-todos .todo-container .add-todo-container .col-xs-10 {
+.body-todos .todo-container .add-todo-container .col-lg-10 {
   padding-left: 0;
   font-size: 18px;
   color: #2e282a;
 }
 
-.body-todos .todo-container .add-todo-container .col-xs-2 {
+.body-todos .todo-container .add-todo-container .col-lg-2 {
   padding-right: 0;
   text-align: right;
 }
 
-.body-todos .todo-container .add-todo-container .col-xs-2 .btn.btn-add-todo {
+.body-todos .todo-container .add-todo-container .col-lg-2 .btn.btn-add-todo {
   background-color: #17bebb;
   color: #fff;
 }
 
-.body-todos .todo-container .add-todo-container .col-xs-2 .btn.btn-add-todo:focus {
+.body-todos .todo-container .add-todo-container .col-lg-2 .btn.btn-add-todo:focus {
   outline: none;
 }
 
