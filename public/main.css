@@ -340,21 +340,21 @@ body.funny-squares-body h1.funny-squares {
 body.funny-squares-body .square-container {
   position: relative;
   display: inline-block;
-  top: 175px;
-  left: 330px;
+  top: 125px;
+  left: 230px;
   perspective: 500px;
 }
 
 body.funny-squares-body .square {
-  height: 100px;
-  width: 100px;
+  height: 125px;
+  width: 125px;
   margin-right: 40px;
   background-color: #17bebb;
   text-align: center;
   vertical-align: middle;
   font-family: arial;
   font-size: 42px;
-  line-height: 100px;
+  line-height: 125px;
   transform: none;
   transition: transform .5s;
   color: #f7f7f7;
@@ -364,8 +364,8 @@ body.funny-squares-body .square {
 body.funny-squares-body .shadow-container {
   position: relative;
   display: inline-block;
-  top: 200px;
-  left: 260px;
+  top: 150px;
+  left: 140px;
   perspective: 250px;
 }
 

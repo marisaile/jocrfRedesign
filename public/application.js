@@ -41008,6 +41008,7 @@
 	
 	var _templatesFunnySquareHtml2 = _interopRequireDefault(_templatesFunnySquareHtml);
 	
+	// var squareColors = ['blue', 'red', 'orange', 'green', 'purple', 'black'];
 	var template;
 	
 	var app = {
@@ -41017,11 +41018,13 @@
 	  },
 	
 	  render: function render() {
-	    // display 6 squares 
 	    var numberOfSquares = 6;
 	    var renderedHtml = '';
 	    _underscore2['default'].times(numberOfSquares, function (index) {
 	      renderedHtml += template({ id: index + 1 });
+	      // $('.square').css({
+	      //   'background-color': squareColors[index]
+	      // });
 	    });
 	    (0, _jquery2['default'])('main').append(renderedHtml);
 	  }
