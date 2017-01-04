@@ -19170,7 +19170,7 @@
 	  el: '.todo-container',
 	  model: _pagesTodoReactTodoModel2['default'],
 	  events: {
-	    'click .btn-add': 'addTodoItem',
+	    'click .btn-add-todo': 'addTodoItem',
 	    'keypress .add-todo-container': 'addTodoEnter'
 	  },
 	  initialize: function initialize() {

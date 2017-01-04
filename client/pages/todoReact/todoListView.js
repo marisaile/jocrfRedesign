@@ -13,7 +13,7 @@ var TodoControllerView = Backbone.View.extend({
   el: '.todo-container',
   model: todoModel,
   events: {
-    'click .btn-add': 'addTodoItem',
+    'click .btn-add-todo': 'addTodoItem',
     'keypress .add-todo-container': 'addTodoEnter'
   },
   initialize: function(){
