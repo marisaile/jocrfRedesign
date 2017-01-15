@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+    
+body.timer-body {
+  margin: 0;
+  background-color: #333;
+  font-family: 'Ubuntu', sans-serif;
+
+  a.breadcrumb {
+    margin-top: -30px;
+  }
+
+  .stopwatch-container {
+    position: relative;
+    display: block;
+    margin: 50px auto;
+    padding: 30px;
+    height: 700px;
+    width: 500px;
+    background-color: #F0F1F3;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px;
+
+    .test-name {
+      position: relative;
+      left: 25%;
+      font-size: 30px;      
+    }
+    .form-number {
+      font-size: 15px;
+      text-align: center;
+    }
+    .reset-button {
+      position: relative;
+      display: block;
+      left: 385px;
+      top: -100px;
+      font-size: 15px;
+      background-color: #F2F3F5;
+    } 
+    .cum-counter {
+      position: relative;
+      font-size: 15px;
+    }
+    .split-counter {
+      position: relative;
+      font-size: 25px;
+    }
+    .btn.start-stop-button {
+      position: relative;
+      display: inline-block;
+      padding: 0;
+      height: 75px;
+      width: 80px;
+      margin: 20px;
+      /*top: 50px;*/
+      left: 100px;
+      font-size: 20px;
+      text-align: center;
+      background-color: #17B20A;
+      color: #fff;
+    }
+    .btn.start-stop-button:focus {
+      outline: none;
+    }
+    .btn.misc-button {
+      position: relative;
+      display: inline-block;
+      padding: 0;
+      height: 75px;
+      width: 80px;
+      margin: 20px;
+      /*top: 50px;*/
+      left: 100px;
+      font-size: 20px;
+      text-align: center;
+      background-color: #089D9A;
+      color: #fff;
+    }
+    .btn.misc-button:focus {
+      outline: none;
+    } 
+    .score {
+      position: relative;
+      display: block;
+      left: 500px;
+      font-size: 15px;
+    }
+    .create-csv {
+      background-color: #F0F1F3;
+      position: relative;
+      display: block;
+      top: -10px;
+      left: 300px;
+      font-size: 15px;
+    }
+    .create-csv:focus {
+      outline: none;
+    }
+    .item-container {
+      position: relative;
+      display: block;
+      margin: 10px auto;
+      height: 300px;
+      width: 350px;
+      border: 1px solid black;
+
+      h2 {
+        position: relative;
+        font-size: 30px;
+        text-align: center;
+        top: 100px;
+      }
+      h4 {
+        position: relative;
+        font-size: 50px;
+        text-align: center;
+        top: 145px;
+      }
+      .tweezer-row {
+        position: relative;
+        text-align: center;
+        font-size: 50px;
+        top: 100px;
+      }
+      .dropped-pin {
+        position: relative;
+        display: inline-block;
+        top: 150px;
+        left: 50px;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        font-size: 18px;
+        text-align: center;
+        background-color: #555;
+        color: #fff;
+      }
+      .dropped-pin:focus {
+        outline: none;
+      }
+      .dropped-pin:active {
+        background-color: #000;
+      }
+      .picked-up {
+        position: relative;
+        display: inline-block;
+        top: 150px;
+        left: 150px;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        font-size: 18px;
+        text-align: center;
+        background-color: #fff;
+        color: #555;
+      }
+      .picked-up:focus {
+        outline: none;
+      }
+      .picked-up:active {
+        background-color: #dfdfdf;
+      }
+    }
+  }
+  table {
+    position: relative;
+    margin: 50px auto;
+    font-size: 20px;
+
+    tr {
+      height: 20px;
+      width: 100px;
+    }
+    td {
+      border: 1px black solid;
+      padding: 5px;
+    }
+  }
+}
+
+
+
+
+    
+

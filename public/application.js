@@ -58,9 +58,13 @@
 	
 	var _pagesTimerTD2 = _interopRequireDefault(_pagesTimerTD);
 	
-	var _pagesTimerObs = __webpack_require__(53);
+	var _pagesTimerObs = __webpack_require__(54);
 	
 	var _pagesTimerObs2 = _interopRequireDefault(_pagesTimerObs);
+	
+	var _pagesMain = __webpack_require__(57);
+	
+	var _pagesMain2 = _interopRequireDefault(_pagesMain);
 	
 	(0, _jquery2['default'])(function () {
 	
@@ -71,6 +75,7 @@
 	      _pagesTimerTD2['default'].init();
 	      break;
 	    case '/pages/observationTimer.html':
+	      debugger;
 	      _pagesTimerObs2['default'].init();
 	      break;
 	    default:
@@ -9931,6 +9936,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+	module.exports = {"timer-body":"timer-body","breadcrumb":"breadcrumb","stopwatch-container":"stopwatch-container","test-name":"test-name","form-number":"form-number","reset-button":"reset-button","cum-counter":"cum-counter","split-counter":"split-counter","btn":"btn","start-stop-button":"start-stop-button","misc-button":"misc-button","score":"score","create-csv":"create-csv","item-container":"item-container","tweezer-row":"tweezer-row","dropped-pin":"dropped-pin","picked-up":"picked-up"};
 
 /***/ },
 /* 3 */,
@@ -9971,11 +9977,11 @@
 	
 	var _d32 = _interopRequireDefault(_d3);
 	
-	var _templatesDataTableHtml = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"templates/dataTable.html\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _templatesDataTableHtml = __webpack_require__(52);
 	
 	var _templatesDataTableHtml2 = _interopRequireDefault(_templatesDataTableHtml);
 	
-	var twzRows = __webpack_require__(52);
+	var twzRows = __webpack_require__(53);
 	var tweezerTemplate;
 	var currentIndex = 0;
 	var interval;
@@ -42818,6 +42824,12 @@
 /* 52 */
 /***/ function(module, exports) {
 
+	module.exports = "<div class=\"datatable\">\n\n</div>";
+
+/***/ },
+/* 53 */
+/***/ function(module, exports) {
+
 	'use strict';
 	
 	module.exports = [{
@@ -42839,7 +42851,7 @@
 	}];
 
 /***/ },
-/* 53 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42862,7 +42874,7 @@
 	
 	var _lodash2 = _interopRequireDefault(_lodash);
 	
-	var _templatesObsItemHtml = __webpack_require__(54);
+	var _templatesObsItemHtml = __webpack_require__(55);
 	
 	var _templatesObsItemHtml2 = _interopRequireDefault(_templatesObsItemHtml);
 	
@@ -42874,11 +42886,11 @@
 	
 	var _d32 = _interopRequireDefault(_d3);
 	
-	var _templatesDataTableHtml = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"templates/dataTable.html\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _templatesDataTableHtml = __webpack_require__(52);
 	
 	var _templatesDataTableHtml2 = _interopRequireDefault(_templatesDataTableHtml);
 	
-	var obsItems = __webpack_require__(55);
+	var obsItems = __webpack_require__(56);
 	var obsItemTemplate;
 	var currentIndex = 0;
 	var interval;
@@ -43110,13 +43122,13 @@
 	// model.save();
 
 /***/ },
-/* 54 */
+/* 55 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"obs-item\">\n  <h2>{{id}}</h2>\n  <h4>{{change}}</h4>\n</div>";
 
 /***/ },
-/* 55 */
+/* 56 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -43242,6 +43254,39 @@
 	  id: 'Item 40',
 	  change: 'one paperclip gone'
 	}];
+
+/***/ },
+/* 57 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _templatesNavigationHtml = __webpack_require__(58);
+	
+	var _templatesNavigationHtml2 = _interopRequireDefault(_templatesNavigationHtml);
+	
+	var app = {
+		init: function init() {
+			app.render();
+		},
+		render: function render() {
+			(0, _jquery2['default'])('body').html(_templatesNavigationHtml2['default']);
+		}
+	};
+	
+	module.exports = app;
+
+/***/ },
+/* 58 */
+/***/ function(module, exports) {
+
+	module.exports = "<a href=\"/pages/tweezerTimer.html\">Tweezer</a>\n<a href=\"/pages/observationTimer.html\">Observation</a>";
 
 /***/ }
 /******/ ]);
