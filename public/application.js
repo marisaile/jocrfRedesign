@@ -9936,7 +9936,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"timer-body":"timer-body","breadcrumb":"breadcrumb","stopwatch-container":"stopwatch-container","test-name":"test-name","form-number":"form-number","reset-button":"reset-button","cum-counter":"cum-counter","split-counter":"split-counter","btn":"btn","start-stop-button":"start-stop-button","misc-button":"misc-button","score":"score","create-csv":"create-csv","item-container":"item-container","tweezer-row":"tweezer-row","dropped-pin":"dropped-pin","picked-up":"picked-up"};
+	module.exports = {"timer-body":"timer-body","list-group":"list-group","timers":"timers","stopwatch-container":"stopwatch-container","test-name":"test-name","form-number":"form-number","reset-button":"reset-button","cum-counter":"cum-counter","split-counter":"split-counter","btn":"btn","start-stop-button":"start-stop-button","misc-button":"misc-button","score":"score","create-csv":"create-csv","item-container":"item-container","tweezer-row":"tweezer-row","dropped-pin":"dropped-pin","picked-up":"picked-up"};
 
 /***/ },
 /* 3 */,
@@ -43267,26 +43267,14 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _templatesNavigationHtml = __webpack_require__(58);
-	
-	var _templatesNavigationHtml2 = _interopRequireDefault(_templatesNavigationHtml);
-	
 	var app = {
 		init: function init() {
 			app.render();
 		},
-		render: function render() {
-			(0, _jquery2['default'])('body').html(_templatesNavigationHtml2['default']);
-		}
+		render: function render() {}
 	};
 	
 	module.exports = app;
-
-/***/ },
-/* 58 */
-/***/ function(module, exports) {
-
-	module.exports = "<a href=\"/pages/tweezerTimer.html\">Tweezer</a>\n<a href=\"/pages/observationTimer.html\">Observation</a>";
 
 /***/ }
 /******/ ]);
