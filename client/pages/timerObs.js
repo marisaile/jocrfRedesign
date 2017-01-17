@@ -1,5 +1,7 @@
 
+
 import $ from 'jquery';
+import moment from 'moment';
 import Handlebars from 'handlebars';
 import lscache from 'lscache';
 import _ from 'lodash';
@@ -8,15 +10,20 @@ import json2csv from 'json2csv';
 import d3 from 'd3';
 import dataTable from 'templates/dataTable.html';
 
-
 var obsItems = require('components/observation');
-var obsItemTemplate; 
-var currentIndex = 0;
-var interval; 
+var obsItemTemplate;
 var timerRunning = false;
-var splitCount = 0;
-var cumCount = 0;
+var interval; 
+var startTime;
+var time;
+var minutes;
+var hundredths;
+var $startStop = $('.start-stop-button');
+var $study = $('.misc-button');
+var $reset = $('.reset-button');
+var times = [];
 var points;
+var currentIndex = 0;
 var index = 0;
 var pointsArray = [];
 var testData = [];
@@ -43,8 +50,6 @@ var model = {
   }
 };
 
-// var view = $('script[type="text/x-template"]').html();
-
 var app = {
   init: function(){
     model.init();
@@ -57,138 +62,70 @@ var app = {
   compileTemplate: function(){
     obsItemTemplate = Handlebars.compile(template);
   },
+  updateTimer: function(){
+    var now = moment();
+    var timeDiff = (now - startTime) / 1000;
+    minutes = Math.floor(timeDiff / 60);
+    hundredths = Math.floor(timeDiff / 0.6) % 100;
+    app.stringify(minutes, hundredths);
+    $('.timer').html(time);
+  },
+  stringify: function(){
+    if (minutes < 10) {
+      minutes = '0' + minutes;
+    }
+    if (hundredths < 10) {
+      hundredths = '0' + hundredths;
+    }
+    time = (minutes + '.' + hundredths);
+  },
   startTimer: function(){
-    var $startStop = $('.start-stop-button');
     $startStop.on('click', function(){
-      if ($startStop.html() === 'Start') {
-        if (timerRunning === false) {
-          timerRunning = true;
-        }
-        interval = setInterval(function(){
-          splitCount++;
-          var splitCountText = splitCount.toString();
-          if (splitCountText.length < 2) {
-            splitCountText = '.0' + splitCount;
-          } else if (splitCountText.length > 2) {
-            splitCountText = splitCountText.slice(0, 1) + '.' + splitCountText.slice(1, 3);
-          } else {
-            splitCountText = '.' + splitCount;
-          }
-          $('.split-counter').html('Individual Time: ' + splitCountText);
-          cumCount++;
-          var cumText = cumCount.toString();
-          if (cumText.length < 2) {
-            cumText = '.0' + cumText;
-          } else if (cumText.length > 2) {
-            cumText = cumText.slice(0, 1) + '.' + cumText.slice(1, 3);
-          } else {
-            cumText = '.' + cumText;
-          }
-          $('.cum-counter').html('Cumulative Time: ' + cumText);
-        }, 600);
+      if (timerRunning === false) {
+        timerRunning = true;  
+        startTime = moment();     
+        interval = setInterval(app.updateTimer, 150);
         $startStop.html('Stop');
-        $startStop.css({'background-color': '#19284B'});
+        $startStop.css({
+          'background-color': '#19284B'
+        });
         app.showItem();
       } else {
         app.stopTimer();
-        $startStop.html('Start');
-        $startStop.css({'background-color': '#17B20A'});    
       }
-    });   
+    });
   },
   stopTimer: function(){
+    timerRunning = false;
+    $startStop.html('Start');
+    $startStop.css({
+      'background-color': '#17B20A'
+    });
     interval = clearInterval(interval);
-    if (timerRunning === true) {
-      timerRunning = false;
-    }
-    app.displayTimes();
+    times.push(hundredths);
     app.addPoints();
     itemData = {
       itemNumber: index,
-      time: splitCount,
+      time: hundredths,
       points: points,
       totalPoints: pointsTotal
     };
     testData.push(itemData);
     model.save();
-    splitCount = 0;
-  },
-  studyPage: function(){  
-    var $study = $('.misc-button');
-    $study.on('click', function(){
-      if (timerRunning === false) {
-        timerRunning = true;
-        interval = setInterval(function(){ 
-          if (splitCount === 50) {
-            interval = clearInterval(interval);
-            splitCount = 0;
-            cumCount = 0;
-            $study.css({
-              'background-color': '#089D9A'
-            });
-          } else {
-            splitCount++;
-            var splitCountText = splitCount.toString();
-            if (splitCountText.length < 2) {
-              splitCountText = '.0' + splitCount;
-            } else if (splitCountText.length > 2) {
-              splitCountText = splitCountText.slice(0, 1) + '.' + splitCountText.slice(1, 3);
-            } else {
-              splitCountText = '.' + splitCount;
-            }
-            $('.split-counter').html('Individual Time: ' + splitCountText);
-            cumCount++;
-            var cumText = cumCount.toString();
-            if (cumText.length < 2) {
-              cumText = '.0' + cumText;
-            } else if (cumText.length > 2) {
-              cumText = cumText.slice(0, 1) + '.' + cumText.slice(1, 3);
-            } else {
-              cumText = '.' + cumText;
-            }
-            $('.cum-counter').html('Cumulative Time: ' + cumText);
-          }
-        }, 600);
-        $study.css({
-          'background-color': '#5D0A57'
-        });
-      }
-    });          
-  },
-  resetTimer: function(){
-    var $reset = $('.reset-button');
-    $reset.on('click', function(){
-      if (timerRunning === false) {
-        app.clearEverything(); 
-      } 
-    });   
-  },
-  displayTimes: function(){
-    if (splitCount < 10) {
-      points = 3;
-    } else if (splitCount > 9 && splitCount < 20) {
-      points = 2;
-    } else if (splitCount > 19 && splitCount < 30){
-      points = 1;
-    } else {
-      points = 0;
-    }
-    index++;
-  },
-  clearEverything: function(){
-    testData = [];
-    pointsArray = [];
-    splitCount = 0;
-    cumCount = 0;
-    index = 0;
-    currentIndex = 0;
-
-    $('.split-counter').html('Individual Time: ' + '.0' + splitCount);
-    $('.cum-counter').html('Cumulative Time: ' + '.0' + cumCount);
-    $('.item-container').html('');
-    $('.score').html('Score =');
   },
   addPoints: function(){
+    (function assignPoints(){
+      if (hundredths < 10) {
+        points = 3;
+      } else if (hundredths > 9 && hundredths < 20) {
+        points = 2;
+      } else if (hundredths > 19 && hundredths < 30) {
+        points = 1;
+      } else {
+        points = 0;
+      }
+      index++;
+    }());    
     pointsArray.push(points);
     pointsTotal = _.sum(pointsArray);
     $('.score').html('Score = ' + pointsTotal);
@@ -224,6 +161,43 @@ var app = {
       }
     }); 
   },
+  studyPage: function(){
+    $study.on('click', function(){
+      if (timerRunning === false) {
+        timerRunning = true;
+        startTime = moment();
+        interval = setInterval(app.updateTimer, 150);
+        $study.css({
+          'background-color': '#5D0A57'
+        });   
+      } else {
+        timerRunning = false;
+        interval = clearInterval(interval);
+        $study.css({
+          'background-color': '#089D9A'
+        });
+      }
+    });
+  },
+  resetTimer: function(){
+    $reset.on('click', function(){
+      if (timerRunning === false) {
+        app.clearEverything(); 
+      } 
+    });   
+  },
+  clearEverything: function(){
+    interval = clearInterval(interval);
+    testData = [];
+    pointsArray = [];
+    minutes = 0;
+    hundredths = 0;
+    index = 0;
+    currentIndex = 0;
+    $('.item-container').html('');
+    $('.score').html('Score =');
+    $('.timer').html('00.00');
+  },
   bindClickEvents: function(){
     app.startTimer();
     app.studyPage();
@@ -233,13 +207,3 @@ var app = {
 };
 
 module.exports = app;
-
-// app.displayTimes();
-      // itemData = {
-      //   itemNumber: index - 1,
-      //   time: splitCount,
-      //   points: points
-      // };
-      // // app.addPoints(); 
-      // testData.push(itemData);
-      // model.save();

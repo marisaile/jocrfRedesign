@@ -30,11 +30,15 @@ body.timer-body .stopwatch-container {
   background-color: #F0F1F3;
   border-radius: 6px;
   box-shadow: 2px 2px 2px;
+  /*    .split-counter {
+      position: relative;
+      font-size: 25px;
+    }*/
 }
 
 body.timer-body .stopwatch-container .test-name {
   position: relative;
-  left: 25%;
+  text-align: center;
   font-size: 30px;
 }
 
@@ -52,14 +56,11 @@ body.timer-body .stopwatch-container .reset-button {
   background-color: #F2F3F5;
 }
 
-body.timer-body .stopwatch-container .cum-counter {
+body.timer-body .stopwatch-container .timer {
   position: relative;
-  font-size: 15px;
-}
-
-body.timer-body .stopwatch-container .split-counter {
-  position: relative;
-  font-size: 25px;
+  text-align: center;
+  top: -20px;
+  font-size: 50px;
 }
 
 body.timer-body .stopwatch-container .btn.start-stop-button {
@@ -67,10 +68,10 @@ body.timer-body .stopwatch-container .btn.start-stop-button {
   display: inline-block;
   padding: 0;
   height: 75px;
-  width: 80px;
+  width: 90px;
   margin: 20px;
   /*top: 50px;*/
-  left: 100px;
+  left: 25px;
   font-size: 20px;
   text-align: center;
   background-color: #17B20A;
@@ -86,10 +87,10 @@ body.timer-body .stopwatch-container .btn.misc-button {
   display: inline-block;
   padding: 0;
   height: 75px;
-  width: 80px;
+  width: 90px;
   margin: 20px;
   /*top: 50px;*/
-  left: 100px;
+  left: 150px;
   font-size: 20px;
   text-align: center;
   background-color: #089D9A;
@@ -103,7 +104,7 @@ body.timer-body .stopwatch-container .btn.misc-button:focus {
 body.timer-body .stopwatch-container .score {
   position: relative;
   display: block;
-  left: 500px;
+  left: 300px;
   font-size: 15px;
 }
 
@@ -111,7 +112,6 @@ body.timer-body .stopwatch-container .create-csv {
   background-color: #F0F1F3;
   position: relative;
   display: block;
-  top: -10px;
   left: 300px;
   font-size: 15px;
 }
@@ -124,23 +124,23 @@ body.timer-body .stopwatch-container .item-container {
   position: relative;
   display: block;
   margin: 10px auto;
-  height: 300px;
+  height: 250px;
   width: 350px;
   border: 1px solid black;
 }
 
 body.timer-body .stopwatch-container .item-container h2 {
   position: relative;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
-  top: 100px;
+  top: 50px;
 }
 
 body.timer-body .stopwatch-container .item-container h4 {
   position: relative;
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
-  top: 145px;
+  top: 100px;
 }
 
 body.timer-body .stopwatch-container .item-container .tweezer-row {

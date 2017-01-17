@@ -4,7 +4,6 @@ import 'styles/main.scss';
 
 import tweezer from 'pages/timerTD';
 import observation from 'pages/timerObs';
-import main from 'pages/main';
 
 $(function() {
 
@@ -15,7 +14,6 @@ $(function() {
       tweezer.init();
     break;
     case '/pages/observationTimer.html':
-      debugger;
       observation.init();
     break;
     default: break;
