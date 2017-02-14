@@ -54,28 +54,13 @@
 	
 	__webpack_require__(2);
 	
-	var _pagesTimerTD = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"pages/timerTD\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _pagesMain = __webpack_require__(6);
 	
-	var _pagesTimerTD2 = _interopRequireDefault(_pagesTimerTD);
-	
-	var _pagesTimerObs = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"pages/timerObs\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-	
-	var _pagesTimerObs2 = _interopRequireDefault(_pagesTimerObs);
+	var _pagesMain2 = _interopRequireDefault(_pagesMain);
 	
 	(0, _jquery2['default'])(function () {
 	
-	  var url = window.location.pathname;
-	
-	  switch (url) {
-	    case '/pages/tweezerTimer.html':
-	      _pagesTimerTD2['default'].init();
-	      break;
-	    case '/pages/observationTimer.html':
-	      _pagesTimerObs2['default'].init();
-	      break;
-	    default:
-	      break;
-	  }
+	  _pagesMain2['default'].init();
 	});
 
 /***/ },
@@ -9931,7 +9916,60 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"joc-navbar":"joc-navbar","navbar-brand":"navbar-brand","navbar-right":"navbar-right","btn-signin":"btn-signin","find-path":"find-path","col-sm-8":"col-sm-8","navbar-toggle":"navbar-toggle","collapsed":"collapsed","col-sm-6":"col-sm-6","navbar-default":"navbar-default","icon-bar":"icon-bar","navbar-header":"navbar-header","navbar-collapse":"navbar-collapse","collapse":"collapse","navbar-nav":"navbar-nav","in":"in","collapsing":"collapsing","login-container":"login-container","form-control":"form-control","btn-login":"btn-login"};
+	module.exports = {"joc-navbar":"joc-navbar","navbar-brand":"navbar-brand","navbar-right":"navbar-right","btn-signin":"btn-signin","find-path":"find-path","col-sm-8":"col-sm-8","navbar-default":"navbar-default","navbar-toggle":"navbar-toggle","icon-bar":"icon-bar","navbar-collapse":"navbar-collapse","collapse":"collapse","navbar-nav":"navbar-nav","in":"in","collapsing":"collapsing","col-sm-6":"col-sm-6","login-container":"login-container","form-control":"form-control","btn-login":"btn-login"};
+
+/***/ },
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _templatesLandingHtml = __webpack_require__(7);
+	
+	var _templatesLandingHtml2 = _interopRequireDefault(_templatesLandingHtml);
+	
+	var _templatesClientLoginHtml = __webpack_require__(8);
+	
+	var _templatesClientLoginHtml2 = _interopRequireDefault(_templatesClientLoginHtml);
+	
+	var app = {
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {
+	    (0, _jquery2['default'])('main').html(_templatesLandingHtml2['default']);
+	    (0, _jquery2['default'])('.btn-signin').click(function (e) {
+	      e.preventDefault();
+	      (0, _jquery2['default'])('main').html(_templatesClientLoginHtml2['default']);
+	    });
+	    (0, _jquery2['default'])('.navbar-toggle').on('click', function () {
+	      (0, _jquery2['default'])('main').css('margin-top', '26vh');
+	    });
+	  }
+	};
+	
+	module.exports = app;
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"find-path\">\n  <div class=\"container-fluid\">\n    <div class=\"row\">\n      <h1>Find your Path</h1>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-sm-8 col-sm-offset-2\">\n        <p>The Johnson O'Connor Research Foundation can help you identify your natural abilities, or aptitudes, so you can find the career that's best suited for you!</p>\n        <img src=\"/images/confused-character.jpg\" class=\"img-responsive\">\n        \n      </div>\n    </div>\n  </div>\n</div>";
+
+/***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"container login-container\">\n  <form>\n  \t<div class=\"form-group\">\n  \t\t<input type=\"email\" name=\"username\" class=\"form-control\" placeholder=\"lcook317@gmail.com\">\n  \t</div>\n  \t<div class=\"form-group\">\n  \t\t<input type=\"password\" name=\"password\" class=\"form-control\" placeholder=\"*********\">\n  \t</div>\n    <!-- <div class=\"form-group\">\n      <input type=\"text\" name=\"firstName\" class=\"form-control\" placeholder=\"First Name\">\n    </div>\n    <div class=\"form-group\">\n      <input type=\"text\" name=\"lastName\" class=\"form-control\" placeholder=\"Last Name\">\n    </div>\n    <div class=\"form-group\">\n      <input type=\"text\" name=\"folderNumber\" class=\"form-control\" placeholder=\"Folder Number\">\n    </div> -->\n    <div class=\"form-group\">\n      <button type=\"submit\" class=\"btn btn-login\">Log In</button>\n    </div>\n  </form>\n</div> ";
 
 /***/ }
 /******/ ]);

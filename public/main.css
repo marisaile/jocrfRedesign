@@ -1,10 +1,131 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Open+Sans);@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);body {
   font-size: 1.75em;
   font-family: 'Open Sans', sans-serif;
-  /*background-color: #F0F1F3;*/
+  background-color: #FEFEFE;
 }
 
-/*@media (min-width: 993px) {*/
+@media (max-width: 993px) {
+  header nav.joc-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4.7em;
+    background: #33a7be;
+    box-shadow: 0 0 10px rgba(46, 45, 44, 0.25);
+  }
+  header nav.joc-navbar .navbar-brand {
+    position: relative;
+    left: 2%;
+  }
+  header nav.joc-navbar ul.navbar-right {
+    position: relative;
+    left: -2.5%;
+    top: 1.55em;
+  }
+  header nav.joc-navbar ul.navbar-right li {
+    font-size: 0.75em;
+    margin-right: 1em;
+  }
+  header nav.joc-navbar ul.navbar-right li a {
+    color: #fff;
+  }
+  header nav.joc-navbar ul.navbar-right li a:hover {
+    background: inherit;
+    /*text-decoration: none;*/
+  }
+  header nav.joc-navbar ul.navbar-right .btn-signin {
+    position: relative;
+    top: -1em;
+    background: inherit;
+    border-radius: 2px;
+    border: 2px solid #fff;
+    font-size: 0.75em;
+    letter-spacing: 1px;
+    padding: 0.5em 1em;
+  }
+  main .find-path {
+    background: transparent;
+  }
+  main .find-path h1 {
+    text-align: center;
+    font-family: 'Kaushan Script';
+    color: #222;
+  }
+  main .find-path .col-sm-8 img {
+    position: relative;
+    width: 400px;
+    margin: auto;
+  }
+  main .find-path .col-sm-8 p {
+    position: relative;
+    color: #222;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-default .navbar-toggle {
+    top: 1em;
+    border: none;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:active,
+  .navbar-default .navbar-toggle:visited {
+    background: inherit;
+  }
+  .navbar-collapse {
+    border: none;
+    /*box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);*/
+  }
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+  .navbar-nav > li {
+    float: none;
+    left: 5%;
+  }
+  .btn-signin {
+    margin-top: 20px;
+  }
+  .collapse.in {
+    display: block !important;
+    height: 30vh;
+    background-color: #33a7be;
+    border-top: none;
+  }
+  .collapsing {
+    overflow: hidden !important;
+  }
+  main {
+    position: absolute;
+    display: block;
+    min-height: 900px;
+    padding: 50px 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  main .find-path h1 {
+    text-align: center;
+    font-family: 'Kaushan Script';
+    color: #222;
+  }
+  main .find-path .col-sm-6 {
+    width: 95%;
+    margin: auto;
+  }
+  main .find-path .col-sm-6 p {
+    position: relative;
+    color: #222;
+    font-size: 1em;
+  }
+  main img {
+    width: 250px;
+  }
+}
+
 header nav.joc-navbar {
   position: fixed;
   top: 0;
@@ -13,6 +134,7 @@ header nav.joc-navbar {
   height: 4.7em;
   /*z-index: 1;*/
   background: #33a7be;
+  box-shadow: 0 0 10px rgba(46, 45, 44, 0.25);
 }
 
 header nav.joc-navbar .navbar-brand {
@@ -28,20 +150,21 @@ header nav.joc-navbar ul.navbar-right {
 
 header nav.joc-navbar ul.navbar-right li {
   margin-right: 2em;
+  letter-spacing: 1px;
 }
 
-header nav.joc-navbar ul.navbar-right a {
+header nav.joc-navbar ul.navbar-right li a {
   color: #fff;
 }
 
-header nav.joc-navbar ul.navbar-right a:hover {
+header nav.joc-navbar ul.navbar-right li a:hover {
   background: inherit;
   /*text-decoration: none;*/
 }
 
 header nav.joc-navbar ul.navbar-right .btn-signin {
   position: relative;
-  top: -1em;
+  top: -1.5em;
   background: inherit;
   border-radius: 2px;
   border: 2px solid #fff;
@@ -74,9 +197,6 @@ main .find-path h1 {
   color: #222;
 }
 
-/*  main .find-path .col-sm-6 {
-  margin-top: 50px
-}*/
 main .find-path .col-sm-8 p {
   width: 90%;
   margin: 50px auto;
@@ -89,175 +209,6 @@ main .find-path .col-sm-8 img {
   position: relative;
   width: 450px;
   margin: auto;
-}
-
-@media (max-width: 993px) {
-  header nav.joc-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4.4em;
-    /*z-index: 1;*/
-    background: #33a7be;
-  }
-  header nav.joc-navbar .navbar-brand {
-    position: relative;
-    left: 2%;
-  }
-  header nav.joc-navbar ul.navbar-right {
-    position: relative;
-    left: -2.5%;
-    top: 1.55em;
-  }
-  header nav.joc-navbar ul.navbar-right li {
-    font-size: 0.75em;
-    margin-right: 1em;
-  }
-  header nav.joc-navbar ul.navbar-right a {
-    color: #fff;
-  }
-  header nav.joc-navbar ul.navbar-right a:hover {
-    background: inherit;
-    /*text-decoration: none;*/
-  }
-  header nav.joc-navbar ul.navbar-right .btn-signin {
-    position: relative;
-    top: -1em;
-    background: inherit;
-    border-radius: 2px;
-    border: 2px solid #fff;
-    font-size: 0.75em;
-    letter-spacing: 1px;
-    padding: 0.5em 1em;
-  }
-  button.navbar-toggle.collapsed {
-    border: inherit;
-    color: #fff;
-  }
-  button.navbar-toggle.collapsed:hover {
-    background: inherit;
-  }
-  button.navbar-toggle.collapsed:focus {
-    background: inherit;
-  }
-  main {
-    min-height: 900px;
-    padding: 50px 0;
-    font-family: 'Open Sans', sans-serif;
-  }
-  main .find-path {
-    background: transparent;
-  }
-  main .find-path h1 {
-    text-align: center;
-    font-family: 'Kaushan Script';
-    color: #222;
-  }
-  main .find-path .col-sm-6 img {
-    position: relative;
-    width: 400px;
-    left: 20%;
-  }
-  main .find-path .col-sm-6 p {
-    position: relative;
-    top: 200px;
-    left: -12.5%;
-    color: #222;
-    font-size: 1em;
-  }
-}
-
-@media (max-width: 768px) {
-  button.navbar-toggle.collapsed {
-    top: 1em;
-    border: inherit;
-  }
-  .navbar-default .navbar-toggle .icon-bar {
-    background-color: #fff;
-  }
-  button.navbar-toggle.collapsed:hover {
-    background: inherit;
-  }
-  button.navbar-toggle.collapsed:focus {
-    background: inherit;
-  }
-  .navbar-header {
-    float: none;
-  }
-  button.navbar-toggle {
-    display: block;
-    background: inherit;
-  }
-  /*  .navbar-collapse {
-      border-top: 1px solid transparent;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-  }*/
-  .navbar-collapse.collapse {
-    display: none !important;
-    background-color: #33a7be;
-    border-top: none;
-    padding-bottom: 20px;
-  }
-  .navbar-nav {
-    float: none !important;
-    margin: 7.5px -15px;
-  }
-  .navbar-nav > li {
-    float: none;
-    left: 5%;
-  }
-  .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 20px;
-  }
-  /*  .navbar-text {
-      float: none;
-      margin: 15px 0;
-  }*/
-  /* since 3.1.0 */
-  .navbar-collapse.collapse.in {
-    display: block !important;
-    background-color: #33a7be;
-    border-top: none;
-    padding-bottom: 20px;
-    height: 40vh;
-  }
-  .collapsing {
-    overflow: hidden !important;
-  }
-  main {
-    position: relative;
-    display: block;
-    top: 40vh;
-    min-height: 900px;
-    padding: 50px 0;
-    font-family: 'Open Sans', sans-serif;
-  }
-  main .find-path h1 {
-    text-align: center;
-    font-family: 'Kaushan Script';
-    color: #222;
-  }
-  main .find-path .col-sm-6 {
-    width: 95%;
-    margin: auto;
-  }
-  main .find-path .col-sm-6 p {
-    position: relative;
-    color: #222;
-    font-size: 1em;
-  }
-  main img {
-    width: 250px;
-  }
-}
-
-main .login-container {
-  position: relative;
-  width: 80%;
-  margin: 10vh auto;
-  background: inherit;
 }
 
 main .login-container {
@@ -303,15 +254,15 @@ main .login-container .btn-login {
   text-transform: uppercase;
 }
 
-main .login-container .form-control::-webkit-input-placeholder {
+main .form-control::-webkit-input-placeholder {
   color: #AEACA7;
 }
 
-main .login-container .form-control::-moz-placeholder {
+main .form-control::-moz-placeholder {
   color: #AEACA7;
 }
 
-main .login-container .form-control:-ms-input-placeholder {
+main .form-control:-ms-input-placeholder {
   color: #AEACA7;
 }
 
