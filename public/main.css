@@ -1,263 +1,326 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);body.timer-body {
-  margin: 0;
-  background-color: #333;
-  font-family: 'Ubuntu', monospace;
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Open+Sans);@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);body {
+  font-size: 1.75em;
+  font-family: 'Open Sans', sans-serif;
+  /*background-color: #F0F1F3;*/
 }
 
-body.timer-body ul.list-group.timers {
+/*@media (min-width: 993px) {*/
+header nav.joc-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4.7em;
+  /*z-index: 1;*/
+  background: #33a7be;
+}
+
+header nav.joc-navbar .navbar-brand {
+  position: relative;
+  left: 2%;
+}
+
+header nav.joc-navbar ul.navbar-right {
+  position: relative;
+  /*left: -2%;*/
+  top: 1.55em;
+}
+
+header nav.joc-navbar ul.navbar-right li {
+  margin-right: 2em;
+}
+
+header nav.joc-navbar ul.navbar-right a {
+  color: #fff;
+}
+
+header nav.joc-navbar ul.navbar-right a:hover {
+  background: inherit;
+  /*text-decoration: none;*/
+}
+
+header nav.joc-navbar ul.navbar-right .btn-signin {
+  position: relative;
+  top: -1em;
+  background: inherit;
+  border-radius: 2px;
+  border: 2px solid #fff;
+  letter-spacing: 1px;
+  padding: 0.5em 1em;
+}
+
+header nav.joc-navbar ul.navbar-right .btn-signin:hover {
+  color: #fff;
+}
+
+main {
   position: relative;
   display: block;
-  top: 125px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 25px;
+  top: 4em;
+  min-height: 900px;
+  padding: 50px 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
-body.timer-body ul.list-group.timers a {
-  color: #131313;
+main .find-path {
+  width: 98%;
+  margin: auto;
 }
 
-body.timer-body ul.list-group.timers a:hover {
-  text-decoration: none;
+main .find-path h1 {
+  font-size: 3em;
+  text-align: center;
+  font-family: 'Kaushan Script';
+  color: #222;
 }
 
-body.timer-body .stopwatch-container {
-  position: relative;
-  display: block;
+/*  main .find-path .col-sm-6 {
+  margin-top: 50px
+}*/
+main .find-path .col-sm-8 p {
+  width: 90%;
   margin: 50px auto;
-  padding: 30px;
-  height: 700px;
-  width: 500px;
-  background-color: #F0F1F3;
-  border-radius: 6px;
-  box-shadow: 2px 2px 2px;
-  /*    .split-counter {
-      position: relative;
-      font-size: 25px;
-    }*/
-}
-
-body.timer-body .stopwatch-container .test-name {
-  position: relative;
-  text-align: center;
-  font-size: 30px;
-}
-
-body.timer-body .stopwatch-container .form-number {
-  font-size: 15px;
+  color: #222;
+  font-size: 1.25em;
   text-align: center;
 }
 
-body.timer-body .stopwatch-container .reset-button {
+main .find-path .col-sm-8 img {
   position: relative;
-  display: block;
-  left: 385px;
-  top: -100px;
-  font-size: 15px;
-  background-color: #F2F3F5;
+  width: 450px;
+  margin: auto;
 }
 
-body.timer-body .stopwatch-container .timer {
-  position: relative;
-  text-align: center;
-  top: -20px;
-  font-size: 50px;
+@media (max-width: 993px) {
+  header nav.joc-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4.4em;
+    /*z-index: 1;*/
+    background: #33a7be;
+  }
+  header nav.joc-navbar .navbar-brand {
+    position: relative;
+    left: 2%;
+  }
+  header nav.joc-navbar ul.navbar-right {
+    position: relative;
+    left: -2.5%;
+    top: 1.55em;
+  }
+  header nav.joc-navbar ul.navbar-right li {
+    font-size: 0.75em;
+    margin-right: 1em;
+  }
+  header nav.joc-navbar ul.navbar-right a {
+    color: #fff;
+  }
+  header nav.joc-navbar ul.navbar-right a:hover {
+    background: inherit;
+    /*text-decoration: none;*/
+  }
+  header nav.joc-navbar ul.navbar-right .btn-signin {
+    position: relative;
+    top: -1em;
+    background: inherit;
+    border-radius: 2px;
+    border: 2px solid #fff;
+    font-size: 0.75em;
+    letter-spacing: 1px;
+    padding: 0.5em 1em;
+  }
+  button.navbar-toggle.collapsed {
+    border: inherit;
+    color: #fff;
+  }
+  button.navbar-toggle.collapsed:hover {
+    background: inherit;
+  }
+  button.navbar-toggle.collapsed:focus {
+    background: inherit;
+  }
+  main {
+    min-height: 900px;
+    padding: 50px 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  main .find-path {
+    background: transparent;
+  }
+  main .find-path h1 {
+    text-align: center;
+    font-family: 'Kaushan Script';
+    color: #222;
+  }
+  main .find-path .col-sm-6 img {
+    position: relative;
+    width: 400px;
+    left: 20%;
+  }
+  main .find-path .col-sm-6 p {
+    position: relative;
+    top: 200px;
+    left: -12.5%;
+    color: #222;
+    font-size: 1em;
+  }
 }
 
-body.timer-body .stopwatch-container .btn.start-stop-button {
+@media (max-width: 768px) {
+  button.navbar-toggle.collapsed {
+    top: 1em;
+    border: inherit;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+  button.navbar-toggle.collapsed:hover {
+    background: inherit;
+  }
+  button.navbar-toggle.collapsed:focus {
+    background: inherit;
+  }
+  .navbar-header {
+    float: none;
+  }
+  button.navbar-toggle {
+    display: block;
+    background: inherit;
+  }
+  /*  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }*/
+  .navbar-collapse.collapse {
+    display: none !important;
+    background-color: #33a7be;
+    border-top: none;
+    padding-bottom: 20px;
+  }
+  .navbar-nav {
+    float: none !important;
+    margin: 7.5px -15px;
+  }
+  .navbar-nav > li {
+    float: none;
+    left: 5%;
+  }
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  /*  .navbar-text {
+      float: none;
+      margin: 15px 0;
+  }*/
+  /* since 3.1.0 */
+  .navbar-collapse.collapse.in {
+    display: block !important;
+    background-color: #33a7be;
+    border-top: none;
+    padding-bottom: 20px;
+    height: 40vh;
+  }
+  .collapsing {
+    overflow: hidden !important;
+  }
+  main {
+    position: relative;
+    display: block;
+    top: 40vh;
+    min-height: 900px;
+    padding: 50px 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  main .find-path h1 {
+    text-align: center;
+    font-family: 'Kaushan Script';
+    color: #222;
+  }
+  main .find-path .col-sm-6 {
+    width: 95%;
+    margin: auto;
+  }
+  main .find-path .col-sm-6 p {
+    position: relative;
+    color: #222;
+    font-size: 1em;
+  }
+  main img {
+    width: 250px;
+  }
+}
+
+main .login-container {
   position: relative;
-  display: inline-block;
-  padding: 0;
-  height: 75px;
-  width: 90px;
-  margin: 20px;
-  /*top: 50px;*/
-  left: 25px;
-  font-size: 20px;
+  width: 80%;
+  margin: 10vh auto;
+  background: inherit;
+}
+
+main .login-container {
+  position: relative;
+  width: 35%;
+  margin: 20vh auto;
+  font-family: 'Open Sans', sans-serif;
+  /*background-color: #F0F1F3;*/
+  background: inherit;
+  box-shadow: 0 0 10px rgba(46, 45, 44, 0.25);
+  padding: 2em 0.5em;
+}
+
+main .login-container h2 {
   text-align: center;
-  background-color: #17B20A;
+  color: #082B3A;
+}
+
+main .login-container .form-control {
+  border-radius: 0;
+  border: none;
+  background-color: rgba(217, 214, 208, 0.25);
+  width: 80%;
+  height: 50px;
+  margin: 25px auto;
+  color: #696764;
+}
+
+main .login-container .form-control:focus {
+  outline: none;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+main .login-container .btn-login {
+  position: relative;
+  border-radius: 0;
+  background-color: #33a7be;
+  width: 80%;
+  height: 60px;
+  left: 10%;
   color: #fff;
+  text-transform: uppercase;
 }
 
-body.timer-body .stopwatch-container .btn.start-stop-button:focus {
-  outline: none;
+main .login-container .form-control::-webkit-input-placeholder {
+  color: #AEACA7;
 }
 
-body.timer-body .stopwatch-container .btn.misc-button {
-  position: relative;
-  display: inline-block;
-  padding: 0;
-  height: 75px;
-  width: 90px;
-  margin: 20px;
-  /*top: 50px;*/
-  left: 150px;
-  font-size: 20px;
+main .login-container .form-control::-moz-placeholder {
+  color: #AEACA7;
+}
+
+main .login-container .form-control:-ms-input-placeholder {
+  color: #AEACA7;
+}
+
+footer {
+  padding: 30px 0;
+  font-size: 14px;
+  color: #bbb;
+  background: #222;
   text-align: center;
-  background-color: #089D9A;
-  color: #fff;
-}
-
-body.timer-body .stopwatch-container .btn.misc-button:focus {
-  outline: none;
-}
-
-body.timer-body .stopwatch-container .score {
-  position: relative;
-  display: block;
-  left: 300px;
-  font-size: 15px;
-}
-
-body.timer-body .stopwatch-container .create-csv {
-  background-color: #F0F1F3;
-  position: relative;
-  display: block;
-  left: 300px;
-  font-size: 15px;
-}
-
-body.timer-body .stopwatch-container .create-csv:focus {
-  outline: none;
-}
-
-body.timer-body .stopwatch-container .item-container {
-  position: relative;
-  display: block;
-  margin: 10px auto;
-  height: 250px;
-  width: 350px;
-  border: 1px solid black;
-}
-
-body.timer-body .stopwatch-container .item-container h2 {
-  position: relative;
-  font-size: 25px;
-  text-align: center;
-  top: 50px;
-}
-
-body.timer-body .stopwatch-container .item-container h4 {
-  position: relative;
-  font-size: 40px;
-  text-align: center;
-  top: 100px;
-}
-
-body.timer-body .stopwatch-container .item-container .tweezer-row {
-  position: relative;
-  text-align: center;
-  font-size: 50px;
-  top: 100px;
-}
-
-body.timer-body .stopwatch-container .item-container .dropped-pin {
-  position: relative;
-  display: inline-block;
-  top: 150px;
-  left: 50px;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  font-size: 18px;
-  text-align: center;
-  background-color: #555;
-  color: #fff;
-}
-
-body.timer-body .stopwatch-container .item-container .dropped-pin:focus {
-  outline: none;
-}
-
-body.timer-body .stopwatch-container .item-container .dropped-pin:active {
-  background-color: #000;
-}
-
-body.timer-body .stopwatch-container .item-container .picked-up {
-  position: relative;
-  display: inline-block;
-  top: 150px;
-  left: 150px;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  font-size: 18px;
-  text-align: center;
-  background-color: #fff;
-  color: #555;
-}
-
-body.timer-body .stopwatch-container .item-container .picked-up:focus {
-  outline: none;
-}
-
-body.timer-body .stopwatch-container .item-container .picked-up:active {
-  background-color: #dfdfdf;
-}
-
-body.timer-body table {
-  position: relative;
-  margin: 50px auto;
-  font-size: 20px;
-}
-
-body.timer-body table tr {
-  height: 20px;
-  width: 100px;
-}
-
-body.timer-body table td {
-  border: 1px black solid;
-  padding: 5px;
-}
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
 }
 
 /*# sourceMappingURL=main.css.map*/
