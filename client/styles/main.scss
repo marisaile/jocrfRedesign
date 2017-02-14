@@ -35,18 +35,25 @@ body {
         }
         a:hover {
           background: inherit;
-          /*text-decoration: none;*/
+          text-decoration: none;
         }
       }
       .btn-signin {
         position: relative;
-        top: -1em;
         background: inherit;
         border-radius: 2px;
         border: 2px solid #fff;
         font-size: 0.75em;
         letter-spacing: 1px;
         padding: 0.5em 1em;
+        color: #fff;
+      }
+      .btn-signin:focus {
+        outline: 0;
+      }
+      .btn-signin:active {
+        outline: none;
+        border: none;
       }
     }
   }
@@ -163,18 +170,24 @@ header nav.joc-navbar {
         background: inherit;
         /*text-decoration: none;*/
       }
-    }
-    .btn-signin {
-      position: relative;
-      top: -1.5em;
-      background: inherit;
-      border-radius: 2px;
-      border: 2px solid #fff;
-      letter-spacing: 1px;
-      padding: 0.5em 1em;
-    }
-    .btn-signin:hover {
-      color: #fff;
+      .btn-signin {
+        position: relative;
+        /*top: -1em;*/
+        background: inherit;
+        border-radius: 2px;
+        border: 2px solid #fff;
+        font-size: 0.75em;
+        letter-spacing: 1px;
+        padding: 0.5em 1em;
+        color: #fff;
+      }
+      .btn-signin:focus {
+        outline: 0;
+      }
+      .btn-signin:active {
+        outline: none;
+        border: none;
+      }
     }
   }
 }

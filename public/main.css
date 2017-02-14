@@ -32,17 +32,24 @@
   }
   header nav.joc-navbar ul.navbar-right li a:hover {
     background: inherit;
-    /*text-decoration: none;*/
+    text-decoration: none;
   }
   header nav.joc-navbar ul.navbar-right .btn-signin {
     position: relative;
-    top: -1em;
     background: inherit;
     border-radius: 2px;
     border: 2px solid #fff;
     font-size: 0.75em;
     letter-spacing: 1px;
     padding: 0.5em 1em;
+    color: #fff;
+  }
+  header nav.joc-navbar ul.navbar-right .btn-signin:focus {
+    outline: 0;
+  }
+  header nav.joc-navbar ul.navbar-right .btn-signin:active {
+    outline: none;
+    border: none;
   }
   main .find-path {
     background: transparent;
@@ -162,18 +169,25 @@ header nav.joc-navbar ul.navbar-right li a:hover {
   /*text-decoration: none;*/
 }
 
-header nav.joc-navbar ul.navbar-right .btn-signin {
+header nav.joc-navbar ul.navbar-right li .btn-signin {
   position: relative;
-  top: -1.5em;
+  /*top: -1em;*/
   background: inherit;
   border-radius: 2px;
   border: 2px solid #fff;
+  font-size: 0.75em;
   letter-spacing: 1px;
   padding: 0.5em 1em;
+  color: #fff;
 }
 
-header nav.joc-navbar ul.navbar-right .btn-signin:hover {
-  color: #fff;
+header nav.joc-navbar ul.navbar-right li .btn-signin:focus {
+  outline: 0;
+}
+
+header nav.joc-navbar ul.navbar-right li .btn-signin:active {
+  outline: none;
+  border: none;
 }
 
 main {

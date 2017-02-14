@@ -13,7 +13,7 @@ var app = {
       $('main').html(login);
     });
     $('.navbar-toggle').on('click', function() {
-      $('main').css('margin-top','26vh');
+      $('main').css('margin-top', '26vh');
     });
   }
 };
