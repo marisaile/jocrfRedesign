@@ -9916,7 +9916,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"joc-navbar":"joc-navbar","navbar-brand":"navbar-brand","navbar-right":"navbar-right","btn-signin":"btn-signin","find-path":"find-path","col-sm-8":"col-sm-8","navbar-default":"navbar-default","navbar-toggle":"navbar-toggle","icon-bar":"icon-bar","navbar-collapse":"navbar-collapse","collapse":"collapse","navbar-nav":"navbar-nav","in":"in","collapsing":"collapsing","col-sm-6":"col-sm-6","login-container":"login-container","form-control":"form-control","btn-login":"btn-login"};
+	module.exports = {"joc-navbar":"joc-navbar","navbar-brand":"navbar-brand","logo-jocrf":"logo-jocrf","logo-underline":"logo-underline","logo-tagline":"logo-tagline","navbar-right":"navbar-right","btn-signin":"btn-signin","find-path":"find-path","col-sm-8":"col-sm-8","login-container":"login-container","form-control":"form-control","btn-login":"btn-login","navbar-default":"navbar-default","navbar-toggle":"navbar-toggle","icon-bar":"icon-bar","navbar-header":"navbar-header","navbar-left":"navbar-left","navbar-collapse":"navbar-collapse","navbar-fixed-top":"navbar-fixed-top","collapse":"collapse","navbar-nav":"navbar-nav","in":"in","col-sm-6":"col-sm-6"};
 
 /***/ },
 /* 3 */,
@@ -9950,9 +9950,6 @@
 	    (0, _jquery2['default'])('.btn-signin').click(function (e) {
 	      e.preventDefault();
 	      (0, _jquery2['default'])('main').html(_templatesClientLoginHtml2['default']);
-	    });
-	    (0, _jquery2['default'])('.navbar-toggle').on('click', function () {
-	      (0, _jquery2['default'])('main').css('margin-top', '26vh');
 	    });
 	  }
 	};
